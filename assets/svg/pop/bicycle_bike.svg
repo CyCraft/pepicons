@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="#AB92F0" stroke-width="1.5" d="M17.009902,1.94808971 C17.2360651,5.61475638 16.5224805,6.94808971 15.5073904,6.94808971 C14.4923003,6.94808971 14.1440727,6.28142304 13.9480897,4.94808971" transform="rotate(-90 15.5 4.448)"/>
+    <circle cx="15.5" cy="15.5" r="3.5" stroke="#AB92F0" stroke-width="1.5" transform="rotate(-90 15.5 15.5)"/>
+    <circle cx="4.5" cy="15.5" r="3.5" stroke="#AB92F0" stroke-width="1.5" transform="rotate(-90 4.5 15.5)"/>
+    <polyline stroke="#AB92F0" stroke-width="2" points="5 5.5 7 5.5 9 5.5"/>
+    <polyline stroke="#AB92F0" stroke-width="1.5" points="14.25 7.948 4.25 11.25 4.25 5.75 11.132 9.25 11.132 15.25 4.75 11.25" transform="rotate(-90 9.25 10.5)"/>
+    <path stroke="#AB92F0" stroke-width="1.5" d="M20.5309061,7.96909387 L7.96909387,10.4690939 L20.5309061,7.96909387 Z" transform="rotate(-90 14.25 9.22)"/>
+  </g>
+</svg>

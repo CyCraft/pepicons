@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="10" cy="10" r="3" fill="#AB92F0" stroke="#AB92F0" stroke-width="1.5" transform="rotate(-90 10 10)"/>
+    <rect width="1" height="3" x="2" y="8.5" fill="#AB92F0" stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" rx=".5" transform="rotate(-90 2.5 10)"/>
+    <rect width="1" height="3" x="17" y="8.5" fill="#AB92F0" stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" rx=".5" transform="rotate(-90 17.5 10)"/>
+    <rect width="1" height="3" x="14.914" y="13.914" fill="#AB92F0" stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" rx=".5" transform="rotate(-45 15.414 15.414)"/>
+    <rect width="1" height="3" x="3.914" y="2.914" fill="#AB92F0" stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" rx=".5" transform="rotate(-45 4.414 4.414)"/>
+    <rect width="1" height="3" x="9.5" y="16" fill="#AB92F0" stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" rx=".5"/>
+    <rect width="1" height="3" x="9.5" y="1" fill="#AB92F0" stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" rx=".5"/>
+    <rect width="1" height="3" x="14.914" y="2.914" fill="#AB92F0" stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" rx=".5" transform="rotate(45 15.414 4.414)"/>
+    <rect width="1" height="3" x="3.914" y="13.914" fill="#AB92F0" stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" rx=".5" transform="rotate(45 4.414 15.414)"/>
+  </g>
+</svg>

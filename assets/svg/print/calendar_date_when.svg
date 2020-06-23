@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="14" height="12" x="5" y="6" fill="#AB92F0" rx="1"/>
+    <g stroke="#000" transform="translate(3.5 4)">
+      <rect width="13" height="11" y="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect width="13" height="3" y="1" stroke-linecap="round" stroke-linejoin="round"/>
+      <rect width="1" height="1" x="2" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 0 0 -1 0 1)"/>
+      <rect width="1" height="1" x="10" stroke-linecap="round" stroke-linejoin="round" transform="matrix(1 0 0 -1 0 1)"/>
+      <circle cx="2.5" cy="6.5" r="1"/>
+    </g>
+  </g>
+</svg>
