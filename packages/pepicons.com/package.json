@@ -1,6 +1,6 @@
 {
   "name": "pepicons.com",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "Retro icon set",
   "productName": "Pepicons",
   "author": "Luca Ban - Mesqueeb",
@@ -14,6 +14,7 @@
     "@quasar/extras": "^1.0.0",
     "@vue/composition-api": "^0.6.4",
     "core-js": "^3.6.5",
+    "pepicons": "^0.0.0",
     "quasar": "^1.0.0"
   },
   "browserslist": [
