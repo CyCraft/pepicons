@@ -15,7 +15,8 @@
     "@vue/composition-api": "^0.6.4",
     "core-js": "^3.6.5",
     "pepicons": "^0.0.0",
-    "quasar": "^1.0.0"
+    "quasar": "^1.0.0",
+    "raw-loader": "^4.0.1"
   },
   "browserslist": [
     "last 10 Chrome versions",

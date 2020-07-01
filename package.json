@@ -14,9 +14,9 @@
   },
   "homepage": "https://github.com/mesqueeb/planetar#readme",
   "devDependencies": {
-    "lerna": "^3.22.1",
     "@quasar/app": "^2.0.0",
-    "@types/node": "^10.17.15",
+    "@types/node": "^10.17.26",
+    "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^3.3.0",
     "@typescript-eslint/parser": "^3.3.0",
     "babel-eslint": "^10.0.1",
@@ -27,6 +27,7 @@
     "eslint-plugin-node": "^11.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^6.1.2"
+    "eslint-plugin-vue": "^6.1.2",
+    "lerna": "^3.22.1"
   }
 }
