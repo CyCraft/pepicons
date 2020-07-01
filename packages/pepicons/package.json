@@ -1,0 +1,11 @@
+{
+  "name": "pepicons",
+  "version": "0.0.1",
+  "description": "Retro icon set",
+  "productName": "Pepicons",
+  "author": "Luca Ban - Mesqueeb",
+  "private": true,
+  "scripts": {},
+  "dependencies": {},
+  "devDependencies": {}
+}

@@ -5,6 +5,7 @@
   "script": {
     "dev": "cd packages/pepicons.com && npm run dev",
     "build": "npm run start-build && lerna run build",
+    "publish": "lerna publish",
     "install-dependencies": "lerna bootstrap",
     "reinstall-dependencies": "lerna clean -y && npm run install-dependencies"
   },
