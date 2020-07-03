@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-  <g fill="none" fill-rule="evenodd">
-    <path stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.48727579,7 L16.5130666,7 C17.3414937,7 18.0130666,7.67157288 18.0130666,8.5 C18.0130666,8.61237259 18.0004391,8.72438932 17.9754219,8.83394175 L17.0619865,12.8339417 C16.9061985,13.5161487 16.2994,14 15.5996313,14 L8.40071115,14 C7.70094242,14 7.09414388,13.5161487 6.93835589,12.8339417 L6.02492053,8.83394175 C5.8404896,8.02630524 6.34569753,7.22207567 7.15333404,7.03764474 C7.26288647,7.01262747 7.3749032,7 7.48727579,7 Z"/>
-    <polyline stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="2 1 4.29 1 7 13"/>
-    <circle cx="8.25" cy="17.25" r="1.25" fill="#AB92F0" stroke="#AB92F0" transform="rotate(-90 8.25 17.25)"/>
-    <circle cx="15.25" cy="17.25" r="1.25" fill="#AB92F0" stroke="#AB92F0" transform="rotate(-90 15.25 17.25)"/>
-  </g>
-</svg>

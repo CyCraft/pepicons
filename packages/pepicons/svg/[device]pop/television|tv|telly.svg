@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g fill="none" fill-rule="evenodd">
+    <rect width="11" height="14" x="4.5" y="4.5" stroke="#AB92F0" stroke-width="2" rx="3" transform="rotate(-90 10 11.5)"/>
+    <path stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.25,2.75 L12.75,4.75" transform="rotate(-90 11.5 3.75)"/>
+    <path stroke="#AB92F0" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7.25,2.75 L9.75,4.75" transform="matrix(0 -1 -1 0 12.25 12.25)"/>
+  </g>
+</svg>

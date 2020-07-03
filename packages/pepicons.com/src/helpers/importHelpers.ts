@@ -4,7 +4,7 @@
  * @param {string} filePath Relative from the project's 'pepicons' folder.
  * @returns {Promise<string>}
  */
-export function dynamicImport (filePath: string): Promise<string> {
+export function importPepicon (filePath: string): Promise<string> {
   return new Promise((resolve, reject) => {
     import(
       /* webpackChunkName: "component-source-code" */

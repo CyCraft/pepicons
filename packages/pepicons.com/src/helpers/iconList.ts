@@ -1,9 +1,9 @@
+const svgs = require.context('pepicons/svg', true, /^\.\/.*(\.svg)$/).keys()
+
 export const iconList: {
   pop: string[]
   print: string[]
-  printFilled: string[]
 } = {
-  pop: require.context('pepicons/svg/pop', true, /^\.\/.*(\.svg)$/).keys(),
-  print: require.context('pepicons/svg/pop', true, /^\.\/.*(\.svg)$/).keys(),
-  printFilled: require.context('pepicons/svg/pop', true, /^\.\/.*(\.svg)$/).keys(),
+  pop: svgs.filter(path => path.includes('pop/')),
+  print: svgs.filter(path => path.includes('print/')),
 }
