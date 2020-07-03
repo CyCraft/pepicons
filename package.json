@@ -2,7 +2,7 @@
   "name": "pepicons",
   "private": true,
   "author": "Luca Ban - Mesqueeb",
-  "script": {
+  "scripts": {
     "dev": "cd packages/pepicons.com && npm run dev",
     "build": "npm run start-build && lerna run build",
     "publish": "lerna publish",
