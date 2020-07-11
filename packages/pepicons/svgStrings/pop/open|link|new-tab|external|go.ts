@@ -1,1 +1,0 @@
-export default `<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20"><g fill="none" fill-rule="evenodd" stroke-linecap="round"><path stroke="#AB92F0" stroke-width="2" d="M10 10l6-6"/><path stroke="#AB92F0" stroke-linejoin="round" stroke-width="2" d="M16 11.5V16H4V4h4.5"/><path stroke="#AB92F0" stroke-width="2" d="M16 8V4m-4 0h4"/></g></svg>`

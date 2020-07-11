@@ -4,8 +4,7 @@
   "author": "Luca Ban - Mesqueeb",
   "scripts": {
     "dev": "cd packages/pepicons.com && npm run dev",
-    "build": "npm run build-pepicons && lerna run build",
-    "build-pepicons": "npm run prepare-pepicons",
+    "build": "npm run prepare-pepicons && lerna run build",
     "publish": "npm run build && lerna publish",
     "prepare-pepicons": "node ./build/preparePepicons.js",
     "install-dependencies": "lerna bootstrap",

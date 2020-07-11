@@ -1,12 +1,15 @@
 const replace = require('replace-in-file')
 const rimraf = require('rimraf')
 const copyfiles = require('copyfiles')
+const Renamer = require('renamer')
+const renamer = new Renamer()
+const debounce = require('debounce')
 
 const PATH_PEPICONS = './packages/pepicons'
 
 const renameColor = () =>
   new Promise((resolve, reject) => {
-    const path = PATH_PEPICONS + '/svg/**/*.svg'
+    const path = PATH_PEPICONS + '/exportFromSketch/**/*.svg'
     replace({
       files: path,
       from: /#AB92F0/gi,
@@ -35,9 +38,23 @@ const copyPrintSvgs = () =>
     copyfiles([from, to], { up: 4 }, resolve)
   })
 
+const cleanupFilenames = () =>
+  new Promise((resolve, reject) => {
+    renamer.on('replace-result', replaceResult => {
+      debounce(resolve, 200)()
+    })
+    const path = PATH_PEPICONS + '/svg/**/*.svg'
+    renamer.rename({
+      files: [path],
+      find: /^(.+?)(\|.+)*\.svg$/,
+      replace: '$1.svg',
+    })
+  })
+
 module.exports = async function cleanupSvgs() {
   await renameColor()
   await deleteSvgFolder()
   await copyPopSvgs()
   await copyPrintSvgs()
+  await cleanupFilenames()
 }

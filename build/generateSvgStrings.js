@@ -6,7 +6,7 @@ const renamer = new Renamer()
 const debounce = require('debounce')
 const replace = require('replace-in-file')
 const sort = require('fast-sort')
-const { filePathToIconName } = require('./utils.js')
+const { filePathToIconName, filePathToIconSynonyms, filePathToIconCategory } = require('./utils.js')
 const listFiles = require('./_listFiles.js')
 const { pascalCase } = require('case-anything')
 
@@ -61,13 +61,10 @@ const formatToExportSvgString = () =>
 const kindTypeName = kind => `Popicon${pascalCase(kind)}`
 const iconVarName = (kind, iconName) => `${kind}${pascalCase(iconName)}`
 
-const importStatement = (kind, iconName, fileName) =>
-  `import ${iconVarName(kind, iconName)} from './${kind}/${fileName.replace('.ts', '')}'\n`
-
 const filesArrayToExports = (kind = 'pop', filesArray = []) => {
   const iconNameFileEntries = filesArray.map(filePath => [
     filePathToIconName(filePath),
-    filePath.split('/').slice(-1)[0],
+    filePath.split('/').slice(-2).join('/'), // prettier-ignore
   ])
   sort(iconNameFileEntries).asc(entry => entry[0])
 
@@ -79,23 +76,38 @@ const filesArrayToExports = (kind = 'pop', filesArray = []) => {
   const _type = `export type ${typeName} = ${iconNamesStringLiteral}`
 
   // imports
-  const importStatements = iconNameFileEntries.map(([iconName, fileName]) =>
-    importStatement(kind, iconName, fileName)
-  )
+  const importStatements = iconNameFileEntries.map(([iconName, filePath]) => {
+    const path = filePathToIconName(filePath) // prettier-ignore
+    return `import ${iconVarName(kind, iconName)} from './${kind}/${path}'\n`
+  })
   const _import = importStatements.join('')
 
   // exports
-  const exportObjectProp = iconNameFileEntries
+  // svg strings
+  const svgStringProps = iconNameFileEntries
     .map(([iconName]) => `  '${iconName}': ${iconVarName(kind, iconName)},\n`)
     .join('')
-  const type = `: { [name in ${typeName}]: string }`
-  const _export = `export const ${kind}${type} = {\n${exportObjectProp}}`
+  const svgStringExport = `export const ${kind}: { [name in ${typeName}]: string } = {\n${svgStringProps}}`
+  // categories
+  const categoryProps = iconNameFileEntries
+    .map(([iconName, filePath]) => `  '${iconName}': '${filePathToIconCategory(filePath)}',\n`)
+    .join('')
+  const categoryExport = `export const ${kind}Catogies: { [name in ${typeName}]: string } = {\n${categoryProps}}`
+  // synonyms
+  const iconSynonymArray = filePath => `[${filePathToIconSynonyms(filePath).map(s => `'${s}'`).join(', ')}]` // prettier-ignore
+  const synonymProps = iconNameFileEntries
+    .map(([iconName, filePath]) => `  '${iconName}': ${iconSynonymArray(filePath)},\n`)
+    .join('')
+  const synonymExport = `export const ${kind}Synonyms: { [name in ${typeName}]: string[] } = {\n${synonymProps}}`
+  // all together
+  const _export = `${svgStringExport}\n\n${categoryExport}\n\n${synonymExport}`
 
   return `${_type}\n\n${_import}\n${_export}`
 }
 
 const generateExportsFile = async (kind = 'pop') => {
-  const files = await listFiles(PATH_PEPICONS + `/svgStrings/${kind}/`, /.+\.ts/)
+  const regex = new RegExp(`.+${kind}\/.+\.svg`, 'gi')
+  const files = await listFiles(PATH_PEPICONS + `/exportFromSketch/`, regex)
   const content = filesArrayToExports(kind, files)
   const path = PATH_PEPICONS + `/svgStrings/${kind}.ts`
   fs.writeFileSync(path, content)
