@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap")
+@import 'colors'
+
+// $thin: 100
+// $extra-light: 200
+// $light: 300
+$regular: 400
+$medium: 500
+$semi-bold: 600
+$bold: 700
+// $extra-bold: 800
+// $black: 900
+// $extra-black: 950
+
+=header-globals()
+  font-family: 'Poppins', sans-serif
+
+=t-h1()
+  +header-globals
+  font-weight: $bold
+  font-size: 56px
+  line-height: 64px
+  letter-spacing: 0.01em
+
+=t-h2()
+  +header-globals
+  font-weight: $semi-bold
+  font-size: 40px
+  line-height: 56px
+
+=t-h3()
+  +header-globals
+  font-weight: $bold
+  font-size: 36px
+  line-height: 40px
+  letter-spacing: 0.01em
+
+=t-h4()
+  +header-globals
+  font-weight: $semi-bold
+  font-size: 32px
+  line-height: 40px
+
+=t-h5()
+  +header-globals
+  font-weight: $semi-bold
+  font-size: 24px
+  line-height: 30px
+  letter-spacing: 0.01em
+
+=t-h6()
+  +header-globals
+  font-weight: $semi-bold
+  font-size: 20px
+  line-height: 24px
+
+=t-subtitle1()
+  +header-globals
+  font-weight: $medium
+  font-size: 16px
+  line-height: 20px
+
+=t-subtitle2()
+  +header-globals
+  font-weight: $medium
+  font-size: 14px
+  line-height: 20px
+  letter-spacing: 0.005em
+
+=t-body1()
+  font-family: 'Open Sans', sans-serif
+  font-weight: $regular
+  font-size: 16px
+  line-height: 24px
+
+=t-body2()
+  font-weight: $regular
+  font-size: 14px
+  line-height: 20px
+  letter-spacing: 0.01em
+
+=t-button()
+  +header-globals
+  font-weight: $semi-bold
+  font-size: 14px
+  line-height: 24px
+  letter-spacing: 0.01em
+
+=t-caption()
+  +header-globals
+  font-weight: $regular
+  font-size: 12px
+  line-height: 16px
+  letter-spacing: 0.02em
+
+=t-caption-semi-bold()
+  +header-globals
+  font-weight: $semi-bold
+  font-size: 12px
+  line-height: 16px
+  letter-spacing: 0.02em
+
+=t-overline()
+  +header-globals
+  font-weight: $semi-bold
+  font-size: 12px
+  line-height: 16px
+  letter-spacing: 0.08em
+  text-transform: uppercase
+
+=t-micro()
+  +header-globals
+  font-weight: $regular
+  font-size: 10px
+  line-height: 14px
+  letter-spacing: 0.02em
+
+body
+  +t-body1
+  color: $c-letters
+
+.text-h1
+  +t-h1
+.text-h2
+  +t-h2
+.text-h3
+  +t-h3
+.text-h4
+  +t-h4
+.text-h5
+  +t-h5
+.text-h6
+  +t-h6
+.text-subtitle1
+  +t-subtitle1
+.text-subtitle2
+  +t-subtitle2
+.text-body1
+  +t-body1
+.text-body2
+  +t-body2
+.text-button
+  +t-button
+.text-caption
+  +t-caption
+.text-caption-semi-bold
+  +t-caption-semi-bold
+.text-overline
+  +t-overline
+.text-micro
+  +t-micro

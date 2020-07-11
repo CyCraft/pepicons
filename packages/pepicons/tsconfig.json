@@ -1,0 +1,12 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2016",
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "declaration": true,
+    "declarationDir": "./types/"
+  },
+  "include": ["**/*.ts"],
+  "exclude": ["node_modules"]
+}

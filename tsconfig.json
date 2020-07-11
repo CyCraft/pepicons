@@ -1,6 +1,7 @@
 {
   "extends": "@quasar/app/tsconfig-preset",
   "compilerOptions": {
+    "esModuleInterop": true,
     "baseUrl": ".",
     "types": ["node", "webpack-env"]
   }

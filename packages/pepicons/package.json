@@ -4,5 +4,15 @@
   "description": "Retro icon set",
   "productName": "Pepicons",
   "author": "Luca Ban - Mesqueeb",
-  "scripts": {}
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "types/index.d.ts",
+  "scripts": {
+    "build": "npm run clean && rollup -c ./build/rollup.js",
+    "clean": "rimraf ./types && rimraf ./dist"
+  },
+  "devDependencies": {
+    "rollup": "^2.21.0",
+    "rollup-plugin-typescript2": "^0.27.1"
+  }
 }

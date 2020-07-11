@@ -1,0 +1,17 @@
+{
+  "name": "vue-pepicons",
+  "version": "0.0.0",
+  "author": "Luca Ban - Mesqueeb",
+  "description": "Vue component for Pepicons",
+  "license": "MIT",
+  "module": "src/index.js",
+  "scripts": {},
+  "homepage": "https://github.com/mesqueeb/pepicons",
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mesqueeb/pepicons"
+  },
+  "bugs": "https://github.com/mesqueeb/pepicons/issues",
+  "browserslist": ["last 1 version, not dead, ie >= 11"]
+}
