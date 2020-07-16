@@ -12,7 +12,7 @@ const { pascalCase } = require('case-anything')
 
 const PATH_PEPICONS = './packages/pepicons'
 
-const nextTick = () => new Promise(resolve => setTimeout(resolve, 100))
+const nextTick = () => new Promise((resolve) => setTimeout(resolve, 100))
 
 const deleteSvgStringsFolder = () =>
   new Promise((resolve, reject) => {
@@ -35,7 +35,7 @@ const copyPrintSvgs = () =>
 
 const renameSvgsToTs = () =>
   new Promise((resolve, reject) => {
-    renamer.on('replace-result', replaceResult => {
+    renamer.on('replace-result', (replaceResult) => {
       debounce(resolve, 200)()
     })
     const path = PATH_PEPICONS + '/svgStrings/**/*.svg'
@@ -58,15 +58,15 @@ const formatToExportSvgString = () =>
       .catch(reject)
   })
 
-const kindTypeName = kind => `Popicon${pascalCase(kind)}`
+const kindTypeName = (kind) => `Pepicon${pascalCase(kind)}`
 const iconVarName = (kind, iconName) => `${kind}${pascalCase(iconName)}`
 
 const filesArrayToExports = (kind = 'pop', filesArray = []) => {
-  const iconNameFileEntries = filesArray.map(filePath => [
+  const iconNameFileEntries = filesArray.map((filePath) => [
     filePathToIconName(filePath),
     filePath.split('/').slice(-2).join('/'), // prettier-ignore
   ])
-  sort(iconNameFileEntries).asc(entry => entry[0])
+  sort(iconNameFileEntries).asc((entry) => entry[0])
 
   // types
   const typeName = kindTypeName(kind)

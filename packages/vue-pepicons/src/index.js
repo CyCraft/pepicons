@@ -1,9 +1,9 @@
-import Pepicon from './components/Pepicon.vue'
+import Pepicon from './Pepicon.vue'
 
 export { Pepicon }
 
 export default {
-  install (Vue) {
+  install(Vue) {
     Vue.component(Pepicon.name, Pepicon)
   },
 }

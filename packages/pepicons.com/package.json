@@ -14,9 +14,12 @@
     "@quasar/extras": "^1.0.0",
     "@vue/composition-api": "^0.6.4",
     "core-js": "^3.6.5",
+    "is-what": "^3.10.0",
     "pepicons": "^0.0.0",
+    "planetar": "^0.0.15",
     "quasar": "^1.0.0",
-    "raw-loader": "^4.0.1"
+    "raw-loader": "^4.0.1",
+    "vue-pepicons": "^0.0.0"
   },
   "browserslist": [
     "last 10 Chrome versions",

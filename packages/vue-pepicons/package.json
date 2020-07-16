@@ -4,6 +4,7 @@
   "author": "Luca Ban - Mesqueeb",
   "description": "Vue component for Pepicons",
   "license": "MIT",
+  "main": "src/index.js",
   "module": "src/index.js",
   "scripts": {},
   "homepage": "https://github.com/mesqueeb/pepicons",
@@ -13,5 +14,7 @@
     "url": "https://github.com/mesqueeb/pepicons"
   },
   "bugs": "https://github.com/mesqueeb/pepicons/issues",
-  "browserslist": ["last 1 version, not dead, ie >= 11"]
+  "browserslist": [
+    "last 1 version, not dead, ie >= 11"
+  ]
 }

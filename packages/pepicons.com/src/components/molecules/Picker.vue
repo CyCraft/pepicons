@@ -1,0 +1,136 @@
+<template>
+  <div class="picker column flex-center">
+    <div class="text-subtitle1 text-capitalize mb-md c-letters">
+      {{ kind === 'type' ? 'Style' : kind }}
+    </div>
+    <div v-if="kind === 'type'" class="flex q-gutter-md">
+      <OptionBox
+        iconName="pen"
+        iconType="print"
+        :iconColor="value.color"
+        :isActive="value.type === 'print'"
+        @click="set('type', 'print')"
+      />
+      <OptionBox
+        iconName="pen"
+        iconType="pop"
+        :iconColor="value.color"
+        :backgroundColor="value.background"
+        :isActive="value.type === 'pop'"
+        @click="set('type', 'pop')"
+      />
+    </div>
+    <div v-if="kind === 'color'" class="flex q-gutter-md">
+      <OptionBox
+        v-for="c in colorSelection"
+        :key="c"
+        :backgroundColor="c"
+        @click="set('color', c)"
+        :isActive="value.color === c"
+      />
+      <OptionBox
+        :colorRing="true"
+        iconName="color-picker"
+        @click="openColorPicker"
+        iconColor="#ffadad"
+        iconType="print"
+      />
+      <OptionBox
+        :colorRing="true"
+        iconName="refresh"
+        @click="setRandomColor"
+        iconColor="#ffadad"
+        iconType="print"
+      />
+    </div>
+    <div v-if="kind === 'background'" class="flex q-gutter-md">
+      <OptionBox
+        backgroundColor="white"
+        @click="set('background', 'white')"
+        :class="value.background === 'white' ? 'thin-border--light' : ''"
+      />
+      <OptionBox
+        backgroundColor="#1D1D1D"
+        @click="set('background', '#1D1D1D')"
+        :class="value.background === '#1D1D1D' ? 'thin-border--dark' : ''"
+      />
+    </div>
+    <div v-if="kind === 'stroke'" class="flex q-gutter-md">
+      <OptionBox
+        :colorRing="true"
+        iconName="color-picker"
+        @click="openColorPicker"
+        iconColor="#e8e8e8"
+        iconType="print"
+      />
+    </div>
+  </div>
+</template>
+
+<style lang="sass">
+// .picker
+</style>
+
+<script lang="ts">
+import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
+import { Dialog, QColor } from 'quasar'
+import DialogWrapper from '../dialogs/DialogWrapper.vue'
+import OptionBox from '../atoms/OptionBox.vue'
+import { getRandomColor, cssVar } from '../../helpers/colorHelpers'
+
+export default defineComponent({
+  name: 'Picker',
+  components: { OptionBox },
+  props: {
+    /**
+     * @example 'type'
+     */
+    kind: {
+      type: (String as unknown) as PropType<'type' | 'color' | 'background' | 'stroke'>,
+      required: true,
+    },
+    /**
+     * @type {{ type: 'pop' | 'print', color: string, background: string, stroke: string }}
+     */
+    value: {
+      type: Object,
+      default: () => ({
+        type: 'pop',
+        color: '#AB92F0',
+        background: 'white',
+      }),
+    },
+  },
+  setup(props, { emit }) {
+    function set(prop: 'type' | 'color' | 'background' | 'stroke', value: string) {
+      emit('input', { ...props.value, [prop]: value })
+    }
+
+    function setRandomColor() {
+      const randomColor = getRandomColor()
+      set('color', randomColor)
+    }
+
+    function openColorPicker() {
+      Dialog.create({
+        component: DialogWrapper,
+        slotComponent: QColor,
+        slotProps: {
+          noFooter: true,
+          flat: true,
+          formatModel: 'hex',
+          value: props.value,
+          default: props.value,
+        },
+        slotEvents: {
+          change: (newVal: string) => set(props.kind, newVal),
+        },
+      })
+    }
+
+    const colorSelection = [cssVar('primary'), '#55BBC5', '#F7D570', '#5FA8EE', '#F092AD']
+
+    return { set, setRandomColor, openColorPicker, colorSelection }
+  },
+})
+</script>

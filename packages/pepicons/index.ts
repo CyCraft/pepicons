@@ -1,17 +1,20 @@
-
-import { pop, print, PopiconPop, PopiconPrint } from './svgStrings'
+import { pop, print, PepiconPop, PepiconPrint } from './svgStrings'
 
 export * from './svgStrings'
 
-export function pepiconSvgString (iconName: PopiconPop, type: 'pop'): string
-export function pepiconSvgString (iconName: PopiconPrint, type: 'print'): string
-export function pepiconSvgString (iconName: PopiconPop | PopiconPrint, type: 'pop' | 'print'): string {
+export function pepiconSvgString(iconName: PepiconPop, type: 'pop'): string
+export function pepiconSvgString(iconName: PepiconPrint, type: 'print'): string
+export function pepiconSvgString(
+  iconName: PepiconPop | PepiconPrint,
+  type: 'pop' | 'print',
+): string {
   if (type === 'pop') {
-    return pop[(iconName as PopiconPop)]
+    return pop[iconName as PepiconPop]
   }
   if (type === 'print') {
-    return print[(iconName as PopiconPrint)]
+    return print[iconName as PepiconPrint]
   }
+  // eslint-disable-next-line @typescript-eslint/restrict-template-expressions
   console.error(`Pepicon ${iconName} of type ${type} not found!`)
   return ''
 }
