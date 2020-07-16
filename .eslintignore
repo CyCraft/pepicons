@@ -5,3 +5,5 @@
 /.quasar
 /node_modules
 /build
+
+/**/Dev.vue

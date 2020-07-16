@@ -12,7 +12,7 @@
 </style>
 
 <script lang="ts">
-import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
+import { defineComponent } from '@vue/composition-api'
 import Picker from './Picker.vue'
 
 export default defineComponent({
@@ -28,10 +28,11 @@ export default defineComponent({
         type: 'pop',
         color: 'black',
         background: 'white',
+        stroke: 'black',
       }),
     },
   },
-  setup(props) {
+  setup() {
     return {}
   },
 })

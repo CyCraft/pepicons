@@ -50,7 +50,7 @@ export default defineComponent({
     stroke: { type: String, default: 'black' },
     darkMode: { type: Boolean },
   },
-  setup(props) {
+  setup() {
     return {}
   },
 })

@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "packages/pepicons.com/dist/spa",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
