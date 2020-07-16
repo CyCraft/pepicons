@@ -20,7 +20,11 @@
     "planetar": "^0.0.15",
     "quasar": "^1.0.0",
     "raw-loader": "^4.0.1",
+    "vivify.css": "^0.0.0",
     "vue-pepicons": "^0.0.1"
+  },
+  "devDependencies": {
+    "@quasar/app": "^2.0.5"
   },
   "browserslist": [
     "last 10 Chrome versions",

@@ -50,9 +50,9 @@
         :class="value.background === 'white' ? 'thin-border--light' : ''"
       />
       <OptionBox
-        backgroundColor="#1D1D1D"
-        @click="set('background', '#1D1D1D')"
-        :class="value.background === '#1D1D1D' ? 'thin-border--dark' : ''"
+        :backgroundColor="nightfall"
+        @click="set('background', nightfall)"
+        :class="value.background === nightfall ? 'thin-border--dark' : ''"
       />
     </div>
     <div v-if="kind === 'stroke'" class="flex q-gutter-md">
@@ -130,7 +130,9 @@ export default defineComponent({
 
     const colorSelection = [cssVar('primary'), '#55BBC5', '#F7D570', '#5FA8EE', '#F092AD']
 
-    return { set, setRandomColor, openColorPicker, colorSelection }
+    const nightfall = cssVar('nightfall')
+
+    return { set, setRandomColor, openColorPicker, colorSelection, nightfall }
   },
 })
 </script>

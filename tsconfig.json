@@ -4,5 +4,8 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "types": ["node", "webpack-env"]
+  },
+  "parserOptions": {
+    "project": "./packages/pepicons.com/tsconfig.json"
   }
 }
