@@ -12,6 +12,7 @@
   align-items: center
 
 .icon-tile
+  transition: background 250ms
   border-radius: $border-radius
   height: auto
   display: flex
@@ -23,6 +24,7 @@
     height: 26px
     +flex-center
     svg
+      transition: all 350ms
       width: 100%
       height: 100%
   ._name

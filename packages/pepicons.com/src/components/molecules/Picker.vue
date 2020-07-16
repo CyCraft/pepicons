@@ -9,14 +9,15 @@
         iconType="print"
         :iconColor="value.color"
         :isActive="value.type === 'print'"
+        backgroundColor="white"
         @click="set('type', 'print')"
       />
       <OptionBox
         iconName="pen"
         iconType="pop"
         :iconColor="value.color"
-        :backgroundColor="value.background"
         :isActive="value.type === 'pop'"
+        backgroundColor="white"
         @click="set('type', 'pop')"
       />
     </div>
@@ -48,11 +49,17 @@
         backgroundColor="white"
         @click="set('background', 'white')"
         :class="value.background === 'white' ? 'thin-border--light' : ''"
+        iconName="sun-filled"
+        iconColor="rgba(0, 0, 0, 0.08)"
+        iconType="pop"
       />
       <OptionBox
         :backgroundColor="nightfall"
         @click="set('background', nightfall)"
         :class="value.background === nightfall ? 'thin-border--dark' : ''"
+        iconName="moon-filled"
+        iconColor="rgba(255, 255, 255, 0.08)"
+        iconType="pop"
       />
     </div>
     <div v-if="kind === 'stroke'" class="flex q-gutter-md">

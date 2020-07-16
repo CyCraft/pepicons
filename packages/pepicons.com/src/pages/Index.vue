@@ -12,6 +12,7 @@
 
 <style lang="sass">
 .page-index
+  transition: background 250ms
   background: #FAFAFA
   &.dark-mode
     background: $c-nightfall
