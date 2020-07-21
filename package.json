@@ -6,16 +6,16 @@
     "dev": "cd packages/pepicons.com && npm run dev",
     "build": "npm run prepare-pepicons && lerna run build",
     "publish": "npm run build && lerna publish",
-    "prepare-pepicons": "node ./build/preparePepicons.js",
-    "install-dependencies": "lerna bootstrap",
-    "reinstall-dependencies": "lerna clean -y && npm run install-dependencies"
+    "dependencies-install": "npm i && lerna bootstrap",
+    "dependencies-update-all": "ncu --semverLevel major -u && lerna exec 'ncu --semverLevel major -u' && npm run dependencies-install",
+    "dependencies-check-for-updates": "ncu --semverLevel major && lerna exec 'ncu --semverLevel major'",
+    "dependencies-reinstall-all": "rimraf node_modules && lerna clean -y && npm run dependencies-install"
   },
   "bugs": {
     "url": "https://github.com/mesqueeb/planetar/issues"
   },
   "homepage": "https://github.com/mesqueeb/planetar#readme",
   "devDependencies": {
-    "@quasar/app": "^2.0.6",
     "@types/node": "^10.17.27",
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^3.6.1",
@@ -31,6 +31,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "fast-sort": "^2.2.0",
     "lerna": "^3.22.1",
+    "npm-check-updates": "^7.0.2",
     "prettier": "^2.0.5",
     "renamer": "^2.0.1",
     "replace-in-file": "^6.1.0",

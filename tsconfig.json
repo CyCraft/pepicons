@@ -1,11 +1,10 @@
 {
-  "extends": "@quasar/app/tsconfig-preset",
   "compilerOptions": {
+    "baseUrl": "./packages",
+    "strict": true,
+    "target": "es6",
     "esModuleInterop": true,
-    "baseUrl": ".",
     "types": ["node", "webpack-env"]
   },
-  "parserOptions": {
-    "project": "./packages/pepicons.com/tsconfig.json"
-  }
+  "exclude": ["/dist", "node_modules"]
 }
