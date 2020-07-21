@@ -16,20 +16,20 @@ const nextTick = () => new Promise((resolve) => setTimeout(resolve, 100))
 
 const deleteSvgStringsFolder = () =>
   new Promise((resolve, reject) => {
-    rimraf(PATH_PEPICONS + '/svgStrings', resolve)
+    rimraf(PATH_PEPICONS + '/src', resolve)
   })
 
 const copyPopSvgs = () =>
   new Promise((resolve, reject) => {
     const from = PATH_PEPICONS + '/svg/pop/*.svg'
-    const to = PATH_PEPICONS + '/svgStrings/'
+    const to = PATH_PEPICONS + '/src/'
     copyfiles([from, to], { up: 3 }, resolve)
   })
 
 const copyPrintSvgs = () =>
   new Promise((resolve, reject) => {
     const from = PATH_PEPICONS + '/svg/print/*.svg'
-    const to = PATH_PEPICONS + '/svgStrings/'
+    const to = PATH_PEPICONS + '/src/'
     copyfiles([from, to], { up: 3 }, resolve)
   })
 
@@ -38,7 +38,7 @@ const renameSvgsToTs = () =>
     renamer.on('replace-result', (replaceResult) => {
       debounce(resolve, 200)()
     })
-    const path = PATH_PEPICONS + '/svgStrings/**/*.svg'
+    const path = PATH_PEPICONS + '/src/**/*.svg'
     renamer.rename({
       files: [path],
       find: '.svg',
@@ -48,7 +48,7 @@ const renameSvgsToTs = () =>
 
 const formatToExportSvgString = () =>
   new Promise((resolve, reject) => {
-    const path = PATH_PEPICONS + '/svgStrings/**/*.ts'
+    const path = PATH_PEPICONS + '/src/**/*.ts'
     replace({
       files: path,
       from: /([\S\s]+)\n*/g,
@@ -109,13 +109,13 @@ const generateExportsFile = async (kind = 'pop') => {
   const regex = new RegExp(`.+${kind}\/.+\.svg`, 'gi')
   const files = await listFiles(PATH_PEPICONS + `/exportFromSketch/`, regex)
   const content = filesArrayToExports(kind, files)
-  const path = PATH_PEPICONS + `/svgStrings/${kind}.ts`
+  const path = PATH_PEPICONS + `/src/${kind}.ts`
   fs.writeFileSync(path, content)
 }
 
 const generateIndexFiles = async () => {
   await Promise.all([generateExportsFile('pop'), generateExportsFile('print')])
-  const path = PATH_PEPICONS + '/svgStrings/index.ts'
+  const path = PATH_PEPICONS + '/src/index.ts'
   const content = `export * from './pop'\nexport * from './print'\n`
   fs.writeFileSync(path, content)
 }

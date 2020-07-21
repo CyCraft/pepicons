@@ -5,8 +5,9 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "declaration": true,
-    "declarationDir": "./types/"
+    "declarationDir": "./types/",
+    "types": []
   },
-  "include": ["**/*.ts"],
-  "exclude": ["node_modules"]
+  "include": ["./index.ts", "./src/**/*.ts", "./src/*.ts"],
+  "exclude": ["node_modules", "dist", "svg", "exportFromSketch"]
 }

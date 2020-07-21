@@ -4,6 +4,6 @@ export const iconList: {
   pop: string[]
   print: string[]
 } = {
-  pop: svgs.filter(path => path.includes('pop/')),
-  print: svgs.filter(path => path.includes('print/')),
+  pop: svgs.filter((path) => path.includes('pop/')),
+  print: svgs.filter((path) => path.includes('print/')),
 }

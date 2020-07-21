@@ -18,9 +18,9 @@ import typescript from 'rollup-plugin-typescript2'
 // ------------------------------------------------------------------------------------------
 // setup
 // ------------------------------------------------------------------------------------------
-const pkg = require('../package.json')
+const pkg = require('./package.json')
 const name = pkg.name
-const className = name.replace(/(^\w|-\w)/g, c => c.replace('-', '').toUpperCase())
+const className = name.replace(/(^\w|-\w)/g, (c) => c.replace('-', '').toUpperCase())
 const external = Object.keys(pkg.dependencies || [])
 const plugins = [
   typescript({ useTsconfigDeclarationDir: true, tsconfigOverride: { exclude: ['test/**/*'] } }),
@@ -36,7 +36,7 @@ function defaults(config) {
     external,
   }
   // defaults.output
-  config.output = config.output.map(output => {
+  config.output = config.output.map((output) => {
     return Object.assign(
       {
         sourcemap: false,
@@ -44,7 +44,7 @@ function defaults(config) {
         exports: 'named',
         preferConst: true,
       },
-      output
+      output,
     )
   })
   return Object.assign(defaults, config)

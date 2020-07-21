@@ -3,7 +3,7 @@
     <Picker kind="type" :value="value" @input="(newVal) => $emit('input', newVal)" />
     <Picker kind="color" :value="value" @input="(newVal) => $emit('input', newVal)" />
     <Picker kind="background" :value="value" @input="(newVal) => $emit('input', newVal)" />
-    <Picker kind="stroke" :value="value" @input="(newVal) => $emit('input', newVal)" />
+    <!-- <Picker kind="stroke" :value="value" @input="(newVal) => $emit('input', newVal)" /> -->
   </div>
 </template>
 

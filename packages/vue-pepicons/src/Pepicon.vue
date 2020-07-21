@@ -30,7 +30,7 @@
 </style>
 
 <script lang="js">
-import { pop, print } from 'pepicons'
+import { pepiconSvgString } from 'pepicons'
 
 export default {
   name: 'Pepicon',
@@ -60,10 +60,8 @@ export default {
   },
   computed: {
     svg () {
-      const {type, name, stroke} = this
-      const svgString = type === 'print' ? print[name] : pop[name]
-      if (type !== 'print') return svgString
-      return svgString.replace(/#000/g, stroke)
+      const { name, type, stroke } = this
+      return pepiconSvgString(name, type, { stroke })
     },
   },
 }

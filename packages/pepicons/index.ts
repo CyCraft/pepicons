@@ -1,17 +1,25 @@
+import { pop, print, PepiconPop, PepiconPrint } from './src/index'
 
-import { pop, print, PepiconPop, PepiconPrint } from './svgStrings'
+export * from './src/index'
 
-export * from './svgStrings'
+export type Options = {
+  /**
+   * This option is only for 'print' type icons. The default stroke color is black. Suggested to change to white on dark backgrounds.
+   */
+  stroke: string,
+}
 
-export function pepiconSvgString (iconName: PepiconPop, type: 'pop'): string
-export function pepiconSvgString (iconName: PepiconPrint, type: 'print'): string
-export function pepiconSvgString (iconName: PepiconPop | PepiconPrint, type: 'pop' | 'print'): string {
-  if (type === 'pop') {
-    return pop[(iconName as PepiconPop)]
+export function pepiconSvgString (iconName: PepiconPop, type: 'pop', options?: Options): string
+export function pepiconSvgString (iconName: PepiconPrint, type: 'print', options?: Options): string
+export function pepiconSvgString (iconName: PepiconPop | PepiconPrint, type: 'pop' | 'print', options?: Options): string {
+  const svgString = (type === 'pop') ? pop[(iconName as PepiconPop)] : print[(iconName as PepiconPrint)]
+  if (!svgString) {
+    console.error(`Pepicon ${iconName} of type ${type} not found!`)
+    return ''
   }
-  if (type === 'print') {
-    return print[(iconName as PepiconPrint)]
+  const { stroke } = options || {}
+  if (stroke) {
+    return svgString.replace(/#000/g, stroke)
   }
-  console.error(`Pepicon ${iconName} of type ${type} not found!`)
-  return ''
+  return svgString
 }

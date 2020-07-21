@@ -6,6 +6,7 @@
     "dev": "cd packages/pepicons.com && npm run dev",
     "build": "npm run prepare-pepicons && lerna run build",
     "publish": "npm run build && lerna publish",
+    "prepare-pepicons": "node ./build/preparePepicons.js",
     "dependencies-install": "npm i && lerna bootstrap",
     "dependencies-update-all": "ncu --semverLevel major -u && lerna exec 'ncu --semverLevel major -u' && npm run dependencies-install",
     "dependencies-check-for-updates": "ncu --semverLevel major && lerna exec 'ncu --semverLevel major'",
@@ -36,6 +37,9 @@
     "renamer": "^2.0.1",
     "replace-in-file": "^6.1.0",
     "replace-in-files-cli": "^0.3.1",
-    "rimraf": "^3.0.2"
+    "rimraf": "^3.0.2",
+    "rollup": "^2.22.1",
+    "rollup-plugin-typescript2": "^0.27.1",
+    "typescript": "^3.9.7"
   }
 }

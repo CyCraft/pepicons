@@ -43,5 +43,6 @@
   "sass.format.convert": true,
   "sass.format.setPropertySpace": true,
   // typescript
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.enable": true
 }

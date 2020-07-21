@@ -8,11 +8,12 @@
   "module": "dist/index.esm.js",
   "types": "types/index.d.ts",
   "scripts": {
-    "build": "npm run clean && rollup -c ./build/rollup.js",
+    "build": "npm run clean && rollup -c ./build.js",
     "clean": "rimraf ./types && rimraf ./dist"
   },
   "devDependencies": {
-    "rollup": "^2.21.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.22.1",
     "rollup-plugin-typescript2": "^0.27.1"
   }
 }
