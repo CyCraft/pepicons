@@ -16,6 +16,7 @@
     "@vue/composition-api": "^0.6.4",
     "core-js": "^3.6.5",
     "is-what": "^3.10.0",
+    "matter-js": "^0.14.2",
     "pepicons": "^0.0.1",
     "planetar": "^0.0.15",
     "quasar": "^1.0.0",
