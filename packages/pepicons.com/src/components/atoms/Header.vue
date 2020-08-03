@@ -222,8 +222,11 @@ export default {
        */
       const min = -10
       const max = 10
-      const randX = Math.floor(Math.random() * (max - min + 1)) + min
-      const randY = Math.floor(Math.random() * (max - min + 1)) + min
+      let randX = Math.floor(Math.random() * (max - min + 1)) + min
+      let randY = Math.floor(Math.random() * (max - min + 1)) + min
+      // never has stationary icons, also breaks current physics model
+      if (randX === 0) randX = 1
+      if (randY === 0) randY = 1
       return new THREE.Vector2(randX, randY)
     },
     resizeCanvasToDisplaySize() {
@@ -257,7 +260,7 @@ export default {
 
           // // check for collisions with other icons
           this.icons.forEach((otherIcon) => {
-            const padding = 40
+            const padding = 100
 
             const otherIconBoundaryBox = new THREE.Box3().setFromObject(otherIcon)
             if (otherIconBoundaryBox.intersectsBox(iconBoundaryBox)) {
