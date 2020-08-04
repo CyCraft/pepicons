@@ -9,7 +9,7 @@ $max-height: 300px
 .header-container
   width: $max-width
   height: $max-height
-  border-style: solid
+  // border-style: solid
 </style>
 
 <script>
@@ -34,15 +34,26 @@ export default {
       boundaryBox: THREE.Box3,
       loader: SVGLoader,
       icons: [],
+      wallCollisionEvents: [],
+      iconCollisionEvents: [],
     }
+  },
+  watch: {
+    wallCollisionEvents: function (newEventArray) {
+      this.handleWallCollision(newEventArray)
+    },
+    iconCollisionEvents: function (newEventArray) {
+      this.handleIconCollision(newEventArray)
+    },
   },
   methods: {
     init() {
       this.createScene()
       this.createCamera()
       this.loader = new SVGLoader()
-      // this.loadTitle()
+      this.drawLines()
       this.loadIcons()
+      this.loadTitle()
     },
     createScene() {
       const headerContainer = document.querySelector('.header-container')
@@ -66,8 +77,8 @@ export default {
         new THREE.Vector3(canvas.clientWidth - xPadding, canvas.clientHeight - yPadding, 0),
       )
       // this helper makes the boundary box visible for dev purposes - turn off for prod
-      const helper = new THREE.Box3Helper(this.boundaryBox, 'black')
-      this.scene.add(helper)
+      // const helper = new THREE.Box3Helper(this.boundaryBox, 'black')
+      // this.scene.add(helper)
     },
     createCamera() {
       const headerContainer = document.querySelector('.header-container')
@@ -76,16 +87,52 @@ export default {
       this.camera = new THREE.PerspectiveCamera(70, aspectRatio, 1, 1000)
       this.camera.position.set(0, 0, 200)
     },
+    drawLines() {
+      const canvas = this.renderer.domElement
+      const height = canvas.clientHeight
+      const width = canvas.clientWidth
+      // taken from specs
+      const totalVerticalLines = 19
+      const totalHorizontalLines = 78
+      const dy = height / totalVerticalLines
+      const dx = width / totalHorizontalLines
+      const color = '#BABABA'
+
+      const group = new THREE.Group()
+
+      // TODO figure out better way to do this
+      const offsetY = -23
+      const offsetX = 37
+
+      for (let i = 1; i <= totalVerticalLines; i++) {
+        const material = new THREE.LineBasicMaterial({ color: color })
+        const points = []
+        points.push(new THREE.Vector3(-(width / 2), -(height / 2) + offsetY + dy * i))
+        points.push(new THREE.Vector3(width / 2, -(height / 2) + offsetY + dy * i))
+        const geometry = new THREE.BufferGeometry().setFromPoints(points)
+        const line = new THREE.Line(geometry, material)
+        group.add(line)
+      }
+      for (let i = 1; i <= totalHorizontalLines; i++) {
+        const material = new THREE.LineBasicMaterial({ color: color })
+        const points = []
+        points.push(new THREE.Vector3(-(width / 2) + offsetX + dx * i, -(height / 2)))
+        points.push(new THREE.Vector3(-(width / 2) + offsetX + dx * i, height / 2))
+        const geometry = new THREE.BufferGeometry().setFromPoints(points)
+        const line = new THREE.Line(geometry, material)
+        group.add(line)
+      }
+      this.scene.add(group)
+    },
     loadTitle() {
       const reqSvgs = require.context('src/assets/title', true, /\.svg$/)
       let svgs = []
       reqSvgs.keys().forEach((key) => {
         svgs.push({ pathShort: key, pathLong: reqSvgs(key), kind: 'title' })
       })
-
-      for (let icon of svgs) {
-        this.loadSvg(icon.pathLong, icon.kind, { x: 0, y: 0 })
-      }
+      // TODO - these coordinates need to be based on the size of the canvas AND svg
+      this.loadSvg(svgs[0].pathLong, svgs[0].kind, { x: -583 / 1.75, y: 50 })
+      this.loadSvg(svgs[1].pathLong, svgs[1].kind, { x: -62, y: 50 })
     },
     loadIcons() {
       const reqSvgs = require.context('src/assets/icons', true, /\.svg$/)
@@ -109,7 +156,11 @@ export default {
 
       this.loader.load(url, (data) => {
         const paths = data.paths
-        group.scale.multiplyScalar(1)
+        if (kind === 'title') {
+          group.scale.multiplyScalar(1.75)
+        } else {
+          group.scale.multiplyScalar(1)
+        }
         group.position.x = coordinates.x
         group.position.y = coordinates.y
         group.scale.y *= -1
@@ -165,7 +216,9 @@ export default {
 
           if (path.userData.node.id) {
             group.name = path.userData.node.id
-            group.userData.vector = this.createRandomVector()
+            if (kind === 'icon') {
+              group.userData.vector = this.createRandomVector()
+            }
             group.userData.initialPosition = group.position
           }
         }
@@ -223,7 +276,10 @@ export default {
       const min = -10
       const max = 10
       let randX = Math.floor(Math.random() * (max - min + 1)) + min
-      let randY = Math.floor(Math.random() * (max - min + 1)) + min
+      const d = 10 - Math.abs(randX)
+      // let randY = Math.floor(Math.random() * (max - min + 1)) + min
+      let randY = Math.floor(Math.random() * (d - -d + 1)) + -d
+      console.log(randX, randY)
       // never has stationary icons, also breaks current physics model
       if (randX === 0) randX = 1
       if (randY === 0) randY = 1
@@ -237,49 +293,103 @@ export default {
         this.camera.updateProjectionMatrix()
       }
     },
+    handleWallCollision(newWallCollisionArray) {
+      if (!newWallCollisionArray.length) return
+      newWallCollisionArray.forEach((observer) => {
+        const icon = observer.icon
+        const iconBoundaryBox = observer.iconBoundaryBox
+        const xBoundsCollision =
+          iconBoundaryBox.max.x >= this.boundaryBox.max.x ||
+          iconBoundaryBox.min.x <= this.boundaryBox.min.x
+        const yBoundsCollision =
+          iconBoundaryBox.max.y >= this.boundaryBox.max.y ||
+          iconBoundaryBox.min.y <= this.boundaryBox.min.y
+        if (xBoundsCollision) icon.userData.vector.x *= -1
+        if (yBoundsCollision) icon.userData.vector.y *= -1
+      })
+      this.$emit('update:wallCollisionEvents', [])
+    },
+    detectWallCollision(icon) {
+      const iconBoundaryBox = new THREE.Box3().setFromObject(icon)
+      if (iconBoundaryBox.intersectsBox(this.boundaryBox)) {
+        this.wallCollisionEvents.push({ iconBoundaryBox, icon })
+      }
+    },
+    handleIconCollision(newIconCollisionArray) {
+      if (!newIconCollisionArray.length) return
+      newIconCollisionArray.forEach((observer) => {
+        const icon1 = observer.targetIcon
+        const icon2 = observer.otherIcon
+        const box1 = new THREE.Box3().setFromObject(icon1)
+        const box2 = new THREE.Box3().setFromObject(icon2)
+        const padding = 5
+
+        icon1.updateMatrix()
+        icon2.updateMatrix()
+
+        if (box1.containsPoint(box2.min.x - padding) || box1.containsPoint(box2.max.x + padding)) {
+          icon2.userData.vector.x *= -1
+          icon1.userData.vector.x *= -1
+          return
+        } else if (
+          box1.containsPoint(box2.min.y - padding) ||
+          box1.containsPoint(box2.max.y + padding)
+        ) {
+          icon1.userData.vector.y *= -1
+          icon2.userData.vector.y *= -1
+          return
+        }
+      })
+      this.$emit('update:iconCollisionEvents', [])
+    },
+    detectIconCollision(targetIcon) {
+      for (const otherIcon of this.icons) {
+        if (otherIcon.userData.kind === 'title') return
+        const box1 = new THREE.Box3().setFromObject(targetIcon)
+        const box2 = new THREE.Box3().setFromObject(otherIcon)
+        if (box1.intersectsBox(box2)) {
+          this.iconCollisionEvents.push({ targetIcon, otherIcon })
+        }
+      }
+    },
+    // detectIconCollision(icon1, icon2) {
+    //   const box1 = new THREE.Box3().setFromObject(icon1)
+    //   const box2 = new THREE.Box3().setFromObject(icon2)
+    //   const padding = 5
+
+    //   icon1.updateMatrix()
+    //   icon2.updateMatrix()
+
+    //   if (box1.intersectsBox(box2)) {
+    //     if (box1.containsPoint(box2.min.x - padding) || box1.containsPoint(box2.max.x + padding)) {
+    //       icon2.userData.vector.x *= -1
+    //       icon1.userData.vector.x *= -1
+    //     } else if (
+    //       box1.containsPoint(box2.min.y - padding) ||
+    //       box1.containsPoint(box2.max.y + padding)
+    //     ) {
+    //       icon1.userData.vector.y *= -1
+    //       icon2.userData.vector.y *= -1
+    //     }
+    //     return true
+    //   }
+    // },
     animate() {
       this.resizeCanvasToDisplaySize()
       const speed = 0.1
       this.scene.traverse((child) => {
-        if (child.name) {
+        if (child.name && child.userData.kind === 'icon') {
           child.position.x += child.userData.vector.x * speed
           child.position.y += child.userData.vector.y * speed
+          this.detectWallCollision(child)
+          this.detectIconCollision(child)
 
-          // check for collisions with canvas boundary box
-          const iconBoundaryBox = new THREE.Box3().setFromObject(child)
-          if (iconBoundaryBox.intersectsBox(this.boundaryBox)) {
-            const xBoundsCollision =
-              iconBoundaryBox.max.x >= this.boundaryBox.max.x ||
-              iconBoundaryBox.min.x <= this.boundaryBox.min.x
-            const yBoundsCollision =
-              iconBoundaryBox.max.y >= this.boundaryBox.max.y ||
-              iconBoundaryBox.min.y <= this.boundaryBox.min.y
-            if (xBoundsCollision) child.userData.vector.x *= -1
-            if (yBoundsCollision) child.userData.vector.y *= -1
-          }
-
-          // // check for collisions with other icons
-          this.icons.forEach((otherIcon) => {
-            const padding = 100
-
-            const otherIconBoundaryBox = new THREE.Box3().setFromObject(otherIcon)
-            if (otherIconBoundaryBox.intersectsBox(iconBoundaryBox)) {
-              const xBoundsCollision =
-                iconBoundaryBox.max.x <= this.boundaryBox.max.x ||
-                iconBoundaryBox.min.x >= this.boundaryBox.min.x
-              const yBoundsCollision =
-                iconBoundaryBox.max.y <= this.boundaryBox.max.y ||
-                iconBoundaryBox.min.y >= this.boundaryBox.min.y
-              if (xBoundsCollision) {
-                child.userData.vector.x *= -1
-                otherIcon.userData.vector.x *= -1
-              }
-              if (yBoundsCollision) {
-                child.userData.vector.y *= -1
-                otherIcon.userData.vector.y *= -1
-              }
-            }
-          })
+          // for (const otherIcon of this.icons) {
+          //             if (otherIcon.userData.kind === 'title') return
+          //             this.detectIconCollision(child, otherIcon)
+          //             //   if (otherIcon.userData.kind === 'title') return
+          //             //   if (this.detectIconCollision(child, otherIcon)) continue
+          //           }
         }
       })
 
