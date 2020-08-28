@@ -13,9 +13,9 @@
     "dependencies-reinstall-all": "rimraf node_modules && lerna clean -y && npm run dependencies-install"
   },
   "bugs": {
-    "url": "https://github.com/mesqueeb/planetar/issues"
+    "url": "https://github.com/cycraft/planetar/issues"
   },
-  "homepage": "https://github.com/mesqueeb/planetar#readme",
+  "homepage": "https://github.com/cycraft/planetar#readme",
   "devDependencies": {
     "@types/node": "^10.17.27",
     "@types/webpack-env": "^1.15.2",
