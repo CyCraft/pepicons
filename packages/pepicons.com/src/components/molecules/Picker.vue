@@ -118,16 +118,22 @@ export default defineComponent({
       set('color', randomColor)
     }
 
+    const nightfall = cssVar('nightfall')
+
     function openColorPicker() {
       Dialog.create({
         component: DialogWrapper,
+        dialogProps: {
+          style: props.value.background === nightfall ? `background: ${nightfall}` : '',
+        },
         slotComponent: QColor,
         slotProps: {
           noFooter: true,
           flat: true,
-          formatModel: 'hex',
-          value: props.value,
-          default: props.value,
+          formatModel: 'hexa',
+          value: props.value.color,
+          default: props.value.color,
+          dark: props.value.background === nightfall,
         },
         slotEvents: {
           change: (newVal: string) => set(props.kind, newVal),
@@ -136,8 +142,6 @@ export default defineComponent({
     }
 
     const colorSelection = [cssVar('primary'), '#55BBC5', '#F7D570', '#5FA8EE', '#F092AD']
-
-    const nightfall = cssVar('nightfall')
 
     return { set, setRandomColor, openColorPicker, colorSelection, nightfall }
   },

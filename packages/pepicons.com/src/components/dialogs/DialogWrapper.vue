@@ -1,5 +1,10 @@
 <template>
-  <q-dialog ref="dialog" @hide="onDialogHide" v-on="dialogEvents" v-bind="dialogProps">
+  <q-dialog
+    ref="dialog"
+    @hide="onDialogHide"
+    v-on="dialogEvents"
+    v-bind="{ ...dialogProps, style: '', class: '' }"
+  >
     <div :class="['dialog-wrapper', dialogProps.class].flat()" :style="dialogProps.style">
       <component :is="slotComponent" v-bind="innerSlotProps" v-on="innerSlotEvents" />
       <q-btn
