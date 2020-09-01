@@ -12,19 +12,19 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
-    "@vue/composition-api": "^0.6.4",
+    "@quasar/extras": "^1.9.5",
+    "@vue/composition-api": "^0.6.7",
     "core-js": "^3.6.5",
-    "is-what": "^3.10.0",
+    "is-what": "^3.11.0",
     "pepicons": "^0.0.1",
-    "planetar": "^0.0.15",
-    "quasar": "^1.0.0",
+    "planetar": "^0.3.6",
+    "quasar": "^1.13.1",
     "raw-loader": "^4.0.1",
     "vivify.css": "^0.0.0",
     "vue-pepicons": "^0.0.1"
   },
   "devDependencies": {
-    "@quasar/app": "^2.0.5"
+    "@quasar/app": "^2.0.8"
   },
   "browserslist": [
     "last 10 Chrome versions",
