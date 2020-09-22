@@ -18,6 +18,8 @@ import * as THREE from 'three'
 import { SVGLoader } from '../../../node_modules/three/examples/jsm/loaders/SVGLoader'
 import { BoxHelper } from 'three'
 
+import PepHeader from '../pep-header'
+
 export default {
   name: 'Header',
   props: {
@@ -44,6 +46,16 @@ export default {
     },
     iconCollisionEvents: function (newEventArray) {
       this.handleIconCollision(newEventArray)
+    },
+  },
+  computed: {
+    iconIdOtherIconsArrayMap() {
+      console.log('calculating: iconIdOtherIconsArrayMap')
+      const allIcons = this.icons
+      return allIcons.reduce((result, icon) => {
+        result[icon.name] = allIcons.filter((_icon) => _icon.name !== icon.name)
+        return result
+      }, {})
     },
   },
   methods: {
@@ -140,7 +152,7 @@ export default {
       reqSvgs.keys().forEach((key) => {
         svgs.push({ pathShort: key, pathLong: reqSvgs(key), kind: 'icon' })
         // TODO - removed for more sparse canvas -> ease troubleshooting
-        svgs.push({ pathShort: key, pathLong: reqSvgs(key), kind: 'icon' })
+        // svgs.push({ pathShort: key, pathLong: reqSvgs(key), kind: 'icon' })
       })
 
       this.loader = new SVGLoader()
@@ -331,10 +343,8 @@ export default {
           icon2.userData.vector.x *= -1
           icon1.userData.vector.x *= -1
           return
-        } else if (
-          box1.containsPoint(box2.min.y - padding) ||
-          box1.containsPoint(box2.max.y + padding)
-        ) {
+        } // else if (
+        if (box1.containsPoint(box2.min.y - padding) || box1.containsPoint(box2.max.y + padding)) {
           icon1.userData.vector.y *= -1
           icon2.userData.vector.y *= -1
           return
@@ -343,11 +353,14 @@ export default {
       this.$emit('update:iconCollisionEvents', [])
     },
     detectIconCollision(targetIcon) {
-      for (const otherIcon of this.icons) {
+      const { iconIdOtherIconsArrayMap } = this
+      const otherIcons = iconIdOtherIconsArrayMap[targetIcon.name]
+      for (const otherIcon of otherIcons) {
         if (otherIcon.userData.kind === 'title') return
         const box1 = new THREE.Box3().setFromObject(targetIcon)
         const box2 = new THREE.Box3().setFromObject(otherIcon)
         if (box1.intersectsBox(box2)) {
+          console.log('it intersected ')
           this.iconCollisionEvents.push({ targetIcon, otherIcon })
         }
       }
@@ -359,6 +372,8 @@ export default {
 
     //   icon1.updateMatrix()
     //   icon2.updateMatrix()
+
+    //   return { collides: box1.intersectsBox(box2), data: '' }
 
     //   if (box1.intersectsBox(box2)) {
     //     if (box1.containsPoint(box2.min.x - padding) || box1.containsPoint(box2.max.x + padding)) {
@@ -388,7 +403,8 @@ export default {
           //             if (otherIcon.userData.kind === 'title') return
           //             this.detectIconCollision(child, otherIcon)
           //             //   if (otherIcon.userData.kind === 'title') return
-          //             //   if (this.detectIconCollision(child, otherIcon)) continue
+          //             const collisionInfo = this.detectIconCollision(child, otherIcon)
+          //             //   if (collisionInfo.collides) { mutateSomething(collisionInfo.data); continue }
           //           }
         }
       })
@@ -399,10 +415,16 @@ export default {
     },
   },
   mounted() {
-    this.init()
-    console.log(this.scene)
-    console.log(this.icons)
-    this.animate()
+    const header = new PepHeader('.header-container')
+    header.init()
+    header.animate()
+    // PepHeader.init('.header-container')
+    // PepHeader.animate()
+
+    // this.init()
+    // console.log(this.scene)
+    // console.log(this.icons)
+    // this.animate()
   },
 }
 </script>
