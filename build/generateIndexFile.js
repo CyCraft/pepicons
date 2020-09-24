@@ -1,6 +1,4 @@
 const fs = require('fs')
-const listFiles = require('./_listFiles.js')
-const { filePathToIconName } = require('./utils.js')
 
 const PATH_PEPICONS = './packages/pepicons'
 

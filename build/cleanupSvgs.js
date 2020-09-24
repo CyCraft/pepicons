@@ -40,7 +40,7 @@ const copyPrintSvgs = () =>
 
 const cleanupFilenames = () =>
   new Promise((resolve, reject) => {
-    renamer.on('replace-result', replaceResult => {
+    renamer.on('replace-result', (replaceResult) => {
       debounce(resolve, 200)()
     })
     const path = PATH_PEPICONS + '/svg/**/*.svg'
