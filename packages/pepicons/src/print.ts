@@ -1,4 +1,4 @@
-export type PepiconPrint = 'airplane' | 'arrow-down' | 'arrow-left' | 'arrow-right' | 'arrow-up' | 'battery' | 'bell' | 'bell-off' | 'bicycle' | 'bluetooth' | 'book' | 'bookmark' | 'building' | 'calculator' | 'calendar' | 'camera' | 'car' | 'cart' | 'checkmark' | 'circle' | 'clipboard' | 'clock' | 'cloud' | 'cloud-down' | 'cloud-up' | 'coctail' | 'color-picker' | 'contract' | 'controller' | 'credit-card' | 'cup' | 'division' | 'dots-horizontal' | 'dots-vertical' | 'dress' | 'duplicate' | 'electricity' | 'exclamation-mark' | 'expand' | 'eye' | 'eye-closed' | 'eye-off' | 'file' | 'film-frame' | 'flag' | 'flower' | 'flower-bud' | 'folder' | 'gear' | 'gift' | 'grab' | 'hamburger' | 'headphone' | 'heart' | 'home' | 'information' | 'internet' | 'key' | 'knive-fork' | 'letter' | 'location-marker' | 'location-marker-off' | 'lock-closed' | 'lock-open' | 'loop' | 'loop-minus' | 'loop-plus' | 'map' | 'microphone' | 'minus' | 'monitor' | 'monitor2' | 'moon' | 'motorcycle' | 'music-note-double' | 'music-note-single' | 'open' | 'paint-pallet' | 'pen' | 'person' | 'phone' | 'photo-camera' | 'plus' | 'power' | 'printer' | 'refresh' | 'reload' | 'scissors' | 'send' | 'share-android' | 'share-ios' | 'smartphone' | 'smartphone2' | 'soft-drink' | 'speaker-high' | 'speaker-low' | 'speaker-off' | 'square' | 'star' | 'sun' | 'syringe' | 't-shirt' | 'taxi' | 'television' | 'text-bubble' | 'times' | 'tool' | 'train' | 'trash' | 'triangle-down' | 'triangle-left' | 'triangle-right' | 'triangle-up' | 'truck' | 'umbrella' | 'wifi'
+export type PepiconPrint = 'airplane' | 'arrow-down' | 'arrow-left' | 'arrow-right' | 'arrow-up' | 'battery' | 'bell' | 'bell-off' | 'bicycle' | 'bluetooth' | 'book' | 'bookmark' | 'building' | 'calculator' | 'calendar' | 'camera' | 'can' | 'car' | 'cart' | 'checkmark' | 'circle' | 'clipboard' | 'clock' | 'cloud' | 'cloud-down' | 'cloud-up' | 'coctail' | 'color-picker' | 'contract' | 'controller' | 'credit-card' | 'cup' | 'division' | 'dots-horizontal' | 'dots-vertical' | 'dress' | 'duplicate' | 'electricity' | 'exclamation-mark' | 'expand' | 'eye' | 'eye-closed' | 'eye-off' | 'file' | 'film-frame' | 'flag' | 'flower' | 'flower-bud' | 'folder' | 'gear' | 'gift' | 'grab' | 'hamburger' | 'headphone' | 'heart' | 'home' | 'information' | 'internet' | 'key' | 'knive-fork' | 'letter' | 'location-marker' | 'location-marker-off' | 'lock-closed' | 'lock-open' | 'loop' | 'loop-minus' | 'loop-plus' | 'map' | 'microphone' | 'minus' | 'monitor' | 'monitor2' | 'moon' | 'motorcycle' | 'music-note-double' | 'music-note-single' | 'open' | 'paint-pallet' | 'pen' | 'person' | 'phone' | 'photo-camera' | 'pill' | 'plus' | 'power' | 'printer' | 'refresh' | 'reload' | 'scissors' | 'send' | 'share-android' | 'share-ios' | 'smartphone' | 'smartphone2' | 'soft-drink' | 'speaker-high' | 'speaker-low' | 'speaker-off' | 'square' | 'star' | 'sun' | 'syringe' | 't-shirt' | 'taxi' | 'television' | 'text-bubble' | 'times' | 'tool' | 'train' | 'trash' | 'triangle-down' | 'triangle-left' | 'triangle-right' | 'triangle-up' | 'truck' | 'umbrella' | 'wifi'
 
 import printAirplane from './print/airplane'
 import printArrowDown from './print/arrow-down'
@@ -16,6 +16,7 @@ import printBuilding from './print/building'
 import printCalculator from './print/calculator'
 import printCalendar from './print/calendar'
 import printCamera from './print/camera'
+import printCan from './print/can'
 import printCar from './print/car'
 import printCart from './print/cart'
 import printCheckmark from './print/checkmark'
@@ -82,6 +83,7 @@ import printPen from './print/pen'
 import printPerson from './print/person'
 import printPhone from './print/phone'
 import printPhotoCamera from './print/photo-camera'
+import printPill from './print/pill'
 import printPlus from './print/plus'
 import printPower from './print/power'
 import printPrinter from './print/printer'
@@ -134,6 +136,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'calculator': printCalculator,
   'calendar': printCalendar,
   'camera': printCamera,
+  'can': printCan,
   'car': printCar,
   'cart': printCart,
   'checkmark': printCheckmark,
@@ -200,6 +203,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'person': printPerson,
   'phone': printPhone,
   'photo-camera': printPhotoCamera,
+  'pill': printPill,
   'plus': printPlus,
   'power': printPower,
   'printer': printPrinter,
@@ -253,6 +257,7 @@ export const printCatogies: { [name in PepiconPrint]: string } = {
   'calculator': 'device',
   'calendar': 'time',
   'camera': 'device',
+  'can': 'food-drinks',
   'car': 'transport',
   'cart': 'leisure',
   'checkmark': 'ui',
@@ -319,6 +324,7 @@ export const printCatogies: { [name in PepiconPrint]: string } = {
   'person': 'social',
   'phone': 'social',
   'photo-camera': 'device',
+  'pill': 'item',
   'plus': 'shape',
   'power': 'ui',
   'printer': 'device',
@@ -372,6 +378,7 @@ export const printSynonyms: { [name in PepiconPrint]: string[] } = {
   'calculator': ['calculate'],
   'calendar': ['date', 'when'],
   'camera': ['record', 'video'],
+  'can': ['pepsi', 'soft-drink', 'fizzy', 'cola', 'cold-drink', 'refresher', 'juice'],
   'car': ['automobile', 'drive'],
   'cart': ['shopping', 'payout', 'commerce', 'transaction', 'buy', 'purchase'],
   'checkmark': ['check', 'toggle'],
@@ -438,6 +445,7 @@ export const printSynonyms: { [name in PepiconPrint]: string[] } = {
   'person': ['human', 'man', 'someone', 'unknown', 'identity', 'profile', 'you'],
   'phone': ['call', 'talk'],
   'photo-camera': ['photography', 'shutter', 'picture'],
+  'pill': ['medicine', 'capsule', 'pellet', 'doctor', 'sick', 'disease', 'cure', 'drugs'],
   'plus': ['cross'],
   'power': ['turn-off', 'shut-down'],
   'printer': ['pdf'],

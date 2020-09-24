@@ -1,4 +1,4 @@
-export type PepiconPop = 'airplane' | 'arrow-down' | 'arrow-left' | 'arrow-right' | 'arrow-up' | 'battery' | 'bell' | 'bell-off' | 'bicycle' | 'bluetooth' | 'book' | 'bookmark' | 'bookmark-filled' | 'building' | 'calculator' | 'calendar' | 'camera' | 'car' | 'cart' | 'checkmark' | 'circle' | 'circle-filled' | 'clipboard' | 'clock' | 'cloud' | 'cloud-down' | 'cloud-down-filled' | 'cloud-filled' | 'cloud-up' | 'cloud-up-filled' | 'coctail' | 'color-picker' | 'contract' | 'controller' | 'credit-card' | 'cup' | 'division' | 'dots-horizontal' | 'dots-vertical' | 'dress' | 'duplicate' | 'electricity' | 'exclamation-mark' | 'exclamation-mark-filled' | 'expand' | 'eye' | 'eye-closed' | 'eye-off' | 'file' | 'film-frame' | 'flag' | 'flower' | 'flower-bud' | 'folder' | 'gear' | 'gift' | 'grab' | 'hamburger' | 'headphone' | 'heart' | 'home' | 'information' | 'information-filled' | 'internet' | 'key' | 'knive-fork' | 'letter' | 'location-marker' | 'location-marker-filled' | 'location-marker-off' | 'location-marker-off-filled' | 'lock-closed' | 'lock-open' | 'loop' | 'loop-minus' | 'loop-plus' | 'map' | 'microphone' | 'minus' | 'monitor' | 'monitor2' | 'moon' | 'moon-filled' | 'motorcycle' | 'music-note-double' | 'music-note-single' | 'open' | 'paint-pallet' | 'pen' | 'person' | 'person-filled' | 'phone' | 'photo-camera' | 'plus' | 'power' | 'printer' | 'refresh' | 'reload' | 'scissors' | 'send' | 'share-android' | 'share-ios' | 'smartphone' | 'smartphone2' | 'soft-drink' | 'speaker-high' | 'speaker-low' | 'speaker-off' | 'square' | 'square-filled' | 'star' | 'sun' | 'sun-filled' | 'syringe' | 't-shirt' | 'taxi' | 'television' | 'text-bubble' | 'times' | 'tool' | 'train' | 'trash' | 'triangle-down' | 'triangle-down-filled' | 'triangle-left' | 'triangle-left-filled' | 'triangle-right' | 'triangle-right-filled' | 'triangle-up' | 'triangle-up-filled' | 'truck' | 'umbrella' | 'wifi'
+export type PepiconPop = 'airplane' | 'arrow-down' | 'arrow-left' | 'arrow-right' | 'arrow-up' | 'battery' | 'bell' | 'bell-off' | 'bicycle' | 'bluetooth' | 'book' | 'bookmark' | 'bookmark-filled' | 'building' | 'calculator' | 'calendar' | 'camera' | 'can' | 'car' | 'cart' | 'checkmark' | 'circle' | 'circle-filled' | 'clipboard' | 'clock' | 'cloud' | 'cloud-down' | 'cloud-down-filled' | 'cloud-filled' | 'cloud-up' | 'cloud-up-filled' | 'coctail' | 'color-picker' | 'contract' | 'controller' | 'credit-card' | 'cup' | 'division' | 'dots-horizontal' | 'dots-vertical' | 'dress' | 'duplicate' | 'electricity' | 'exclamation-mark' | 'exclamation-mark-filled' | 'expand' | 'eye' | 'eye-closed' | 'eye-off' | 'file' | 'film-frame' | 'flag' | 'flower' | 'flower-bud' | 'folder' | 'gear' | 'gift' | 'grab' | 'hamburger' | 'headphone' | 'heart' | 'home' | 'information' | 'information-filled' | 'internet' | 'key' | 'knive-fork' | 'letter' | 'location-marker' | 'location-marker-filled' | 'location-marker-off' | 'location-marker-off-filled' | 'lock-closed' | 'lock-open' | 'loop' | 'loop-minus' | 'loop-plus' | 'map' | 'microphone' | 'minus' | 'monitor' | 'monitor2' | 'moon' | 'moon-filled' | 'motorcycle' | 'music-note-double' | 'music-note-single' | 'open' | 'paint-pallet' | 'pen' | 'person' | 'person-filled' | 'phone' | 'photo-camera' | 'pill' | 'plus' | 'power' | 'printer' | 'refresh' | 'reload' | 'scissors' | 'send' | 'share-android' | 'share-ios' | 'smartphone' | 'smartphone2' | 'soft-drink' | 'speaker-high' | 'speaker-low' | 'speaker-off' | 'square' | 'square-filled' | 'star' | 'sun' | 'sun-filled' | 'syringe' | 't-shirt' | 'taxi' | 'television' | 'text-bubble' | 'times' | 'tool' | 'train' | 'trash' | 'triangle-down' | 'triangle-down-filled' | 'triangle-left' | 'triangle-left-filled' | 'triangle-right' | 'triangle-right-filled' | 'triangle-up' | 'triangle-up-filled' | 'truck' | 'umbrella' | 'wifi'
 
 import popAirplane from './pop/airplane'
 import popArrowDown from './pop/arrow-down'
@@ -17,6 +17,7 @@ import popBuilding from './pop/building'
 import popCalculator from './pop/calculator'
 import popCalendar from './pop/calendar'
 import popCamera from './pop/camera'
+import popCan from './pop/can'
 import popCar from './pop/car'
 import popCart from './pop/cart'
 import popCheckmark from './pop/checkmark'
@@ -93,6 +94,7 @@ import popPerson from './pop/person'
 import popPersonFilled from './pop/person-filled'
 import popPhone from './pop/phone'
 import popPhotoCamera from './pop/photo-camera'
+import popPill from './pop/pill'
 import popPlus from './pop/plus'
 import popPower from './pop/power'
 import popPrinter from './pop/printer'
@@ -152,6 +154,7 @@ export const pop: { [name in PepiconPop]: string } = {
   'calculator': popCalculator,
   'calendar': popCalendar,
   'camera': popCamera,
+  'can': popCan,
   'car': popCar,
   'cart': popCart,
   'checkmark': popCheckmark,
@@ -228,6 +231,7 @@ export const pop: { [name in PepiconPop]: string } = {
   'person-filled': popPersonFilled,
   'phone': popPhone,
   'photo-camera': popPhotoCamera,
+  'pill': popPill,
   'plus': popPlus,
   'power': popPower,
   'printer': popPrinter,
@@ -288,6 +292,7 @@ export const popCatogies: { [name in PepiconPop]: string } = {
   'calculator': 'device',
   'calendar': 'time',
   'camera': 'device',
+  'can': 'food-drinks',
   'car': 'transport',
   'cart': 'leisure',
   'checkmark': 'ui',
@@ -364,6 +369,7 @@ export const popCatogies: { [name in PepiconPop]: string } = {
   'person-filled': 'social',
   'phone': 'social',
   'photo-camera': 'device',
+  'pill': 'item',
   'plus': 'shape',
   'power': 'ui',
   'printer': 'device',
@@ -424,6 +430,7 @@ export const popSynonyms: { [name in PepiconPop]: string[] } = {
   'calculator': ['calculate'],
   'calendar': ['date', 'when'],
   'camera': ['record', 'video'],
+  'can': ['pepsi', 'soft-drink', 'fizzy', 'cola', 'cold-drink', 'refresher', 'juice'],
   'car': ['automobile', 'drive'],
   'cart': ['shopping', 'payout', 'commerce', 'transaction', 'buy', 'purchase'],
   'checkmark': ['check', 'toggle'],
@@ -500,6 +507,7 @@ export const popSynonyms: { [name in PepiconPop]: string[] } = {
   'person-filled': ['human', 'man', 'someone', 'unknown', 'identity', 'profile', 'you'],
   'phone': ['call', 'talk'],
   'photo-camera': ['photography', 'shutter', 'picture'],
+  'pill': ['medicine', 'capsule', 'pellet', 'doctor', 'sick', 'disease', 'cure', 'drugs'],
   'plus': ['cross'],
   'power': ['turn-off', 'shut-down'],
   'printer': ['pdf'],
