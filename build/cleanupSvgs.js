@@ -19,6 +19,18 @@ const renameColor = () =>
       .catch(reject)
   })
 
+const cleanupStyleAttr = () =>
+  new Promise((resolve, reject) => {
+    const path = PATH_PEPICONS + '/exportFromSketch/**/*.svg'
+    replace({
+      files: path,
+      from: /width="20" height="20"/gi,
+      to: 'style="" width="20" height="20"',
+    })
+      .then(resolve)
+      .catch(reject)
+  })
+
 const deleteSvgFolder = () =>
   new Promise((resolve, reject) => {
     rimraf(PATH_PEPICONS + '/svg', resolve)
@@ -53,6 +65,7 @@ const cleanupFilenames = () =>
 
 module.exports = async function cleanupSvgs() {
   await renameColor()
+  await cleanupStyleAttr()
   await deleteSvgFolder()
   await copyPopSvgs()
   await copyPrintSvgs()

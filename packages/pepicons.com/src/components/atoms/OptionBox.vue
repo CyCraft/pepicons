@@ -7,11 +7,11 @@
     <ColorRingSvg class="_inner" v-if="hasColorRing" />
     <div class="_inner flex flex-center">
       <Pepicon
-        :style="`color: ${iconColor}`"
         class="_icon"
         v-if="iconName"
         :name="iconName"
         :type="iconType"
+        :color="iconColor"
         size="md"
       />
     </div>
@@ -31,9 +31,6 @@
     height: 100%
     top: 0
     left: 0
-    > svg
-      width: 100%
-      height: 100%
   &:active
     transform: scale(0.9)
 </style>

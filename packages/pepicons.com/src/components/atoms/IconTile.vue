@@ -1,6 +1,6 @@
 <template>
   <div :class="`icon-tile ${darkMode ? 'bg-moonlight' : 'bg-white'}`">
-    <Pepicon class="_svg" :style="`color: ${color}`" :name="name" :type="type" :stroke="stroke" />
+    <Pepicon class="_svg" :name="name" :type="type" :color="color" :stroke="stroke" size="26px" />
     <div class="_name c-letters">{{ name }}</div>
   </div>
 </template>
@@ -20,13 +20,8 @@
   align-items: center
   ._svg
     flex: 1
-    width: 26px
-    height: 26px
-    +flex-center
     svg
       transition: all 350ms
-      width: 100%
-      height: 100%
   ._name
     height: 36px
     font-size: 12px

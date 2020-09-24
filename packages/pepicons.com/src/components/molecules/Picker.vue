@@ -48,17 +48,17 @@
       <OptionBox
         backgroundColor="white"
         @click="set('background', 'white')"
-        :class="value.background === 'white' ? 'thin-border--light' : ''"
+        :class="`_background-picker ${value.background === 'white' ? 'thin-border--light' : ''}`"
         iconName="sun-filled"
-        iconColor="rgba(0, 0, 0, 0.08)"
+        iconColor="black"
         iconType="pop"
       />
       <OptionBox
         :backgroundColor="nightfall"
         @click="set('background', nightfall)"
-        :class="value.background === nightfall ? 'thin-border--dark' : ''"
+        :class="`_background-picker ${value.background === nightfall ? 'thin-border--dark' : ''}`"
         iconName="moon-filled"
-        iconColor="rgba(255, 255, 255, 0.08)"
+        iconColor="white"
         iconType="pop"
       />
     </div>
@@ -76,6 +76,8 @@
 
 <style lang="sass">
 // .picker
+._background-picker svg
+  opacity: 0.1
 </style>
 
 <script lang="ts">

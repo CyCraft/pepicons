@@ -13,7 +13,7 @@
     "url": "https://github.com/cycraft/pepicons"
   },
   "bugs": "https://github.com/cycraft/pepicons/issues",
-  "browserslist": [
-    "last 1 version, not dead, ie >= 11"
-  ]
+  "dependencies": {
+    "pepicons": "^0.0.1"
+  }
 }

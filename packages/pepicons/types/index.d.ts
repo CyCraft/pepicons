@@ -2,9 +2,15 @@ import { PepiconPop, PepiconPrint } from './src/index';
 export * from './src/index';
 export declare type Options = {
     /**
-     * You can pass a hex or rgba color, this is applied via the style attribute. The SVG itself then uses currentColor.
+     * You can pass a hex or rgba color, this is applied to the svg tag
      */
     color?: string;
+    /**
+     * A number between 0 and 1; where 0 is transparent
+     * - in "pop" style: opacity will be set to the entire icon
+     * - in "print" style: opacity will be set to the colored drop shadow
+     */
+    opacity?: number;
     /**
      * When you pass a size, it's applied via the style attribute.
      * - 'sm' / 'md' / 'lg' / 'xl' which becomes 20 / 24 / 30 / 36 px
@@ -13,7 +19,7 @@ export declare type Options = {
      */
     size?: 'sm' | 'md' | 'lg' | 'xl' | number | string;
     /**
-     * This option is only for 'print' type icons. The default stroke color is black. Suggested to change to white on dark backgrounds.
+     * The stroke color is only applied on 'print' type icons and is black by default
      */
     stroke?: string;
 };
