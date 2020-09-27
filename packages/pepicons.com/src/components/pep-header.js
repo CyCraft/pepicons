@@ -7,7 +7,10 @@ class PepHeader {
     this.header = document.querySelector(targetSelector)
     this.icons = []
     this.otherIconsMap = {}
-    this.animationSpeed = 0.05
+    this.animationSpeed = 0.03
+    // this var increases/decreases padding for icon to icon collisions
+    this.iconPadding = 0
+    this.titleBoundaries = []
   }
 
   init() {
@@ -15,11 +18,11 @@ class PepHeader {
     this.createRenderer()
     this.createCamera(70, 1, 1000)
     this.createHeaderBoundaryBox()
-    // animate loop binds to window when we need it to bind to this object
-    this.animate = this.animate.bind(this)
     this.drawLines(19, 79)
     this.drawIconSets(2)
-    // this.drawBoxHelpers()
+    this.drawTitle()
+    // animate loop binds to window when we need it to bind to this object
+    this.animate = this.animate.bind(this)
   }
 
   createScene() {
@@ -106,16 +109,25 @@ class PepHeader {
       const coordinates = initialPositions.pop()
       this.loadSvg(icon.pathLong, icon.kind, coordinates)
     }
-    this.iconIdOtherIconsArrayMap = this.createIconIdOtherIconsArrayMap()
-    console.log('iconIdOtherIconsArrayMap in drawIconSets: ', this.iconIdOtherIconsArrayMap)
   }
 
-  drawBoxHelpers() {
-    console.log(this.icons)
-    for (let icon of this.icons) {
-      const box = new THREE.BoxHelper(icon, 'black')
-      this.scene.add(box)
-    }
+  drawTitle() {
+    const reqSvgs = require.context('src/assets/title', true, /\.svg$/)
+    let svgs = []
+    reqSvgs.keys().forEach((key) => {
+      svgs.push({ pathShort: key, pathLong: reqSvgs(key), kind: 'title' })
+    })
+    // TODO - these coordinates need to be based on the size of the canvas AND svg
+    const xMinLeft = -583 / 1.75
+    const xMinRight = -62
+    const yCenter = 50
+
+    this.loadSvg(svgs[0].pathLong, svgs[0].kind, { x: xMinLeft, y: yCenter })
+    this.loadSvg(svgs[1].pathLong, svgs[1].kind, { x: xMinRight, y: yCenter })
+  }
+
+  createTitleBoundaryBox(icon) {
+    this.titleBoundaries.push(this.createAABB(icon))
   }
 
   generateInitialPositions(items) {
@@ -152,8 +164,8 @@ class PepHeader {
     // then combine into array of coordinates
     for (let i = 0; i < initialXCoordinates.length; i++) {
       const coordinates = {
-        x: initialXCoordinates[i],
-        y: initialYCoordinates[i],
+        x: Math.round(initialXCoordinates[i]),
+        y: Math.round(initialYCoordinates[i]),
       }
       initialPositions.push(coordinates)
     }
@@ -235,6 +247,8 @@ class PepHeader {
           group.name = path.userData.node.id
           if (kind === 'icon') {
             group.userData.vector = this.createRandomVector()
+          } else if (kind === 'title') {
+            this.createTitleBoundaryBox(group)
           }
           group.userData.initialPosition = group.position
         }
@@ -242,24 +256,6 @@ class PepHeader {
       this.scene.add(group)
       this.icons.push(group)
     })
-  }
-
-  createIconIdOtherIconsArrayMap() {
-    let otherIcons = []
-    const allIcons = this.icons
-    for (const icon of allIcons) {
-      console.log(icon)
-      otherIcons.push(icon)
-    }
-    console.log('otherIcons: ', otherIcons)
-    // console.log('calculating: iconIdOtherIconsArrayMap')
-    // console.log('this.icons.length: ', this.icons.length)
-    // const allIcons = this.icons
-    // console.log('allIcons.length: ', allIcons.length)
-    // return allIcons.reduce((result, icon) => {
-    //   result[icon.uuid] = allIcons.filter((_icon) => _icon.uuid !== icon.uuid)
-    //   return result
-    // }, {})
   }
 
   detectWallCollision(icon) {
@@ -276,165 +272,61 @@ class PepHeader {
     }
   }
 
-  updateIconXPosition(icon) {
-    // icon.position.x += icon.userData.vector.x * this.animationSpeed
-    let testIcon = icon
-    testIcon.position.x += testIcon.userData.vector.x * this.animationSpeed
-    for (const otherIcon of this.icons) {
-      if (otherIcon.userData.kind === 'title') return
-      if (otherIcon.uuid === icon.uuid) return
-      // const box1 = new THREE.Box3().setFromObject(icon)
-      const box1 = new THREE.Box3().setFromObject(testIcon)
-      const box2 = new THREE.Box3().setFromObject(otherIcon)
-      if (box1.intersectsBox(box2)) {
-        const xMinCollision = box1.containsPoint(box2.min.x)
-        const xMaxCollision = box1.containsPoint(box2.max.x)
-        const yMinCollision = box1.containsPoint(box2.min.y)
-        const yMaxCollision = box1.containsPoint(box2.max.y)
-
-        if (xMinCollision || xMaxCollision) {
-          // console.log('box1: ', box1, 'box2: ', box2)
-          // console.log(
-          //   'icon.userData.vector.x: ',
-          //   icon.userData.vector.x,
-          //   'otherIcon.userData.vector.x: ',
-          //   otherIcon.userData.vector.x,
-          // )
-          // need to handle case for all y collisions
-          if (yMinCollision || yMaxCollision) {
-            // both icons are moving down
-            if (testIcon.userData.vector.y > 0 && otherIcon.userData.vector.y > 0) {
-              // icon is moving faster than otherIcon
-              if (testIcon.userData.vector.y > otherIcon.userData.vector.y) {
-                icon.userData.vector.y *= -1
-                // otherIcon is moving faster than icon
-              } else {
-                otherIcon.userData.vector.y *= -1
-              }
-              // both icons are moving up
-            } else if (testIcon.userData.vector.y < 0 && otherIcon.userData.vector.y < 0) {
-              // icon is moving faster than otherIcon
-              if (testIcon.userData.vector.y < otherIcon.userData.vector.y) {
-                icon.userData.vector.y *= -1
-              } else {
-                otherIcon.userData.vector.y *= -1
-              }
-            } else {
-              icon.userData.vector.y *= -1
-              otherIcon.userData.vector.y *= -1
-            }
-          }
-          // both icons are moving right and collide
-          if (testIcon.userData.vector.x > 0 && otherIcon.userData.vector.x > 0) {
-            // icon is faster than otherIcon
-            if (testIcon.userData.vector.x > otherIcon.userData.vector.x) {
-              icon.userData.vector.x *= -1
-              // otherIcon faster than icon
-            } else {
-              otherIcon.userData.vector.x *= -1
-            }
-            // both icons are moving left and collide
-          } else if (testIcon.userData.vector.x < 0 && otherIcon.userData.vector.x < 0) {
-            // icon is faster than otherIcon
-            if (testIcon.userData.vector.x < otherIcon.userData.vector.x) {
-              icon.userData.vector.x *= -1
-            } else {
-              // otherIcon is faster than icon
-              otherIcon.userData.vector.x *= -1
-            }
-          } else {
-            icon.userData.vector.x *= -1
-            otherIcon.userData.vector.x *= -1
-          }
-        }
-        break
+  checkForTitleCollision(icon) {
+    // not in use - save incase we need this in the future
+    const iconBoundaryBox = new THREE.Box3().setFromObject(icon)
+    for (const titleBoundary of this.titleBoundaries) {
+      if (iconBoundaryBox.intersectsBox(titleBoundary)) {
+        const xBoundsCollision =
+          iconBoundaryBox.max.x >= titleBoundary.max.x ||
+          iconBoundaryBox.min.x <= titleBoundary.min.x
+        const yBoundsCollision =
+          iconBoundaryBox.max.y >= titleBoundary.max.y ||
+          iconBoundaryBox.min.y <= titleBoundary.min.y
+        if (xBoundsCollision) icon.userData.vector.x *= -1
+        if (yBoundsCollision) icon.userData.vector.y *= -1
       }
     }
-    icon.position.x += icon.userData.vector.x * this.animationSpeed
   }
 
-  updateIconYPosition(icon) {
-    // icon.position.y += icon.userData.vector.y * this.animationSpeed
-    let testIcon = icon
-    testIcon.position.y += testIcon.userData.vector.y * this.animationSpeed
-    // let collision = false
-    for (const otherIcon of this.icons) {
-      if (otherIcon.userData.kind === 'title') return
-      if (otherIcon.uuid === icon.uuid) return
-      const box1 = new THREE.Box3().setFromObject(icon)
-      // const padding = new THREE.Vector3(-1, -1, 0)
-      // box1.expandByVector(padding)
-      const box2 = new THREE.Box3().setFromObject(otherIcon)
-      // box2.expandByVector(padding)
-      if (box1.intersectsBox(box2)) {
-        // collision = true
-        const yMinCollision = box1.containsPoint(box2.min.y)
-        const yMaxCollision = box1.containsPoint(box2.max.y)
+  createAABB(icon) {
+    const box = new THREE.Box3().setFromObject(icon)
+    box.expandByVector(new THREE.Vector3(this.iconPadding, this.iconPadding, 0))
+    return box
+  }
 
-        if (yMinCollision || yMaxCollision) {
-          // both icons are moving down
-          if (testIcon.userData.vector.y > 0 && otherIcon.userData.vector.y > 0) {
-            // icon is moving faster than otherIcon
-            if (testIcon.userData.vector.y > otherIcon.userData.vector.y) {
-              icon.userData.vector.y *= -1
-              // otherIcon is moving faster than icon
-            } else {
-              otherIcon.userData.vector.y *= -1
-            }
-            // both icons are moving up
-          } else if (testIcon.userData.vector.y < 0 && otherIcon.userData.vector.y < 0) {
-            // icon is moving faster than otherIcon
-            if (testIcon.userData.vector.y < otherIcon.userData.vector.y) {
-              icon.userData.vector.y *= -1
-            } else {
-              otherIcon.userData.vector.y *= -1
-            }
-          } else {
-            icon.userData.vector.y *= -1
-            otherIcon.userData.vector.y *= -1
-          }
+  updateIconPositions() {
+    for (const icon of this.icons) {
+      if (icon.userData.kind === 'title') continue
+      icon.position.x += icon.userData.vector.x * this.animationSpeed
+      icon.position.y += icon.userData.vector.y * this.animationSpeed
+      this.detectWallCollision(icon)
+      // this.checkForTitleCollision(icon)
+      const box1 = this.createAABB(icon)
+      for (const otherIcon of this.icons) {
+        if (otherIcon.userData.kind === 'title') continue
+        if (otherIcon.uuid === icon.uuid) continue
+        const box2 = this.createAABB(otherIcon)
+        if (box1.intersectsBox(box2)) {
+          this.handleCollision(icon, otherIcon)
         }
-        // const xMinCollision = box1.containsPoint(box2.min.x)
-        // const xMaxCollision = box1.containsPoint(box2.max.x)
-        // if (xMinCollision || xMaxCollision) {
-        //   // both icons are moving right and collide
-        //   if (testIcon.userData.vector.x > 0 && otherIcon.userData.vector.x > 0) {
-        //     // icon is faster than otherIcon
-        //     if (testIcon.userData.vector.x > otherIcon.userData.vector.x) {
-        //       icon.userData.vector.x *= -1
-        //       // otherIcon faster than icon
-        //     } else {
-        //       otherIcon.userData.vector.x *= -1
-        //     }
-        //     // both icons are moving left and collide
-        //   } else if (testIcon.userData.vector.x < 0 && otherIcon.userData.vector.x < 0) {
-        //     // icon is faster than otherIcon
-        //     if (testIcon.userData.vector.x < otherIcon.userData.vector.x) {
-        //       icon.userData.vector.x *= -1
-        //     } else {
-        //       // otherIcon is faster than icon
-        //       otherIcon.userData.vector.x *= -1
-        //     }
-        //   } else {
-        //     icon.userData.vector.x *= -1
-        //     otherIcon.userData.vector.x *= -1
-        //   }
-        // }
-        break
       }
     }
-    icon.position.y += icon.userData.vector.y * this.animationSpeed
+  }
+
+  handleCollision(icon, otherIcon) {
+    const oldIconX = icon.userData.vector.x
+    const oldIconY = icon.userData.vector.y
+    const oldOtherIconX = otherIcon.userData.vector.x
+    const oldOtherIconY = otherIcon.userData.vector.y
+    icon.userData.vector.x = oldOtherIconX
+    icon.userData.vector.y = oldOtherIconY
+    otherIcon.userData.vector.x = oldIconX
+    otherIcon.userData.vector.y = oldIconY
   }
 
   animate() {
-    this.scene.traverse((icon) => {
-      if (icon.name && icon.userData.kind === 'icon') {
-        this.detectWallCollision(icon)
-        this.updateIconXPosition(icon)
-        this.updateIconYPosition(icon)
-        // icon.position.y += icon.userData.vector.y * this.animationSpeed
-      }
-    })
+    this.updateIconPositions()
     // eslint-disable-next-line @typescript-eslint/unbound-method
     requestAnimationFrame(this.animate)
     this.renderer.render(this.scene, this.camera)
