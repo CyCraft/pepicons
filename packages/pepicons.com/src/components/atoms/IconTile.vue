@@ -25,6 +25,7 @@
   ._name
     height: 36px
     font-size: 12px
+    line-height: 1.4em
     width: 100%
     text-align: center
     +flex-center
