@@ -1,11 +1,20 @@
 <template>
   <q-page padding :class="`page-index q-gutter-lg ${darkMode ? 'dark-mode' : ''}`">
     <Pickers v-model="config" />
+    <div class="pa-md">
+      <PepInput
+        :color="config.color"
+        v-model="searchInput"
+        :debounce="200"
+        :isDarkMode="darkMode"
+      />
+    </div>
     <IconGrid
       :type="config.type"
       :color="config.color"
       :stroke="config.stroke"
       :darkMode="darkMode"
+      :filter="searchInput"
     />
   </q-page>
 </template>
@@ -20,13 +29,14 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import PepInput from '../components/atoms/PepInput.vue'
 import IconGrid from '../components/molecules/IconGrid.vue'
 import Pickers from '../components/molecules/Pickers.vue'
-import { cssVar } from '../helpers/colorHelpers'
+import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 
 export default Vue.extend({
   name: 'PageIndex',
-  components: { IconGrid, Pickers },
+  components: { IconGrid, Pickers, PepInput },
   data() {
     const config = {
       type: 'print',
@@ -34,9 +44,12 @@ export default Vue.extend({
       background: 'white',
       stroke: 'black',
     }
-    return { config }
+    return { config, searchInput: '' }
   },
   watch: {
+    'config.color'(newVal) {
+      setPrimaryColor(newVal)
+    },
     'config.background'(newVal) {
       if (newVal === 'white') {
         this.config.stroke = 'black'

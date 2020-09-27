@@ -12,7 +12,7 @@
   align-items: center
 
 .icon-tile
-  transition: background 250ms
+  transition: all 250ms
   border-radius: $border-radius
   height: auto
   display: flex
