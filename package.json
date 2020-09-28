@@ -6,6 +6,7 @@
     "audit": "lerna-audit",
     "dev": "cd packages/pepicons.com && npm run dev",
     "build": "npm run prepare-pepicons && lerna run build",
+    "build:favicon": "lerna run build:favicon",
     "publish": "npm run build && lerna publish",
     "prepare-pepicons": "node ./build/preparePepicons.js",
     "dep:install": "npm i && lerna bootstrap",
