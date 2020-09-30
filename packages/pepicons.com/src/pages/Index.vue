@@ -9,15 +9,14 @@
         :isDarkMode="darkMode"
       />
     </div>
-    <template v-for="(iconNames, category) in categoryIconNamesDic">
-      <div class="_section" v-if="iconNames.length" :key="category">
+    <template v-for="category in categories">
+      <div class="_section" v-if="categoryIconNamesDic[category].length" :key="category">
         <div class="text-section-title">{{ category }}</div>
         <IconGrid
-          :iconNames="iconNames"
+          :iconNames="categoryIconNamesDic[category]"
           :type="_.config.type"
           :color="_.config.color"
           :stroke="_.config.stroke"
-          :darkMode="darkMode"
           :filter="_.searchInput"
         />
       </div>
@@ -28,10 +27,10 @@
 <style lang="sass">
 // $
 .page-index
-  transition: background 250ms
-  background: #FAFAFA
+  transition: background-color 500ms
+  background-color: #FAFAFA
   &.dark-mode
-    background: $c-nightfall
+    background-color: $c-nightfall
   ._section
     +mb($xxl)
 </style>
@@ -48,11 +47,11 @@ import {
   popCatogies,
   printCatogies,
 } from 'pepicons'
+import sort from 'fast-sort'
 import PepInput from '../components/atoms/PepInput.vue'
 import IconGrid from '../components/molecules/IconGrid.vue'
 import Pickers from '../components/molecules/Pickers.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
-import sort from 'fast-sort'
 
 export default defineComponent({
   name: 'PageIndex',

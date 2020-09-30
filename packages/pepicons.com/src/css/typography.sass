@@ -14,7 +14,7 @@ $extra-bold: 800
 
 =header-globals()
   font-family: 'Montserrat', sans-serif
-  transition: color 250ms
+  transition: color 500ms
 
 =t-h1()
   +header-globals()
@@ -117,12 +117,11 @@ $extra-bold: 800
   letter-spacing: 0.02em
 
 =text-section-title()
-  font-family: 'Montserrat', sans-serif, sans
+  +header-globals()
   line-height: 56px
   font-size: 100px
   font-weight: $extra-bold
   text-transform: capitalize
-  transition: color 250ms
   color: white
 .text-section-title
   +text-section-title()

@@ -1,5 +1,5 @@
 <template>
-  <div :class="`icon-tile ${darkMode ? 'bg-moonlight' : 'bg-white'}`">
+  <div class="icon-tile">
     <Pepicon class="_svg" :name="name" :type="type" :color="color" :stroke="stroke" size="26px" />
     <div class="_name c-letters">{{ name }}</div>
   </div>
@@ -12,7 +12,12 @@
   align-items: center
 
 .icon-tile
-  transition: all 250ms
+  background-color: white
+.dark-mode
+  .icon-tile
+    background-color: $c-moonlight
+.icon-tile
+  transition: background-color 500ms
   border-radius: $border-radius
   height: auto
   display: flex
@@ -44,7 +49,6 @@ export default defineComponent({
     color: { type: String, default: '#AB92F0' },
     type: { type: String, default: 'print' },
     stroke: { type: String, default: 'black' },
-    darkMode: { type: Boolean },
   },
   setup() {
     return {}

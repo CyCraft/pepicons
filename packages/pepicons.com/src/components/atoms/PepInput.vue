@@ -1,7 +1,7 @@
 <template>
   <QInput class="pep-input" v-bind="propsToPass" v-on="eventsToPass">
     <template v-slot:prepend>
-      <Pepicon name="loop" :color="color" />
+      <Pepicon name="loop" :color="color" :stroke="isDarkMode ? 'white' : 'black'" />
     </template>
   </QInput>
 </template>
@@ -9,7 +9,7 @@
 <style lang="sass">
 .pep-input
   .q-field__control
-    transition: all 250ms
+    transition: background-color 500ms
     border-radius: 16px
     background-color: white
   .q-field__control:before

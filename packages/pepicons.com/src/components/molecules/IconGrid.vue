@@ -1,11 +1,8 @@
 <template>
   <transition-group class="icon-grid" name="anim-grid" tag="div">
-    <IconTile
-      class="anim-grid-item"
-      v-for="name in iconNames"
-      :key="name"
-      v-bind="{ name, color, type, stroke, darkMode }"
-    />
+    <div class="anim-grid-item" v-for="name in iconNames" :key="name">
+      <IconTile v-bind="{ name, color, type, stroke }" />
+    </div>
   </transition-group>
 </template>
 
@@ -18,12 +15,14 @@
   grid-template-columns: repeat(auto-fit, 100px)
   grid-auto-rows: 100px
   grid-gap: $lg
-  > *
-    width: 100px
-    height: 100px
 .anim-grid-item
+  width: 100px
+  height: 100px
   transition: all 250ms
   opacity: 1
+  > *
+    height: 100%
+    width: 100%
 .anim-grid-enter, .anim-grid-leave-to
   opacity: 0
 .anim-grid-leave-active
@@ -45,7 +44,6 @@ export default defineComponent({
     },
     color: { type: String },
     stroke: { type: String, default: 'black' },
-    darkMode: { type: Boolean },
     filter: { type: String },
   },
 })
