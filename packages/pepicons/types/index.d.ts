@@ -1,4 +1,4 @@
-import { PepiconPop, PepiconPrint } from './src/index';
+import { Pepicon } from './src/index';
 export * from './src/index';
 export declare type Options = {
     /**
@@ -23,5 +23,11 @@ export declare type Options = {
      */
     stroke?: string;
 };
-export declare function pepiconSvgString(iconName: PepiconPop, type: 'pop', options?: Options): string;
-export declare function pepiconSvgString(iconName: PepiconPrint, type: 'print', options?: Options): string;
+/**
+ * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+ * @param iconName The icon name as per the reference at https://pepicons.com
+ * @param type Either 'pop' or 'print'
+ * @param options Extra options
+ * @returns {string} The SVG content as string
+ */
+export declare function pepiconSvgString(iconName: Pepicon, type: 'pop' | 'print', options?: Options): string;

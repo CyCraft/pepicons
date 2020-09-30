@@ -138,6 +138,7 @@ import Truck from './pop/truck'
 import Umbrella from './pop/umbrella'
 import Wifi from './pop/wifi'
 
+
 export const pop: { [name in Pepicon]: string } = {
   'airplane': Airplane,
   'arrow-down': ArrowDown,

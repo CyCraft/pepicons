@@ -1,6 +1,6 @@
 /** Do not edit! This file is auto-generated. */
 
-import { Pepicon } from '../types'
+import { PepiconPrint } from '../types'
 
 import Airplane from './print/airplane'
 import ArrowDown from './print/arrow-down'
@@ -121,7 +121,8 @@ import Truck from './print/truck'
 import Umbrella from './print/umbrella'
 import Wifi from './print/wifi'
 
-export const print: { [name in Pepicon]: string } = {
+
+export const print: { [name in PepiconPrint]: string } = {
   'airplane': Airplane,
   'arrow-down': ArrowDown,
   'arrow-left': ArrowLeft,

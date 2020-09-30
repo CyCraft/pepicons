@@ -1,4 +1,4 @@
-import { pop, print, Pepicon } from './src/index'
+import { pop, print, Pepicon, PepiconPrint } from './src/index'
 import { textToRgba } from './helpers/color'
 export * from './src/index'
 
@@ -38,7 +38,7 @@ export function pepiconSvgString(
   type: 'pop' | 'print',
   options?: Options,
 ): string {
-  let svgString = type === 'pop' ? pop[iconName] : print[iconName]
+  let svgString = type === 'pop' ? pop[iconName] : print[iconName as PepiconPrint]
   if (!svgString) {
     console.error(`Pepicon ${iconName} of type ${type} not found!`)
     return ''

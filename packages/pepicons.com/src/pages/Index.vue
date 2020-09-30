@@ -59,12 +59,11 @@ import { defineComponent, computed, watch, reactive, ref } from '@vue/compositio
 import {
   pop,
   print,
-  popSynonyms,
-  printSynonyms,
-  PepiconPop,
+  Pepicon,
   PepiconPrint,
-  popCatogies,
-  printCatogies,
+  synonyms,
+  categories,
+  pepiconCategoryDic,
 } from 'pepicons'
 import sort from 'fast-sort'
 import PepInput from '../components/atoms/PepInput.vue'
@@ -109,23 +108,16 @@ export default defineComponent({
     const darkMode = computed(() => {
       return _.config.background === cssVar('nightfall')
     })
-    const categories = (() => {
-      const cats = [...new Set(Object.values(popCatogies))]
-      sort(cats).desc()
-      return cats
-    })()
 
     const iconSet = computed(() => (_.config.type === 'print' ? print : pop))
-    const iconNames = computed(() => Object.keys(iconSet.value) as (PepiconPop | PepiconPrint)[])
-    const iconNameCategoryDic = computed(() => _.config.type === 'print' ? printCatogies : popCatogies) // prettier-ignore
-    const synonyms = computed(() => (_.config.type === 'print' ? printSynonyms : popSynonyms))
+    const iconNames = computed(() => Object.keys(iconSet.value) as Pepicon[])
     const categoryIconNamesDic = computed(() =>
-      Object.entries(iconNameCategoryDic.value).reduce((dic, [iconName, iconCategory]) => {
+      Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
         if (!(iconCategory in dic)) dic[iconCategory] = []
         const searchInput = _.searchInput.trim()
         if (searchInput) {
           const searchText = searchInput.toLowerCase()
-          const _synonyms: string[] = synonyms.value[iconName as PepiconPrint]
+          const _synonyms: string[] = synonyms[iconName]
           const searchHit =
             iconName.includes(searchText) || _synonyms?.some((syn) => syn.includes(searchText))
           if (!searchHit) return dic
