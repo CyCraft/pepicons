@@ -1,4 +1,4 @@
-import { pop, print, PepiconPop, PepiconPrint } from './src/index'
+import { pop, print, Pepicon } from './src/index'
 import { textToRgba } from './helpers/color'
 export * from './src/index'
 
@@ -26,8 +26,6 @@ export type Options = {
   stroke?: string
 }
 
-export function pepiconSvgString(iconName: PepiconPop, type: 'pop', options?: Options): string
-export function pepiconSvgString(iconName: PepiconPrint, type: 'print', options?: Options): string
 /**
  * Returns a Pepicon SVG as a string so you can inject it into your HTML.
  * @param iconName The icon name as per the reference at https://pepicons.com
@@ -36,11 +34,11 @@ export function pepiconSvgString(iconName: PepiconPrint, type: 'print', options?
  * @returns {string} The SVG content as string
  */
 export function pepiconSvgString(
-  iconName: PepiconPop | PepiconPrint,
+  iconName: Pepicon,
   type: 'pop' | 'print',
   options?: Options,
 ): string {
-  let svgString = type === 'pop' ? pop[iconName as PepiconPop] : print[iconName as PepiconPrint]
+  let svgString = type === 'pop' ? pop[iconName] : print[iconName]
   if (!svgString) {
     console.error(`Pepicon ${iconName} of type ${type} not found!`)
     return ''
