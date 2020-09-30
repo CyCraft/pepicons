@@ -6,11 +6,7 @@
 </template>
 
 <style lang="sass">
-=flex-center
-  display: flex
-  justify-content: center
-  align-items: center
-
+// $
 .icon-tile
   background-color: white
 .dark-mode
