@@ -9,6 +9,7 @@
 <style lang="sass">
 .pep-input
   .q-field__control
+    transition: all 250ms
     border-radius: 16px
     background-color: white
   .q-field__control:before
@@ -21,10 +22,8 @@
       background-color: white
 .dark-mode .pep-input
   .q-field__control
-    transition: all 250ms
     background-color: $c-moonlight
   .q-field__control:hover
-    transition: all 250ms
     background-color: $c-moonlight
   &.q-field--focused
     .q-field__control

@@ -20,8 +20,6 @@
   align-items: center
   ._svg
     flex: 1
-    svg
-      transition: all 350ms
   ._name
     height: 36px
     font-size: 12px
