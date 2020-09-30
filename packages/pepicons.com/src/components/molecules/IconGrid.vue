@@ -11,7 +11,7 @@
 .icon-grid
   display: grid
   min-width: 500px
-  justify-content: start
+  justify-content: center
   grid-template-columns: repeat(auto-fit, 100px)
   grid-auto-rows: 100px
   grid-gap: $lg

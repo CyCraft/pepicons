@@ -1,26 +1,45 @@
 <template>
-  <q-page padding :class="`page-index q-gutter-lg ${darkMode ? 'dark-mode' : ''}`">
-    <Pickers v-model="_.config" />
-    <div class="pa-md">
+  <q-page padding :class="`page-index ${darkMode ? 'dark-mode' : ''}`">
+    <div class="_page-content">
+      <Pickers v-model="_.config" class="mb-md" />
       <PepInput
+        class="mb-xxl"
         :color="_.config.color"
         v-model="_.searchInput"
         :debounce="200"
         :isDarkMode="darkMode"
       />
-    </div>
-    <template v-for="category in categories">
-      <div class="_section" v-if="categoryIconNamesDic[category].length" :key="category">
-        <div class="text-section-title">{{ category }}</div>
-        <IconGrid
-          :iconNames="categoryIconNamesDic[category]"
-          :type="_.config.type"
-          :color="_.config.color"
-          :stroke="_.config.stroke"
-          :filter="_.searchInput"
-        />
+      <template v-for="category in categories">
+        <div class="mb-xxl" v-if="categoryIconNamesDic[category].length" :key="category">
+          <div class="text-section-title">{{ category }}</div>
+          <IconGrid
+            :iconNames="categoryIconNamesDic[category]"
+            :type="_.config.type"
+            :color="_.config.color"
+            :stroke="_.config.stroke"
+            :filter="_.searchInput"
+          />
+        </div>
+      </template>
+      <div class="_section">
+        <div class="text-section-title">Request Icons</div>
+        <div>
+          Feel free to
+          <a
+            href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
+            >request</a
+          >
+          a new icon on Github. 　🙃
+        </div>
       </div>
-    </template>
+      <div class="_section">
+        <div class="text-section-title">About Us</div>
+        <div>
+          Pepicons was made by these peeps. Read the announcement blog to read about our motivation
+          for creating Pepicons!
+        </div>
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -28,8 +47,11 @@
 // $
 .page-index
   transition: background-color 500ms
+  ._page-content
+    +mx(auto)
+    max-width: 980px
   ._section
-    +mb($xxl)
+    +mt(160px)
 </style>
 
 <script lang="ts">
