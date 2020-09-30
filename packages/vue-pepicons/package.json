@@ -1,6 +1,6 @@
 {
   "name": "vue-pepicons",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Luca Ban - Mesqueeb",
   "description": "Vue component for Pepicons",
   "license": "MIT",
@@ -14,6 +14,6 @@
   },
   "bugs": "https://github.com/cycraft/pepicons/issues",
   "dependencies": {
-    "pepicons": "^0.0.4"
+    "pepicons": "^0.0.5"
   }
 }
