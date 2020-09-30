@@ -117,7 +117,7 @@ const filesArrayToExportFileContents = (kind = 'pop', iconNameFilePathEntries = 
     const categories = (() => {
       const cats = [...allCategories]
       sort(cats).desc()
-      return `export const categories: { [name in Pepicon]: string } = {\n${categoryProps}}`
+      return `export const categories: string[] = [${cats.map((c) => `'${c}'`).join(', ')}]`
     })()
     const pepiconCategoryDic = `export const pepiconCategoryDic: { [name in Pepicon]: string } = {\n${categoryProps}}`
     return [

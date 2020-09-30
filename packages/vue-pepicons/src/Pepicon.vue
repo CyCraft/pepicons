@@ -18,7 +18,7 @@ export default {
   props: {
     /**
      * The icon name as per the reference at https://pepicons.com
-     * @type { PepiconPop | PepiconPrint }
+     * @type { Pepicon }
      * @example 'color-picker'
      */
     name: { type: String, required: true },

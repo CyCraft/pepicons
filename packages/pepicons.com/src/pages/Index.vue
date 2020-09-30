@@ -56,15 +56,7 @@
 
 <script lang="ts">
 import { defineComponent, computed, watch, reactive, ref } from '@vue/composition-api'
-import {
-  pop,
-  print,
-  Pepicon,
-  PepiconPrint,
-  synonyms,
-  categories,
-  pepiconCategoryDic,
-} from 'pepicons'
+import { pop, print, Pepicon, synonyms, categories, pepiconCategoryDic } from 'pepicons'
 import sort from 'fast-sort'
 import PepInput from '../components/atoms/PepInput.vue'
 import IconGrid from '../components/molecules/IconGrid.vue'
@@ -109,15 +101,15 @@ export default defineComponent({
       return _.config.background === cssVar('nightfall')
     })
 
-    const iconSet = computed(() => (_.config.type === 'print' ? print : pop))
-    const iconNames = computed(() => Object.keys(iconSet.value) as Pepicon[])
     const categoryIconNamesDic = computed(() =>
       Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
         if (!(iconCategory in dic)) dic[iconCategory] = []
+        const iconNonExistent = _.config.type === 'print' && iconName.endsWith('-filled')
+        if (iconNonExistent) return dic
         const searchInput = _.searchInput.trim()
         if (searchInput) {
           const searchText = searchInput.toLowerCase()
-          const _synonyms: string[] = synonyms[iconName]
+          const _synonyms: string[] = synonyms[iconName as Pepicon]
           const searchHit =
             iconName.includes(searchText) || _synonyms?.some((syn) => syn.includes(searchText))
           if (!searchHit) return dic
