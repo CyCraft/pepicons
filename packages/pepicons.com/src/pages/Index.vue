@@ -28,9 +28,6 @@
 // $
 .page-index
   transition: background-color 500ms
-  background-color: #FAFAFA
-  &.dark-mode
-    background-color: $c-nightfall
   ._section
     +mb($xxl)
 </style>
@@ -78,9 +75,11 @@ export default defineComponent({
       (newVal) => {
         if (newVal === 'white') {
           _.config.stroke = 'black'
+          document.body.style.backgroundColor = cssVar('ivory')
         }
         if (newVal === cssVar('nightfall')) {
           _.config.stroke = 'white'
+          document.body.style.backgroundColor = cssVar('nightfall')
         }
       },
     )
