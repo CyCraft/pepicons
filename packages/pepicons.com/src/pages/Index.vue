@@ -27,7 +27,7 @@
             :type="_.config.type"
             :color="_.config.color"
             :stroke="_.config.stroke"
-            :filter="_.searchInput"
+            :searchInput="_.searchInput"
           />
         </div>
       </template>

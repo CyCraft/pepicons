@@ -129,9 +129,23 @@ $extra-bold: 800
   .text-section-title
     color: $c-moonlight
 
+=text-mini-title()
+  font-weight: $extra-bold
+  font-size: 20px
+  line-height: 16px
+  text-transform: capitalize
+  color: #e8e9ec
+.text-mini-title
+  +text-mini-title()
+.dark-mode
+  .text-mini-title
+    color: #3c3c3c
+
 body
   +t-body1()
   color: $c-letters
+  .dark-mode
+    color: white
 
 .text-h1
   +t-h1()

@@ -1,7 +1,7 @@
 <template>
   <transition-group class="icon-grid" name="anim-grid" tag="div">
     <div class="anim-grid-item" v-for="name in iconNames" :key="name">
-      <IconTile v-bind="{ name, color, type, stroke }" />
+      <IconTile v-bind="{ name, color, type, stroke, searchInput }" />
     </div>
   </transition-group>
 </template>
@@ -44,7 +44,7 @@ export default defineComponent({
     },
     color: { type: String },
     stroke: { type: String, default: 'black' },
-    filter: { type: String },
+    searchInput: { type: String },
   },
 })
 </script>
