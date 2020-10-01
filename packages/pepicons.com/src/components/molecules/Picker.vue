@@ -1,77 +1,75 @@
 <template>
-  <div class="picker column flex-center">
-    <div class="text-subtitle1 text-capitalize mb-md c-letters">
+  <Stack v-if="kind === 'type'" classes="justify-center">
+    <!-- <div class="text-subtitle1 mb-sm">
       {{ kind === 'type' ? 'Style' : kind }}
-    </div>
-    <div v-if="kind === 'type'" class="flex q-gutter-md">
-      <OptionBox
-        iconName="pen"
-        iconType="print"
-        :iconColor="value.color"
-        :isActive="value.type === 'print'"
-        backgroundColor="white"
-        @click="set('type', 'print')"
-      />
-      <OptionBox
-        iconName="pen"
-        iconType="pop"
-        :iconColor="value.color"
-        :isActive="value.type === 'pop'"
-        backgroundColor="white"
-        @click="set('type', 'pop')"
-      />
-    </div>
-    <div v-if="kind === 'color'" class="flex q-gutter-md">
-      <OptionBox
-        v-for="c in colorSelection"
-        :key="c"
-        :backgroundColor="c"
-        @click="set('color', c)"
-        :isActive="value.color === c"
-      />
-      <OptionBox
-        :colorRing="true"
-        iconName="color-picker"
-        @click="openColorPicker"
-        iconColor="#ffadad"
-        iconType="print"
-      />
-      <OptionBox
-        :colorRing="true"
-        iconName="refresh"
-        @click="setRandomColor"
-        iconColor="#ffadad"
-        iconType="print"
-      />
-    </div>
-    <div v-if="kind === 'background'" class="flex q-gutter-md">
-      <OptionBox
-        backgroundColor="white"
-        @click="set('background', 'white')"
-        :class="`_background-picker ${value.background === 'white' ? 'thin-border--light' : ''}`"
-        iconName="sun-filled"
-        iconColor="black"
-        iconType="pop"
-      />
-      <OptionBox
-        :backgroundColor="nightfall"
-        @click="set('background', nightfall)"
-        :class="`_background-picker ${value.background === nightfall ? 'thin-border--dark' : ''}`"
-        iconName="moon-filled"
-        iconColor="white"
-        iconType="pop"
-      />
-    </div>
-    <div v-if="kind === 'stroke'" class="flex q-gutter-md">
-      <OptionBox
-        :colorRing="true"
-        iconName="color-picker"
-        @click="openColorPicker"
-        iconColor="#e8e8e8"
-        iconType="print"
-      />
-    </div>
-  </div>
+    </div> -->
+    <OptionBox
+      iconName="pen"
+      iconType="print"
+      :iconColor="value.color"
+      :isActive="value.type === 'print'"
+      backgroundColor="white"
+      @click="set('type', 'print')"
+    />
+    <OptionBox
+      iconName="pen"
+      iconType="pop"
+      :iconColor="value.color"
+      :isActive="value.type === 'pop'"
+      backgroundColor="white"
+      @click="set('type', 'pop')"
+    />
+  </Stack>
+  <Stack v-else-if="kind === 'color'" classes="justify-center">
+    <OptionBox
+      v-for="c in colorSelection"
+      :key="c"
+      :backgroundColor="c"
+      @click="set('color', c)"
+      :isActive="value.color === c"
+    />
+    <OptionBox
+      :colorRing="true"
+      iconName="color-picker"
+      @click="openColorPicker"
+      iconColor="#ffadad"
+      iconType="print"
+    />
+    <OptionBox
+      :colorRing="true"
+      iconName="refresh"
+      @click="setRandomColor"
+      iconColor="#ffadad"
+      iconType="print"
+    />
+  </Stack>
+  <Stack v-else-if="kind === 'background'" classes="justify-center">
+    <OptionBox
+      backgroundColor="white"
+      @click="set('background', 'white')"
+      :class="`_background-picker ${value.background === 'white' ? 'thin-border--light' : ''}`"
+      iconName="sun-filled"
+      iconColor="black"
+      iconType="pop"
+    />
+    <OptionBox
+      :backgroundColor="nightfall"
+      @click="set('background', nightfall)"
+      :class="`_background-picker ${value.background === nightfall ? 'thin-border--dark' : ''}`"
+      iconName="moon-filled"
+      iconColor="white"
+      iconType="pop"
+    />
+  </Stack>
+  <Stack v-else-if="kind === 'stroke'" classes="justify-center">
+    <OptionBox
+      :colorRing="true"
+      iconName="color-picker"
+      @click="openColorPicker"
+      iconColor="#e8e8e8"
+      iconType="print"
+    />
+  </Stack>
 </template>
 
 <style lang="sass">
@@ -85,11 +83,12 @@ import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/compo
 import { Dialog, QColor } from 'quasar'
 import DialogWrapper from '../dialogs/DialogWrapper.vue'
 import OptionBox from '../atoms/OptionBox.vue'
+import Stack from '../atoms/Stack.vue'
 import { getRandomColor, cssVar } from '../../helpers/colorHelpers'
 
 export default defineComponent({
   name: 'Picker',
-  components: { OptionBox },
+  components: { OptionBox, Stack },
   props: {
     /**
      * @example 'type'
