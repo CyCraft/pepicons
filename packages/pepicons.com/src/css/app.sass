@@ -3,7 +3,10 @@
 
 body
   transition: background-color 250ms
-  background-color: $c-ivory
+  &.light-mode
+    background-color: $c-ivory
+  &.dark-mode
+    background-color: $c-nightfall
 
 a
   color: $c-letters

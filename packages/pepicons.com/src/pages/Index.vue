@@ -1,5 +1,5 @@
 <template>
-  <q-page padding :class="`page-index ${darkMode ? 'dark-mode' : ''}`">
+  <q-page padding class="page-index">
     <div class="_page-content">
       <div class="mb-md text-center">
         Pepicons is an icon-set of over one hundred retro icons inspired by the 80's.
@@ -76,6 +76,9 @@ import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 export default defineComponent({
   name: 'PageIndex',
   components: { IconGrid, Pickers, PepInput },
+  created() {
+    document.body.classList.add('light-mode')
+  },
   setup(props) {
     const _ = reactive({
       searchInput: '',
@@ -98,11 +101,11 @@ export default defineComponent({
       (newVal) => {
         if (newVal === 'white') {
           _.config.stroke = 'black'
-          document.body.style.backgroundColor = cssVar('ivory')
+          document.body.className = document.body.className.replace(/dark-mode/g, 'light-mode')
         }
         if (newVal === cssVar('nightfall')) {
           _.config.stroke = 'white'
-          document.body.style.backgroundColor = cssVar('nightfall')
+          document.body.className = document.body.className.replace(/light-mode/g, 'dark-mode')
         }
       },
     )

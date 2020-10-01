@@ -19,8 +19,12 @@
   +t-body2()
   +flex-center()
   color: $c-letters
-  background: white !important
   opacity: 0.9
+  background-color: $c-ivory
+.dark-mode
+  .footer
+    background-color: $c-moonlight
+    color: white
 </style>
 
 <script>
