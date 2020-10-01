@@ -1,6 +1,16 @@
 <template>
   <q-page padding :class="`page-index ${darkMode ? 'dark-mode' : ''}`">
     <div class="_page-content">
+      <div class="mb-md text-center">
+        Pepicons is an icon-set of over one hundred retro icons inspired by the 80's.
+      </div>
+      <div class="mb-xxl text-center">
+        If this project has helped you, please consider
+        <a
+          href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
+          >sponsoring us on GitHub</a
+        >!
+      </div>
       <Pickers v-model="_.config" class="mb-md" />
       <PepInput
         class="mb-xxl"

@@ -5,6 +5,41 @@ body
   transition: background-color 250ms
   background-color: $c-ivory
 
+a
+  color: $c-letters
+.dark-mode a
+  color: white
+a
+  text-decoration: none
+  text-decoration-color: none
+  position: relative
+  &:focus
+    outline: 0
+    box-shadow: none
+  &::after
+    content: ''
+    position: absolute
+    transform: rotate(181deg) translateY(-2px)
+    width: 105%
+    bottom: 0
+    left: -2px
+    border-top: 2px solid black
+    border-radius: 50px
+    transition: border-color 250ms
+  &::before
+    content: ''
+    position: absolute
+    justify-content: bottom
+    transform-origin: bottom
+    transform: rotate(181deg) translateY(-2px)
+    width: 105%
+    bottom: 1px
+    left: -2px
+    border-bottom: 6px solid $c-primary
+    border-radius: 50px
+.dark-mode a::after
+  border-top: 2px solid white
+
 .thin-border--light
   border: thin solid $c-old-tucan !important
 .thin-border--dark

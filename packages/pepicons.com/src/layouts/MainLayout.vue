@@ -5,7 +5,9 @@
     </q-page-container>
     <div class="pb-xxxl"></div>
     <q-footer class="footer">
-      <div>Pepicons was made with 💜 by <a href="https://cycraft.co">cycraft.co</a></div>
+      <div class="mb-md">
+        Pepicons was made with 💜 by <a href="https://cycraft.co">cycraft.co</a>
+      </div>
       <div>© Copyright Pepicons, {{ new Date().getFullYear() }}</div>
     </q-footer>
   </q-layout>
