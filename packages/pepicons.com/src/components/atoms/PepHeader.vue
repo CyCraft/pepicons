@@ -30,6 +30,13 @@ export default {
     header.init()
     header.animate()
   },
+  destroyed() {
+    if (!window.renderer) return
+    window.renderer.forceContextLoss()
+    window.renderer.dispose()
+    window.renderer.domElement = null
+    window.renderer = null
+  },
   methods: {},
   computed: {},
 }

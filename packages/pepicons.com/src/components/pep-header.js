@@ -30,9 +30,9 @@ class PepHeader {
   }
 
   createRenderer() {
-    this.renderer = new THREE.WebGL1Renderer()
-    this.renderer.setSize(this.header.offsetWidth, this.header.offsetHeight)
-    this.header.appendChild(this.renderer.domElement)
+    if (!window.renderer) window.renderer = new THREE.WebGL1Renderer()
+    window.renderer.setSize(this.header.offsetWidth, this.header.offsetHeight)
+    this.header.appendChild(window.renderer.domElement)
   }
 
   createCamera(fieldOfView, nearClippingPlane, farClippingPlane) {
@@ -60,7 +60,7 @@ class PepHeader {
   }
 
   drawLines(totalVertical, totalHorizontal) {
-    const canvas = this.renderer.domElement
+    const canvas = window.renderer.domElement
     const height = canvas.clientHeight
     const width = canvas.clientWidth
     const dy = height / totalVertical
@@ -131,8 +131,8 @@ class PepHeader {
 
   generateInitialPositions(items) {
     const spawnPadding = 100
-    const cavasWidth = this.renderer.domElement.clientWidth - spawnPadding
-    const cavasHeight = this.renderer.domElement.clientHeight - spawnPadding
+    const cavasWidth = window.renderer.domElement.clientWidth - spawnPadding
+    const cavasHeight = window.renderer.domElement.clientHeight - spawnPadding
     const xRange = cavasWidth - cavasWidth / 2
     const yRange = cavasHeight - cavasHeight / 2
     // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
@@ -328,7 +328,7 @@ class PepHeader {
     this.updateIconPositions()
     // eslint-disable-next-line @typescript-eslint/unbound-method
     requestAnimationFrame(this.animate)
-    this.renderer.render(this.scene, this.camera)
+    window.renderer.render(this.scene, this.camera)
   }
 }
 
