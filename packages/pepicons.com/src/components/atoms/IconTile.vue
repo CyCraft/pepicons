@@ -40,6 +40,7 @@
 import { computed, defineComponent, PropType } from '@vue/composition-api'
 import { Pepicon as PepiconType, synonyms } from 'pepicons'
 import { Pepicon } from 'vue-pepicons'
+import { cleanupForSearch } from '../../helpers/search'
 
 export default defineComponent({
   name: 'IconTile',
@@ -56,9 +57,10 @@ export default defineComponent({
   },
   setup(props) {
     const searchInputSynonymHit = computed(() => {
-      if (!props.searchInput) return undefined
+      const searchText = cleanupForSearch(props.searchInput)
+      if (!searchText) return undefined
       const _synonyms = synonyms[props.name] || []
-      return _synonyms.find((s) => s.toLowerCase().includes(props.searchInput.toLowerCase()))
+      return _synonyms.find((s) => cleanupForSearch(s).includes(searchText))
     })
     const synonymHtml = computed(() => {
       if (!searchInputSynonymHit.value) return ''

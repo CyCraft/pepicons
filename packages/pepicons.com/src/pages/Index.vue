@@ -131,6 +131,7 @@ import Pickers from '../components/molecules/Pickers.vue'
 import PepLink from '../components/atoms/PepLink.vue'
 import ProfileCard from '../components/atoms/ProfileCard.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
+import { cleanupForSearch } from '../helpers/search'
 import { Dialog } from 'quasar'
 
 export default defineComponent({
@@ -179,12 +180,12 @@ export default defineComponent({
         if (!(iconCategory in dic)) dic[iconCategory] = []
         const iconNonExistent = _.config.type === 'print' && iconName.endsWith('-filled')
         if (iconNonExistent) return dic
-        const searchInput = _.searchInput.trim()
-        if (searchInput) {
-          const searchText = searchInput.toLowerCase()
+        const searchText = cleanupForSearch(_.searchInput)
+        if (searchText) {
           const _synonyms: string[] = synonyms[iconName as Pepicon]
           const searchHit =
-            iconName.includes(searchText) || _synonyms?.some((syn) => syn.includes(searchText))
+            cleanupForSearch(iconName).includes(searchText) ||
+            _synonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
           if (!searchHit) return dic
         }
         dic[iconCategory].push(iconName)
