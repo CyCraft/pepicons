@@ -1,6 +1,6 @@
 <template>
   <button
-    :class="`option-box reset-button ${isActive ? '_active' : ''}`"
+    :class="`icon-button reset-button ${isActive ? '_active' : ''}`"
     :style="`background: ${backgroundColor}; ${activeStyle}`"
     @click="$emit('click')"
   >
@@ -19,7 +19,7 @@
 </template>
 
 <style lang="sass">
-.option-box
+.icon-button
   border-radius: $border-radius
   width: 36px
   height: 36px
