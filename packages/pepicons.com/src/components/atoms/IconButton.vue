@@ -43,7 +43,7 @@ import { colors } from 'quasar'
 const { changeAlpha } = colors
 
 export default defineComponent({
-  name: 'OptionBox',
+  name: 'IconButton',
   components: { ColorRingSvg, Pepicon },
   props: {
     backgroundColor: { type: String, default: '#fff' },

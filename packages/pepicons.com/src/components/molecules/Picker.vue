@@ -3,7 +3,7 @@
     <!-- <div class="text-subtitle1 mb-sm">
       {{ kind === 'type' ? 'Style' : kind }}
     </div> -->
-    <OptionBox
+    <IconButton
       iconName="pen"
       iconType="print"
       :iconColor="value.color"
@@ -11,7 +11,7 @@
       backgroundColor="white"
       @click="set('type', 'print')"
     />
-    <OptionBox
+    <IconButton
       iconName="pen"
       iconType="pop"
       :iconColor="value.color"
@@ -21,21 +21,21 @@
     />
   </Stack>
   <Stack v-else-if="kind === 'color'" classes="justify-center">
-    <OptionBox
+    <IconButton
       v-for="c in colorSelection"
       :key="c"
       :backgroundColor="c"
       @click="set('color', c)"
       :isActive="value.color === c"
     />
-    <OptionBox
+    <IconButton
       :colorRing="true"
       iconName="color-picker"
       @click="openColorPicker"
       iconColor="#ffadad"
       iconType="print"
     />
-    <OptionBox
+    <IconButton
       :colorRing="true"
       iconName="refresh"
       @click="setRandomColor"
@@ -44,7 +44,7 @@
     />
   </Stack>
   <Stack v-else-if="kind === 'background'" classes="justify-center">
-    <OptionBox
+    <IconButton
       backgroundColor="white"
       @click="set('background', 'white')"
       :class="`_background-picker ${value.background === 'white' ? 'thin-border--light' : ''}`"
@@ -52,7 +52,7 @@
       iconColor="black"
       iconType="pop"
     />
-    <OptionBox
+    <IconButton
       :backgroundColor="nightfall"
       @click="set('background', nightfall)"
       :class="`_background-picker ${value.background === nightfall ? 'thin-border--dark' : ''}`"
@@ -62,7 +62,7 @@
     />
   </Stack>
   <Stack v-else-if="kind === 'stroke'" classes="justify-center">
-    <OptionBox
+    <IconButton
       :colorRing="true"
       iconName="color-picker"
       @click="openColorPicker"
@@ -82,13 +82,13 @@
 import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
 import { Dialog, QColor } from 'quasar'
 import DialogWrapper from '../dialogs/DialogWrapper.vue'
-import OptionBox from '../atoms/OptionBox.vue'
+import IconButton from '../atoms/IconButton.vue'
 import Stack from '../atoms/Stack.vue'
 import { getRandomColor, cssVar } from '../../helpers/colorHelpers'
 
 export default defineComponent({
   name: 'Picker',
-  components: { OptionBox, Stack },
+  components: { IconButton, Stack },
   props: {
     /**
      * @example 'type'
