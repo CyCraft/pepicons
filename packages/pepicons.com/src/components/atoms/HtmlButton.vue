@@ -1,7 +1,7 @@
 <template>
   <button @click="toggle" :class="`html-button ${value ? '_expanded' : ''}`">
-    <Pepicon class="_icon" name="arrow-left" :type="type" :color="color" :stroke="stroke" />
-    <Pepicon class="_icon" name="arrow-right" :type="type" :color="color" :stroke="stroke" />
+    <Pepicon class="_icon" name="angle-left" :type="type" :color="color" :stroke="stroke" />
+    <Pepicon class="_icon" name="angle-right" :type="type" :color="color" :stroke="stroke" />
   </button>
 </template>
 
