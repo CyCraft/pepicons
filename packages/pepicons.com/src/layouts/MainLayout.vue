@@ -1,5 +1,9 @@
 <template>
-  <q-layout view="lhh Lpr lff">
+  <q-layout view="hhh lpr fff">
+    <q-header>
+      <PepHeader class="full-width" :key="remountCount" />
+      <q-resize-observer @resize="onResize" />
+    </q-header>
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -29,13 +33,27 @@
 </style>
 
 <script>
+import PepHeader from '../components/atoms/PepHeader.vue'
 import PepLink from '../components/atoms/PepLink.vue'
 
 export default {
   name: 'MainLayout',
-  components: { PepLink },
+  components: { PepHeader, PepLink },
   data() {
-    return {}
+    return { remountCount: 0 }
+  },
+  methods: {
+    onResize({ width, height }) {
+      const canvas = this.$el.querySelector('.pep-header canvas')
+      if (!canvas) return
+      canvas.width = width
+      canvas.height = width * 0.3
+      canvas.style.width = width + 'px'
+      canvas.style.height = width * 0.3 + 'px'
+      this.$nextTick(() => {
+        this.remountCount++
+      })
+    },
   },
 }
 </script>
