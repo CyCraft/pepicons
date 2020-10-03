@@ -9,7 +9,7 @@
         Pepicons was made with 💜 by
         <PepLink href="https://cycraft.co" content="cycraft.co" retroUnderline />
       </div>
-      <div>© Copyright Pepicons, {{ new Date().getFullYear() }}</div>
+      <div>© Copyright CyCraft, {{ new Date().getFullYear() }}</div>
     </q-footer>
   </q-layout>
 </template>

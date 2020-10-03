@@ -4,7 +4,7 @@
     :class="`pep-link ${retroUnderline ? '_retro-underline' : ''} ${icon ? '_has-icon' : ''}`"
   >
     <template v-if="icon">
-      <GithubLogo v-if="icon === 'github'" size="sm" class="_icon" />
+      <CompanyLogo v-if="icon === 'github'" name="github" size="sm" class="_icon" />
       <Pepicon v-else :name="icon" size="sm" class="_icon" type="pop" />
       <div class="mr-sm" />
     </template>
@@ -71,11 +71,11 @@
 <script lang="ts">
 import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
 import { Pepicon } from 'vue-pepicons'
-import GithubLogo from './GithubLogo.vue'
+import CompanyLogo from './CompanyLogo.vue'
 
 export default defineComponent({
   name: 'PepLink',
-  components: { GithubLogo, Pepicon },
+  components: { CompanyLogo, Pepicon },
   props: {
     href: { type: String, required: true },
     content: { type: String },

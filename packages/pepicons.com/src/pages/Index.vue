@@ -54,10 +54,26 @@
       </div>
       <div class="_section">
         <div class="text-section-title" id="about-us">About Us</div>
-        <div>
+        <div class="mb-lg">
           Read the announcement blog to read about our motivation for creating Pepicons! Pepicons
           was made by these peeps:
         </div>
+        <Stack classes="justify-center" gap="lg">
+          <ProfileCard
+            name="Luca Ban"
+            :description="`Likes… jokes, minecraft\nWorks as… coder\nPassionate about… design`"
+            profileUrl="luca.jpg"
+            color="#55BBC5"
+            profileImgStyle="margin-left: 32px"
+            :links="['https://github.com/mesqueeb', 'https://twitter.com/mesqueeb']"
+          />
+          <ProfileCard
+            name="Asuka"
+            :description="`Likes… cats, vintage toys\nWorks as… designer\nPassionate about… cult films`"
+            profileUrl="asuka.jpg"
+            color="#F092AD"
+          />
+        </Stack>
       </div>
     </div>
   </q-page>
@@ -107,12 +123,13 @@ import PepInput from '../components/atoms/PepInput.vue'
 import IconGrid from '../components/molecules/IconGrid.vue'
 import Pickers from '../components/molecules/Pickers.vue'
 import PepLink from '../components/atoms/PepLink.vue'
+import ProfileCard from '../components/atoms/ProfileCard.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 import { Dialog } from 'quasar'
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { IconGrid, Pickers, PepInput, PepLink, Stack },
+  components: { IconGrid, Pickers, PepInput, PepLink, ProfileCard, Stack },
   created() {
     document.body.classList.add('light-mode')
   },

@@ -28,6 +28,13 @@
       > *
         margin: calc(#{$sm} / 2)
         +media-xs(margin, calc(#{$md} / 2))
+  &--lg
+    ._inner-wrap
+      margin: calc(-#{$lg} / 2)
+      +media-xs(margin, calc(-#{$xl} / 2))
+      > *
+        margin: calc(#{$lg} / 2)
+        +media-xs(margin, calc(#{$xl} / 2))
 </style>
 
 <script>

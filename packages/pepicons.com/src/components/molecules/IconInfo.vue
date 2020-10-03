@@ -120,6 +120,7 @@
 
 ._tab
   height: 50px
+  +pt($sm)
   > *
     +t-subtitle1()
 ._tab-panels
