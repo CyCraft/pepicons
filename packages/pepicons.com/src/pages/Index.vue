@@ -5,7 +5,11 @@
         <Stack class="ml-auto">
           <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
           <PepLink href="#about-us" content="About Us" icon="info-filled" />
-          <button class="download-button">Download</button>
+          <a
+            href="https://github.com/CyCraft/pepicons/tree/production/packages/pepicons/svg"
+            class="download-button"
+            >Download</a
+          >
         </Stack>
       </div>
       <div class="mb-md text-center">
@@ -72,6 +76,7 @@
             :description="`Likes… cats, vintage toys\nWorks as… designer\nPassionate about… cult films`"
             profileUrl="asuka.jpg"
             color="#F092AD"
+            :links="['https://twitter.com/asukit']"
           />
         </Stack>
       </div>
@@ -90,6 +95,7 @@
     +mt(160px)
 
 .download-button
+  +reset-a()
   +reset-button()
   +t-subtitle1()
   +py($md)
