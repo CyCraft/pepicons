@@ -1,2 +1,0 @@
-declare const _default: "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\"><g fill=\"none\" fill-rule=\"evenodd\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M11.937 8.5c.041.16.063.328.063.5v2.611L10.655 13 12 14.349v.775l-1.345.77L12 17a2 2 0 1 1-4 0V9c0-.172.022-.34.063-.5a4 4 0 1 1 3.874 0z\"/><circle cx=\"10\" cy=\"4\" r=\"1\" stroke=\"currentColor\" transform=\"rotate(-90 10 4)\"/></g></svg>";
-export default _default;

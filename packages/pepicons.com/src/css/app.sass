@@ -2,9 +2,18 @@
 @import 'quasar.variables'
 
 body
-  font-family: 'Montserrat', sans-serif, sans
+  transition: background-color 250ms
+  &.light-mode
+    background-color: $c-ivory
+  &.dark-mode
+    background-color: $c-nightfall
 
 .thin-border--light
   border: thin solid $c-old-tucan !important
 .thin-border--dark
   border: thin solid $c-washed-cloth !important
+
+.q-color-picker__header
+  height: 36px
+.q-color-picker__header-content > .q-tabs
+  display: none

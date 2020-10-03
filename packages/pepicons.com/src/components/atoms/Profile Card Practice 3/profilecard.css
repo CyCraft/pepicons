@@ -1,0 +1,101 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* not sure how to get the boarder height to strech to fit the content... */
+.card-container {
+  width: 310px;
+  border: thin solid rgba(100, 104, 121, 0.2);
+  border-radius: 15px;
+  position: relative;
+}
+
+.svg-elements-outer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}
+
+.svg-elements-inner {
+  position: relative;
+}
+
+.square {
+  position: absolute;
+  left: 15px;
+  top: 100px;
+}
+
+.mountain-left {
+  position: absolute;
+  left: 35px;
+  top: 40px;
+}
+
+.triangle {
+  position: absolute;
+  left: 55px;
+  top: 5px;
+}
+
+.circle {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+}
+
+.mountain-right {
+  position: absolute;
+  right: 20px;
+  top: 120px;
+}
+
+.profile-pic {
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+
+img {
+  height: 130px;
+  width: 130px;
+  border-radius: 50%;
+}
+
+.name {
+  text-align: center;
+  font-weight: 900;
+  font-size: 30px;
+  color: #55bbc5;
+  padding-bottom: 5px;
+}
+
+.about-me-outer {
+  text-align: center;
+  font-weight: 100;
+  font-size: 16px;
+  padding-left: 50px;
+  padding-bottom: 10px;
+}
+.about-me-inner {
+  text-align: left;
+}
+
+.github-link {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.github-logo {
+  text-align: center;
+  padding-bottom: 15px;
+}
+
+.github-logo-svg {
+  fill: #a6b4cc;
+}

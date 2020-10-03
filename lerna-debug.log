@@ -1,0 +1,6 @@
+47 error Error: Command failed: git tag v0.0.2 -m v0.0.2
+47 error fatal: tag 'v0.0.2' already exists
+47 error
+47 error     at makeError (/Users/lucaban/ghq/github.com/CyCraft/pepicons/node_modules/execa/index.js:174:9)
+47 error     at /Users/lucaban/ghq/github.com/CyCraft/pepicons/node_modules/execa/index.js:278:16
+47 error     at processTicksAndRejections (internal/process/task_queues.js:93:5)

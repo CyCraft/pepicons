@@ -1,6 +1,6 @@
 {
   "name": "pepicons.com",
-  "version": "0.0.1",
+  "version": "0.0.7",
   "description": "Retro icon set",
   "productName": "Pepicons",
   "author": "Luca Ban - Mesqueeb",
@@ -9,23 +9,26 @@
     "lint": "eslint --ext .js,.ts,.vue ./",
     "dev": "quasar dev",
     "build": "quasar build --debug",
+    "build:favicon": "icongenie generate -i ./public/logo.png --skip-trim",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.0.0",
-    "@vue/composition-api": "^0.6.4",
+    "@quasar/extras": "^1.9.6",
+    "@vue/composition-api": "^0.6.7",
+    "copy-text-to-clipboard": "^2.2.0",
     "core-js": "^3.6.5",
-    "is-what": "^3.10.0",
-    "pepicons": "0.0.1",
-    "planetar": "^0.0.15",
-    "quasar": "^1.0.0",
+    "fast-sort": "^2.2.0",
+    "is-what": "^3.11.2",
+    "pepicons": "^0.0.7",
+    "planetar": "^0.4.3",
+    "quasar": "^1.14.0",
     "raw-loader": "^4.0.1",
     "three": "^0.118.3",
     "vivify.css": "^0.0.0",
-    "vue-pepicons": "0.0.1"
+    "vue-pepicons": "^0.0.7"
   },
   "devDependencies": {
-    "@quasar/app": "^2.0.5"
+    "@quasar/app": "^2.1.0"
   },
   "browserslist": [
     "last 10 Chrome versions",

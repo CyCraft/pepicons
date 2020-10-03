@@ -1,0 +1,2 @@
+declare const _default: "<svg xmlns=\"http://www.w3.org/2000/svg\" style=\"\" width=\"20\" height=\"20\" viewBox=\"0 0 20 20\"><g fill=\"none\" fill-rule=\"evenodd\"><path stroke=\"currentColor\" stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"3\" d=\"M6.5 11.5h11\" opacity=\".8\"/><path fill=\"#000\" fill-rule=\"nonzero\" d=\"M14 10.25a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0zm-5 0a1.25 1.25 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0zm-5 0a1.249 1.249 0 1 1 2.5 0 1.25 1.25 0 0 1-2.5 0z\"/></g></svg>";
+export default _default;

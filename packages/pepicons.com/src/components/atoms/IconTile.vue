@@ -1,42 +1,44 @@
 <template>
-  <div :class="`icon-tile ${darkMode ? 'bg-moonlight' : 'bg-white'}`">
-    <Pepicon class="_svg" :style="`color: ${color}`" :name="name" :type="type" :stroke="stroke" />
-    <div class="_name c-letters">{{ name }}</div>
+  <div class="icon-tile">
+    <Pepicon class="_svg" :name="name" :type="type" :color="color" :stroke="stroke" size="26px" />
+    <div class="_name">
+      <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
+        {{ name }}
+      </div>
+      <div v-if="synonymHtml" v-html="synonymHtml" />
+    </div>
   </div>
 </template>
 
 <style lang="sass">
-=flex-center
-  display: flex
-  justify-content: center
-  align-items: center
-
+// $
 .icon-tile
-  transition: background 250ms
+  background-color: white
+.dark-mode
+  .icon-tile
+    background-color: $c-moonlight
+.icon-tile
+  transition: background-color 500ms
   border-radius: $border-radius
   height: auto
   display: flex
   flex-direction: column
   align-items: center
   ._svg
+    cursor: zoom-in
     flex: 1
-    width: 26px
-    height: 26px
-    +flex-center
-    svg
-      transition: all 350ms
-      width: 100%
-      height: 100%
   ._name
     height: 36px
     font-size: 12px
+    line-height: 1.4em
     width: 100%
     text-align: center
     +flex-center
 </style>
 
 <script lang="ts">
-import { defineComponent, PropType } from '@vue/composition-api'
+import { computed, defineComponent, PropType } from '@vue/composition-api'
+import { Pepicon as PepiconType, synonyms } from 'pepicons'
 import { Pepicon } from 'vue-pepicons'
 
 export default defineComponent({
@@ -46,14 +48,30 @@ export default defineComponent({
     /**
      * @example 'airplane'
      */
-    name: { type: String, required: true },
+    name: { type: String as PropType<PepiconType>, required: true },
     color: { type: String, default: '#AB92F0' },
     type: { type: String, default: 'print' },
     stroke: { type: String, default: 'black' },
-    darkMode: { type: Boolean },
+    searchInput: { type: String, default: '' },
   },
-  setup() {
-    return {}
+  setup(props) {
+    const searchInputSynonymHit = computed(() => {
+      if (!props.searchInput) return undefined
+      const _synonyms = synonyms[props.name] || []
+      return _synonyms.find((s) => s.toLowerCase().includes(props.searchInput.toLowerCase()))
+    })
+    const synonymHtml = computed(() => {
+      if (!searchInputSynonymHit.value) return ''
+      const text = searchInputSynonymHit.value.replace(
+        props.searchInput,
+        `<span class="c-old-tucan">${props.searchInput}</span>`,
+      )
+      return `<div class="c-washed-cloth" style="opacity: 0.8">${text}</div>`
+    })
+
+    return {
+      synonymHtml,
+    }
   },
 })
 </script>
