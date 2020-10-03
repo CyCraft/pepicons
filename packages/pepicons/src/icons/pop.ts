@@ -40,13 +40,13 @@ import Controller from './pop/controller'
 import CreditCard from './pop/credit-card'
 import Cup from './pop/cup'
 import Division from './pop/division'
-import DotsHorizontal from './pop/dots-horizontal'
-import DotsVertical from './pop/dots-vertical'
+import DotsX from './pop/dots-x'
+import DotsY from './pop/dots-y'
 import Dress from './pop/dress'
 import Duplicate from './pop/duplicate'
 import Electricity from './pop/electricity'
-import ExclamationMark from './pop/exclamation-mark'
-import ExclamationMarkFilled from './pop/exclamation-mark-filled'
+import Exclamation from './pop/exclamation'
+import ExclamationFilled from './pop/exclamation-filled'
 import Expand from './pop/expand'
 import Eye from './pop/eye'
 import EyeClosed from './pop/eye-closed'
@@ -63,17 +63,13 @@ import Grab from './pop/grab'
 import Hamburger from './pop/hamburger'
 import Headphone from './pop/headphone'
 import Heart from './pop/heart'
-import Home from './pop/home'
-import Information from './pop/information'
-import InformationFilled from './pop/information-filled'
+import House from './pop/house'
+import Info from './pop/info'
+import InfoFilled from './pop/info-filled'
 import Internet from './pop/internet'
 import Key from './pop/key'
 import KniveFork from './pop/knive-fork'
 import Letter from './pop/letter'
-import LocationMarker from './pop/location-marker'
-import LocationMarkerFilled from './pop/location-marker-filled'
-import LocationMarkerOff from './pop/location-marker-off'
-import LocationMarkerOffFilled from './pop/location-marker-off-filled'
 import LockClosed from './pop/lock-closed'
 import LockOpen from './pop/lock-open'
 import Loop from './pop/loop'
@@ -97,6 +93,10 @@ import PersonFilled from './pop/person-filled'
 import Phone from './pop/phone'
 import PhotoCamera from './pop/photo-camera'
 import Pill from './pop/pill'
+import Pinpoint from './pop/pinpoint'
+import PinpointFilled from './pop/pinpoint-filled'
+import PinpointOff from './pop/pinpoint-off'
+import PinpointOffFilled from './pop/pinpoint-off-filled'
 import Plus from './pop/plus'
 import Power from './pop/power'
 import Printer from './pop/printer'
@@ -178,13 +178,13 @@ export const pop: { [name in Pepicon]: string } = {
   'credit-card': CreditCard,
   'cup': Cup,
   'division': Division,
-  'dots-horizontal': DotsHorizontal,
-  'dots-vertical': DotsVertical,
+  'dots-x': DotsX,
+  'dots-y': DotsY,
   'dress': Dress,
   'duplicate': Duplicate,
   'electricity': Electricity,
-  'exclamation-mark': ExclamationMark,
-  'exclamation-mark-filled': ExclamationMarkFilled,
+  'exclamation': Exclamation,
+  'exclamation-filled': ExclamationFilled,
   'expand': Expand,
   'eye': Eye,
   'eye-closed': EyeClosed,
@@ -201,17 +201,13 @@ export const pop: { [name in Pepicon]: string } = {
   'hamburger': Hamburger,
   'headphone': Headphone,
   'heart': Heart,
-  'home': Home,
-  'information': Information,
-  'information-filled': InformationFilled,
+  'house': House,
+  'info': Info,
+  'info-filled': InfoFilled,
   'internet': Internet,
   'key': Key,
   'knive-fork': KniveFork,
   'letter': Letter,
-  'location-marker': LocationMarker,
-  'location-marker-filled': LocationMarkerFilled,
-  'location-marker-off': LocationMarkerOff,
-  'location-marker-off-filled': LocationMarkerOffFilled,
   'lock-closed': LockClosed,
   'lock-open': LockOpen,
   'loop': Loop,
@@ -235,6 +231,10 @@ export const pop: { [name in Pepicon]: string } = {
   'phone': Phone,
   'photo-camera': PhotoCamera,
   'pill': Pill,
+  'pinpoint': Pinpoint,
+  'pinpoint-filled': PinpointFilled,
+  'pinpoint-off': PinpointOff,
+  'pinpoint-off-filled': PinpointOffFilled,
   'plus': Plus,
   'power': Power,
   'printer': Printer,

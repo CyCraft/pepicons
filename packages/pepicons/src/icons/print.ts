@@ -35,12 +35,12 @@ import Controller from './print/controller'
 import CreditCard from './print/credit-card'
 import Cup from './print/cup'
 import Division from './print/division'
-import DotsHorizontal from './print/dots-horizontal'
-import DotsVertical from './print/dots-vertical'
+import DotsX from './print/dots-x'
+import DotsY from './print/dots-y'
 import Dress from './print/dress'
 import Duplicate from './print/duplicate'
 import Electricity from './print/electricity'
-import ExclamationMark from './print/exclamation-mark'
+import Exclamation from './print/exclamation'
 import Expand from './print/expand'
 import Eye from './print/eye'
 import EyeClosed from './print/eye-closed'
@@ -57,14 +57,12 @@ import Grab from './print/grab'
 import Hamburger from './print/hamburger'
 import Headphone from './print/headphone'
 import Heart from './print/heart'
-import Home from './print/home'
-import Information from './print/information'
+import House from './print/house'
+import Info from './print/info'
 import Internet from './print/internet'
 import Key from './print/key'
 import KniveFork from './print/knive-fork'
 import Letter from './print/letter'
-import LocationMarker from './print/location-marker'
-import LocationMarkerOff from './print/location-marker-off'
 import LockClosed from './print/lock-closed'
 import LockOpen from './print/lock-open'
 import Loop from './print/loop'
@@ -86,6 +84,8 @@ import Person from './print/person'
 import Phone from './print/phone'
 import PhotoCamera from './print/photo-camera'
 import Pill from './print/pill'
+import Pinpoint from './print/pinpoint'
+import PinpointOff from './print/pinpoint-off'
 import Plus from './print/plus'
 import Power from './print/power'
 import Printer from './print/printer'
@@ -156,12 +156,12 @@ export const print: { [name in PepiconPrint]: string } = {
   'credit-card': CreditCard,
   'cup': Cup,
   'division': Division,
-  'dots-horizontal': DotsHorizontal,
-  'dots-vertical': DotsVertical,
+  'dots-x': DotsX,
+  'dots-y': DotsY,
   'dress': Dress,
   'duplicate': Duplicate,
   'electricity': Electricity,
-  'exclamation-mark': ExclamationMark,
+  'exclamation': Exclamation,
   'expand': Expand,
   'eye': Eye,
   'eye-closed': EyeClosed,
@@ -178,14 +178,12 @@ export const print: { [name in PepiconPrint]: string } = {
   'hamburger': Hamburger,
   'headphone': Headphone,
   'heart': Heart,
-  'home': Home,
-  'information': Information,
+  'house': House,
+  'info': Info,
   'internet': Internet,
   'key': Key,
   'knive-fork': KniveFork,
   'letter': Letter,
-  'location-marker': LocationMarker,
-  'location-marker-off': LocationMarkerOff,
   'lock-closed': LockClosed,
   'lock-open': LockOpen,
   'loop': Loop,
@@ -207,6 +205,8 @@ export const print: { [name in PepiconPrint]: string } = {
   'phone': Phone,
   'photo-camera': PhotoCamera,
   'pill': Pill,
+  'pinpoint': Pinpoint,
+  'pinpoint-off': PinpointOff,
   'plus': Plus,
   'power': Power,
   'printer': Printer,
