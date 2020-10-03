@@ -32,7 +32,9 @@ class PepHeader {
 
   createRenderer() {
     this.renderer = new THREE.WebGL1Renderer()
-    this.renderer.setSize(this.header.offsetWidth, this.header.offsetHeight)
+    const w = this.header.offsetWidth
+    const h = this.header.offsetHeight
+    this.renderer.setSize(w, h)
     this.header.appendChild(this.renderer.domElement)
   }
 
