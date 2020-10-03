@@ -80,7 +80,9 @@ export function pepiconSvgString(
         : typeof size === 'number'
         ? `${size}px`
         : size
-    svgString = svgString.replace(/style="/, `style="width:${_size};height:${_size};`)
+    svgString = svgString
+      .replace(/style="/, `style="width:${_size};height:${_size};`)
+      .replace(/width="[0-9]+" height="[0-9]+"/, `width="${_size}" height="${_size}"`)
   }
   return svgString
 }

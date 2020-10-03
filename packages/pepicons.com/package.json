@@ -15,6 +15,7 @@
   "dependencies": {
     "@quasar/extras": "^1.9.6",
     "@vue/composition-api": "^0.6.7",
+    "copy-text-to-clipboard": "^2.2.0",
     "core-js": "^3.6.5",
     "fast-sort": "^2.2.0",
     "is-what": "^3.11.2",

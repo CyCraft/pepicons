@@ -48,8 +48,8 @@ export default defineComponent({
   props: {
     backgroundColor: { type: String, default: '#fff' },
     hasColorRing: { type: Boolean, default: false },
-    iconName: { type: (String as unknown) as PropType<'refresh' | 'color-picker'> },
-    iconType: { type: (String as unknown) as PropType<'pop' | 'print'> },
+    iconName: { type: String },
+    iconType: { type: String as PropType<'pop' | 'print'> },
     iconColor: { type: String },
     isActive: { type: Boolean },
   },

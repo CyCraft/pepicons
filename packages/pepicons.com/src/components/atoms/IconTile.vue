@@ -25,6 +25,7 @@
   flex-direction: column
   align-items: center
   ._svg
+    cursor: zoom-in
     flex: 1
   ._name
     height: 36px
@@ -67,6 +68,7 @@ export default defineComponent({
       )
       return `<div class="c-washed-cloth" style="opacity: 0.8">${text}</div>`
     })
+
     return {
       synonymHtml,
     }

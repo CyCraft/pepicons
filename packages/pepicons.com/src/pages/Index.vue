@@ -36,6 +36,7 @@
             :color="_.config.color"
             :stroke="_.config.stroke"
             :searchInput="_.searchInput"
+            @clickTile="openTileDialog"
           />
         </div>
       </template>
@@ -91,7 +92,15 @@
 
 <script lang="ts">
 import { defineComponent, computed, watch, reactive, ref } from '@vue/composition-api'
-import { pop, print, Pepicon, synonyms, categories, pepiconCategoryDic } from 'pepicons'
+import {
+  pop,
+  print,
+  Pepicon,
+  PepiconPrint,
+  synonyms,
+  categories,
+  pepiconCategoryDic,
+} from 'pepicons'
 import sort from 'fast-sort'
 import Stack from '../components/atoms/Stack.vue'
 import PepInput from '../components/atoms/PepInput.vue'
@@ -99,6 +108,7 @@ import IconGrid from '../components/molecules/IconGrid.vue'
 import Pickers from '../components/molecules/Pickers.vue'
 import PepLink from '../components/atoms/PepLink.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
+import { Dialog } from 'quasar'
 
 export default defineComponent({
   name: 'PageIndex',
@@ -159,7 +169,16 @@ export default defineComponent({
       }, {} as { [category: string]: string[] }),
     )
 
-    return { _, darkMode, categories, categoryIconNamesDic }
+    function openTileDialog(icon: string): void {
+      Dialog.create({
+        component: 'DialogWrapper',
+        dialogProps: { style: `border-radius: 1rem` },
+        slotComponent: 'IconInfo',
+        slotProps: { icon, config: _.config },
+      })
+    }
+
+    return { _, darkMode, categories, categoryIconNamesDic, openTileDialog }
   },
 })
 </script>

@@ -1,7 +1,10 @@
 <template>
   <transition-group class="icon-grid" name="anim-grid" tag="div">
     <div class="anim-grid-item" v-for="name in iconNames" :key="name">
-      <IconTile v-bind="{ name, color, type, stroke, searchInput }" />
+      <IconTile
+        v-bind="{ name, color, type, stroke, searchInput }"
+        @click.native="() => clickTile(name)"
+      />
     </div>
   </transition-group>
 </template>
@@ -45,6 +48,12 @@ export default defineComponent({
     color: { type: String },
     stroke: { type: String, default: 'black' },
     searchInput: { type: String },
+  },
+  setup(props, { emit }) {
+    function clickTile(icon: string): void {
+      emit('clickTile', icon)
+    }
+    return { clickTile }
   },
 })
 </script>

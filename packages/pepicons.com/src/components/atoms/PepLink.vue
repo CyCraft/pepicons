@@ -5,7 +5,7 @@
   >
     <template v-if="icon">
       <GithubLogo v-if="icon === 'github'" size="sm" class="_icon" />
-      <Pepicon :name="icon" size="sm" class="_icon" type="pop" />
+      <Pepicon v-else :name="icon" size="sm" class="_icon" type="pop" />
       <div class="mr-sm" />
     </template>
     <div>{{ content }}</div>
@@ -60,7 +60,8 @@
     width: 105%
     bottom: 1px
     left: -2px
-    border-bottom: 6px solid $c-primary
+    border-bottom: 6px solid $primary
+    border-bottom: 6px solid var(--q-color-primary)
     border-radius: 50px
 .dark-mode
   .pep-link._retro-underline::after
