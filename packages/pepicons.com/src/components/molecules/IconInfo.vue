@@ -208,7 +208,7 @@ export default defineComponent({
       copyPngDone: false,
     })
 
-    const codeSvg = pepiconSvgString(props.icon as any, props.config.type, props.config)
+    const codeSvg = pepiconSvgString({ name: props.icon as any, ...props.config })
     const codeVue = generateVueCode(props.icon, props.config)
 
     function downloadSvg(): void {
@@ -220,19 +220,13 @@ export default defineComponent({
       _.copySvgDone = copied
     }
     async function downloadPng(): Promise<void> {
-      const _codeSvg = pepiconSvgString(props.icon as any, props.config.type, {
-        ...props.config,
-        size: '48px',
-      })
+      const _codeSvg = pepiconSvgString({ name: props.icon as any, ...props.config, size: '48px' })
       const pngString = await svgToBase64Png(_codeSvg)
       downloadBase64AsFile(pngString, `${props.icon}.png`)
       _.downloadPngDone = true
     }
     async function copyPng(): Promise<void> {
-      const _codeSvg = pepiconSvgString(props.icon as any, props.config.type, {
-        ...props.config,
-        size: '48px',
-      })
+      const _codeSvg = pepiconSvgString({ name: props.icon as any, ...props.config, size: '48px' })
       const pngString = await svgToBase64Png(_codeSvg)
       const item = new ClipboardItem({
         'image/png': base64ToBlob(pngString),

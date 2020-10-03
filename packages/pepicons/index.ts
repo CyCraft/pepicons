@@ -4,6 +4,14 @@ export * from './src/index'
 
 export type Options = {
   /**
+   * The icon name as per the reference at https://pepicons.com
+   */
+  name: Pepicon
+  /**
+   * Either 'pop' or 'print'
+   */
+  type: 'pop' | 'print'
+  /**
    * You can pass a hex or rgba color, this is applied to the svg tag
    */
   color?: string
@@ -28,22 +36,18 @@ export type Options = {
 
 /**
  * Returns a Pepicon SVG as a string so you can inject it into your HTML.
- * @param iconName The icon name as per the reference at https://pepicons.com
- * @param type Either 'pop' or 'print'
- * @param options Extra options
+ *
+ * The icon name as per the reference at https://pepicons.com
+ * @param options options
  * @returns {string} The SVG content as string
  */
-export function pepiconSvgString(
-  iconName: Pepicon,
-  type: 'pop' | 'print',
-  options?: Options,
-): string {
-  let svgString = type === 'pop' ? pop[iconName] : print[iconName as PepiconPrint]
+export function pepiconSvgString(options: Options): string {
+  const { name, type, color, opacity, size, stroke } = options || {}
+  let svgString = type === 'pop' ? pop[name] : print[name as PepiconPrint]
   if (!svgString) {
-    console.error(`Pepicon ${iconName} of type ${type} not found!`)
+    console.error(`Pepicon ${name} of type ${type} not found!`)
     return ''
   }
-  const { color, opacity, size, stroke } = options || {}
   if (stroke) {
     svgString = svgString.replace(/#000/g, stroke)
   }

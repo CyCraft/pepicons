@@ -2,6 +2,14 @@ import { Pepicon } from './src/index';
 export * from './src/index';
 export declare type Options = {
     /**
+     * The icon name as per the reference at https://pepicons.com
+     */
+    name: Pepicon;
+    /**
+     * Either 'pop' or 'print'
+     */
+    type: 'pop' | 'print';
+    /**
      * You can pass a hex or rgba color, this is applied to the svg tag
      */
     color?: string;
@@ -25,9 +33,9 @@ export declare type Options = {
 };
 /**
  * Returns a Pepicon SVG as a string so you can inject it into your HTML.
- * @param iconName The icon name as per the reference at https://pepicons.com
- * @param type Either 'pop' or 'print'
- * @param options Extra options
+ *
+ * The icon name as per the reference at https://pepicons.com
+ * @param options options
  * @returns {string} The SVG content as string
  */
-export declare function pepiconSvgString(iconName: Pepicon, type: 'pop' | 'print', options?: Options): string;
+export declare function pepiconSvgString(options: Options): string;
