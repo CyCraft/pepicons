@@ -6,14 +6,23 @@
   "license": "MIT",
   "main": "src/index.js",
   "module": "src/index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "vue-int -i src/Pepicon.vue -o vetur"
+  },
+  "dependencies": {
+    "pepicons": "^0.0.7"
+  },
+  "devDependencies": {
+    "vue-intellisense": "^0.1.0"
+  },
   "homepage": "https://github.com/cycraft/pepicons",
   "repository": {
     "type": "git",
     "url": "https://github.com/cycraft/pepicons"
   },
   "bugs": "https://github.com/cycraft/pepicons/issues",
-  "dependencies": {
-    "pepicons": "^0.0.7"
+  "vetur": {
+    "tags": "vetur/tags.json",
+    "attributes": "vetur/attributes.json"
   }
 }
