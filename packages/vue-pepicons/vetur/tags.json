@@ -1,0 +1,13 @@
+{
+  "pepicon": {
+    "attributes": [
+      "name",
+      "type",
+      "color",
+      "opacity",
+      "stroke",
+      "size"
+    ],
+    "description": ""
+  }
+}

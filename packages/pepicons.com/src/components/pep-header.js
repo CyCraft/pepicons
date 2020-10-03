@@ -1,5 +1,4 @@
 import * as THREE from 'three'
-
 import { SVGLoader } from 'three/examples/jsm/loaders/SVGLoader'
 
 class PepHeader {
@@ -31,11 +30,17 @@ class PepHeader {
   }
 
   createRenderer() {
+<<<<<<< HEAD
     this.renderer = new THREE.WebGL1Renderer()
     const w = this.header.offsetWidth
     const h = this.header.offsetHeight
     this.renderer.setSize(w, h)
     this.header.appendChild(this.renderer.domElement)
+=======
+    if (!window.renderer) window.renderer = new THREE.WebGL1Renderer()
+    window.renderer.setSize(this.header.offsetWidth, this.header.offsetHeight)
+    this.header.appendChild(window.renderer.domElement)
+>>>>>>> 8f5fec9f4e156e8420decd9f115f6e9cd8657fb6
   }
 
   createCamera(fieldOfView, nearClippingPlane, farClippingPlane) {
@@ -63,7 +68,7 @@ class PepHeader {
   }
 
   drawLines(totalVertical, totalHorizontal) {
-    const canvas = this.renderer.domElement
+    const canvas = window.renderer.domElement
     const height = canvas.clientHeight
     const width = canvas.clientWidth
     const dy = height / totalVertical
@@ -134,8 +139,8 @@ class PepHeader {
 
   generateInitialPositions(items) {
     const spawnPadding = 100
-    const cavasWidth = this.renderer.domElement.clientWidth - spawnPadding
-    const cavasHeight = this.renderer.domElement.clientHeight - spawnPadding
+    const cavasWidth = window.renderer.domElement.clientWidth - spawnPadding
+    const cavasHeight = window.renderer.domElement.clientHeight - spawnPadding
     const xRange = cavasWidth - cavasWidth / 2
     const yRange = cavasHeight - cavasHeight / 2
     // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
@@ -331,7 +336,7 @@ class PepHeader {
     this.updateIconPositions()
     // eslint-disable-next-line @typescript-eslint/unbound-method
     requestAnimationFrame(this.animate)
-    this.renderer.render(this.scene, this.camera)
+    window.renderer.render(this.scene, this.camera)
   }
 }
 

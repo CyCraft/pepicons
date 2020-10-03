@@ -1,5 +1,5 @@
 import { colors } from 'quasar'
-const { lighten, brightness, getBrand } = colors
+const { lighten, brightness, getBrand, setBrand } = colors
 
 export function getRandomColor(): string {
   const color = '#000000'.replace(/0/g, () => (~~(Math.random() * 16)).toString(16))
@@ -9,4 +9,8 @@ export function getRandomColor(): string {
 
 export function cssVar(varName: string): string {
   return getBrand(varName) || ''
+}
+
+export function setPrimaryColor(color: string): void {
+  setBrand('primary', color)
 }

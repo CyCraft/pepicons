@@ -3,12 +3,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[vue]": {
-    // octref.vetur is to be enabled after this is released:
-    // https://github.com/vuejs/vetur/issues/1925
-    // "editor.defaultFormatter": "octref.vetur"
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
+  "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
+  // "[vue]": { "editor.defaultFormatter": "octref.vetur" },
   "[sass]": { "editor.defaultFormatter": "syler.sass-indented" },
   // make sure vetur is enabled
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
