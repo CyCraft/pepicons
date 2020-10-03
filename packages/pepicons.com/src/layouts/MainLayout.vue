@@ -6,7 +6,8 @@
     <div class="pb-xxxl"></div>
     <q-footer class="footer">
       <div class="mb-md">
-        Pepicons was made with 💜 by <a href="https://cycraft.co">cycraft.co</a>
+        Pepicons was made with 💜 by
+        <PepLink href="https://cycraft.co" content="cycraft.co" retroUnderline />
       </div>
       <div>© Copyright Pepicons, {{ new Date().getFullYear() }}</div>
     </q-footer>
@@ -20,7 +21,7 @@
   +flex-center()
   color: $c-letters
   opacity: 0.9
-  background-color: $c-ivory
+  background-color: white
 .dark-mode
   .footer
     background-color: $c-moonlight
@@ -28,11 +29,11 @@
 </style>
 
 <script>
+import PepLink from '../components/atoms/PepLink.vue'
+
 export default {
   name: 'MainLayout',
-
-  components: {},
-
+  components: { PepLink },
   data() {
     return {}
   },

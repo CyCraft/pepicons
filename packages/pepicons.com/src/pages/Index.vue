@@ -1,15 +1,23 @@
 <template>
   <q-page padding class="page-index">
     <div class="_page-content">
+      <div class="flex mb-xxl">
+        <Stack class="ml-auto">
+          <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
+          <PepLink href="#about-us" content="About Us" icon="info-filled" />
+          <button class="download-button">Download</button>
+        </Stack>
+      </div>
       <div class="mb-md text-center">
         Pepicons is an icon-set of over one hundred retro icons inspired by the 80's.
       </div>
       <div class="mb-xxl text-center">
         If this project has helped you, please consider
-        <a
-          href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
-          >sponsoring us on GitHub</a
-        >!
+        <PepLink
+          href="https://github.com/sponsors/mesqueeb"
+          content="sponsoring us on GitHub"
+          retroUnderline
+        />!
       </div>
       <Pickers v-model="_.config" class="mb-md" />
       <PepInput
@@ -35,18 +43,19 @@
         <div class="text-section-title">Request Icons</div>
         <div>
           Feel free to
-          <a
+          <PepLink
             href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
-            >request</a
-          >
-          a new icon on Github. 　🙃
+            retroUnderline
+            content="request"
+          />
+          a new icon on GitHub. 　🙃
         </div>
       </div>
       <div class="_section">
-        <div class="text-section-title">About Us</div>
+        <div class="text-section-title" id="about-us">About Us</div>
         <div>
-          Pepicons was made by these peeps. Read the announcement blog to read about our motivation
-          for creating Pepicons!
+          Read the announcement blog to read about our motivation for creating Pepicons! Pepicons
+          was made by these peeps:
         </div>
       </div>
     </div>
@@ -62,20 +71,38 @@
     max-width: 980px
   ._section
     +mt(160px)
+
+.download-button
+  +reset-button()
+  +t-subtitle1()
+  +py($md)
+  +px($xl)
+  border-radius: $md
+  text-transform: uppercase
+  font-weight: $bold
+  color: white
+  background: $c-nightfall
+  border: thin solid $c-ivory
+  &:active
+    transform: scale(0.95)
+.dark-mode .download-button
+  border: thin solid white
 </style>
 
 <script lang="ts">
 import { defineComponent, computed, watch, reactive, ref } from '@vue/composition-api'
 import { pop, print, Pepicon, synonyms, categories, pepiconCategoryDic } from 'pepicons'
 import sort from 'fast-sort'
+import Stack from '../components/atoms/Stack.vue'
 import PepInput from '../components/atoms/PepInput.vue'
 import IconGrid from '../components/molecules/IconGrid.vue'
 import Pickers from '../components/molecules/Pickers.vue'
+import PepLink from '../components/atoms/PepLink.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 
 export default defineComponent({
   name: 'PageIndex',
-  components: { IconGrid, Pickers, PepInput },
+  components: { IconGrid, Pickers, PepInput, PepLink, Stack },
   created() {
     document.body.classList.add('light-mode')
   },
