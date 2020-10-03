@@ -3,10 +3,10 @@
 import { Pepicon } from '../types'
 
 import Airplane from './pop/airplane'
-import ArrowDown from './pop/arrow-down'
-import ArrowLeft from './pop/arrow-left'
-import ArrowRight from './pop/arrow-right'
-import ArrowUp from './pop/arrow-up'
+import AngleDown from './pop/angle-down'
+import AngleLeft from './pop/angle-left'
+import AngleRight from './pop/angle-right'
+import AngleUp from './pop/angle-up'
 import Battery from './pop/battery'
 import Bell from './pop/bell'
 import BellOff from './pop/bell-off'
@@ -141,10 +141,10 @@ import Wifi from './pop/wifi'
 
 export const pop: { [name in Pepicon]: string } = {
   'airplane': Airplane,
-  'arrow-down': ArrowDown,
-  'arrow-left': ArrowLeft,
-  'arrow-right': ArrowRight,
-  'arrow-up': ArrowUp,
+  'angle-down': AngleDown,
+  'angle-left': AngleLeft,
+  'angle-right': AngleRight,
+  'angle-up': AngleUp,
   'battery': Battery,
   'bell': Bell,
   'bell-off': BellOff,

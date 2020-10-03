@@ -48,8 +48,8 @@ export default {
       if (!canvas) return
       canvas.width = width
       canvas.height = width * 0.3
-      canvas.style.width = width + 'px'
-      canvas.style.height = width * 0.3 + 'px'
+      canvas.style.width = `${width}px`
+      canvas.style.height = `${width * 0.3}px`
       this.$nextTick(() => {
         this.remountCount++
       })
