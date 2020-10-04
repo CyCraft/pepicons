@@ -20,6 +20,7 @@
   &:focus
     outline: 0
     box-shadow: none
+  cursor: pointer
   // alignment
   display: flex
   align-items: center
@@ -77,7 +78,7 @@ export default defineComponent({
   name: 'PepLink',
   components: { CompanyLogo, Pepicon },
   props: {
-    href: { type: String, required: true },
+    href: { type: String },
     content: { type: String },
     icon: { type: String },
     retroUnderline: { type: Boolean },
