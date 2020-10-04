@@ -142,7 +142,13 @@ export default defineComponent({
       })
     }
 
-    const colorSelection = [cssVar('primary'), '#55BBC5', '#F7D570', '#5FA8EE', '#F092AD']
+    const colorSelection = [
+      cssVar('primary'),
+      cssVar('sig-green'),
+      cssVar('sig-yellow'),
+      cssVar('sig-blue'),
+      cssVar('sig-pink'),
+    ]
 
     return { set, setRandomColor, openColorPicker, colorSelection, nightfall }
   },
