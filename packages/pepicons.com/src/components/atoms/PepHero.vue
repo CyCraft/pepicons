@@ -1,5 +1,5 @@
 <template>
-  <div class="pep-header-2">
+  <div class="pep-hero">
     <div class="absolute-overlay"><slot /></div>
     <h1 class="_title"><span>Pep</span><span>icons</span></h1>
   </div>
@@ -7,22 +7,35 @@
 
 <style lang="sass">
 // $
+// retro school paper grid-lines
+=grid-lines($_color)
+  background-image: linear-gradient(to right, #{$_color} 1px, transparent 1px), linear-gradient(to bottom, #{$_color} 1px, transparent 1px)
+  background-position: -1px -1px
+.pep-hero
+  +grid-lines(transparentize($c-washed-cloth, 0.5))
+.dark-mode
+  .pep-hero
+    +grid-lines(transparentize($c-old-tucan, 0.9))
+
+// header and grid-lines heights
 $h-xs: 15px
 $h-sm: 20px
 $h-md: 20px
 $h-lg: 25px
-.pep-header-2
-  display: relative
-  +flex-center()
+.pep-hero
   background-size: $h-xs $h-xs
   +media-sm(background-size, $h-sm $h-sm)
   +media-md(background-size, $h-md $h-md)
   +media-lg(background-size, $h-lg $h-lg)
-  height: $h-xs * 9 + 1
-  +media-sm(height, $h-sm * 9 + 1)
-  +media-md(height, $h-md * 9 + 1)
-  +media-lg(height, $h-lg * 9 + 1)
-  background-image: linear-gradient(to right, rgba(0,0,0,0.2) 1px, transparent 1px), linear-gradient(to bottom, rgba(0,0,0,0.2) 1px, transparent 1px)
+  height: $h-xs * 9 - 1
+  +media-sm(height, $h-sm * 9 - 1)
+  +media-md(height, $h-md * 9 - 1)
+  +media-lg(height, $h-lg * 9 - 1)
+
+// other
+.pep-hero
+  display: relative
+  +flex-center()
   ._title
     // typography
     +val()
