@@ -47,7 +47,7 @@
     <IconButton
       backgroundColor="white"
       @click="set('background', 'white')"
-      :class="`_background-picker ${value.background === 'white' ? 'thin-border--light' : ''}`"
+      :class="`_background-picker ${value.background === 'white' ? 'thin-border--dark' : ''}`"
       iconName="sun-filled"
       iconColor="black"
       iconType="pop"
@@ -55,7 +55,7 @@
     <IconButton
       :backgroundColor="nightfall"
       @click="set('background', nightfall)"
-      :class="`_background-picker ${value.background === nightfall ? 'thin-border--dark' : ''}`"
+      :class="`_background-picker ${value.background === nightfall ? 'thin-border--light' : ''}`"
       iconName="moon-filled"
       iconColor="white"
       iconType="pop"
