@@ -36,13 +36,13 @@
 </style>
 
 <script>
-import PepHeader from '../components/atoms/PepHeader.vue'
+// import PepHeader from '../components/atoms/PepHeader.vue'
 import PepHero from '../components/atoms/PepHero.vue'
 import PepLink from '../components/atoms/PepLink.vue'
 
 export default {
   name: 'MainLayout',
-  components: { PepHeader, PepHero, PepLink },
+  components: { PepHero, PepLink },
   data() {
     return { remountCount: 0 }
   },
