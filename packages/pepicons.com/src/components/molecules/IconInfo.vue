@@ -81,6 +81,8 @@
   min-width: 400px
   position: relative
   overflow: hidden
+  border-radius: 1rem
+  -webkit-mask-image: -webkit-radial-gradient(white, black)
 .dark-mode
   .icon-info
     background-color: $c-nightfall
