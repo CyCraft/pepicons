@@ -2,10 +2,8 @@
   <q-layout view="hhh lpr fff">
     <header>
       <PepHero class="full-width mb-md">
-        <!-- in here I need only the animation layer without title and with transparent background -->
-        <!-- <PepHeader class="full-width" :key="remountCount" /> -->
+        <PepHeaderDecoration />
       </PepHero>
-      <!-- <q-resize-observer @resize="onResize" /> -->
     </header>
     <q-page-container>
       <router-view />
@@ -36,28 +34,16 @@
 </style>
 
 <script>
-// import PepHeader from '../components/atoms/PepHeader.vue'
+import PepHeaderDecoration from '../components/atoms/PepHeaderDecoration.vue'
 import PepHero from '../components/atoms/PepHero.vue'
 import PepLink from '../components/atoms/PepLink.vue'
 
 export default {
   name: 'MainLayout',
-  components: { PepHero, PepLink },
+  components: { PepHero, PepLink, PepHeaderDecoration },
   data() {
     return { remountCount: 0 }
   },
-  methods: {
-    onResize({ width, height }) {
-      const canvas = this.$el.querySelector('.pep-header canvas')
-      if (!canvas) return
-      canvas.width = width
-      canvas.height = width * 0.3
-      canvas.style.width = `${width}px`
-      canvas.style.height = `${width * 0.3}px`
-      this.$nextTick(() => {
-        this.remountCount++
-      })
-    },
-  },
+  methods: {},
 }
 </script>

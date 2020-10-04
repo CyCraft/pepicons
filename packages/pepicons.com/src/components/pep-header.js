@@ -17,23 +17,25 @@ class PepHeader {
     this.createRenderer()
     this.createCamera(70, 1, 1000)
     this.createHeaderBoundaryBox()
-    this.drawLines(19, 79)
+    // this.drawLines(19, 79)
     this.drawIconSets(2)
-    this.drawTitle()
+    // this.drawTitle()
     // animate loop binds to window when we need it to bind to this object
     this.animate = this.animate.bind(this)
   }
 
   createScene() {
     this.scene = new THREE.Scene()
-    this.scene.background = new THREE.Color(0xffffff)
+    // this.scene.background = new THREE.Color("0xffffff")
   }
 
   createRenderer() {
-    if (!window.renderer) window.renderer = new THREE.WebGL1Renderer()
+    // if (!window.renderer) window.renderer = new THREE.WebGL1Renderer()
+    if (!window.renderer) window.renderer = new THREE.WebGL1Renderer({ alpha: true })
+    window.renderer.setClearColor( 0x000000, 0 ); // the default
     const w = this.header.offsetWidth
     const h = this.header.offsetHeight
-    this.renderer.setSize(w, h)
+    // this.renderer.setSize(w, h)
     window.renderer.setSize(w, h)
     this.header.appendChild(window.renderer.domElement)
   }
