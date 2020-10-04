@@ -81,6 +81,8 @@
   min-width: 400px
   position: relative
   overflow: hidden
+  border-radius: 1rem
+  -webkit-mask-image: -webkit-radial-gradient(white, black)
 .dark-mode
   .icon-info
     background-color: $c-nightfall
@@ -208,7 +210,7 @@ export default defineComponent({
       copyPngDone: false,
     })
 
-    const codeSvg = pepiconSvgString({ name: props.icon as any, ...props.config })
+    const codeSvg = pepiconSvgString({ name: props.icon, ...props.config } as any)
     const codeVue = generateVueCode(props.icon, props.config)
 
     function downloadSvg(): void {
@@ -220,13 +222,13 @@ export default defineComponent({
       _.copySvgDone = copied
     }
     async function downloadPng(): Promise<void> {
-      const _codeSvg = pepiconSvgString({ name: props.icon as any, ...props.config, size: '48px' })
+      const _codeSvg = pepiconSvgString({ name: props.icon, ...props.config, size: '48px' } as any)
       const pngString = await svgToBase64Png(_codeSvg)
       downloadBase64AsFile(pngString, `${props.icon}.png`)
       _.downloadPngDone = true
     }
     async function copyPng(): Promise<void> {
-      const _codeSvg = pepiconSvgString({ name: props.icon as any, ...props.config, size: '48px' })
+      const _codeSvg = pepiconSvgString({ name: props.icon, ...props.config, size: '48px' } as any)
       const pngString = await svgToBase64Png(_codeSvg)
       const item = new ClipboardItem({
         'image/png': base64ToBlob(pngString),

@@ -1,6 +1,11 @@
 // app global css in Sass form
 @import 'quasar.variables'
 
+.cursor-arrow-down
+  cursor: s-resize !important
+.cursor-arrow-up
+  cursor: n-resize !important
+
 body
   transition: background-color 250ms
   &.light-mode
@@ -8,9 +13,9 @@ body
   &.dark-mode
     background-color: $c-nightfall
 
-.thin-border--light
-  border: thin solid $c-old-tucan !important
 .thin-border--dark
+  border: thin solid $c-old-tucan !important
+.thin-border--light
   border: thin solid $c-washed-cloth !important
 
 .q-color-picker__header

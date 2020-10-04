@@ -1,6 +1,6 @@
 {
   "name": "vue-pepicons",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "author": "Luca Ban - Mesqueeb",
   "description": "Vue component for Pepicons",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "build": "vue-int -i src/Pepicon.vue -o vetur"
   },
   "dependencies": {
-    "pepicons": "^0.0.7"
+    "pepicons": "^0.0.10"
   },
   "devDependencies": {
     "vue-intellisense": "^0.1.0"

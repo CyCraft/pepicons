@@ -17,6 +17,7 @@
 @import 'helpers/text'
 @import 'helpers/reset-elements'
 @import 'helpers/flex'
+@import 'helpers/text-stroke'
 @import 'colors'
 @import 'typography'
 
@@ -28,10 +29,12 @@ $border-radius: $sm
   right: 0
   left: 0
   bottom: 0
+.absolute-overlay
+  +absolute-overlay()
 
 // for compatibility
 $primary   : $c-primary
-$secondary : $c-secondary
+$secondary : $c-sig-green
 $accent    : $c-accent
 
 $dark      : $c-nightfall

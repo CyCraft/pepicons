@@ -3,10 +3,10 @@
 import { PepiconPrint } from '../types'
 
 import Airplane from './print/airplane'
-import ArrowDown from './print/arrow-down'
-import ArrowLeft from './print/arrow-left'
-import ArrowRight from './print/arrow-right'
-import ArrowUp from './print/arrow-up'
+import AngleDown from './print/angle-down'
+import AngleLeft from './print/angle-left'
+import AngleRight from './print/angle-right'
+import AngleUp from './print/angle-up'
 import Battery from './print/battery'
 import Bell from './print/bell'
 import BellOff from './print/bell-off'
@@ -124,10 +124,10 @@ import Wifi from './print/wifi'
 
 export const print: { [name in PepiconPrint]: string } = {
   'airplane': Airplane,
-  'arrow-down': ArrowDown,
-  'arrow-left': ArrowLeft,
-  'arrow-right': ArrowRight,
-  'arrow-up': ArrowUp,
+  'angle-down': AngleDown,
+  'angle-left': AngleLeft,
+  'angle-right': AngleRight,
+  'angle-up': AngleUp,
   'battery': Battery,
   'bell': Bell,
   'bell-off': BellOff,

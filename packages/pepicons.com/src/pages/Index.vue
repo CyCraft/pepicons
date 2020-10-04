@@ -4,8 +4,17 @@
       <div class="flex mb-xxl">
         <Stack class="ml-auto">
           <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
-          <PepLink href="#about-us" content="About Us" icon="info-filled" />
-          <button class="download-button">Download</button>
+          <PepLink
+            @click.native.stop.prevent="() => scrollTo('#about-us')"
+            content="About Us"
+            icon="info-filled"
+            class="cursor-arrow-down"
+          />
+          <a
+            href="https://github.com/CyCraft/pepicons/tree/production/packages/pepicons/svg"
+            class="download-button"
+            >Download</a
+          >
         </Stack>
       </div>
       <div class="mb-md text-center">
@@ -22,6 +31,7 @@
       <Pickers v-model="_.config" class="mb-md" />
       <PepInput
         class="mb-xxl"
+        id="top"
         :color="_.config.color"
         v-model="_.searchInput"
         :debounce="200"
@@ -72,8 +82,16 @@
             :description="`Likes… cats, vintage toys\nWorks as… designer\nPassionate about… cult films`"
             profileUrl="asuka.jpg"
             color="#F092AD"
+            :links="['https://twitter.com/asukit']"
           />
         </Stack>
+      </div>
+      <div class="mt-xxxl flex-center">
+        <PepLink
+          content="Go to top"
+          class="cursor-arrow-up px-md py-sm"
+          @click.native.stop.prevent="() => scrollTo('#top')"
+        />
       </div>
     </div>
   </q-page>
@@ -90,6 +108,7 @@
     +mt(160px)
 
 .download-button
+  +reset-a()
   +reset-button()
   +t-subtitle1()
   +py($md)
@@ -125,6 +144,8 @@ import Pickers from '../components/molecules/Pickers.vue'
 import PepLink from '../components/atoms/PepLink.vue'
 import ProfileCard from '../components/atoms/ProfileCard.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
+import { cleanupForSearch } from '../helpers/search'
+import { scrollTo } from '../helpers/scroll'
 import { Dialog } from 'quasar'
 
 export default defineComponent({
@@ -173,12 +194,12 @@ export default defineComponent({
         if (!(iconCategory in dic)) dic[iconCategory] = []
         const iconNonExistent = _.config.type === 'print' && iconName.endsWith('-filled')
         if (iconNonExistent) return dic
-        const searchInput = _.searchInput.trim()
-        if (searchInput) {
-          const searchText = searchInput.toLowerCase()
+        const searchText = cleanupForSearch(_.searchInput)
+        if (searchText) {
           const _synonyms: string[] = synonyms[iconName as Pepicon]
           const searchHit =
-            iconName.includes(searchText) || _synonyms?.some((syn) => syn.includes(searchText))
+            cleanupForSearch(iconName).includes(searchText) ||
+            _synonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
           if (!searchHit) return dic
         }
         dic[iconCategory].push(iconName)
@@ -195,7 +216,14 @@ export default defineComponent({
       })
     }
 
-    return { _, darkMode, categories, categoryIconNamesDic, openTileDialog }
+    return {
+      _,
+      darkMode,
+      categories,
+      categoryIconNamesDic,
+      openTileDialog,
+      scrollTo,
+    }
   },
 })
 </script>

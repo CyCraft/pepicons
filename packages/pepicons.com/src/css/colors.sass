@@ -6,18 +6,23 @@ $c-old-tucan: #646879
 $c-washed-cloth: #bec3d6
 
 $c-primary: #AB92F0
-$c-secondary: #26A69A
-$c-accent: #9C27B0
+$c-sig-red: #FD453E
+$c-sig-green: #55BBC5
+$c-sig-yellow: #F7D570
+$c-sig-blue: #5FA8EE
+$c-sig-pink: #F092AD
 
 $c-nightfall: #1D1D1D
 $c-moonlight: lighten(#1D1D1D, 1%)
 
+/** unused */
+$c-accent: #9C27B0
 $c-positive: #21BA45
 $c-negative: #C10015
 $c-info: #31CCEC
 $c-warning: #F2C037
 
-$colors: ("ivory": $c-ivory, "letters": $c-letters, "old-tucan": $c-old-tucan, "washed-cloth": $c-washed-cloth, "primary": $c-primary, "secondary": $c-secondary, "accent": $c-accent, "nightfall": $c-nightfall, "moonlight": $c-moonlight, "positive": $c-positive, "negative": $c-negative, "info": $c-info, "warning": $c-warning)
+$colors: ("ivory": $c-ivory, "letters": $c-letters, "old-tucan": $c-old-tucan, "washed-cloth": $c-washed-cloth, "primary": $c-primary, "sig-red": $c-sig-red, "sig-green": $c-sig-green, "sig-yellow": $c-sig-yellow, "sig-blue": $c-sig-blue, "sig-pink": $c-sig-pink, "nightfall": $c-nightfall, "moonlight": $c-moonlight, "accent": $c-accent, "positive": $c-positive, "negative": $c-negative, "info": $c-info, "warning": $c-warning)
 
 @each $name, $color in $colors
   .bg-#{$name}
