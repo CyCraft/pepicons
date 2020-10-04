@@ -30,17 +30,12 @@ class PepHeader {
   }
 
   createRenderer() {
-<<<<<<< HEAD
-    this.renderer = new THREE.WebGL1Renderer()
+    if (!window.renderer) window.renderer = new THREE.WebGL1Renderer()
     const w = this.header.offsetWidth
     const h = this.header.offsetHeight
     this.renderer.setSize(w, h)
-    this.header.appendChild(this.renderer.domElement)
-=======
-    if (!window.renderer) window.renderer = new THREE.WebGL1Renderer()
-    window.renderer.setSize(this.header.offsetWidth, this.header.offsetHeight)
+    window.renderer.setSize(w, h)
     this.header.appendChild(window.renderer.domElement)
->>>>>>> 8f5fec9f4e156e8420decd9f115f6e9cd8657fb6
   }
 
   createCamera(fieldOfView, nearClippingPlane, farClippingPlane) {
