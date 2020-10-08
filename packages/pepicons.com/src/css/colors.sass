@@ -29,15 +29,22 @@ $colors: ("ivory": $c-ivory, "letters": $c-letters, "old-tucan": $c-old-tucan, "
  * +c(color, primary)
  * +c(background, secondary)
  */
-=c($attr, $color-name)
-  #{$attr}: map-get($colors, $color-name)
-  #{$attr}: var(--q-color-#{$color-name})
+=c($attr, $color-name, $extra-stuff: "")
+  #{$attr}: map-get($colors, $color-name) #{$extra-stuff}
+  #{$attr}: var(--q-color-#{$color-name}) #{$extra-stuff}
 
+/**
+ * Set native CSS variables
+ */
 \:root
   @each $name, $color in $colors
     --q-color-#{$name}: #{$color}
 
+/**
+ * Create helpers classes
+ */
 @each $name, $color in $colors
+
   .bg-#{$name}
     +c(background, $name)
   .text-#{$name},
