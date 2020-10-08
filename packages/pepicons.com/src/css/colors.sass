@@ -24,15 +24,25 @@ $c-warning: #F2C037
 
 $colors: ("ivory": $c-ivory, "letters": $c-letters, "old-tucan": $c-old-tucan, "washed-cloth": $c-washed-cloth, "primary": $c-primary, "sig-red": $c-sig-red, "sig-green": $c-sig-green, "sig-yellow": $c-sig-yellow, "sig-blue": $c-sig-blue, "sig-pink": $c-sig-pink, "nightfall": $c-nightfall, "moonlight": $c-moonlight, "accent": $c-accent, "positive": $c-positive, "negative": $c-negative, "info": $c-info, "warning": $c-warning)
 
+/**
+ * Color mixin to be used like:
+ * +c(color, primary)
+ * +c(background, secondary)
+ */
+=c($attr, $color-name)
+  #{$attr}: map-get($colors, $color-name)
+  #{$attr}: var(--q-color-#{$color-name})
+
+\:root
+  @each $name, $color in $colors
+    --q-color-#{$name}: #{$color}
+
 @each $name, $color in $colors
   .bg-#{$name}
-    background: $color
+    +c(background, $name)
+  .text-#{$name},
   .c-#{$name}
-    color: $color
-  .text-#{$name}
-    color: $color !important
-  \:root
-    --q-color-#{$name}: #{$color}
+    +c(color, $name)
 
 .dark-mode .c-letters
   color: white
