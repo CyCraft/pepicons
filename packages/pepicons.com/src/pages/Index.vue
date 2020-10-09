@@ -117,8 +117,8 @@
   text-transform: uppercase
   font-weight: $bold
   color: white
-  background: $c-nightfall
-  border: thin solid $c-ivory
+  +C(background, nightfall)
+  +C(border, ivory, thin solid)
   &:active
     transform: scale(0.95)
 .dark-mode .download-button

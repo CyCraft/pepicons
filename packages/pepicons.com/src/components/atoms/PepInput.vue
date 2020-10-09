@@ -22,12 +22,12 @@
       background-color: white
 .dark-mode .pep-input
   .q-field__control
-    background-color: $c-moonlight
+    +C(background-color, moonlight)
   .q-field__control:hover
-    background-color: $c-moonlight
+    +C(background-color, moonlight)
   &.q-field--focused
     .q-field__control
-      background-color: $c-moonlight
+      +C(background-color, moonlight)
 </style>
 
 <script lang="ts">

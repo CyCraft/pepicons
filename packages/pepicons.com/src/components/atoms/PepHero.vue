@@ -57,9 +57,9 @@ $h-lg: 25px
     +media-md(font-size, 100px)
     +media-lg(font-size, 140px)
     > span:first-child
-      color: $c-sig-red
+      +C(color, sig-red)
     > span:last-child
-      color: $c-sig-blue
+      +C(color, sig-blue)
 </style>
 
 <script>

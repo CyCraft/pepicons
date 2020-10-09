@@ -85,7 +85,7 @@
   -webkit-mask-image: -webkit-radial-gradient(white, black)
 .dark-mode
   .icon-info
-    background-color: $c-nightfall
+    +C(background-color, nightfall)
 
 ._toggle-code-button
   position: absolute

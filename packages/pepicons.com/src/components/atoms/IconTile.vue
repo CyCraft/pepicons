@@ -16,7 +16,7 @@
   background-color: white
 .dark-mode
   .icon-tile
-    background-color: $c-moonlight
+    +C(background-color, moonlight)
 .icon-tile
   transition: background-color 500ms
   border-radius: $border-radius

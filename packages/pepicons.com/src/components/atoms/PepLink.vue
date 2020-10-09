@@ -28,13 +28,13 @@
   &._has-icon
     font-weight: $medium
   // colors
-  color: $c-letters
+  +C(color, letters)
 .dark-mode .pep-link
   color: white
 
 
 .pep-link ._icon
-    color: $c-nightfall
+    +C(color, nightfall)
 .dark-mode
   .pep-link ._icon
     color: white

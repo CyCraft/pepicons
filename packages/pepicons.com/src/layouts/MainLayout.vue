@@ -26,12 +26,12 @@
   +pa($xl)
   +t-body2()
   +flex-center()
-  color: $c-letters
+  +C(color, letters)
   opacity: 0.9
   background-color: white
 .dark-mode
   .footer
-    background-color: $c-moonlight
+    +C(background-color, moonlight)
     color: white
 </style>
 

@@ -135,7 +135,7 @@ $extra-bold: 800
   +text-section-title()
 .dark-mode
   .text-section-title
-    color: $c-moonlight
+    +C(color, moonlight)
 
 =text-mini-title()
   font-weight: $extra-bold
@@ -151,7 +151,7 @@ $extra-bold: 800
 
 body
   +t-body1()
-  color: $c-letters
+  +C(color, letters)
   &.dark-mode
     color: white
 
