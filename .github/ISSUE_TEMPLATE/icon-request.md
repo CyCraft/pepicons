@@ -15,7 +15,7 @@ Explain which icon you want to request & what it would look like
 
 Ex. transport
 
-### icon name synonyms
+### search synonyms
 
-Ex. gear, wheel, settings, tool
+Ex. aeroplane, fly, flight, airport, travel, vacation
 Think of some synonyms for the icon name so it can be easier searched for.
