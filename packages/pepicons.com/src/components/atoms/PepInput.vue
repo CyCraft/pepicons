@@ -7,6 +7,7 @@
 </template>
 
 <style lang="sass">
+// $
 .pep-input
   .q-field__control
     transition: background-color 500ms

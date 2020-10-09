@@ -32,31 +32,3 @@ $colors: ("ivory": $c-ivory, "letters": $c-letters, "old-tucan": $c-old-tucan, "
 =C($attr, $color-name, $extra-stuff: "")
   #{$attr}: map-get($colors, $color-name) #{$extra-stuff}
   #{$attr}: var(--q-color-#{$color-name}, map-get($colors, $color-name)) #{$extra-stuff}
-
-/**
- * Set native CSS variables
- */
-\:root
-  @each $name, $color in $colors
-    --q-color-#{$name}: #{$color}
-
-/**
- * Create helpers classes
- */
-@each $name, $color in $colors
-
-  .bg-#{$name}
-    +C(background, $name)
-  .text-#{$name},
-  .c-#{$name}
-    +C(color, $name)
-
-.dark-mode .c-letters
-  color: white
-
-// these colors are just swapped in dark mode
-.dark-mode
-  .c-old-tucan
-    color: #bec3d6
-  .c-washed-cloth
-    color: #646879

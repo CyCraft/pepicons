@@ -1,5 +1,11 @@
 // app global css in Sass form
 @import 'quasar.variables'
+@import 'variable-classes/colors'
+@import 'variable-classes/flex'
+@import 'variable-classes/margin-padding'
+@import 'variable-classes/reset-elements'
+@import 'variable-classes/text'
+@import 'variable-classes/typography'
 
 .cursor-arrow-down
   cursor: s-resize !important
@@ -22,3 +28,6 @@ body
   height: 36px
 .q-color-picker__header-content > .q-tabs
   display: none
+
+.absolute-overlay
+  +absolute-overlay()
