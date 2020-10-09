@@ -60,7 +60,7 @@ class PepHeader {
     this.camera.position.set(0, 0, 200)
   }
 
- resizeCanvasToDisplaySize() {
+  resizeCanvasToDisplaySize() {
   const canvas = this.header
   // look up the size the canvas is being displayed
   const width = canvas.offsetWidth
@@ -306,7 +306,8 @@ class PepHeader {
   }
 
   detectWallCollision(icon) {
-    const iconBoundaryBox = new THREE.Box3().setFromObject(icon)
+    // const iconBoundaryBox = new THREE.Box3().setFromObject(icon)
+    const iconBoundaryBox = icon.userData.AABB
     if (iconBoundaryBox.intersectsBox(this.canvasBoundary)) {
       const xBoundsCollision =
         iconBoundaryBox.max.x >= this.canvasBoundary.max.x ||
@@ -375,10 +376,13 @@ class PepHeader {
   animate() {
     this.updateIconPositions()
     this.resizeCanvasToDisplaySize()
-
-    // eslint-disable-next-line @typescript-eslint/unbound-method
-    requestAnimationFrame(this.animate)
     window.renderer.render(this.scene, this.camera)
+
+    setTimeout(() => {
+      // eslint-disable-next-line @typescript-eslint/unbound-method
+      requestAnimationFrame(this.animate)
+    }, 33)
+
   }
 }
 
