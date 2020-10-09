@@ -9,7 +9,7 @@ class PepHeader {
     this.animationSpeed = 0.03
     // this var increases/decreases padding for icon to icon collisions
     this.iconPadding = 0
-    this.titleBoundaries = []
+    // this.titleBoundaries = []
   }
 
   init() {
@@ -30,14 +30,23 @@ class PepHeader {
   }
 
   createRenderer() {
-    // if (!window.renderer) window.renderer = new THREE.WebGL1Renderer()
-    if (!window.renderer) window.renderer = new THREE.WebGL1Renderer({ alpha: true })
+    if (!window.renderer) window.renderer = new THREE.WebGLRenderer({
+      alpha: true,
+      antialias: true,
+      powerPreference: 'low-power',
+      precision: 'lowp',
+      depth: false,
+      stencil: false,
+  })
     window.renderer.setClearColor( 0x000000, 0 ); // the default
-    const w = this.header.offsetWidth
-    const h = this.header.offsetHeight
-    // this.renderer.setSize(w, h)
-    window.renderer.setSize(w, h)
+    // const w = this.header.offsetWidth
+    // const h = this.header.offsetHeight
+    // console.log('w: ', w, 'h: ', h)
+    // window.renderer.setSize(w, h)
+    window.renderer.setPixelRatio(window.devicePixelRatio)
+    console.log('pixelRatio: ', window.devicePixelRatio)
     this.header.appendChild(window.renderer.domElement)
+    console.log('renderer.info: ', window.renderer.info)
   }
 
   createCamera(fieldOfView, nearClippingPlane, farClippingPlane) {
@@ -51,16 +60,48 @@ class PepHeader {
     this.camera.position.set(0, 0, 200)
   }
 
+ resizeCanvasToDisplaySize() {
+  const canvas = this.header
+  // look up the size the canvas is being displayed
+  const width = canvas.offsetWidth
+  const height = canvas.offsetHeight
+
+  // adjust displayBuffer size to match
+  if (canvas.width !== width || canvas.height !== height) {
+    // you must pass false here or three.js sadly fights the browser
+    window.renderer.setSize(width, height, true)
+    this.camera.aspect = width / height
+    this.camera.updateProjectionMatrix()
+
+    // update any render target sizes here
+  }
+}
+
   createHeaderBoundaryBox() {
-    const xPadding = 79
-    const yPadding = 20
+    // const xPadding = 79
+    const xPadding = 0
+    // const yPadding = 20
+    const yPadding = 0
     this.canvasBoundary = new THREE.Box3()
     const minBounds = new THREE.Vector3(0, 0, 0)
     const maxBounds = new THREE.Vector3(
-      this.header.clientWidth - xPadding,
-      this.header.clientHeight - yPadding,
+      // this.header.clientWidth - xPadding,
+      // this.header.clientHeight - yPadding,
+      1500,
+      // 1250,
+      // 280,
+      // this.header.clientWidth * 1.25,
+      // this.header.clientHeight * 1.25,
+      // eslint-disable-next-line @typescript-eslint/restrict-plus-operands
+      // this.header.clientWidth + 400,
+      280,
       0,
     )
+    /*
+    1416 -> 1780
+    966 ->
+    */
+    console.log('minBounds: ', minBounds, 'maxBounds: ', maxBounds)
     this.canvasBoundary.setFromCenterAndSize(minBounds, maxBounds)
   }
 
@@ -258,6 +299,8 @@ class PepHeader {
         }
       }
       this.scene.add(group)
+
+      group.userData.AABB = this.createAABB(group)
       this.icons.push(group)
     })
   }
@@ -301,16 +344,16 @@ class PepHeader {
 
   updateIconPositions() {
     for (const icon of this.icons) {
-      if (icon.userData.kind === 'title') continue
+      // if (icon.userData.kind === 'title') continue
       icon.position.x += icon.userData.vector.x * this.animationSpeed
       icon.position.y += icon.userData.vector.y * this.animationSpeed
       this.detectWallCollision(icon)
       // this.checkForTitleCollision(icon)
-      const box1 = this.createAABB(icon)
+      const box1 = icon.userData.AABB.setFromObject(icon)
       for (const otherIcon of this.icons) {
-        if (otherIcon.userData.kind === 'title') continue
+        // if (otherIcon.userData.kind === 'title') continue
         if (otherIcon.uuid === icon.uuid) continue
-        const box2 = this.createAABB(otherIcon)
+        const box2 = otherIcon.userData.AABB.setFromObject(otherIcon)
         if (box1.intersectsBox(box2)) {
           this.handleCollision(icon, otherIcon)
         }
@@ -331,6 +374,8 @@ class PepHeader {
 
   animate() {
     this.updateIconPositions()
+    this.resizeCanvasToDisplaySize()
+
     // eslint-disable-next-line @typescript-eslint/unbound-method
     requestAnimationFrame(this.animate)
     window.renderer.render(this.scene, this.camera)

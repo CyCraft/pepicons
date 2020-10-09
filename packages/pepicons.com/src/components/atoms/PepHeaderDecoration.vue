@@ -58,11 +58,11 @@ export default {
   },
   methods: {
     onResize ({ width, height }) {
-      if (!this.header) return
-      // width and height are "numbers"
-      // it's the height and width of the .pep-hero
+      // if (!this.header) return
+      // // width and height are "numbers"
+      // // it's the height and width of the .pep-hero
 
-      this.header.updateCanvasSize({width, height})
+      // this.header.updateCanvasSize({width, height})
     },
   },
   computed: {},
