@@ -3,7 +3,7 @@
 import { Pepicon } from '../types'
 
 export const synonyms: { [name in Pepicon]: string[] } = {
-  'airplane': ['aeroplane', 'fly', 'travel', 'vacation', 'trip'],
+  'airplane': ['aeroplane', 'fly', 'travel', 'vacation', 'trip', 'flight', 'airport'],
   'angle-down': ['arrow-down', 'chevron-down', 'bracket-down', 'to-bottom', 'go-down'],
   'angle-left': ['arrow-left', 'chevron-left', 'bracket-left', 'bracket-open', 'opening-bracket', 'less-than', 'back'],
   'angle-right': ['arrow-right', 'chevron-right', 'bracket-right', 'bracket-close', 'closing-bracket', 'greater-than', 'more-than', 'forward'],
