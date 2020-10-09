@@ -65,7 +65,7 @@
       <div class="_section">
         <div class="text-section-title" id="about-us">About Us</div>
         <div class="mb-lg">
-          Read the announcement blog to read about our motivation for creating Pepicons! Pepicons
+          Read the announcement blog to read about our motivation for creating Pepicons!<br />Pepicons
           was made by these peeps:
         </div>
         <Stack classes="justify-center" gap="lg">
@@ -133,10 +133,12 @@ import {
   Pepicon,
   PepiconPrint,
   synonyms,
+  synonymsJa,
   categories,
   pepiconCategoryDic,
 } from 'pepicons'
 import sort from 'fast-sort'
+import { Dialog } from 'quasar'
 import Stack from '../components/atoms/Stack.vue'
 import PepInput from '../components/atoms/PepInput.vue'
 import IconGrid from '../components/molecules/IconGrid.vue'
@@ -146,7 +148,6 @@ import ProfileCard from '../components/atoms/ProfileCard.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { scrollTo } from '../helpers/scroll'
-import { Dialog } from 'quasar'
 
 export default defineComponent({
   name: 'PageIndex',
@@ -196,7 +197,11 @@ export default defineComponent({
         if (iconNonExistent) return dic
         const searchText = cleanupForSearch(_.searchInput)
         if (searchText) {
-          const _synonyms: string[] = synonyms[iconName as Pepicon]
+          const _synonyms: string[] = [
+            ...synonyms[iconName as Pepicon],
+            ...synonymsJa[iconName as Pepicon],
+            iconCategory,
+          ]
           const searchHit =
             cleanupForSearch(iconName).includes(searchText) ||
             _synonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
