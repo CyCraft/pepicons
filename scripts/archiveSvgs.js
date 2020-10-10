@@ -1,14 +1,17 @@
 // require modules
 const fs = require('fs')
 const archiver = require('archiver')
+const copyfiles = require('copyfiles')
 
 /**
  * All instructions belowe are directly copied and tweaked based on the archiver Readme:
  * https://github.com/archiverjs/node-archiver
  */
 
+const ZIP_NAME = 'PepiconSvgs.zip'
+
 // create a file to stream archive data to.
-const output = fs.createWriteStream(__dirname + '/../media/PepiconSvgs.zip')
+const output = fs.createWriteStream(`./media/${ZIP_NAME}`)
 const archive = archiver('zip', {
   zlib: { level: 9 }, // Sets the compression level.
 })
@@ -53,4 +56,8 @@ archive.directory('packages/pepicons/svg', false)
 
 // finalize the archive (ie we are done appending files but streams have to finish yet)
 // 'close', 'end' or 'finish' may be fired right after calling this method so register to them beforehand
-archive.finalize()
+archive.finalize().then(() => {
+  const from = `./media/${ZIP_NAME}`
+  const to = './packages/pepicons.com/public'
+  copyfiles([from, to], { up: 1 }, () => console.log(`✔ done`))
+})

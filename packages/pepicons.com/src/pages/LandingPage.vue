@@ -10,11 +10,7 @@
             icon="info-filled"
             class="cursor-arrow-down"
           />
-          <a
-            href="https://github.com/CyCraft/pepicons/tree/production/packages/pepicons/svg"
-            class="download-button"
-            >Download</a
-          >
+          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button">Download</a>
         </Stack>
       </div>
       <div class="mb-md text-center">
