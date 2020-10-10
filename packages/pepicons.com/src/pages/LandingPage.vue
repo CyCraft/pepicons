@@ -91,6 +91,13 @@
           class="cursor-arrow-up px-md py-sm"
           @click.native.stop.prevent="() => scrollTo('#top')"
         />
+        <div class="mt-xxl">
+          <PepLink
+            href="https://github.com/sponsors/mesqueeb"
+            retroUnderline
+            content="Sponsor development"
+          />
+        </div>
       </div>
     </div>
   </q-page>
