@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./packages",
+    "baseUrl": ".",
     "strict": true,
     "target": "es6",
     "esModuleInterop": true,
