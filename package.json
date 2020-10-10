@@ -8,7 +8,7 @@
     "build": "npm run prepare-pepicons && lerna run build",
     "build:favicon": "lerna run build:favicon",
     "publish": "npm run build && lerna publish && firebase deploy --only hosting && git add -A && git commit -m \"chore: deploy\" && git push",
-    "prepare-pepicons": "node ./scripts/preparePepicons.js",
+    "prepare-pepicons": "node ./scripts/preparePepicons.js && node ./scripts/archiveSvgs",
     "dep:install": "npm i && lerna bootstrap",
     "dep:update-all": "ncu --target minor -u && lerna exec 'ncu --target minor -u' && npm run dep:install",
     "dep:check-for-updates": "ncu --target minor && lerna exec 'ncu --target minor'",
