@@ -64,8 +64,13 @@
       <div class="_section">
         <div class="text-section-title" id="about-us">About Us</div>
         <div class="mb-lg">
-          Read the announcement blog to read about our motivation for creating Pepicons!<br />Pepicons
-          was made by these peeps:
+          Read the
+          <PepLink
+            href="https://medium.com/@lucaban/pepicons-retro-icon-set-now-available-for-designers-and-coders-40db866a7460"
+            retroUnderline
+            content="announcement blog post"
+          />
+          to read about our motivation for creating Pepicons!<br />Pepicons was made by these peeps:
         </div>
         <Stack classes="justify-center" gap="lg">
           <ProfileCard
