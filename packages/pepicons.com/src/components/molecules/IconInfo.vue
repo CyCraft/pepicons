@@ -161,7 +161,8 @@ declare class ClipboardItem {
 }
 
 function generateVueCode(iconName: string, config: IconConfig): string {
-  const _stroke = config.stroke === 'white' && config.type === 'print' ? '\n    stroke="white"' : ''
+  const _stroke =
+    config.stroke && config.stroke !== 'black' ? `\n    stroke="${config.stroke}"` : ''
   return `<template>
   <Pepicon
     name="${iconName}"
