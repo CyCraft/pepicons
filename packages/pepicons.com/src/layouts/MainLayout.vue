@@ -28,11 +28,11 @@
   +flex-center()
   +C(color, letters)
   opacity: 0.9
-  background-color: white
+  +C(background-color, white)
 .dark-mode
   .footer
     +C(background-color, moonlight)
-    color: white
+    +C(color, white)
 </style>
 
 <script>

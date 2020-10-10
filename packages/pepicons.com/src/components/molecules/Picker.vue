@@ -85,6 +85,7 @@ import DialogWrapper from '../dialogs/DialogWrapper.vue'
 import IconButton from '../atoms/IconButton.vue'
 import Stack from '../atoms/Stack.vue'
 import { getRandomColor, cssVar } from '../../helpers/colorHelpers'
+import { defaultsIconConfig, IconConfig } from '../../types'
 
 export default defineComponent({
   name: 'Picker',
@@ -101,12 +102,8 @@ export default defineComponent({
      * @type {{ type: 'pop' | 'print', color: string, background: string, stroke: string }}
      */
     value: {
-      type: Object,
-      default: () => ({
-        type: 'pop',
-        color: '#AB92F0',
-        background: 'white',
-      }),
+      type: Object as PropType<IconConfig>,
+      default: () => ({ ...defaultsIconConfig() }),
     },
   },
   setup(props, { emit }) {

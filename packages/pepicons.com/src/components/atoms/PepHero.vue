@@ -34,7 +34,7 @@ $h-lg: 25px
 
 // other
 .pep-hero
-  display: relative
+  position: relative
   +flex-center()
   ._title
     // typography

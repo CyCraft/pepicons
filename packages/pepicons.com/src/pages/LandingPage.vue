@@ -36,15 +36,16 @@
         v-model="_.searchInput"
         :debounce="200"
         :isDarkMode="darkMode"
+        :iconConfig="configComputed"
       />
       <template v-for="category in categories">
         <div class="mb-xxl" v-if="categoryIconNamesDic[category].length" :key="category">
           <div class="text-section-title">{{ category }}</div>
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
-            :type="_.config.type"
-            :color="_.config.color"
-            :stroke="_.config.stroke"
+            :type="configComputed.type"
+            :color="configComputed.color"
+            :stroke="configComputed.stroke"
             :searchInput="_.searchInput"
             @clickTile="openTileDialog"
           />
@@ -116,13 +117,13 @@
   border-radius: $md
   text-transform: uppercase
   font-weight: $bold
-  color: white
+  +C(color, white)
   +C(background, nightfall)
   +C(border, ivory, thin solid)
   &:active
     transform: scale(0.95)
 .dark-mode .download-button
-  border: thin solid white
+  +C(border, white, thin solid)
 </style>
 
 <script lang="ts">
@@ -148,24 +149,38 @@ import ProfileCard from '../components/atoms/ProfileCard.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { scrollTo } from '../helpers/scroll'
+import { defaultsIconConfig, IconConfig } from '../types'
 
 export default defineComponent({
   name: 'PageIndex',
   components: { IconGrid, Pickers, PepInput, PepLink, ProfileCard, Stack },
   created() {
     document.body.classList.add('light-mode')
+    document.body.classList.add(`${defaultsIconConfig().type}-mode`)
   },
   setup(props) {
     const _ = reactive({
       searchInput: '',
-      config: {
-        type: 'print',
-        color: cssVar('primary'),
-        background: 'white',
-        stroke: 'black',
-      },
+      config: defaultsIconConfig(),
     })
 
+    const configComputed = computed(() => {
+      const { type, color: _color, background, stroke: _stroke } = _.config
+      const useColorAsStroke = type === 'print' && background === cssVar('nightfall')
+      const color = useColorAsStroke ? 'black' : _color
+      const stroke = useColorAsStroke ? _color : _stroke
+      return { type, color, background, stroke }
+    })
+
+    watch(
+      () => _.config.type,
+      (newVal) => {
+        document.body.className = document.body.className.replace(
+          /(print|pop)-mode/g,
+          `${newVal}-mode`,
+        )
+      },
+    )
     watch(
       () => _.config.color,
       (newVal) => {
@@ -217,12 +232,13 @@ export default defineComponent({
         component: 'DialogWrapper',
         dialogProps: { style: `border-radius: 1rem` },
         slotComponent: 'IconInfo',
-        slotProps: { icon, config: _.config },
+        slotProps: { icon, config: configComputed.value, configOptionButtons: _.config },
       })
     }
 
     return {
       _,
+      configComputed,
       darkMode,
       categories,
       categoryIconNamesDic,

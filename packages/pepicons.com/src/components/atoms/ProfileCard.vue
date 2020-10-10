@@ -111,7 +111,7 @@
 // $
 
 .profile-card
-  background: white
+  +C(background, white)
 .dark-mode
   .profile-card
     +C(background, moonlight)

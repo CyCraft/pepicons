@@ -13,7 +13,7 @@
 <style lang="sass">
 // $
 .icon-tile
-  background-color: white
+  +C(background-color, white)
 .dark-mode
   .icon-tile
     +C(background-color, moonlight)

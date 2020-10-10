@@ -23,9 +23,10 @@
 </style>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent, PropType } from '@vue/composition-api'
 import Picker from './Picker.vue'
 import Stack from '../atoms/Stack.vue'
+import { defaultsIconConfig, IconConfig } from '../../types'
 
 export default defineComponent({
   name: 'Pickers',
@@ -35,13 +36,8 @@ export default defineComponent({
      * @type {{ type: 'pop' | 'print', color: string, background: string, stroke: string }}
      */
     value: {
-      type: Object,
-      default: () => ({
-        type: 'pop',
-        color: 'black',
-        background: 'white',
-        stroke: 'black',
-      }),
+      type: Object as PropType<IconConfig>,
+      default: () => ({ ...defaultsIconConfig() }),
     },
   },
   setup() {
