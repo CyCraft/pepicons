@@ -41,18 +41,21 @@ $h-lg: 25px
     +val()
     letter-spacing: 2pt
     text-transform: uppercase
+    text-align: center
     // fixes to line-height so that the h1 is the same height as the content
     line-height: 0.8em
     > span
       display: inline-block
       transform: translateY(13%)
     // text outline/shadow
-    -webkit-text-stroke: 1px black
-    +media-sm(-webkit-text-stroke, 2px black)
-    +media-lg(-webkit-text-stroke, 3px black)
-    +text-outline(2, black)
-    // size
-    font-size: 60px
+    -webkit-text-stroke: 2px black
+    text-stroke: 2px black
+    +media-sm(-webkit-text-stroke, 3px black)
+    +media-sm(text-stroke, 3px black)
+    +media-lg(-webkit-text-stroke, 4px black)
+    +media-lg(text-stroke, 4px black)
+    font-size: 50px // iphone SE
+    +media-xs(font-size, 60px)
     +media-sm(font-size, 80px)
     +media-md(font-size, 100px)
     +media-lg(font-size, 140px)
