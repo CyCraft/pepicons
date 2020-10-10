@@ -1,5 +1,11 @@
 // app global css in Sass form
 @import 'quasar.variables'
+@import 'variable-classes/colors'
+@import 'variable-classes/flex'
+@import 'variable-classes/margin-padding'
+@import 'variable-classes/reset-elements'
+@import 'variable-classes/text'
+@import 'variable-classes/typography'
 
 .cursor-arrow-down
   cursor: s-resize !important
@@ -9,9 +15,9 @@
 body
   transition: background-color 250ms
   &.light-mode
-    background-color: $c-ivory
+    +C(background-color, ivory)
   &.dark-mode
-    background-color: $c-nightfall
+    +C(background-color, nightfall)
 
 .thin-border--dark
   border: thin solid $c-old-tucan !important
@@ -22,3 +28,6 @@ body
   height: 36px
 .q-color-picker__header-content > .q-tabs
   display: none
+
+.absolute-overlay
+  +absolute-overlay()

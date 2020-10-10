@@ -10,11 +10,7 @@
             icon="info-filled"
             class="cursor-arrow-down"
           />
-          <a
-            href="https://github.com/CyCraft/pepicons/tree/production/packages/pepicons/svg"
-            class="download-button"
-            >Download</a
-          >
+          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button">Download</a>
         </Stack>
       </div>
       <div class="mb-md text-center">
@@ -36,15 +32,16 @@
         v-model="_.searchInput"
         :debounce="200"
         :isDarkMode="darkMode"
+        :iconConfig="configComputed"
       />
       <template v-for="category in categories">
         <div class="mb-xxl" v-if="categoryIconNamesDic[category].length" :key="category">
           <div class="text-section-title">{{ category }}</div>
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
-            :type="_.config.type"
-            :color="_.config.color"
-            :stroke="_.config.stroke"
+            :type="configComputed.type"
+            :color="configComputed.color"
+            :stroke="configComputed.stroke"
             :searchInput="_.searchInput"
             @clickTile="openTileDialog"
           />
@@ -65,7 +62,7 @@
       <div class="_section">
         <div class="text-section-title" id="about-us">About Us</div>
         <div class="mb-lg">
-          Read the announcement blog to read about our motivation for creating Pepicons! Pepicons
+          Read the announcement blog to read about our motivation for creating Pepicons!<br />Pepicons
           was made by these peeps:
         </div>
         <Stack classes="justify-center" gap="lg">
@@ -116,13 +113,13 @@
   border-radius: $md
   text-transform: uppercase
   font-weight: $bold
-  color: white
-  background: $c-nightfall
-  border: thin solid $c-ivory
+  +C(color, white)
+  +C(background, nightfall)
+  +C(border, ivory, thin solid)
   &:active
     transform: scale(0.95)
 .dark-mode .download-button
-  border: thin solid white
+  +C(border, white, thin solid)
 </style>
 
 <script lang="ts">
@@ -133,10 +130,12 @@ import {
   Pepicon,
   PepiconPrint,
   synonyms,
+  synonymsJa,
   categories,
   pepiconCategoryDic,
 } from 'pepicons'
 import sort from 'fast-sort'
+import { Dialog } from 'quasar'
 import Stack from '../components/atoms/Stack.vue'
 import PepInput from '../components/atoms/PepInput.vue'
 import IconGrid from '../components/molecules/IconGrid.vue'
@@ -146,25 +145,38 @@ import ProfileCard from '../components/atoms/ProfileCard.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { scrollTo } from '../helpers/scroll'
-import { Dialog } from 'quasar'
+import { defaultsIconConfig, IconConfig } from '../types'
 
 export default defineComponent({
   name: 'PageIndex',
   components: { IconGrid, Pickers, PepInput, PepLink, ProfileCard, Stack },
   created() {
     document.body.classList.add('light-mode')
+    document.body.classList.add(`${defaultsIconConfig().type}-mode`)
   },
   setup(props) {
     const _ = reactive({
       searchInput: '',
-      config: {
-        type: 'print',
-        color: cssVar('primary'),
-        background: 'white',
-        stroke: 'black',
-      },
+      config: defaultsIconConfig(),
     })
 
+    const configComputed = computed(() => {
+      const { type, color: _color, background, stroke: _stroke } = _.config
+      const useColorAsStroke = type === 'print' && background === cssVar('nightfall')
+      const color = useColorAsStroke ? 'black' : _color
+      const stroke = useColorAsStroke ? _color : _stroke
+      return { type, color, background, stroke }
+    })
+
+    watch(
+      () => _.config.type,
+      (newVal) => {
+        document.body.className = document.body.className.replace(
+          /(print|pop)-mode/g,
+          `${newVal}-mode`,
+        )
+      },
+    )
     watch(
       () => _.config.color,
       (newVal) => {
@@ -196,7 +208,11 @@ export default defineComponent({
         if (iconNonExistent) return dic
         const searchText = cleanupForSearch(_.searchInput)
         if (searchText) {
-          const _synonyms: string[] = synonyms[iconName as Pepicon]
+          const _synonyms: string[] = [
+            ...synonyms[iconName as Pepicon],
+            ...synonymsJa[iconName as Pepicon],
+            iconCategory,
+          ]
           const searchHit =
             cleanupForSearch(iconName).includes(searchText) ||
             _synonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
@@ -212,12 +228,13 @@ export default defineComponent({
         component: 'DialogWrapper',
         dialogProps: { style: `border-radius: 1rem` },
         slotComponent: 'IconInfo',
-        slotProps: { icon, config: _.config },
+        slotProps: { icon, config: configComputed.value, configOptionButtons: _.config },
       })
     }
 
     return {
       _,
+      configComputed,
       darkMode,
       categories,
       categoryIconNamesDic,

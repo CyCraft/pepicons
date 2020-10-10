@@ -37,15 +37,15 @@
         <div class="flex q-gutter-sm mt-xs">
           <IconButton
             iconName="cloud-down"
-            :iconType="config.type"
-            :iconColor="config.color"
+            :iconType="configOptionButtons.type"
+            :iconColor="configOptionButtons.color"
             :isActive="_.downloadSvgDone"
             @click="downloadSvg"
           />
           <IconButton
             iconName="clipboard"
-            :iconType="config.type"
-            :iconColor="config.color"
+            :iconType="configOptionButtons.type"
+            :iconColor="configOptionButtons.color"
             :isActive="_.copySvgDone"
             @click="copySvg"
           />
@@ -56,15 +56,15 @@
         <div class="flex q-gutter-sm mt-xs">
           <IconButton
             iconName="cloud-down"
-            :iconType="config.type"
-            :iconColor="config.color"
+            :iconType="configOptionButtons.type"
+            :iconColor="configOptionButtons.color"
             :isActive="_.downloadPngDone"
             @click="downloadPng"
           />
           <IconButton
             iconName="clipboard"
-            :iconType="config.type"
-            :iconColor="config.color"
+            :iconType="configOptionButtons.type"
+            :iconColor="configOptionButtons.color"
             :isActive="_.copyPngDone"
             @click="copyPng"
           />
@@ -77,15 +77,15 @@
 <style lang="sass">
 // $
 .icon-info
-  background-color: white
+  +C(background-color, white)
   min-width: 400px
   position: relative
   overflow: hidden
   border-radius: 1rem
-  -webkit-mask-image: -webkit-radial-gradient(white, black)
+  +fix-for-overflow-hidden-with-border-radius()
 .dark-mode
   .icon-info
-    background-color: $c-nightfall
+    +C(background-color, nightfall)
 
 ._toggle-code-button
   position: absolute
@@ -150,15 +150,13 @@ import IconButton from '../atoms/IconButton.vue'
 import HtmlButton from '../atoms/HtmlButton.vue'
 import { downloadBase64AsFile, downloadFile } from '../../helpers/download'
 import { svgToBase64Png, base64ToBlob } from '../../helpers/conversion'
+import { defaultsIconConfig, IconConfig } from '../../types'
 
 declare class ClipboardItem {
   constructor(data: { [mimeType: string]: Blob })
 }
 
-function generateVueCode(
-  iconName: string,
-  config: { type: 'pop' | 'print'; color: string; background: string; stroke: string },
-): string {
+function generateVueCode(iconName: string, config: IconConfig): string {
   const _stroke = config.stroke === 'white' && config.type === 'print' ? '\n    stroke="white"' : ''
   return `<template>
   <Pepicon
@@ -186,18 +184,15 @@ export default defineComponent({
      * @type {{ type: 'pop' | 'print', color: string, background: string, stroke: string }}
      */
     config: {
-      type: Object as PropType<{
-        type: 'pop' | 'print'
-        color: string
-        background: string
-        stroke: string
-      }>,
-      default: () => ({
-        type: 'pop' as 'pop' | 'print',
-        color: 'black',
-        background: 'white',
-        stroke: 'black',
-      }),
+      type: Object as PropType<IconConfig>,
+      default: () => ({ ...defaultsIconConfig() }),
+    },
+    /**
+     * @type {{ type: 'pop' | 'print', color: string, background: string, stroke: string }}
+     */
+    configOptionButtons: {
+      type: Object as PropType<IconConfig>,
+      default: () => ({ ...defaultsIconConfig() }),
     },
   },
   setup(props) {

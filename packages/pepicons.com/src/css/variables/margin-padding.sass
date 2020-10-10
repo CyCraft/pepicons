@@ -19,8 +19,6 @@ $xxxl: ($_space-base * 5)
 =pb-safe-areas($_px: 0px)
   padding-bottom: calc(constant(safe-area-inset-bottom) + #{$_px}) // iOS 11.0
   padding-bottom: calc(env(safe-area-inset-bottom) + #{$_px}) // iOS 11.2
-.pt-safe-areas
-  +pt-safe-areas()
 
 =mt-safe-areas()
   margin-top: constant(safe-area-inset-top) // iOS 11.0
@@ -30,7 +28,7 @@ $xxxl: ($_space-base * 5)
   margin-bottom: env(safe-area-inset-bottom) // iOS 11.2
 
 // Gutters
-.gutter-md
+=gutter-md()
   margin-left: -$xs
   margin-top: -$xs
   +media-xs(margin-left, -$md)
@@ -76,38 +74,3 @@ $xxxl: ($_space-base * 5)
 =my($val)
   +mt($val)
   +mb($val)
-
-// Render CLASS tags:
-$_spaces: ('none': 0, 'auto': auto, 'xxs': $xxs, 'xs': $xs, 'sm': $sm, 'md': $md, 'lg': $lg, 'xl': $xl, 'xxl': $xxl, 'xxxl': $xxxl) !default
-
-@each $key, $value in $_spaces
-
-  .pa-#{$key}
-    +pa($value)
-  .pl-#{$key}
-    +pl($value)
-  .pr-#{$key}
-    +pr($value)
-  .pt-#{$key}
-    +pt($value)
-  .pb-#{$key}
-    +pb($value)
-  .px-#{$key}
-    +px($value)
-  .py-#{$key}
-    +py($value)
-
-  .ma-#{$key}
-    +ma($value)
-  .ml-#{$key}
-    +ml($value)
-  .mr-#{$key}
-    +mr($value)
-  .mt-#{$key}
-    +mt($value)
-  .mb-#{$key}
-    +mb($value)
-  .mx-#{$key}
-    +mx($value)
-  .my-#{$key}
-    +my($value)

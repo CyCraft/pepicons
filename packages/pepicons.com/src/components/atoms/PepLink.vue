@@ -28,45 +28,47 @@
   &._has-icon
     font-weight: $medium
   // colors
-  color: $c-letters
+  +C(color, letters)
 .dark-mode .pep-link
-  color: white
+  +C(color, white)
 
 
 .pep-link ._icon
-    color: $c-nightfall
+  +C(color, nightfall)
 .dark-mode
   .pep-link ._icon
-    color: white
+    +C(color, white)
 
 .pep-link._retro-underline
   position: relative
   display: inline-block
-  &::after
+  &::after, &::before
     content: ''
     position: absolute
+    border-radius: 50px
     transform: rotate(181deg) translateY(-2px)
+    transition: border-color 250ms
     width: 105%
+  &::after
     bottom: 0
     left: -2px
-    border-top: 2px solid black
-    border-radius: 50px
-    transition: border-color 250ms
+    +C(border-top, black, 2px solid)
   &::before
-    content: ''
-    position: absolute
     justify-content: bottom
     transform-origin: bottom
-    transform: rotate(181deg) translateY(-2px)
-    width: 105%
     bottom: 1px
     left: -2px
-    border-bottom: 6px solid $primary
-    border-bottom: 6px solid var(--q-color-primary)
-    border-radius: 50px
-.dark-mode
-  .pep-link._retro-underline::after
-    border-top: 2px solid white
+    +C(border-bottom, primary, 6px solid)
+.dark-mode.pop-mode
+  .pep-link._retro-underline
+    &::after
+      +C(border-top, none, 2px solid)
+.dark-mode.print-mode
+  .pep-link._retro-underline
+    &::after
+      +C(border-top, primary, 2px solid)
+    &::before
+      +C(border-bottom, black, 6px solid)
 </style>
 
 <script lang="ts">

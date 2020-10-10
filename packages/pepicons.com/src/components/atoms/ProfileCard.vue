@@ -111,10 +111,10 @@
 // $
 
 .profile-card
-  background: white
+  +C(background, white)
 .dark-mode
   .profile-card
-    background: $c-moonlight
+    +C(background, moonlight)
 .profile-card
   width: 310px
   +flex-center()
@@ -165,7 +165,7 @@
   ._link
     cursor: pointer
     > *
-      color: $c-washed-cloth
+      +C(color, washed-cloth)
 </style>
 
 <script lang="ts">
