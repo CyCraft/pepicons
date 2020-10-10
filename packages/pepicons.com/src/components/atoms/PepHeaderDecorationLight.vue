@@ -6,7 +6,6 @@
       height="143.376"
       viewBox="0 0 1158.942 143.376"
     >
-      </g>
       <g>
         <g id="グリーンギザギザ" transform="translate(-4 22.16)">
           <path
