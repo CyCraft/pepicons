@@ -1,6 +1,6 @@
 <template>
   <div class="pep-hero">
-    <div class="absolute-overlay"><slot /></div>
+    <div class="absolute-overlay flex-center"><slot /></div>
     <h1 class="_title"><span>Pep</span><span>icons</span></h1>
   </div>
 </template>

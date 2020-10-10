@@ -29,7 +29,8 @@
 .dialog-wrapper
   position: relative
   background: none
-  min-width: 300px
+  min-width: 280px
+  max-width: 80vw
   ._close
     position: absolute
     top: 0

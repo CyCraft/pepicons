@@ -2,14 +2,16 @@
   <q-page padding class="page-index">
     <div class="_page-content">
       <div class="flex mb-xxl">
-        <Stack class="ml-auto">
-          <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
-          <PepLink
-            @click.native.stop.prevent="() => scrollTo('#about-us')"
-            content="About Us"
-            icon="info-filled"
-            class="cursor-arrow-down"
-          />
+        <Stack class="ml-auto" classes="justify-end items-center">
+          <Stack class="ml-auto" classes="items-center">
+            <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
+            <PepLink
+              @click.native.stop.prevent="() => scrollTo('#about-us')"
+              content="About Us"
+              icon="info-filled"
+              class="cursor-arrow-down"
+            />
+          </Stack>
           <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button">Download</a>
         </Stack>
       </div>

@@ -1,8 +1,9 @@
 <template>
-  <q-layout view="hhh lpr fff">
+  <q-layout view="hhh lpr fff" style="overflow-x: hidden">
     <header>
       <PepHero class="full-width mb-md">
-        <PepHeaderDecoration />
+        <!-- <PepHeaderDecoration /> -->
+        <PepHeaderDecorationLight />
       </PepHero>
     </header>
     <q-page-container>
@@ -34,16 +35,13 @@
 </style>
 
 <script>
-import PepHeaderDecoration from '../components/atoms/PepHeaderDecoration.vue'
+// import PepHeaderDecoration from '../components/atoms/PepHeaderDecoration.vue'
+import PepHeaderDecorationLight from '../components/atoms/PepHeaderDecorationLight.vue'
 import PepHero from '../components/atoms/PepHero.vue'
 import PepLink from '../components/atoms/PepLink.vue'
 
 export default {
   name: 'MainLayout',
-  components: { PepHero, PepLink, PepHeaderDecoration },
-  data() {
-    return { remountCount: 0 }
-  },
-  methods: {},
+  components: { PepHero, PepLink, PepHeaderDecorationLight /** PepHeaderDecoration */ },
 }
 </script>

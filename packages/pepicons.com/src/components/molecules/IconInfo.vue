@@ -78,7 +78,9 @@
 // $
 .icon-info
   +C(background-color, white)
-  min-width: 400px
+  min-width: 280px
+  width: 400px
+  max-width: inherit
   position: relative
   overflow: hidden
   border-radius: 1rem
@@ -99,13 +101,15 @@
   background-color: inherit
   transition: all 200ms ease-out !important
 ._top-door
-  height: 320px
+  height: 288px
+  +media-xs(height, 320px)
   +flex-center
 ._bottom-door
   display: flex
   justify-content: space-around
   align-items: center
-  height: 180px
+  height: 162px
+  +media-xs(height, 180px)
   &::before
     content: ''
     background-color: transparentize($c-washed-cloth, 0.9)

@@ -13,7 +13,7 @@
 
 .icon-grid
   display: grid
-  min-width: 500px
+  min-width: 300px
   justify-content: center
   grid-template-columns: repeat(auto-fit, 100px)
   grid-auto-rows: 100px
