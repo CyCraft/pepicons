@@ -1,9 +1,9 @@
 <template>
   <div class="icon-tile">
-    <Pepicon class="_svg" :name="name" :type="type" :color="color" :stroke="stroke" size="26px" />
+    <Pepicon class="_svg" v-bind="config" size="26px" />
     <div class="_name">
       <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
-        {{ name }}
+        {{ config.name }}
       </div>
       <div v-if="synonymHtml" v-html="synonymHtml" />
     </div>
@@ -41,25 +41,26 @@ import { computed, defineComponent, PropType } from '@vue/composition-api'
 import { Pepicon as PepiconType, synonyms } from 'pepicons'
 import { Pepicon } from 'vue-pepicons'
 import { cleanupForSearch } from '../../helpers/search'
+import { defaultsIconConfig, IconConfig } from '../../types'
 
 export default defineComponent({
   name: 'IconTile',
   components: { Pepicon },
   props: {
     /**
-     * @example 'airplane'
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
      */
-    name: { type: String as PropType<PepiconType>, required: true },
-    color: { type: String, default: '#AB92F0' },
-    type: { type: String, default: 'print' },
-    stroke: { type: String, default: 'black' },
+    config: {
+      type: Object as PropType<IconConfig>,
+      default: () => ({ ...defaultsIconConfig() }),
+    },
     searchInput: { type: String, default: '' },
   },
   setup(props) {
     const searchInputSynonymHit = computed(() => {
       const searchText = cleanupForSearch(props.searchInput)
       if (!searchText) return undefined
-      const _synonyms = synonyms[props.name] || []
+      const _synonyms = synonyms[props.config.name as PepiconType] || []
       return _synonyms.find((s) => cleanupForSearch(s).includes(searchText))
     })
     const synonymHtml = computed(() => {
@@ -71,9 +72,7 @@ export default defineComponent({
       return `<div class="c-washed-cloth" style="opacity: 0.8">${text}</div>`
     })
 
-    return {
-      synonymHtml,
-    }
+    return { synonymHtml }
   },
 })
 </script>

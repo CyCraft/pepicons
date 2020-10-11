@@ -25,6 +25,7 @@
     "raw-loader": "^4.0.1",
     "roll-anything": "^2.0.0",
     "three": "^0.118.3",
+    "ts-toolbelt": "^8.0.7",
     "vivify.css": "^0.0.0",
     "vue-pepicons": "^0.1.2"
   },

@@ -2,7 +2,8 @@
   <transition-group class="icon-grid" name="anim-grid" tag="div">
     <div class="anim-grid-item" v-for="name in iconNames" :key="name">
       <IconTile
-        v-bind="{ name, color, type, stroke, searchInput }"
+        :searchInput="searchInput"
+        :config="{ ...config, name }"
         @click.native="() => clickTile(name)"
       />
     </div>
@@ -34,6 +35,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from '@vue/composition-api'
+import { defaultsIconConfig, IconConfig } from '../../types'
 import IconTile from '../atoms/IconTile.vue'
 
 export default defineComponent({
@@ -41,12 +43,13 @@ export default defineComponent({
   components: { IconTile },
   props: {
     iconNames: { type: Array as PropType<string[]> },
-    type: {
-      type: String as PropType<'pop' | 'print'>,
-      default: 'pop',
+    /**
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+     */
+    config: {
+      type: Object as PropType<IconConfig>,
+      default: () => ({ ...defaultsIconConfig() }),
     },
-    color: { type: String },
-    stroke: { type: String, default: 'black' },
     searchInput: { type: String },
   },
   setup(props, { emit }) {

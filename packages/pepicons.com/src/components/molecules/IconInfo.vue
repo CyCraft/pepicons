@@ -28,24 +28,26 @@
     </div>
 
     <div class="_top-door" :class="{ '_top-door-transform': _.codeShown }">
-      <Pepicon v-bind="config" :name="icon" size="80px" />
-      <div class="text-h5 mt-xl">{{ icon }}</div>
+      <Pepicon v-bind="config" size="80px" />
+      <div class="text-h5 mt-xl">{{ config.name }}</div>
     </div>
     <div class="_bottom-door text-h6 px-xl" :class="{ '_bottom-door-transform': _.codeShown }">
       <div class="flex-center relative">
         <div>SVG</div>
         <div class="flex q-gutter-sm mt-xs">
           <IconButton
-            iconName="cloud-down"
-            :iconType="configOptionButtons.type"
-            :iconColor="configOptionButtons.color"
+            :iconConfig="{
+              ...configOptionButtons,
+              name: 'cloud-down',
+            }"
             :isActive="_.downloadSvgDone"
             @click="downloadSvg"
           />
           <IconButton
-            iconName="clipboard"
-            :iconType="configOptionButtons.type"
-            :iconColor="configOptionButtons.color"
+            :iconConfig="{
+              ...configOptionButtons,
+              name: 'clipboard',
+            }"
             :isActive="_.copySvgDone"
             @click="copySvg"
           />
@@ -55,16 +57,18 @@
         <div>PNG</div>
         <div class="flex q-gutter-sm mt-xs">
           <IconButton
-            iconName="cloud-down"
-            :iconType="configOptionButtons.type"
-            :iconColor="configOptionButtons.color"
+            :iconConfig="{
+              ...configOptionButtons,
+              name: 'cloud-down',
+            }"
             :isActive="_.downloadPngDone"
             @click="downloadPng"
           />
           <IconButton
-            iconName="clipboard"
-            :iconType="configOptionButtons.type"
-            :iconColor="configOptionButtons.color"
+            :iconConfig="{
+              ...configOptionButtons,
+              name: 'clipboard',
+            }"
             :isActive="_.copyPngDone"
             @click="copyPng"
           />
@@ -184,16 +188,15 @@ export default defineComponent({
   name: 'IconInfo',
   components: { IconButton, HtmlButton, Pepicon, CodeBlock },
   props: {
-    icon: { type: String, required: true },
     /**
-     * @type {{ type: 'pop' | 'print', color: string, background: string, stroke: string }}
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
      */
     config: {
       type: Object as PropType<IconConfig>,
       default: () => ({ ...defaultsIconConfig() }),
     },
     /**
-     * @type {{ type: 'pop' | 'print', color: string, background: string, stroke: string }}
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
      */
     configOptionButtons: {
       type: Object as PropType<IconConfig>,
@@ -210,11 +213,11 @@ export default defineComponent({
       copyPngDone: false,
     })
 
-    const codeSvg = pepiconSvgString({ name: props.icon, ...props.config } as any)
-    const codeVue = generateVueCode(props.icon, props.config)
+    const codeSvg = pepiconSvgString(props.config as any)
+    const codeVue = generateVueCode(props.config.name || '', props.config)
 
     function downloadSvg(): void {
-      downloadFile(codeSvg, `${props.icon}.svg`)
+      downloadFile(codeSvg, `${props.config.name}.svg`)
       _.downloadSvgDone = true
     }
     function copySvg(): void {
@@ -222,13 +225,13 @@ export default defineComponent({
       _.copySvgDone = copied
     }
     async function downloadPng(): Promise<void> {
-      const _codeSvg = pepiconSvgString({ name: props.icon, ...props.config, size: '48px' } as any)
+      const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
       const pngString = await svgToBase64Png(_codeSvg)
-      downloadBase64AsFile(pngString, `${props.icon}.png`)
+      downloadBase64AsFile(pngString, `${props.config.name}.png`)
       _.downloadPngDone = true
     }
     async function copyPng(): Promise<void> {
-      const _codeSvg = pepiconSvgString({ name: props.icon, ...props.config, size: '48px' } as any)
+      const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
       const pngString = await svgToBase64Png(_codeSvg)
       const item = new ClipboardItem({
         'image/png': base64ToBlob(pngString),

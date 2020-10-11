@@ -1,7 +1,7 @@
 <template>
   <QInput class="pep-input" v-bind="propsToPass" v-on="eventsToPass">
     <template v-slot:prepend v-if="iconConfig">
-      <Pepicon name="loop" v-bind="iconConfig" />
+      <Pepicon v-bind="iconConfig" />
     </template>
   </QInput>
 </template>
@@ -45,7 +45,7 @@ export default defineComponent({
     color: { type: String, default: '#AB92F0' },
     isDarkMode: { type: Boolean },
     /**
-     * @type {{ type: 'pop' | 'print', color: string, background: string, stroke: string }}
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
      */
     iconConfig: {
       type: Object as PropType<IconConfig>,

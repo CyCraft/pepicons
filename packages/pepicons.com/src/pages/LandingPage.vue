@@ -26,24 +26,22 @@
           retroUnderline
         />!
       </div>
-      <Pickers v-model="_.config" class="mb-md" />
+      <Pickers v-model="_.config" :configComputed="configComputed" class="mb-md" />
       <PepInput
         class="mb-xxl"
         id="top"
         :color="_.config.color"
         v-model="_.searchInput"
         :debounce="200"
-        :isDarkMode="darkMode"
-        :iconConfig="configComputed"
+        :isDarkMode="_.config.isDarkMode"
+        :iconConfig="{ ...configComputed, name: 'loop' }"
       />
       <template v-for="category in categories">
         <div class="mb-xxl" v-if="categoryIconNamesDic[category].length" :key="category">
           <div class="text-section-title">{{ category }}</div>
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
-            :type="configComputed.type"
-            :color="configComputed.color"
-            :stroke="configComputed.stroke"
+            :config="configComputed"
             :searchInput="_.searchInput"
             @clickTile="openTileDialog"
           />
@@ -70,7 +68,8 @@
             retroUnderline
             content="announcement blog post"
           />
-          to read about our motivation for creating Pepicons!<br />Pepicons was made by these peeps:
+          to read about our motivation for creating Pepicons!<br /><br />Pepicons was made by these
+          peeps:
         </div>
         <Stack classes="justify-center" gap="lg">
           <ProfileCard
@@ -171,15 +170,15 @@ export default defineComponent({
   setup(props, { emit }) {
     const _ = reactive({
       searchInput: '',
-      config: defaultsIconConfig(),
+      config: defaultsIconConfig({ isDarkMode: false }),
     })
 
     const configComputed = computed(() => {
-      const { type, color: _color, background, stroke: _stroke } = _.config
-      const useColorAsStroke = type === 'print' && background === cssVar('nightfall')
+      const { type, color: _color, stroke: _stroke, isDarkMode } = _.config
+      const useColorAsStroke = type === 'print' && isDarkMode
       const color = useColorAsStroke ? 'black' : _color
       const stroke = useColorAsStroke ? _color : _stroke
-      return { type, color, background, stroke }
+      return { type, color, stroke }
     })
 
     watch(
@@ -198,24 +197,18 @@ export default defineComponent({
       },
     )
     watch(
-      () => _.config.background,
-      (newVal) => {
-        if (newVal === 'white') {
-          _.config.stroke = 'black'
+      () => _.config.isDarkMode,
+      (isDarkMode) => {
+        if (isDarkMode === false) {
           document.body.className = document.body.className.replace(/dark-mode/g, 'light-mode')
           emit('setIsDarkMode', false)
         }
-        if (newVal === cssVar('nightfall')) {
-          _.config.stroke = 'white'
+        if (isDarkMode === true) {
           document.body.className = document.body.className.replace(/light-mode/g, 'dark-mode')
           emit('setIsDarkMode', true)
         }
       },
     )
-
-    const darkMode = computed(() => {
-      return _.config.background === cssVar('nightfall')
-    })
 
     const categoryIconNamesDic = computed(() =>
       Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
@@ -239,19 +232,21 @@ export default defineComponent({
       }, {} as { [category: string]: string[] }),
     )
 
-    function openTileDialog(icon: string): void {
+    function openTileDialog(iconName: string): void {
       Dialog.create({
         component: 'DialogWrapper',
         dialogProps: { style: `border-radius: 1rem` },
         slotComponent: 'IconInfo',
-        slotProps: { icon, config: configComputed.value, configOptionButtons: _.config },
+        slotProps: {
+          config: { ...configComputed.value, name: iconName },
+          configOptionButtons: _.config,
+        },
       })
     }
 
     return {
       _,
       configComputed,
-      darkMode,
       categories,
       categoryIconNamesDic,
       openTileDialog,

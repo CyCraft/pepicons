@@ -4,19 +4,15 @@
       {{ kind === 'type' ? 'Style' : kind }}
     </div> -->
     <IconButton
-      iconName="pen"
-      iconType="print"
-      :iconColor="value.color"
+      :iconConfig="{ ...configComputed, name: 'pen', type: 'print' }"
+      :backgroundColor="value.isDarkMode ? nightfall : 'white'"
       :isActive="value.type === 'print'"
-      backgroundColor="white"
       @click="set('type', 'print')"
     />
     <IconButton
-      iconName="pen"
-      iconType="pop"
-      :iconColor="value.color"
+      :iconConfig="{ ...value, name: 'pen', type: 'pop' }"
+      :backgroundColor="value.isDarkMode ? nightfall : 'white'"
       :isActive="value.type === 'pop'"
-      backgroundColor="white"
       @click="set('type', 'pop')"
     />
   </Stack>
@@ -29,45 +25,37 @@
       :isActive="value.color === c"
     />
     <IconButton
+      :iconConfig="{ ...configComputed, name: 'color-picker' }"
+      :backgroundColor="value.isDarkMode ? nightfall : 'white'"
       :colorRing="true"
-      iconName="color-picker"
       @click="openColorPicker"
-      iconColor="#ffadad"
-      iconType="print"
     />
     <IconButton
+      :iconConfig="{ ...configComputed, name: 'refresh' }"
+      :backgroundColor="value.isDarkMode ? nightfall : 'white'"
       :colorRing="true"
-      iconName="refresh"
       @click="setRandomColor"
-      iconColor="#ffadad"
-      iconType="print"
     />
   </Stack>
   <Stack v-else-if="kind === 'background'" classes="justify-center">
     <IconButton
       backgroundColor="white"
-      @click="set('background', 'white')"
-      :class="`_background-picker ${value.background === 'white' ? 'thin-border--dark' : ''}`"
-      iconName="sun-filled"
-      iconColor="black"
-      iconType="pop"
+      @click="set('isDarkMode', false)"
+      class="_background-picker thin-border--dark"
+      :iconConfig="{ name: 'sun-filled', type: 'pop', color: 'black' }"
     />
     <IconButton
       :backgroundColor="nightfall"
-      @click="set('background', nightfall)"
-      :class="`_background-picker ${value.background === nightfall ? 'thin-border--light' : ''}`"
-      iconName="moon-filled"
-      iconColor="white"
-      iconType="pop"
+      @click="set('isDarkMode', true)"
+      class="_background-picker thin-border--light"
+      :iconConfig="{ name: 'moon-filled', type: 'pop', color: 'white' }"
     />
   </Stack>
   <Stack v-else-if="kind === 'stroke'" classes="justify-center">
     <IconButton
       :colorRing="true"
-      iconName="color-picker"
       @click="openColorPicker"
-      iconColor="#e8e8e8"
-      iconType="print"
+      :iconConfig="{ name: 'color-picker', color: '#e8e8e8', type: 'print' }"
     />
   </Stack>
 </template>
@@ -81,6 +69,7 @@
 <script lang="ts">
 import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
 import { Dialog, QColor } from 'quasar'
+import { O } from 'ts-toolbelt'
 import DialogWrapper from '../dialogs/DialogWrapper.vue'
 import IconButton from '../atoms/IconButton.vue'
 import Stack from '../atoms/Stack.vue'
@@ -95,19 +84,26 @@ export default defineComponent({
      * @example 'type'
      */
     kind: {
-      type: (String as unknown) as PropType<'type' | 'color' | 'background' | 'stroke'>,
+      type: String as PropType<'type' | 'color' | 'stroke' | 'isDarkMode'>,
       required: true,
     },
     /**
-     * @type {{ type: 'pop' | 'print', color: string, background: string, stroke: string }}
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string} & { isDarkMode: boolean }}
      */
     value: {
+      type: Object as PropType<IconConfig & { isDarkMode: boolean }>,
+      default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
+    },
+    /**
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+     */
+    configComputed: {
       type: Object as PropType<IconConfig>,
       default: () => ({ ...defaultsIconConfig() }),
     },
   },
   setup(props, { emit }) {
-    function set(prop: 'type' | 'color' | 'background' | 'stroke', value: string) {
+    function set(prop: 'type' | 'color' | 'stroke' | 'isDarkMode', value: string) {
       emit('input', { ...props.value, [prop]: value })
     }
 
@@ -122,7 +118,7 @@ export default defineComponent({
       Dialog.create({
         component: DialogWrapper,
         dialogProps: {
-          style: props.value.background === nightfall ? `background: ${nightfall}` : '',
+          style: props.value.isDarkMode ? `background: ${nightfall}` : '',
         },
         slotComponent: QColor,
         slotProps: {
@@ -131,7 +127,7 @@ export default defineComponent({
           formatModel: 'hexa',
           value: props.value.color,
           default: props.value.color,
-          dark: props.value.background === nightfall,
+          dark: props.value.isDarkMode,
         },
         slotEvents: {
           change: (newVal: string) => set(props.kind, newVal),

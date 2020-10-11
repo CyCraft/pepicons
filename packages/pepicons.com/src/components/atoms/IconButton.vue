@@ -8,10 +8,11 @@
     <div class="_inner flex flex-center">
       <Pepicon
         class="_icon"
-        v-if="iconName"
-        :name="iconName"
-        :type="iconType"
-        :color="iconColor"
+        v-if="iconConfig && iconConfig.name"
+        :name="iconConfig.name"
+        :type="iconConfig.type"
+        :color="iconConfig.color"
+        :stroke="iconConfig.stroke"
         size="md"
       />
     </div>
@@ -40,24 +41,32 @@ import { Pepicon } from 'vue-pepicons'
 import ColorRingSvg from './ColorRingSvg.vue'
 import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
 import { colors } from 'quasar'
+import { defaultsIconConfig, IconConfig } from '../../types'
 const { changeAlpha } = colors
 
 export default defineComponent({
   name: 'IconButton',
   components: { ColorRingSvg, Pepicon },
   props: {
-    backgroundColor: { type: String, default: '#fff' },
-    hasColorRing: { type: Boolean, default: false },
-    iconName: { type: String },
-    iconType: { type: String as PropType<'pop' | 'print'> },
-    iconColor: { type: String },
+    backgroundColor: { type: String, default: 'white' },
+    /**
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+     */
+    iconConfig: {
+      type: Object as PropType<IconConfig>,
+      default: () => ({ ...defaultsIconConfig() }),
+    },
     isActive: { type: Boolean },
+    hasColorRing: { type: Boolean, default: false },
   },
   setup(props) {
     const activeStyle = computed(() =>
       !props.isActive
         ? ''
-        : `box-shadow: 0 0 0 3px ${changeAlpha(props.iconColor || props.backgroundColor, 0.5)}`,
+        : `box-shadow: 0 0 0 3px ${changeAlpha(
+            props.iconConfig?.color || props.backgroundColor,
+            0.5,
+          )}`,
     )
     return { activeStyle }
   },
