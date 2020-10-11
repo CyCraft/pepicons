@@ -76,7 +76,6 @@
 <script lang="ts">
 import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
 import { Dialog, QColor } from 'quasar'
-import { O } from 'ts-toolbelt'
 import DialogWrapper from '../dialogs/DialogWrapper.vue'
 import IconButton from '../atoms/IconButton.vue'
 import Stack from '../atoms/Stack.vue'

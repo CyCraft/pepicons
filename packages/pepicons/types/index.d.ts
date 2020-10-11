@@ -10,13 +10,15 @@ export declare type Options = {
      */
     type: 'pop' | 'print';
     /**
-     * You can pass a hex or rgba color, this is applied to the svg tag
+     * A hex(a) or rgb(a) color
+     * - "pop" type icons: this is the icon color
+     * - "print" type icons: this is the shadow color (you can use "stroke" to set a stroke color)
      */
     color?: string;
     /**
      * A number between 0 and 1; where 0 is transparent
-     * - in "pop" style: opacity will be set to the entire icon
-     * - in "print" style: opacity will be set to the colored drop shadow
+     * - "pop" type icons: opacity will be set to the entire icon
+     * - "print" type icons: opacity will be set to the colored drop shadow
      */
     opacity?: number;
     /**
