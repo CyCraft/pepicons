@@ -143,7 +143,7 @@ export default defineComponent({
     }
 
     const colorSelection = [
-      cssVar('primary'),
+      cssVar('sig-purple'),
       cssVar('sig-green'),
       cssVar('sig-yellow'),
       cssVar('sig-blue'),
