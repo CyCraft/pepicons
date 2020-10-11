@@ -168,7 +168,7 @@ export default defineComponent({
     document.body.classList.add('light-mode')
     document.body.classList.add(`${defaultsIconConfig().type}-mode`)
   },
-  setup(props) {
+  setup(props, { emit }) {
     const _ = reactive({
       searchInput: '',
       config: defaultsIconConfig(),
@@ -203,10 +203,12 @@ export default defineComponent({
         if (newVal === 'white') {
           _.config.stroke = 'black'
           document.body.className = document.body.className.replace(/dark-mode/g, 'light-mode')
+          emit('setIsDarkMode', false)
         }
         if (newVal === cssVar('nightfall')) {
           _.config.stroke = 'white'
           document.body.className = document.body.className.replace(/light-mode/g, 'dark-mode')
+          emit('setIsDarkMode', true)
         }
       },
     )

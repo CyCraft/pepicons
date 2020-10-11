@@ -3,11 +3,11 @@
     <header>
       <PepHero class="full-width mb-md">
         <!-- <PepHeaderDecoration /> -->
-        <PepHeaderDecorationLight />
+        <PepHeaderDecorationLight :isDarkMode="isDarkMode" />
       </PepHero>
     </header>
     <q-page-container>
-      <router-view />
+      <router-view @setIsDarkMode="(newVal) => (isDarkMode = newVal)" />
     </q-page-container>
     <div class="pb-xxxl"></div>
     <q-footer class="footer">
@@ -43,5 +43,8 @@ import PepLink from '../components/atoms/PepLink.vue'
 export default {
   name: 'MainLayout',
   components: { PepHero, PepLink, PepHeaderDecorationLight /** PepHeaderDecoration */ },
+  data() {
+    return { isDarkMode: false }
+  },
 }
 </script>
