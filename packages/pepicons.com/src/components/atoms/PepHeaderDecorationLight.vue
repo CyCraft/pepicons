@@ -758,29 +758,29 @@ import { cssVar } from '../../helpers/colorHelpers'
 // import { roll } from 'roll-anything'
 
 const randomAnimeFloatPerIcon = [
-  2,
-  13,
+  8, // g
+  3, //g
   18,
-  8,
-  23,
+  0,
+  24,
   5,
   15,
-  14,
+  8,
   9,
   17,
-  19,
-  24,
+  10,
+  16,
   7,
   0,
   11,
-  15,
+  1,
   14,
   19,
   2,
   14,
   18,
-  14,
-  23,
+  14, // g
+  23, // g
   6,
   9,
   18,
@@ -800,6 +800,7 @@ export default defineComponent({
   mounted() {
     const shapes = this.$el.querySelectorAll('svg > g')
     shapes.forEach((g, index) => {
+      g.classList.add(`anime-float`)
       g.classList.add(`anime-float-${randomAnimeFloatPerIcon[index]}`)
     })
   },

@@ -33,64 +33,62 @@ body
   +absolute-overlay()
 
 .anime-float
-  animation: float 60s infinite
+  will-change: transform
+  animation-duration: 300s
+  animation-timing-function: ease
+  animation-delay: 0s
+  animation-iteration-count: infinite
 
 .anime-float-0
-  animation: float-0 300s infinite
+  animation-name: float-0
 .anime-float-1
-  animation: float-1 300s infinite
+  animation-name: float-1
 .anime-float-2
-  animation: float-2 300s infinite
+  animation-name: float-2
 .anime-float-3
-  animation: float-3 300s infinite
+  animation-name: float-3
 .anime-float-4
-  animation: float-4 300s infinite
+  animation-name: float-4
 .anime-float-5
-  animation: float-5 300s infinite
+  animation-name: float-5
 .anime-float-6
-  animation: float-6 300s infinite
+  animation-name: float-6
 .anime-float-7
-  animation: float-7 300s infinite
+  animation-name: float-7
 .anime-float-8
-  animation: float-8 300s infinite
+  animation-name: float-8
 .anime-float-9
-  animation: float-9 300s infinite
+  animation-name: float-9
 .anime-float-10
-  animation: float-10 300s infinite
+  animation-name: float-10
 .anime-float-11
-  animation: float-11 300s infinite
+  animation-name: float-11
 .anime-float-12
-  animation: float-12 300s infinite
+  animation-name: float-12
 .anime-float-13
-  animation: float-13 300s infinite
+  animation-name: float-13
 .anime-float-14
-  animation: float-14 300s infinite
+  animation-name: float-14
 .anime-float-15
-  animation: float-15 300s infinite
+  animation-name: float-15
 .anime-float-16
-  animation: float-16 300s infinite
+  animation-name: float-16
 .anime-float-17
-  animation: float-17 300s infinite
+  animation-name: float-17
 .anime-float-18
-  animation: float-18 300s infinite
+  animation-name: float-18
 .anime-float-19
-  animation: float-19 300s infinite
+  animation-name: float-19
 .anime-float-20
-  animation: float-20 300s infinite
+  animation-name: float-20
 .anime-float-21
-  animation: float-21 300s infinite
+  animation-name: float-21
 .anime-float-22
-  animation: float-22 300s infinite
+  animation-name: float-22
 .anime-float-23
-  animation: float-23 300s infinite
+  animation-name: float-23
 .anime-float-24
-  animation: float-24 300s infinite
-
-@keyframes float
-  from
-    transform: translate(100%, 100%)
-  to
-    transform: translate(-100%, -100%)
+  animation-name: float-24
 
 @keyframes float-0
   from
@@ -134,9 +132,9 @@ body
     transform: translate(-10%, -46%)
 @keyframes float-8
   from
-    transform: translate(58%, 64%)
+    transform: translate(50%, 64%)
   to
-    transform: translate(-28%, -54%)
+    transform: translate(50%, -1000%)
 @keyframes float-9
   from
     transform: translate(24%, 5%)
@@ -174,9 +172,9 @@ body
     transform: translate(13%, 15%)
 @keyframes float-16
   from
-    transform: translate(-30%, -77%)
+    transform: translate(0%, 100%)
   to
-    transform: translate(94%, 52%)
+    transform: translate(94%, -52%)
 @keyframes float-17
   from
     transform: translate(-100%, -56%)

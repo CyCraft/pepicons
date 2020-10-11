@@ -10,14 +10,14 @@
         color: value.isDarkMode ? 'black' : value.color,
         stroke: value.isDarkMode ? value.color : 'black',
       }"
-      :backgroundColor="value.isDarkMode ? nightfall : 'white'"
+      :backgroundColor="value.isDarkMode ? moonlight : 'white'"
       :isActive="value.type === 'print'"
       :activeColor="value.color"
       @click="set('type', 'print')"
     />
     <IconButton
       :iconConfig="{ ...value, name: 'pen', type: 'pop' }"
-      :backgroundColor="value.isDarkMode ? nightfall : 'white'"
+      :backgroundColor="value.isDarkMode ? moonlight : 'white'"
       :isActive="value.type === 'pop'"
       @click="set('type', 'pop')"
     />
@@ -33,13 +33,13 @@
     />
     <IconButton
       :iconConfig="{ ...configComputed, name: 'color-picker' }"
-      :backgroundColor="value.isDarkMode ? nightfall : 'white'"
+      :backgroundColor="value.isDarkMode ? moonlight : 'white'"
       :colorRing="true"
       @click="openColorPicker"
     />
     <IconButton
       :iconConfig="{ ...configComputed, name: 'refresh' }"
-      :backgroundColor="value.isDarkMode ? nightfall : 'white'"
+      :backgroundColor="value.isDarkMode ? moonlight : 'white'"
       :colorRing="true"
       @click="setRandomColor"
     />
@@ -119,6 +119,7 @@ export default defineComponent({
     }
 
     const nightfall = cssVar('nightfall')
+    const moonlight = cssVar('moonlight')
 
     function openColorPicker() {
       Dialog.create({
@@ -149,7 +150,7 @@ export default defineComponent({
       cssVar('sig-pink'),
     ]
 
-    return { set, setRandomColor, openColorPicker, colorSelection, nightfall }
+    return { set, setRandomColor, openColorPicker, colorSelection, nightfall, moonlight }
   },
 })
 </script>
