@@ -20,6 +20,7 @@
     <IconButton
       v-for="c in colorSelection"
       :key="c"
+      :iconConfig="{ color: value.color }"
       :backgroundColor="c"
       @click="set('color', c)"
       :isActive="value.color === c"
