@@ -57,17 +57,19 @@ export default defineComponent({
       default: () => ({ ...defaultsIconConfig() }),
     },
     isActive: { type: Boolean },
+    /**
+     * The active color is always shown as 50% opaque.
+     * The color applied will be `activeColor` || `iconConfig.color` || `backgroundColor`
+     */
+    activeColor: { type: String },
     hasColorRing: { type: Boolean, default: false },
   },
   setup(props) {
-    const activeStyle = computed(() =>
-      !props.isActive
-        ? ''
-        : `box-shadow: 0 0 0 3px ${changeAlpha(
-            props.iconConfig?.color || props.backgroundColor,
-            0.5,
-          )}`,
-    )
+    const activeStyle = computed(() => {
+      if (!props.isActive) return ''
+      const activeColor = props.activeColor || props.iconConfig?.color || props.backgroundColor
+      return `box-shadow: 0 0 0 3px ${changeAlpha(activeColor, 0.5)}`
+    })
     return { activeStyle }
   },
 })

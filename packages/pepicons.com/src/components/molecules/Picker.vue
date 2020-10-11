@@ -4,9 +4,15 @@
       {{ kind === 'type' ? 'Style' : kind }}
     </div> -->
     <IconButton
-      :iconConfig="{ ...configComputed, name: 'pen', type: 'print' }"
+      :iconConfig="{
+        name: 'pen',
+        type: 'print',
+        color: value.isDarkMode ? 'black' : value.color,
+        stroke: value.isDarkMode ? value.color : 'black',
+      }"
       :backgroundColor="value.isDarkMode ? nightfall : 'white'"
       :isActive="value.type === 'print'"
+      :activeColor="value.color"
       @click="set('type', 'print')"
     />
     <IconButton
