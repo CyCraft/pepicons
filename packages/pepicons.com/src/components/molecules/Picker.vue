@@ -1,11 +1,11 @@
 <template>
-  <Stack v-if="kind === 'type'" classes="justify-center">
+  <Stack class="picker" v-if="kind === 'type'" classes="justify-center">
     <!-- <div class="text-subtitle1 mb-sm">
       {{ kind === 'type' ? 'Style' : kind }}
     </div> -->
     <IconButton
       :iconConfig="{
-        name: 'pen',
+        name: 'can',
         type: 'print',
         color: value.isDarkMode ? 'black' : value.color,
         stroke: value.isDarkMode ? value.color : 'black',
@@ -13,16 +13,34 @@
       :backgroundColor="value.isDarkMode ? moonlight : 'white'"
       :isActive="value.type === 'print'"
       :activeColor="value.color"
+      animationClass="anime-shake"
       @click="set('type', 'print')"
-    />
+      ><QTooltip
+        anchor="top middle"
+        self="bottom middle"
+        transition-show="jump-up"
+        transition-hide="jump-down"
+        content-class="picker-tooltip _leftmost"
+        >Print ❏</QTooltip
+      ></IconButton
+    >
     <IconButton
-      :iconConfig="{ ...value, name: 'pen', type: 'pop' }"
+      :iconConfig="{ ...value, name: 'can', type: 'pop' }"
       :backgroundColor="value.isDarkMode ? moonlight : 'white'"
       :isActive="value.type === 'pop'"
+      animationClass="anime-shake"
       @click="set('type', 'pop')"
-    />
+      ><QTooltip
+        anchor="top middle"
+        self="bottom middle"
+        transition-show="jump-up"
+        transition-hide="jump-down"
+        content-class="picker-tooltip"
+        >Pop!</QTooltip
+      ></IconButton
+    >
   </Stack>
-  <Stack v-else-if="kind === 'color'" classes="justify-center">
+  <Stack class="picker" v-else-if="kind === 'color'" classes="justify-center">
     <IconButton
       v-for="c in colorSelection"
       :key="c"
@@ -44,7 +62,7 @@
       @click="setRandomColor"
     />
   </Stack>
-  <Stack v-else-if="kind === 'background'" classes="justify-center">
+  <Stack class="picker" v-else-if="kind === 'background'" classes="justify-center">
     <IconButton
       backgroundColor="white"
       @click="set('isDarkMode', false)"
@@ -58,7 +76,7 @@
       :iconConfig="{ name: 'moon-filled', type: 'pop', color: 'white' }"
     />
   </Stack>
-  <Stack v-else-if="kind === 'stroke'" classes="justify-center">
+  <Stack class="picker" v-else-if="kind === 'stroke'" classes="justify-center">
     <IconButton
       :colorRing="true"
       @click="openColorPicker"
@@ -68,14 +86,21 @@
 </template>
 
 <style lang="sass">
-// .picker
-._background-picker svg
-  opacity: 0.1
+.picker
+  ._background-picker svg
+    opacity: 0.1
+.picker-tooltip
+  font-size: 1.5em
+  +pa($md)
+  +C(background, primary)
+  border-radius: $md
+  font-weight: 500
+  white-space: nowrap
 </style>
 
 <script lang="ts">
 import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
-import { Dialog, QColor } from 'quasar'
+import { Dialog, QColor, QTooltip } from 'quasar'
 import DialogWrapper from '../dialogs/DialogWrapper.vue'
 import IconButton from '../atoms/IconButton.vue'
 import Stack from '../atoms/Stack.vue'
@@ -84,7 +109,7 @@ import { defaultsIconConfig, IconConfig } from '../../types'
 
 export default defineComponent({
   name: 'Picker',
-  components: { IconButton, Stack },
+  components: { IconButton, Stack, QTooltip },
   props: {
     /**
      * @example 'type'

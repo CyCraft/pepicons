@@ -2,12 +2,12 @@
   <button
     :class="`icon-button reset-button ${isActive ? '_active' : ''}`"
     :style="`background: ${backgroundColor}; ${activeStyle}`"
-    @click="$emit('click')"
+    @click="click"
   >
     <ColorRingSvg class="_inner" v-if="hasColorRing" />
     <div class="_inner flex flex-center">
       <Pepicon
-        class="_icon"
+        :class="`_icon ${isAnimating ? animationClass : ''}`"
         v-if="iconConfig && iconConfig.name"
         :name="iconConfig.name"
         :type="iconConfig.type"
@@ -16,6 +16,7 @@
         size="md"
       />
     </div>
+    <slot></slot>
   </button>
 </template>
 
@@ -39,7 +40,15 @@
 <script lang="ts">
 import { Pepicon } from 'vue-pepicons'
 import ColorRingSvg from './ColorRingSvg.vue'
-import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
+import {
+  defineComponent,
+  PropType,
+  computed,
+  ref,
+  toRef,
+  Ref,
+  nextTick,
+} from '@vue/composition-api'
 import { colors } from 'quasar'
 import { defaultsIconConfig, IconConfig } from '../../types'
 const { changeAlpha } = colors
@@ -63,14 +72,30 @@ export default defineComponent({
      */
     activeColor: { type: String },
     hasColorRing: { type: Boolean, default: false },
+    /**
+     * The animation class to be applied on click.
+     */
+    animationClass: { type: String },
+    /**
+     * The duration of the animation on click - needs 'animationClass' set as well to work.
+     */
+    animationDurationMs: { type: Number, default: 500 },
   },
-  setup(props) {
+  setup(props, { emit }) {
     const activeStyle = computed(() => {
       if (!props.isActive) return ''
       const activeColor = props.activeColor || props.iconConfig?.color || props.backgroundColor
       return `box-shadow: 0 0 0 3px ${changeAlpha(activeColor, 0.5)}`
     })
-    return { activeStyle }
+
+    const isAnimating = ref(false)
+    function click() {
+      isAnimating.value = true
+      setTimeout(() => (isAnimating.value = false), props.animationDurationMs)
+      emit('click')
+    }
+
+    return { activeStyle, click, isAnimating }
   },
 })
 </script>

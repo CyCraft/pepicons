@@ -32,6 +32,37 @@ body
 .absolute-overlay
   +absolute-overlay()
 
+.anime-shake
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 500ms
+  /* When the animation is finished, start again */
+  animation-iteration-count: 2
+  will-change: transform
+
+@keyframes shake
+  0%
+    transform: rotate(0deg) translate(1px, 1px)
+  10%
+    transform: rotate(-10deg) translate(-1px, -2px)
+  20%
+    transform: rotate(10deg) translate(-3px, 0px)
+  30%
+    transform: rotate(0deg) translate(3px, 2px)
+  40%
+    transform: rotate(10deg) translate(1px, -1px)
+  50%
+    transform: rotate(-10deg) translate(-1px, 1px)
+  60%
+    transform: rotate(0deg) translate(-3px, -1px)
+  70%
+    transform: rotate(-5deg) translate(3px, -2px)
+  80%
+    transform: rotate(5deg) translate(-1px, -1px)
+  90%
+    transform: rotate(0deg) translate(1px, 2px)
+  100%
+    transform: rotate(-10deg) translate(1px, -2px)
+
 .anime-float
   will-change: transform
   animation-duration: 300s

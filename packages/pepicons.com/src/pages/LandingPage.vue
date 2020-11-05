@@ -17,6 +17,7 @@
       </div>
       <div class="mb-md text-center">
         Pepicons is an icon-set of over one hundred retro icons inspired by the 80's.
+        <br />Every icon available in 2 variants: <strong>Pop!</strong> and <strong>Print ❏</strong>
       </div>
       <div class="mb-xxl text-center">
         If this project has helped you, please consider
