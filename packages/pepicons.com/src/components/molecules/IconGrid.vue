@@ -54,7 +54,7 @@ export default defineComponent({
   },
   setup(props, { emit }) {
     function clickTile(icon: string): void {
-      emit('clickTile', icon)
+      emit('click-tile', icon)
     }
     return { clickTile }
   },

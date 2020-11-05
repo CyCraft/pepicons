@@ -13,23 +13,23 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
-    "@quasar/extras": "^1.9.6",
+    "@quasar/extras": "^1.9.10",
     "@vue/composition-api": "^0.6.7",
     "copy-text-to-clipboard": "^2.2.0",
     "core-js": "^3.6.5",
     "fast-sort": "^2.2.0",
     "is-what": "^3.11.2",
     "pepicons": "^0.1.4",
-    "planetar": "^0.4.3",
-    "quasar": "^1.14.0",
-    "raw-loader": "^4.0.1",
+    "planetar": "^0.7.8",
+    "quasar": "^1.14.3",
+    "raw-loader": "^4.0.2",
     "roll-anything": "^2.0.0",
-    "three": "^0.118.3",
+    "three": "^0.122.0",
     "vivify.css": "^0.0.0",
     "vue-pepicons": "^0.1.4"
   },
   "devDependencies": {
-    "@quasar/app": "^2.1.0"
+    "@quasar/app": "^2.1.6"
   },
   "browserslist": [
     "last 10 Chrome versions",

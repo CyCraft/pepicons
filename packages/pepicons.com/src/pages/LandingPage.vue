@@ -202,11 +202,11 @@ export default defineComponent({
       (isDarkMode) => {
         if (isDarkMode === false) {
           document.body.className = document.body.className.replace(/dark-mode/g, 'light-mode')
-          emit('setIsDarkMode', false)
+          emit('set-is-dark-mode', false)
         }
         if (isDarkMode === true) {
           document.body.className = document.body.className.replace(/light-mode/g, 'dark-mode')
-          emit('setIsDarkMode', true)
+          emit('set-is-dark-mode', true)
         }
       },
     )
