@@ -7,7 +7,7 @@
       </PepHero>
     </header>
     <q-page-container>
-      <router-view @setIsDarkMode="(newVal) => (isDarkMode = newVal)" />
+      <router-view @set-is-dark-mode="(newVal) => (isDarkMode = newVal)" />
     </q-page-container>
     <div class="pb-xxxl"></div>
     <q-footer class="footer">

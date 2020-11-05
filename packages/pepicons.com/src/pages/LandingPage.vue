@@ -44,7 +44,7 @@
             :iconNames="categoryIconNamesDic[category]"
             :config="configComputed"
             :searchInput="_.searchInput"
-            @clickTile="openTileDialog"
+            @click-tile="openTileDialog"
           />
         </div>
       </template>
