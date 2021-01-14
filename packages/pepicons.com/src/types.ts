@@ -1,4 +1,5 @@
 import { cssVar } from './helpers/colorHelpers'
+import { O } from 'ts-toolbelt'
 
 export type IsDarkMode = boolean
 
@@ -9,7 +10,9 @@ export type IconConfig = {
   stroke: string
 }
 
-export function defaultsIconConfig<T extends Record<string, any>>(payload?: T): IconConfig & T {
+export function defaultsIconConfig<T extends Record<string, any>>(
+  payload?: T,
+): O.Patch<IconConfig, T> {
   const _payload = payload || ({} as T)
   return {
     name: '',
@@ -17,5 +20,5 @@ export function defaultsIconConfig<T extends Record<string, any>>(payload?: T): 
     color: cssVar('primary'),
     stroke: 'black',
     ..._payload,
-  }
+  } as any
 }

@@ -33,6 +33,8 @@
         id="top"
         :color="_.config.color"
         v-model="_.searchInput"
+        @blur="() => setUrlQuery(_.searchInput)"
+        @keydown.meta="() => setUrlQuery(_.searchInput)"
         :debounce="200"
         :isDarkMode="_.config.isDarkMode"
         :iconConfig="{ ...configComputed, name: 'loop' }"
@@ -159,6 +161,7 @@ import ProfileCard from '../components/atoms/ProfileCard.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { scrollTo } from '../helpers/scroll'
+import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
 import { defaultsIconConfig, IconConfig } from '../types'
 
 export default defineComponent({
@@ -169,8 +172,10 @@ export default defineComponent({
     document.body.classList.add(`${defaultsIconConfig().type}-mode`)
   },
   setup(props, { emit }) {
+    const hash = getQueryFromUrl()
+
     const _ = reactive({
-      searchInput: '',
+      searchInput: hash || '',
       config: defaultsIconConfig({ isDarkMode: false }),
     })
 
@@ -247,6 +252,7 @@ export default defineComponent({
 
     return {
       _,
+      setUrlQuery,
       configComputed,
       categories,
       categoryIconNamesDic,
