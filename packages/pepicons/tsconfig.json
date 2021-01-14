@@ -9,5 +9,5 @@
     "types": []
   },
   "include": ["./index.ts", "./src/**/*.ts", "./src/*.ts"],
-  "exclude": ["node_modules", "dist", "svg", "exportFromSketch"]
+  "exclude": ["node_modules", "dist", "svg", "export"]
 }

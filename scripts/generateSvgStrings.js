@@ -156,7 +156,7 @@ const generateExportsFile = async (kind = 'pop', iconNameFilePathEntries = []) =
  */
 const getIconNameFilePathEntries = async (kind = 'pop') => {
   const regex = new RegExp(`.+${kind}\/.+\.svg`, 'gi')
-  const files = await listFiles(PATH_PEPICONS + `/exportFromSketch/`, regex)
+  const files = await listFiles(PATH_PEPICONS + `/export/`, regex)
   const iconNameFilePathEntries = files.map((filePath) => [
     filePathToIconName(filePath),
     filePath.split('/').slice(-2).join('/'), // prettier-ignore
