@@ -2,7 +2,7 @@ const { camelCase } = require('case-anything')
 
 const filePathToIconName = (filePath = '', casing) => {
   const [fileName] = filePath.split('/').slice(-1)
-  const iconName = fileName.split('|')[0].replace(/\.svg|\.js|\.ts/, '')
+  const iconName = fileName.split('_')[0].replace(/\.svg|\.js|\.ts/, '')
   if (casing === 'camelCase') return camelCase(iconName)
   return iconName
 }
@@ -19,7 +19,7 @@ const filePathToIconSynonyms = (filePath = '') => {
   const [fileName] = filePath.split('/').slice(-1)
   const synonyms = fileName
     .replace(/\.svg|\.js|\.ts/, '')
-    .split('|')
+    .split('_')
     .slice(1)
   return synonyms
 }

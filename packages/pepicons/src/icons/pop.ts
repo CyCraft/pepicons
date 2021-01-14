@@ -75,6 +75,7 @@ import LockOpen from './pop/lock-open'
 import Loop from './pop/loop'
 import LoopMinus from './pop/loop-minus'
 import LoopPlus from './pop/loop-plus'
+import Magnet from './pop/magnet'
 import Map from './pop/map'
 import Microphone from './pop/microphone'
 import Minus from './pop/minus'
@@ -115,6 +116,7 @@ import SpeakerOff from './pop/speaker-off'
 import Square from './pop/square'
 import SquareFilled from './pop/square-filled'
 import Star from './pop/star'
+import StarFilled from './pop/star-filled'
 import Sun from './pop/sun'
 import SunFilled from './pop/sun-filled'
 import Syringe from './pop/syringe'
@@ -213,6 +215,7 @@ export const pop: { [name in Pepicon]: string } = {
   'loop': Loop,
   'loop-minus': LoopMinus,
   'loop-plus': LoopPlus,
+  'magnet': Magnet,
   'map': Map,
   'microphone': Microphone,
   'minus': Minus,
@@ -253,6 +256,7 @@ export const pop: { [name in Pepicon]: string } = {
   'square': Square,
   'square-filled': SquareFilled,
   'star': Star,
+  'star-filled': StarFilled,
   'sun': Sun,
   'sun-filled': SunFilled,
   'syringe': Syringe,

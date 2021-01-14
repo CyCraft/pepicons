@@ -1,1 +1,10 @@
-export default `<svg xmlns="http://www.w3.org/2000/svg" style="" width="20" height="20" viewBox="0 0 20 20"><g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"><path stroke="currentColor" stroke-width="3" d="M14.5 17l-5-6 5 6zm0-12l-5 6 5-6z" opacity=".8"/><path stroke="#000" d="M12 16l-5-6 5 6zm0-12l-5 6 5-6z"/></g></svg>`
+export default `<svg style="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.4526 11L15.6523 5.96027C16.9327 4.42382 14.628 2.50327 13.3477 4.03971L8.39096 9.98776C8.13483 10.2603 7.97147 10.6176 7.97252 11C7.97147 11.3824 8.13483 11.7397 8.39096 12.0122L13.3477 17.9603C14.628 19.4967 16.9327 17.5762 15.6523 16.0397L11.4526 11Z" fill="currentColor"/>
+</g>
+<path d="M12.3841 15.6799L7.38411 9.67993L6.61589 10.3201L11.6159 16.3201L12.3841 15.6799Z" fill="black"/>
+<path d="M11.6159 16.32L6.61589 10.32C6.1891 9.8079 6.95732 9.16772 7.38411 9.67986L12.3841 15.6799C12.8109 16.192 12.0427 16.8322 11.6159 16.32Z" fill="black"/>
+<path d="M11.6159 3.67993L6.61589 9.67993L7.38411 10.3201L12.3841 4.32012L11.6159 3.67993Z" fill="black"/>
+<path d="M12.3841 4.32005L7.38411 10.32C6.95732 10.8322 6.1891 10.192 6.61589 9.67986L11.6159 3.67986C12.0427 3.16772 12.8109 3.8079 12.3841 4.32005Z" fill="black"/>
+</svg>
+`

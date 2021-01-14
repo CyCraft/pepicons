@@ -68,6 +68,7 @@ import LockOpen from './print/lock-open'
 import Loop from './print/loop'
 import LoopMinus from './print/loop-minus'
 import LoopPlus from './print/loop-plus'
+import Magnet from './print/magnet'
 import Map from './print/map'
 import Microphone from './print/microphone'
 import Minus from './print/minus'
@@ -189,6 +190,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'loop': Loop,
   'loop-minus': LoopMinus,
   'loop-plus': LoopPlus,
+  'magnet': Magnet,
   'map': Map,
   'microphone': Microphone,
   'minus': Minus,

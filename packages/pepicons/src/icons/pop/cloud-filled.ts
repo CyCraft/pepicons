@@ -1,1 +1,5 @@
-export default `<svg xmlns="http://www.w3.org/2000/svg" style="" width="20" height="20" viewBox="0 0 20 20"><path fill="currentColor" fill-rule="evenodd" d="M6.126 6C6.57 4.275 8.136 3 10 3h1c1.9 0 3.49 1.325 3.899 3.101A4.002 4.002 0 0 1 14 14H6a4 4 0 1 1 0-8h.126z"/></svg>`
+export default `<svg style="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="6" width="16" height="8" rx="4" fill="currentColor"/>
+<rect x="6" y="3" width="9" height="8" rx="4" fill="currentColor"/>
+</svg>
+`

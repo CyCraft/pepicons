@@ -1,1 +1,6 @@
-export default `<svg xmlns="http://www.w3.org/2000/svg" style="" width="20" height="20" viewBox="0 0 20 20"><g fill="none" fill-rule="evenodd"><path fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width=".5" d="M7 3.5h7v10H7z"/><path fill="currentColor" fill-rule="nonzero" d="M6 2.5v15h9v-15H6zm0-2h9a2 2 0 0 1 2 2v15a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-15a2 2 0 0 1 2-2z"/><circle cx="10.5" cy="15.75" r="1" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/></g></svg>`
+export default `<svg style="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M7 3.25H14C14.1381 3.25 14.25 3.36193 14.25 3.5V13.5C14.25 13.6381 14.1381 13.75 14 13.75H7C6.86193 13.75 6.75 13.6381 6.75 13.5V3.5C6.75 3.36193 6.86193 3.25 7 3.25Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15 0.5H6C4.89543 0.5 4 1.39543 4 2.5V17.5C4 18.6046 4.89543 19.5 6 19.5H15C16.1046 19.5 17 18.6046 17 17.5V2.5C17 1.39543 16.1046 0.5 15 0.5ZM6 17.5V2.5H15V17.5H6Z" fill="currentColor"/>
+<path d="M10.5 17.25C9.67157 17.25 9 16.5784 9 15.75C9 14.9216 9.67157 14.25 10.5 14.25C11.3284 14.25 12 14.9216 12 15.75C12 16.5784 11.3284 17.25 10.5 17.25Z" fill="currentColor"/>
+</svg>
+`

@@ -58,7 +58,7 @@ const cleanupFilenames = () =>
     const path = PATH_PEPICONS + '/svg/**/*.svg'
     renamer.rename({
       files: [path],
-      find: /^(.+?)(\|.+)*\.svg$/,
+      find: /^(.+?)(_.+)*\.svg$/,
       replace: '$1.svg',
     })
   })
