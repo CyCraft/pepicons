@@ -108,6 +108,7 @@ import Send from './pop/send'
 import ShareAndroid from './pop/share-android'
 import ShareIos from './pop/share-ios'
 import Smartphone from './pop/smartphone'
+import SmartphoneNotch from './pop/smartphone-notch'
 import Smartphone2 from './pop/smartphone2'
 import SoftDrink from './pop/soft-drink'
 import SpeakerHigh from './pop/speaker-high'
@@ -248,6 +249,7 @@ export const pop: { [name in Pepicon]: string } = {
   'share-android': ShareAndroid,
   'share-ios': ShareIos,
   'smartphone': Smartphone,
+  'smartphone-notch': SmartphoneNotch,
   'smartphone2': Smartphone2,
   'soft-drink': SoftDrink,
   'speaker-high': SpeakerHigh,

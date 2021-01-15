@@ -109,6 +109,7 @@ export const synonyms: { [name in Pepicon]: string[] } = {
   'share-android': ['forward', 'connect'],
   'share-ios': ['forward', 'connect'],
   'smartphone': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
+  'smartphone-notch': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
   'smartphone2': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
   'soft-drink': ['cold-drink', 'refresher', 'juice'],
   'speaker-high': ['high-volume', 'loud'],

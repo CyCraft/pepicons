@@ -97,6 +97,7 @@ import Send from './print/send'
 import ShareAndroid from './print/share-android'
 import ShareIos from './print/share-ios'
 import Smartphone from './print/smartphone'
+import SmartphoneNotch from './print/smartphone-notch'
 import Smartphone2 from './print/smartphone2'
 import SoftDrink from './print/soft-drink'
 import SpeakerHigh from './print/speaker-high'
@@ -219,6 +220,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'share-android': ShareAndroid,
   'share-ios': ShareIos,
   'smartphone': Smartphone,
+  'smartphone-notch': SmartphoneNotch,
   'smartphone2': Smartphone2,
   'soft-drink': SoftDrink,
   'speaker-high': SpeakerHigh,

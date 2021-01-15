@@ -111,6 +111,7 @@ export const pepiconCategoryDic: { [name in Pepicon]: string } = {
   'share-android': 'social',
   'share-ios': 'social',
   'smartphone': 'device',
+  'smartphone-notch': 'device',
   'smartphone2': 'device',
   'soft-drink': 'food-drinks',
   'speaker-high': 'sound',
