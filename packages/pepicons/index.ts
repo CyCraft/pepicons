@@ -51,7 +51,7 @@ export function pepiconSvgString(options: Options): string {
     return ''
   }
   if (stroke) {
-    svgString = svgString.replace(/#000/g, stroke)
+    svgString = svgString.replace(/#000000|#000|black/g, stroke)
   }
   const rgbOrHexColor = color?.startsWith('rgb') || color?.startsWith('#')
   if (color && !rgbOrHexColor) {
