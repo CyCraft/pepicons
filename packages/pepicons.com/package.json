@@ -1,6 +1,6 @@
 {
   "name": "pepicons.com",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Retro icon set",
   "productName": "Pepicons",
   "author": "Luca Ban - Mesqueeb",
@@ -19,14 +19,14 @@
     "core-js": "^3.8.2",
     "fast-sort": "^2.2.0",
     "is-what": "^3.12.0",
-    "pepicons": "^0.1.8",
+    "pepicons": "^0.1.9",
     "planetar": "^0.7.15",
     "quasar": "^1.15.0",
     "raw-loader": "^4.0.2",
     "roll-anything": "^2.0.0",
     "three": "^0.124.0",
     "vivify.css": "^0.0.0",
-    "vue-pepicons": "^0.1.8"
+    "vue-pepicons": "^0.1.9"
   },
   "devDependencies": {
     "@quasar/app": "^2.1.14"
