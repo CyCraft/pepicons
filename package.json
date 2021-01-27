@@ -9,6 +9,7 @@
     "build": "npm run prepare-pepicons && lerna run build",
     "build:favicon": "lerna run build:favicon",
     "publish": "npm run publish-pre && lerna publish && npm run deploy:pepicons.com",
+    "publish:docs": "npm run build && npm run deploy:pepicons.com",
     "publish-pre": "npm run build && git add -A && git commit -m \"chore: build\"",
     "prepare-pepicons": "node ./scripts/preparePepicons.js",
     "dep:install": "npm i && lerna bootstrap",
