@@ -1,7 +1,7 @@
-<svg style="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
-<rect x="3" y="7" width="13" height="8" rx="1" fill="currentColor"/>
-<rect x="16.5" y="8.5" width="2" height="5" rx="0.5" fill="currentColor"/>
+<rect x="3" y="7" width="13" height="8" rx="1" fill="#AB92F0"/>
+<rect x="16.5" y="8.5" width="2" height="5" rx="0.5" fill="#AB92F0"/>
 </g>
 <rect x="16" y="7.5" width="2" height="5" rx="0.5" fill="black"/>
 <path d="M4 7.5H6.5V12.5H4V7.5Z" fill="black"/>

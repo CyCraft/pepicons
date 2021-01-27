@@ -3,13 +3,12 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  // "[vue]": { "editor.defaultFormatter": "octref.vetur" },
+  "[vue]": { "editor.defaultFormatter": "octref.vetur" },
   "[sass]": { "editor.defaultFormatter": "syler.sass-indented" },
   // make sure vetur is enabled
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
   "vetur.experimental.templateInterpolationService": false,
-  "vetur.format.enable": false,
+  "vetur.format.enable": true,
   "vetur.validation.style": true,
   "vetur.validation.template": true,
   "vetur.validation.script": true,
@@ -20,6 +19,7 @@
   // global important defaults
   "editor.tabSize": 2, // make sure this is the same as .prettierrc
   "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "editor.insertSpaces": true,
   // script
