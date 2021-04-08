@@ -5,10 +5,6 @@
 Pepicons is an icon-set of over one hundred retro icons inspired by the 80's. 
 Every icon available in 2 variants: Pop! and Print ❏
 
-```sh
-npm i blitzar
-```
-
 ## Website & icons
 
 [pepicons.com](https://pepicons.com)
