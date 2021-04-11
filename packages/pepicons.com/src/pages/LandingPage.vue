@@ -150,7 +150,7 @@ import {
   categories,
   pepiconCategoryDic,
 } from 'pepicons'
-import sort from 'fast-sort'
+import { sort } from 'fast-sort'
 import { Dialog } from 'quasar'
 import Stack from '../components/atoms/Stack.vue'
 import PepInput from '../components/atoms/PepInput.vue'
