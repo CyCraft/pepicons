@@ -50,6 +50,9 @@ export function pepiconSvgString(options: Options): string {
     console.error(`Pepicon ${name} of type ${type} not found!`)
     return ''
   }
+  if (!/style="/.test(svgString)) {
+    svgString = svgString.replace('<svg ', '<svg style="" ')
+  }
   if (stroke) {
     svgString = svgString.replace(/#000000|#000|black/g, stroke)
   }
