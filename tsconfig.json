@@ -4,6 +4,7 @@
     "strict": true,
     "target": "es6",
     "esModuleInterop": true,
+    "moduleResolution": "node",
     "types": ["node", "webpack-env"]
   },
   "exclude": ["/dist", "node_modules"]

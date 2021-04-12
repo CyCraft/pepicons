@@ -1,4 +1,6 @@
-const replace = require('replace-in-file')
+import replace from 'replace-in-file'
+// import Svgo from 'svgo'
+// import { svgoConfig } from './svgo.js'
 
 const PATH_PEPICONS = './packages/pepicons'
 
@@ -26,7 +28,23 @@ const cleanupStyleAttr = () =>
       .catch(reject)
   })
 
-module.exports = async function cleanupSvgs() {
+// const svgoIcons = () =>
+//   new Promise((resolve, reject) => {
+//     const path = PATH_PEPICONS + '/svg/**/*.svg'
+//     replace({
+//       files: path,
+//       from: /([\S\s]*)/gi,
+//       to: (match, path) => Svgo.prototype.optimize(match, { path, ...svgoConfig }).data,
+//     })
+//       .then(resolve)
+//       .catch(reject)
+//   })
+
+/**
+ * @returns {Promise<void>}
+ */
+export async function cleanupSvgs() {
   await renameColor()
   await cleanupStyleAttr()
+  // await svgoIcons()
 }

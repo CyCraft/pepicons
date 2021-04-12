@@ -1,14 +1,15 @@
-const fs = require('fs')
-const rimraf = require('rimraf')
-const copyfiles = require('copyfiles')
-const Renamer = require('renamer')
+import * as fs from 'fs'
+import rimraf from 'rimraf'
+import copyfiles from 'copyfiles'
+import Renamer from 'renamer'
+import debounce from 'debounce'
+import replace from 'replace-in-file'
+import Sort from 'fast-sort'
+import { pascalCase } from 'case-anything'
+import { filePathToIconName, filePathToIconSynonyms, filePathToIconCategory } from './utils.js'
+import { listFiles } from './_listFiles.js'
+const { sort } = Sort
 const renamer = new Renamer()
-const debounce = require('debounce')
-const replace = require('replace-in-file')
-const { sort } = require('fast-sort')
-const { filePathToIconName, filePathToIconSynonyms, filePathToIconCategory } = require('./utils.js')
-const listFiles = require('./_listFiles.js')
-const { pascalCase } = require('case-anything')
 
 const PATH_PEPICONS = './packages/pepicons'
 
@@ -190,7 +191,10 @@ const generateIndexFiles = async () => {
   fs.writeFileSync(path, content)
 }
 
-module.exports = async function generateSvgStrings() {
+/**
+ * @returns {Promise<void>}
+ */
+export async function generateSvgStrings() {
   await deleteIconsFolder()
   await copyPopSvgs()
   await copyPrintSvgs()

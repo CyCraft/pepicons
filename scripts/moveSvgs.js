@@ -1,8 +1,8 @@
-const rimraf = require('rimraf')
-const copyfiles = require('copyfiles')
-const Renamer = require('renamer')
+import rimraf from 'rimraf'
+import copyfiles from 'copyfiles'
+import Renamer from 'renamer'
+import debounce from 'debounce'
 const renamer = new Renamer()
-const debounce = require('debounce')
 
 const PATH_PEPICONS = './packages/pepicons'
 
@@ -38,7 +38,10 @@ const renameSvgs = () =>
     })
   })
 
-module.exports = async function moveSvgs() {
+/**
+ * @returns {Promise<void>}
+ */
+export async function moveSvgs() {
   await deleteSvgFolder()
   await copyPopSvgs()
   await copyPrintSvgs()

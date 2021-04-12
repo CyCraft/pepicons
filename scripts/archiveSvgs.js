@@ -1,9 +1,12 @@
 // require modules
-const fs = require('fs')
-const archiver = require('archiver')
-const copyfiles = require('copyfiles')
+import * as fs from 'fs'
+import archiver from 'archiver'
+import copyfiles from 'copyfiles'
 
-module.exports = async function archiveSvgs() {
+/**
+ * @returns {void}
+ */
+export function archiveSvgs() {
   /**
    * All instructions belowe are directly copied and tweaked based on the archiver Readme:
    * https://github.com/archiverjs/node-archiver

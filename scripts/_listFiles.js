@@ -1,7 +1,7 @@
-const { resolve } = require('path')
-const { readdir } = require('fs').promises
+import { resolve } from 'path'
+import { readdir } from 'fs/promises'
 
-module.exports = async function listFiles(dir, regexFilter) {
+export async function listFiles(dir, regexFilter) {
   const dirents = await readdir(dir, { withFileTypes: true })
   const files = await Promise.all(
     dirents.map((dirent) => {

@@ -1,6 +1,7 @@
 {
   "name": "@pepicons/monorepo",
   "private": true,
+  "type": "module",
   "author": "Luca Ban - Mesqueeb",
   "workspaces": [
     "packages/*"
@@ -52,6 +53,7 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.45.1",
     "rollup-plugin-typescript2": "^0.30.0",
+    "svgo": "^1.3.2",
     "typescript": "^4.2.4"
   }
 }
