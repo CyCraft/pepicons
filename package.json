@@ -17,7 +17,7 @@
     "dep:update-all": "ncu --target minor -u && lerna exec 'ncu --target minor -u' && npm i",
     "dep:check-for-updates": "ncu --target minor && lerna exec 'ncu --target minor'",
     "dep:reinstall-all": "rimraf node_modules && lerna clean -y && npm i",
-    "gha:before-deploy": "npm run build",
+    "gha:before-deploy": "npm run build && build:favicon",
     "_prepare-pepicons": "node ./scripts/preparePepicons.js",
     "_publish-pre": "npm run build && git add -A && git commit -m \"chore: build\""
   },
@@ -55,6 +55,7 @@
     "rollup": "^2.45.1",
     "rollup-plugin-typescript2": "^0.30.0",
     "svgo": "^1.3.2",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "vue-intellisense": "^0.2.1"
   }
 }
