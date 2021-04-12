@@ -36,7 +36,6 @@ export const pepiconCategoryDic: { [name in Pepicon]: string } = {
   'book': 'leisure',
   'cart': 'leisure',
   'controller': 'leisure',
-  'controller': 'leisure',
   'film-frame': 'leisure',
   'paint-pallet': 'leisure',
   'building': 'location',

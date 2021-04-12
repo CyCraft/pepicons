@@ -33,7 +33,6 @@ import Umbrella from './pop/umbrella'
 import Book from './pop/book'
 import Cart from './pop/cart'
 import Controller from './pop/controller'
-import Controller from './pop/controller'
 import FilmFrame from './pop/film-frame'
 import PaintPallet from './pop/paint-pallet'
 import Building from './pop/building'
@@ -174,7 +173,6 @@ export const pop: { [name in Pepicon]: string } = {
   'umbrella': Umbrella,
   'book': Book,
   'cart': Cart,
-  'controller': Controller,
   'controller': Controller,
   'film-frame': FilmFrame,
   'paint-pallet': PaintPallet,

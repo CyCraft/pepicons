@@ -33,7 +33,6 @@ export const synonyms: { [name in Pepicon]: string[] } = {
   'umbrella': ['parasol', 'rain'],
   'book': ['read', 'bookmark'],
   'cart': ['shopping', 'payout', 'commerce', 'transaction', 'buy', 'purchase'],
-  'controller': ['video-game', 'console-1'],
   'controller': ['video-game', 'console'],
   'film-frame': ['picture', 'movie', 'roll', 'feature', 'tv', 'television', 'programme', 'motion-picture', 'animation', 'flick', 'cinema'],
   'paint-pallet': ['painter', 'art'],

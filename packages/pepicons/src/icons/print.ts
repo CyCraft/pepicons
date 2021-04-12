@@ -33,7 +33,6 @@ import Umbrella from './print/umbrella'
 import Book from './print/book'
 import Cart from './print/cart'
 import Controller from './print/controller'
-import Controller from './print/controller'
 import FilmFrame from './print/film-frame'
 import PaintPallet from './print/paint-pallet'
 import Building from './print/building'
@@ -156,7 +155,6 @@ export const print: { [name in PepiconPrint]: string } = {
   'umbrella': Umbrella,
   'book': Book,
   'cart': Cart,
-  'controller': Controller,
   'controller': Controller,
   'film-frame': FilmFrame,
   'paint-pallet': PaintPallet,
