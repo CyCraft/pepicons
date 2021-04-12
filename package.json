@@ -12,7 +12,7 @@
     "deploy:pepicons.com": "firebase deploy --only hosting && git add -A && git commit -m \"chore: deploy\" && git push",
     "build": "npm run _prepare-pepicons && lerna run build",
     "build:favicon": "lerna run build:favicon",
-    "publish": "npm run _publish-pre && lerna publish && npm run deploy:pepicons.com",
+    "publish:all": "npm run _publish-pre && lerna publish && npm run deploy:pepicons.com",
     "publish:docs": "npm run build && npm run deploy:pepicons.com",
     "dep:update-all": "ncu --target minor -u && lerna exec 'ncu --target minor -u' && npm i",
     "dep:check-for-updates": "ncu --target minor && lerna exec 'ncu --target minor'",
