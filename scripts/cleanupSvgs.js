@@ -16,18 +16,6 @@ const renameColor = () =>
       .catch(reject)
   })
 
-const cleanupStyleAttr = () =>
-  new Promise((resolve, reject) => {
-    const path = PATH_PEPICONS + '/svg/**/*.svg'
-    replace({
-      files: path,
-      from: /(style="" width="20" height="20"|width="20" height="20")/gi,
-      to: 'style="" width="20" height="20"',
-    })
-      .then(resolve)
-      .catch(reject)
-  })
-
 // const svgoIcons = () =>
 //   new Promise((resolve, reject) => {
 //     const path = PATH_PEPICONS + '/svg/**/*.svg'
@@ -45,6 +33,5 @@ const cleanupStyleAttr = () =>
  */
 export async function cleanupSvgs() {
   await renameColor()
-  await cleanupStyleAttr()
   // await svgoIcons()
 }
