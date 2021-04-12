@@ -15,7 +15,8 @@
     "dep:install": "npm i && lerna bootstrap",
     "dep:update-all": "ncu --target minor -u && lerna exec 'ncu --target minor -u' && npm run dep:install",
     "dep:check-for-updates": "ncu --target minor && lerna exec 'ncu --target minor'",
-    "dep:reinstall-all": "rimraf node_modules && lerna clean -y && npm run dep:install"
+    "dep:reinstall-all": "rimraf node_modules && lerna clean -y && npm run dep:install",
+    "gha:before-deploy": "npm run build"
   },
   "bugs": {
     "url": "https://github.com/cycraft/planetar/issues"
