@@ -10,7 +10,7 @@
     "audit": "lerna-audit",
     "dev": "npm i && cd packages/pepicons.com && npm run dev",
     "deploy:pepicons.com": "firebase deploy --only hosting && git add -A && git commit -m \"chore: deploy\" && git push",
-    "build": "npm run _prepare-pepicons && lerna run build",
+    "build": "npm i && npm run _prepare-pepicons && lerna run build",
     "build:favicon": "lerna run build:favicon",
     "publish:all": "npm run _publish-pre && lerna publish && npm run deploy:pepicons.com",
     "publish:docs": "npm run build && npm run deploy:pepicons.com",
