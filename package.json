@@ -18,7 +18,7 @@
     "dep:check-for-updates": "ncu --target minor && lerna exec 'ncu --target minor'",
     "dep:reinstall-all": "rimraf node_modules && lerna clean -y && npm i",
     "gha:before-deploy": "npm i && npm run r && npm run build && build:favicon",
-    "r": "replace-in-files --string=\"getPackageJson('quasar').version\" --replacement=\"getPackageJson('../../../quasar').version\" 'node_modules/@quasar/app/lib/helpers/banner.js'",
+    "r": "replace-in-files --string=\"getPackageJson('quasar').version\" --replacement=\"'1.x'\" 'node_modules/@quasar/app/lib/helpers/banner.js'",
     "_prepare-pepicons": "node ./scripts/preparePepicons.js",
     "_publish-pre": "npm run build && git add -A && git commit -m \"chore: build\""
   },
