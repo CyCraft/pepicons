@@ -1,4 +1,4 @@
-export default `<svg style="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+export default `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <rect x="3" y="7" width="13" height="8" rx="1" fill="currentColor"/>
 <rect x="16.5" y="8.5" width="2" height="5" rx="0.5" fill="currentColor"/>

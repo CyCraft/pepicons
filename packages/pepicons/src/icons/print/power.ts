@@ -1,4 +1,4 @@
-export default `<svg style="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+export default `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M11.5 20C7.63401 20 4.5 16.866 4.5 13C4.5 9.13401 7.63401 6 11.5 6C15.366 6 18.5 9.13401 18.5 13C18.5 16.866 15.366 20 11.5 20Z" fill="currentColor"/>
 </g>

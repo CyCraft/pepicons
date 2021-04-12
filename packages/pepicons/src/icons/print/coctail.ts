@@ -1,4 +1,4 @@
-export default `<svg style="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+export default `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 18.0241V12.9271L18.8664 6.34023C19.1635 6.0203 18.9366 5.5 18.5 5.5H5.5C5.06342 5.5 4.83653 6.0203 5.1336 6.34023L11.25 12.9271V18.0241C9.1328 18.1626 7.5 18.8897 7.5 20H16.5C16.5 18.8897 14.8672 18.1626 12.75 18.0241Z" fill="currentColor"/>
 </g>

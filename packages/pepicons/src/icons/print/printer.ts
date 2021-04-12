@@ -1,4 +1,4 @@
-export default `<svg style="" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+export default `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect opacity="0.8" x="2" y="7.5" width="18" height="11" rx="3" fill="currentColor"/>
 <path d="M4.5 2C4.5 1.44772 4.94772 1 5.5 1H14.5C15.0523 1 15.5 1.44772 15.5 2V6.5H4.5V2Z" fill="white"/>
 <path d="M5 6.5H4V2.1C4 1.23445 4.61204 0.5 5.41667 0.5H14.5833C15.388 0.5 16 1.23445 16 2.1V6.5H15V2.1C15 1.75052 14.7912 1.5 14.5833 1.5H5.41667C5.20877 1.5 5 1.75052 5 2.1V6.5Z" fill="black"/>
