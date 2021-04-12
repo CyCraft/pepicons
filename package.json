@@ -17,7 +17,7 @@
     "dep:update-all": "ncu --target minor -u && lerna exec 'ncu --target minor -u' && npm i",
     "dep:check-for-updates": "ncu --target minor && lerna exec 'ncu --target minor'",
     "dep:reinstall-all": "rimraf node_modules && lerna clean -y && npm i",
-    "gha:before-deploy": "npm i && npm run r && npm run build && build:favicon",
+    "gha:before-deploy": "npm i --legacy-bundling && npm run build && build:favicon",
     "r": "node ./scripts/gha.js",
     "_prepare-pepicons": "node ./scripts/preparePepicons.js",
     "_publish-pre": "npm run build && git add -A && git commit -m \"chore: build\""
@@ -31,7 +31,6 @@
   },
   "homepage": "https://github.com/cycraft/planetar#readme",
   "devDependencies": {
-    "@quasar/app": "^2.2.4",
     "@types/node": "^14.14.37",
     "@types/webpack-env": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
