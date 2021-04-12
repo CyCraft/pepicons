@@ -3,6 +3,9 @@ import * as fs from 'fs'
 import archiver from 'archiver'
 import copyfiles from 'copyfiles'
 
+const PATH_TO_ARCHIVE = 'packages/pepicons/svg'
+const ZIP_NAME = 'PepiconSvgs.zip'
+
 /**
  * @returns {void}
  */
@@ -11,8 +14,6 @@ export function archiveSvgs() {
    * All instructions belowe are directly copied and tweaked based on the archiver Readme:
    * https://github.com/archiverjs/node-archiver
    */
-
-  const ZIP_NAME = 'PepiconSvgs.zip'
 
   // create a file to stream archive data to.
   const output = fs.createWriteStream(`./media/${ZIP_NAME}`)
@@ -56,7 +57,7 @@ export function archiveSvgs() {
   archive.pipe(output)
 
   // append files from a sub-directory, putting its contents at the root of archive
-  archive.directory('packages/pepicons/svg', false)
+  archive.directory(PATH_TO_ARCHIVE, false)
 
   // finalize the archive (ie we are done appending files but streams have to finish yet)
   // 'close', 'end' or 'finish' may be fired right after calling this method so register to them beforehand

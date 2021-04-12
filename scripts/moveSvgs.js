@@ -35,6 +35,7 @@ const renameSvgs = () =>
       files: [path],
       find: /^(.+?)(_.+)*\.svg$/,
       replace: '$1.svg',
+      force: true,
     })
   })
 
