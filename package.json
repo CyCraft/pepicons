@@ -17,7 +17,7 @@
     "dep:update-all": "ncu --target minor -u && lerna exec 'ncu --target minor -u' && npm i",
     "dep:check-for-updates": "ncu --target minor && lerna exec 'ncu --target minor'",
     "dep:reinstall-all": "rimraf node_modules && lerna clean -y && npm i",
-    "gha:before-deploy": "npm run build",
+    "gha-before-deploy": "npm run build",
     "_prepare-pepicons": "node ./scripts/preparePepicons.js",
     "_publish-pre": "npm run build && git add -A && git commit -m \"chore: build\""
   },
