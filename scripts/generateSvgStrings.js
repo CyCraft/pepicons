@@ -116,7 +116,7 @@ const filesArrayToExportFileContents = (kind = 'pop', iconNameFilePathEntries = 
       })
       .join('')
     const categories = (() => {
-      const cats = [...sort(allCategories).desc()]
+      const cats = sort([...allCategories]).desc()
       return `export const categories: string[] = [${cats.map((c) => `'${c}'`).join(', ')}]`
     })()
     const pepiconCategoryDic = `export const pepiconCategoryDic: { [name in Pepicon]: string } = {\n${categoryProps}}`
@@ -161,7 +161,7 @@ const getIconNameFilePathEntries = async (kind = 'pop') => {
     filePathToIconName(filePath),
     filePath.split('/').slice(-2).join('/'), // prettier-ignore
   ])
-  return [...sort(iconNameFilePathEntries).asc((entry) => entry[0])]
+  return sort(iconNameFilePathEntries).asc((entry) => entry[0])
 }
 
 const generateIndexFiles = async () => {

@@ -2,7 +2,7 @@
 
 import { Pepicon } from './types'
 
-export const categories: string[] = ['transport', 'ui', 'device', 'sound', 'leisure', 'text', 'location', 'time', 'food-drinks', 'shape', 'item', 'nature', 'social']
+export const categories: string[] = ['ui', 'transport', 'time', 'text', 'sound', 'social', 'shape', 'nature', 'location', 'leisure', 'item', 'food-drinks', 'device']
 
 export const pepiconCategoryDic: { [name in Pepicon]: string } = {
   'airplane': 'transport',

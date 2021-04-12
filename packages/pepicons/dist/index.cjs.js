@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /** Do not edit! This file is auto-generated. */
-const categories = ['transport', 'ui', 'device', 'sound', 'leisure', 'text', 'location', 'time', 'food-drinks', 'shape', 'item', 'nature', 'social'];
+const categories = ['ui', 'transport', 'time', 'text', 'sound', 'social', 'shape', 'nature', 'location', 'leisure', 'item', 'food-drinks', 'device'];
 const pepiconCategoryDic = {
     'airplane': 'transport',
     'angle-down': 'ui',
