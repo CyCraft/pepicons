@@ -17,7 +17,7 @@
     "dep:update-all": "ncu --target minor -u && lerna exec 'ncu --target minor -u' && npm i",
     "dep:check-for-updates": "ncu --target minor && lerna exec 'ncu --target minor'",
     "dep:reinstall-all": "rimraf node_modules && lerna clean -y && npm i",
-    "gha:before-deploy": "npm i --legacy-bundling && npm run r && npm run build && build:favicon",
+    "gha:before-deploy": "npm i --legacy-bundling && npm run r && npm run _prepare-pepicons && build:favicon && cd packages/pepicons.com && npm run build",
     "r": "node ./scripts/gha.js",
     "_prepare-pepicons": "node ./scripts/preparePepicons.js",
     "_publish-pre": "npm run build && git add -A && git commit -m \"chore: build\""
