@@ -1,11 +1,15 @@
-const moveSvgs = require('./moveSvgs.js')
-const archiveSvgs = require('./archiveSvgs.js')
-const cleanupSvgs = require('./cleanupSvgs.js')
-const generateSvgStrings = require('./generateSvgStrings.js')
+import { moveSvgs } from './moveSvgs.js'
+import { archiveSvgs } from './archiveSvgs.js'
+import { cleanupSvgs } from './cleanupSvgs.js'
+import { generateSvgStrings } from './generateSvgStrings.js'
 
-;(async () => {
+/**
+ * @returns {Promise<void>}
+ */
+const doAll = async () => {
   await moveSvgs()
-  await archiveSvgs()
+  archiveSvgs()
   await cleanupSvgs()
   await generateSvgStrings()
-})()
+}
+await doAll()

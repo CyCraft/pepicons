@@ -1,6 +1,6 @@
 {
   "name": "pepicons",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Retro icon set",
   "productName": "Pepicons",
   "author": "Luca Ban - Mesqueeb",
@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "rollup": "^2.36.1",
-    "rollup-plugin-typescript2": "^0.29.0"
+    "rollup": "^2.45.1",
+    "rollup-plugin-typescript2": "^0.30.0"
   }
 }
