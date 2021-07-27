@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "author": "Luca Ban - Mesqueeb",
+  "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "workspaces": [
     "packages/*"
   ],

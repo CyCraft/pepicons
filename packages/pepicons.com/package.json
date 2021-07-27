@@ -4,6 +4,7 @@
   "description": "Retro icon set",
   "productName": "Pepicons",
   "author": "Luca Ban - Mesqueeb",
+  "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",

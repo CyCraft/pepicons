@@ -2,8 +2,8 @@
   "name": "vue-pepicons",
   "version": "0.2.0",
   "author": "Luca Ban - Mesqueeb",
+  "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "description": "Vue component for Pepicons",
-  "license": "MIT",
   "main": "src/index.js",
   "module": "src/index.js",
   "scripts": {
