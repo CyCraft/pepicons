@@ -3,7 +3,7 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[javascript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
-  "[vue]": { "editor.defaultFormatter": "octref.vetur" },
+  "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[sass]": { "editor.defaultFormatter": "syler.sass-indented" },
   // make sure vetur is enabled
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],

@@ -1,19 +1,37 @@
 {
   "name": "vue-pepicons",
   "version": "0.2.0",
+  "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
+  "funding": "https://github.com/sponsors/mesqueeb",
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "description": "Vue component for Pepicons",
-  "main": "src/index.js",
-  "module": "src/index.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
   "scripts": {
-    "build": "vue-int -i src/Pepicon.vue -o vetur"
+    "vue-int": "vue-int -i src/Pepicon.vue -o vetur",
+    "vue-tsc": "vue-tsc --declaration --emitDeclarationOnly",
+    "vue-compile": "vue-compile src -o dist",
+    "build": "npm run vue-int && npm run vue-tsc && npm run vue-compile"
+  },
+  "peerDependencies": {
+    "vue": "^2.6.0 || ^3.2.0"
   },
   "dependencies": {
     "pepicons": "^0.2.0"
   },
   "devDependencies": {
-    "vue-intellisense": "^0.2.1"
+    "vue": "^3.2.26",
+    "vue-compile": "^1.1.1",
+    "vue-intellisense": "^0.2.1",
+    "vue-tsc": "^0.29.8"
   },
   "homepage": "https://github.com/cycraft/pepicons",
   "repository": {

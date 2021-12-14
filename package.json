@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "author": "Luca Ban - Mesqueeb",
+  "funding": "https://github.com/sponsors/mesqueeb",
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "workspaces": [
     "packages/*"
@@ -35,6 +36,7 @@
   "devDependencies": {
     "@quasar/app": "^2.2.4",
     "@types/node": "^14.14.37",
+    "@types/react": "file:stub/types__react",
     "@types/webpack-env": "^1.16.0",
     "@typescript-eslint/eslint-plugin": "^4.21.0",
     "@typescript-eslint/parser": "^4.21.0",

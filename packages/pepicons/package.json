@@ -1,9 +1,11 @@
 {
   "name": "pepicons",
   "version": "0.2.0",
+  "sideEffects": false,
   "description": "Retro icon set",
   "productName": "Pepicons",
   "author": "Luca Ban - Mesqueeb",
+  "funding": "https://github.com/sponsors/mesqueeb",
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
