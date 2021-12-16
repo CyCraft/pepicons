@@ -4,6 +4,6 @@
     "outDir": "dist",
     "baseUrl": "."
   },
-  "include": ["./src/", "./src/**/*.ts", "./src/**/*.vue"],
+  "include": ["./src/index.js", "./src/**/*.ts", "./src/**/*.vue"],
   "exclude": ["./dist", "node_modules"]
 }

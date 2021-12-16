@@ -1,6 +1,6 @@
 {
   "name": "vue-pepicons",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
@@ -16,10 +16,10 @@
     }
   },
   "scripts": {
-    "vue-int": "vue-int -i src/Pepicon.vue -o vetur",
+    "vue-int": "vue-int -i src/Pepicon.vue -o dist/vetur",
     "vue-tsc": "vue-tsc --declaration --emitDeclarationOnly",
     "vue-compile": "vue-compile src -o dist",
-    "build": "npm run vue-int && npm run vue-tsc && npm run vue-compile"
+    "build": "rimraf ./dist && npm run vue-int && npm run vue-tsc && npm run vue-compile"
   },
   "peerDependencies": {
     "vue": "^2.6.0 || ^3.2.0"
@@ -40,7 +40,7 @@
   },
   "bugs": "https://github.com/cycraft/pepicons/issues",
   "vetur": {
-    "tags": "vetur/tags.json",
-    "attributes": "vetur/attributes.json"
+    "tags": "dist/vetur/tags.json",
+    "attributes": "dist/vetur/attributes.json"
   }
 }
