@@ -9,6 +9,10 @@ Every icon available in 2 variants: Pop! and Print ❏
 
 [pepicons.com](https://pepicons.com)
 
+## vue-pepicons (Vue 3)
+
+See [packages/vue-pepicons](/tree/production/packages/vue-pepicons)
+
 ## Motivation
 
 Check out this blog post to understand our motivation for creating Pepicons:

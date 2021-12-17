@@ -30,11 +30,6 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     innerHTML: _ctx.svg
   }, null, 8, _hoisted_1);
 }
-var Pepicon_vue_vue_type_style_index_0_id_2c7851ea_lang = "";
+var Pepicon_vue_vue_type_style_index_0_id_04006e8d_lang = "";
 script.render = render;
-var index = {
-  install(Vue) {
-    Vue.component("Pepicon", script);
-  }
-};
-export { script as Pepicon, index as default };
+export { script as Pepicon };

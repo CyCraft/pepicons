@@ -7,6 +7,26 @@ Every icon available in 2 variants: Pop! and Print ❏
 
 Vue-pepicons is the Vue wrapper for this icon library. Only supports Vue 3!
 
+## Installation & Usage
+
+```
+npm i vue-pepicons
+```
+
+You must import the Pepicon component locally wherever you want to use them, as per the example below:
+
+```js
+// import what you need
+import { Pepicon } from 'vue-pepicons'
+
+// add to local components where you use it:
+export default {
+  components: { Pepicon },
+}
+```
+
+We do not support Vue's `install(Plugin)` out of principle: Anything that is "auto-magical" is not considered good practice; It's more difficult to trace down where a component is coming from.
+
 ## Website & icons
 
 [pepicons.com](https://pepicons.com)
