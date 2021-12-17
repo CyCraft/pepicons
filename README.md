@@ -9,9 +9,13 @@ Every icon available in 2 variants: Pop! and Print ❏
 
 [pepicons.com](https://pepicons.com)
 
+## pepicons (TypeScript & SVGs)
+
+See [packages/pepicons](/packages/pepicons)
+
 ## vue-pepicons (Vue 3)
 
-See [packages/vue-pepicons](/tree/production/packages/vue-pepicons)
+See [packages/vue-pepicons](/packages/vue-pepicons)
 
 ## Motivation
 
