@@ -1,4 +1,4 @@
-![hero](media/pepicons-hero.png?raw=true)
+![hero](https://github.com/CyCraft/pepicons/raw/dev/media/pepicons-hero.png?raw=true)
 
 # Pepicons
 

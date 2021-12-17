@@ -1,4 +1,4 @@
-![hero](media/pepicons-hero.png?raw=true)
+![hero](https://github.com/CyCraft/pepicons/raw/dev/media/pepicons-hero.png?raw=true)
 
 # vue-pepicons (Vue 3)
 
@@ -26,6 +26,10 @@ export default {
 ```
 
 We do not support Vue's `install(Plugin)` out of principle: Anything that is "auto-magical" is not considered good practice; It's more difficult to trace down where a component is coming from.
+
+## pepicons (TypeScript & SVGs)
+
+See [packages/pepicons](/packages/pepicons)
 
 ## Website & icons
 

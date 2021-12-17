@@ -1,4 +1,4 @@
-![hero](media/pepicons-hero.png?raw=true)
+![hero](https://github.com/CyCraft/pepicons/raw/dev/media/pepicons-hero.png?raw=true)
 
 # Pepicons
 
@@ -58,7 +58,7 @@ export function getSvg(name: Pepicon): string {
 
 ## vue-pepicons (Vue 3)
 
-See [packages/vue-pepicons](/tree/production/packages/vue-pepicons)
+See [packages/vue-pepicons](/packages/vue-pepicons)
 
 ## Motivation
 
