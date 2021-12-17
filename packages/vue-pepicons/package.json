@@ -6,30 +6,37 @@
   "funding": "https://github.com/sponsors/mesqueeb",
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "description": "Vue component for Pepicons",
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
       "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
-    "vue-int": "vue-int -i src/Pepicon.vue -o vetur",
-    "vue-tsc": "vue-tsc --declaration --emitDeclarationOnly",
-    "vue-compile": "vue-compile src -o dist",
-    "build": "npm run vue-int && npm run vue-tsc && npm run vue-compile"
+    "_vue-int": "vue-int -i src/Pepicon.vue -o dist/vetur",
+    "_vue-tsc": "vue-tsc --declaration --emitDeclarationOnly",
+    "build": "rimraf dist && vite build && npm run _vue-tsc && npm run _vue-int"
   },
   "peerDependencies": {
     "vue": "^2.6.0 || ^3.2.0"
   },
   "dependencies": {
-    "pepicons": "^0.2.1"
+    "pepicons": "^0.2.1",
+    "rimraf": "^3.0.2"
   },
   "devDependencies": {
+    "rollup": "^2.61.1",
+    "rollup-plugin-vue": "^6.0.0",
+    "typescript": "^4.5.4",
+    "vite": "^2.7.3",
     "vue": "^3.2.26",
-    "vue-compile": "^1.1.1",
     "vue-intellisense": "^0.2.1",
     "vue-tsc": "^0.29.8"
   },

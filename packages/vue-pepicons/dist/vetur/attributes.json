@@ -1,6 +1,6 @@
 {
   "pepicon/name": {
-    "type": "string",
+    "type": "Pepicon",
     "description": "The icon name as per the reference at https://pepicons.com",
     "options": [
       "airplane",

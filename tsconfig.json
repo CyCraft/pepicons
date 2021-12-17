@@ -6,7 +6,6 @@
     "target": "es6",
     "module": "esnext",
     "esModuleInterop": true,
-    "isolatedModules": true,
     "moduleResolution": "node",
     "types": ["node", "webpack-env"]
   },
