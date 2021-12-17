@@ -1,6 +1,6 @@
 /** Do not edit! This file is auto-generated. */
 
-export { Pepicon, PepiconPrint } from './types'
+export { Pepicon, PepiconPrint, pepiconArray } from './types'
 export { categories, pepiconCategoryDic } from './categories'
 export { synonyms } from './synonyms/en'
 export { synonyms as synonymsJa } from './synonyms/ja'

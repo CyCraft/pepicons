@@ -9,13 +9,56 @@ Every icon available in 2 variants: Pop! and Print ❏
 
 [pepicons.com](https://pepicons.com)
 
-## pepicons (TypeScript & SVGs)
+## Installation & Usage
 
-See [packages/pepicons](/packages/pepicons)
+```
+npm i pepicons
+```
+
+Import an SVG as string with Tree-Shaking:
+
+```js
+// import what you need
+import { popAirplane } from 'pepicons'
+
+console.log(popAirplane)
+// prints:
+// <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//   <path fill-rule="evenodd" clip-rule="evenodd" d="..." fill="currentColor"/>
+// </svg>
+```
+
+Or import all icons at once in one big object:
+
+```js
+import { pop } from 'pepicons'
+
+console.log(pop.airplane)
+// prints:
+// <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+//   <path fill-rule="evenodd" clip-rule="evenodd" d="..." fill="currentColor"/>
+// </svg>
+```
+
+## TypeScript
+
+You can import the Pepicon type which is a string literal with all possible Pepicon names:
+
+```ts
+import { Pepicon, pop } from 'pepicons'
+
+export function getSvg(name: Pepicon): string {
+  // Pepicon
+  //    ↓
+  // 'airplane' | 'angle-down' | ...
+
+  return pop[name]
+}
+```
 
 ## vue-pepicons (Vue 3)
 
-See [packages/vue-pepicons](/packages/vue-pepicons)
+See [packages/vue-pepicons](/tree/production/packages/vue-pepicons)
 
 ## Motivation
 

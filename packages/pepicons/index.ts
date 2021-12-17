@@ -2,11 +2,22 @@ import { pop, print, Pepicon, PepiconPrint } from './src/index'
 import { textToRgba } from './helpers/color'
 export * from './src/index'
 
-export type Options = {
+export type GetPepiconPayload = {
   /**
    * The icon name as per the reference at https://pepicons.com
    */
   name: Pepicon
+  /**
+   * Either 'pop' or 'print'
+   */
+  type: 'pop' | 'print'
+}
+
+export type MorphPepiconPayload = {
+  /**
+   * The Pepicon SVG string
+   */
+  svg: string
   /**
    * Either 'pop' or 'print'
    */
@@ -40,40 +51,52 @@ export type Options = {
  * Returns a Pepicon SVG as a string so you can inject it into your HTML.
  *
  * The icon name as per the reference at https://pepicons.com
- * @param options options
- * @returns {string} The SVG content as string
+ * @returns The SVG content as string
  */
-export function pepiconSvgString(options: Options): string {
-  const { name, type, color, opacity, size, stroke } = options || {}
-  let svgString = type === 'pop' ? pop[name] : print[name as PepiconPrint]
+export function getPepicon(payload: GetPepiconPayload): string {
+  const { name, type } = payload || {}
+  const svgString = type === 'pop' ? pop[name] : print[name as PepiconPrint]
   if (!svgString) {
-    console.error(`Pepicon ${name} of type ${type} not found!`)
+    console.warn(`Pepicon ${name} of type ${type} not found! (returned an empty string instead)`)
     return ''
   }
-  if (!/style="/.test(svgString)) {
-    svgString = svgString.replace('<svg ', '<svg style="" ')
+  return svgString
+}
+
+/**
+ * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+ *
+ * The icon name as per the reference at https://pepicons.com
+ * @returns The SVG content as string
+ */
+export function morphPepicon(payload: MorphPepiconPayload): string {
+  let svg = payload.svg
+  const { type, color, opacity, size, stroke } = payload || {}
+
+  if (!/style="/.test(svg)) {
+    svg = svg.replace('<svg ', '<svg style="" ')
   }
   if (stroke) {
-    svgString = svgString.replace(/#000000|#000|black/g, stroke)
+    svg = svg.replace(/#000000|#000|black/g, stroke)
   }
   const rgbOrHexColor = color?.startsWith('rgb') || color?.startsWith('#')
   if (color && !rgbOrHexColor) {
-    svgString = svgString.replace(/style="/, `style="color:${color};`)
+    svg = svg.replace(/style="/, `style="color:${color};`)
   }
   let _opacity = opacity
   if (color && rgbOrHexColor) {
     const { r, g, b, a } = textToRgba(color)
     const _color = `rgb(${r},${g},${b})`
-    svgString = svgString.replace(/style="/, `style="color:${_color};`)
+    svg = svg.replace(/style="/, `style="color:${_color};`)
     if (opacity === undefined) {
       _opacity = a === undefined ? 1 : a / 100
     }
   }
   if (_opacity !== undefined && _opacity < 1) {
     if (type === 'pop') {
-      svgString = svgString.replace(/style="/, `style="opacity:${_opacity};`)
+      svg = svg.replace(/style="/, `style="opacity:${_opacity};`)
     } else {
-      svgString = svgString.replace(/opacity="\.8"/g, `opacity="${_opacity}"`)
+      svg = svg.replace(/opacity="\.8"/g, `opacity="${_opacity}"`)
     }
   }
   if (size || size === 0) {
@@ -89,9 +112,20 @@ export function pepiconSvgString(options: Options): string {
         : typeof size === 'number'
         ? `${size}px`
         : size
-    svgString = svgString
+    svg = svg
       .replace(/style="/, `style="width:${_size};height:${_size};`)
       .replace(/width="[0-9]+" height="[0-9]+"/, `width="${_size}" height="${_size}"`)
   }
-  return svgString
+  return svg
+}
+
+/**
+ * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+ *
+ * The icon name as per the reference at https://pepicons.com
+ * @returns The SVG content as string
+ */
+export function pepiconSvgString(payload: GetPepiconPayload & MorphPepiconPayload): string {
+  const svg = getPepicon(payload)
+  return morphPepicon({ ...payload, svg })
 }

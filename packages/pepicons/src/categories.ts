@@ -1,9 +1,7 @@
 /** Do not edit! This file is auto-generated. */
 
 import { Pepicon } from './types'
-
 export const categories: string[] = ['ui', 'transport', 'time', 'text', 'sound', 'social', 'shape', 'nature', 'location', 'leisure', 'item', 'food-drinks', 'device', 'arrows']
-
 export const pepiconCategoryDic: { [name in Pepicon]: string } = {
   'airplane': 'transport',
   'angle-down': 'arrows',

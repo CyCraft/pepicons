@@ -1,7 +1,9 @@
 /** Do not edit! This file is auto-generated. */
 
+  // ======= //
+ /* IMPORTS */
+// ======= //
 import { Pepicon } from '../types'
-
 import Airplane from './pop/airplane'
 import AngleDown from './pop/angle-down'
 import AngleLeft from './pop/angle-left'
@@ -169,6 +171,178 @@ import Trophy from './pop/trophy'
 import Truck from './pop/truck'
 import Umbrella from './pop/umbrella'
 import Wifi from './pop/wifi'
+
+
+  // ======= //
+ /* EXPORTS */
+// ======= //
+export const popAirplane = Airplane
+export const popAngleDown = AngleDown
+export const popAngleLeft = AngleLeft
+export const popAngleRight = AngleRight
+export const popAngleUp = AngleUp
+export const popArrowDown = ArrowDown
+export const popArrowDownLeft = ArrowDownLeft
+export const popArrowDownRight = ArrowDownRight
+export const popArrowLeft = ArrowLeft
+export const popArrowRight = ArrowRight
+export const popArrowUp = ArrowUp
+export const popArrowUpLeft = ArrowUpLeft
+export const popArrowUpRight = ArrowUpRight
+export const popBattery = Battery
+export const popBell = Bell
+export const popBellOff = BellOff
+export const popBicycle = Bicycle
+export const popBluetooth = Bluetooth
+export const popBook = Book
+export const popBookmark = Bookmark
+export const popBookmarkFilled = BookmarkFilled
+export const popBuilding = Building
+export const popCalculator = Calculator
+export const popCalendar = Calendar
+export const popCamera = Camera
+export const popCan = Can
+export const popCar = Car
+export const popCart = Cart
+export const popChain = Chain
+export const popCheckmark = Checkmark
+export const popCircle = Circle
+export const popCircleFilled = CircleFilled
+export const popClipboard = Clipboard
+export const popClock = Clock
+export const popCloud = Cloud
+export const popCloudDown = CloudDown
+export const popCloudDownFilled = CloudDownFilled
+export const popCloudFilled = CloudFilled
+export const popCloudUp = CloudUp
+export const popCloudUpFilled = CloudUpFilled
+export const popCoctail = Coctail
+export const popColorPicker = ColorPicker
+export const popContract = Contract
+export const popController = Controller
+export const popCreditCard = CreditCard
+export const popCrown = Crown
+export const popCup = Cup
+export const popDivision = Division
+export const popDotsX = DotsX
+export const popDotsY = DotsY
+export const popDress = Dress
+export const popDuplicate = Duplicate
+export const popElectricity = Electricity
+export const popEnter = Enter
+export const popExclamation = Exclamation
+export const popExclamationFilled = ExclamationFilled
+export const popExpand = Expand
+export const popEye = Eye
+export const popEyeClosed = EyeClosed
+export const popEyeOff = EyeOff
+export const popFile = File
+export const popFilmFrame = FilmFrame
+export const popFlag = Flag
+export const popFlower = Flower
+export const popFlowerBud = FlowerBud
+export const popFolder = Folder
+export const popGear = Gear
+export const popGift = Gift
+export const popGrab = Grab
+export const popHamburger = Hamburger
+export const popHash = Hash
+export const popHeadphone = Headphone
+export const popHeart = Heart
+export const popHouse = House
+export const popIdentification = Identification
+export const popInfo = Info
+export const popInfoFilled = InfoFilled
+export const popInternet = Internet
+export const popKey = Key
+export const popKniveFork = KniveFork
+export const popLabel = Label
+export const popLeave = Leave
+export const popLetter = Letter
+export const popList = List
+export const popLockClosed = LockClosed
+export const popLockOpen = LockOpen
+export const popLoop = Loop
+export const popLoopMinus = LoopMinus
+export const popLoopPlus = LoopPlus
+export const popMagnet = Magnet
+export const popMap = Map
+export const popMegaphone = Megaphone
+export const popMicrophone = Microphone
+export const popMinus = Minus
+export const popMonitor = Monitor
+export const popMonitor2 = Monitor2
+export const popMoon = Moon
+export const popMoonFilled = MoonFilled
+export const popMotorcycle = Motorcycle
+export const popMoveX = MoveX
+export const popMoveY = MoveY
+export const popMusicNoteDouble = MusicNoteDouble
+export const popMusicNoteSingle = MusicNoteSingle
+export const popOpen = Open
+export const popPaintPallet = PaintPallet
+export const popPen = Pen
+export const popPeople = People
+export const popPerson = Person
+export const popPersonCheckmark = PersonCheckmark
+export const popPersonFilled = PersonFilled
+export const popPersonPlus = PersonPlus
+export const popPersons = Persons
+export const popPhone = Phone
+export const popPhoto = Photo
+export const popPhotoCamera = PhotoCamera
+export const popPill = Pill
+export const popPinpoint = Pinpoint
+export const popPinpointFilled = PinpointFilled
+export const popPinpointOff = PinpointOff
+export const popPinpointOffFilled = PinpointOffFilled
+export const popPlus = Plus
+export const popPower = Power
+export const popPrinter = Printer
+export const popQrCode = QrCode
+export const popRefresh = Refresh
+export const popReload = Reload
+export const popScissors = Scissors
+export const popSend = Send
+export const popShareAndroid = ShareAndroid
+export const popShareIos = ShareIos
+export const popSmartphone = Smartphone
+export const popSmartphoneNotch = SmartphoneNotch
+export const popSmartphone2 = Smartphone2
+export const popSoftDrink = SoftDrink
+export const popSort = Sort
+export const popSpeakerHigh = SpeakerHigh
+export const popSpeakerLow = SpeakerLow
+export const popSpeakerOff = SpeakerOff
+export const popSquare = Square
+export const popSquareFilled = SquareFilled
+export const popStar = Star
+export const popStarFilled = StarFilled
+export const popSun = Sun
+export const popSunFilled = SunFilled
+export const popSyringe = Syringe
+export const popTShirt = TShirt
+export const popTaxi = Taxi
+export const popTelevision = Television
+export const popTextBubble = TextBubble
+export const popThumbsDown = ThumbsDown
+export const popThumbsUp = ThumbsUp
+export const popTimes = Times
+export const popTool = Tool
+export const popTrain = Train
+export const popTrash = Trash
+export const popTriangleDown = TriangleDown
+export const popTriangleDownFilled = TriangleDownFilled
+export const popTriangleLeft = TriangleLeft
+export const popTriangleLeftFilled = TriangleLeftFilled
+export const popTriangleRight = TriangleRight
+export const popTriangleRightFilled = TriangleRightFilled
+export const popTriangleUp = TriangleUp
+export const popTriangleUpFilled = TriangleUpFilled
+export const popTrophy = Trophy
+export const popTruck = Truck
+export const popUmbrella = Umbrella
+export const popWifi = Wifi
 
 
 export const pop: { [name in Pepicon]: string } = {

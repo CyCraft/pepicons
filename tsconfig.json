@@ -1,8 +1,10 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"],
     "strict": true,
+    "allowJs": true,
     "target": "es6",
+    "module": "esnext",
     "esModuleInterop": true,
     "moduleResolution": "node",
     "types": ["node", "webpack-env"]
