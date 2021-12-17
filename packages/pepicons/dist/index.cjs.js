@@ -3,6 +3,9 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /** Do not edit! This file is auto-generated. */
+const pepiconArray = ['airplane', 'angle-down', 'angle-left', 'angle-right', 'angle-up', 'arrow-down', 'arrow-down-left', 'arrow-down-right', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-up-left', 'arrow-up-right', 'battery', 'bell', 'bell-off', 'bicycle', 'bluetooth', 'book', 'bookmark', 'bookmark-filled', 'building', 'calculator', 'calendar', 'camera', 'can', 'car', 'cart', 'chain', 'checkmark', 'circle', 'circle-filled', 'clipboard', 'clock', 'cloud', 'cloud-down', 'cloud-down-filled', 'cloud-filled', 'cloud-up', 'cloud-up-filled', 'coctail', 'color-picker', 'contract', 'controller', 'credit-card', 'crown', 'cup', 'division', 'dots-x', 'dots-y', 'dress', 'duplicate', 'electricity', 'enter', 'exclamation', 'exclamation-filled', 'expand', 'eye', 'eye-closed', 'eye-off', 'file', 'film-frame', 'flag', 'flower', 'flower-bud', 'folder', 'gear', 'gift', 'grab', 'hamburger', 'hash', 'headphone', 'heart', 'house', 'identification', 'info', 'info-filled', 'internet', 'key', 'knive-fork', 'label', 'leave', 'letter', 'list', 'lock-closed', 'lock-open', 'loop', 'loop-minus', 'loop-plus', 'magnet', 'map', 'megaphone', 'microphone', 'minus', 'monitor', 'monitor2', 'moon', 'moon-filled', 'motorcycle', 'move-x', 'move-y', 'music-note-double', 'music-note-single', 'open', 'paint-pallet', 'pen', 'people', 'person', 'person-checkmark', 'person-filled', 'person-plus', 'persons', 'phone', 'photo', 'photo-camera', 'pill', 'pinpoint', 'pinpoint-filled', 'pinpoint-off', 'pinpoint-off-filled', 'plus', 'power', 'printer', 'qr-code', 'refresh', 'reload', 'scissors', 'send', 'share-android', 'share-ios', 'smartphone', 'smartphone-notch', 'smartphone2', 'soft-drink', 'sort', 'speaker-high', 'speaker-low', 'speaker-off', 'square', 'square-filled', 'star', 'star-filled', 'sun', 'sun-filled', 'syringe', 't-shirt', 'taxi', 'television', 'text-bubble', 'thumbs-down', 'thumbs-up', 'times', 'tool', 'train', 'trash', 'triangle-down', 'triangle-down-filled', 'triangle-left', 'triangle-left-filled', 'triangle-right', 'triangle-right-filled', 'triangle-up', 'triangle-up-filled', 'trophy', 'truck', 'umbrella', 'wifi'];
+
+/** Do not edit! This file is auto-generated. */
 const categories = ['ui', 'transport', 'time', 'text', 'sound', 'social', 'shape', 'nature', 'location', 'leisure', 'item', 'food-drinks', 'device', 'arrows'];
 const pepiconCategoryDic = {
     'airplane': 'transport',
@@ -1920,6 +1923,176 @@ const Wifi$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 `;
 
 /** Do not edit! This file is auto-generated. */
+// ======= //
+/* EXPORTS */
+// ======= //
+const popAirplane = Airplane$1;
+const popAngleDown = AngleDown$1;
+const popAngleLeft = AngleLeft$1;
+const popAngleRight = AngleRight$1;
+const popAngleUp = AngleUp$1;
+const popArrowDown = ArrowDown$1;
+const popArrowDownLeft = ArrowDownLeft$1;
+const popArrowDownRight = ArrowDownRight$1;
+const popArrowLeft = ArrowLeft$1;
+const popArrowRight = ArrowRight$1;
+const popArrowUp = ArrowUp$1;
+const popArrowUpLeft = ArrowUpLeft$1;
+const popArrowUpRight = ArrowUpRight$1;
+const popBattery = Battery$1;
+const popBell = Bell$1;
+const popBellOff = BellOff$1;
+const popBicycle = Bicycle$1;
+const popBluetooth = Bluetooth$1;
+const popBook = Book$1;
+const popBookmark = Bookmark$1;
+const popBookmarkFilled = BookmarkFilled;
+const popBuilding = Building$1;
+const popCalculator = Calculator$1;
+const popCalendar = Calendar$1;
+const popCamera = Camera$1;
+const popCan = Can$1;
+const popCar = Car$1;
+const popCart = Cart$1;
+const popChain = Chain$1;
+const popCheckmark = Checkmark$1;
+const popCircle = Circle$1;
+const popCircleFilled = CircleFilled;
+const popClipboard = Clipboard$1;
+const popClock = Clock$1;
+const popCloud = Cloud$1;
+const popCloudDown = CloudDown$1;
+const popCloudDownFilled = CloudDownFilled;
+const popCloudFilled = CloudFilled;
+const popCloudUp = CloudUp$1;
+const popCloudUpFilled = CloudUpFilled;
+const popCoctail = Coctail$1;
+const popColorPicker = ColorPicker$1;
+const popContract = Contract$1;
+const popController = Controller$1;
+const popCreditCard = CreditCard$1;
+const popCrown = Crown$1;
+const popCup = Cup$1;
+const popDivision = Division$1;
+const popDotsX = DotsX$1;
+const popDotsY = DotsY$1;
+const popDress = Dress$1;
+const popDuplicate = Duplicate$1;
+const popElectricity = Electricity$1;
+const popEnter = Enter$1;
+const popExclamation = Exclamation$1;
+const popExclamationFilled = ExclamationFilled;
+const popExpand = Expand$1;
+const popEye = Eye$1;
+const popEyeClosed = EyeClosed$1;
+const popEyeOff = EyeOff$1;
+const popFile = File$1;
+const popFilmFrame = FilmFrame$1;
+const popFlag = Flag$1;
+const popFlower = Flower$1;
+const popFlowerBud = FlowerBud$1;
+const popFolder = Folder$1;
+const popGear = Gear$1;
+const popGift = Gift$1;
+const popGrab = Grab$1;
+const popHamburger = Hamburger$1;
+const popHash = Hash$1;
+const popHeadphone = Headphone$1;
+const popHeart = Heart$1;
+const popHouse = House$1;
+const popIdentification = Identification$1;
+const popInfo = Info$1;
+const popInfoFilled = InfoFilled;
+const popInternet = Internet$1;
+const popKey = Key$1;
+const popKniveFork = KniveFork$1;
+const popLabel = Label$1;
+const popLeave = Leave$1;
+const popLetter = Letter$1;
+const popList = List$1;
+const popLockClosed = LockClosed$1;
+const popLockOpen = LockOpen$1;
+const popLoop = Loop$1;
+const popLoopMinus = LoopMinus$1;
+const popLoopPlus = LoopPlus$1;
+const popMagnet = Magnet$1;
+const popMap = Map$1;
+const popMegaphone = Megaphone$1;
+const popMicrophone = Microphone$1;
+const popMinus = Minus$1;
+const popMonitor = Monitor$1;
+const popMonitor2 = Monitor2$1;
+const popMoon = Moon$1;
+const popMoonFilled = MoonFilled;
+const popMotorcycle = Motorcycle$1;
+const popMoveX = MoveX$1;
+const popMoveY = MoveY$1;
+const popMusicNoteDouble = MusicNoteDouble$1;
+const popMusicNoteSingle = MusicNoteSingle$1;
+const popOpen = Open$1;
+const popPaintPallet = PaintPallet$1;
+const popPen = Pen$1;
+const popPeople = People$1;
+const popPerson = Person$1;
+const popPersonCheckmark = PersonCheckmark$1;
+const popPersonFilled = PersonFilled;
+const popPersonPlus = PersonPlus$1;
+const popPersons = Persons$1;
+const popPhone = Phone$1;
+const popPhoto = Photo$1;
+const popPhotoCamera = PhotoCamera$1;
+const popPill = Pill$1;
+const popPinpoint = Pinpoint$1;
+const popPinpointFilled = PinpointFilled;
+const popPinpointOff = PinpointOff$1;
+const popPinpointOffFilled = PinpointOffFilled;
+const popPlus = Plus$1;
+const popPower = Power$1;
+const popPrinter = Printer$1;
+const popQrCode = QrCode$1;
+const popRefresh = Refresh$1;
+const popReload = Reload$1;
+const popScissors = Scissors$1;
+const popSend = Send$1;
+const popShareAndroid = ShareAndroid$1;
+const popShareIos = ShareIos$1;
+const popSmartphone = Smartphone$1;
+const popSmartphoneNotch = SmartphoneNotch$1;
+const popSmartphone2 = Smartphone2$1;
+const popSoftDrink = SoftDrink$1;
+const popSort = Sort$1;
+const popSpeakerHigh = SpeakerHigh$1;
+const popSpeakerLow = SpeakerLow$1;
+const popSpeakerOff = SpeakerOff$1;
+const popSquare = Square$1;
+const popSquareFilled = SquareFilled;
+const popStar = Star$1;
+const popStarFilled = StarFilled;
+const popSun = Sun$1;
+const popSunFilled = SunFilled;
+const popSyringe = Syringe$1;
+const popTShirt = TShirt$1;
+const popTaxi = Taxi$1;
+const popTelevision = Television$1;
+const popTextBubble = TextBubble$1;
+const popThumbsDown = ThumbsDown$1;
+const popThumbsUp = ThumbsUp$1;
+const popTimes = Times$1;
+const popTool = Tool$1;
+const popTrain = Train$1;
+const popTrash = Trash$1;
+const popTriangleDown = TriangleDown$1;
+const popTriangleDownFilled = TriangleDownFilled;
+const popTriangleLeft = TriangleLeft$1;
+const popTriangleLeftFilled = TriangleLeftFilled;
+const popTriangleRight = TriangleRight$1;
+const popTriangleRightFilled = TriangleRightFilled;
+const popTriangleUp = TriangleUp$1;
+const popTriangleUpFilled = TriangleUpFilled;
+const popTrophy = Trophy$1;
+const popTruck = Truck$1;
+const popUmbrella = Umbrella$1;
+const popWifi = Wifi$1;
 const pop = {
     'airplane': Airplane$1,
     'angle-down': AngleDown$1,
@@ -3840,6 +4013,158 @@ const Wifi = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 `;
 
 /** Do not edit! This file is auto-generated. */
+// ======= //
+/* EXPORTS */
+// ======= //
+const printAirplane = Airplane;
+const printAngleDown = AngleDown;
+const printAngleLeft = AngleLeft;
+const printAngleRight = AngleRight;
+const printAngleUp = AngleUp;
+const printArrowDown = ArrowDown;
+const printArrowDownLeft = ArrowDownLeft;
+const printArrowDownRight = ArrowDownRight;
+const printArrowLeft = ArrowLeft;
+const printArrowRight = ArrowRight;
+const printArrowUp = ArrowUp;
+const printArrowUpLeft = ArrowUpLeft;
+const printArrowUpRight = ArrowUpRight;
+const printBattery = Battery;
+const printBell = Bell;
+const printBellOff = BellOff;
+const printBicycle = Bicycle;
+const printBluetooth = Bluetooth;
+const printBook = Book;
+const printBookmark = Bookmark;
+const printBuilding = Building;
+const printCalculator = Calculator;
+const printCalendar = Calendar;
+const printCamera = Camera;
+const printCan = Can;
+const printCar = Car;
+const printCart = Cart;
+const printChain = Chain;
+const printCheckmark = Checkmark;
+const printCircle = Circle;
+const printClipboard = Clipboard;
+const printClock = Clock;
+const printCloud = Cloud;
+const printCloudDown = CloudDown;
+const printCloudUp = CloudUp;
+const printCoctail = Coctail;
+const printColorPicker = ColorPicker;
+const printContract = Contract;
+const printController = Controller;
+const printCreditCard = CreditCard;
+const printCrown = Crown;
+const printCup = Cup;
+const printDivision = Division;
+const printDotsX = DotsX;
+const printDotsY = DotsY;
+const printDress = Dress;
+const printDuplicate = Duplicate;
+const printElectricity = Electricity;
+const printEnter = Enter;
+const printExclamation = Exclamation;
+const printExpand = Expand;
+const printEye = Eye;
+const printEyeClosed = EyeClosed;
+const printEyeOff = EyeOff;
+const printFile = File;
+const printFilmFrame = FilmFrame;
+const printFlag = Flag;
+const printFlower = Flower;
+const printFlowerBud = FlowerBud;
+const printFolder = Folder;
+const printGear = Gear;
+const printGift = Gift;
+const printGrab = Grab;
+const printHamburger = Hamburger;
+const printHash = Hash;
+const printHeadphone = Headphone;
+const printHeart = Heart;
+const printHouse = House;
+const printIdentification = Identification;
+const printInfo = Info;
+const printInternet = Internet;
+const printKey = Key;
+const printKniveFork = KniveFork;
+const printLabel = Label;
+const printLeave = Leave;
+const printLetter = Letter;
+const printList = List;
+const printLockClosed = LockClosed;
+const printLockOpen = LockOpen;
+const printLoop = Loop;
+const printLoopMinus = LoopMinus;
+const printLoopPlus = LoopPlus;
+const printMagnet = Magnet;
+const printMap = Map;
+const printMegaphone = Megaphone;
+const printMicrophone = Microphone;
+const printMinus = Minus;
+const printMonitor = Monitor;
+const printMonitor2 = Monitor2;
+const printMoon = Moon;
+const printMotorcycle = Motorcycle;
+const printMoveX = MoveX;
+const printMoveY = MoveY;
+const printMusicNoteDouble = MusicNoteDouble;
+const printMusicNoteSingle = MusicNoteSingle;
+const printOpen = Open;
+const printPaintPallet = PaintPallet;
+const printPen = Pen;
+const printPeople = People;
+const printPerson = Person;
+const printPersonCheckmark = PersonCheckmark;
+const printPersonPlus = PersonPlus;
+const printPersons = Persons;
+const printPhone = Phone;
+const printPhoto = Photo;
+const printPhotoCamera = PhotoCamera;
+const printPill = Pill;
+const printPinpoint = Pinpoint;
+const printPinpointOff = PinpointOff;
+const printPlus = Plus;
+const printPower = Power;
+const printPrinter = Printer;
+const printQrCode = QrCode;
+const printRefresh = Refresh;
+const printReload = Reload;
+const printScissors = Scissors;
+const printSend = Send;
+const printShareAndroid = ShareAndroid;
+const printShareIos = ShareIos;
+const printSmartphone = Smartphone;
+const printSmartphoneNotch = SmartphoneNotch;
+const printSmartphone2 = Smartphone2;
+const printSoftDrink = SoftDrink;
+const printSort = Sort;
+const printSpeakerHigh = SpeakerHigh;
+const printSpeakerLow = SpeakerLow;
+const printSpeakerOff = SpeakerOff;
+const printSquare = Square;
+const printStar = Star;
+const printSun = Sun;
+const printSyringe = Syringe;
+const printTShirt = TShirt;
+const printTaxi = Taxi;
+const printTelevision = Television;
+const printTextBubble = TextBubble;
+const printThumbsDown = ThumbsDown;
+const printThumbsUp = ThumbsUp;
+const printTimes = Times;
+const printTool = Tool;
+const printTrain = Train;
+const printTrash = Trash;
+const printTriangleDown = TriangleDown;
+const printTriangleLeft = TriangleLeft;
+const printTriangleRight = TriangleRight;
+const printTriangleUp = TriangleUp;
+const printTrophy = Trophy;
+const printTruck = Truck;
+const printUmbrella = Umbrella;
+const printWifi = Wifi;
 const print = {
     'airplane': Airplane,
     'angle-down': AngleDown,
@@ -4043,41 +4368,51 @@ function textToRgba(color) {
  * Returns a Pepicon SVG as a string so you can inject it into your HTML.
  *
  * The icon name as per the reference at https://pepicons.com
- * @param options options
- * @returns {string} The SVG content as string
+ * @returns The SVG content as string
  */
-function pepiconSvgString(options) {
-    const { name, type, color, opacity, size, stroke } = options || {};
-    let svgString = type === 'pop' ? pop[name] : print[name];
+function getPepicon(payload) {
+    const { name, type } = payload || {};
+    const svgString = type === 'pop' ? pop[name] : print[name];
     if (!svgString) {
-        console.error(`Pepicon ${name} of type ${type} not found!`);
+        console.warn(`Pepicon ${name} of type ${type} not found! (returned an empty string instead)`);
         return '';
     }
-    if (!/style="/.test(svgString)) {
-        svgString = svgString.replace('<svg ', '<svg style="" ');
+    return svgString;
+}
+/**
+ * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+ *
+ * The icon name as per the reference at https://pepicons.com
+ * @returns The SVG content as string
+ */
+function morphPepicon(payload) {
+    let svg = payload.svg;
+    const { type, color, opacity, size, stroke } = payload || {};
+    if (!/style="/.test(svg)) {
+        svg = svg.replace('<svg ', '<svg style="" ');
     }
     if (stroke) {
-        svgString = svgString.replace(/#000000|#000|black/g, stroke);
+        svg = svg.replace(/#000000|#000|black/g, stroke);
     }
     const rgbOrHexColor = (color === null || color === void 0 ? void 0 : color.startsWith('rgb')) || (color === null || color === void 0 ? void 0 : color.startsWith('#'));
     if (color && !rgbOrHexColor) {
-        svgString = svgString.replace(/style="/, `style="color:${color};`);
+        svg = svg.replace(/style="/, `style="color:${color};`);
     }
     let _opacity = opacity;
     if (color && rgbOrHexColor) {
         const { r, g, b, a } = textToRgba(color);
         const _color = `rgb(${r},${g},${b})`;
-        svgString = svgString.replace(/style="/, `style="color:${_color};`);
+        svg = svg.replace(/style="/, `style="color:${_color};`);
         if (opacity === undefined) {
             _opacity = a === undefined ? 1 : a / 100;
         }
     }
     if (_opacity !== undefined && _opacity < 1) {
         if (type === 'pop') {
-            svgString = svgString.replace(/style="/, `style="opacity:${_opacity};`);
+            svg = svg.replace(/style="/, `style="opacity:${_opacity};`);
         }
         else {
-            svgString = svgString.replace(/opacity="\.8"/g, `opacity="${_opacity}"`);
+            svg = svg.replace(/opacity="\.8"/g, `opacity="${_opacity}"`);
         }
     }
     if (size || size === 0) {
@@ -4092,17 +4427,346 @@ function pepiconSvgString(options) {
                         : typeof size === 'number'
                             ? `${size}px`
                             : size;
-        svgString = svgString
+        svg = svg
             .replace(/style="/, `style="width:${_size};height:${_size};`)
             .replace(/width="[0-9]+" height="[0-9]+"/, `width="${_size}" height="${_size}"`);
     }
-    return svgString;
+    return svg;
+}
+/**
+ * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+ *
+ * The icon name as per the reference at https://pepicons.com
+ * @returns The SVG content as string
+ */
+function pepiconSvgString(payload) {
+    const svg = getPepicon(payload);
+    return morphPepicon(Object.assign(Object.assign({}, payload), { svg }));
 }
 
 exports.categories = categories;
+exports.getPepicon = getPepicon;
+exports.morphPepicon = morphPepicon;
+exports.pepiconArray = pepiconArray;
 exports.pepiconCategoryDic = pepiconCategoryDic;
 exports.pepiconSvgString = pepiconSvgString;
 exports.pop = pop;
+exports.popAirplane = popAirplane;
+exports.popAngleDown = popAngleDown;
+exports.popAngleLeft = popAngleLeft;
+exports.popAngleRight = popAngleRight;
+exports.popAngleUp = popAngleUp;
+exports.popArrowDown = popArrowDown;
+exports.popArrowDownLeft = popArrowDownLeft;
+exports.popArrowDownRight = popArrowDownRight;
+exports.popArrowLeft = popArrowLeft;
+exports.popArrowRight = popArrowRight;
+exports.popArrowUp = popArrowUp;
+exports.popArrowUpLeft = popArrowUpLeft;
+exports.popArrowUpRight = popArrowUpRight;
+exports.popBattery = popBattery;
+exports.popBell = popBell;
+exports.popBellOff = popBellOff;
+exports.popBicycle = popBicycle;
+exports.popBluetooth = popBluetooth;
+exports.popBook = popBook;
+exports.popBookmark = popBookmark;
+exports.popBookmarkFilled = popBookmarkFilled;
+exports.popBuilding = popBuilding;
+exports.popCalculator = popCalculator;
+exports.popCalendar = popCalendar;
+exports.popCamera = popCamera;
+exports.popCan = popCan;
+exports.popCar = popCar;
+exports.popCart = popCart;
+exports.popChain = popChain;
+exports.popCheckmark = popCheckmark;
+exports.popCircle = popCircle;
+exports.popCircleFilled = popCircleFilled;
+exports.popClipboard = popClipboard;
+exports.popClock = popClock;
+exports.popCloud = popCloud;
+exports.popCloudDown = popCloudDown;
+exports.popCloudDownFilled = popCloudDownFilled;
+exports.popCloudFilled = popCloudFilled;
+exports.popCloudUp = popCloudUp;
+exports.popCloudUpFilled = popCloudUpFilled;
+exports.popCoctail = popCoctail;
+exports.popColorPicker = popColorPicker;
+exports.popContract = popContract;
+exports.popController = popController;
+exports.popCreditCard = popCreditCard;
+exports.popCrown = popCrown;
+exports.popCup = popCup;
+exports.popDivision = popDivision;
+exports.popDotsX = popDotsX;
+exports.popDotsY = popDotsY;
+exports.popDress = popDress;
+exports.popDuplicate = popDuplicate;
+exports.popElectricity = popElectricity;
+exports.popEnter = popEnter;
+exports.popExclamation = popExclamation;
+exports.popExclamationFilled = popExclamationFilled;
+exports.popExpand = popExpand;
+exports.popEye = popEye;
+exports.popEyeClosed = popEyeClosed;
+exports.popEyeOff = popEyeOff;
+exports.popFile = popFile;
+exports.popFilmFrame = popFilmFrame;
+exports.popFlag = popFlag;
+exports.popFlower = popFlower;
+exports.popFlowerBud = popFlowerBud;
+exports.popFolder = popFolder;
+exports.popGear = popGear;
+exports.popGift = popGift;
+exports.popGrab = popGrab;
+exports.popHamburger = popHamburger;
+exports.popHash = popHash;
+exports.popHeadphone = popHeadphone;
+exports.popHeart = popHeart;
+exports.popHouse = popHouse;
+exports.popIdentification = popIdentification;
+exports.popInfo = popInfo;
+exports.popInfoFilled = popInfoFilled;
+exports.popInternet = popInternet;
+exports.popKey = popKey;
+exports.popKniveFork = popKniveFork;
+exports.popLabel = popLabel;
+exports.popLeave = popLeave;
+exports.popLetter = popLetter;
+exports.popList = popList;
+exports.popLockClosed = popLockClosed;
+exports.popLockOpen = popLockOpen;
+exports.popLoop = popLoop;
+exports.popLoopMinus = popLoopMinus;
+exports.popLoopPlus = popLoopPlus;
+exports.popMagnet = popMagnet;
+exports.popMap = popMap;
+exports.popMegaphone = popMegaphone;
+exports.popMicrophone = popMicrophone;
+exports.popMinus = popMinus;
+exports.popMonitor = popMonitor;
+exports.popMonitor2 = popMonitor2;
+exports.popMoon = popMoon;
+exports.popMoonFilled = popMoonFilled;
+exports.popMotorcycle = popMotorcycle;
+exports.popMoveX = popMoveX;
+exports.popMoveY = popMoveY;
+exports.popMusicNoteDouble = popMusicNoteDouble;
+exports.popMusicNoteSingle = popMusicNoteSingle;
+exports.popOpen = popOpen;
+exports.popPaintPallet = popPaintPallet;
+exports.popPen = popPen;
+exports.popPeople = popPeople;
+exports.popPerson = popPerson;
+exports.popPersonCheckmark = popPersonCheckmark;
+exports.popPersonFilled = popPersonFilled;
+exports.popPersonPlus = popPersonPlus;
+exports.popPersons = popPersons;
+exports.popPhone = popPhone;
+exports.popPhoto = popPhoto;
+exports.popPhotoCamera = popPhotoCamera;
+exports.popPill = popPill;
+exports.popPinpoint = popPinpoint;
+exports.popPinpointFilled = popPinpointFilled;
+exports.popPinpointOff = popPinpointOff;
+exports.popPinpointOffFilled = popPinpointOffFilled;
+exports.popPlus = popPlus;
+exports.popPower = popPower;
+exports.popPrinter = popPrinter;
+exports.popQrCode = popQrCode;
+exports.popRefresh = popRefresh;
+exports.popReload = popReload;
+exports.popScissors = popScissors;
+exports.popSend = popSend;
+exports.popShareAndroid = popShareAndroid;
+exports.popShareIos = popShareIos;
+exports.popSmartphone = popSmartphone;
+exports.popSmartphone2 = popSmartphone2;
+exports.popSmartphoneNotch = popSmartphoneNotch;
+exports.popSoftDrink = popSoftDrink;
+exports.popSort = popSort;
+exports.popSpeakerHigh = popSpeakerHigh;
+exports.popSpeakerLow = popSpeakerLow;
+exports.popSpeakerOff = popSpeakerOff;
+exports.popSquare = popSquare;
+exports.popSquareFilled = popSquareFilled;
+exports.popStar = popStar;
+exports.popStarFilled = popStarFilled;
+exports.popSun = popSun;
+exports.popSunFilled = popSunFilled;
+exports.popSyringe = popSyringe;
+exports.popTShirt = popTShirt;
+exports.popTaxi = popTaxi;
+exports.popTelevision = popTelevision;
+exports.popTextBubble = popTextBubble;
+exports.popThumbsDown = popThumbsDown;
+exports.popThumbsUp = popThumbsUp;
+exports.popTimes = popTimes;
+exports.popTool = popTool;
+exports.popTrain = popTrain;
+exports.popTrash = popTrash;
+exports.popTriangleDown = popTriangleDown;
+exports.popTriangleDownFilled = popTriangleDownFilled;
+exports.popTriangleLeft = popTriangleLeft;
+exports.popTriangleLeftFilled = popTriangleLeftFilled;
+exports.popTriangleRight = popTriangleRight;
+exports.popTriangleRightFilled = popTriangleRightFilled;
+exports.popTriangleUp = popTriangleUp;
+exports.popTriangleUpFilled = popTriangleUpFilled;
+exports.popTrophy = popTrophy;
+exports.popTruck = popTruck;
+exports.popUmbrella = popUmbrella;
+exports.popWifi = popWifi;
 exports.print = print;
+exports.printAirplane = printAirplane;
+exports.printAngleDown = printAngleDown;
+exports.printAngleLeft = printAngleLeft;
+exports.printAngleRight = printAngleRight;
+exports.printAngleUp = printAngleUp;
+exports.printArrowDown = printArrowDown;
+exports.printArrowDownLeft = printArrowDownLeft;
+exports.printArrowDownRight = printArrowDownRight;
+exports.printArrowLeft = printArrowLeft;
+exports.printArrowRight = printArrowRight;
+exports.printArrowUp = printArrowUp;
+exports.printArrowUpLeft = printArrowUpLeft;
+exports.printArrowUpRight = printArrowUpRight;
+exports.printBattery = printBattery;
+exports.printBell = printBell;
+exports.printBellOff = printBellOff;
+exports.printBicycle = printBicycle;
+exports.printBluetooth = printBluetooth;
+exports.printBook = printBook;
+exports.printBookmark = printBookmark;
+exports.printBuilding = printBuilding;
+exports.printCalculator = printCalculator;
+exports.printCalendar = printCalendar;
+exports.printCamera = printCamera;
+exports.printCan = printCan;
+exports.printCar = printCar;
+exports.printCart = printCart;
+exports.printChain = printChain;
+exports.printCheckmark = printCheckmark;
+exports.printCircle = printCircle;
+exports.printClipboard = printClipboard;
+exports.printClock = printClock;
+exports.printCloud = printCloud;
+exports.printCloudDown = printCloudDown;
+exports.printCloudUp = printCloudUp;
+exports.printCoctail = printCoctail;
+exports.printColorPicker = printColorPicker;
+exports.printContract = printContract;
+exports.printController = printController;
+exports.printCreditCard = printCreditCard;
+exports.printCrown = printCrown;
+exports.printCup = printCup;
+exports.printDivision = printDivision;
+exports.printDotsX = printDotsX;
+exports.printDotsY = printDotsY;
+exports.printDress = printDress;
+exports.printDuplicate = printDuplicate;
+exports.printElectricity = printElectricity;
+exports.printEnter = printEnter;
+exports.printExclamation = printExclamation;
+exports.printExpand = printExpand;
+exports.printEye = printEye;
+exports.printEyeClosed = printEyeClosed;
+exports.printEyeOff = printEyeOff;
+exports.printFile = printFile;
+exports.printFilmFrame = printFilmFrame;
+exports.printFlag = printFlag;
+exports.printFlower = printFlower;
+exports.printFlowerBud = printFlowerBud;
+exports.printFolder = printFolder;
+exports.printGear = printGear;
+exports.printGift = printGift;
+exports.printGrab = printGrab;
+exports.printHamburger = printHamburger;
+exports.printHash = printHash;
+exports.printHeadphone = printHeadphone;
+exports.printHeart = printHeart;
+exports.printHouse = printHouse;
+exports.printIdentification = printIdentification;
+exports.printInfo = printInfo;
+exports.printInternet = printInternet;
+exports.printKey = printKey;
+exports.printKniveFork = printKniveFork;
+exports.printLabel = printLabel;
+exports.printLeave = printLeave;
+exports.printLetter = printLetter;
+exports.printList = printList;
+exports.printLockClosed = printLockClosed;
+exports.printLockOpen = printLockOpen;
+exports.printLoop = printLoop;
+exports.printLoopMinus = printLoopMinus;
+exports.printLoopPlus = printLoopPlus;
+exports.printMagnet = printMagnet;
+exports.printMap = printMap;
+exports.printMegaphone = printMegaphone;
+exports.printMicrophone = printMicrophone;
+exports.printMinus = printMinus;
+exports.printMonitor = printMonitor;
+exports.printMonitor2 = printMonitor2;
+exports.printMoon = printMoon;
+exports.printMotorcycle = printMotorcycle;
+exports.printMoveX = printMoveX;
+exports.printMoveY = printMoveY;
+exports.printMusicNoteDouble = printMusicNoteDouble;
+exports.printMusicNoteSingle = printMusicNoteSingle;
+exports.printOpen = printOpen;
+exports.printPaintPallet = printPaintPallet;
+exports.printPen = printPen;
+exports.printPeople = printPeople;
+exports.printPerson = printPerson;
+exports.printPersonCheckmark = printPersonCheckmark;
+exports.printPersonPlus = printPersonPlus;
+exports.printPersons = printPersons;
+exports.printPhone = printPhone;
+exports.printPhoto = printPhoto;
+exports.printPhotoCamera = printPhotoCamera;
+exports.printPill = printPill;
+exports.printPinpoint = printPinpoint;
+exports.printPinpointOff = printPinpointOff;
+exports.printPlus = printPlus;
+exports.printPower = printPower;
+exports.printPrinter = printPrinter;
+exports.printQrCode = printQrCode;
+exports.printRefresh = printRefresh;
+exports.printReload = printReload;
+exports.printScissors = printScissors;
+exports.printSend = printSend;
+exports.printShareAndroid = printShareAndroid;
+exports.printShareIos = printShareIos;
+exports.printSmartphone = printSmartphone;
+exports.printSmartphone2 = printSmartphone2;
+exports.printSmartphoneNotch = printSmartphoneNotch;
+exports.printSoftDrink = printSoftDrink;
+exports.printSort = printSort;
+exports.printSpeakerHigh = printSpeakerHigh;
+exports.printSpeakerLow = printSpeakerLow;
+exports.printSpeakerOff = printSpeakerOff;
+exports.printSquare = printSquare;
+exports.printStar = printStar;
+exports.printSun = printSun;
+exports.printSyringe = printSyringe;
+exports.printTShirt = printTShirt;
+exports.printTaxi = printTaxi;
+exports.printTelevision = printTelevision;
+exports.printTextBubble = printTextBubble;
+exports.printThumbsDown = printThumbsDown;
+exports.printThumbsUp = printThumbsUp;
+exports.printTimes = printTimes;
+exports.printTool = printTool;
+exports.printTrain = printTrain;
+exports.printTrash = printTrash;
+exports.printTriangleDown = printTriangleDown;
+exports.printTriangleLeft = printTriangleLeft;
+exports.printTriangleRight = printTriangleRight;
+exports.printTriangleUp = printTriangleUp;
+exports.printTrophy = printTrophy;
+exports.printTruck = printTruck;
+exports.printUmbrella = printUmbrella;
+exports.printWifi = printWifi;
 exports.synonyms = synonyms$1;
 exports.synonymsJa = synonyms;

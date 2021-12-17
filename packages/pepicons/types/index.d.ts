@@ -1,10 +1,20 @@
 import { Pepicon } from './src/index';
 export * from './src/index';
-export declare type Options = {
+export declare type GetPepiconPayload = {
     /**
      * The icon name as per the reference at https://pepicons.com
      */
     name: Pepicon;
+    /**
+     * Either 'pop' or 'print'
+     */
+    type: 'pop' | 'print';
+};
+export declare type MorphPepiconPayload = {
+    /**
+     * The Pepicon SVG string
+     */
+    svg: string;
     /**
      * Either 'pop' or 'print'
      */
@@ -37,7 +47,20 @@ export declare type Options = {
  * Returns a Pepicon SVG as a string so you can inject it into your HTML.
  *
  * The icon name as per the reference at https://pepicons.com
- * @param options options
- * @returns {string} The SVG content as string
+ * @returns The SVG content as string
  */
-export declare function pepiconSvgString(options: Options): string;
+export declare function getPepicon(payload: GetPepiconPayload): string;
+/**
+ * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+ *
+ * The icon name as per the reference at https://pepicons.com
+ * @returns The SVG content as string
+ */
+export declare function morphPepicon(payload: MorphPepiconPayload): string;
+/**
+ * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+ *
+ * The icon name as per the reference at https://pepicons.com
+ * @returns The SVG content as string
+ */
+export declare function pepiconSvgString(payload: GetPepiconPayload & MorphPepiconPayload): string;

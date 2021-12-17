@@ -1,4 +1,7 @@
 /** Do not edit! This file is auto-generated. */
+const pepiconArray = ['airplane', 'angle-down', 'angle-left', 'angle-right', 'angle-up', 'arrow-down', 'arrow-down-left', 'arrow-down-right', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-up-left', 'arrow-up-right', 'battery', 'bell', 'bell-off', 'bicycle', 'bluetooth', 'book', 'bookmark', 'bookmark-filled', 'building', 'calculator', 'calendar', 'camera', 'can', 'car', 'cart', 'chain', 'checkmark', 'circle', 'circle-filled', 'clipboard', 'clock', 'cloud', 'cloud-down', 'cloud-down-filled', 'cloud-filled', 'cloud-up', 'cloud-up-filled', 'coctail', 'color-picker', 'contract', 'controller', 'credit-card', 'crown', 'cup', 'division', 'dots-x', 'dots-y', 'dress', 'duplicate', 'electricity', 'enter', 'exclamation', 'exclamation-filled', 'expand', 'eye', 'eye-closed', 'eye-off', 'file', 'film-frame', 'flag', 'flower', 'flower-bud', 'folder', 'gear', 'gift', 'grab', 'hamburger', 'hash', 'headphone', 'heart', 'house', 'identification', 'info', 'info-filled', 'internet', 'key', 'knive-fork', 'label', 'leave', 'letter', 'list', 'lock-closed', 'lock-open', 'loop', 'loop-minus', 'loop-plus', 'magnet', 'map', 'megaphone', 'microphone', 'minus', 'monitor', 'monitor2', 'moon', 'moon-filled', 'motorcycle', 'move-x', 'move-y', 'music-note-double', 'music-note-single', 'open', 'paint-pallet', 'pen', 'people', 'person', 'person-checkmark', 'person-filled', 'person-plus', 'persons', 'phone', 'photo', 'photo-camera', 'pill', 'pinpoint', 'pinpoint-filled', 'pinpoint-off', 'pinpoint-off-filled', 'plus', 'power', 'printer', 'qr-code', 'refresh', 'reload', 'scissors', 'send', 'share-android', 'share-ios', 'smartphone', 'smartphone-notch', 'smartphone2', 'soft-drink', 'sort', 'speaker-high', 'speaker-low', 'speaker-off', 'square', 'square-filled', 'star', 'star-filled', 'sun', 'sun-filled', 'syringe', 't-shirt', 'taxi', 'television', 'text-bubble', 'thumbs-down', 'thumbs-up', 'times', 'tool', 'train', 'trash', 'triangle-down', 'triangle-down-filled', 'triangle-left', 'triangle-left-filled', 'triangle-right', 'triangle-right-filled', 'triangle-up', 'triangle-up-filled', 'trophy', 'truck', 'umbrella', 'wifi'];
+
+/** Do not edit! This file is auto-generated. */
 const categories = ['ui', 'transport', 'time', 'text', 'sound', 'social', 'shape', 'nature', 'location', 'leisure', 'item', 'food-drinks', 'device', 'arrows'];
 const pepiconCategoryDic = {
     'airplane': 'transport',
@@ -1916,6 +1919,176 @@ const Wifi$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 `;
 
 /** Do not edit! This file is auto-generated. */
+// ======= //
+/* EXPORTS */
+// ======= //
+const popAirplane = Airplane$1;
+const popAngleDown = AngleDown$1;
+const popAngleLeft = AngleLeft$1;
+const popAngleRight = AngleRight$1;
+const popAngleUp = AngleUp$1;
+const popArrowDown = ArrowDown$1;
+const popArrowDownLeft = ArrowDownLeft$1;
+const popArrowDownRight = ArrowDownRight$1;
+const popArrowLeft = ArrowLeft$1;
+const popArrowRight = ArrowRight$1;
+const popArrowUp = ArrowUp$1;
+const popArrowUpLeft = ArrowUpLeft$1;
+const popArrowUpRight = ArrowUpRight$1;
+const popBattery = Battery$1;
+const popBell = Bell$1;
+const popBellOff = BellOff$1;
+const popBicycle = Bicycle$1;
+const popBluetooth = Bluetooth$1;
+const popBook = Book$1;
+const popBookmark = Bookmark$1;
+const popBookmarkFilled = BookmarkFilled;
+const popBuilding = Building$1;
+const popCalculator = Calculator$1;
+const popCalendar = Calendar$1;
+const popCamera = Camera$1;
+const popCan = Can$1;
+const popCar = Car$1;
+const popCart = Cart$1;
+const popChain = Chain$1;
+const popCheckmark = Checkmark$1;
+const popCircle = Circle$1;
+const popCircleFilled = CircleFilled;
+const popClipboard = Clipboard$1;
+const popClock = Clock$1;
+const popCloud = Cloud$1;
+const popCloudDown = CloudDown$1;
+const popCloudDownFilled = CloudDownFilled;
+const popCloudFilled = CloudFilled;
+const popCloudUp = CloudUp$1;
+const popCloudUpFilled = CloudUpFilled;
+const popCoctail = Coctail$1;
+const popColorPicker = ColorPicker$1;
+const popContract = Contract$1;
+const popController = Controller$1;
+const popCreditCard = CreditCard$1;
+const popCrown = Crown$1;
+const popCup = Cup$1;
+const popDivision = Division$1;
+const popDotsX = DotsX$1;
+const popDotsY = DotsY$1;
+const popDress = Dress$1;
+const popDuplicate = Duplicate$1;
+const popElectricity = Electricity$1;
+const popEnter = Enter$1;
+const popExclamation = Exclamation$1;
+const popExclamationFilled = ExclamationFilled;
+const popExpand = Expand$1;
+const popEye = Eye$1;
+const popEyeClosed = EyeClosed$1;
+const popEyeOff = EyeOff$1;
+const popFile = File$1;
+const popFilmFrame = FilmFrame$1;
+const popFlag = Flag$1;
+const popFlower = Flower$1;
+const popFlowerBud = FlowerBud$1;
+const popFolder = Folder$1;
+const popGear = Gear$1;
+const popGift = Gift$1;
+const popGrab = Grab$1;
+const popHamburger = Hamburger$1;
+const popHash = Hash$1;
+const popHeadphone = Headphone$1;
+const popHeart = Heart$1;
+const popHouse = House$1;
+const popIdentification = Identification$1;
+const popInfo = Info$1;
+const popInfoFilled = InfoFilled;
+const popInternet = Internet$1;
+const popKey = Key$1;
+const popKniveFork = KniveFork$1;
+const popLabel = Label$1;
+const popLeave = Leave$1;
+const popLetter = Letter$1;
+const popList = List$1;
+const popLockClosed = LockClosed$1;
+const popLockOpen = LockOpen$1;
+const popLoop = Loop$1;
+const popLoopMinus = LoopMinus$1;
+const popLoopPlus = LoopPlus$1;
+const popMagnet = Magnet$1;
+const popMap = Map$1;
+const popMegaphone = Megaphone$1;
+const popMicrophone = Microphone$1;
+const popMinus = Minus$1;
+const popMonitor = Monitor$1;
+const popMonitor2 = Monitor2$1;
+const popMoon = Moon$1;
+const popMoonFilled = MoonFilled;
+const popMotorcycle = Motorcycle$1;
+const popMoveX = MoveX$1;
+const popMoveY = MoveY$1;
+const popMusicNoteDouble = MusicNoteDouble$1;
+const popMusicNoteSingle = MusicNoteSingle$1;
+const popOpen = Open$1;
+const popPaintPallet = PaintPallet$1;
+const popPen = Pen$1;
+const popPeople = People$1;
+const popPerson = Person$1;
+const popPersonCheckmark = PersonCheckmark$1;
+const popPersonFilled = PersonFilled;
+const popPersonPlus = PersonPlus$1;
+const popPersons = Persons$1;
+const popPhone = Phone$1;
+const popPhoto = Photo$1;
+const popPhotoCamera = PhotoCamera$1;
+const popPill = Pill$1;
+const popPinpoint = Pinpoint$1;
+const popPinpointFilled = PinpointFilled;
+const popPinpointOff = PinpointOff$1;
+const popPinpointOffFilled = PinpointOffFilled;
+const popPlus = Plus$1;
+const popPower = Power$1;
+const popPrinter = Printer$1;
+const popQrCode = QrCode$1;
+const popRefresh = Refresh$1;
+const popReload = Reload$1;
+const popScissors = Scissors$1;
+const popSend = Send$1;
+const popShareAndroid = ShareAndroid$1;
+const popShareIos = ShareIos$1;
+const popSmartphone = Smartphone$1;
+const popSmartphoneNotch = SmartphoneNotch$1;
+const popSmartphone2 = Smartphone2$1;
+const popSoftDrink = SoftDrink$1;
+const popSort = Sort$1;
+const popSpeakerHigh = SpeakerHigh$1;
+const popSpeakerLow = SpeakerLow$1;
+const popSpeakerOff = SpeakerOff$1;
+const popSquare = Square$1;
+const popSquareFilled = SquareFilled;
+const popStar = Star$1;
+const popStarFilled = StarFilled;
+const popSun = Sun$1;
+const popSunFilled = SunFilled;
+const popSyringe = Syringe$1;
+const popTShirt = TShirt$1;
+const popTaxi = Taxi$1;
+const popTelevision = Television$1;
+const popTextBubble = TextBubble$1;
+const popThumbsDown = ThumbsDown$1;
+const popThumbsUp = ThumbsUp$1;
+const popTimes = Times$1;
+const popTool = Tool$1;
+const popTrain = Train$1;
+const popTrash = Trash$1;
+const popTriangleDown = TriangleDown$1;
+const popTriangleDownFilled = TriangleDownFilled;
+const popTriangleLeft = TriangleLeft$1;
+const popTriangleLeftFilled = TriangleLeftFilled;
+const popTriangleRight = TriangleRight$1;
+const popTriangleRightFilled = TriangleRightFilled;
+const popTriangleUp = TriangleUp$1;
+const popTriangleUpFilled = TriangleUpFilled;
+const popTrophy = Trophy$1;
+const popTruck = Truck$1;
+const popUmbrella = Umbrella$1;
+const popWifi = Wifi$1;
 const pop = {
     'airplane': Airplane$1,
     'angle-down': AngleDown$1,
@@ -3836,6 +4009,158 @@ const Wifi = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 `;
 
 /** Do not edit! This file is auto-generated. */
+// ======= //
+/* EXPORTS */
+// ======= //
+const printAirplane = Airplane;
+const printAngleDown = AngleDown;
+const printAngleLeft = AngleLeft;
+const printAngleRight = AngleRight;
+const printAngleUp = AngleUp;
+const printArrowDown = ArrowDown;
+const printArrowDownLeft = ArrowDownLeft;
+const printArrowDownRight = ArrowDownRight;
+const printArrowLeft = ArrowLeft;
+const printArrowRight = ArrowRight;
+const printArrowUp = ArrowUp;
+const printArrowUpLeft = ArrowUpLeft;
+const printArrowUpRight = ArrowUpRight;
+const printBattery = Battery;
+const printBell = Bell;
+const printBellOff = BellOff;
+const printBicycle = Bicycle;
+const printBluetooth = Bluetooth;
+const printBook = Book;
+const printBookmark = Bookmark;
+const printBuilding = Building;
+const printCalculator = Calculator;
+const printCalendar = Calendar;
+const printCamera = Camera;
+const printCan = Can;
+const printCar = Car;
+const printCart = Cart;
+const printChain = Chain;
+const printCheckmark = Checkmark;
+const printCircle = Circle;
+const printClipboard = Clipboard;
+const printClock = Clock;
+const printCloud = Cloud;
+const printCloudDown = CloudDown;
+const printCloudUp = CloudUp;
+const printCoctail = Coctail;
+const printColorPicker = ColorPicker;
+const printContract = Contract;
+const printController = Controller;
+const printCreditCard = CreditCard;
+const printCrown = Crown;
+const printCup = Cup;
+const printDivision = Division;
+const printDotsX = DotsX;
+const printDotsY = DotsY;
+const printDress = Dress;
+const printDuplicate = Duplicate;
+const printElectricity = Electricity;
+const printEnter = Enter;
+const printExclamation = Exclamation;
+const printExpand = Expand;
+const printEye = Eye;
+const printEyeClosed = EyeClosed;
+const printEyeOff = EyeOff;
+const printFile = File;
+const printFilmFrame = FilmFrame;
+const printFlag = Flag;
+const printFlower = Flower;
+const printFlowerBud = FlowerBud;
+const printFolder = Folder;
+const printGear = Gear;
+const printGift = Gift;
+const printGrab = Grab;
+const printHamburger = Hamburger;
+const printHash = Hash;
+const printHeadphone = Headphone;
+const printHeart = Heart;
+const printHouse = House;
+const printIdentification = Identification;
+const printInfo = Info;
+const printInternet = Internet;
+const printKey = Key;
+const printKniveFork = KniveFork;
+const printLabel = Label;
+const printLeave = Leave;
+const printLetter = Letter;
+const printList = List;
+const printLockClosed = LockClosed;
+const printLockOpen = LockOpen;
+const printLoop = Loop;
+const printLoopMinus = LoopMinus;
+const printLoopPlus = LoopPlus;
+const printMagnet = Magnet;
+const printMap = Map;
+const printMegaphone = Megaphone;
+const printMicrophone = Microphone;
+const printMinus = Minus;
+const printMonitor = Monitor;
+const printMonitor2 = Monitor2;
+const printMoon = Moon;
+const printMotorcycle = Motorcycle;
+const printMoveX = MoveX;
+const printMoveY = MoveY;
+const printMusicNoteDouble = MusicNoteDouble;
+const printMusicNoteSingle = MusicNoteSingle;
+const printOpen = Open;
+const printPaintPallet = PaintPallet;
+const printPen = Pen;
+const printPeople = People;
+const printPerson = Person;
+const printPersonCheckmark = PersonCheckmark;
+const printPersonPlus = PersonPlus;
+const printPersons = Persons;
+const printPhone = Phone;
+const printPhoto = Photo;
+const printPhotoCamera = PhotoCamera;
+const printPill = Pill;
+const printPinpoint = Pinpoint;
+const printPinpointOff = PinpointOff;
+const printPlus = Plus;
+const printPower = Power;
+const printPrinter = Printer;
+const printQrCode = QrCode;
+const printRefresh = Refresh;
+const printReload = Reload;
+const printScissors = Scissors;
+const printSend = Send;
+const printShareAndroid = ShareAndroid;
+const printShareIos = ShareIos;
+const printSmartphone = Smartphone;
+const printSmartphoneNotch = SmartphoneNotch;
+const printSmartphone2 = Smartphone2;
+const printSoftDrink = SoftDrink;
+const printSort = Sort;
+const printSpeakerHigh = SpeakerHigh;
+const printSpeakerLow = SpeakerLow;
+const printSpeakerOff = SpeakerOff;
+const printSquare = Square;
+const printStar = Star;
+const printSun = Sun;
+const printSyringe = Syringe;
+const printTShirt = TShirt;
+const printTaxi = Taxi;
+const printTelevision = Television;
+const printTextBubble = TextBubble;
+const printThumbsDown = ThumbsDown;
+const printThumbsUp = ThumbsUp;
+const printTimes = Times;
+const printTool = Tool;
+const printTrain = Train;
+const printTrash = Trash;
+const printTriangleDown = TriangleDown;
+const printTriangleLeft = TriangleLeft;
+const printTriangleRight = TriangleRight;
+const printTriangleUp = TriangleUp;
+const printTrophy = Trophy;
+const printTruck = Truck;
+const printUmbrella = Umbrella;
+const printWifi = Wifi;
 const print = {
     'airplane': Airplane,
     'angle-down': AngleDown,
@@ -4039,41 +4364,51 @@ function textToRgba(color) {
  * Returns a Pepicon SVG as a string so you can inject it into your HTML.
  *
  * The icon name as per the reference at https://pepicons.com
- * @param options options
- * @returns {string} The SVG content as string
+ * @returns The SVG content as string
  */
-function pepiconSvgString(options) {
-    const { name, type, color, opacity, size, stroke } = options || {};
-    let svgString = type === 'pop' ? pop[name] : print[name];
+function getPepicon(payload) {
+    const { name, type } = payload || {};
+    const svgString = type === 'pop' ? pop[name] : print[name];
     if (!svgString) {
-        console.error(`Pepicon ${name} of type ${type} not found!`);
+        console.warn(`Pepicon ${name} of type ${type} not found! (returned an empty string instead)`);
         return '';
     }
-    if (!/style="/.test(svgString)) {
-        svgString = svgString.replace('<svg ', '<svg style="" ');
+    return svgString;
+}
+/**
+ * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+ *
+ * The icon name as per the reference at https://pepicons.com
+ * @returns The SVG content as string
+ */
+function morphPepicon(payload) {
+    let svg = payload.svg;
+    const { type, color, opacity, size, stroke } = payload || {};
+    if (!/style="/.test(svg)) {
+        svg = svg.replace('<svg ', '<svg style="" ');
     }
     if (stroke) {
-        svgString = svgString.replace(/#000000|#000|black/g, stroke);
+        svg = svg.replace(/#000000|#000|black/g, stroke);
     }
     const rgbOrHexColor = (color === null || color === void 0 ? void 0 : color.startsWith('rgb')) || (color === null || color === void 0 ? void 0 : color.startsWith('#'));
     if (color && !rgbOrHexColor) {
-        svgString = svgString.replace(/style="/, `style="color:${color};`);
+        svg = svg.replace(/style="/, `style="color:${color};`);
     }
     let _opacity = opacity;
     if (color && rgbOrHexColor) {
         const { r, g, b, a } = textToRgba(color);
         const _color = `rgb(${r},${g},${b})`;
-        svgString = svgString.replace(/style="/, `style="color:${_color};`);
+        svg = svg.replace(/style="/, `style="color:${_color};`);
         if (opacity === undefined) {
             _opacity = a === undefined ? 1 : a / 100;
         }
     }
     if (_opacity !== undefined && _opacity < 1) {
         if (type === 'pop') {
-            svgString = svgString.replace(/style="/, `style="opacity:${_opacity};`);
+            svg = svg.replace(/style="/, `style="opacity:${_opacity};`);
         }
         else {
-            svgString = svgString.replace(/opacity="\.8"/g, `opacity="${_opacity}"`);
+            svg = svg.replace(/opacity="\.8"/g, `opacity="${_opacity}"`);
         }
     }
     if (size || size === 0) {
@@ -4088,11 +4423,21 @@ function pepiconSvgString(options) {
                         : typeof size === 'number'
                             ? `${size}px`
                             : size;
-        svgString = svgString
+        svg = svg
             .replace(/style="/, `style="width:${_size};height:${_size};`)
             .replace(/width="[0-9]+" height="[0-9]+"/, `width="${_size}" height="${_size}"`);
     }
-    return svgString;
+    return svg;
+}
+/**
+ * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+ *
+ * The icon name as per the reference at https://pepicons.com
+ * @returns The SVG content as string
+ */
+function pepiconSvgString(payload) {
+    const svg = getPepicon(payload);
+    return morphPepicon(Object.assign(Object.assign({}, payload), { svg }));
 }
 
-export { categories, pepiconCategoryDic, pepiconSvgString, pop, print, synonyms$1 as synonyms, synonyms as synonymsJa };
+export { categories, getPepicon, morphPepicon, pepiconArray, pepiconCategoryDic, pepiconSvgString, pop, popAirplane, popAngleDown, popAngleLeft, popAngleRight, popAngleUp, popArrowDown, popArrowDownLeft, popArrowDownRight, popArrowLeft, popArrowRight, popArrowUp, popArrowUpLeft, popArrowUpRight, popBattery, popBell, popBellOff, popBicycle, popBluetooth, popBook, popBookmark, popBookmarkFilled, popBuilding, popCalculator, popCalendar, popCamera, popCan, popCar, popCart, popChain, popCheckmark, popCircle, popCircleFilled, popClipboard, popClock, popCloud, popCloudDown, popCloudDownFilled, popCloudFilled, popCloudUp, popCloudUpFilled, popCoctail, popColorPicker, popContract, popController, popCreditCard, popCrown, popCup, popDivision, popDotsX, popDotsY, popDress, popDuplicate, popElectricity, popEnter, popExclamation, popExclamationFilled, popExpand, popEye, popEyeClosed, popEyeOff, popFile, popFilmFrame, popFlag, popFlower, popFlowerBud, popFolder, popGear, popGift, popGrab, popHamburger, popHash, popHeadphone, popHeart, popHouse, popIdentification, popInfo, popInfoFilled, popInternet, popKey, popKniveFork, popLabel, popLeave, popLetter, popList, popLockClosed, popLockOpen, popLoop, popLoopMinus, popLoopPlus, popMagnet, popMap, popMegaphone, popMicrophone, popMinus, popMonitor, popMonitor2, popMoon, popMoonFilled, popMotorcycle, popMoveX, popMoveY, popMusicNoteDouble, popMusicNoteSingle, popOpen, popPaintPallet, popPen, popPeople, popPerson, popPersonCheckmark, popPersonFilled, popPersonPlus, popPersons, popPhone, popPhoto, popPhotoCamera, popPill, popPinpoint, popPinpointFilled, popPinpointOff, popPinpointOffFilled, popPlus, popPower, popPrinter, popQrCode, popRefresh, popReload, popScissors, popSend, popShareAndroid, popShareIos, popSmartphone, popSmartphone2, popSmartphoneNotch, popSoftDrink, popSort, popSpeakerHigh, popSpeakerLow, popSpeakerOff, popSquare, popSquareFilled, popStar, popStarFilled, popSun, popSunFilled, popSyringe, popTShirt, popTaxi, popTelevision, popTextBubble, popThumbsDown, popThumbsUp, popTimes, popTool, popTrain, popTrash, popTriangleDown, popTriangleDownFilled, popTriangleLeft, popTriangleLeftFilled, popTriangleRight, popTriangleRightFilled, popTriangleUp, popTriangleUpFilled, popTrophy, popTruck, popUmbrella, popWifi, print, printAirplane, printAngleDown, printAngleLeft, printAngleRight, printAngleUp, printArrowDown, printArrowDownLeft, printArrowDownRight, printArrowLeft, printArrowRight, printArrowUp, printArrowUpLeft, printArrowUpRight, printBattery, printBell, printBellOff, printBicycle, printBluetooth, printBook, printBookmark, printBuilding, printCalculator, printCalendar, printCamera, printCan, printCar, printCart, printChain, printCheckmark, printCircle, printClipboard, printClock, printCloud, printCloudDown, printCloudUp, printCoctail, printColorPicker, printContract, printController, printCreditCard, printCrown, printCup, printDivision, printDotsX, printDotsY, printDress, printDuplicate, printElectricity, printEnter, printExclamation, printExpand, printEye, printEyeClosed, printEyeOff, printFile, printFilmFrame, printFlag, printFlower, printFlowerBud, printFolder, printGear, printGift, printGrab, printHamburger, printHash, printHeadphone, printHeart, printHouse, printIdentification, printInfo, printInternet, printKey, printKniveFork, printLabel, printLeave, printLetter, printList, printLockClosed, printLockOpen, printLoop, printLoopMinus, printLoopPlus, printMagnet, printMap, printMegaphone, printMicrophone, printMinus, printMonitor, printMonitor2, printMoon, printMotorcycle, printMoveX, printMoveY, printMusicNoteDouble, printMusicNoteSingle, printOpen, printPaintPallet, printPen, printPeople, printPerson, printPersonCheckmark, printPersonPlus, printPersons, printPhone, printPhoto, printPhotoCamera, printPill, printPinpoint, printPinpointOff, printPlus, printPower, printPrinter, printQrCode, printRefresh, printReload, printScissors, printSend, printShareAndroid, printShareIos, printSmartphone, printSmartphone2, printSmartphoneNotch, printSoftDrink, printSort, printSpeakerHigh, printSpeakerLow, printSpeakerOff, printSquare, printStar, printSun, printSyringe, printTShirt, printTaxi, printTelevision, printTextBubble, printThumbsDown, printThumbsUp, printTimes, printTool, printTrain, printTrash, printTriangleDown, printTriangleLeft, printTriangleRight, printTriangleUp, printTrophy, printTruck, printUmbrella, printWifi, synonyms$1 as synonyms, synonyms as synonymsJa };

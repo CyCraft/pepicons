@@ -1,7 +1,9 @@
 /** Do not edit! This file is auto-generated. */
 
+  // ======= //
+ /* IMPORTS */
+// ======= //
 import { PepiconPrint } from '../types'
-
 import Airplane from './print/airplane'
 import AngleDown from './print/angle-down'
 import AngleLeft from './print/angle-left'
@@ -151,6 +153,160 @@ import Trophy from './print/trophy'
 import Truck from './print/truck'
 import Umbrella from './print/umbrella'
 import Wifi from './print/wifi'
+
+
+  // ======= //
+ /* EXPORTS */
+// ======= //
+export const printAirplane = Airplane
+export const printAngleDown = AngleDown
+export const printAngleLeft = AngleLeft
+export const printAngleRight = AngleRight
+export const printAngleUp = AngleUp
+export const printArrowDown = ArrowDown
+export const printArrowDownLeft = ArrowDownLeft
+export const printArrowDownRight = ArrowDownRight
+export const printArrowLeft = ArrowLeft
+export const printArrowRight = ArrowRight
+export const printArrowUp = ArrowUp
+export const printArrowUpLeft = ArrowUpLeft
+export const printArrowUpRight = ArrowUpRight
+export const printBattery = Battery
+export const printBell = Bell
+export const printBellOff = BellOff
+export const printBicycle = Bicycle
+export const printBluetooth = Bluetooth
+export const printBook = Book
+export const printBookmark = Bookmark
+export const printBuilding = Building
+export const printCalculator = Calculator
+export const printCalendar = Calendar
+export const printCamera = Camera
+export const printCan = Can
+export const printCar = Car
+export const printCart = Cart
+export const printChain = Chain
+export const printCheckmark = Checkmark
+export const printCircle = Circle
+export const printClipboard = Clipboard
+export const printClock = Clock
+export const printCloud = Cloud
+export const printCloudDown = CloudDown
+export const printCloudUp = CloudUp
+export const printCoctail = Coctail
+export const printColorPicker = ColorPicker
+export const printContract = Contract
+export const printController = Controller
+export const printCreditCard = CreditCard
+export const printCrown = Crown
+export const printCup = Cup
+export const printDivision = Division
+export const printDotsX = DotsX
+export const printDotsY = DotsY
+export const printDress = Dress
+export const printDuplicate = Duplicate
+export const printElectricity = Electricity
+export const printEnter = Enter
+export const printExclamation = Exclamation
+export const printExpand = Expand
+export const printEye = Eye
+export const printEyeClosed = EyeClosed
+export const printEyeOff = EyeOff
+export const printFile = File
+export const printFilmFrame = FilmFrame
+export const printFlag = Flag
+export const printFlower = Flower
+export const printFlowerBud = FlowerBud
+export const printFolder = Folder
+export const printGear = Gear
+export const printGift = Gift
+export const printGrab = Grab
+export const printHamburger = Hamburger
+export const printHash = Hash
+export const printHeadphone = Headphone
+export const printHeart = Heart
+export const printHouse = House
+export const printIdentification = Identification
+export const printInfo = Info
+export const printInternet = Internet
+export const printKey = Key
+export const printKniveFork = KniveFork
+export const printLabel = Label
+export const printLeave = Leave
+export const printLetter = Letter
+export const printList = List
+export const printLockClosed = LockClosed
+export const printLockOpen = LockOpen
+export const printLoop = Loop
+export const printLoopMinus = LoopMinus
+export const printLoopPlus = LoopPlus
+export const printMagnet = Magnet
+export const printMap = Map
+export const printMegaphone = Megaphone
+export const printMicrophone = Microphone
+export const printMinus = Minus
+export const printMonitor = Monitor
+export const printMonitor2 = Monitor2
+export const printMoon = Moon
+export const printMotorcycle = Motorcycle
+export const printMoveX = MoveX
+export const printMoveY = MoveY
+export const printMusicNoteDouble = MusicNoteDouble
+export const printMusicNoteSingle = MusicNoteSingle
+export const printOpen = Open
+export const printPaintPallet = PaintPallet
+export const printPen = Pen
+export const printPeople = People
+export const printPerson = Person
+export const printPersonCheckmark = PersonCheckmark
+export const printPersonPlus = PersonPlus
+export const printPersons = Persons
+export const printPhone = Phone
+export const printPhoto = Photo
+export const printPhotoCamera = PhotoCamera
+export const printPill = Pill
+export const printPinpoint = Pinpoint
+export const printPinpointOff = PinpointOff
+export const printPlus = Plus
+export const printPower = Power
+export const printPrinter = Printer
+export const printQrCode = QrCode
+export const printRefresh = Refresh
+export const printReload = Reload
+export const printScissors = Scissors
+export const printSend = Send
+export const printShareAndroid = ShareAndroid
+export const printShareIos = ShareIos
+export const printSmartphone = Smartphone
+export const printSmartphoneNotch = SmartphoneNotch
+export const printSmartphone2 = Smartphone2
+export const printSoftDrink = SoftDrink
+export const printSort = Sort
+export const printSpeakerHigh = SpeakerHigh
+export const printSpeakerLow = SpeakerLow
+export const printSpeakerOff = SpeakerOff
+export const printSquare = Square
+export const printStar = Star
+export const printSun = Sun
+export const printSyringe = Syringe
+export const printTShirt = TShirt
+export const printTaxi = Taxi
+export const printTelevision = Television
+export const printTextBubble = TextBubble
+export const printThumbsDown = ThumbsDown
+export const printThumbsUp = ThumbsUp
+export const printTimes = Times
+export const printTool = Tool
+export const printTrain = Train
+export const printTrash = Trash
+export const printTriangleDown = TriangleDown
+export const printTriangleLeft = TriangleLeft
+export const printTriangleRight = TriangleRight
+export const printTriangleUp = TriangleUp
+export const printTrophy = Trophy
+export const printTruck = Truck
+export const printUmbrella = Umbrella
+export const printWifi = Wifi
 
 
 export const print: { [name in PepiconPrint]: string } = {
