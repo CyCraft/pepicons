@@ -5,7 +5,7 @@
     "esModuleInterop": true,
     "baseUrl": ".",
     "declaration": true,
-    "declarationDir": "./types/",
+    "declarationDir": "./dist/types/",
     "types": []
   },
   "include": ["./index.ts", "./src/**/*.ts", "./src/*.ts"],

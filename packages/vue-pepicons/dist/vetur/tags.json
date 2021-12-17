@@ -9,5 +9,16 @@
       "size"
     ],
     "description": ""
+  },
+  "Pepicon": {
+    "attributes": [
+      "name",
+      "type",
+      "color",
+      "opacity",
+      "stroke",
+      "size"
+    ],
+    "description": ""
   }
 }

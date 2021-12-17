@@ -20,15 +20,15 @@
     }
   },
   "scripts": {
-    "_vue-int": "vue-int -i src/Pepicon.vue -o dist/vetur",
-    "_vue-tsc": "vue-tsc --declaration --emitDeclarationOnly",
-    "build": "rimraf dist && vite build && npm run _vue-tsc && npm run _vue-int"
+    "gen:types:vetur": "vue-int -i src/Pepicon.vue -o dist/vetur",
+    "gen:types:ts": "vue-tsc --declaration --emitDeclarationOnly",
+    "build": "rimraf dist && vite build && npm run gen:types:ts && npm run gen:types:vetur"
   },
   "peerDependencies": {
-    "vue": "^3.2.0"
+    "vue": "^3.2.26"
   },
   "dependencies": {
-    "pepicons": "^0.2.1"
+    "pepicons": "^1.0.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.1",
@@ -36,7 +36,7 @@
     "typescript": "^4.5.4",
     "vite": "^2.7.3",
     "vue": "^3.2.26",
-    "vue-intellisense": "^0.2.1",
+    "vue-intellisense": "^0.3.0",
     "vue-tsc": "^0.29.8"
   },
   "homepage": "https://github.com/cycraft/pepicons",

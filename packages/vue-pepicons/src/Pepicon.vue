@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'
-import { Pepicon, pepiconSvgString } from 'pepicons'
+import { Pepicon, pepiconSvgString, pepiconArray } from 'pepicons'
 
 export default defineComponent({
   name: 'Pepicon',
@@ -24,6 +24,7 @@ export default defineComponent({
     name: {
       type: String as PropType<Pepicon>,
       required: true,
+      validator: (val: Pepicon) => pepiconArray.includes(val),
     },
     /**
      * Either 'pop' or 'print'

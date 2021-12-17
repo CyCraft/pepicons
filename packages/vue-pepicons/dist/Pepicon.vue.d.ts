@@ -8,6 +8,7 @@ declare const _default: import("vue").DefineComponent<{
     name: {
         type: PropType<Pepicon>;
         required: true;
+        validator: (val: Pepicon) => boolean;
     };
     /**
      * Either 'pop' or 'print'

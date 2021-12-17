@@ -63,4 +63,4 @@ export declare function morphPepicon(payload: MorphPepiconPayload): string;
  * The icon name as per the reference at https://pepicons.com
  * @returns The SVG content as string
  */
-export declare function pepiconSvgString(payload: GetPepiconPayload & MorphPepiconPayload): string;
+export declare function pepiconSvgString(payload: GetPepiconPayload & Omit<MorphPepiconPayload, 'svg'>): string;

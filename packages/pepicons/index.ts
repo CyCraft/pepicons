@@ -125,7 +125,9 @@ export function morphPepicon(payload: MorphPepiconPayload): string {
  * The icon name as per the reference at https://pepicons.com
  * @returns The SVG content as string
  */
-export function pepiconSvgString(payload: GetPepiconPayload & MorphPepiconPayload): string {
+export function pepiconSvgString(
+  payload: GetPepiconPayload & Omit<MorphPepiconPayload, 'svg'>,
+): string {
   const svg = getPepicon(payload)
   return morphPepicon({ ...payload, svg })
 }
