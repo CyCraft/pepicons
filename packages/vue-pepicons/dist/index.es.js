@@ -1,6 +1,14 @@
 import { defineComponent, openBlock, createElementBlock } from "vue";
 import { pepiconSvgString } from "pepicons";
-var script = defineComponent({
+var Pepicon_vue_vue_type_style_index_0_lang = "";
+var _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+const _sfc_main = defineComponent({
   name: "Pepicon",
   props: {
     name: {
@@ -24,12 +32,11 @@ var script = defineComponent({
   }
 });
 const _hoisted_1 = ["innerHTML"];
-function render(_ctx, _cache, $props, $setup, $data, $options) {
+function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
     class: "pepicon",
     innerHTML: _ctx.svg
   }, null, 8, _hoisted_1);
 }
-var Pepicon_vue_vue_type_style_index_0_id_04006e8d_lang = "";
-script.render = render;
-export { script as Pepicon };
+var Pepicon = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+export { Pepicon };

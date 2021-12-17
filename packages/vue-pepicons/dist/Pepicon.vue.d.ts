@@ -3,7 +3,6 @@ import { Pepicon } from 'pepicons';
 declare const _default: import("vue").DefineComponent<{
     /**
      * The icon name as per the reference at https://pepicons.com
-     * @type {Pepicon}
      * @example 'airplane'
      */
     name: {

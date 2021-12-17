@@ -1,4 +1,4 @@
-const vue = require('rollup-plugin-vue')
+const vue = require('@vitejs/plugin-vue')
 const path = require('path')
 const { defineConfig } = require('vite')
 const pkg = require('./package.json')
