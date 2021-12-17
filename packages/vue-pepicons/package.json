@@ -1,6 +1,6 @@
 {
   "name": "vue-pepicons",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
@@ -47,7 +47,7 @@
   },
   "bugs": "https://github.com/cycraft/pepicons/issues",
   "vetur": {
-    "tags": "vetur/tags.json",
-    "attributes": "vetur/attributes.json"
+    "tags": "dist/vetur/tags.json",
+    "attributes": "dist/vetur/attributes.json"
   }
 }
