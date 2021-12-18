@@ -1,6 +1,6 @@
 import { defineComponent, openBlock, createElementBlock } from "vue";
 import { pepiconArray, pepiconSvgString } from "pepicons";
-export { PepiconName, pepiconArray } from "pepicons";
+export { pepiconArray } from "pepicons";
 var Pepicon_vue_vue_type_style_index_0_lang = "";
 var _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
