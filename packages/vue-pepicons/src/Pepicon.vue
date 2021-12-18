@@ -1,14 +1,13 @@
 <template>
-  <div class="pepicon" v-html="svg" />
+  <div
+    :style="{
+      'display': 'flex',
+      'justify-content': 'center',
+      'align-items': 'center',
+    }"
+    v-html="svg"
+  />
 </template>
-
-<style>
-.pepicon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-</style>
 
 <script lang="ts">
 import { defineComponent, PropType } from 'vue'

@@ -1,7 +1,6 @@
 import { defineComponent, openBlock, createElementBlock } from "vue";
 import { pepiconArray, pepiconSvgString } from "pepicons";
 export { pepiconArray } from "pepicons";
-var Pepicon_vue_vue_type_style_index_0_lang = "";
 var _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -36,7 +35,11 @@ const _sfc_main = defineComponent({
 const _hoisted_1 = ["innerHTML"];
 function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
   return openBlock(), createElementBlock("div", {
-    class: "pepicon",
+    style: {
+      "display": "flex",
+      "justify-content": "center",
+      "align-items": "center"
+    },
     innerHTML: _ctx.svg
   }, null, 8, _hoisted_1);
 }
