@@ -1,6 +1,6 @@
 import { defineComponent, openBlock, createElementBlock } from "vue";
 import { pepiconArray, pepiconSvgString } from "pepicons";
-export { Pepicon as PepiconName, pepiconArray } from "pepicons";
+export { PepiconName, pepiconArray } from "pepicons";
 var Pepicon_vue_vue_type_style_index_0_lang = "";
 var _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
@@ -40,5 +40,5 @@ function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
     innerHTML: _ctx.svg
   }, null, 8, _hoisted_1);
 }
-var Pepicon2 = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
-export { Pepicon2 as Pepicon };
+var Pepicon = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
+export { Pepicon };
