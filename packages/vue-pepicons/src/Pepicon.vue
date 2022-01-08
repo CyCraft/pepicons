@@ -9,42 +9,37 @@
   />
 </template>
 
-<script lang="ts">
-import { defineComponent, PropType } from 'vue'
-import { Pepicon, pepiconSvgString, pepiconArray } from 'pepicons'
+<script lang="ts" setup>
+import { defineComponent, computed } from 'vue'
+import { Pepicon, pepiconSvgString } from 'pepicons'
 
-export default defineComponent({
-  name: 'Pepicon',
-  props: {
+const props = withDefaults(
+  defineProps<{
     /**
      * The icon name as per the reference at https://pepicons.com
      * @example 'airplane'
      */
-    name: {
-      type: String as PropType<Pepicon>,
-      required: true,
-      validator: (val: Pepicon) => pepiconArray.includes(val),
-    },
+    name: Pepicon
     /**
      * Either 'pop' or 'print'
      */
-    type: { type: String as PropType<'pop' | 'print'>, default: 'print' },
+    type?: 'pop' | 'print'
     /**
      * You can pass a hex or rgba color, this is applied to the svg tag
      *
      * (you can also just manually apply a color via style or a class)
      */
-    color: { type: String },
+    color?: string
     /**
      * A number between 0 and 1; where 0 is transparent
      * - in "pop" style: opacity will be set to the entire icon
      * - in "print" style: opacity will be set to the colored drop shadow
      */
-    opacity: { type: Number },
+    opacity?: number
     /**
      * The stroke color is only applied on 'print' type icons and is black by default
      */
-    stroke: { type: String, default: 'black' },
+    stroke?: string
     /**
      * When you pass a size, it's applied via the style attribute.
      * - 'sm' / 'md' / 'lg' / 'xl' which becomes 20 / 24 / 30 / 36 px
@@ -54,16 +49,25 @@ export default defineComponent({
      * (you can also just manually apply a width & height via style or a class)
      * @type { 'sm' | 'md' | 'lg' | 'xl' | number | string }
      */
-    size: {
-      type: [String, Number] as PropType<'sm' | 'md' | 'lg' | 'xl' | number | string>,
-      default: 'md',
-    },
+    size?: 'sm' | 'md' | 'lg' | 'xl' | number | string
+  }>(),
+  {
+    type: 'print',
+    stroke: 'black',
+    size: 'md',
   },
-  computed: {
-    svg(): string {
-      const { name, type, color, opacity, size, stroke } = this
-      return pepiconSvgString({ name, type, color, opacity, size, stroke })
-    },
-  },
+)
+
+defineComponent({ name: 'Pepicon' })
+
+const svg = computed(() => {
+  return pepiconSvgString({
+    name: props.name,
+    type: props.type,
+    color: props.color,
+    opacity: props.opacity,
+    size: props.size,
+    stroke: props.stroke,
+  })
 })
 </script>

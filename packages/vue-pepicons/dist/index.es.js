@@ -1,47 +1,39 @@
-import { defineComponent, openBlock, createElementBlock } from "vue";
-import { pepiconArray, pepiconSvgString } from "pepicons";
+import { defineComponent, computed, openBlock, createElementBlock, unref } from "vue";
+import { pepiconSvgString } from "pepicons";
 export { pepiconArray } from "pepicons";
-var _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
-  }
-  return target;
-};
-const _sfc_main = defineComponent({
-  name: "Pepicon",
+const _hoisted_1 = ["innerHTML"];
+const _sfc_main = /* @__PURE__ */ defineComponent({
   props: {
-    name: {
-      type: String,
-      required: true,
-      validator: (val) => pepiconArray.includes(val)
-    },
-    type: { type: String, default: "print" },
-    color: { type: String },
-    opacity: { type: Number },
-    stroke: { type: String, default: "black" },
-    size: {
-      type: [String, Number],
-      default: "md"
-    }
+    name: null,
+    type: { default: "print" },
+    color: null,
+    opacity: null,
+    stroke: { default: "black" },
+    size: { default: "md" }
   },
-  computed: {
-    svg() {
-      const { name, type, color, opacity, size, stroke } = this;
-      return pepiconSvgString({ name, type, color, opacity, size, stroke });
-    }
+  setup(__props) {
+    const props = __props;
+    defineComponent({ name: "Pepicon" });
+    const svg = computed(() => {
+      return pepiconSvgString({
+        name: props.name,
+        type: props.type,
+        color: props.color,
+        opacity: props.opacity,
+        size: props.size,
+        stroke: props.stroke
+      });
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", {
+        style: {
+          "display": "flex",
+          "justify-content": "center",
+          "align-items": "center"
+        },
+        innerHTML: unref(svg)
+      }, null, 8, _hoisted_1);
+    };
   }
 });
-const _hoisted_1 = ["innerHTML"];
-function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-  return openBlock(), createElementBlock("div", {
-    style: {
-      "display": "flex",
-      "justify-content": "center",
-      "align-items": "center"
-    },
-    innerHTML: _ctx.svg
-  }, null, 8, _hoisted_1);
-}
-var Pepicon = /* @__PURE__ */ _export_sfc(_sfc_main, [["render", _sfc_render]]);
-export { Pepicon };
+export { _sfc_main as Pepicon };

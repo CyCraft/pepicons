@@ -1,24 +1,10 @@
 {
   "pepicon": {
-    "attributes": [
-      "name",
-      "type",
-      "color",
-      "opacity",
-      "stroke",
-      "size"
-    ],
+    "attributes": [],
     "description": ""
   },
   "Pepicon": {
-    "attributes": [
-      "name",
-      "type",
-      "color",
-      "opacity",
-      "stroke",
-      "size"
-    ],
+    "attributes": [],
     "description": ""
   }
 }
