@@ -16,22 +16,22 @@
   },
   "dependencies": {
     "@quasar/extras": "^1.12.2",
-    "@vue/composition-api": "^0.6.7",
+    "@vue/composition-api": "^1.4.3",
     "copy-text-to-clipboard": "^3.0.1",
-    "core-js": "^3.20.0",
+    "core-js": "^3.20.2",
     "fast-sort": "^3.1.1",
-    "is-what": "^3.14.1",
-    "pepicons": "^0.2.1",
+    "is-what": "^4.1.0",
+    "pepicons": "^1.0.9",
     "planetar": "^0.7.17",
-    "quasar": "^1.16.3",
+    "quasar": "^1.17.1",
     "raw-loader": "^4.0.2",
     "roll-anything": "^2.0.0",
-    "three": "^0.135.0",
+    "three": "^0.136.0",
     "vivify.css": "^0.0.0",
-    "vue-pepicons": "^0.2.2"
+    "vue-pepicons": "^1.0.9"
   },
   "devDependencies": {
-    "@quasar/app": "^2.2.10"
+    "@quasar/app": "^2.2.11"
   },
   "browserslist": [
     "last 10 Chrome versions",
