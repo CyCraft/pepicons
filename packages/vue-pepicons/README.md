@@ -1,5 +1,7 @@
 ![hero](https://github.com/CyCraft/pepicons/raw/dev/media/pepicons-hero.png?raw=true)
 
+> @deprecated — use [@pepicons/vue](https://npmjs.com/@pepicons/vue) instead
+
 # vue-pepicons (Vue 3)
 
 Pepicons is an icon-set of over one hundred retro icons inspired by the 80's.
