@@ -1,6 +1,6 @@
 {
   "name": "vue-pepicons",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
@@ -28,7 +28,7 @@
     "vue": "^3.2.29"
   },
   "dependencies": {
-    "pepicons": "^1.0.10"
+    "pepicons": "^1.0.11"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.1.0",
@@ -48,5 +48,6 @@
   "vetur": {
     "tags": "dist/vetur/tags.json",
     "attributes": "dist/vetur/attributes.json"
-  }
+  },
+  "gitHead": "66e66f190186b07b479f78282645871be1bd4d14"
 }

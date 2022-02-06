@@ -1,6 +1,6 @@
 {
   "name": "pepicons",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "sideEffects": false,
   "description": "Retro icon set",
   "productName": "Pepicons",
@@ -27,5 +27,6 @@
     "rimraf": "^3.0.2",
     "rollup": "^2.67.0",
     "rollup-plugin-typescript2": "^0.31.2"
-  }
+  },
+  "gitHead": "66e66f190186b07b479f78282645871be1bd4d14"
 }
