@@ -28,7 +28,7 @@
     "vue": "^3.2.29"
   },
   "dependencies": {
-    "pepicons": "^1.0.9"
+    "pepicons": "^1.0.10"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.1.0",
