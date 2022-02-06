@@ -15,6 +15,7 @@
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@pepicons/vue": "^1.0.11",
     "@quasar/extras": "^1.12.5",
     "@vue/composition-api": "^0.6.7",
     "copy-text-to-clipboard": "^3.0.1",
@@ -27,8 +28,7 @@
     "raw-loader": "^4.0.2",
     "roll-anything": "^2.0.2",
     "three": "^0.137.5",
-    "vivify.css": "^0.0.0",
-    "vue-pepicons": "^0.2.2"
+    "vivify.css": "^0.0.0"
   },
   "devDependencies": {
     "@quasar/app": "^2.2.11"

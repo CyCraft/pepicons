@@ -151,7 +151,7 @@
 <script lang="ts">
 import { defineComponent, computed, reactive, PropType } from '@vue/composition-api'
 import { pepiconSvgString } from 'pepicons'
-import { Pepicon } from 'vue-pepicons'
+import { Pepicon } from '@pepicons/vue'
 import { CodeBlock } from 'planetar'
 import copyToClipboard from 'copy-text-to-clipboard'
 import IconButton from '../atoms/IconButton.vue'
@@ -176,7 +176,7 @@ function generateVueCode(iconName: string, config: IconConfig): string {
 </template>
 
 <script lang="js">
-import { Pepicon } from 'vue-pepicons'
+import { Pepicon } from '@pepicons/vue'
 
 export default {
   components: { Pepicon }

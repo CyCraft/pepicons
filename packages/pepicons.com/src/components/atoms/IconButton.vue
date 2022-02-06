@@ -38,7 +38,7 @@
 </style>
 
 <script lang="ts">
-import { Pepicon } from 'vue-pepicons'
+import { Pepicon } from '@pepicons/vue'
 import ColorRingSvg from './ColorRingSvg.vue'
 import {
   defineComponent,

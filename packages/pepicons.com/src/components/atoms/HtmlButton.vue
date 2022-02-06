@@ -19,7 +19,7 @@
 </style>
 
 <script>
-import { Pepicon } from 'vue-pepicons'
+import { Pepicon } from '@pepicons/vue'
 
 export default {
   name: 'HtmlButton',

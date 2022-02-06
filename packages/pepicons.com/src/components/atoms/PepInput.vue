@@ -33,7 +33,7 @@
 
 <script lang="ts">
 import { QInput } from 'quasar'
-import { Pepicon } from 'vue-pepicons'
+import { Pepicon } from '@pepicons/vue'
 import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
 import { defaultsIconConfig, IconConfig } from '../../types'
 

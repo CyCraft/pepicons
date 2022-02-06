@@ -39,7 +39,7 @@
 <script lang="ts">
 import { computed, defineComponent, PropType } from '@vue/composition-api'
 import { Pepicon as PepiconType, synonyms } from 'pepicons'
-import { Pepicon } from 'vue-pepicons'
+import { Pepicon } from '@pepicons/vue'
 import { cleanupForSearch } from '../../helpers/search'
 import { defaultsIconConfig, IconConfig } from '../../types'
 

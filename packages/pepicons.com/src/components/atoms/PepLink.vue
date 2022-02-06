@@ -73,7 +73,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType, computed, ref, toRef, Ref } from '@vue/composition-api'
-import { Pepicon } from 'vue-pepicons'
+import { Pepicon } from '@pepicons/vue'
 import CompanyLogo from './CompanyLogo.vue'
 
 export default defineComponent({
