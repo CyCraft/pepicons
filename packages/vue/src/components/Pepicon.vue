@@ -14,6 +14,7 @@ const props = defineProps({
   },
   /**
    * Either 'pop' or 'print'
+   * @default 'pop'
    */
   type: { type: String as PropType<'pop' | 'print'>, default: 'pop' },
   /**
