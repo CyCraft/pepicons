@@ -1,21 +1,39 @@
 ![hero](https://github.com/CyCraft/pepicons/raw/dev/media/pepicons-hero.png?raw=true)
 
-# Pepicons
+# @pepicons/vue (Vue 3)
 
 Pepicons is an icon-set of over one hundred retro icons inspired by the 80's.
 Every icon available in 2 variants: Pop! and Print ❏
 
-## Website & icons
+@pepicons/vue is the Vue wrapper for this icon library. Only supports Vue 3!
 
-[pepicons.com](https://pepicons.com)
+## Installation & Usage
+
+```
+npm i @pepicons/vue
+```
+
+You must import the Pepicon component locally wherever you want to use them, as per the example below:
+
+```js
+// import what you need
+import { Pepicon } from '@pepicons/vue'
+
+// add to local components where you use it:
+export default {
+  components: { Pepicon },
+}
+```
+
+We do not support Vue's `install(Plugin)` out of principle: Anything that is "auto-magical" is not considered good practice; It's more difficult to trace down where a component is coming from.
 
 ## pepicons (TypeScript & SVGs)
 
 See [packages/pepicons](/packages/pepicons)
 
-## @pepicons/vue (Vue 3)
+## Website & icons
 
-See [packages/vue](/packages/vue)
+[pepicons.com](https://pepicons.com)
 
 ## Motivation
 

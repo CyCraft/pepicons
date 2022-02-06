@@ -58,7 +58,7 @@ export function getSvg(name: Pepicon): string {
 
 ## @pepicons/vue (Vue 3)
 
-See [packages/vue-pepicons](/packages/vue-pepicons)
+See [packages/vue](/packages/vue)
 
 ## Motivation
 
