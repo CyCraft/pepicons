@@ -4371,7 +4371,7 @@ function textToRgba(color) {
  * @returns The SVG content as string
  */
 function getPepicon(payload) {
-    const { name, type } = payload || {};
+    const { name, type = 'pop' } = payload || {};
     const svgString = type === 'pop' ? pop[name] : print[name];
     if (!svgString) {
         console.warn(`Pepicon ${name} of type ${type} not found! (returned an empty string instead)`);
@@ -4387,7 +4387,7 @@ function getPepicon(payload) {
  */
 function morphPepicon(payload) {
     let svg = payload.svg;
-    const { type, color, opacity, size, stroke } = payload || {};
+    const { type = 'pop', color, opacity, size, stroke } = payload || {};
     if (!/style="/.test(svg)) {
         svg = svg.replace('<svg ', '<svg style="" ');
     }
