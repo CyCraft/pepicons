@@ -5,40 +5,29 @@
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[sass]": { "editor.defaultFormatter": "syler.sass-indented" },
-  // make sure vetur is enabled
+  // monorepo / workspace related
+  "eslint.workingDirectories": [{ "pattern": "./packages/*/" }],
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
-  "vetur.experimental.templateInterpolationService": false,
-  "vetur.format.enable": true,
-  "vetur.validation.style": true,
-  "vetur.validation.template": true,
-  "vetur.validation.script": true,
   // disable conflicting formatting
   "javascript.validate.enable": false,
   "typescript.format.enable": false,
-  "standard.enable": false,
+  // emmet related
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "vue": "html"
+  },
   // global important defaults
   "editor.tabSize": 2, // make sure this is the same as .prettierrc
   "files.trimFinalNewlines": true,
   "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
   "editor.insertSpaces": true,
-  // script
-  "vetur.format.defaultFormatter.ts": "prettier",
-  "vetur.format.defaultFormatter.js": "prettier",
-  // stylus
-  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
-  "stylusSupremacy.insertColons": true,
-  "stylusSupremacy.insertBraces": false,
-  "stylusSupremacy.insertSemicolons": false,
-  "languageStylus.useSeparator": true,
   // sass
-  "vetur.format.defaultFormatter.sass": "sass-formatter",
   "sass.format.debug": false,
   "sass.format.deleteEmptyRows": true,
   "sass.format.deleteWhitespace": true,
   "sass.format.convert": true,
-  "sass.format.setPropertySpace": true,
-  // typescript
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "eslint.enable": true
+  "sass.format.setPropertySpace": true
 }
