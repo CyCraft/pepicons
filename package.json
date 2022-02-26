@@ -10,7 +10,8 @@
   ],
   "scripts": {
     "audit": "lerna-audit",
-    "dev:docs": "npm run dev -w=pepicons.com",
+    "dev:docs-old": "npm run dev -w=pepicons.com",
+    "dev:docs-new": "npm run dev -w=pepicons.com-new",
     "dev:vue": "npm run dev -w=@pepicons/vue",
     "deploy:pepicons.com": "firebase deploy --only hosting && git add -A && git commit -m \"chore: deploy\" && git push",
     "build": "npm run _prepare-pepicons && lerna run build",
