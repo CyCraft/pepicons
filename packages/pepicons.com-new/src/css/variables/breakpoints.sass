@@ -1,0 +1,36 @@
+
+// Small phones [iPhone SE (320)]
+$breakpoint-xxs-min: 0px
+$breakpoint-xxs-max: 359px
+
+// Phones [Samsung Galaxy's (360), iPhone (375), Pixels (412), iPhone Plus (414)]
+$breakpoint-xs-min: 360px
+$breakpoint-xs-max: 575px
+
+$breakpoint-sm-min: 576px
+$breakpoint-sm-max: 767px
+
+// Tablets [iPads (768)]
+$breakpoint-md-min: 768px
+$breakpoint-md-max: 991px
+
+$breakpoint-lg-min: 992px
+$breakpoint-lg-max: 1199px
+
+$breakpoint-xl-min: 1200px
+
+=media-xs($property, $value)
+  @media screen and (min-width: $breakpoint-xs-min)
+    #{$property}: $value
+=media-sm($property, $value)
+  @media screen and (min-width: $breakpoint-sm-min)
+    #{$property}: $value
+=media-md($property, $value)
+  @media screen and (min-width: $breakpoint-md-min)
+    #{$property}: $value
+=media-lg($property, $value)
+  @media screen and (min-width: $breakpoint-lg-min)
+    #{$property}: $value
+=media-xl($property, $value)
+  @media screen and (min-width: $breakpoint-xl-min)
+    #{$property}: $value
