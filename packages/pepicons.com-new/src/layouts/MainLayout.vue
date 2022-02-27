@@ -1,5 +1,6 @@
 <template>
-  <div class="my-component">Main layout</div>
+  <!-- <div class="my-component">Main layout</div> -->
+  <router-view />
 </template>
 
 <style lang="sass">
