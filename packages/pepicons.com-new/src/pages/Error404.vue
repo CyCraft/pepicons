@@ -1,5 +1,5 @@
 <template>
-  <div class="my-component">something</div>
+  <div class="my-component">ERROR</div>
 </template>
 
 <style lang="sass">
