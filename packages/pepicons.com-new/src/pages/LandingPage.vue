@@ -8,6 +8,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import PepHero from '../components/atoms/PepHero.vue'
 
 export default defineComponent({
   name: 'MyComponent',
@@ -15,5 +16,6 @@ export default defineComponent({
   setup(props) {
     return {}
   },
+  components: { PepHero },
 })
 </script>

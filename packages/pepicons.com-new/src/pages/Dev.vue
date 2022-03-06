@@ -1,7 +1,15 @@
 <template>
   <div class="my-component">
     <!-- <CompanyLogo name="twitter" size="sm" /> -->
-    <HtmlButton kind="pop" color="red"/>
+    <!-- <IconTile
+      :config="{
+        name: 'something',
+        type: 'pop',
+        color: '#000',
+        stroke: '#000',
+      }"
+    /> -->
+    <!-- <PepHeaderDecorationLight /> -->
   </div>
 </template>
 
@@ -12,7 +20,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import CompanyLogo from '../components/atoms/CompanyLogo.vue'
-import HtmlButton from '../components/atoms/HtmlButton.vue'
+import IconTile from '../components/atoms/IconTile.vue'
+import PepHeaderDecorationLight from '../components/atoms/PepHeaderDecorationLight.vue'
 
 export default defineComponent({
   name: 'MyComponent',
@@ -20,6 +29,6 @@ export default defineComponent({
   setup(props) {
     return {}
   },
-  components: { CompanyLogo, HtmlButton },
+  components: { CompanyLogo, IconTile, PepHeaderDecorationLight },
 })
 </script>
