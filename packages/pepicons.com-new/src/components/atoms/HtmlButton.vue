@@ -6,6 +6,8 @@
 </template>
 
 <style lang="sass" scoped>
+@import '../../css/variables.sass'
+
 // $
 .html-button
   +reset-button()

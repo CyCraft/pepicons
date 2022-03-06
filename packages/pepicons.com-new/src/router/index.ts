@@ -1,10 +1,22 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
-import routes from './routes'
-// const routes: Array<RouteRecordRaw> = []
+import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
+  routes: [
+    {
+      path: '/',
+      name: 'MainLayout',
+      component: () => import('../layouts/MainLayout.vue'),
+      children: [
+        { path: '', name: 'home', component: () => import('../pages/LandingPage.vue') },
+        { path: 'dev', component: () => import('../pages/Dev.vue') },
+      ],
+    },
+    {
+      path: '/:catchAll(.*)',
+      component: () => import('../pages/Error404.vue'),
+    },
+  ],
   scrollBehavior(to, from, savedPosition) {
     // if (to.path != from.path) return { x: 0, y: 0 }
   },

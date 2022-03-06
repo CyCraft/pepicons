@@ -5,5 +5,5 @@
 </template>
 
 <style lang="sass">
-@import '../src/css/app.sass'
+@import './css/app.sass'
 </style>
