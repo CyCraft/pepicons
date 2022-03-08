@@ -48,11 +48,11 @@ export default defineComponent({
       header.animate()
     })
     onUnmounted(() => {
-      if (!window.renderer) return
-      window.renderer.forceContextLoss()
-      window.renderer.dispose()
-      window.renderer.domElement = null
-      window.renderer = null
+      if (!(window as any).renderer) return
+      ;(window as any).renderer.forceContextLoss()
+      ;(window as any).renderer.dispose()
+      ;(window as any).renderer.domElement = null
+      ;(window as any).renderer = null
     })
     function onResize({ width, height }) {
       // if (!this.header) return

@@ -1,6 +1,6 @@
 <template>
   <div class="icon-tile">
-    <Pepicon class="_svg" v-bind="config" size="26px" />
+    <Pepicon class="_svg" v-bind="(config as any)" size="26px" />
     <div class="_name">
       <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
         {{ config.name }}
