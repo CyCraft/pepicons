@@ -6,8 +6,8 @@
       height="143.376"
       viewBox="0 0 1158.942 143.376"
     >
-      <g ref="shape" :style="`color: ${colors.green}`">
-        <g ref="shape" id="グリーンギザギザ" transform="translate(-4 22.16)">
+      <g :style="`color: ${colors.green}`">
+        <g id="グリーンギザギザ" transform="translate(-4 22.16)">
           <path
             id="グリーンギザギザ-2"
             data-name="グリーンギザギザ"
@@ -27,8 +27,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.blue}`">
-        <g ref="shape" id="ブルーギザギザ" transform="translate(7 23.16)">
+      <g :style="`color: ${colors.blue}`">
+        <g id="ブルーギザギザ" transform="translate(7 23.16)">
           <path
             id="ブルーギザギザ-2"
             data-name="ブルーギザギザ"
@@ -48,8 +48,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.yellow}`">
-        <g ref="shape" id="イエローギザギザ" transform="translate(-3 10.16)">
+      <g :style="`color: ${colors.yellow}`">
+        <g id="イエローギザギザ" transform="translate(-3 10.16)">
           <path
             id="イエローギザギザ-2"
             data-name="イエローギザギザ"
@@ -69,13 +69,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.blue}`">
-        <g
-          ref="shape"
-          id="ブルーギザギザ-3"
-          data-name="ブルーギザギザ"
-          transform="translate(24 26.16)"
-        >
+      <g :style="`color: ${colors.blue}`">
+        <g id="ブルーギザギザ-3" data-name="ブルーギザギザ" transform="translate(24 26.16)">
           <path
             id="ブルーギザギザ-4"
             data-name="ブルーギザギザ"
@@ -96,8 +91,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.pink}`">
-        <g ref="shape" id="ピンクギザギザ" transform="translate(-3 10.16)">
+      <g :style="`color: ${colors.pink}`">
+        <g id="ピンクギザギザ" transform="translate(-3 10.16)">
           <path
             id="ピンクギザギザ-2"
             data-name="ピンクギザギザ"
@@ -117,8 +112,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.pink}`">
-        <g ref="shape" id="ピンク丸" transform="translate(-3 -0.84)">
+      <g :style="`color: ${colors.pink}`">
+        <g id="ピンク丸" transform="translate(-3 -0.84)">
           <circle
             id="ピンク丸-2"
             data-name="ピンク丸"
@@ -129,7 +124,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="ピンク丸線"
             transform="translate(19.942 8.267)"
             fill="none"
@@ -141,8 +135,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.yellow}`">
-        <g ref="shape" id="イエロー三角" transform="translate(4 34.16)">
+      <g :style="`color: ${colors.yellow}`">
+        <g id="イエロー三角" transform="translate(4 34.16)">
           <path
             id="イエロー三角-2"
             data-name="イエロー三角"
@@ -151,7 +145,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="イエロー三角線"
             transform="matrix(0.819, 0.574, -0.574, 0.819, 119.648, 60.519)"
             fill="none"
@@ -165,8 +158,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.green}`">
-        <g ref="shape" id="グリーン四角" transform="translate(21 13.16)">
+      <g :style="`color: ${colors.green}`">
+        <g id="グリーン四角" transform="translate(21 13.16)">
           <rect
             id="グリーン四角-2"
             data-name="グリーン四角"
@@ -176,7 +169,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="グリーン四角線"
             transform="translate(118.204 9.331) rotate(-8)"
             fill="none"
@@ -188,8 +180,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.pink}`">
-        <g ref="shape" id="ピンク丸-3" data-name="ピンク丸" transform="translate(-8 26.16)">
+      <g :style="`color: ${colors.pink}`">
+        <g id="ピンク丸-3" data-name="ピンク丸" transform="translate(-8 26.16)">
           <circle
             id="ピンク丸-4"
             data-name="ピンク丸"
@@ -200,7 +192,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="ピンク丸線-2"
             data-name="ピンク丸線"
             transform="translate(187.382 74.267)"
@@ -213,8 +204,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.blue}`">
-        <g ref="shape" id="ブルー三角" transform="translate(11 0.16)">
+      <g :style="`color: ${colors.blue}`">
+        <g id="ブルー三角" transform="translate(11 0.16)">
           <path
             id="ブルー三角-2"
             data-name="ブルー三角"
@@ -222,12 +213,7 @@
             transform="translate(228.395 26.799) rotate(-43)"
             :fill="shadowColor"
           />
-          <g
-            ref="shape"
-            id="ブルー三角線"
-            transform="translate(225.895 34.323) rotate(-43)"
-            fill="none"
-          >
+          <g id="ブルー三角線" transform="translate(225.895 34.323) rotate(-43)" fill="none">
             <path d="M19.647,0,39.294,21.737H0Z" stroke="none" />
             <path
               d="M 19.64711952209473 2.237003326416016 L 3.377677917480469 20.23723983764648 L 35.91656112670898 20.23723983764648 L 19.64711952209473 2.237003326416016 M 19.64711952209473 -1.9073486328125e-06 L 39.29423904418945 21.73723983764648 L 0 21.73723983764648 L 19.64711952209473 -1.9073486328125e-06 Z"
@@ -237,8 +223,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.pink}`">
-        <g ref="shape" id="ピンク四角" transform="translate(21 44.16)">
+      <g :style="`color: ${colors.pink}`">
+        <g id="ピンク四角" transform="translate(21 44.16)">
           <rect
             id="ピンク四角-2"
             data-name="ピンク四角"
@@ -248,7 +234,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="ピンク四角線"
             transform="translate(321.273 63.026) rotate(25)"
             fill="none"
@@ -260,8 +245,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.yellow}`">
-        <g ref="shape" id="イエロー丸" transform="translate(40 5.16)">
+      <g :style="`color: ${colors.yellow}`">
+        <g id="イエロー丸" transform="translate(40 5.16)">
           <ellipse
             id="イエロー丸-2"
             data-name="イエロー丸"
@@ -273,7 +258,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="イエロー丸線"
             transform="translate(323.942 5.267)"
             fill="none"
@@ -285,8 +269,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.blue}`">
-        <g ref="shape" id="ブルー四角" transform="translate(0 44.16)">
+      <g :style="`color: ${colors.blue}`">
+        <g id="ブルー四角" transform="translate(0 44.16)">
           <rect
             id="ブルー四角-2"
             data-name="ブルー四角"
@@ -296,7 +280,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="ブルー四角線"
             transform="translate(0 74.378) rotate(-8)"
             fill="none"
@@ -308,13 +291,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.green}`">
-        <g
-          ref="shape"
-          id="グリーン四角-3"
-          data-name="グリーン四角"
-          transform="translate(444 -5.84)"
-        >
+      <g :style="`color: ${colors.green}`">
+        <g id="グリーン四角-3" data-name="グリーン四角" transform="translate(444 -5.84)">
           <rect
             id="グリーン四角-4"
             data-name="グリーン四角"
@@ -324,7 +302,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="グリーン四角線-2"
             data-name="グリーン四角線"
             transform="translate(118.204 9.331) rotate(-8)"
@@ -337,9 +314,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.green}`">
+      <g :style="`color: ${colors.green}`">
         <g
-          ref="shape"
           id="グリーンギザギザ-3"
           data-name="グリーンギザギザ"
           transform="translate(1013.117 39.052)"
@@ -364,13 +340,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.blue}`">
-        <g
-          ref="shape"
-          id="ブルーギザギザ-5"
-          data-name="ブルーギザギザ"
-          transform="translate(835.007 43.982)"
-        >
+      <g :style="`color: ${colors.blue}`">
+        <g id="ブルーギザギザ-5" data-name="ブルーギザギザ" transform="translate(835.007 43.982)">
           <path
             id="ブルーギザギザ-6"
             data-name="ブルーギザギザ"
@@ -391,9 +362,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.pink}`">
+      <g :style="`color: ${colors.pink}`">
         <g
-          ref="shape"
           id="ピンクギザギザ-3"
           data-name="ピンクギザギザ"
           transform="matrix(0.883, 0.469, -0.469, 0.883, 470.194, 6.005)"
@@ -418,9 +388,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.yellow}`">
+      <g :style="`color: ${colors.yellow}`">
         <g
-          ref="shape"
           id="イエローギザギザ-3"
           data-name="イエローギザギザ"
           transform="translate(881.295 88.618)"
@@ -445,13 +414,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.blue}`">
-        <g
-          ref="shape"
-          id="ブルーギザギザ-7"
-          data-name="ブルーギザギザ"
-          transform="translate(1083.177 73.954)"
-        >
+      <g :style="`color: ${colors.blue}`">
+        <g id="ブルーギザギザ-7" data-name="ブルーギザギザ" transform="translate(1083.177 73.954)">
           <path
             id="ブルーギザギザ-8"
             data-name="ブルーギザギザ"
@@ -472,13 +436,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.pink}`">
-        <g
-          ref="shape"
-          id="ピンクギザギザ-5"
-          data-name="ピンクギザギザ"
-          transform="translate(971.236 72.079)"
-        >
+      <g :style="`color: ${colors.pink}`">
+        <g id="ピンクギザギザ-5" data-name="ピンクギザギザ" transform="translate(971.236 72.079)">
           <path
             id="ピンクギザギザ-6"
             data-name="ピンクギザギザ"
@@ -499,9 +458,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.yellow}`">
+      <g :style="`color: ${colors.yellow}`">
         <g
-          ref="shape"
           id="イエローギザギザ-5"
           data-name="イエローギザギザ"
           transform="translate(538.236 112.079)"
@@ -526,8 +484,8 @@
           />
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.pink}`">
-        <g ref="shape" id="ピンク丸-5" data-name="ピンク丸" transform="translate(797.942 99.109)">
+      <g :style="`color: ${colors.pink}`">
+        <g id="ピンク丸-5" data-name="ピンク丸" transform="translate(797.942 99.109)">
           <ellipse
             id="ピンク丸-6"
             data-name="ピンク丸"
@@ -539,7 +497,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="ピンク丸線-3"
             data-name="ピンク丸線"
             fill="none"
@@ -551,8 +508,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.green}`">
-        <g ref="shape" id="グリーン丸" transform="translate(434.942 106.109)">
+      <g :style="`color: ${colors.green}`">
+        <g id="グリーン丸" transform="translate(434.942 106.109)">
           <ellipse
             id="グリーン丸-2"
             data-name="グリーン丸"
@@ -563,19 +520,14 @@
             transform="translate(6 1)"
             :fill="shadowColor"
           />
-          <g ref="shape" id="グリーン丸線" fill="none" :stroke="strokeColor" stroke-width="1.5">
+          <g id="グリーン丸線" fill="none" :stroke="strokeColor" stroke-width="1.5">
             <ellipse cx="16.5" cy="16" rx="16.5" ry="16" stroke="none" />
             <ellipse cx="16.5" cy="16" rx="15.75" ry="15.25" fill="none" />
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.yellow}`">
-        <g
-          ref="shape"
-          id="イエロー三角-3"
-          data-name="イエロー三角"
-          transform="translate(888.013 14.512)"
-        >
+      <g :style="`color: ${colors.yellow}`">
+        <g id="イエロー三角-3" data-name="イエロー三角" transform="translate(888.013 14.512)">
           <path
             id="イエロー三角-4"
             data-name="イエロー三角"
@@ -584,7 +536,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="イエロー三角線-2"
             data-name="イエロー三角線"
             transform="matrix(-0.819, 0.574, -0.574, -0.819, 48.823, 17.806)"
@@ -599,13 +550,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.yellow}`">
-        <g
-          ref="shape"
-          id="イエロー三角-5"
-          data-name="イエロー三角"
-          transform="translate(699.013 7.512)"
-        >
+      <g :style="`color: ${colors.yellow}`">
+        <g id="イエロー三角-5" data-name="イエロー三角" transform="translate(699.013 7.512)">
           <path
             id="イエロー三角-6"
             data-name="イエロー三角"
@@ -614,7 +560,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="イエロー三角線-3"
             data-name="イエロー三角線"
             transform="matrix(-0.819, 0.574, -0.574, -0.819, 48.823, 17.806)"
@@ -629,13 +574,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.green}`">
-        <g
-          ref="shape"
-          id="グリーン四角-5"
-          data-name="グリーン四角"
-          transform="translate(920.204 98.028)"
-        >
+      <g :style="`color: ${colors.green}`">
+        <g id="グリーン四角-5" data-name="グリーン四角" transform="translate(920.204 98.028)">
           <rect
             id="グリーン四角-6"
             data-name="グリーン四角"
@@ -645,7 +585,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="グリーン四角線-3"
             data-name="グリーン四角線"
             transform="translate(3.491 4.18) rotate(8)"
@@ -658,13 +597,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.blue}`">
-        <g
-          ref="shape"
-          id="ブルー四角-3"
-          data-name="ブルー四角"
-          transform="translate(655.204 105.028)"
-        >
+      <g :style="`color: ${colors.blue}`">
+        <g id="ブルー四角-3" data-name="ブルー四角" transform="translate(655.204 105.028)">
           <rect
             id="ブルー四角-4"
             data-name="ブルー四角"
@@ -674,7 +608,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="ブルー四角線-2"
             data-name="ブルー四角線"
             transform="translate(3.491 4.18) rotate(8)"
@@ -687,8 +620,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.pink}`">
-        <g ref="shape" id="ピンク丸-7" data-name="ピンク丸" transform="translate(957.391 34.109)">
+      <g :style="`color: ${colors.pink}`">
+        <g id="ピンク丸-7" data-name="ピンク丸" transform="translate(957.391 34.109)">
           <ellipse
             id="ピンク丸-8"
             data-name="ピンク丸"
@@ -700,7 +633,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="ピンク丸線-4"
             data-name="ピンク丸線"
             transform="translate(2.991)"
@@ -713,13 +645,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.blue}`">
-        <g
-          ref="shape"
-          id="ブルー三角-3"
-          data-name="ブルー三角"
-          transform="translate(1013.895 89.155)"
-        >
+      <g :style="`color: ${colors.blue}`">
+        <g id="ブルー三角-3" data-name="ブルー三角" transform="translate(1013.895 89.155)">
           <path
             id="ブルー三角-4"
             data-name="ブルー三角"
@@ -728,7 +655,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="ブルー三角線-2"
             data-name="ブルー三角線"
             transform="translate(28.738 42.696) rotate(-137)"
@@ -743,13 +669,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.pink}`">
-        <g
-          ref="shape"
-          id="ピンク四角-3"
-          data-name="ピンク四角"
-          transform="translate(1110.165 9.019)"
-        >
+      <g :style="`color: ${colors.pink}`">
+        <g id="ピンク四角-3" data-name="ピンク四角" transform="translate(1110.165 9.019)">
           <rect
             id="ピンク四角-4"
             data-name="ピンク四角"
@@ -759,7 +680,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="ピンク四角線-2"
             data-name="ピンク四角線"
             transform="translate(2.508 10.6) rotate(-25)"
@@ -772,13 +692,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.yellow}`">
-        <g
-          ref="shape"
-          id="イエロー丸-3"
-          data-name="イエロー丸"
-          transform="translate(1132.942 118.109)"
-        >
+      <g :style="`color: ${colors.yellow}`">
+        <g id="イエロー丸-3" data-name="イエロー丸" transform="translate(1132.942 118.109)">
           <ellipse
             id="イエロー丸-4"
             data-name="イエロー丸"
@@ -790,7 +705,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="イエロー丸線-2"
             data-name="イエロー丸線"
             transform="translate(0 1)"
@@ -803,8 +717,8 @@
           </g>
         </g>
       </g>
-      <g ref="shape" :style="`color: ${colors.blue}`">
-        <g ref="shape" id="ブルー四角-5" data-name="ブルー四角" transform="translate(781 6.16)">
+      <g :style="`color: ${colors.blue}`">
+        <g id="ブルー四角-5" data-name="ブルー四角" transform="translate(781 6.16)">
           <rect
             id="ブルー四角-6"
             data-name="ブルー四角"
@@ -814,7 +728,6 @@
             :fill="shadowColor"
           />
           <g
-            ref="shape"
             id="ブルー四角線-3"
             data-name="ブルー四角線"
             transform="translate(3.491 0) rotate(8)"
@@ -886,7 +799,7 @@ export default defineComponent({
   },
   setup(props) {
     onMounted(() => {
-      const shapes = ref($refs.$el.querySelectorAll('svg > g'))
+      const shapes = ref($refs.$el.querySelectorAll('g'))
       // const shapes = this.$el.querySelectorAll('svg > g')
       shapes.forEach((g: any, index: number) => {
         g.classList.add(`anime-float`)
