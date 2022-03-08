@@ -9,19 +9,20 @@
   "files": [
     "dist"
   ],
-  "main": "./dist/index.umd.js",
+  "main": "./dist/index.cjs.js",
   "module": "./dist/index.es.js",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js",
+      "require": "./dist/index.cjs.js",
       "types": "./dist/index.d.ts"
     }
   },
   "scripts": {
-    "build": "rimraf dist && vite build && npm run gen:types:ts && npm run gen:types:vetur",
+    "build": "rimraf dist && npm run build:vite && npm run gen:types:ts && npm run gen:types:vetur",
     "dev": "vite",
+    "build:vite": "vite build",
     "gen:types:vetur": "vue-int -i src/components/Pepicon.vue -o dist/vetur",
     "gen:types:ts": "vue-tsc --declaration --emitDeclarationOnly"
   },
@@ -33,8 +34,8 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.1.0",
-    "@viteplay/plugin": "^0.0.3",
-    "@viteplay/vue": "^0.0.3",
+    "@viteplay/plugin": "^0.0.16",
+    "@viteplay/vue": "^0.0.16",
     "rimraf": "^3.0.2",
     "typescript": "^4.5.5",
     "vite": "^2.7.13",
