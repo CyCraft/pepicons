@@ -1,16 +1,16 @@
 <script lang="ts" setup>
-import { PopAirplane } from '../../../dist/index.es'
-import { PopBattery } from '../../../dist/index.es'
-import { PopBicycle } from '../../../dist/index.es'
-import { PopBook } from '../../../dist/index.es'
-import { PopCamera } from '../../../dist/index.es'
-import { PopCar } from '../../../dist/index.es'
-import { PrintAirplane } from '../../../dist/index.es'
-import { PrintBattery } from '../../../dist/index.es'
-import { PrintBicycle } from '../../../dist/index.es'
-import { PrintBook } from '../../../dist/index.es'
-import { PrintCamera } from '../../../dist/index.es'
-import { PrintCar } from '../../../dist/index.es'
+import { PopAirplane } from '../../index'
+import { PopBattery } from '../../index'
+import { PopBicycle } from '../../index'
+import { PopBook } from '../../index'
+import { PopCamera } from '../../index'
+import { PopCar } from '../../index'
+import { PrintAirplane } from '../../index'
+import { PrintBattery } from '../../index'
+import { PrintBicycle } from '../../index'
+import { PrintBook } from '../../index'
+import { PrintCamera } from '../../index'
+import { PrintCar } from '../../index'
 </script>
 
 <template>
