@@ -17,17 +17,6 @@ export default defineConfig({
       componentExamples: './src/components/examples/*.vue',
       base: '/',
     }),
-    // "pepicons/src/icons" is not exposed in the `exports` field of `pepicons` package
-    // So we resolve it manually
-    {
-      name: 'resolve-pepicons-icons',
-      enforce: 'pre',
-      resolveId(id) {
-        if (id.startsWith('pepicons/src/icons/')) {
-          return id.replace('pepicons', path.join(__dirname, '../pepicons')) + '.ts'
-        }
-      },
-    },
   ],
   build: {
     lib: {

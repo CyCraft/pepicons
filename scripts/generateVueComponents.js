@@ -6,6 +6,8 @@ import { pascalCase } from 'case-anything'
 const PATH_PEPICONS = './packages/pepicons'
 const PATH_VUE = './packages/vue'
 
+const slash = (str) => str.replace(/\\/g, '/')
+
 export function generateVueComponents() {
   const types = ['pop', 'print']
   let iconsIndexContent = ``
@@ -23,7 +25,7 @@ export function generateVueComponents() {
       const componentName = pascalCase(type + '-' + name)
       const componentContent = `
       import { defineComponent } from "vue"
-      import svg from "pepicons/src/icons/${type}/${name}"
+      import svg from "${slash(path.resolve(`packages/pepicons/src/icons/${type}/${name}`))}"
       import { baseProps, createSetup } from "../../component"
 
       export default defineComponent({
