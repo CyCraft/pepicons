@@ -2,6 +2,8 @@
 import Pepicon from '../Pepicon.vue'
 </script>
 
+<docs darkExample></docs>
+
 <template>
   <div class="example">
     <Pepicon name="airplane" type="print" stroke="lightcoral" color="black" />
@@ -15,7 +17,6 @@ import Pepicon from '../Pepicon.vue'
 
 <style scoped>
 .example {
-  background: #1d1d1d;
   display: flex;
   flex-wrap: wrap;
 }
