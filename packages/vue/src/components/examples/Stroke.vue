@@ -2,7 +2,7 @@
 import Pepicon from '../Pepicon.vue'
 </script>
 
-<docs darkExample></docs>
+<docs darkExample>Update the stroke to be able to tweak usage on dark backgrounds</docs>
 
 <template>
   <div class="example">
