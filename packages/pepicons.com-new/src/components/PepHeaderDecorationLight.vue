@@ -754,7 +754,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType, computed, onMounted, ref, toRef, Ref } from 'vue'
-// import { cssVar } from '../../helpers/colorHelpers'
+import { cssVar } from '../helpers/colorHelpers'
 // import { roll } from 'roll-anything'
 
 const randomAnimeFloatPerIcon = [
