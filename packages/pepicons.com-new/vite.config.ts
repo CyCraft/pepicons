@@ -40,6 +40,10 @@ export default defineConfig({
           component: './src/components/PepHeaderDecorationLight.vue',
           examples: './src/components/PepHeaderDecorationLight.example.vue',
         },
+        {
+          component: './src/components/ProfileCard.vue',
+          examples: './src/components/ProfileCard.example.vue',
+        },
       ],
       // the below config is for detecting an entire folder, but does not support multiple folders yet.
       // // Path to extract components from to create dev pages for
