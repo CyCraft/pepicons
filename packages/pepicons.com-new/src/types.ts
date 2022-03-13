@@ -1,4 +1,4 @@
-// import { cssVar } from './helpers/colorHelpers'
+import { cssVar } from './helpers/colorHelpers'
 
 import { PepiconName } from '@pepicons/vue'
 
@@ -16,7 +16,7 @@ export function defaultsIconConfig<T extends Record<string, any>>(payload?: T): 
   return {
     name: '',
     type: 'print',
-    // color: cssVar('primary'),
+    color: cssVar('primary'),
     stroke: 'black',
     ..._payload,
   } as any

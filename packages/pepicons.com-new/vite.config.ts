@@ -33,6 +33,10 @@ export default defineConfig({
           examples: './src/components/IconTile.example.vue',
         },
         {
+          component: './src/components/PepInput.vue',
+          examples: './src/components/PepInput.example.vue',
+        },
+        {
           component: './src/components/PepHeaderDecorationLight.vue',
           examples: './src/components/PepHeaderDecorationLight.example.vue',
         },

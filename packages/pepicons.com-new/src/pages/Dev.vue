@@ -1,16 +1,8 @@
 <template>
-  <div class="my-component">
-    <!-- <CompanyLogo name="twitter" size="sm" /> -->
-    <!-- <IconTile
-      :config="{
-        name: 'something',
-        type: 'pop',
-        color: '#000',
-        stroke: '#000',
-      }"
-    /> -->
-    <!-- <PepHeaderDecorationLight /> -->
-    dev
+  <div style="position: relative" class="my-component">
+    somethign
+    <!-- <PepHero style="z-index: 10" />
+    <PepHeaderDecorationLight style="position: absolute; top: 0" /> -->
   </div>
 </template>
 
@@ -20,16 +12,16 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import CompanyLogo from '../components/atoms/CompanyLogo.vue'
-import IconTile from '../components/atoms/IconTile.vue'
-import PepHeaderDecorationLight from '../components/atoms/PepHeaderDecorationLight.vue'
+import { Pepicon } from '@pepicons/vue'
+import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue'
+import PepHero from '../components/PepHero.vue'
 
 export default defineComponent({
   name: 'MyComponent',
-  props: {},
+  props: { Pepicon },
   setup(props) {
     return {}
   },
-  components: { CompanyLogo, IconTile, PepHeaderDecorationLight },
+  components: { PepHeaderDecorationLight, PepHero },
 })
 </script>
