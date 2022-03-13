@@ -799,7 +799,7 @@ export default defineComponent({
   },
   setup(props) {
     onMounted(() => {
-      const shapes = ref($refs.$el.querySelectorAll('g'))
+      const shapes = document.querySelectorAll('.pep-header-decoration-light svg > g')
       // const shapes = this.$el.querySelectorAll('svg > g')
       shapes.forEach((g: any, index: number) => {
         g.classList.add(`anime-float`)

@@ -6,7 +6,7 @@
 </template>
 
 <style lang="sass">
-@import '../../css/variables.sass'
+@import '../css/variables.sass'
 =grid-lines($_color)
   background-image: linear-gradient(to right, #{$_color} 1px, transparent 1px), linear-gradient(to bottom, #{$_color} 1px, transparent 1px)
   background-position: -1px -1px

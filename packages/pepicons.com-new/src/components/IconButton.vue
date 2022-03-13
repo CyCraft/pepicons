@@ -43,7 +43,7 @@
 import { Pepicon } from '@pepicons/vue'
 import ColorRingSvg from './ColorRingSvg.vue'
 import { defineComponent, PropType, computed, ref, toRef, Ref, nextTick } from 'vue'
-import { defaultsIconConfig, IconConfig } from '../../types'
+import { defaultsIconConfig, IconConfig } from '../types'
 // import { colors } from 'quasar'
 // const { changeAlpha } = colors
 const changeAlpha = function (color: string, offset: number) {
@@ -65,7 +65,7 @@ const changeAlpha = function (color: string, offset: number) {
   })
 }
 const reRGBA = /^rgb(a)?\((\d{1,3}),(\d{1,3}),(\d{1,3}),?([01]?\.?\d*?)?\)$/
-const textToRgb = function (str: string) {
+const textToRgb = function (str: string): { r: number; g: number; b: number; a?: number } {
   if (typeof str !== 'string') {
     throw new TypeError('Expected a string')
   }
@@ -77,7 +77,7 @@ const textToRgb = function (str: string) {
     return hexToRgb(color)
   }
 
-  const rgb = {
+  const rgb: { r: number; g: number; b: number; a?: number } = {
     r: Math.min(255, parseInt(m[2], 10)),
     g: Math.min(255, parseInt(m[3], 10)),
     b: Math.min(255, parseInt(m[4], 10)),

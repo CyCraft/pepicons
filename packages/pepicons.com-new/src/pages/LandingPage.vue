@@ -8,7 +8,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import PepHero from '../components/atoms/PepHero.vue'
+import PepHero from '../components/PepHero.vue'
 
 export default defineComponent({
   name: 'MyComponent',

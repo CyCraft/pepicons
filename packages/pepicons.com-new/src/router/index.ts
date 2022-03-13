@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { pages } from '@viteplay/vue/client'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -12,6 +13,7 @@ const router = createRouter({
         { path: 'dev', component: () => import('../pages/Dev.vue') },
       ],
     },
+    ...pages,
     {
       path: '/:catchAll(.*)',
       component: () => import('../pages/Error404.vue'),

@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "@pepicons/vue": "^1.0.12",
+    "@viteplay/plugin": "^0.0.18",
+    "@viteplay/vue": "^0.0.18",
     "vue": "^3.2.25"
   },
   "devDependencies": {

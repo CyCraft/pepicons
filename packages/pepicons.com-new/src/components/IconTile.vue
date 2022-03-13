@@ -11,7 +11,7 @@
 </template>
 
 <style lang="sass">
-@import '../../css/variables.sass'
+@import '../css/variables.sass'
 .icon-tile
   +C(background-color, white)
 .dark-mode
@@ -40,8 +40,8 @@
 import { computed, defineComponent, PropType } from 'vue'
 import { Pepicon as PepiconType, synonyms } from 'pepicons'
 import { Pepicon } from '@pepicons/vue'
-import { cleanupForSearch } from '../../helpers/search'
-import { defaultsIconConfig, IconConfig } from '../../types'
+import { cleanupForSearch } from '../helpers/search'
+import { defaultsIconConfig, IconConfig } from '../types'
 
 export default defineComponent({
   name: 'IconTile',

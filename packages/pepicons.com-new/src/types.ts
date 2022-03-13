@@ -1,9 +1,11 @@
 // import { cssVar } from './helpers/colorHelpers'
 
+import { PepiconName } from '@pepicons/vue'
+
 export type IsDarkMode = boolean
 
 export type IconConfig = {
-  name?: string
+  name?: PepiconName
   type: 'pop' | 'print'
   color: string
   stroke: string
