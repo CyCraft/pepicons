@@ -101,7 +101,7 @@
 
     <Stack v-if="links.length">
       <a v-for="link in links" :key="link" class="_link" :href="link">
-        <CompanyLogo :name="link.split('https://')[1].split('.')[0]" />
+        <CompanyLogo :name="(link.split('https://')[1].split('.')[0] as any)" />
       </a>
     </Stack>
   </div>

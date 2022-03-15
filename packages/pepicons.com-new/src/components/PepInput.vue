@@ -5,8 +5,9 @@
     </template>
   </QInput> -->
   <div class="_wrapper">
+    <!-- TODO: Fix input  -->
     <Pepicon style="position: absolute; top: 0" name="airplane" v-bind="iconConfig" />
-    <input class="pep-input" v-bind="propsToPass" v-on="eventsToPass" />
+    <input class="pep-input" v-bind="$attrs" :value="value" />
   </div>
 </template>
 
@@ -53,7 +54,6 @@ export default defineComponent({
   props: {
     value: { type: String, default: '' },
     color: { type: String, default: '#AB92F0' },
-    isDarkMode: { type: Boolean },
     /**
      * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
      */
@@ -62,19 +62,8 @@ export default defineComponent({
       default: () => ({ ...defaultsIconConfig() }),
     },
   },
-  setup(props, { attrs, listeners, emit }) {
-    const propsToPass = computed(() => ({
-      ...attrs,
-      outlined: true,
-      color: props.color,
-      value: props.value,
-      dark: props.isDarkMode,
-    }))
-    const eventsToPass = {
-      ...listeners,
-    }
-
-    return { propsToPass, eventsToPass }
+  setup(props, { emit }) {
+    return {}
   },
 })
 </script>

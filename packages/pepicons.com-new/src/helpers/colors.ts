@@ -1,16 +1,3 @@
-export interface colorsRgba {
-  r: number
-  g: number
-  b: number
-  a?: number
-}
-
-export interface colorsHsva {
-  h: number
-  v: number
-  s: number
-  a?: number
-}
 function rgbToHex({ r, g, b, a }) {
   const alpha = a !== void 0
   r = Math.round(r)
@@ -18,15 +5,16 @@ function rgbToHex({ r, g, b, a }) {
   b = Math.round(b)
 
   if (r > 255 || g > 255 || b > 255 || (alpha && a > 100)) {
-    throw new TypeError('Expected 3 numbers below 256 (and optionally one below 100)')
+    throw new Error('Expected 3 numbers below 256 (and optionally one below 100)')
   }
 
   a = alpha ? (Math.round((255 * a) / 100) | (1 << 8)).toString(16).slice(1) : ''
   return '#' + (b | (g << 8) | (r << 16) | (1 << 24)).toString(16).slice(1) + a
 }
+
 function hexToRgb(hex) {
   if (typeof hex !== 'string') {
-    throw new TypeError('Expected a string')
+    throw new Error('Expected a string')
   }
 
   hex = hex.replace(/^#/, '')
@@ -62,21 +50,4 @@ function getBrand(color, element = document.body) {
   }
 
   return getComputedStyle(element).getPropertyValue(`--q-color-${color}`).trim() || null
-}
-
-export namespace colors {
-  function rgbToHex(rgb: colorsRgba): string
-  // function rgbToString (color: colorsRgba): string;
-  function hexToRgb(hex: string): colorsRgba
-  function hsvToRgb(hsv: colorsHsva): colorsRgba
-  function rgbToHsv(rgb: colorsRgba): colorsHsva
-  function textToRgb(color: string): colorsRgba
-  function lighten(color: string, percent: number): string
-  function luminosity(color: string | colorsRgba): number
-  function brightness(color: string | colorsRgba): number
-  function blend(fgColor: string | colorsRgba, bColor: string | colorsRgba): string
-  function changeAlpha(color: string, offset: number): string
-  function setBrand(color: string, value: string, element?: Element): void
-  function getBrand(color: string, element?: Element): string | null
-  function getPaletteColor(colorName: string): string
 }

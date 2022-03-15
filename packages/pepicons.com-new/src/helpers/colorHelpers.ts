@@ -1,14 +1,15 @@
 // import { colors } from 'quasar'
-import { colors } from '../helpers/colors'
+// import { colors } from '../helpers/colors'
 // const { lighten, brightness, getBrand, setBrand } = colors
 // these direct functions are because the line above doesnt work
+
 function lighten(color, percent) {
   if (typeof color !== 'string') {
-    throw new TypeError('Expected a string as color')
+    throw new Error('Expected a string as color')
   }
 
   if (typeof percent !== 'number') {
-    throw new TypeError('Expected a numeric percent')
+    throw new Error('Expected a numeric percent')
   }
 
   const rgb = textToRgb(color),
@@ -29,41 +30,45 @@ function lighten(color, percent) {
       .slice(1)
   )
 }
+
 function brightness(color) {
   if (typeof color !== 'string' && (!color || color.r === void 0)) {
-    throw new TypeError('Expected a string or a {r, g, b} object as color')
+    throw new Error('Expected a string or a {r, g, b} object as color')
   }
 
   const rgb = typeof color === 'string' ? textToRgb(color) : color
   return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000
 }
+
 export function getRandomColor(): string {
   const color = '#000000'.replace(/0/g, () => (~~(Math.random() * 16)).toString(16))
   const isDark = brightness(color) < 140
   return isDark ? lighten(color, 50) : color
 }
+
 function getBrand(color, element = document.body) {
   if (typeof color !== 'string') {
-    throw new TypeError('Expected a string as color')
+    throw new Error('Expected a string as color')
   }
 
   if (!(element instanceof Element)) {
-    throw new TypeError('Expected a DOM element')
+    throw new Error('Expected a DOM element')
   }
 
   return getComputedStyle(element).getPropertyValue(`--q-color-${color}`).trim() || null
 }
+
 function setBrand(color, value, element = document.body) {
   if (typeof color !== 'string') {
-    throw new TypeError('Expected a string as color')
+    throw new Error('Expected a string as color')
   }
 
   if (typeof value !== 'string') {
-    throw new TypeError('Expected a string as value')
+    throw new Error('Expected a string as value')
   }
 
   if (!(element instanceof Element)) {
-    throw new TypeError('Expected a DOM element')
+    throw new Error('Expected a DOM element')
   }
 
   element.style.setProperty(`--q-color-${color}`, value)
@@ -80,11 +85,11 @@ export function setPrimaryColor(color: string): void {
 
 export const changeAlpha = function (color: string, offset: number) {
   if (typeof color !== 'string') {
-    throw new TypeError('Expected a string as color')
+    throw new Error('Expected a string as color')
   }
 
   if (offset === void 0 || offset < -1 || offset > 1) {
-    throw new TypeError('Expected offset to be between -1 and 1')
+    throw new Error('Expected offset to be between -1 and 1')
   }
 
   const { r, g, b, a } = textToRgb(color)
@@ -100,7 +105,7 @@ export const reRGBA = /^rgb(a)?\((\d{1,3}),(\d{1,3}),(\d{1,3}),?([01]?\.?\d*?)?\
 
 export const textToRgb = function (str: string): { r: number; g: number; b: number; a?: number } {
   if (typeof str !== 'string') {
-    throw new TypeError('Expected a string')
+    throw new Error('Expected a string')
   }
 
   const color = str.replace(/ /g, '')
@@ -131,7 +136,7 @@ export const rgbToHex = function ({ r, g, b, a }) {
   b = Math.round(b)
 
   if (r > 255 || g > 255 || b > 255 || (alpha && a > 100)) {
-    throw new TypeError('Expected 3 numbers below 256 (and optionally one below 100)')
+    throw new Error('Expected 3 numbers below 256 (and optionally one below 100)')
   }
 
   a = alpha ? (Math.round((255 * a) / 100) | (1 << 8)).toString(16).slice(1) : ''
@@ -140,7 +145,7 @@ export const rgbToHex = function ({ r, g, b, a }) {
 
 export const hexToRgb = function (hex: string) {
   if (typeof hex !== 'string') {
-    throw new TypeError('Expected a string')
+    throw new Error('Expected a string')
   }
 
   hex = hex.replace(/^#/, '')

@@ -25,7 +25,7 @@ import { defineComponent, PropType } from 'vue'
 export default defineComponent({
   name: 'CompanyLogo',
   props: {
-    name: { type: String as PropType<'github' | 'twitter'>, default: 'md' },
+    name: { type: String as PropType<'github' | 'twitter'>, required: true },
     size: { type: String as PropType<'sm' | 'md'>, default: 'md' },
   },
   setup(props) {

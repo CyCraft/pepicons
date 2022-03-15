@@ -77,11 +77,13 @@
     />
   </Stack>
   <Stack class="picker" v-else-if="kind === 'stroke'" classes="justify-center">
-    <IconButton
+    <!-- <IconButton
       :colorRing="true"
       @click="openColorPicker"
       :iconConfig="{ name: 'color-picker', color: '#e8e8e8', type: 'print' }"
-    />
+    /> -->
+    <!-- make this look like the button on the live page -->
+    <input type="color" @change="() => set('color', '#e2e2e2')" />
   </Stack>
 </template>
 
@@ -146,26 +148,26 @@ export default defineComponent({
     const nightfall = cssVar('nightfall')
     const moonlight = cssVar('moonlight')
 
-    function openColorPicker() {
-      Dialog.create({
-        component: DialogWrapper,
-        dialogProps: {
-          style: props.value.isDarkMode ? `background: ${nightfall}` : '',
-        },
-        slotComponent: QColor,
-        slotProps: {
-          noFooter: true,
-          flat: true,
-          formatModel: 'hexa',
-          value: props.value.color,
-          default: props.value.color,
-          dark: props.value.isDarkMode,
-        },
-        slotEvents: {
-          change: (newVal: string) => set(props.kind, newVal),
-        },
-      })
-    }
+    // function openColorPicker() {
+    //   Dialog.create({
+    //     component: DialogWrapper,
+    //     dialogProps: {
+    //       style: props.value.isDarkMode ? `background: ${nightfall}` : '',
+    //     },
+    //     slotComponent: QColor,
+    //     slotProps: {
+    //       noFooter: true,
+    //       flat: true,
+    //       formatModel: 'hexa',
+    //       value: props.value.color,
+    //       default: props.value.color,
+    //       dark: props.value.isDarkMode,
+    //     },
+    //     slotEvents: {
+    //       change: (newVal: string) => set('color', newVal),
+    //     },
+    //   })
+    // }
 
     const colorSelection = [
       cssVar('sig-purple'),
@@ -175,7 +177,7 @@ export default defineComponent({
       cssVar('sig-pink'),
     ]
 
-    return { set, setRandomColor, openColorPicker, colorSelection, nightfall, moonlight }
+    return { set, setRandomColor, colorSelection, nightfall, moonlight }
   },
 })
 </script>
