@@ -5,7 +5,7 @@ import { PepiconName } from '@pepicons/vue'
 export type IsDarkMode = boolean
 
 export type IconConfig = {
-  name?: PepiconName
+  name: PepiconName
   type: 'pop' | 'print'
   color: string
   stroke: string

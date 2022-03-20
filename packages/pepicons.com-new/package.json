@@ -8,7 +8,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "pepicons": "^1.0.12",
     "@pepicons/vue": "^1.0.12",
+    "is-what": "^3.14.1",
     "@viteplay/plugin": "^0.0.18",
     "@viteplay/vue": "^0.0.18",
     "vue": "^3.2.25"

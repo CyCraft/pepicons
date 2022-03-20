@@ -15,7 +15,6 @@
         :stroke="iconConfig.stroke"
         size="md"
       />
-      {{ iconConfig }}
     </div>
     <slot></slot>
   </button>

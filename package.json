@@ -66,6 +66,7 @@
     "vue-intellisense": "^0.3.1"
   },
   "dependencies": {
+    "vue-prism-editor": "^2.0.0-alpha.2",
     "vue-router": "^4.0.12"
   }
 }

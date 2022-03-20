@@ -52,6 +52,18 @@ export default defineConfig({
           component: './src/components/IconGrid.vue',
           examples: './src/components/IconGrid.example.vue',
         },
+        {
+          component: './src/components/Tabs.vue',
+          examples: './src/components/Tabs.example.vue',
+        },
+        {
+          component: './src/components/IconInfo.vue',
+          examples: './src/components/IconInfo.example.vue',
+        },
+        {
+          component: './src/components/CodeBlock.vue',
+          examples: './src/components/CodeBlock.example.vue',
+        },
       ],
       // the below config is for detecting an entire folder, but does not support multiple folders yet.
       // // Path to extract components from to create dev pages for

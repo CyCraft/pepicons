@@ -1,5 +1,5 @@
 <template>
-  <button @click="toggle" :class="`html-button ${value ? '_expanded' : ''}`">
+  <button @click="toggle" :class="`html-button ${modelValue ? '_expanded' : ''}`">
     <Pepicon class="_icon" name="angle-left" :type="kind" :color="color" :stroke="stroke" />
     <Pepicon class="_icon" name="angle-right" :type="kind" :color="color" :stroke="stroke" />
   </button>
@@ -26,14 +26,14 @@ export default defineComponent({
   name: 'HtmlButton',
   components: { Pepicon },
   props: {
-    value: { type: Boolean, default: false },
+    modelValue: { type: Boolean, default: false },
     kind: { type: String as PropType<'pop' | 'print' | undefined> },
     color: { type: String },
     stroke: { type: String },
   },
   setup(props, { emit }) {
     function toggle() {
-      emit('input', props.value)
+      emit('update:modelValue', !props.modelValue)
     }
     return { toggle }
   },
