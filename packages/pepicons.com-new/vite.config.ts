@@ -68,6 +68,10 @@ export default defineConfig({
           component: './src/components/Picker.vue',
           examples: './src/components/Picker.example.vue',
         },
+        {
+          component: './src/components/Tooltip.vue',
+          examples: './src/components/Tooltip.example.vue',
+        },
       ],
       // the below config is for detecting an entire folder, but does not support multiple folders yet.
       // // Path to extract components from to create dev pages for

@@ -3,21 +3,22 @@
     <!-- <div class="text-subtitle1 mb-sm">
       {{ kind === 'type' ? 'Style' : kind }}
     </div> -->
-    <IconButton
-      :iconConfig="{
-        name: 'can',
-        type: 'print',
-        color: value.isDarkMode ? 'black' : value.color,
-        stroke: value.isDarkMode ? value.color : 'black',
-      }"
-      :backgroundColor="value.isDarkMode ? moonlight : 'white'"
-      :isActive="value.type === 'print'"
-      :activeColor="value.color"
-      animationClass="anime-shake"
-      @click="set('type', 'print')"
-    >
-      <tippy delay="100, 200" placement="bottom">Print ❏</tippy>
-      <!-- <QTooltip
+    <Tooltip text="Print ❏">
+      <IconButton
+        :iconConfig="{
+          name: 'can',
+          type: 'print',
+          color: value.isDarkMode ? 'black' : value.color,
+          stroke: value.isDarkMode ? value.color : 'black',
+        }"
+        :backgroundColor="value.isDarkMode ? moonlight : 'white'"
+        :isActive="value.type === 'print'"
+        :activeColor="value.color"
+        animationClass="anime-shake"
+        @click="set('type', 'print')"
+      />
+    </Tooltip>
+    <!-- <QTooltip
         anchor="top middle"
         self="bottom middle"
         transition-show="jump-up"
@@ -25,16 +26,16 @@
         content-class="picker-tooltip _leftmost"
         >Print ❏</QTooltip
       > -->
-    </IconButton>
-    <IconButton
-      :iconConfig="{ ...value, name: 'can', type: 'pop' }"
-      :backgroundColor="value.isDarkMode ? moonlight : 'white'"
-      :isActive="value.type === 'pop'"
-      animationClass="anime-shake"
-      @click="set('type', 'pop')"
-    >
-      <tippy>Pop!</tippy>
-      <!-- <QTooltip
+    <Tooltip text="Pop!">
+      <IconButton
+        :iconConfig="{ ...value, name: 'can', type: 'pop' }"
+        :backgroundColor="value.isDarkMode ? moonlight : 'white'"
+        :isActive="value.type === 'pop'"
+        animationClass="anime-shake"
+        @click="set('type', 'pop')"
+      />
+    </Tooltip>
+    <!-- <QTooltip
         anchor="top middle"
         self="bottom middle"
         transition-show="jump-up"
@@ -42,7 +43,6 @@
         content-class="picker-tooltip"
         >Pop!</QTooltip
       > -->
-    </IconButton>
   </Stack>
   <Stack class="picker" v-else-if="kind === 'color'" classes="justify-center">
     <IconButton
@@ -113,10 +113,11 @@ import IconButton from './IconButton.vue'
 import Stack from './Stack.vue'
 import { getRandomColor, cssVar } from '../helpers/colorHelpers'
 import { defaultsIconConfig, IconConfig } from '../types'
+import Tooltip from './Tooltip.vue'
 
 export default defineComponent({
   name: 'Picker',
-  components: { IconButton, Stack, QTooltip },
+  components: { IconButton, Stack, QTooltip, Tooltip },
   props: {
     /**
      * @example 'type'

@@ -4,5 +4,4 @@ import { config } from './mocks'
 </script>
 <template>
   <IconButton :iconConfig="config" />
-  <!-- <IconButton>somethign</IconButton> -->
 </template>
