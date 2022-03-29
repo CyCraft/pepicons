@@ -23,12 +23,12 @@ export default defineComponent({
   cursor: default
   &:after
     position: absolute
-    width: 100%
+    left: 50%
     bottom: 125%
+    transform: translateY(10px) translateX(-50%)
+    width: max-content
     text-align: center
     box-sizing: border-box
-    display: flex
-    justify-content: center
 
     content: attr(data-tooltip)
     color: v-bind(textColor)
@@ -39,12 +39,11 @@ export default defineComponent({
 
     visibility: hidden
     opacity: 0
-    transform: translateY(10px)
     transition: all 400ms
     // transition: opacity 500ms, transform 500ms
   &:hover::after
-    width: 100%
+    width: max-content
     opacity: 1
     visibility: visible
-    transform: translateY(0)
+    transform: translateY(0) translateX(-50%)
 </style>
