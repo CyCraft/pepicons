@@ -7,10 +7,6 @@ export default defineComponent({
     backgroundColor: { type: String, default: '#000' },
     textColor: { type: String, default: '#fff' },
   },
-  setup(props) {
-    const text = computed(() => props.text)
-    return { text }
-  },
 })
 </script>
 <template>
@@ -27,9 +23,8 @@ export default defineComponent({
   cursor: default
   &:after
     position: absolute
-    width: max-content
-    // left: calc(50% )
-    bottom: 100%
+    width: 100%
+    bottom: 125%
     text-align: center
     box-sizing: border-box
     display: flex
@@ -40,7 +35,6 @@ export default defineComponent({
     background: v-bind(backgroundColor)
     padding: 8px
     border-radius: 1em
-    font-weight: bold
     white-space: nowrap
 
     visibility: hidden
@@ -49,6 +43,7 @@ export default defineComponent({
     transition: all 400ms
     // transition: opacity 500ms, transform 500ms
   &:hover::after
+    width: 100%
     opacity: 1
     visibility: visible
     transform: translateY(0)

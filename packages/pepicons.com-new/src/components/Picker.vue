@@ -18,14 +18,6 @@
         @click="set('type', 'print')"
       />
     </Tooltip>
-    <!-- <QTooltip
-        anchor="top middle"
-        self="bottom middle"
-        transition-show="jump-up"
-        transition-hide="jump-down"
-        content-class="picker-tooltip _leftmost"
-        >Print ❏</QTooltip
-      > -->
     <Tooltip text="Pop!">
       <IconButton
         :iconConfig="{ ...value, name: 'can', type: 'pop' }"
@@ -35,14 +27,6 @@
         @click="set('type', 'pop')"
       />
     </Tooltip>
-    <!-- <QTooltip
-        anchor="top middle"
-        self="bottom middle"
-        transition-show="jump-up"
-        transition-hide="jump-down"
-        content-class="picker-tooltip"
-        >Pop!</QTooltip
-      > -->
   </Stack>
   <Stack class="picker" v-else-if="kind === 'color'" classes="justify-center">
     <IconButton
@@ -107,7 +91,6 @@
 
 <script lang="ts">
 import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue'
-import { Dialog, QColor, QTooltip } from 'quasar'
 import DialogWrapper from '../dialogs/DialogWrapper.vue'
 import IconButton from './IconButton.vue'
 import Stack from './Stack.vue'
@@ -117,13 +100,13 @@ import Tooltip from './Tooltip.vue'
 
 export default defineComponent({
   name: 'Picker',
-  components: { IconButton, Stack, QTooltip, Tooltip },
+  components: { IconButton, Stack, Tooltip },
   props: {
     /**
      * @example 'type'
      */
     kind: {
-      type: String as PropType<'type' | 'color' | 'stroke' | 'isDarkMode'>,
+      type: String as PropType<'type' | 'color' | 'stroke' | 'isDarkMode' | 'background'>,
       required: true,
     },
     /**
