@@ -10,7 +10,7 @@
   "scripts": {
     "lint": "eslint --ext .js,.ts,.vue ./",
     "dev": "quasar dev",
-    "build": "quasar build --debug",
+    "build": "echo \"Not available\"",
     "build:favicon": "icongenie generate -i ./public/logo.png --skip-trim",
     "test": "echo \"No test specified\" && exit 0"
   },
