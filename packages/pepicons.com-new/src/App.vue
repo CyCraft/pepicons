@@ -6,4 +6,6 @@
 
 <style lang="sass">
 @import './css/app.sass'
+*
+  margin: 0
 </style>
