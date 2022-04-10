@@ -1,24 +1,8 @@
 <template>
   <div class="wrapper">
-    <Pickers />
-    <!-- <Tooltip text="Print ❏" backgroundColor="red" textColor="blue">
-      <IconButton :iconConfig="config" />
-    </Tooltip> -->
+    <!-- <Pickers /> -->
+    <Pepicon name="airplane" type="pop" color="red" />
   </div>
-  <!-- <div style="position: relative" class="my-component">
-    <Tabs v-model:selectedTab="selectedTab" :tabs="['vue', 'svg']" selectedTab="selected">
-      <template v-if="selectedTab === 'vue'"> vue </template>
-      <template v-if="selectedTab === 'svg'"> svg </template>
-    </Tabs>
-  </div> -->
-  <!-- <ProfileCard
-      name="Andy"
-      description="I am Andy"
-      profileUrl="https://andykarwoski.com/"
-      color="#0ea"
-    /> -->
-  <!-- <PepHero style="z-index: 10" />
-    <PepHeaderDecorationLight style="position: absolute; top: 0" /> -->
 </template>
 
 <style lang="sass">
@@ -52,6 +36,7 @@ export default defineComponent({
     Tooltip,
     IconButton,
     Pickers,
+    Pepicon,
   },
 })
 </script>
