@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<style lang="sass" scoped>
+<style lang="sass">
 @import '../css/variables.sass'
 .stack
   ._inner-wrap

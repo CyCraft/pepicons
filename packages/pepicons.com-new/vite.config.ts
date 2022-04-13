@@ -34,7 +34,10 @@ export default defineConfig({
         },
         {
           component: './src/components/PepInput.vue',
-          examples: './src/components/PepInput.example.vue',
+          examples: [
+            './src/components/PepInput-light.example.vue',
+            './src/components/PepInput-dark.example.vue',
+          ],
         },
         {
           component: './src/components/PepHeaderDecorationLight.vue',

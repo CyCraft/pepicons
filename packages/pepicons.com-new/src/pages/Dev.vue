@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
-    <!-- <Pickers /> -->
-    <Pepicon name="airplane" type="pop" color="red" />
+    <Pickers />
+    <!-- <Pepicon name="airplane" type="pop" color="red" /> -->
   </div>
 </template>
 

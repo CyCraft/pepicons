@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { PepiconName } from 'pepicons'
 import { ref, computed, reactive } from 'vue'
 import PepInput from './PepInput.vue'
 
@@ -17,15 +18,19 @@ function log() {
 //   const stroke = useColorAsStroke ? _color : _stroke
 //   return { type, color, stroke }
 // })
+const iconConfig = {
+  name: 'loop' as PepiconName,
+  type: 'print' as const,
+  color: 'goldenrod',
+  stroke: 'black',
+}
 </script>
+
+<docs darkExample></docs>
+
 <template>
   v-model: {{ v }}
-  <div class="bg-black pa-md light-mode">
-    <PepInput
-      @blur="log"
-      v-model="v"
-      :debounce="2"
-      :iconConfig="{ ...configComputed, name: 'loop' }"
-    />
+  <div class="dark-mode">
+    <PepInput @blur="log" v-model="v" :debounce="2" :iconConfig="iconConfig" />
   </div>
 </template>

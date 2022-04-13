@@ -38,17 +38,7 @@ export default defineComponent({
     },
   },
   emits: ['update:modelValue'],
-  setup(props, { attrs, listeners, emit }) {
-    const propsToPass = computed(() => ({
-      ...attrs,
-      outlined: true,
-      color: props.color,
-      modelValue: props.modelValue,
-      dark: props.isDarkMode,
-    }))
-    const eventsToPass = {
-      ...listeners,
-    }
+  setup(props, { attrs, emit }) {
     const valueInner = ref<any>(props.modelValue)
     let debounceInner: number = 0
     if (typeof props.debounce === 'number') {
@@ -69,7 +59,7 @@ export default defineComponent({
       emit('update:modelValue', payload)
     }
 
-    return { propsToPass, eventsToPass, valueInner }
+    return { valueInner }
   },
 })
 </script>
@@ -101,9 +91,8 @@ export default defineComponent({
   //   outline: none
   //   transition: all 200ms ease-in-out
 
-
-
-// .dark-mode .pep-input
+.dark-mode .pep-input
+  background-color: lightgrey
 
 .pep-input
   .q-field__control
