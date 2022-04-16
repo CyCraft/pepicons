@@ -130,6 +130,7 @@ export default defineComponent({
     }
 
     function setRandomColor() {
+      console.log('setRandomColor called')
       const randomColor = getRandomColor()
       set('color', randomColor)
     }

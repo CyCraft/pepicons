@@ -72,6 +72,10 @@ export default defineConfig({
           examples: './src/components/Picker.example.vue',
         },
         {
+          component: './src/components/Pickers.vue',
+          examples: './src/components/Pickers.example.vue',
+        },
+        {
           component: './src/components/Tooltip.vue',
           examples: './src/components/Tooltip.example.vue',
         },
