@@ -1,5 +1,5 @@
 <template>
-  <div padding class="page-index">
+  <div style="padding: 24px" class="page-index">
     <div class="_page-content">
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
