@@ -1,7 +1,20 @@
 <template>
   <div class="wrapper">
-    <Pickers />
+    <!-- <Pickers /> -->
     <!-- <Pepicon name="airplane" type="pop" color="red" /> -->
+    <!-- :style="`${ rows === '1' ? 'resize: none' : '' }; height: ${textareaHeight}; min-height: 3.5rem;
+    max-height: ${autogrowMaxHeight}rem`" -->
+
+    <button
+      :style="` background: ${color}; height: 1rem; width: 1rem`"
+      @click="colorPickerIsVisible = !colorPickerIsVisible"
+    />
+    <ColorPicker
+      v-if="colorPickerIsVisible"
+      theme="dark"
+      :color="color"
+      @changeColor="changeColor"
+    />
   </div>
 </template>
 
@@ -20,13 +33,22 @@ import Tooltip from '../components/Tooltip.vue'
 import IconButton from '../components/IconButton.vue'
 import { config } from '../components/mocks'
 import Pickers from '../components/Pickers.vue'
+import { ColorPicker } from 'vue-color-kit'
+import 'vue-color-kit/dist/vue-color-kit.css'
 
 export default defineComponent({
   name: 'MyComponent',
   props: { Pepicon },
   setup(props) {
     const selectedTab = ref<'vue' | 'svg'>('vue')
-    return { selectedTab, config }
+    let colorPickerIsVisible = ref(false)
+    const color = ref('#59c7f9')
+    function changeColor(color) {
+      color.value = color.hex
+      //const { r, g, b, a } = color.rgba;
+      //color.value = `rgba(${r}, ${g}, ${b}, ${a})`;
+    }
+    return { selectedTab, config, color, changeColor, colorPickerIsVisible }
   },
   components: {
     PepHeaderDecorationLight,
@@ -37,6 +59,7 @@ export default defineComponent({
     IconButton,
     Pickers,
     Pepicon,
+    ColorPicker,
   },
 })
 </script>
