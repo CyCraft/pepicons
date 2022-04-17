@@ -1,6 +1,6 @@
 <template>
   <button
-    :class="`icon-button reset-button ${isActive ? '_active' : ''}`"
+    :class="`icon-button reset-button`"
     :style="`background: ${backgroundColor}; ${activeStyle}`"
     @click="click"
   >
@@ -45,8 +45,8 @@ import { defineComponent, PropType, computed, ref, toRef, Ref, nextTick } from '
 import { defaultsIconConfig, IconConfig } from '../types'
 // import { colors } from 'quasar'
 // const { changeAlpha } = colors
-import { colors } from '../helpers/colors'
-import { changeAlpha } from '../helpers/colorHelpers'
+// import { colors } from '../helpers/colors'
+// import { changeAlpha } from '../helpers/colorHelpers'
 
 export default defineComponent({
   name: 'IconButton',
@@ -57,7 +57,7 @@ export default defineComponent({
      * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
      */
     iconConfig: {
-      type: Object as PropType<IconConfig>,
+      type: Object as PropType<Partial<IconConfig>>,
       default: () => ({ ...defaultsIconConfig() }),
     },
     isActive: { type: Boolean },
@@ -80,7 +80,8 @@ export default defineComponent({
     const activeStyle = computed(() => {
       if (!props.isActive) return ''
       const activeColor = props.activeColor || props.iconConfig?.color || props.backgroundColor
-      return `box-shadow: 0 0 0 3px ${changeAlpha(activeColor, 0.5)}`
+      return `box-shadow: 0 0 0 3px ${activeColor}`
+      // return `box-shadow: 0 0 0 3px ${changeAlpha(activeColor, 0.5)}`
     })
 
     const isAnimating = ref(false)

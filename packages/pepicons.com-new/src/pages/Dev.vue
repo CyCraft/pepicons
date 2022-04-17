@@ -46,9 +46,8 @@ export default defineComponent({
     let colorPickerIsVisible = ref(false)
     const color = ref('#59c7f9')
     function changeColor(color) {
-      color.value = color.hex
-      //const { r, g, b, a } = color.rgba;
-      //color.value = `rgba(${r}, ${g}, ${b}, ${a})`;
+      const { r, g, b, a } = color.rgba
+      color.value = `rgba(${r}, ${g}, ${b}, ${a})`
     }
     return { selectedTab, config, color, changeColor, colorPickerIsVisible }
   },

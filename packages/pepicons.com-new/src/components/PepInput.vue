@@ -1,19 +1,11 @@
 <template>
-  <!-- <QInput class="pep-input" v-bind="propsToPass" v-on="eventsToPass">
-    <template v-slot:prepend v-if="iconConfig">
-      <Pepicon name="airplane" v-bind="iconConfig" />
-    </template>
-  </QInput> -->
   <div class="_wrapper">
-    <!-- TODO: Fix input  -->
     <input class="pep-input" v-bind="$attrs" v-model="valueInner" />
     <Pepicon class="icon" v-bind="iconConfig" />
-    <!-- <Pepicon class="icon" name="loop" type="pop" color="red" /> -->
   </div>
 </template>
 
 <script lang="ts">
-// import { QInput } from 'quasar'
 import { Pepicon } from '@pepicons/vue'
 import { defineComponent, PropType, computed, ref, watch } from 'vue'
 import { defaultsIconConfig, IconConfig } from '../types'
@@ -23,8 +15,7 @@ export default defineComponent({
   components: { Pepicon },
   props: {
     modelValue: { type: String, default: '' },
-    color: { type: String, default: '#AB92F0' },
-    isDarkMode: { type: Boolean },
+    color: { type: String, required: true },
     /**
      * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
      */
@@ -87,12 +78,10 @@ export default defineComponent({
   transition: all 200ms ease-in-out
   &:focus
     outline: 2px solid v-bind(color)
-  // &:not(:focus)
-  //   outline: none
-  //   transition: all 200ms ease-in-out
 
 .dark-mode .pep-input
-  background-color: lightgrey
+  background-color:#202020
+  color: white
 
 .pep-input
   .q-field__control

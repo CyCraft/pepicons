@@ -2,24 +2,24 @@
   <Stack class="pickers pa-xs" classes="justify-center">
     <Picker
       kind="type"
-      :value="value"
-      @input="(newVal) => $emit('input', newVal)"
+      :modelValue="modelValue"
+      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
       :configComputed="configComputed"
     />
     <Picker
       class="_middle-section"
       kind="color"
-      :value="value"
-      @input="(newVal) => $emit('input', newVal)"
+      :modelValue="modelValue"
+      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
       :configComputed="configComputed"
     />
     <Picker
       kind="background"
-      :value="value"
-      @input="(newVal) => $emit('input', newVal)"
+      :modelValue="modelValue"
+      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
       :configComputed="configComputed"
     />
-    <!-- <Picker kind="stroke" :value="value" @input="(newVal) => $emit('input', newVal)" :configComputed="configComputed" /> -->
+    <!-- <Picker kind="stroke" :modelValue="modelValue" @update:modelValue="(newVal) => $emit('input', newVal)" :configComputed="configComputed" /> -->
   </Stack>
 </template>
 
@@ -46,7 +46,7 @@ export default defineComponent({
     /**
      * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string } & { isDarkMode: boolean }}
      */
-    value: {
+    modelValue: {
       type: Object as PropType<IconConfig & { isDarkMode: boolean }>,
       default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
     },

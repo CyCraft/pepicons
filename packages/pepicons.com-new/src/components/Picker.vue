@@ -8,21 +8,21 @@
         :iconConfig="{
           name: 'can',
           type: 'print',
-          color: value.isDarkMode ? 'black' : value.color,
-          stroke: value.isDarkMode ? value.color : 'black',
+          color: modelValue.isDarkMode ? 'black' : modelValue.color,
+          stroke: modelValue.isDarkMode ? modelValue.color : 'black',
         }"
-        :backgroundColor="value.isDarkMode ? moonlight : 'white'"
-        :isActive="value.type === 'print'"
-        :activeColor="value.color"
+        :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
+        :isActive="modelValue.type === 'print'"
+        :activeColor="modelValue.color"
         animationClass="anime-shake"
         @click="set('type', 'print')"
       />
     </Tooltip>
     <Tooltip text="Pop!">
       <IconButton
-        :iconConfig="{ ...value, name: 'can', type: 'pop' }"
-        :backgroundColor="value.isDarkMode ? moonlight : 'white'"
-        :isActive="value.type === 'pop'"
+        :iconConfig="{ ...modelValue, name: 'can', type: 'pop' }"
+        :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
+        :isActive="modelValue.type === 'pop'"
         animationClass="anime-shake"
         @click="set('type', 'pop')"
       />
@@ -32,20 +32,20 @@
     <IconButton
       v-for="c in colorSelection"
       :key="c"
-      :iconConfig="{ color: value.color }"
+      :iconConfig="{ color: modelValue.color }"
       :backgroundColor="c"
       @click="set('color', c)"
-      :isActive="value.color === c"
+      :isActive="modelValue.color === c"
     />
     <IconButton
       :iconConfig="{ ...configComputed, name: 'color-picker' }"
-      :backgroundColor="value.isDarkMode ? moonlight : 'white'"
+      :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
       :colorRing="true"
       @click="openColorPicker"
     />
     <IconButton
       :iconConfig="{ ...configComputed, name: 'refresh' }"
-      :backgroundColor="value.isDarkMode ? moonlight : 'white'"
+      :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
       :colorRing="true"
       @click="setRandomColor"
     />
@@ -112,7 +112,7 @@ export default defineComponent({
     /**
      * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string} & { isDarkMode: boolean }}
      */
-    value: {
+    modelValue: {
       type: Object as PropType<IconConfig & { isDarkMode: boolean }>,
       default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
     },
@@ -125,8 +125,8 @@ export default defineComponent({
     },
   },
   setup(props, { emit }) {
-    function set(prop: 'type' | 'color' | 'stroke' | 'isDarkMode', value: string) {
-      emit('input', { ...props.value, [prop]: value })
+    function set(prop: 'type' | 'color' | 'stroke' | 'isDarkMode', value: string | boolean) {
+      emit('update:modelValue', { ...props.modelValue, [prop]: value })
     }
 
     function setRandomColor() {
@@ -145,16 +145,16 @@ export default defineComponent({
     //   Dialog.create({
     //     component: DialogWrapper,
     //     dialogProps: {
-    //       style: props.value.isDarkMode ? `background: ${nightfall}` : '',
+    //       style: props.modelValue.isDarkMode ? `background: ${nightfall}` : '',
     //     },
     //     slotComponent: QColor,
     //     slotProps: {
     //       noFooter: true,
     //       flat: true,
     //       formatModel: 'hexa',
-    //       value: props.value.color,
-    //       default: props.value.color,
-    //       dark: props.value.isDarkMode,
+    //       value: props.modelValue.color,
+    //       default: props.modelValue.color,
+    //       dark: props.modelValue.isDarkMode,
     //     },
     //     slotEvents: {
     //       change: (newVal: string) => set('color', newVal),
