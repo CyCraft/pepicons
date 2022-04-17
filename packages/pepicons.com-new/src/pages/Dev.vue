@@ -9,12 +9,13 @@
       :style="` background: ${color}; height: 1rem; width: 1rem`"
       @click="colorPickerIsVisible = !colorPickerIsVisible"
     />
-    <ColorPicker
-      v-if="colorPickerIsVisible"
-      theme="dark"
-      :color="color"
-      @changeColor="changeColor"
-    />
+    <DialogWrapper
+      kind="colorPicker"
+      @close="colorPickerIsVisible = false"
+      :isVisible="colorPickerIsVisible"
+    >
+      <ColorPicker theme="dark" :color="color" @changeColor="changeColor" />
+    </DialogWrapper>
   </div>
 </template>
 
@@ -35,6 +36,7 @@ import { config } from '../components/mocks'
 import Pickers from '../components/Pickers.vue'
 import { ColorPicker } from 'vue-color-kit'
 import 'vue-color-kit/dist/vue-color-kit.css'
+import DialogWrapper from '../components/DialogWrapper.vue'
 
 export default defineComponent({
   name: 'MyComponent',
@@ -60,6 +62,7 @@ export default defineComponent({
     Pickers,
     Pepicon,
     ColorPicker,
+    DialogWrapper,
   },
 })
 </script>
