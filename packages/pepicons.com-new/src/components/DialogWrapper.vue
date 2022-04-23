@@ -1,64 +1,19 @@
 <template>
-  <div v-if="kind === 'normal'">
-    <transition name="modal-animation">
-      <div v-if="isVisible" class="modal" @click.stop="$emit('close')">
-        <transition name="modal-animation-inner">
-          <div @click.stop v-if="$slots.default" style="position: relative">
-            <!--Modal Content-->
-            <div style="position: relative; display: flex; justify-content: center; width: 100%">
-              <!-- header -->
-              <!-- body -->
-              <div>
-                <slot />
-              </div>
-              <!-- footer -->
+  <transition name="modal-animation">
+    <div v-if="isVisible" class="modal" @click.stop="$emit('close')">
+      <transition name="modal-animation-inner">
+        <div @click.stop v-if="$slots.default" style="position: relative">
+          <!--Modal Content-->
+          <div style="position: relative; display: flex; justify-content: center; width: 100%">
+            <!-- body -->
+            <div>
+              <slot />
             </div>
           </div>
-        </transition>
-      </div>
-    </transition>
-  </div>
-  <div v-if="kind === 'colorPicker'">
-    <transition name="modal-animation">
-      <div v-if="isVisible" class="modal" @click.stop="$emit('close')">
-        <transition name="modal-animation-inner">
-          <div @click.stop v-if="$slots.default" style="position: relative">
-            <!--Modal Content-->
-            <div style="position: relative; display: flex; justify-content: center; width: 100%">
-              <!-- header -->
-              <!-- body -->
-              <div>
-                <slot />
-              </div>
-              <!-- footer -->
-            </div>
-          </div>
-        </transition>
-      </div>
-    </transition>
-  </div>
-  <!-- <q-dialog
-    ref="dialog"
-    @hide="onDialogHide"
-    v-on="dialogEvents"
-    v-bind="{ ...dialogProps, style: '', class: '' }"
-  >
-    <div :class="['dialog-wrapper', dialogProps.class].flat()" :style="dialogProps.style">
-      <component :is="slotComponent" v-bind="innerSlotProps" v-on="innerSlotEvents" />
-      <q-btn
-        v-if="showCloseButton"
-        @click="hide"
-        class="_close"
-        icon="close"
-        color="primary"
-        size="lg"
-        flat
-      />
-      <q-inner-loading :showing="dialogProps.loading">
-        <q-spinner size="50px" color="primary" />
-      </q-inner-loading>
+        </div>
+      </transition>
     </div>
-  </q-dialog> -->
+  </transition>
 </template>
 
 <style lang="sass" scoped>
@@ -71,21 +26,11 @@
   position: fixed
   top: 0
   left: 0
-  height: 100vh
-  width: 100vw
+  bottom: 0
+  right: 0
   background-color: rgba(0, 0, 0, 0.4)
   z-index: 20
 
-
-.dialog-wrapper
-  position: relative
-  background: none
-  min-width: 280px
-  max-width: 80vw
-  ._close
-    position: absolute
-    top: 0
-    right: 0
 
 .modal-animation-enter-active,
 .modal-animation-leave-active
@@ -115,10 +60,6 @@ export default defineComponent({
   name: 'ModalWrapper',
   props: {
     isVisible: Boolean,
-    kind: {
-      type: String as PropType<'normal' | 'colorPicker'>,
-      default: 'normal',
-    },
   },
   emits: ['close'],
   setup() {},

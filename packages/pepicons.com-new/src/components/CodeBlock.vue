@@ -47,7 +47,7 @@ export default defineComponent({
   font-family: Fira code, Fira Mono, Consolas, Menlo, Courier, monospace;
   font-size: 14px;
   line-height: 1.5;
-  padding: 5px;
+  padding: 18px;
 }
 
 /* optional class for removing the outline */

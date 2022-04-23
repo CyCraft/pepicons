@@ -2,42 +2,25 @@
   <div class="icon-info">
     <HtmlButton class="_toggle-code-button" v-model="_.codeShown" v-bind="config" />
     <div class="_code-section">
-      <div class="flex">
-        <!-- <q-tabs
-          v-model="_.openCodeTab"
-          dense
-          shrink
-          narrowIndicator
-          noCaps
-          align="left"
-          indicatorColor="primary"
-          content-class="text-h6"
+      <div>
+        <Tabs
+          class="_tab-panels"
+          v-model:selectedTab="_.openCodeTab"
+          :tabs="['Vue', 'SVG']"
+          :color="config.color"
         >
-          <q-tab contentClass="_tab" :ripple="false" name="vue" label="Vue" />
-          <q-tab contentClass="_tab" :ripple="false" name="svg" label="SVG" />
-        </q-tabs> -->
-        <!-- <Tabs v-model:selectedTab="selectedTab" :tabs="['vue', 'svg']"> -->
-        <Tabs v-model:selectedTab="_.openCodeTab" :tabs="['vue', 'svg']">
-          <template v-if="_.openCodeTab === 'vue'">
-            <div class="_tab-panel">
+          <template v-if="_.openCodeTab === 'Vue'">
+            <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
               <CodeBlock lang="html" :content="codeVue" class="_code-block" />
             </div>
           </template>
-          <template v-if="_.openCodeTab === 'svg'">
-            <div class="_tab-panel">
+          <template v-if="_.openCodeTab === 'SVG'">
+            <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
               <CodeBlock lang="html" :content="codeSvg" class="_code-block" />
             </div>
           </template>
         </Tabs>
       </div>
-      <!-- <q-tab-panels v-model="_.openCodeTab" animated class="_tab-panels">
-        <q-tab-panel class="_tab-panel" name="vue"
-          ><CodeBlock lang="html" :content="codeVue" class="_code-block"
-        /></q-tab-panel>
-        <q-tab-panel class="_tab-panel" name="svg"
-          ><CodeBlock lang="html" :content="codeSvg" class="_code-block"
-        /></q-tab-panel>
-      </q-tab-panels> -->
     </div>
 
     <div class="_top-door" :class="{ '_top-door-transform': _.codeShown }">
@@ -48,11 +31,11 @@
         :stroke="config.stroke"
         size="80px"
       />
-      <div class="text-h5 mt-xl">{{ config.name }}</div>
+      <div style="color: #4f4f4f" class="text-h5 mt-xl">{{ config.name }}</div>
     </div>
     <div class="_bottom-door text-h6 px-xl" :class="{ '_bottom-door-transform': _.codeShown }">
       <div class="flex-center relative">
-        <div>SVG</div>
+        <div style="color: #4f4f4f">SVG</div>
         <div class="flex q-gutter-sm mt-xs">
           <IconButton
             :iconConfig="{
@@ -73,7 +56,7 @@
         </div>
       </div>
       <div class="flex-center">
-        <div>PNG</div>
+        <div style="color: #4f4f4f">PNG</div>
         <div class="flex q-gutter-sm mt-xs">
           <IconButton
             :iconConfig="{
@@ -224,9 +207,9 @@ export default defineComponent({
     },
   },
   setup(props) {
-    const selectedTab = ref<'vue' | 'svg'>('vue')
+    const selectedTab = ref<'Vue' | 'SVG'>('Vue')
     const _ = reactive({
-      openCodeTab: 'vue',
+      openCodeTab: 'Vue',
       codeShown: false,
       downloadSvgDone: false,
       copySvgDone: false,
