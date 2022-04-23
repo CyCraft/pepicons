@@ -5,9 +5,12 @@
         <Stack class="ml-auto" classes="justify-end items-center">
           <Stack class="ml-auto" classes="items-center">
             <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
-            <!-- @click.native.stop.prevent="() => scrollTo('#about-us')" -->
-            <!-- need to make my own scrollto -->
-            <PepLink content="About Us" icon="info-filled" class="cursor-arrow-down" />
+            <PepLink
+              @click.native.stop.prevent="scrollPageTo('about-us')"
+              content="About Us"
+              icon="info-filled"
+              class="cursor-arrow-down"
+            />
           </Stack>
           <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button">Download</a>
         </Stack>
@@ -90,8 +93,11 @@
         </Stack>
       </div>
       <div class="mt-xxxl flex-center">
-        <PepLink content="Go to top" class="cursor-arrow-up px-md py-sm" />
-        <!-- @click.native.stop.prevent="() => scrollTo('#top')" -->
+        <PepLink
+          @click.native.stop.prevent="scrollPageTo('top')"
+          content="Go to top"
+          class="cursor-arrow-up px-md py-sm"
+        />
         <div class="mt-xxl">
           <PepLink
             href="https://github.com/sponsors/mesqueeb"
@@ -152,7 +158,6 @@ import PepLink from '../components/PepLink.vue'
 import ProfileCard from '../components/ProfileCard.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
-// import { scrollTo } from '../helpers/scroll'
 import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
 import { defaultsIconConfig, IconConfig } from '../types'
 
@@ -242,6 +247,15 @@ export default defineComponent({
       //   },
       // })
     }
+    const scrollPageTo = (navEl) => {
+      console.log(`#${navEl}`)
+      let element = document.querySelector(`#${navEl}`)
+      console.log(element)
+      element?.scrollIntoView({
+        block: 'center',
+        behavior: 'smooth',
+      })
+    }
 
     return {
       _,
@@ -250,7 +264,7 @@ export default defineComponent({
       categories,
       categoryIconNamesDic,
       openTileDialog,
-      // scrollTo,
+      scrollPageTo,
     }
   },
 })
