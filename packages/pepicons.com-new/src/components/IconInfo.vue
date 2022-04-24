@@ -31,11 +31,11 @@
         :stroke="config.stroke"
         size="80px"
       />
-      <div style="color: #4f4f4f" class="text-h5 mt-xl">{{ config.name }}</div>
+      <div class="text-h5 mt-xl">{{ config.name }}</div>
     </div>
     <div class="_bottom-door text-h6 px-xl" :class="{ '_bottom-door-transform': _.codeShown }">
       <div class="flex-center relative">
-        <div style="color: #4f4f4f">SVG</div>
+        <div>SVG</div>
         <div class="flex q-gutter-sm mt-xs">
           <IconButton
             :iconConfig="{
@@ -56,7 +56,7 @@
         </div>
       </div>
       <div class="flex-center">
-        <div style="color: #4f4f4f">PNG</div>
+        <div>PNG</div>
         <div class="flex q-gutter-sm mt-xs">
           <IconButton
             :iconConfig="{
@@ -131,7 +131,7 @@
   z-index: 0
 
 ._tab
-  height: 50px
+  // height: 50px
   +pt($sm)
   > *
     +t-subtitle1()

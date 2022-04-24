@@ -46,8 +46,14 @@
             :iconNames="categoryIconNamesDic[category]"
             :config="configComputed"
             :searchInput="_.searchInput"
-            @click-tile="openTileDialog"
+            @click-tile="openIconModal"
           />
+          <!-- <IconGrid
+            :iconNames="categoryIconNamesDic[category]"
+            :config="configComputed"
+            :searchInput="_.searchInput"
+            @click-tile="openTileDialog"
+          /> -->
         </div>
       </template>
       <div class="_section">
@@ -108,6 +114,9 @@
       </div>
     </div>
   </div>
+  <DialogWrapper @close="iconInfoIsVisible = false" :isVisible="iconInfoIsVisible">
+    <IconInfo :config="{ ...configComputed, name: iconInfoName }" :configOptionButtons="_.config" />
+  </DialogWrapper>
 </template>
 
 <style lang="sass">
@@ -138,7 +147,7 @@
   +C(border, white, thin solid)
 </style>
 <script lang="ts">
-import { defineComponent, reactive, computed, watch } from 'vue'
+import { defineComponent, reactive, computed, watch, ref } from 'vue'
 import {
   pop,
   print,
@@ -160,10 +169,12 @@ import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
 import { defaultsIconConfig, IconConfig } from '../types'
+import DialogWrapper from '../components/DialogWrapper.vue'
+import IconInfo from '../components/IconInfo.vue'
 
 export default defineComponent({
   name: 'LandingPage',
-  components: { Stack, PepLink, Pickers, PepInput, ProfileCard, IconGrid },
+  components: { Stack, PepLink, Pickers, PepInput, ProfileCard, IconGrid, DialogWrapper, IconInfo },
   created() {
     document.body.classList.add('light-mode')
     document.body.classList.add(`${defaultsIconConfig().type}-mode`)
@@ -247,6 +258,13 @@ export default defineComponent({
       //   },
       // })
     }
+    const iconInfoIsVisible = ref(false)
+    const iconInfoName = ref('')
+    function openIconModal(icon: string): void {
+      console.log(`openTileDialog → `, icon)
+      iconInfoIsVisible.value = true
+      iconInfoName.value = icon
+    }
     const scrollPageTo = (navEl) => {
       console.log(`#${navEl}`)
       let element = document.querySelector(`#${navEl}`)
@@ -265,6 +283,9 @@ export default defineComponent({
       categoryIconNamesDic,
       openTileDialog,
       scrollPageTo,
+      iconInfoIsVisible,
+      openIconModal,
+      iconInfoName,
     }
   },
 })

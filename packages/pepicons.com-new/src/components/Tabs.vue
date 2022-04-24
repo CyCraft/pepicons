@@ -44,11 +44,11 @@ ul
   width: 100%
   padding: 0
   ._tab
-    color: #4f4f4f
     padding: 16px
     font-size: 20px
     font-weight: 500
     cursor: pointer
+    border-bottom: 2px solid transparent
     &:hover
       background: RGBA(25,25,25,.05)
       // background: grey

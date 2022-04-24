@@ -9,11 +9,7 @@
       :style="` background: ${color}; height: 1rem; width: 1rem`"
       @click="colorPickerIsVisible = !colorPickerIsVisible"
     />
-    <DialogWrapper
-      kind="colorPicker"
-      @close="colorPickerIsVisible = false"
-      :isVisible="colorPickerIsVisible"
-    >
+    <DialogWrapper @close="colorPickerIsVisible = false" :isVisible="colorPickerIsVisible">
       <ColorPicker theme="dark" :color="color" @changeColor="changeColor" />
     </DialogWrapper>
   </div>
