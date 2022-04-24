@@ -10,7 +10,7 @@
       @click="colorPickerIsVisible = !colorPickerIsVisible"
     />
     <DialogWrapper @close="colorPickerIsVisible = false" :isVisible="colorPickerIsVisible">
-      <ColorPicker theme="dark" :color="color" @changeColor="changeColor" />
+      <ColorPicker theme="light" :color="color" @changeColor="changeColor" />
     </DialogWrapper>
   </div>
 </template>

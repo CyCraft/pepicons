@@ -41,7 +41,7 @@
       :iconConfig="{ ...configComputed, name: 'color-picker' }"
       :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
       :colorRing="true"
-      @click="openColorPicker"
+      @click="colorPickerIsVisible = true"
     />
     <IconButton
       :iconConfig="{ ...configComputed, name: 'refresh' }"
@@ -65,14 +65,16 @@
     />
   </Stack>
   <Stack class="picker" v-else-if="kind === 'stroke'" classes="justify-center">
-    <!-- <IconButton
-      :colorRing="true"
-      @click="openColorPicker"
-      :iconConfig="{ name: 'color-picker', color: '#e8e8e8', type: 'print' }"
-    /> -->
-    <!-- make this look like the button on the live page -->
     <input type="color" @change="() => set('color', '#e2e2e2')" />
   </Stack>
+  <DialogWrapper @close="colorPickerIsVisible = false" :isVisible="colorPickerIsVisible">
+    <ColorPicker
+      :theme="modelValue.isDarkMode === true ? 'dark' : 'light'"
+      :color="modelValue.color"
+      @changeColor="changeColor"
+    />
+    <!-- the dev version looks perfect, but this one not so much -->
+  </DialogWrapper>
 </template>
 
 <style lang="sass">
@@ -91,22 +93,24 @@
 
 <script lang="ts">
 import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue'
-import DialogWrapper from '../dialogs/DialogWrapper.vue'
+import DialogWrapper from '../components/DialogWrapper.vue'
 import IconButton from './IconButton.vue'
 import Stack from './Stack.vue'
 import { getRandomColor, cssVar } from '../helpers/colorHelpers'
 import { defaultsIconConfig, IconConfig } from '../types'
 import Tooltip from './Tooltip.vue'
+import { ColorPicker } from 'vue-color-kit'
 
 export default defineComponent({
   name: 'Picker',
-  components: { IconButton, Stack, Tooltip },
+  components: { IconButton, Stack, Tooltip, DialogWrapper, ColorPicker },
+  inheritAttrs: false,
   props: {
     /**
      * @example 'type'
      */
     kind: {
-      type: String as PropType<'type' | 'color' | 'stroke' | 'isDarkMode' | 'background'>,
+      type: String as PropType<'type' | 'color' | 'stroke' | 'modelValueisDarkMode' | 'background'>,
       required: true,
     },
     /**
@@ -139,7 +143,7 @@ export default defineComponent({
     const moonlight = cssVar('moonlight')
 
     function openColorPicker() {
-      console.log('color picker pressed')
+      colorPickerIsVisible.value = true
     }
     // function openColorPicker() {
     //   Dialog.create({
@@ -161,6 +165,11 @@ export default defineComponent({
     //     },
     //   })
     // }
+    let colorPickerIsVisible = ref(false)
+    function changeColor(color) {
+      const { r, g, b, a } = color.rgba
+      set('color', `rgba(${r}, ${g}, ${b}, ${a})`)
+    }
 
     const colorSelection = [
       cssVar('sig-purple'),
@@ -170,7 +179,16 @@ export default defineComponent({
       cssVar('sig-pink'),
     ]
 
-    return { set, setRandomColor, colorSelection, nightfall, moonlight, openColorPicker }
+    return {
+      set,
+      setRandomColor,
+      colorSelection,
+      nightfall,
+      moonlight,
+      openColorPicker,
+      colorPickerIsVisible,
+      changeColor,
+    }
   },
 })
 </script>
