@@ -1,5 +1,5 @@
 <template>
-  <div style="padding: 24px" class="page-index">
+  <div v-bind="$attrs" style="padding: 24px" class="page-index">
     <div class="_page-content">
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
@@ -48,12 +48,6 @@
             :searchInput="_.searchInput"
             @click-tile="openIconModal"
           />
-          <!-- <IconGrid
-            :iconNames="categoryIconNamesDic[category]"
-            :config="configComputed"
-            :searchInput="_.searchInput"
-            @click-tile="openTileDialog"
-          /> -->
         </div>
       </template>
       <div class="_section">
@@ -157,8 +151,8 @@ import {
   synonymsJa,
   categories,
   pepiconCategoryDic,
+  PepiconName,
 } from 'pepicons'
-// import { Dialog } from 'quasar'
 import Stack from '../components/Stack.vue'
 import IconGrid from '../components/IconGrid.vue'
 import PepInput from '../components/PepInput.vue'
@@ -241,27 +235,14 @@ export default defineComponent({
             _synonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
           if (!searchHit) return dic
         }
-        dic[iconCategory].push(iconName)
+        dic[iconCategory].push(iconName as any)
         return dic
-      }, {} as { [category: string]: string[] }),
+      }, {} as { [category: string]: PepiconName[] }),
     )
 
-    function openTileDialog(iconName: string): void {
-      console.log(`openTileDialog → `, iconName)
-      // Dialog.create({
-      //   component: 'DialogWrapper',
-      //   dialogProps: { style: `border-radius: 1rem` },
-      //   slotComponent: 'IconInfo',
-      //   slotProps: {
-      //     config: { ...configComputed.value, name: iconName },
-      //     configOptionButtons: _.config,
-      //   },
-      // })
-    }
     const iconInfoIsVisible = ref(false)
-    const iconInfoName = ref('')
-    function openIconModal(icon: string): void {
-      console.log(`openTileDialog → `, icon)
+    const iconInfoName = ref<PepiconName>('airplane')
+    function openIconModal(icon: PepiconName): void {
       iconInfoIsVisible.value = true
       iconInfoName.value = icon
     }
@@ -281,7 +262,6 @@ export default defineComponent({
       configComputed,
       categories,
       categoryIconNamesDic,
-      openTileDialog,
       scrollPageTo,
       iconInfoIsVisible,
       openIconModal,

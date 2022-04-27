@@ -1,7 +1,7 @@
 <template>
   <button @click="toggle" :class="`html-button ${modelValue ? '_expanded' : ''}`">
-    <Pepicon class="_icon" name="angle-left" :type="kind" :color="color" :stroke="stroke" />
-    <Pepicon class="_icon" name="angle-right" :type="kind" :color="color" :stroke="stroke" />
+    <Pepicon class="_icon" name="angle-left" :type="type" :color="color" :stroke="stroke" />
+    <Pepicon class="_icon" name="angle-right" :type="type" :color="color" :stroke="stroke" />
   </button>
 </template>
 
@@ -27,7 +27,7 @@ export default defineComponent({
   components: { Pepicon },
   props: {
     modelValue: { type: Boolean, default: false },
-    kind: { type: String as PropType<'pop' | 'print' | undefined> },
+    type: { type: String as PropType<'pop' | 'print' | undefined> },
     color: { type: String },
     stroke: { type: String },
   },

@@ -34,6 +34,7 @@
 </style>
 
 <script lang="ts">
+import { PepiconName } from 'pepicons'
 import { defineComponent, PropType } from 'vue'
 import { defaultsIconConfig, IconConfig } from '../types'
 import IconTile from './IconTile.vue'
@@ -42,12 +43,12 @@ export default defineComponent({
   name: 'IconGrid',
   components: { IconTile },
   props: {
-    iconNames: { type: Array as PropType<string[]> },
+    iconNames: { type: Array as PropType<PepiconName[]> },
     /**
      * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
      */
     config: {
-      type: Object as PropType<IconConfig>,
+      type: Object as PropType<Partial<IconConfig>>,
       default: () => ({ ...defaultsIconConfig() }),
     },
     searchInput: { type: String },

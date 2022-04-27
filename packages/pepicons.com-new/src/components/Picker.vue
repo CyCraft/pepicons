@@ -1,8 +1,5 @@
 <template>
   <Stack class="picker" v-if="kind === 'type'" classes="justify-center">
-    <!-- <div class="text-subtitle1 mb-sm">
-      {{ kind === 'type' ? 'Style' : kind }}
-    </div> -->
     <Tooltip text="Print ❏">
       <IconButton
         :iconConfig="{
@@ -71,9 +68,8 @@
     <ColorPicker
       :theme="modelValue.isDarkMode === true ? 'dark' : 'light'"
       :color="modelValue.color"
-      @changeColor="changeColor"
+      @changeColor="(val) => changeColor(val)"
     />
-    <!-- the dev version looks perfect, but this one not so much -->
   </DialogWrapper>
 </template>
 
@@ -89,6 +85,12 @@
   border-radius: $md
   font-weight: 500
   white-space: nowrap
+
+.hu-color-picker
+  .color-set
+    justify-content: space-evenly
+  .color-alpha
+    display: none
 </style>
 
 <script lang="ts">
@@ -100,6 +102,7 @@ import { getRandomColor, cssVar } from '../helpers/colorHelpers'
 import { defaultsIconConfig, IconConfig } from '../types'
 import Tooltip from './Tooltip.vue'
 import { ColorPicker } from 'vue-color-kit'
+import 'vue-color-kit/dist/vue-color-kit.css'
 
 export default defineComponent({
   name: 'Picker',
@@ -117,14 +120,14 @@ export default defineComponent({
      * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string} & { isDarkMode: boolean }}
      */
     modelValue: {
-      type: Object as PropType<IconConfig & { isDarkMode: boolean }>,
+      type: Object as PropType<Partial<IconConfig> & { isDarkMode: boolean }>,
       default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
     },
     /**
      * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
      */
     configComputed: {
-      type: Object as PropType<IconConfig>,
+      type: Object as PropType<Partial<IconConfig>>,
       default: () => ({ ...defaultsIconConfig() }),
     },
   },
@@ -145,30 +148,13 @@ export default defineComponent({
     function openColorPicker() {
       colorPickerIsVisible.value = true
     }
-    // function openColorPicker() {
-    //   Dialog.create({
-    //     component: DialogWrapper,
-    //     dialogProps: {
-    //       style: props.modelValue.isDarkMode ? `background: ${nightfall}` : '',
-    //     },
-    //     slotComponent: QColor,
-    //     slotProps: {
-    //       noFooter: true,
-    //       flat: true,
-    //       formatModel: 'hexa',
-    //       value: props.modelValue.color,
-    //       default: props.modelValue.color,
-    //       dark: props.modelValue.isDarkMode,
-    //     },
-    //     slotEvents: {
-    //       change: (newVal: string) => set('color', newVal),
-    //     },
-    //   })
-    // }
     let colorPickerIsVisible = ref(false)
     function changeColor(color) {
-      const { r, g, b, a } = color.rgba
-      set('color', `rgba(${r}, ${g}, ${b}, ${a})`)
+      // const a = color.rgba.a
+      // const alpha = a ? (Math.round((255 * a) / 100) | (1 << 8)).toString(16).slice(1) : ''
+      const alpha = ''
+      const newValue = color.hex + alpha
+      set('color', newValue)
     }
 
     const colorSelection = [

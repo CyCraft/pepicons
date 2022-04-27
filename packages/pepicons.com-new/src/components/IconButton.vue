@@ -46,7 +46,7 @@ import { defaultsIconConfig, IconConfig } from '../types'
 // import { colors } from 'quasar'
 // const { changeAlpha } = colors
 // import { colors } from '../helpers/colors'
-// import { changeAlpha } from '../helpers/colorHelpers'
+import { changeAlpha } from '../helpers/colorHelpers'
 
 export default defineComponent({
   name: 'IconButton',
@@ -80,8 +80,8 @@ export default defineComponent({
     const activeStyle = computed(() => {
       if (!props.isActive) return ''
       const activeColor = props.activeColor || props.iconConfig?.color || props.backgroundColor
-      return `box-shadow: 0 0 0 3px ${activeColor}`
-      // return `box-shadow: 0 0 0 3px ${changeAlpha(activeColor, 0.5)}`
+
+      return `box-shadow: 0 0 0 3px ${changeAlpha(activeColor, 0.5)}`
     })
 
     const isAnimating = ref(false)

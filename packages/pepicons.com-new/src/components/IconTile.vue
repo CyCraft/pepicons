@@ -51,7 +51,7 @@ export default defineComponent({
      * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
      */
     config: {
-      type: Object as PropType<IconConfig>,
+      type: Object as PropType<Partial<IconConfig>>,
       default: () => ({ ...defaultsIconConfig() }),
     },
     searchInput: { type: String, default: '' },
