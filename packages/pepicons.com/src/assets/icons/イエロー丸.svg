@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="26" height="21" viewBox="0 0 26 21">
-  <g id="イエロー丸" transform="translate(-323.942 -5.267)">
-    <ellipse id="イエロー丸-2" data-name="イエロー丸" cx="10" cy="10.5" rx="10" ry="10.5" transform="translate(329.942 5.267)" fill="#f7d570"/>
-    <g id="イエロー丸線" transform="translate(323.942 5.267)" fill="none" stroke="#0b0303" stroke-width="1.5">
-      <circle cx="10" cy="10" r="10" stroke="none"/>
-      <circle cx="10" cy="10" r="9.25" fill="none"/>
-    </g>
-  </g>
-</svg>
