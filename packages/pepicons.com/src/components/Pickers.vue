@@ -26,7 +26,7 @@
 @import '../css/variables.sass'
 .pickers
   ._middle-section
-    flex: unset
+    flex: 1
     order: 3
     +media-sm(flex, 1)
     +media-sm(order, unset)

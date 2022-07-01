@@ -151,11 +151,11 @@
 </style>
 
 <script lang="ts">
+import copyToClipboard from 'copy-text-to-clipboard'
 import { defineComponent, computed, reactive, PropType, ref } from 'vue'
 import { pepiconSvgString } from 'pepicons'
 import { Pepicon } from '@pepicons/vue'
 import CodeBlock from './CodeBlock.vue'
-import copyToClipboard from 'copy-text-to-clipboard'
 import IconButton from './IconButton.vue'
 import HtmlButton from './HtmlButton.vue'
 import { downloadBase64AsFile, downloadFile } from '../helpers/download'

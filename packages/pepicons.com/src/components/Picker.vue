@@ -1,5 +1,5 @@
 <template>
-  <Stack class="picker" v-if="kind === 'type'" classes="justify-center">
+  <Stack v-bind="$attrs" class="picker" v-if="kind === 'type'" classes="justify-center">
     <Tooltip text="Print ❏">
       <IconButton
         :iconConfig="{
@@ -25,7 +25,7 @@
       />
     </Tooltip>
   </Stack>
-  <Stack class="picker" v-else-if="kind === 'color'" classes="justify-center">
+  <Stack v-bind="$attrs" class="picker" v-if="kind === 'color'" classes="justify-center">
     <IconButton
       v-for="c in colorSelection"
       :key="c"
@@ -47,7 +47,7 @@
       @click="setRandomColor"
     />
   </Stack>
-  <Stack class="picker" v-else-if="kind === 'background'" classes="justify-center">
+  <Stack v-bind="$attrs" class="picker" v-if="kind === 'background'" classes="justify-center">
     <IconButton
       backgroundColor="white"
       @click="set('isDarkMode', false)"
@@ -61,7 +61,7 @@
       :iconConfig="{ name: 'moon-filled', type: 'pop', color: 'white' }"
     />
   </Stack>
-  <Stack class="picker" v-else-if="kind === 'stroke'" classes="justify-center">
+  <Stack v-bind="$attrs" class="picker" v-if="kind === 'stroke'" classes="justify-center">
     <input type="color" @change="() => set('color', '#e2e2e2')" />
   </Stack>
   <DialogWrapper @close="colorPickerIsVisible = false" :isVisible="colorPickerIsVisible">

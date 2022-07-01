@@ -13,8 +13,12 @@ export default defineConfig({
   plugins: [
     vue(),
     viteplay({
-      components: './src/components/*.vue',
-      componentExamples: './src/components/examples/*.vue',
+      pages: [
+        {
+          component: './src/components/Pepicon.vue',
+          examples: './src/components/examples/*.vue',
+        },
+      ],
       base: '/',
     }),
   ],
