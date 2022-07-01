@@ -20,7 +20,6 @@
 .icon-tile
   transition: background-color 500ms
   border-radius: $border-radius
-  height: auto
   display: flex
   flex-direction: column
   align-items: center
