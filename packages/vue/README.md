@@ -27,6 +27,14 @@ export default {
 
 We do not support Vue's `install(Plugin)` out of principle: Anything that is "auto-magical" is not considered good practice; It's more difficult to trace down where a component is coming from.
 
+Using `Pepicon` component will use the `async` version of the icons, which means each icon is defined as an async Vue component, and loaded on demand when it's rendered.
+
+If you want a sync version of the icon components, you can also import them individually, as per the example below:
+
+```js
+import { PopAirplane, PrintArrowDown } from '@pepicons/vue'
+```
+
 ## pepicons (TypeScript & SVGs)
 
 See [packages/pepicons](/packages/pepicons)

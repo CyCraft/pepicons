@@ -1,3 +1,5 @@
+<docs darkExample>Update the stroke to be able to tweak usage on dark backgrounds</docs>
+
 <script lang="ts" setup>
 import Pepicon from '../Pepicon.vue'
 </script>
@@ -15,7 +17,6 @@ import Pepicon from '../Pepicon.vue'
 
 <style scoped>
 .example {
-  background: #1d1d1d;
   display: flex;
   flex-wrap: wrap;
 }

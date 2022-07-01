@@ -3,3 +3,4 @@ node_modules
 *.local
 pepicons.com (t)
 .cache
+packages/vue/src/icons

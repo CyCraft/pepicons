@@ -13,12 +13,8 @@ export default defineConfig({
   plugins: [
     vue(),
     viteplay({
-      pages: [
-        {
-          title: 'Pepicon',
-          examples: './src/components/examples/*.vue',
-        },
-      ],
+      components: './src/components/*.vue',
+      componentExamples: './src/components/examples/*.vue',
       base: '/',
     }),
   ],
@@ -26,6 +22,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: namePascal,
+      formats: ['cjs', 'es'],
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
