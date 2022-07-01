@@ -1,12 +1,12 @@
 <template>
-  <q-page padding class="page-index">
+  <div v-bind="$attrs" style="padding: 24px" class="page-index">
     <div class="_page-content">
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
           <Stack class="ml-auto" classes="items-center">
             <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
             <PepLink
-              @click.native.stop.prevent="() => scrollTo('#about-us')"
+              @click.native.stop.prevent="scrollPageTo('about-us')"
               content="About Us"
               icon="info-filled"
               class="cursor-arrow-down"
@@ -46,7 +46,7 @@
             :iconNames="categoryIconNamesDic[category]"
             :config="configComputed"
             :searchInput="_.searchInput"
-            @click-tile="openTileDialog"
+            @click-tile="openIconModal"
           />
         </div>
       </template>
@@ -94,9 +94,9 @@
       </div>
       <div class="mt-xxxl flex-center">
         <PepLink
+          @click.native.stop.prevent="scrollPageTo('top')"
           content="Go to top"
           class="cursor-arrow-up px-md py-sm"
-          @click.native.stop.prevent="() => scrollTo('#top')"
         />
         <div class="mt-xxl">
           <PepLink
@@ -107,11 +107,14 @@
         </div>
       </div>
     </div>
-  </q-page>
+  </div>
+  <DialogWrapper @close="iconInfoIsVisible = false" :isVisible="iconInfoIsVisible">
+    <IconInfo :config="{ ...configComputed, name: iconInfoName }" :configOptionButtons="_.config" />
+  </DialogWrapper>
 </template>
 
 <style lang="sass">
-// $
+@import '../css/variables'
 .page-index
   transition: background-color 500ms
   ._page-content
@@ -137,9 +140,8 @@
 .dark-mode .download-button
   +C(border, white, thin solid)
 </style>
-
 <script lang="ts">
-import { defineComponent, computed, watch, reactive, ref } from '@vue/composition-api'
+import { defineComponent, reactive, computed, watch, ref } from 'vue'
 import {
   pop,
   print,
@@ -149,24 +151,24 @@ import {
   synonymsJa,
   categories,
   pepiconCategoryDic,
+  PepiconName,
 } from 'pepicons'
-import { sort } from 'fast-sort'
-import { Dialog } from 'quasar'
-import Stack from '../components/atoms/Stack.vue'
-import PepInput from '../components/atoms/PepInput.vue'
-import IconGrid from '../components/molecules/IconGrid.vue'
-import Pickers from '../components/molecules/Pickers.vue'
-import PepLink from '../components/atoms/PepLink.vue'
-import ProfileCard from '../components/atoms/ProfileCard.vue'
+import Stack from '../components/Stack.vue'
+import IconGrid from '../components/IconGrid.vue'
+import PepInput from '../components/PepInput.vue'
+import Pickers from '../components/Pickers.vue'
+import PepLink from '../components/PepLink.vue'
+import ProfileCard from '../components/ProfileCard.vue'
 import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
-import { scrollTo } from '../helpers/scroll'
 import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
 import { defaultsIconConfig, IconConfig } from '../types'
+import DialogWrapper from '../components/DialogWrapper.vue'
+import IconInfo from '../components/IconInfo.vue'
 
 export default defineComponent({
-  name: 'PageIndex',
-  components: { IconGrid, Pickers, PepInput, PepLink, ProfileCard, Stack },
+  name: 'LandingPage',
+  components: { Stack, PepLink, Pickers, PepInput, ProfileCard, IconGrid, DialogWrapper, IconInfo },
   created() {
     document.body.classList.add('light-mode')
     document.body.classList.add(`${defaultsIconConfig().type}-mode`)
@@ -233,20 +235,24 @@ export default defineComponent({
             _synonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
           if (!searchHit) return dic
         }
-        dic[iconCategory].push(iconName)
+        dic[iconCategory].push(iconName as any)
         return dic
-      }, {} as { [category: string]: string[] }),
+      }, {} as { [category: string]: PepiconName[] }),
     )
 
-    function openTileDialog(iconName: string): void {
-      Dialog.create({
-        component: 'DialogWrapper',
-        dialogProps: { style: `border-radius: 1rem` },
-        slotComponent: 'IconInfo',
-        slotProps: {
-          config: { ...configComputed.value, name: iconName },
-          configOptionButtons: _.config,
-        },
+    const iconInfoIsVisible = ref(false)
+    const iconInfoName = ref<PepiconName>('airplane')
+    function openIconModal(icon: PepiconName): void {
+      iconInfoIsVisible.value = true
+      iconInfoName.value = icon
+    }
+    const scrollPageTo = (navEl) => {
+      console.log(`#${navEl}`)
+      let element = document.querySelector(`#${navEl}`)
+      console.log(element)
+      element?.scrollIntoView({
+        block: 'center',
+        behavior: 'smooth',
       })
     }
 
@@ -256,8 +262,10 @@ export default defineComponent({
       configComputed,
       categories,
       categoryIconNamesDic,
-      openTileDialog,
-      scrollTo,
+      scrollPageTo,
+      iconInfoIsVisible,
+      openIconModal,
+      iconInfoName,
     }
   },
 })

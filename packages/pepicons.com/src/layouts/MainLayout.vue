@@ -1,26 +1,27 @@
 <template>
-  <q-layout view="hhh lpr fff" style="overflow-x: hidden">
+  <div style="overflow-x: hidden" class="wrapper">
     <header>
-      <PepHero class="full-width mb-md">
-        <!-- <PepHeaderDecoration /> -->
+      <PepHero style="width: 100vw" class="full-width mb-md">
         <PepHeaderDecorationLight :isDarkMode="isDarkMode" />
       </PepHero>
     </header>
-    <q-page-container>
-      <router-view @set-is-dark-mode="(newVal) => (isDarkMode = newVal)" />
-    </q-page-container>
+    <router-view @set-is-dark-mode="(newVal) => (isDarkMode = newVal)" />
     <div class="pb-xxxl"></div>
-    <q-footer class="footer">
+    <div class="footer">
       <div class="mb-md">
         Pepicons was made with 💜 by
         <PepLink href="https://cycraft.co" content="cycraft.co" retroUnderline />
       </div>
       <div>© Copyright CyCraft, {{ new Date().getFullYear() }}</div>
-    </q-footer>
-  </q-layout>
+    </div>
+  </div>
 </template>
 
 <style lang="sass">
+@import '../css/variables.sass'
+.wrapper
+  display: flex
+  flex-direction: column
 .footer
   +pa($xl)
   +t-body2()
@@ -34,17 +35,19 @@
     +C(color, white)
 </style>
 
-<script>
-// import PepHeaderDecoration from '../components/atoms/PepHeaderDecoration.vue'
-import PepHeaderDecorationLight from '../components/atoms/PepHeaderDecorationLight.vue'
-import PepHero from '../components/atoms/PepHero.vue'
-import PepLink from '../components/atoms/PepLink.vue'
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+import PepHero from '../components/PepHero.vue'
+import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue'
+import PepLink from '../components/PepLink.vue'
 
-export default {
+export default defineComponent({
   name: 'MainLayout',
-  components: { PepHero, PepLink, PepHeaderDecorationLight /** PepHeaderDecoration */ },
-  data() {
-    return { isDarkMode: false }
+  props: {},
+  setup(props) {
+    const isDarkMode = ref(false)
+    return { isDarkMode }
   },
-}
+  components: { PepHero, PepHeaderDecorationLight, PepLink },
+})
 </script>
