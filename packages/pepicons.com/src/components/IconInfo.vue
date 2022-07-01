@@ -36,7 +36,7 @@
     <div class="_bottom-door text-h6 px-xl" :class="{ '_bottom-door-transform': _.codeShown }">
       <div class="flex-center relative">
         <div>SVG</div>
-        <div class="flex q-gutter-sm mt-xs">
+        <div class="flex gutter-x-sm mt-xs">
           <IconButton
             :iconConfig="{
               ...configOptionButtons,
@@ -57,7 +57,7 @@
       </div>
       <div class="flex-center">
         <div>PNG</div>
-        <div class="flex q-gutter-sm mt-xs">
+        <div class="flex gutter-x-sm mt-xs">
           <IconButton
             :iconConfig="{
               ...configOptionButtons,
