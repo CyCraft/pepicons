@@ -31,6 +31,12 @@ const iconConfig = {
 <template>
   v-model: {{ v }}
   <div class="light-mode">
-    <PepInput @blur="log" v-model="v" :debounce="2" :iconConfig="iconConfig" />
+    <PepInput
+      @blur="log"
+      :color="iconConfig.color"
+      v-model="v"
+      :debounce="2"
+      :iconConfig="iconConfig"
+    />
   </div>
 </template>

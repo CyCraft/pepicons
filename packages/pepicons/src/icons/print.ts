@@ -47,6 +47,7 @@ import Cloud from './print/cloud'
 import CloudDown from './print/cloud-down'
 import CloudUp from './print/cloud-up'
 import Coctail from './print/coctail'
+import Code from './print/code'
 import ColorPicker from './print/color-picker'
 import Contract from './print/contract'
 import Controller from './print/controller'
@@ -54,6 +55,7 @@ import Countdown from './print/countdown'
 import CreditCard from './print/credit-card'
 import Crown from './print/crown'
 import Cup from './print/cup'
+import Cv from './print/cv'
 import Division from './print/division'
 import DotsX from './print/dots-x'
 import DotsY from './print/dots-y'
@@ -74,7 +76,7 @@ import FileLoop from './print/file-loop'
 import FilmFrame from './print/film-frame'
 import Fire from './print/fire'
 import Flag from './print/flag'
-import Flag2 from './print/flag2'
+import FlagStraight from './print/flag-straight'
 import Flower from './print/flower'
 import FlowerBud from './print/flower-bud'
 import Folder from './print/folder'
@@ -102,6 +104,7 @@ import KniveFork from './print/knive-fork'
 import Label from './print/label'
 import Leave from './print/leave'
 import Letter from './print/letter'
+import LetterOpen from './print/letter-open'
 import List from './print/list'
 import LockClosed from './print/lock-closed'
 import LockOpen from './print/lock-open'
@@ -247,6 +250,7 @@ export const printCloud = Cloud
 export const printCloudDown = CloudDown
 export const printCloudUp = CloudUp
 export const printCoctail = Coctail
+export const printCode = Code
 export const printColorPicker = ColorPicker
 export const printContract = Contract
 export const printController = Controller
@@ -254,6 +258,7 @@ export const printCountdown = Countdown
 export const printCreditCard = CreditCard
 export const printCrown = Crown
 export const printCup = Cup
+export const printCv = Cv
 export const printDivision = Division
 export const printDotsX = DotsX
 export const printDotsY = DotsY
@@ -274,7 +279,7 @@ export const printFileLoop = FileLoop
 export const printFilmFrame = FilmFrame
 export const printFire = Fire
 export const printFlag = Flag
-export const printFlag2 = Flag2
+export const printFlagStraight = FlagStraight
 export const printFlower = Flower
 export const printFlowerBud = FlowerBud
 export const printFolder = Folder
@@ -302,6 +307,7 @@ export const printKniveFork = KniveFork
 export const printLabel = Label
 export const printLeave = Leave
 export const printLetter = Letter
+export const printLetterOpen = LetterOpen
 export const printList = List
 export const printLockClosed = LockClosed
 export const printLockOpen = LockOpen
@@ -445,6 +451,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'cloud-down': CloudDown,
   'cloud-up': CloudUp,
   'coctail': Coctail,
+  'code': Code,
   'color-picker': ColorPicker,
   'contract': Contract,
   'controller': Controller,
@@ -452,6 +459,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'credit-card': CreditCard,
   'crown': Crown,
   'cup': Cup,
+  'cv': Cv,
   'division': Division,
   'dots-x': DotsX,
   'dots-y': DotsY,
@@ -472,7 +480,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'film-frame': FilmFrame,
   'fire': Fire,
   'flag': Flag,
-  'flag2': Flag2,
+  'flag-straight': FlagStraight,
   'flower': Flower,
   'flower-bud': FlowerBud,
   'folder': Folder,
@@ -500,6 +508,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'label': Label,
   'leave': Leave,
   'letter': Letter,
+  'letter-open': LetterOpen,
   'list': List,
   'lock-closed': LockClosed,
   'lock-open': LockOpen,

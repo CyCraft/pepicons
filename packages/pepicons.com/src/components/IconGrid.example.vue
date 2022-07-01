@@ -3,10 +3,11 @@
 </template>
 
 <script lang="ts" setup>
+import { PepiconName } from 'pepicons'
 import { computed } from 'vue'
 import IconGrid from './IconGrid.vue'
 
-const icons = [
+const icons: PepiconName[] = [
   'bluetooth',
   'chain',
   'checkmark',
@@ -39,8 +40,9 @@ const icons = [
   'trash',
   'wifi',
 ]
+
 const configComputed = computed(() => {
-  const type = 'print'
+  const type = 'print' as const
   const color = '#ab92f0'
   const stroke = '#01fa'
 

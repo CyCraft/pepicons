@@ -12,7 +12,12 @@ export default defineComponent({
 </script>
 <docs darkExample></docs>
 <template>
-  <Tabs v-model:selectedTab="selectedTab" :tabs="['vue', 'svg']" selectedTab="selected">
+  <Tabs
+    v-model:selectedTab="selectedTab"
+    color="goldenrod"
+    :tabs="['vue', 'svg']"
+    selectedTab="selected"
+  >
     <template v-if="selectedTab === 'vue'"> vue </template>
     <template v-if="selectedTab === 'svg'"> svg </template>
   </Tabs>

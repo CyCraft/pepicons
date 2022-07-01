@@ -52,6 +52,7 @@ import CloudFilled from './pop/cloud-filled'
 import CloudUp from './pop/cloud-up'
 import CloudUpFilled from './pop/cloud-up-filled'
 import Coctail from './pop/coctail'
+import Code from './pop/code'
 import ColorPicker from './pop/color-picker'
 import Contract from './pop/contract'
 import Controller from './pop/controller'
@@ -59,6 +60,7 @@ import Countdown from './pop/countdown'
 import CreditCard from './pop/credit-card'
 import Crown from './pop/crown'
 import Cup from './pop/cup'
+import Cv from './pop/cv'
 import Division from './pop/division'
 import DotsX from './pop/dots-x'
 import DotsY from './pop/dots-y'
@@ -80,7 +82,7 @@ import FileLoop from './pop/file-loop'
 import FilmFrame from './pop/film-frame'
 import Fire from './pop/fire'
 import Flag from './pop/flag'
-import Flag2 from './pop/flag2'
+import FlagStraight from './pop/flag-straight'
 import Flower from './pop/flower'
 import FlowerBud from './pop/flower-bud'
 import Folder from './pop/folder'
@@ -110,6 +112,7 @@ import KniveFork from './pop/knive-fork'
 import Label from './pop/label'
 import Leave from './pop/leave'
 import Letter from './pop/letter'
+import LetterOpen from './pop/letter-open'
 import List from './pop/list'
 import LockClosed from './pop/lock-closed'
 import LockOpen from './pop/lock-open'
@@ -272,6 +275,7 @@ export const popCloudFilled = CloudFilled
 export const popCloudUp = CloudUp
 export const popCloudUpFilled = CloudUpFilled
 export const popCoctail = Coctail
+export const popCode = Code
 export const popColorPicker = ColorPicker
 export const popContract = Contract
 export const popController = Controller
@@ -279,6 +283,7 @@ export const popCountdown = Countdown
 export const popCreditCard = CreditCard
 export const popCrown = Crown
 export const popCup = Cup
+export const popCv = Cv
 export const popDivision = Division
 export const popDotsX = DotsX
 export const popDotsY = DotsY
@@ -300,7 +305,7 @@ export const popFileLoop = FileLoop
 export const popFilmFrame = FilmFrame
 export const popFire = Fire
 export const popFlag = Flag
-export const popFlag2 = Flag2
+export const popFlagStraight = FlagStraight
 export const popFlower = Flower
 export const popFlowerBud = FlowerBud
 export const popFolder = Folder
@@ -330,6 +335,7 @@ export const popKniveFork = KniveFork
 export const popLabel = Label
 export const popLeave = Leave
 export const popLetter = Letter
+export const popLetterOpen = LetterOpen
 export const popList = List
 export const popLockClosed = LockClosed
 export const popLockOpen = LockOpen
@@ -490,6 +496,7 @@ export const pop: { [name in Pepicon]: string } = {
   'cloud-up': CloudUp,
   'cloud-up-filled': CloudUpFilled,
   'coctail': Coctail,
+  'code': Code,
   'color-picker': ColorPicker,
   'contract': Contract,
   'controller': Controller,
@@ -497,6 +504,7 @@ export const pop: { [name in Pepicon]: string } = {
   'credit-card': CreditCard,
   'crown': Crown,
   'cup': Cup,
+  'cv': Cv,
   'division': Division,
   'dots-x': DotsX,
   'dots-y': DotsY,
@@ -518,7 +526,7 @@ export const pop: { [name in Pepicon]: string } = {
   'film-frame': FilmFrame,
   'fire': Fire,
   'flag': Flag,
-  'flag2': Flag2,
+  'flag-straight': FlagStraight,
   'flower': Flower,
   'flower-bud': FlowerBud,
   'folder': Folder,
@@ -548,6 +556,7 @@ export const pop: { [name in Pepicon]: string } = {
   'label': Label,
   'leave': Leave,
   'letter': Letter,
+  'letter-open': LetterOpen,
   'list': List,
   'lock-closed': LockClosed,
   'lock-open': LockOpen,
