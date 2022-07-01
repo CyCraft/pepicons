@@ -1,7 +1,7 @@
 {
   "name": "@pepicons/vue",
   "type": "module",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
@@ -31,7 +31,7 @@
     "vue": "^3.2.37"
   },
   "dependencies": {
-    "pepicons": "^1.1.1"
+    "pepicons": "^1.1.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.3.3",
@@ -54,5 +54,5 @@
     "tags": "dist/vetur/tags.json",
     "attributes": "dist/vetur/attributes.json"
   },
-  "gitHead": "66e66f190186b07b479f78282645871be1bd4d14"
+  "gitHead": "b9d99854c5f1a88b1bd6b50ed81b249feea5fcd9"
 }
