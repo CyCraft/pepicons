@@ -24,8 +24,8 @@
   display: flex
   flex-direction: column
   align-items: center
+  cursor: zoom-in
   ._svg
-    cursor: zoom-in
     flex: 1
   ._name
     height: 36px
