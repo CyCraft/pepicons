@@ -1,10 +1,39 @@
+<script lang="ts">
+import { PepiconName } from 'pepicons'
+import { defineComponent, PropType } from 'vue'
+import { defaultsIconConfig, IconConfig } from '../types'
+import IconTile from './IconTile.vue'
+
+export default defineComponent({
+  name: 'IconGrid',
+  components: { IconTile },
+  emits: ['click-tile'],
+  props: {
+    iconNames: { type: Array as PropType<PepiconName[]> },
+    /**
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+     */
+    config: {
+      type: Object as PropType<Partial<IconConfig>>,
+      default: () => ({ ...defaultsIconConfig() }),
+    },
+    searchInput: { type: String },
+  },
+  setup(props, { emit }) {
+    function clickTile(icon: string): void {
+      emit('click-tile', icon)
+    }
+    return { clickTile }
+  },
+})
+</script>
 <template>
   <transition-group class="icon-grid" name="anim-grid" tag="div">
-    <div class="anim-grid-item" v-for="name in iconNames" :key="name">
+    <div v-for="name in iconNames" :key="name" class="anim-grid-item">
       <IconTile
         :searchInput="searchInput"
         :config="{ ...config, name }"
-        @click.native="() => clickTile(name)"
+        @click="() => clickTile(name)"
       />
     </div>
   </transition-group>
@@ -32,32 +61,3 @@
 .anim-grid-leave-active
   display: none
 </style>
-
-<script lang="ts">
-import { PepiconName } from 'pepicons'
-import { defineComponent, PropType } from 'vue'
-import { defaultsIconConfig, IconConfig } from '../types'
-import IconTile from './IconTile.vue'
-
-export default defineComponent({
-  name: 'IconGrid',
-  components: { IconTile },
-  props: {
-    iconNames: { type: Array as PropType<PepiconName[]> },
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    config: {
-      type: Object as PropType<Partial<IconConfig>>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
-    searchInput: { type: String },
-  },
-  setup(props, { emit }) {
-    function clickTile(icon: string): void {
-      emit('click-tile', icon)
-    }
-    return { clickTile }
-  },
-})
-</script>

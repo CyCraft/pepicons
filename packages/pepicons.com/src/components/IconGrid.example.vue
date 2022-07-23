@@ -1,7 +1,3 @@
-<template>
-  <IconGrid :iconNames="icons" :config="configComputed" />
-</template>
-
 <script lang="ts" setup>
 import { PepiconName } from 'pepicons'
 import { computed } from 'vue'
@@ -49,3 +45,6 @@ const configComputed = computed(() => {
   return { type, color, stroke }
 })
 </script>
+<template>
+  <IconGrid :iconNames="icons" :config="configComputed" />
+</template>

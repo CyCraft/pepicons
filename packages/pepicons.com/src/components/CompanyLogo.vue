@@ -1,3 +1,19 @@
+<script lang="ts">
+import { defineComponent, PropType } from 'vue'
+
+export default defineComponent({
+  name: 'CompanyLogo',
+  props: {
+    name: { type: String as PropType<'github' | 'twitter'>, required: true },
+    size: { type: String as PropType<'sm' | 'md'>, default: 'md' },
+  },
+  setup(props) {
+    const logoSize = props.size === 'md' ? 24 : 16
+    return { logoSize }
+  },
+})
+</script>
+
 <template>
   <svg
     class="company-logo"
@@ -18,22 +34,6 @@
     />
   </svg>
 </template>
-
-<script lang="ts">
-import { defineComponent, PropType } from 'vue'
-
-export default defineComponent({
-  name: 'CompanyLogo',
-  props: {
-    name: { type: String as PropType<'github' | 'twitter'>, required: true },
-    size: { type: String as PropType<'sm' | 'md'>, default: 'md' },
-  },
-  setup(props) {
-    const logoSize = props.size === 'md' ? 24 : 16
-    return { logoSize }
-  },
-})
-</script>
 
 <style lang="sass">
 .company-logo

@@ -1,3 +1,89 @@
+<script lang="ts">
+import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue'
+import DialogWrapper from '../components/DialogWrapper.vue'
+import IconButton from './IconButton.vue'
+import Stack from './Stack.vue'
+import { getRandomColor, cssVar } from '../helpers/colorHelpers'
+import { defaultsIconConfig, IconConfig } from '../types'
+import Tooltip from './Tooltip.vue'
+import { ColorPicker } from 'vue-color-kit'
+import 'vue-color-kit/dist/vue-color-kit.css'
+
+export default defineComponent({
+  name: 'Picker',
+  components: { IconButton, Stack, Tooltip, DialogWrapper, ColorPicker },
+  inheritAttrs: false,
+  props: {
+    /**
+     * @example 'type'
+     */
+    kind: {
+      type: String as PropType<'type' | 'color' | 'stroke' | 'modelValueisDarkMode' | 'background'>,
+      required: true,
+    },
+    /**
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string} & { isDarkMode: boolean }}
+     */
+    modelValue: {
+      type: Object as PropType<Partial<IconConfig> & { isDarkMode: boolean }>,
+      default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
+    },
+    /**
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+     */
+    configComputed: {
+      type: Object as PropType<Partial<IconConfig>>,
+      default: () => ({ ...defaultsIconConfig() }),
+    },
+  },
+  setup(props, { emit }) {
+    function set(prop: 'type' | 'color' | 'stroke' | 'isDarkMode', value: string | boolean) {
+      emit('update:modelValue', { ...props.modelValue, [prop]: value })
+    }
+
+    function setRandomColor() {
+      console.log('setRandomColor called')
+      const randomColor = getRandomColor()
+      set('color', randomColor)
+    }
+
+    const nightfall = cssVar('nightfall')
+    const moonlight = cssVar('moonlight')
+
+    function openColorPicker() {
+      colorPickerIsVisible.value = true
+    }
+    let colorPickerIsVisible = ref(false)
+    function changeColor(color) {
+      // const a = color.rgba.a
+      // const alpha = a ? (Math.round((255 * a) / 100) | (1 << 8)).toString(16).slice(1) : ''
+      const alpha = ''
+      const newValue = color.hex + alpha
+      set('color', newValue)
+    }
+
+    const colorSelection = [
+      cssVar('sig-purple'),
+      cssVar('sig-green'),
+      cssVar('sig-yellow'),
+      cssVar('sig-blue'),
+      cssVar('sig-pink'),
+    ]
+
+    return {
+      set,
+      setRandomColor,
+      colorSelection,
+      nightfall,
+      moonlight,
+      openColorPicker,
+      colorPickerIsVisible,
+      changeColor,
+    }
+  },
+})
+</script>
+
 <template>
   <Stack v-bind="$attrs" class="picker" v-if="kind === 'type'" classes="justify-center">
     <Tooltip text="Print ❏">
@@ -92,89 +178,3 @@
   .color-alpha
     display: none
 </style>
-
-<script lang="ts">
-import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue'
-import DialogWrapper from '../components/DialogWrapper.vue'
-import IconButton from './IconButton.vue'
-import Stack from './Stack.vue'
-import { getRandomColor, cssVar } from '../helpers/colorHelpers'
-import { defaultsIconConfig, IconConfig } from '../types'
-import Tooltip from './Tooltip.vue'
-import { ColorPicker } from 'vue-color-kit'
-import 'vue-color-kit/dist/vue-color-kit.css'
-
-export default defineComponent({
-  name: 'Picker',
-  components: { IconButton, Stack, Tooltip, DialogWrapper, ColorPicker },
-  inheritAttrs: false,
-  props: {
-    /**
-     * @example 'type'
-     */
-    kind: {
-      type: String as PropType<'type' | 'color' | 'stroke' | 'modelValueisDarkMode' | 'background'>,
-      required: true,
-    },
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string} & { isDarkMode: boolean }}
-     */
-    modelValue: {
-      type: Object as PropType<Partial<IconConfig> & { isDarkMode: boolean }>,
-      default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
-    },
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    configComputed: {
-      type: Object as PropType<Partial<IconConfig>>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
-  },
-  setup(props, { emit }) {
-    function set(prop: 'type' | 'color' | 'stroke' | 'isDarkMode', value: string | boolean) {
-      emit('update:modelValue', { ...props.modelValue, [prop]: value })
-    }
-
-    function setRandomColor() {
-      console.log('setRandomColor called')
-      const randomColor = getRandomColor()
-      set('color', randomColor)
-    }
-
-    const nightfall = cssVar('nightfall')
-    const moonlight = cssVar('moonlight')
-
-    function openColorPicker() {
-      colorPickerIsVisible.value = true
-    }
-    let colorPickerIsVisible = ref(false)
-    function changeColor(color) {
-      // const a = color.rgba.a
-      // const alpha = a ? (Math.round((255 * a) / 100) | (1 << 8)).toString(16).slice(1) : ''
-      const alpha = ''
-      const newValue = color.hex + alpha
-      set('color', newValue)
-    }
-
-    const colorSelection = [
-      cssVar('sig-purple'),
-      cssVar('sig-green'),
-      cssVar('sig-yellow'),
-      cssVar('sig-blue'),
-      cssVar('sig-pink'),
-    ]
-
-    return {
-      set,
-      setRandomColor,
-      colorSelection,
-      nightfall,
-      moonlight,
-      openColorPicker,
-      colorPickerIsVisible,
-      changeColor,
-    }
-  },
-})
-</script>

@@ -1,8 +1,21 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'ModalWrapper',
+  props: {
+    isVisible: Boolean,
+  },
+  emits: ['close'],
+  setup() {},
+})
+</script>
+
 <template>
   <transition name="modal-animation">
     <div v-if="isVisible" class="modal" @click.stop="$emit('close')">
       <transition name="modal-animation-inner">
-        <div @click.stop v-if="$slots.default" style="position: relative">
+        <div v-if="$slots.default" style="position: relative" @click.stop>
           <!--Modal Content-->
           <div style="position: relative; display: flex; justify-content: center; width: 100%">
             <!-- body -->
@@ -54,15 +67,3 @@
 .modal-animation-inner-leave-to
   transform: scale(0.8)
 </style>
-<script lang="ts">
-import { defineComponent, PropType } from 'vue'
-
-export default defineComponent({
-  name: 'ModalWrapper',
-  props: {
-    isVisible: Boolean,
-  },
-  emits: ['close'],
-  setup() {},
-})
-</script>

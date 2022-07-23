@@ -1,56 +1,14 @@
-<template>
-  <button
-    :class="`icon-button reset-button`"
-    :style="`background: ${backgroundColor}; ${activeStyle}`"
-    @click="click"
-  >
-    <ColorRingSvg class="_inner" v-if="hasColorRing" />
-    <div class="_inner flex flex-center">
-      <Pepicon
-        :class="`_icon ${isAnimating ? animationClass : ''}`"
-        v-if="iconConfig && iconConfig.name"
-        :name="iconConfig.name"
-        :type="iconConfig.type"
-        :color="iconConfig.color"
-        :stroke="iconConfig.stroke"
-        size="md"
-      />
-    </div>
-    <slot></slot>
-  </button>
-</template>
-
-<style lang="sass">
-@import '../css/variables.sass'
-.icon-button
-  border-radius: $border-radius
-  width: 36px
-  height: 36px
-  position: relative
-  transition: transform 100ms
-  ._inner
-    position: absolute
-    width: 100%
-    height: 100%
-    top: 0
-    left: 0
-  &:active
-    transform: scale(0.9)
-</style>
-
 <script lang="ts">
 import { Pepicon } from '@pepicons/vue'
 import ColorRingSvg from './ColorRingSvg.vue'
 import { defineComponent, PropType, computed, ref, toRef, Ref, nextTick } from 'vue'
 import { defaultsIconConfig, IconConfig } from '../types'
-// import { colors } from 'quasar'
-// const { changeAlpha } = colors
-// import { colors } from '../helpers/colors'
 import { changeAlpha } from '../helpers/colorHelpers'
 
 export default defineComponent({
   name: 'IconButton',
   components: { ColorRingSvg, Pepicon },
+  emits: ['click'],
   props: {
     backgroundColor: { type: String, default: 'white' },
     /**
@@ -95,3 +53,42 @@ export default defineComponent({
   },
 })
 </script>
+<template>
+  <button
+    :class="`icon-button reset-button`"
+    :style="`background: ${backgroundColor}; ${activeStyle}`"
+    @click="click"
+  >
+    <ColorRingSvg v-if="hasColorRing" class="_inner" />
+    <div class="_inner flex flex-center">
+      <Pepicon
+        v-if="iconConfig && iconConfig.name"
+        :class="`_icon ${isAnimating ? animationClass : ''}`"
+        :name="iconConfig.name"
+        :type="iconConfig.type"
+        :color="iconConfig.color"
+        :stroke="iconConfig.stroke"
+        size="md"
+      />
+    </div>
+    <slot></slot>
+  </button>
+</template>
+
+<style lang="sass">
+@import '../css/variables.sass'
+.icon-button
+  border-radius: $border-radius
+  width: 36px
+  height: 36px
+  position: relative
+  transition: transform 100ms
+  ._inner
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+  &:active
+    transform: scale(0.9)
+</style>
