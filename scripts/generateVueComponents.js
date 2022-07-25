@@ -1,4 +1,3 @@
-// @ts-check
 import path from 'path'
 import fs from 'fs-extra'
 import { pascalCase } from 'case-anything'
