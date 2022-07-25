@@ -1,5 +1,5 @@
-<script>
-import { defineComponent } from 'vue'
+<script lang="ts">
+import { defineComponent, PropType } from 'vue'
 
 export default defineComponent({
   name: 'Stack',
@@ -11,7 +11,11 @@ export default defineComponent({
      * @type {{ component: string, props: { [propName: string]: any }, class?: any, style?: any }[]}
      * @example [{ component: 'StatsSummaryCard', props: { title: 'A', value: 100 } }, { component: 'StatsSummaryCard', props: { title: 'B', value: 250 } }]
      */
-    tiles: { type: Array },
+    tiles: {
+      type: Array as PropType<
+        { component: string; props: { [propName: string]: any }; class?: any; style?: any }[]
+      >,
+    },
     /**
      * The spacing between the stack tiles.
      * The beauty about this implementation of "gap" that the tiles are stacked with flexbox but the gap is applied similar to css grid, while keeping cross-browser compatibility.
