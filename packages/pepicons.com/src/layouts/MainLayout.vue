@@ -1,3 +1,20 @@
+<script lang="ts">
+import { defineComponent, ref } from 'vue'
+import PepHero from '../components/PepHero.vue'
+import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue'
+import PepLink from '../components/PepLink.vue'
+
+export default defineComponent({
+  name: 'MainLayout',
+  props: {},
+  setup(props) {
+    const isDarkMode = ref(false)
+    return { isDarkMode }
+  },
+  components: { PepHero, PepHeaderDecorationLight, PepLink },
+})
+</script>
+
 <template>
   <div style="overflow-x: hidden" class="wrapper">
     <header>
@@ -34,20 +51,3 @@
     +C(background-color, moonlight)
     +C(color, white)
 </style>
-
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
-import PepHero from '../components/PepHero.vue'
-import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue'
-import PepLink from '../components/PepLink.vue'
-
-export default defineComponent({
-  name: 'MainLayout',
-  props: {},
-  setup(props) {
-    const isDarkMode = ref(false)
-    return { isDarkMode }
-  },
-  components: { PepHero, PepHeaderDecorationLight, PepLink },
-})
-</script>

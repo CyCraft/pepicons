@@ -1,14 +1,4 @@
-<template>
-  <prism-editor
-    class="my-editor"
-    v-model="content"
-    :highlight="highlighter"
-    line-numbers
-    readonly
-  />
-</template>
-
-<script>
+<script lang="ts">
 // import Prism Editor
 import { PrismEditor } from 'vue-prism-editor'
 import 'vue-prism-editor/dist/prismeditor.min.css' // import the styles somewhere
@@ -18,7 +8,7 @@ import { highlight, languages } from 'prismjs/components/prism-core'
 import 'prismjs/components/prism-clike'
 import 'prismjs/components/prism-javascript'
 import 'prismjs/themes/prism-tomorrow.css' // import syntax highlighting styles
-import { defineComponent } from 'vue'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   components: {
@@ -27,14 +17,25 @@ export default defineComponent({
   props: {
     content: { type: String, default: 'something' },
   },
-  setup() {
-    function highlighter(content) {
-      return highlight(content, languages.js) // languages.<insert language> to return html with markup
+  setup(props) {
+    const contentCopy = ref(props.content)
+    function highlighter(contentCopy) {
+      return highlight(contentCopy, languages.js) // languages.<insert language> to return html with markup
     }
-    return { highlighter }
+    return { highlighter, contentCopy }
   },
 })
 </script>
+
+<template>
+  <prism-editor
+    v-model="contentCopy"
+    class="my-editor"
+    :highlight="highlighter"
+    lineNumbers
+    readonly
+  />
+</template>
 
 <style>
 /* required class */

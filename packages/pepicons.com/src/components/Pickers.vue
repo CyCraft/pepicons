@@ -1,3 +1,34 @@
+<script lang="ts">
+import { defineComponent, PropType } from 'vue'
+import Picker from './Picker.vue'
+import Stack from './Stack.vue'
+import { defaultsIconConfig, IconConfig } from '../types'
+
+export default defineComponent({
+  name: 'Pickers',
+  components: { Picker, Stack },
+  props: {
+    /**
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string } & { isDarkMode: boolean }}
+     */
+    modelValue: {
+      type: Object as PropType<Partial<IconConfig> & { isDarkMode: boolean }>,
+      default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
+    },
+    /**
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+     */
+    configComputed: {
+      type: Object as PropType<Partial<IconConfig>>,
+      default: () => ({ ...defaultsIconConfig() }),
+    },
+  },
+  setup() {
+    return {}
+  },
+})
+</script>
+
 <template>
   <Stack class="pickers pa-xs" classes="justify-center">
     <Picker
@@ -31,34 +62,3 @@
     +media-sm(flex, 1)
     +media-sm(order, unset)
 </style>
-
-<script lang="ts">
-import { defineComponent, PropType } from 'vue'
-import Picker from './Picker.vue'
-import Stack from './Stack.vue'
-import { defaultsIconConfig, IconConfig } from '../types'
-
-export default defineComponent({
-  name: 'Pickers',
-  components: { Picker, Stack },
-  props: {
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string } & { isDarkMode: boolean }}
-     */
-    modelValue: {
-      type: Object as PropType<Partial<IconConfig> & { isDarkMode: boolean }>,
-      default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
-    },
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    configComputed: {
-      type: Object as PropType<Partial<IconConfig>>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
-  },
-  setup() {
-    return {}
-  },
-})
-</script>

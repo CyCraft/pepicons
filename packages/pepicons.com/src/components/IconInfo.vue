@@ -1,11 +1,113 @@
+<script lang="ts">
+import copyToClipboard from 'copy-text-to-clipboard'
+import { defineComponent, computed, reactive, PropType, ref } from 'vue'
+import { pepiconSvgString } from 'pepicons'
+import { Pepicon } from '@pepicons/vue'
+import CodeBlock from './CodeBlock.vue'
+import IconButton from './IconButton.vue'
+import HtmlButton from './HtmlButton.vue'
+import { downloadBase64AsFile, downloadFile } from '../helpers/download'
+import { svgToBase64Png, base64ToBlob } from '../helpers/conversion'
+import { defaultsIconConfig, IconConfig } from '../types'
+import Tabs from './Tabs.vue'
+
+declare class ClipboardItem {
+  constructor(data: { [mimeType: string]: Blob })
+}
+
+function generateVueCode(iconName: string, config: IconConfig): string {
+  const _stroke =
+    config.stroke && config.stroke !== 'black' ? `\n    stroke="${config.stroke}"` : ''
+  return `<template>
+  <Pepicon
+    name="${iconName}"
+    type="${config.type}"
+    color="${config.color}"${_stroke}
+  />
+</template>
+
+<script lang="js">
+import { Pepicon } from '@pepicons/vue'
+
+export default {
+  components: { Pepicon }
+}
+<\/script>`
+}
+
+export default defineComponent({
+  name: 'IconInfo',
+  components: { IconButton, HtmlButton, Pepicon, CodeBlock, Tabs },
+  props: {
+    /**
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+     */
+    config: {
+      type: Object as PropType<IconConfig>,
+      default: () => ({ ...defaultsIconConfig() }),
+    },
+    /**
+     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+     */
+    configOptionButtons: {
+      type: Object as PropType<IconConfig>,
+      default: () => ({ ...defaultsIconConfig() }),
+    },
+  },
+  setup(props) {
+    const selectedTab = ref<'Vue' | 'SVG'>('Vue')
+    const _ = reactive({
+      openCodeTab: 'Vue',
+      codeShown: false,
+      downloadSvgDone: false,
+      copySvgDone: false,
+      downloadPngDone: false,
+      copyPngDone: false,
+    })
+
+    const codeSvg = pepiconSvgString(props.config as any)
+    const codeVue = generateVueCode(props.config.name || '', props.config)
+
+    function downloadSvg(): void {
+      downloadFile(codeSvg, `${props.config.name}.svg`)
+      _.downloadSvgDone = true
+    }
+    function copySvg(): void {
+      const copied = copyToClipboard(codeSvg)
+      _.copySvgDone = copied
+    }
+    async function downloadPng(): Promise<void> {
+      const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
+      const pngString = await svgToBase64Png(_codeSvg)
+      downloadBase64AsFile(pngString, `${props.config.name}.png`)
+      _.downloadPngDone = true
+    }
+    async function copyPng(): Promise<void> {
+      const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
+      const pngString = await svgToBase64Png(_codeSvg)
+      const item = new ClipboardItem({
+        'image/png': base64ToBlob(pngString),
+      })
+      // @ts-ignore
+      if (window.navigator?.clipboard?.write) {
+        // @ts-ignore
+        window.navigator.clipboard.write([item]).then(() => (_.copyPngDone = true))
+      }
+    }
+
+    return { _, codeSvg, codeVue, selectedTab, copySvg, copyPng, downloadSvg, downloadPng }
+  },
+})
+</script>
+
 <template>
   <div class="icon-info">
-    <HtmlButton class="_toggle-code-button" v-model="_.codeShown" v-bind="config" />
+    <HtmlButton v-model="_.codeShown" class="_toggle-code-button" v-bind="config" />
     <div class="_code-section">
       <div>
         <Tabs
-          class="_tab-panels"
           v-model:selectedTab="_.openCodeTab"
+          class="_tab-panels"
           :tabs="['Vue', 'SVG']"
           :color="config.color"
         >
@@ -149,105 +251,3 @@
     code
       white-space: pre-wrap
 </style>
-
-<script lang="ts">
-import copyToClipboard from 'copy-text-to-clipboard'
-import { defineComponent, computed, reactive, PropType, ref } from 'vue'
-import { pepiconSvgString } from 'pepicons'
-import { Pepicon } from '@pepicons/vue'
-import CodeBlock from './CodeBlock.vue'
-import IconButton from './IconButton.vue'
-import HtmlButton from './HtmlButton.vue'
-import { downloadBase64AsFile, downloadFile } from '../helpers/download'
-import { svgToBase64Png, base64ToBlob } from '../helpers/conversion'
-import { defaultsIconConfig, IconConfig } from '../types'
-import Tabs from './Tabs.vue'
-
-declare class ClipboardItem {
-  constructor(data: { [mimeType: string]: Blob })
-}
-
-function generateVueCode(iconName: string, config: IconConfig): string {
-  const _stroke =
-    config.stroke && config.stroke !== 'black' ? `\n    stroke="${config.stroke}"` : ''
-  return `<template>
-  <Pepicon
-    name="${iconName}"
-    type="${config.type}"
-    color="${config.color}"${_stroke}
-  />
-</template>
-
-<script lang="js">
-import { Pepicon } from '@pepicons/vue'
-
-export default {
-  components: { Pepicon }
-}
-<\/script>`
-}
-
-export default defineComponent({
-  name: 'IconInfo',
-  components: { IconButton, HtmlButton, Pepicon, CodeBlock, Tabs },
-  props: {
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    config: {
-      type: Object as PropType<IconConfig>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    configOptionButtons: {
-      type: Object as PropType<IconConfig>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
-  },
-  setup(props) {
-    const selectedTab = ref<'Vue' | 'SVG'>('Vue')
-    const _ = reactive({
-      openCodeTab: 'Vue',
-      codeShown: false,
-      downloadSvgDone: false,
-      copySvgDone: false,
-      downloadPngDone: false,
-      copyPngDone: false,
-    })
-
-    const codeSvg = pepiconSvgString(props.config as any)
-    const codeVue = generateVueCode(props.config.name || '', props.config)
-
-    function downloadSvg(): void {
-      downloadFile(codeSvg, `${props.config.name}.svg`)
-      _.downloadSvgDone = true
-    }
-    function copySvg(): void {
-      const copied = copyToClipboard(codeSvg)
-      _.copySvgDone = copied
-    }
-    async function downloadPng(): Promise<void> {
-      const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
-      const pngString = await svgToBase64Png(_codeSvg)
-      downloadBase64AsFile(pngString, `${props.config.name}.png`)
-      _.downloadPngDone = true
-    }
-    async function copyPng(): Promise<void> {
-      const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
-      const pngString = await svgToBase64Png(_codeSvg)
-      const item = new ClipboardItem({
-        'image/png': base64ToBlob(pngString),
-      })
-      // @ts-ignore
-      if (window.navigator?.clipboard?.write) {
-        // @ts-ignore
-        window.navigator.clipboard.write([item]).then(() => (_.copyPngDone = true))
-      }
-    }
-
-    return { _, codeSvg, codeVue, selectedTab, copySvg, copyPng, downloadSvg, downloadPng }
-  },
-})
-</script>

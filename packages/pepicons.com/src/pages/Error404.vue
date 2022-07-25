@@ -1,13 +1,3 @@
-<template>
-  <div class="_error-page text-white text-center">
-    <div style="font-size: 30vh">404</div>
-
-    <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
-
-    <router-link to="/" tag="button" class="_button">Go Home</router-link>
-  </div>
-</template>
-
 <script lang="ts">
 import { defineComponent } from 'vue'
 
@@ -19,6 +9,16 @@ export default defineComponent({
   },
 })
 </script>
+
+<template>
+  <div class="_error-page text-white text-center">
+    <div style="font-size: 30vh">404</div>
+
+    <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
+
+    <router-link to="/" tag="button" class="_button">Go Home</router-link>
+  </div>
+</template>
 
 <style lang="sass">
 @import '../css/variables'

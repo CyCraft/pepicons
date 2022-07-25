@@ -1,24 +1,3 @@
-<template>
-  <div class="wrapper">
-    <!-- <Pickers /> -->
-    <!-- <Pepicon name="airplane" type="pop" color="red" /> -->
-    <!-- :style="`${ rows === '1' ? 'resize: none' : '' }; height: ${textareaHeight}; min-height: 3.5rem;
-    max-height: ${autogrowMaxHeight}rem`" -->
-
-    <button
-      :style="` background: ${color}; height: 1rem; width: 1rem`"
-      @click="colorPickerIsVisible = !colorPickerIsVisible"
-    />
-    <DialogWrapper @close="colorPickerIsVisible = false" :isVisible="colorPickerIsVisible">
-      <ColorPicker theme="light" :color="color" @changeColor="changeColor" />
-    </DialogWrapper>
-  </div>
-</template>
-
-<style lang="sass">
-// .my-component
-</style>
-
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
 import { Pepicon } from '@pepicons/vue'
@@ -61,6 +40,23 @@ export default defineComponent({
   },
 })
 </script>
+<template>
+  <div class="wrapper">
+    <!-- <Pickers /> -->
+    <!-- <Pepicon name="airplane" type="pop" color="red" /> -->
+    <!-- :style="`${ rows === '1' ? 'resize: none' : '' }; height: ${textareaHeight}; min-height: 3.5rem;
+    max-height: ${autogrowMaxHeight}rem`" -->
+
+    <button
+      :style="` background: ${color}; height: 1rem; width: 1rem`"
+      @click="colorPickerIsVisible = !colorPickerIsVisible"
+    />
+    <DialogWrapper @close="colorPickerIsVisible = false" :isVisible="colorPickerIsVisible">
+      <ColorPicker theme="light" :color="color" @changeColor="changeColor" />
+    </DialogWrapper>
+  </div>
+</template>
+
 <style lang="sass">
 .wrapper
   display: flex

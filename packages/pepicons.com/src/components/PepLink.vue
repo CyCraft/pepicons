@@ -1,3 +1,23 @@
+<script lang="ts">
+import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue'
+import { Pepicon, PepiconName } from '@pepicons/vue'
+import CompanyLogo from './CompanyLogo.vue'
+
+export default defineComponent({
+  name: 'PepLink',
+  components: { CompanyLogo, Pepicon },
+  props: {
+    href: { type: String },
+    content: { type: String },
+    icon: { type: String as PropType<PepiconName | 'github' | undefined> },
+    retroUnderline: { type: Boolean },
+  },
+  setup(props) {
+    return {}
+  },
+})
+</script>
+
 <template>
   <a
     :href="href"
@@ -71,23 +91,3 @@
     &::before
       +C(border-bottom, black, 6px solid)
 </style>
-
-<script lang="ts">
-import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue'
-import { Pepicon, PepiconName } from '@pepicons/vue'
-import CompanyLogo from './CompanyLogo.vue'
-
-export default defineComponent({
-  name: 'PepLink',
-  components: { CompanyLogo, Pepicon },
-  props: {
-    href: { type: String },
-    content: { type: String },
-    icon: { type: String as PropType<PepiconName | 'github' | undefined> },
-    retroUnderline: { type: Boolean },
-  },
-  setup(props) {
-    return {}
-  },
-})
-</script>

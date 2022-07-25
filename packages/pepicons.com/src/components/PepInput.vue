@@ -1,10 +1,3 @@
-<template>
-  <div class="_wrapper">
-    <input class="pep-input" v-bind="$attrs" v-model="valueInner" />
-    <Pepicon class="icon" v-bind="iconConfig" />
-  </div>
-</template>
-
 <script lang="ts">
 import { Pepicon } from '@pepicons/vue'
 import { defineComponent, PropType, computed, ref, watch } from 'vue'
@@ -54,6 +47,13 @@ export default defineComponent({
   },
 })
 </script>
+
+<template>
+  <div class="_wrapper">
+    <input class="pep-input" v-bind="$attrs" v-model="valueInner" />
+    <Pepicon class="icon" v-bind="iconConfig" />
+  </div>
+</template>
 
 <style lang="sass">
 @import '../css/variables.sass'

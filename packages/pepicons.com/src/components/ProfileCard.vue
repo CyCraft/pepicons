@@ -1,3 +1,25 @@
+<script lang="ts">
+import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue'
+import CompanyLogo from './CompanyLogo.vue'
+import Stack from './Stack.vue'
+
+export default defineComponent({
+  name: 'ProfileCard',
+  components: { CompanyLogo, Stack },
+  props: {
+    name: { type: String, required: true },
+    description: { type: String, required: true },
+    profileUrl: { type: String, required: true },
+    profileImgStyle: { type: String, default: '' },
+    color: { type: String, required: true },
+    links: { type: Array as PropType<string[]>, default: () => [] },
+  },
+  setup(props) {
+    return {}
+  },
+})
+</script>
+
 <template>
   <div class="profile-card pa-md">
     <div class="_svg-elements-outer">
@@ -167,25 +189,3 @@
     > *
       +C(color, washed-cloth)
 </style>
-
-<script lang="ts">
-import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue'
-import CompanyLogo from './CompanyLogo.vue'
-import Stack from './Stack.vue'
-
-export default defineComponent({
-  name: 'ProfileCard',
-  components: { CompanyLogo, Stack },
-  props: {
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    profileUrl: { type: String, required: true },
-    profileImgStyle: { type: String, default: '' },
-    color: { type: String, required: true },
-    links: { type: Array as PropType<string[]>, default: () => [] },
-  },
-  setup(props) {
-    return {}
-  },
-})
-</script>
