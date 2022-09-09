@@ -9,8 +9,9 @@ export type GetPepiconPayload = {
   name: Pepicon
   /**
    * Either 'pop' or 'print'
+   * @default 'pop'
    */
-  type: 'pop' | 'print'
+  type?: 'pop' | 'print'
 }
 
 export type MorphPepiconPayload = {
@@ -20,8 +21,9 @@ export type MorphPepiconPayload = {
   svg: string
   /**
    * Either 'pop' or 'print'
+   * @default 'pop'
    */
-  type: 'pop' | 'print'
+  type?: 'pop' | 'print'
   /**
    * A hex(a) or rgb(a) color
    * - "pop" type icons: this is the icon color
@@ -54,7 +56,7 @@ export type MorphPepiconPayload = {
  * @returns The SVG content as string
  */
 export function getPepicon(payload: GetPepiconPayload): string {
-  const { name, type } = payload || {}
+  const { name, type = 'pop' } = payload || {}
   const svgString = type === 'pop' ? pop[name] : print[name as PepiconPrint]
   if (!svgString) {
     console.warn(`Pepicon ${name} of type ${type} not found! (returned an empty string instead)`)
@@ -71,7 +73,7 @@ export function getPepicon(payload: GetPepiconPayload): string {
  */
 export function morphPepicon(payload: MorphPepiconPayload): string {
   let svg = payload.svg
-  const { type, color, opacity, size, stroke } = payload || {}
+  const { type = 'pop', color, opacity, size, stroke } = payload || {}
 
   if (!/style="/.test(svg)) {
     svg = svg.replace('<svg ', '<svg style="" ')

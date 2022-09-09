@@ -1,51 +1,28 @@
 {
   "name": "pepicons.com",
-  "version": "1.0.5",
-  "description": "Retro icon set",
-  "productName": "Pepicons",
-  "author": "Luca Ban - Mesqueeb",
-  "funding": "https://github.com/sponsors/mesqueeb",
-  "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
+  "type": "module",
   "private": true,
+  "version": "1.1.2",
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.vue ./",
-    "dev": "quasar dev",
-    "build": "quasar build --debug",
-    "build:favicon": "icongenie generate -i ./public/logo.png --skip-trim",
-    "test": "echo \"No test specified\" && exit 0"
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@quasar/extras": "^1.12.2",
-    "@vue/composition-api": "^0.6.7",
+    "@pepicons/vue": "^1.1.2",
+    "@viteplay/plugin": "^0.0.26",
+    "@viteplay/vue": "^0.0.26",
     "copy-text-to-clipboard": "^3.0.1",
-    "core-js": "^3.20.0",
-    "fast-sort": "^3.1.1",
     "is-what": "^3.14.1",
-    "pepicons": "^0.2.1",
-    "planetar": "^0.7.17",
-    "quasar": "^1.16.3",
-    "raw-loader": "^4.0.2",
-    "roll-anything": "^2.0.0",
-    "three": "^0.135.0",
-    "vivify.css": "^0.0.0",
-    "vue-pepicons": "^0.2.2"
+    "pepicons": "^1.1.2",
+    "prismjs": "^1.28.0",
+    "vue": "^3.2.37",
+    "vue-color-kit": "^1.0.5"
   },
   "devDependencies": {
-    "@quasar/app": "^2.2.10"
-  },
-  "browserslist": [
-    "last 10 Chrome versions",
-    "last 10 Firefox versions",
-    "last 4 Edge versions",
-    "last 7 Safari versions",
-    "last 8 Android versions",
-    "last 8 ChromeAndroid versions",
-    "last 8 FirefoxAndroid versions",
-    "last 10 iOS versions",
-    "last 5 Opera versions"
-  ],
-  "engines": {
-    "node": ">= 14.0.0",
-    "npm": ">= 7.8.0"
+    "@vitejs/plugin-vue": "^2.3.3",
+    "typescript": "^4.7.4",
+    "vite": "^2.9.13",
+    "vue-tsc": "^0.38.2"
   }
 }

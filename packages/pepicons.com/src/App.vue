@@ -1,11 +1,11 @@
+<script setup lang="ts"></script>
+
 <template>
-  <div id="q-app">
-    <router-view />
-  </div>
+  <router-view />
 </template>
 
-<script lang="ts">
-export default {
-  name: 'App',
-}
-</script>
+<style lang="sass">
+@import './css/app.sass'
+*
+  margin: 0
+</style>

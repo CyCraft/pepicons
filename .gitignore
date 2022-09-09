@@ -2,3 +2,5 @@ node_modules
 .DS_Store
 *.local
 pepicons.com (t)
+.cache
+packages/vue/src/icons

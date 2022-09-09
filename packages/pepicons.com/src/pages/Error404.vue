@@ -1,31 +1,51 @@
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
+  name: 'MyComponent',
+  props: {},
+  setup(props) {
+    return {}
+  },
+})
+</script>
+
 <template>
-  <div class="fullscreen bg-blue text-white text-center q-pa-md flex flex-center">
-    <div>
-      <div style="font-size: 30vh">
-        404
-      </div>
+  <div class="_error-page text-white text-center">
+    <div style="font-size: 30vh">404</div>
 
-      <div class="text-h2" style="opacity:.4">
-        Oops. Nothing here...
-      </div>
+    <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
 
-      <q-btn
-        class="q-mt-xl"
-        color="white"
-        text-color="blue"
-        unelevated
-        to="/"
-        label="Go Home"
-        no-caps
-      />
-    </div>
+    <router-link to="/" tag="button" class="_button">Go Home</router-link>
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
+<style lang="sass">
+@import '../css/variables'
 
-export default Vue.extend({
-  name: 'Error404',
-})
-</script>
+._error-page
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 100vh
+  width: 100vw
+  background-color: #2196f3
+  user-select: none
+  ._button
+    all: unset
+    color: rgb(33, 150, 243)
+    background-color: white
+    padding: 8px 12px
+    border-radius: 4px
+    margin-top: 48px
+    cursor: pointer
+    font-family: Montserrat, sans-serif, sans
+    font-size: 14px
+    font-weight: 300
+    text-align: center
+    text-decoration-thickness: auto
+    text-size-adjust: 100%
+    text-transform: none
+    user-select: none
+</style>

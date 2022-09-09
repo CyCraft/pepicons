@@ -1,4 +1,4 @@
-
+@import 'breakpoints.sass'
 $_space-base: 16px
 
 $xxs: ($_space-base * .1)
@@ -26,18 +26,6 @@ $xxxl: ($_space-base * 5)
 =mb-safe-areas()
   margin-bottom: constant(safe-area-inset-bottom) // iOS 11.0
   margin-bottom: env(safe-area-inset-bottom) // iOS 11.2
-
-// Gutters
-=gutter-md()
-  margin-left: -$xs
-  margin-top: -$xs
-  +media-xs(margin-left, -$md)
-  +media-xs(margin-top, -$md)
-  > *
-    margin-left: $xs
-    margin-top: $xs
-    +media-xs(margin-left, $md)
-    +media-xs(margin-top, $md)
 
 // ... = rest params (to support !important)
 // See http://stylus-lang.com/docs/vargs.html

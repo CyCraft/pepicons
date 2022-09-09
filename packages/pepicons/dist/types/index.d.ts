@@ -7,8 +7,9 @@ export declare type GetPepiconPayload = {
     name: Pepicon;
     /**
      * Either 'pop' or 'print'
+     * @default 'pop'
      */
-    type: 'pop' | 'print';
+    type?: 'pop' | 'print';
 };
 export declare type MorphPepiconPayload = {
     /**
@@ -17,8 +18,9 @@ export declare type MorphPepiconPayload = {
     svg: string;
     /**
      * Either 'pop' or 'print'
+     * @default 'pop'
      */
-    type: 'pop' | 'print';
+    type?: 'pop' | 'print';
     /**
      * A hex(a) or rgb(a) color
      * - "pop" type icons: this is the icon color
