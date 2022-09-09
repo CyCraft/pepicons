@@ -26,6 +26,8 @@ Check out this blog post to understand our motivation for creating Pepicons:
 
 ## License
 
+For commercial use please purchase a License at: https://github.com/sponsors/mesqueeb?frequency=one-time
+
 This icon set falls under CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE.
 
 You must give appropriate credit, provide a link to the license, and indicate if changes were made. You may do so in any reasonable manner, but not in any way that suggests the licensor endorses you or your use.
