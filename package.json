@@ -36,9 +36,9 @@
     "npm": ">= 7.8.0"
   },
   "bugs": {
-    "url": "https://github.com/cycraft/planetar/issues"
+    "url": "https://github.com/cycraft/pepicons/issues"
   },
-  "homepage": "https://github.com/cycraft/planetar#readme",
+  "homepage": "https://github.com/cycraft/pepicons#readme",
   "devDependencies": {
     "@types/fs-extra": "^9.0.13",
     "@types/node": "^14.18.21",
