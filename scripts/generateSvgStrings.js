@@ -2,7 +2,6 @@ import * as fs from 'fs'
 import rimraf from 'rimraf'
 import copyfiles from 'copyfiles'
 import Renamer from 'renamer'
-import debounce from 'debounce'
 import replace from 'replace-in-file'
 import Sort from 'fast-sort'
 import { pascalCase } from 'case-anything'
@@ -12,8 +11,6 @@ const { sort } = Sort
 const renamer = new Renamer()
 
 const PATH_PEPICONS = './packages/pepicons'
-
-const nextTick = () => new Promise((resolve) => setTimeout(resolve, 100))
 
 const deleteIconsFolder = () =>
   new Promise((resolve, reject) => {
@@ -34,18 +31,14 @@ const copyPrintSvgs = () =>
     copyfiles([from, to], { up: 3 }, resolve)
   })
 
-const renameSvgsToTs = () =>
-  new Promise((resolve, reject) => {
-    renamer.on('replace-result', (replaceResult) => {
-      debounce(resolve, 200)()
-    })
-    const path = PATH_PEPICONS + '/src/icons/**/*.svg'
-    renamer.rename({
-      files: [path],
-      find: '.svg',
-      replace: '.ts',
-    })
+const renameSvgsToTs = async () => {
+  const path = PATH_PEPICONS + '/src/icons/**/*.svg'
+  await renamer.rename({
+    files: [path],
+    find: '.svg',
+    replace: '.ts',
   })
+}
 
 const formatToExportSvgString = () =>
   new Promise((resolve, reject) => {
