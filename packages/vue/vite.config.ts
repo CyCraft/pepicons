@@ -12,15 +12,15 @@ const dependencies = Object.keys(pkg.dependencies || [])
 export default defineConfig({
   plugins: [
     vue(),
-    // viteplay({
-    //   pages: [
-    //     {
-    //       component: './src/components/Pepicon.vue',
-    //       examples: './src/components/examples/*.vue',
-    //     },
-    //   ],
-    //   base: '/',
-    // }),
+    viteplay({
+      pages: [
+        {
+          component: './src/components/Pepicon.vue',
+          examples: './examples/*.vue',
+        },
+      ],
+      base: '/',
+    }),
   ],
   build: {
     lib: {
