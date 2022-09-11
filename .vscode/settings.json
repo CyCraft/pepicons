@@ -5,6 +5,9 @@
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[sass]": { "editor.defaultFormatter": "syler.sass-indented" },
+  // volar
+  "volar.completion.preferredTagNameCase": "pascal",
+  "volar.completion.preferredAttrNameCase": "camel",
   // monorepo / workspace related
   "eslint.workingDirectories": [{ "pattern": "./packages/*/" }],
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
@@ -29,5 +32,8 @@
   "sass.format.deleteEmptyRows": true,
   "sass.format.deleteWhitespace": true,
   "sass.format.convert": true,
-  "sass.format.setPropertySpace": true
+  "sass.format.setPropertySpace": true,
+  // gitlens
+  "gitlens.defaultTimeFormat": "HH:mm",
+  "gitlens.codeLens.enabled": false
 }
