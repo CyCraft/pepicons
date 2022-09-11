@@ -6454,7 +6454,7 @@ function morphPepicon(payload) {
     if (stroke) {
         svg = svg.replace(/#000000|#000|black/g, stroke);
     }
-    const rgbOrHexColor = (color === null || color === void 0 ? void 0 : color.startsWith('rgb')) || (color === null || color === void 0 ? void 0 : color.startsWith('#'));
+    const rgbOrHexColor = color?.startsWith('rgb') || color?.startsWith('#');
     if (color && !rgbOrHexColor) {
         svg = svg.replace(/style="/, `style="color:${color};`);
     }
@@ -6501,7 +6501,7 @@ function morphPepicon(payload) {
  */
 function pepiconSvgString(payload) {
     const svg = getPepicon(payload);
-    return morphPepicon(Object.assign(Object.assign({}, payload), { svg }));
+    return morphPepicon({ ...payload, svg });
 }
 
 exports.categories = categories;
