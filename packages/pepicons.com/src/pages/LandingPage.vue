@@ -136,7 +136,12 @@ export default defineComponent({
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
           <Stack class="ml-auto" classes="items-center">
-            <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
+            <PepLink
+              href="https://github.com/CyCraft/pepicons"
+              content="GitHub"
+              icon="github"
+              :config="_.config"
+            />
             <PepLink
               content="About Us"
               icon="info-filled"
