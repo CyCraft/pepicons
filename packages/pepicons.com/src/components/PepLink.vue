@@ -24,7 +24,7 @@ export default defineComponent({
   setup(props) {
     const customCursor = computed(
       () => {
-        const url = 'https://colorfulcast.com/og-hero.jpg'
+        const url = 'https://colorfulcast.com/cc.logo.en.svg'
         return `url('${url}')`
       },
       // pepiconSvgString({ name: 'airplane', type: 'pop', color: '#F092AD' }),
