@@ -27,7 +27,7 @@ import IconInfo from '../components/IconInfo.vue'
 export default defineComponent({
   name: 'LandingPage',
   components: { Stack, PepLink, Pickers, PepInput, ProfileCard, IconGrid, DialogWrapper, IconInfo },
-  emits: ['set-is-dark-mode'],
+  emits: ['set-is-dark-mode', 'update-cursor'],
   created() {
     document.body.classList.add('light-mode')
     document.body.classList.add(`${defaultsIconConfig().type}-mode`)
@@ -47,7 +47,12 @@ export default defineComponent({
       const stroke = useColorAsStroke ? _color : _stroke
       return { type, color, stroke }
     })
-
+    watch(
+      () => _.config,
+      (newVal) => {
+        emit('set-is-dark-mode', newVal)
+      },
+    )
     watch(
       () => _.config.type,
       (newVal) => {
@@ -145,6 +150,7 @@ export default defineComponent({
             <PepLink
               content="About Us"
               icon="info-filled"
+              :config="_.config"
               class="cursor-arrow-down"
               @click.stop.prevent="scrollPageTo('about-us')"
             />
@@ -162,6 +168,7 @@ export default defineComponent({
           href="https://github.com/sponsors/mesqueeb"
           content="sponsoring us on GitHub"
           retroUnderline
+          :config="_.config"
         />!
       </div>
       <Pickers v-model="_.config" :configComputed="configComputed" class="mb-md" />
@@ -195,6 +202,7 @@ export default defineComponent({
             href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
             retroUnderline
             content="request"
+            :config="_.config"
           />
           a new icon on GitHub. 　🙃
         </div>
@@ -207,6 +215,7 @@ export default defineComponent({
             href="https://medium.com/@lucaban/pepicons-retro-icon-set-now-available-for-designers-and-coders-40db866a7460"
             retroUnderline
             content="announcement blog post"
+            :config="_.config"
           />
           to read about our motivation for creating Pepicons!<br /><br />Pepicons was made by these
           peeps:
@@ -233,6 +242,7 @@ export default defineComponent({
         <PepLink
           class="cursor-arrow-up px-md py-sm"
           content="Go to top"
+          :config="_.config"
           @click.stop.prevent="scrollPageTo('top')"
         />
         <div class="mt-xxl">
@@ -240,6 +250,7 @@ export default defineComponent({
             href="https://github.com/sponsors/mesqueeb"
             retroUnderline
             content="Sponsor development"
+            :config="_.config"
           />
         </div>
       </div>
