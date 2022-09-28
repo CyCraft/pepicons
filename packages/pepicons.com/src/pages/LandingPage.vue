@@ -27,7 +27,7 @@ import IconInfo from '../components/IconInfo.vue'
 export default defineComponent({
   name: 'LandingPage',
   components: { Stack, PepLink, Pickers, PepInput, ProfileCard, IconGrid, DialogWrapper, IconInfo },
-  emits: ['set-is-dark-mode', 'update-cursor'],
+  emits: ['set-is-dark-mode', 'set-config'],
   created() {
     document.body.classList.add('light-mode')
     document.body.classList.add(`${defaultsIconConfig().type}-mode`)
@@ -50,7 +50,8 @@ export default defineComponent({
     watch(
       () => _.config,
       (newVal) => {
-        emit('set-is-dark-mode', newVal)
+        console.log(`newVal → `, newVal)
+        emit('set-config', newVal)
       },
     )
     watch(
@@ -73,11 +74,11 @@ export default defineComponent({
       (isDarkMode) => {
         if (isDarkMode === false) {
           document.body.className = document.body.className.replace(/dark-mode/g, 'light-mode')
-          emit('set-is-dark-mode', false)
+          // emit('set-is-dark-mode', false)
         }
         if (isDarkMode === true) {
           document.body.className = document.body.className.replace(/light-mode/g, 'dark-mode')
-          emit('set-is-dark-mode', true)
+          // emit('set-is-dark-mode', true)
         }
       },
     )

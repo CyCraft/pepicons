@@ -9,7 +9,8 @@ export default defineComponent({
   props: {},
   setup(props) {
     const isDarkMode = ref(false)
-    return { isDarkMode }
+    const config = ref<any>({})
+    return { isDarkMode, config }
   },
   components: { PepHero, PepHeaderDecorationLight, PepLink },
 })
@@ -22,12 +23,15 @@ export default defineComponent({
         <PepHeaderDecorationLight :isDarkMode="isDarkMode" />
       </PepHero>
     </header>
-    <router-view @set-is-dark-mode="(newVal) => (isDarkMode = newVal)" />
+    <router-view
+      @set-is-dark-mode="(newVal) => (isDarkMode = newVal)"
+      @set-config="(newVal) => (config = newVal)"
+    />
     <div class="pb-xxxl"></div>
     <div class="footer">
       <div class="mb-md">
         Pepicons was made with 💜 by
-        <PepLink href="https://cycraft.co" content="cycraft.co" retroUnderline />
+        <PepLink :config="config" href="https://cycraft.co" content="cycraft.co" retroUnderline />
       </div>
       <div>© Copyright CyCraft, {{ new Date().getFullYear() }}</div>
     </div>
