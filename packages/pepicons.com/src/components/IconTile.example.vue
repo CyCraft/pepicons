@@ -1,6 +1,8 @@
-<script lang="ts">
+<script lang="ts" setup>
 import IconTile from './IconTile.vue'
+import { config } from './mocks'
 </script>
+
 <template>
-  <IconTile />
+  <IconTile :config="config" />
 </template>

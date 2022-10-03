@@ -1,7 +1,6 @@
 import rimraf from 'rimraf'
 import copyfiles from 'copyfiles'
 import Renamer from 'renamer'
-import debounce from 'debounce'
 const renamer = new Renamer()
 
 const PATH_PEPICONS = './packages/pepicons'
@@ -25,19 +24,15 @@ const copyPrintSvgs = () =>
     copyfiles([from, to], { up: 4 }, resolve)
   })
 
-const renameSvgs = () =>
-  new Promise((resolve, reject) => {
-    renamer.on('replace-result', (replaceResult) => {
-      debounce(resolve, 200)()
-    })
-    const path = PATH_PEPICONS + '/svg/**/*.svg'
-    renamer.rename({
-      files: [path],
-      find: /^(.+?)(_.+)*\.svg$/,
-      replace: '$1.svg',
-      force: true,
-    })
+const renameSvgs = async () => {
+  const path = PATH_PEPICONS + '/svg/**/*.svg'
+  await renamer.rename({
+    files: [path],
+    find: /^(.+?)(_.+)*\.svg$/,
+    replace: '$1.svg',
+    force: true,
   })
+}
 
 /**
  * @returns {Promise<void>}

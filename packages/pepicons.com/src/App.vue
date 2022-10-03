@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import '@viteplay/vue/dist/style.css'
+</script>
 
 <template>
   <router-view />

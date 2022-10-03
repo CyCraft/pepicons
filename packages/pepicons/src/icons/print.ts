@@ -39,6 +39,7 @@ import CellphoneLoop from './print/cellphone-loop'
 import Chain from './print/chain'
 import Checkmark from './print/checkmark'
 import Circle from './print/circle'
+import Clapperboard from './print/clapperboard'
 import Clipboard from './print/clipboard'
 import ClipboardCheck from './print/clipboard-check'
 import ClipboardCheckCircle from './print/clipboard-check-circle'
@@ -84,6 +85,7 @@ import FoldingStool from './print/folding-stool'
 import Gear from './print/gear'
 import Gift from './print/gift'
 import Grab from './print/grab'
+import Grid from './print/grid'
 import Hamburger from './print/hamburger'
 import HandGrab from './print/hand-grab'
 import HandOpen from './print/hand-open'
@@ -129,6 +131,7 @@ import MoveY from './print/move-y'
 import MusicNoteDouble from './print/music-note-double'
 import MusicNoteSingle from './print/music-note-single'
 import NextTrack from './print/next-track'
+import NoEntry from './print/no-entry'
 import Open from './print/open'
 import PaintPallet from './print/paint-pallet'
 import Pause from './print/pause'
@@ -167,6 +170,7 @@ import ShareIos from './print/share-ios'
 import Shuffle from './print/shuffle'
 import Sliders from './print/sliders'
 import Smartphone from './print/smartphone'
+import SmartphoneCutout from './print/smartphone-cutout'
 import SmartphoneNotch from './print/smartphone-notch'
 import Smartphone2 from './print/smartphone2'
 import SoftDrink from './print/soft-drink'
@@ -176,6 +180,7 @@ import SpeakerLow from './print/speaker-low'
 import SpeakerOff from './print/speaker-off'
 import Square from './print/square'
 import Star from './print/star'
+import Stars from './print/stars'
 import Stopwatch from './print/stopwatch'
 import StudioBackdrop from './print/studio-backdrop'
 import StudioLightFront from './print/studio-light-front'
@@ -186,6 +191,7 @@ import TShirt from './print/t-shirt'
 import Taxi from './print/taxi'
 import Television from './print/television'
 import TextBubble from './print/text-bubble'
+import TextBubbles from './print/text-bubbles'
 import ThumbsDown from './print/thumbs-down'
 import ThumbsUp from './print/thumbs-up'
 import Times from './print/times'
@@ -242,6 +248,7 @@ export const printCellphoneLoop = CellphoneLoop
 export const printChain = Chain
 export const printCheckmark = Checkmark
 export const printCircle = Circle
+export const printClapperboard = Clapperboard
 export const printClipboard = Clipboard
 export const printClipboardCheck = ClipboardCheck
 export const printClipboardCheckCircle = ClipboardCheckCircle
@@ -287,6 +294,7 @@ export const printFoldingStool = FoldingStool
 export const printGear = Gear
 export const printGift = Gift
 export const printGrab = Grab
+export const printGrid = Grid
 export const printHamburger = Hamburger
 export const printHandGrab = HandGrab
 export const printHandOpen = HandOpen
@@ -332,6 +340,7 @@ export const printMoveY = MoveY
 export const printMusicNoteDouble = MusicNoteDouble
 export const printMusicNoteSingle = MusicNoteSingle
 export const printNextTrack = NextTrack
+export const printNoEntry = NoEntry
 export const printOpen = Open
 export const printPaintPallet = PaintPallet
 export const printPause = Pause
@@ -370,6 +379,7 @@ export const printShareIos = ShareIos
 export const printShuffle = Shuffle
 export const printSliders = Sliders
 export const printSmartphone = Smartphone
+export const printSmartphoneCutout = SmartphoneCutout
 export const printSmartphoneNotch = SmartphoneNotch
 export const printSmartphone2 = Smartphone2
 export const printSoftDrink = SoftDrink
@@ -379,6 +389,7 @@ export const printSpeakerLow = SpeakerLow
 export const printSpeakerOff = SpeakerOff
 export const printSquare = Square
 export const printStar = Star
+export const printStars = Stars
 export const printStopwatch = Stopwatch
 export const printStudioBackdrop = StudioBackdrop
 export const printStudioLightFront = StudioLightFront
@@ -389,6 +400,7 @@ export const printTShirt = TShirt
 export const printTaxi = Taxi
 export const printTelevision = Television
 export const printTextBubble = TextBubble
+export const printTextBubbles = TextBubbles
 export const printThumbsDown = ThumbsDown
 export const printThumbsUp = ThumbsUp
 export const printTimes = Times
@@ -443,6 +455,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'chain': Chain,
   'checkmark': Checkmark,
   'circle': Circle,
+  'clapperboard': Clapperboard,
   'clipboard': Clipboard,
   'clipboard-check': ClipboardCheck,
   'clipboard-check-circle': ClipboardCheckCircle,
@@ -488,6 +501,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'gear': Gear,
   'gift': Gift,
   'grab': Grab,
+  'grid': Grid,
   'hamburger': Hamburger,
   'hand-grab': HandGrab,
   'hand-open': HandOpen,
@@ -533,6 +547,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'music-note-double': MusicNoteDouble,
   'music-note-single': MusicNoteSingle,
   'next-track': NextTrack,
+  'no-entry': NoEntry,
   'open': Open,
   'paint-pallet': PaintPallet,
   'pause': Pause,
@@ -571,6 +586,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'shuffle': Shuffle,
   'sliders': Sliders,
   'smartphone': Smartphone,
+  'smartphone-cutout': SmartphoneCutout,
   'smartphone-notch': SmartphoneNotch,
   'smartphone2': Smartphone2,
   'soft-drink': SoftDrink,
@@ -580,6 +596,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'speaker-off': SpeakerOff,
   'square': Square,
   'star': Star,
+  'stars': Stars,
   'stopwatch': Stopwatch,
   'studio-backdrop': StudioBackdrop,
   'studio-light-front': StudioLightFront,
@@ -590,6 +607,7 @@ export const print: { [name in PepiconPrint]: string } = {
   'taxi': Taxi,
   'television': Television,
   'text-bubble': TextBubble,
+  'text-bubbles': TextBubbles,
   'thumbs-down': ThumbsDown,
   'thumbs-up': ThumbsUp,
   'times': Times,

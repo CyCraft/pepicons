@@ -41,6 +41,7 @@ import Chain from './pop/chain'
 import Checkmark from './pop/checkmark'
 import Circle from './pop/circle'
 import CircleFilled from './pop/circle-filled'
+import Clapperboard from './pop/clapperboard'
 import Clipboard from './pop/clipboard'
 import ClipboardCheck from './pop/clipboard-check'
 import ClipboardCheckCircle from './pop/clipboard-check-circle'
@@ -91,6 +92,7 @@ import Gear from './pop/gear'
 import GearFilled from './pop/gear-filled'
 import Gift from './pop/gift'
 import Grab from './pop/grab'
+import Grid from './pop/grid'
 import Hamburger from './pop/hamburger'
 import HandGrab from './pop/hand-grab'
 import HandOpen from './pop/hand-open'
@@ -138,6 +140,7 @@ import MoveY from './pop/move-y'
 import MusicNoteDouble from './pop/music-note-double'
 import MusicNoteSingle from './pop/music-note-single'
 import NextTrack from './pop/next-track'
+import NoEntry from './pop/no-entry'
 import Open from './pop/open'
 import PaintPallet from './pop/paint-pallet'
 import Pause from './pop/pause'
@@ -180,6 +183,7 @@ import ShareIos from './pop/share-ios'
 import Shuffle from './pop/shuffle'
 import Sliders from './pop/sliders'
 import Smartphone from './pop/smartphone'
+import SmartphoneCutout from './pop/smartphone-cutout'
 import SmartphoneNotch from './pop/smartphone-notch'
 import Smartphone2 from './pop/smartphone2'
 import SoftDrink from './pop/soft-drink'
@@ -191,6 +195,7 @@ import Square from './pop/square'
 import SquareFilled from './pop/square-filled'
 import Star from './pop/star'
 import StarFilled from './pop/star-filled'
+import Stars from './pop/stars'
 import Stopwatch from './pop/stopwatch'
 import StudioBackdrop from './pop/studio-backdrop'
 import StudioLightFront from './pop/studio-light-front'
@@ -202,6 +207,7 @@ import TShirt from './pop/t-shirt'
 import Taxi from './pop/taxi'
 import Television from './pop/television'
 import TextBubble from './pop/text-bubble'
+import TextBubbles from './pop/text-bubbles'
 import ThumbsDown from './pop/thumbs-down'
 import ThumbsUp from './pop/thumbs-up'
 import Times from './pop/times'
@@ -264,6 +270,7 @@ export const popChain = Chain
 export const popCheckmark = Checkmark
 export const popCircle = Circle
 export const popCircleFilled = CircleFilled
+export const popClapperboard = Clapperboard
 export const popClipboard = Clipboard
 export const popClipboardCheck = ClipboardCheck
 export const popClipboardCheckCircle = ClipboardCheckCircle
@@ -314,6 +321,7 @@ export const popGear = Gear
 export const popGearFilled = GearFilled
 export const popGift = Gift
 export const popGrab = Grab
+export const popGrid = Grid
 export const popHamburger = Hamburger
 export const popHandGrab = HandGrab
 export const popHandOpen = HandOpen
@@ -361,6 +369,7 @@ export const popMoveY = MoveY
 export const popMusicNoteDouble = MusicNoteDouble
 export const popMusicNoteSingle = MusicNoteSingle
 export const popNextTrack = NextTrack
+export const popNoEntry = NoEntry
 export const popOpen = Open
 export const popPaintPallet = PaintPallet
 export const popPause = Pause
@@ -403,6 +412,7 @@ export const popShareIos = ShareIos
 export const popShuffle = Shuffle
 export const popSliders = Sliders
 export const popSmartphone = Smartphone
+export const popSmartphoneCutout = SmartphoneCutout
 export const popSmartphoneNotch = SmartphoneNotch
 export const popSmartphone2 = Smartphone2
 export const popSoftDrink = SoftDrink
@@ -414,6 +424,7 @@ export const popSquare = Square
 export const popSquareFilled = SquareFilled
 export const popStar = Star
 export const popStarFilled = StarFilled
+export const popStars = Stars
 export const popStopwatch = Stopwatch
 export const popStudioBackdrop = StudioBackdrop
 export const popStudioLightFront = StudioLightFront
@@ -425,6 +436,7 @@ export const popTShirt = TShirt
 export const popTaxi = Taxi
 export const popTelevision = Television
 export const popTextBubble = TextBubble
+export const popTextBubbles = TextBubbles
 export const popThumbsDown = ThumbsDown
 export const popThumbsUp = ThumbsUp
 export const popTimes = Times
@@ -485,6 +497,7 @@ export const pop: { [name in Pepicon]: string } = {
   'checkmark': Checkmark,
   'circle': Circle,
   'circle-filled': CircleFilled,
+  'clapperboard': Clapperboard,
   'clipboard': Clipboard,
   'clipboard-check': ClipboardCheck,
   'clipboard-check-circle': ClipboardCheckCircle,
@@ -535,6 +548,7 @@ export const pop: { [name in Pepicon]: string } = {
   'gear-filled': GearFilled,
   'gift': Gift,
   'grab': Grab,
+  'grid': Grid,
   'hamburger': Hamburger,
   'hand-grab': HandGrab,
   'hand-open': HandOpen,
@@ -582,6 +596,7 @@ export const pop: { [name in Pepicon]: string } = {
   'music-note-double': MusicNoteDouble,
   'music-note-single': MusicNoteSingle,
   'next-track': NextTrack,
+  'no-entry': NoEntry,
   'open': Open,
   'paint-pallet': PaintPallet,
   'pause': Pause,
@@ -624,6 +639,7 @@ export const pop: { [name in Pepicon]: string } = {
   'shuffle': Shuffle,
   'sliders': Sliders,
   'smartphone': Smartphone,
+  'smartphone-cutout': SmartphoneCutout,
   'smartphone-notch': SmartphoneNotch,
   'smartphone2': Smartphone2,
   'soft-drink': SoftDrink,
@@ -635,6 +651,7 @@ export const pop: { [name in Pepicon]: string } = {
   'square-filled': SquareFilled,
   'star': Star,
   'star-filled': StarFilled,
+  'stars': Stars,
   'stopwatch': Stopwatch,
   'studio-backdrop': StudioBackdrop,
   'studio-light-front': StudioLightFront,
@@ -646,6 +663,7 @@ export const pop: { [name in Pepicon]: string } = {
   'taxi': Taxi,
   'television': Television,
   'text-bubble': TextBubble,
+  'text-bubbles': TextBubbles,
   'thumbs-down': ThumbsDown,
   'thumbs-up': ThumbsUp,
   'times': Times,
