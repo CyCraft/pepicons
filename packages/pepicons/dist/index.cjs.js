@@ -3,7 +3,7 @@
 Object.defineProperty(exports, '__esModule', { value: true });
 
 /** Do not edit! This file is auto-generated. */
-const pepiconArray = ['airplane', 'alarm', 'angle-down', 'angle-left', 'angle-right', 'angle-up', 'arrow-down', 'arrow-down-left', 'arrow-down-right', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-up-left', 'arrow-up-right', 'bank', 'battery', 'bell', 'bell-off', 'bicycle', 'bluetooth', 'book', 'bookmark', 'bookmark-filled', 'briefcase', 'building', 'calculator', 'calendar', 'camera', 'can', 'car', 'cart', 'cellphone-eye', 'cellphone-loop', 'chain', 'checkmark', 'circle', 'circle-filled', 'clipboard', 'clipboard-check', 'clipboard-check-circle', 'clock', 'cloud', 'cloud-down', 'cloud-down-filled', 'cloud-filled', 'cloud-up', 'cloud-up-filled', 'coctail', 'code', 'color-picker', 'contract', 'controller', 'countdown', 'credit-card', 'crown', 'cup', 'cv', 'division', 'dots-x', 'dots-y', 'dress', 'duplicate', 'electricity', 'enter', 'exclamation', 'exclamation-circle', 'exclamation-filled', 'expand', 'eye', 'eye-closed', 'eye-frame', 'eye-off', 'fast-forward', 'file', 'file-loop', 'film-frame', 'fire', 'flag', 'flag-straight', 'flower', 'flower-bud', 'folder', 'folding-stool', 'gear', 'gear-filled', 'gift', 'grab', 'hamburger', 'hand-grab', 'hand-open', 'hand-point', 'hand-point-open', 'handshake', 'hash', 'headphone', 'heart', 'hourglass', 'house', 'identification', 'info', 'info-circle', 'info-filled', 'internet', 'key', 'knive-fork', 'label', 'leave', 'letter', 'letter-open', 'list', 'lock-closed', 'lock-open', 'loop', 'loop-minus', 'loop-plus', 'magnet', 'map', 'megaphone', 'menu', 'microphone', 'microphone2', 'minus', 'monitor', 'monitor-eye', 'monitor-loop', 'monitor2', 'moon', 'moon-filled', 'motorcycle', 'move-x', 'move-y', 'music-note-double', 'music-note-single', 'next-track', 'open', 'paint-pallet', 'pause', 'pen', 'people', 'person', 'person-checkmark', 'person-filled', 'person-plus', 'persons', 'phone', 'photo', 'photo-camera', 'photo-studio', 'pill', 'pin', 'pinpoint', 'pinpoint-filled', 'pinpoint-off', 'pinpoint-off-filled', 'play', 'plus', 'power', 'previous-track', 'printer', 'qr-code', 'question', 'question-circle', 'question-filled', 'radio', 'refresh', 'reload', 'repeat', 'rewind', 'rewind-time', 'scissors', 'send', 'share-android', 'share-ios', 'shuffle', 'sliders', 'smartphone', 'smartphone-notch', 'smartphone2', 'soft-drink', 'sort', 'speaker-high', 'speaker-low', 'speaker-off', 'square', 'square-filled', 'star', 'star-filled', 'stopwatch', 'studio-backdrop', 'studio-light-front', 'studio-light-side', 'sun', 'sun-filled', 'syringe', 't-shirt', 'taxi', 'television', 'text-bubble', 'thumbs-down', 'thumbs-up', 'times', 'tool', 'train', 'trash', 'triangle-down', 'triangle-down-filled', 'triangle-left', 'triangle-left-filled', 'triangle-right', 'triangle-right-filled', 'triangle-up', 'triangle-up-filled', 'trophy', 'truck', 'umbrella', 'watch', 'water-drop', 'wifi'];
+const pepiconArray = ['airplane', 'alarm', 'angle-down', 'angle-left', 'angle-right', 'angle-up', 'arrow-down', 'arrow-down-left', 'arrow-down-right', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-up-left', 'arrow-up-right', 'bank', 'battery', 'bell', 'bell-off', 'bicycle', 'bluetooth', 'book', 'bookmark', 'bookmark-filled', 'briefcase', 'building', 'calculator', 'calendar', 'camera', 'can', 'car', 'cart', 'cellphone-eye', 'cellphone-loop', 'chain', 'checkmark', 'circle', 'circle-filled', 'clapperboard', 'clipboard', 'clipboard-check', 'clipboard-check-circle', 'clock', 'cloud', 'cloud-down', 'cloud-down-filled', 'cloud-filled', 'cloud-up', 'cloud-up-filled', 'coctail', 'code', 'color-picker', 'contract', 'controller', 'countdown', 'credit-card', 'crown', 'cup', 'cv', 'division', 'dots-x', 'dots-y', 'dress', 'duplicate', 'electricity', 'enter', 'exclamation', 'exclamation-circle', 'exclamation-filled', 'expand', 'eye', 'eye-closed', 'eye-frame', 'eye-off', 'fast-forward', 'file', 'file-loop', 'film-frame', 'fire', 'flag', 'flag-straight', 'flower', 'flower-bud', 'folder', 'folding-stool', 'gear', 'gear-filled', 'gift', 'grab', 'grid', 'hamburger', 'hand-grab', 'hand-open', 'hand-point', 'hand-point-open', 'handshake', 'hash', 'headphone', 'heart', 'hourglass', 'house', 'identification', 'info', 'info-circle', 'info-filled', 'internet', 'key', 'knive-fork', 'label', 'leave', 'letter', 'letter-open', 'list', 'lock-closed', 'lock-open', 'loop', 'loop-minus', 'loop-plus', 'magnet', 'map', 'megaphone', 'menu', 'microphone', 'microphone2', 'minus', 'monitor', 'monitor-eye', 'monitor-loop', 'monitor2', 'moon', 'moon-filled', 'motorcycle', 'move-x', 'move-y', 'music-note-double', 'music-note-single', 'next-track', 'no-entry', 'open', 'paint-pallet', 'pause', 'pen', 'people', 'person', 'person-checkmark', 'person-filled', 'person-plus', 'persons', 'phone', 'photo', 'photo-camera', 'photo-studio', 'pill', 'pin', 'pinpoint', 'pinpoint-filled', 'pinpoint-off', 'pinpoint-off-filled', 'play', 'plus', 'power', 'previous-track', 'printer', 'qr-code', 'question', 'question-circle', 'question-filled', 'radio', 'refresh', 'reload', 'repeat', 'rewind', 'rewind-time', 'scissors', 'send', 'share-android', 'share-ios', 'shuffle', 'sliders', 'smartphone', 'smartphone-cutout', 'smartphone-notch', 'smartphone2', 'soft-drink', 'sort', 'speaker-high', 'speaker-low', 'speaker-off', 'square', 'square-filled', 'star', 'star-filled', 'stars', 'stopwatch', 'studio-backdrop', 'studio-light-front', 'studio-light-side', 'sun', 'sun-filled', 'syringe', 't-shirt', 'taxi', 'television', 'text-bubble', 'text-bubbles', 'thumbs-down', 'thumbs-up', 'times', 'tool', 'train', 'trash', 'triangle-down', 'triangle-down-filled', 'triangle-left', 'triangle-left-filled', 'triangle-right', 'triangle-right-filled', 'triangle-up', 'triangle-up-filled', 'trophy', 'truck', 'umbrella', 'watch', 'water-drop', 'wifi'];
 
 /** Do not edit! This file is auto-generated. */
 const categories = ['ui', 'transport', 'time', 'text', 'sound', 'social', 'shape', 'nature', 'location', 'leisure', 'item', 'hand', 'food-drinks', 'device', 'arrows'];
@@ -45,6 +45,7 @@ const pepiconCategoryDic = {
     'checkmark': 'ui',
     'circle': 'shape',
     'circle-filled': 'shape',
+    'clapperboard': 'device',
     'clipboard': 'text',
     'clipboard-check': 'text',
     'clipboard-check-circle': 'text',
@@ -95,6 +96,7 @@ const pepiconCategoryDic = {
     'gear-filled': 'ui',
     'gift': 'social',
     'grab': 'ui',
+    'grid': 'ui',
     'hamburger': 'food-drinks',
     'hand-grab': 'hand',
     'hand-open': 'hand',
@@ -142,6 +144,7 @@ const pepiconCategoryDic = {
     'music-note-double': 'sound',
     'music-note-single': 'sound',
     'next-track': 'sound',
+    'no-entry': 'ui',
     'open': 'ui',
     'paint-pallet': 'leisure',
     'pause': 'sound',
@@ -184,6 +187,7 @@ const pepiconCategoryDic = {
     'shuffle': 'sound',
     'sliders': 'ui',
     'smartphone': 'device',
+    'smartphone-cutout': 'device',
     'smartphone-notch': 'device',
     'smartphone2': 'device',
     'soft-drink': 'food-drinks',
@@ -195,6 +199,7 @@ const pepiconCategoryDic = {
     'square-filled': 'shape',
     'star': 'nature',
     'star-filled': 'nature',
+    'stars': 'nature',
     'stopwatch': 'time',
     'studio-backdrop': 'location',
     'studio-light-front': 'device',
@@ -206,6 +211,7 @@ const pepiconCategoryDic = {
     'taxi': 'transport',
     'television': 'device',
     'text-bubble': 'social',
+    'text-bubbles': 'social',
     'thumbs-down': 'social',
     'thumbs-up': 'social',
     'times': 'shape',
@@ -267,6 +273,7 @@ const synonyms$1 = {
     'checkmark': ['check', 'toggle', 'tick', 'ok', 'confirmed'],
     'circle': ['bullet', 'ball'],
     'circle-filled': ['bullet', 'ball'],
+    'clapperboard': ['dumb-slate', 'filmmaking', 'video-production', 'scenes', 'takes', 'clapboard', 'clapstick', 'marker', 'slate-board', 'sync-slate', 'action', 'filming'],
     'clipboard': ['copy', 'duplicate', 'paste'],
     'clipboard-check': ['copy', 'duplicate', 'paste'],
     'clipboard-check-circle': ['copy', 'duplicate', 'paste'],
@@ -317,6 +324,7 @@ const synonyms$1 = {
     'gear-filled': ['settings', 'cogwheel', 'configuration', 'mechanical', 'machinery'],
     'gift': ['present', 'surprise', 'give'],
     'grab': ['handle', 'move', 'drag'],
+    'grid': ['cards', 'table', 'list', 'to-do', 'todo', 'items', 'sort', 'organise', 'organize', 'tasks', 'sheet', 'entries', 'register', 'directory', 'catalogue', 'inventory', 'index', 'checklist', 'table'],
     'hamburger': ['fast-food'],
     'hand-grab': ['hold', 'take', 'move', 'drag'],
     'hand-open': ['hello', 'greeting', 'salutation', 'raise-hand'],
@@ -364,6 +372,7 @@ const synonyms$1 = {
     'music-note-double': ['score', 'solfege', 'song'],
     'music-note-single': ['score', 'solfege', 'song'],
     'next-track': ['audio', 'media-controls', 'music'],
+    'no-entry': [],
     'open': ['link', 'new-tab', 'external', 'go'],
     'paint-pallet': ['painter', 'art'],
     'pause': ['audio', 'media-controls', 'music'],
@@ -406,6 +415,7 @@ const synonyms$1 = {
     'shuffle': ['audio', 'media-controls', 'music'],
     'sliders': ['settings', 'options', 'configuration', 'toggles', 'filters', 'knobs'],
     'smartphone': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
+    'smartphone-cutout': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
     'smartphone-notch': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
     'smartphone2': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
     'soft-drink': ['cold-drink', 'refresher', 'juice'],
@@ -417,6 +427,7 @@ const synonyms$1 = {
     'square-filled': [],
     'star': ['favourite', 'favorite', 'rate', 'rating', 'score', 'flag'],
     'star-filled': ['favourite', 'favorite', 'rate', 'rating', 'score', 'flag'],
+    'stars': ['sparkle', 'twinkle', 'shine', 'new', 'shiny'],
     'stopwatch': ['alarm', 'timer', 'clock', 'countdown', 'race', 'track', 'pedometer'],
     'studio-backdrop': ['photo-shoot', 'modelling', 'filming'],
     'studio-light-front': ['lamp', 'beacon', 'photo-shoot', 'modelling', 'filming'],
@@ -428,6 +439,7 @@ const synonyms$1 = {
     'taxi': ['cab'],
     'television': ['tv', 'telly'],
     'text-bubble': ['message', 'chat', 'say', 'typing'],
+    'text-bubbles': ['messages', 'chatting', 'saying', 'typing', 'group-chat'],
     'thumbs-down': ['dislike', 'hate', 'vote', 'downvote', 'gesture', 'block'],
     'thumbs-up': ['like', 'love', 'vote', 'upvote', 'gesture', 'favorite', 'favourite'],
     'times': ['cross', 'x', 'wrong', 'close', 'stop'],
@@ -453,114 +465,63 @@ const synonyms$1 = {
 /** This file is to be manually edited. */
 const synonyms = {
     'airplane': ['飛行機', '飛ぶ', '飛行', '旅行', '休暇', '旅'],
+    'alarm': ['アラーム'],
     'angle-down': ['下矢印', '下', 'やじるし', '矢印', '下がる'],
     'angle-left': ['左矢印', '左', '矢印', 'やじるし', '戻る', '小なり', '山かっこ', '山括弧'],
     'angle-right': ['右矢印', '右', '矢印', 'やじるし', '大なり', '進む', '山かっこ', '山括弧'],
     'angle-up': ['上矢印', '上', '矢印', 'やじるし'],
-    'arrow-down': ['下矢印'],
     'arrow-down-left': ['左下矢印'],
     'arrow-down-right': ['右下矢印'],
+    'arrow-down': ['下矢印'],
     'arrow-left': ['左矢印'],
     'arrow-right': ['右矢印'],
-    'arrow-up': ['上矢印'],
     'arrow-up-left': ['左上矢印'],
     'arrow-up-right': ['右上矢印'],
+    'arrow-up': ['上矢印'],
+    'bank': ['銀行'],
     'battery': ['充電', 'バッテリー', '電池'],
-    'bell': ['ベル', '通知', '警告', '注意', '鐘', '鈴'],
     'bell-off': ['ベル', '消音', '静か', 'サイレント', '鐘', '鈴'],
+    'bell': ['ベル', '通知', '警告', '注意', '鐘', '鈴'],
     'bicycle': ['自転車', '乗り物', 'サイクリング'],
     'bluetooth': ['ブルートゥース'],
     'book': ['本', '読書', 'ブックマーク', '読む'],
-    'bookmark': ['ブックマーク', 'クリップ', 'お気に入り'],
     'bookmark-filled': ['ブックマーク', 'クリップ', 'お気に入り'],
-    'building': [
-        'ビル',
-        'オフィス',
-        'ビジネス',
-        '仕事',
-        '会社',
-        '企業',
-        '職場',
-        '法人',
-        '事務所',
-        '建物',
-    ],
+    'bookmark': ['ブックマーク', 'クリップ', 'お気に入り'],
+    'briefcase': ['ブリーフケース'],
+    'building': ['ビル', 'オフィス', 'ビジネス', '仕事', '会社', '企業', '職場', '法人', '事務所', '建物'],
     'calculator': ['電卓', '計算', '会計'],
     'calendar': ['カレンダー', '予定', 'スケジュール', 'いつ'],
     'camera': ['ビデオカメラ', '記録', 'ビデオ', '動画', 'ムービー', '映画'],
-    'can': [
-        'カン',
-        '缶',
-        'ペプシ',
-        'ソフトドリンク',
-        '炭酸',
-        'コーラ',
-        'コールドドリンク',
-        'リフレッシュ',
-        '缶ジュース',
-        '飲み物',
-    ],
+    'can': ['カン', '缶', 'ペプシ', 'ソフトドリンク', '炭酸', 'コーラ', 'コールドドリンク', 'リフレッシュ', '缶ジュース', '飲み物'],
     'car': ['車', '乗り物', '自動車', '運転'],
     'cart': ['カート', 'ショッピングカート', '買い物', '支払い', '通販', '買う', '購入'],
+    'cellphone-eye': ['携帯・目'],
+    'cellphone-loop': ['携帯・飯メガネ'],
     'chain': ['チェーン', 'リンク'],
     'checkmark': ['チェック', 'チェックマーク', 'しるし', 'ok', '確認済み'],
-    'circle': ['丸', '円', 'ボール'],
     'circle-filled': ['丸', '円', 'ボール'],
+    'circle': ['丸', '円', 'ボール'],
+    'clapperboard': ['カチンコ'],
+    'clipboard-check-circle': ['クリップボード・チェック・サークル'],
+    'clipboard-check': ['クリップボード・チェック'],
     'clipboard': ['クリップボード', 'コピー'],
     'clock': ['時計', '時間', 'アラーム', 'タイマー', 'カウントダウン'],
-    'cloud': [
-        '雲',
-        'アップロード',
-        'オンライン',
-        '容量',
-        'ストレージ',
-        '保存',
-        'クラウド',
-        '天気',
-        'くもり',
-    ],
-    'cloud-down': ['ダウンロード', '容量', 'ストレージ', '保存', 'クラウド', '天気', 'くもり'],
     'cloud-down-filled': ['ダウンロード', 'ストレージ', '保存', 'クラウド'],
-    'cloud-filled': [
-        '雲',
-        'アップロード',
-        'オンライン',
-        'ストレージ',
-        '保存',
-        'クラウド',
-        '天気',
-        'くもり',
-    ],
-    'cloud-up': ['アップロード', 'ストレージ', '保存', 'クラウド'],
+    'cloud-down': ['ダウンロード', '容量', 'ストレージ', '保存', 'クラウド', '天気', 'くもり'],
+    'cloud-filled': ['雲', 'アップロード', 'オンライン', 'ストレージ', '保存', 'クラウド', '天気', 'くもり'],
     'cloud-up-filled': ['アップロード', 'ストレージ', '保存', 'クラウド'],
-    'coctail': [
-        'カクテル',
-        'お酒',
-        'トロピカル',
-        'アルコール',
-        'バー',
-        '飲み物',
-        'ドリンク',
-        'グラス',
-    ],
+    'cloud-up': ['アップロード', 'ストレージ', '保存', 'クラウド'],
+    'cloud': ['雲', 'アップロード', 'オンライン', '容量', 'ストレージ', '保存', 'クラウド', '天気', 'くもり'],
+    'coctail': ['カクテル', 'お酒', 'トロピカル', 'アルコール', 'バー', '飲み物', 'ドリンク', 'グラス'],
+    'code': ['コード'],
     'color-picker': ['スポイト', 'カラーピッカー'],
     'contract': ['縮小', '閉じる', 'ズームアウト'],
     'controller': ['コントローラー', 'ゲーム', '遊び'],
-    'credit-card': [
-        'クレジットカード',
-        'マスターカード',
-        'visa',
-        'キャッシュレス',
-        '支払い',
-        'チェックアウト',
-        'カード',
-    ],
-    'code': ['コード'],
-    'cv': ['履歴'],
-    'flag-straight': ['旗'],
-    'letter-open': ['手紙'],
+    'countdown': ['カウントダウン'],
+    'credit-card': ['クレジットカード', 'マスターカード', 'visa', 'キャッシュレス', '支払い', 'チェックアウト', 'カード'],
     'crown': ['王冠'],
     'cup': ['カップ', 'コーヒー', 'ホットドリンク', '飲み物', 'カフェ', 'ティーカップ'],
+    'cv': ['履歴'],
     'division': ['割る', '計算'],
     'dots-x': ['三点リーダー', '点', '詳細', 'メニュー'],
     'dots-y': ['三点リーダー', '点', '詳細', 'メニュー'],
@@ -568,215 +529,176 @@ const synonyms = {
     'duplicate': ['コピー', '複製'],
     'electricity': ['カミナリ', '雷', '稲妻', '天気'],
     'enter': ['入る', 'サインイン', 'ログイン'],
+    'exclamation-circle': ['ビックリマーク・サークル', 'エクスクラメーションマーク', '注意', '警告', '危険', '注目'],
+    'exclamation-filled': ['ビックリマーク', 'エクスクラメーションマーク', '注意', '警告', '危険', '注目'],
     'exclamation': ['ビックリマーク', 'エクスクラメーションマーク', '注意', '警告', '危険', '注目'],
-    'exclamation-filled': [
-        'ビックリマーク',
-        'エクスクラメーションマーク',
-        '注意',
-        '警告',
-        '危険',
-        '注目',
-    ],
     'expand': ['拡大', 'フルスクリーン', '開く', 'ズームイン', '最大化'],
-    'eye': ['目', 'パスワードを見る', '見る', '気づく', '起きる'],
     'eye-closed': ['目', 'パスワードを隠す', '見える', '隠す', '秘密', '寝る'],
+    'eye-frame': ['目・フレーム', 'スキャン'],
     'eye-off': ['非表示', '目', '隠す', '秘密', '見えない'],
+    'eye': ['目', 'パスワードを見る', '見る', '気づく', '起きる'],
+    'fast-forward': [],
+    'file-loop': [],
     'file': ['ファイル', '記録', 'ノート', 'データ', 'アーカイブ', 'ドキュメント', '文書'],
     'film-frame': ['映画', '動画', 'ムービー', '再生', 'プログラム', 'ドラマ', 'シネマ'],
+    'fire': [],
+    'flag-straight': ['旗'],
     'flag': ['旗', '国', '重要', 'ピン'],
-    'flower': ['花', 'チューリップ'],
     'flower-bud': ['花', 'つぼみ'],
+    'flower': ['花', 'チューリップ'],
     'folder': ['ファイル', 'フォルダー', 'アーカイブ', '保存', '記録'],
+    'folding-stool': [],
+    'gear-filled': [],
     'gear': ['歯車', '設定', 'コンフィグ', 'ギア', 'セッティング'],
-    'gift': [
-        'ギフト',
-        'プレゼント',
-        'サプライズ',
-        '贈る',
-        '贈り物',
-        '誕生日',
-        'バースデープレゼント',
-    ],
+    'gift': ['ギフト', 'プレゼント', 'サプライズ', '贈る', '贈り物', '誕生日', 'バースデープレゼント'],
     'grab': ['メニュー', 'インターフェース', 'ナビゲーション'],
+    'grid': [],
     'hamburger': ['ハンバーガー', 'ファストフード', '食事'],
+    'hand-grab': [],
+    'hand-open': [],
+    'hand-point-open': [],
+    'hand-point': [],
+    'handshake': [],
     'hash': ['ハッシュタグ'],
     'headphone': ['ヘッドホン', 'ヘッドセット', 'イヤホン', 'ミュージック', '音楽', '聴く', '視聴'],
     'heart': ['ハート', 'ラブ', '好き'],
+    'hourglass': [],
     'house': ['家', '住宅', '家庭', 'ホーム'],
     'identification': ['身分証明'],
-    'info': ['インフォメーション', 'ヘルプ', 'ヒント', 'ガイド'],
+    'info-circle': [],
     'info-filled': ['インフォメーション', 'ヘルプ', 'ヒント', 'ガイド'],
+    'info': ['インフォメーション', 'ヘルプ', 'ヒント', 'ガイド'],
     'internet': ['地球', 'インターネット', 'サイバー', 'ネット'],
     'key': ['鍵', 'カギ', 'ロック', 'アンロック', '暗号化', '複合化', '安全', '秘密', '解決', '答え'],
     'knive-fork': ['カトラリー', 'ナイフ', 'フォーク', '食事'],
     'label': ['ラベル', 'タグ'],
     'leave': ['出る', 'ログアウト', 'サインアウト'],
+    'letter-open': ['手紙'],
     'letter': ['手紙', 'メール', '送信', '受信', 'コンタクト', '封筒'],
     'list': ['リスト'],
     'lock-closed': ['ロック', '暗号化', 'セキュリティ', '南京錠', 'パスワード'],
     'lock-open': ['アンロック', '複合化', '南京錠', 'セキュリティ', 'パスワード'],
-    'loop': ['虫眼鏡', 'ズーム', '拡大', '検索', '調査'],
     'loop-minus': ['ズームアウト', '縮小'],
     'loop-plus': ['ズームイン', '拡大'],
+    'loop': ['虫眼鏡', 'ズーム', '拡大', '検索', '調査'],
     'magnet': ['マグネット', '磁石'],
     'map': ['地図', '現在地', '目的地', '位置', '場所'],
     'megaphone': ['メガホン'],
+    'menu': [],
     'microphone': ['マイク', '録音', '音声', 'ラジオ'],
+    'microphone2': [],
     'minus': ['マイナス', '引く', 'ハイフン', '線', '計算'],
+    'monitor-eye': [],
+    'monitor-loop': [],
     'monitor': ['モニター', 'パソコン', 'コンピューター', 'デスクトップ', 'スクリーン'],
     'monitor2': ['モニター', 'パソコン', 'コンピューター', 'デスクトップ', 'スクリーン'],
-    'moon': ['月', 'ダークモード', '夜', '消灯', 'おやすみ', '天気'],
     'moon-filled': ['月', 'ダークモード', '夜', '消灯', 'おやすみ'],
+    'moon': ['月', 'ダークモード', '夜', '消灯', 'おやすみ', '天気'],
     'motorcycle': ['バイク', '乗り物', '運転'],
     'move-x': ['横ドラッグ'],
     'move-y': ['縦ドラッグ'],
     'music-note-double': ['８分音符', '音符', '曲', '歌', '音楽', 'ミュージック'],
     'music-note-single': ['８分音符', '音符', '曲', '歌', '音楽', 'ミュージック'],
+    'next-track': [],
+    'no-entry': [],
     'open': ['開く', '新しいウィンドウ'],
     'paint-pallet': ['パレット', 'ペイント', 'アート'],
+    'pause': [],
     'pen': ['ペン', '編集', '書く', '鉛筆', '描く'],
     'people': ['三人', '人々'],
-    'person': ['人', '人間', '人物', '誰か', '個性', 'プロフィール', '君'],
     'person-checkmark': ['人チェックマーク'],
     'person-filled': ['人', '人間', '人物', '誰か', '個性', 'プロフィール', '君'],
     'person-plus': ['人プラス'],
+    'person': ['人', '人間', '人物', '誰か', '個性', 'プロフィール', '君'],
     'persons': ['二人', '人々'],
     'phone': ['受話器', '電話', '通話'],
-    'photo': ['写真'],
     'photo-camera': ['カメラ', 'シャッター', '写真'],
+    'photo-studio': [],
+    'photo': ['写真'],
     'pill': ['薬', 'カプセル', '錠剤', 'ドクター', '病気', '治す', 'ドラッグ', '治療'],
-    'pinpoint': ['ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
+    'pin': [],
     'pinpoint-filled': ['ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
+    'pinpoint-off-filled': ['現在地オフ', 'ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
     'pinpoint-off': ['現在地オフ', 'ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
-    'pinpoint-off-filled': [
-        '現在地オフ',
-        'ピン',
-        '現在地',
-        ' 位置',
-        '地図',
-        'ここ',
-        '場所',
-        'マップ',
-    ],
+    'pinpoint': ['ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
+    'play': [],
     'plus': ['プラス', '足す', '加える', '新しい', '計算'],
     'power': ['電源', 'オフ', 'シャットダウン', 'ボタン'],
+    'previous-track': [],
     'printer': ['プリンター', '印刷'],
     'qr-code': ['QRコード'],
+    'question-circle': [],
+    'question-filled': [],
+    'question': [],
+    'radio': [],
     'refresh': ['更新', 'リロード', 'アップデート'],
     'reload': ['更新', 'やり直し', '再読み込み', '戻る'],
-    'scissors': [
-        'ハサミ',
-        'はさみ',
-        'カット',
-        '切る',
-        '髪',
-        '切り取り',
-        'トリミング',
-        '理容室',
-        'ヘアサロン',
-        '美容室',
-        'スタイリスト',
-        '美容師',
-    ],
+    'repeat': [],
+    'rewind-time': [],
+    'rewind': [],
+    'scissors': ['ハサミ', 'はさみ', 'カット', '切る', '髪', '切り取り', 'トリミング', '理容室', 'ヘアサロン', '美容室', 'スタイリスト', '美容師'],
     'send': ['紙飛行機', 'メール', '送信', '送る'],
     'share-android': ['シェア', '共有'],
     'share-ios': ['シェア', '共有'],
+    'shuffle': [],
+    'sliders': [],
+    'smartphone-cutout': [],
+    'smartphone-notch': ['スマートフォン', 'スマホ', 'アイフォン', '携帯電話', '電話'],
     'smartphone': ['スマートフォン', 'スマホ', 'アイフォン', '携帯電話', '電話'],
     'smartphone2': ['スマートフォン', 'スマホ', 'アイフォン', '携帯電話', '電話'],
-    'smartphone-notch': ['スマートフォン', 'スマホ', 'アイフォン', '携帯電話', '電話'],
     'soft-drink': ['ソフトドリンク', 'コールドドリンク', 'リフレッシュ', 'ジュース', '飲み物'],
     'sort': ['ソート'],
     'speaker-high': ['音量', 'スピーカー', '大きく', 'ボリューム', '音声', 'サウンド'],
     'speaker-low': ['音量', 'スピーカー', '小さく', 'ボリューム', '音声', 'サウンド'],
-    'speaker-off': [
-        '音量オフ',
-        'サイレント',
-        'スピーカー',
-        '小さく',
-        'ボリューム',
-        '音声',
-        'サウンド',
-    ],
-    'square': ['四角'],
+    'speaker-off': ['音量オフ', 'サイレント', 'スピーカー', '小さく', 'ボリューム', '音声', 'サウンド'],
     'square-filled': ['四角'],
-    'star': ['星', 'お気に入り', 'スター', 'ブックマーク'],
+    'square': ['四角'],
     'star-filled': ['星', 'お気に入り', 'スター', 'ブックマーク'],
-    'sun': ['太陽', 'ライトモード', '日', 'おはよう', '明るい', '天気'],
+    'star': ['星', 'お気に入り', 'スター', 'ブックマーク'],
+    'stars': [],
+    'stopwatch': [],
+    'studio-backdrop': [],
+    'studio-light-front': [],
+    'studio-light-side': [],
     'sun-filled': ['太陽', 'ライトモード', '日', 'おはよう', '明るい', '天気'],
+    'sun': ['太陽', 'ライトモード', '日', 'おはよう', '明るい', '天気'],
     'syringe': ['注射器', 'ワクチン', '予防接種', '医者', '病気', '治療', '薬'],
     't-shirt': ['Tシャツ', '服', '着る'],
     'taxi': ['タクシー', '乗り物'],
     'television': ['テレビ', 'モニター'],
     'text-bubble': ['吹き出し', 'メッセージ', 'チャット', '言う', 'タイピング'],
+    'text-bubbles': [],
     'thumbs-down': ['いいね'],
     'thumbs-up': ['好きじゃない'],
     'times': ['クロス', 'エックス', '不正解', '間違い', 'クローズ', '止める', '計算', '掛ける'],
     'tool': ['レンチ', '工具', '修理', '直す', 'ボルト'],
     'train': ['電車', 'メトロ', '地下鉄', '乗り物'],
     'trash': ['ゴミ箱', '消去', '捨てる', '分別', '廃棄物'],
-    'triangle-down': ['三角', '下矢印'],
     'triangle-down-filled': ['三角', '下矢印'],
-    'triangle-left': ['三角', '左矢印'],
+    'triangle-down': ['三角', '下矢印'],
     'triangle-left-filled': ['三角', '左矢印'],
-    'triangle-right': ['三角', '右矢印'],
+    'triangle-left': ['三角', '左矢印'],
     'triangle-right-filled': ['三角', '右矢印'],
-    'triangle-up': ['三角', '上矢印'],
+    'triangle-right': ['三角', '右矢印'],
     'triangle-up-filled': ['三角', '上矢印'],
+    'triangle-up': ['三角', '上矢印'],
     'trophy': ['トロフィー', '賞品', '景品'],
     'truck': ['トラック', 'バン', 'ピックアップ', '運送', '荷物', '配送', '運搬', '流通', '乗り物'],
     'umbrella': ['傘', 'パラソル', '雨', '天気'],
-    'wifi': ['ワイファイ', 'インターネット', '通信', '電波'],
-    'alarm': [],
-    'bank': [],
-    'briefcase': [],
-    'cellphone-eye': [],
-    'cellphone-loop': [],
-    'countdown': [],
-    'exclamation-circle': [],
-    'eye-frame': [],
-    'fast-forward': [],
-    'file-loop': [],
-    'fire': [],
-    'folding-stool': [],
-    'gear-filled': [],
-    'hand-grab': [],
-    'hand-open': [],
-    'hand-point': [],
-    'hand-point-open': [],
-    'handshake': [],
-    'hourglass': [],
-    'menu': [],
-    'microphone2': [],
-    'monitor-eye': [],
-    'monitor-loop': [],
-    'next-track': [],
-    'photo-studio': [],
-    'pin': [],
-    'play': [],
-    'previous-track': [],
-    'shuffle': [],
-    'sliders': [],
-    'stopwatch': [],
-    'studio-backdrop': [],
-    'studio-light-front': [],
-    'studio-light-side': [],
     'watch': [],
     'water-drop': [],
-    'repeat': [],
-    'rewind': [],
-    'rewind-time': [],
-    'question': [],
-    'question-circle': [],
-    'question-filled': [],
-    'radio': [],
-    'clipboard-check': [],
-    'clipboard-check-circle': [],
-    'info-circle': [],
-    'pause': [],
+    'wifi': ['ワイファイ', 'インターネット', '通信', '電波'],
 };
 
 const Airplane$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_0_2570)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7549 12.9963L12.6137 11.2918L14.0858 16.5607C14.2873 17.2817 15.1804 17.5338 15.7291 17.0246C17.3078 15.5597 18.1699 14.2058 18.2479 12.8948C18.3038 11.9539 17.8659 10.1553 16.9294 7.33446L17.1593 7.12366C19.4079 4.87645 20.0577 2.91564 18.5923 1.45023C17.1271 -0.0150314 15.1661 0.634362 12.9482 2.85086L12.7079 3.11245C9.88669 2.17579 8.08782 1.73782 7.14683 1.79379C5.83588 1.87176 4.48194 2.73388 3.01704 4.31253C2.50783 4.86128 2.75997 5.75441 3.48097 5.95585L8.75056 7.42815L7.0465 9.28692C5.32628 9.0514 4.24908 8.94907 3.72656 8.98019C2.78982 9.03596 1.86795 9.623 0.89294 10.6737C0.38371 11.2225 0.635886 12.1156 1.35692 12.317L6.01025 13.6169L6.42478 14.0314L7.72462 18.6847C7.92603 19.4058 8.81919 19.658 9.36796 19.1487C10.4187 18.1737 11.0057 17.2518 11.0615 16.3151C11.0926 15.7927 10.9903 14.7159 10.7549 12.9963ZM9.01615 11.8772C8.77322 12.0999 8.65566 12.4281 8.70187 12.7544C8.94065 14.4405 9.06247 15.5704 9.06757 16.0585L8.28047 13.2407C8.23421 13.0751 8.14604 12.9242 8.02445 12.8027L7.239 12.0172C7.11742 11.8956 6.96654 11.8075 6.80093 11.7612L3.98319 10.9741C4.47143 10.9792 5.60166 11.1011 7.28845 11.34C7.61484 11.3862 7.94304 11.2686 8.16579 11.0256L11.3255 7.57908C11.8296 7.02922 11.5759 6.14093 10.8574 5.9402L5.73365 4.50864C6.33268 4.04943 6.84845 3.81507 7.26558 3.79026C7.90809 3.75204 9.78145 4.2286 12.6835 5.21408C13.059 5.34156 13.4743 5.2352 13.7422 4.94295L14.3922 4.23396C15.8992 2.7292 16.7584 2.44469 17.1781 2.86445C17.5977 3.28405 17.3131 4.14277 15.7764 5.67951L15.0987 6.29966C14.8065 6.5676 14.7002 6.98285 14.8276 7.35825C15.8131 10.2603 16.2896 12.1336 16.2514 12.7761C16.2266 13.1932 15.9922 13.709 15.533 14.308L14.1016 9.18478C13.9009 8.46628 13.0125 8.21263 12.4627 8.71682L9.01615 11.8772Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_0_2570">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
 </svg>
 `;
 
@@ -1073,7 +995,29 @@ const CircleFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
+const Clapperboard$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1817_474)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.706986 6.07919C0.588862 5.53969 0.930458 5.00658 1.46996 4.88845L16.1229 1.68021C16.6624 1.56208 17.1955 1.90368 17.3136 2.44318L17.9552 5.37376C18.0734 5.91327 17.7318 6.44638 17.1923 6.5645L2.53938 9.77275C1.99987 9.89087 1.46676 9.54928 1.34863 9.00977L0.706986 6.07919ZM2.87459 6.62829L3.08847 7.60515L15.7876 4.82467L15.5738 3.84781L2.87459 6.62829Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.9346 7.69771L7.33923 5.1949L8.72754 3.75525L11.3229 6.25806L9.9346 7.69771Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.02719 8.55324L3.43182 6.05043L4.82013 4.61078L7.4155 7.11359L6.02719 8.55324Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8421 6.84218L11.2467 4.33937L12.635 2.89972L15.2304 5.40253L13.8421 6.84218Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.83201 12.5547L11.832 9.5547L10.1679 8.4453L8.16791 11.4453L9.83201 12.5547Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.832 12.5547L15.832 9.5547L14.1679 8.4453L12.1679 11.4453L13.832 12.5547Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.83201 12.5547L7.83201 9.5547L6.16791 8.4453L4.16791 11.4453L5.83201 12.5547Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9C1.5 8.44772 1.94772 8 2.5 8L17.5 8C18.0523 8 18.5 8.44772 18.5 9L18.5 18C18.5 18.5523 18.0523 19 17.5 19L2.5 19C1.94772 19 1.5 18.5523 1.5 18L1.5 9ZM3.5 10L3.5 17L16.5 17L16.5 10L3.5 10Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 13L2 13L2 11L18 11L18 13Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_1817_474">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+`;
+
 const Clipboard$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="6.67499" y="2.5" width="6.64286" height="3.875" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+<path d="M16.0857 18H3.90713C3.29567 18 2.79999 17.5043 2.79999 16.8929V3.60714C2.79999 2.99568 3.29567 2.5 3.90713 2.5H7.22856V4.71429H5.01427V15.7857H14.9786V4.71429H12.7643V2.5H16.0857C16.6972 2.5 17.1928 2.99568 17.1928 3.60714V16.8929C17.1928 17.5043 16.6972 18 16.0857 18Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.67499 2.5C5.67499 1.94772 6.1227 1.5 6.67499 1.5H13.3178C13.8701 1.5 14.3178 1.94772 14.3178 2.5V6.375C14.3178 6.92728 13.8701 7.375 13.3178 7.375H6.67499C6.1227 7.375 5.67499 6.92728 5.67499 6.375V2.5ZM7.67499 3.5V5.375H12.3178V3.5H7.67499Z" fill="currentColor"/>
 <path d="M16.0857 18H3.90713C3.29567 18 2.79999 17.5043 2.79999 16.8929V3.60714C2.79999 2.99568 3.29567 2.5 3.90713 2.5H7.22856V4.71429H5.01427V15.7857H14.9786V4.71429H12.7643V2.5H16.0857C16.6972 2.5 17.1928 2.99568 17.1928 3.60714V16.8929C17.1928 17.5043 16.6972 18 16.0857 18Z" fill="currentColor"/>
 </svg>
@@ -1123,6 +1067,8 @@ const CloudDownFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 `;
 
 const CloudFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="2" y="6" width="16" height="8" rx="4" fill="currentColor"/>
+<rect x="6" y="3" width="9" height="8" rx="4" fill="currentColor"/>
 <rect x="2" y="6" width="16" height="8" rx="4" fill="currentColor"/>
 <rect x="6" y="3" width="9" height="8" rx="4" fill="currentColor"/>
 </svg>
@@ -1237,11 +1183,12 @@ const Cup$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 `;
 
 const Cv$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M17.3334 5.94669C17.3467 5.47335 17.1667 5.00669 16.82 4.66002L13.34 1.18002C13 0.846687 12.5467 0.666687 12.0934 0.666687H4.00002C3.26669 0.666687 2.66669 1.26002 2.66669 2.00002V18C2.66669 18.7334 3.26669 19.3334 4.00002 19.3334H16C16.7334 19.3334 17.3334 18.7334 17.3334 18V5.94669ZM12.3334 3.00669L14.9934 5.66669H12.3334V3.00669V3.00669ZM15.3334 17.3334H4.66669V2.66669H10.3334V5.90669C10.3334 6.87335 11.12 7.66669 12.0934 7.66669H15.3334V17.3334Z" fill="currentColor"/>
-<path d="M8.00152 6.79986C8.59058 6.79986 9.06811 6.32233 9.06811 5.73327C9.06811 5.14421 8.59058 4.66669 8.00152 4.66669C7.41246 4.66669 6.93494 5.14421 6.93494 5.73327C6.93494 6.32233 7.41246 6.79986 8.00152 6.79986Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.1335 9.11105C10.1335 7.97656 9.17859 7.15564 8.00036 7.15564C6.82214 7.15564 5.86719 7.97656 5.86719 9.11105L5.8679 9.64434C5.8679 9.73864 5.90536 9.82907 5.97203 9.89574C6.03871 9.96241 6.12914 9.99987 6.22343 9.99987H9.77801C9.8723 9.99987 9.96273 9.96241 10.0294 9.89574C10.0961 9.82907 10.1335 9.73864 10.1335 9.64434V9.11105Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.16669 12.5C6.16669 12.2239 6.39054 12 6.66669 12H13.3334C13.6095 12 13.8334 12.2239 13.8334 12.5C13.8334 12.7761 13.6095 13 13.3334 13H6.66669C6.39054 13 6.16669 12.7761 6.16669 12.5Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.16669 14.8334C6.16669 14.5572 6.39054 14.3334 6.66669 14.3334H13.3334C13.6095 14.3334 13.8334 14.5572 13.8334 14.8334C13.8334 15.1095 13.6095 15.3334 13.3334 15.3334H6.66669C6.39054 15.3334 6.16669 15.1095 6.16669 14.8334Z" fill="currentColor"/>
+<path d="M7.79998 6.35002C8.35998 6.35002 8.80998 5.90002 8.80998 5.34002C8.80998 4.78002 8.35998 4.33002 7.79998 4.33002C7.23998 4.33002 6.78998 4.78002 6.78998 5.34002C6.78998 5.90002 7.23998 6.35002 7.79998 6.35002Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.83002 8.55C9.83002 7.47 8.92002 6.69 7.80002 6.69C6.68002 6.69 5.77002 7.47 5.77002 8.55V9.06C5.77002 9.15 5.81002 9.24 5.87002 9.3C5.93002 9.36 6.02002 9.4 6.11002 9.4H9.49002C9.58002 9.4 9.67002 9.36 9.73002 9.3C9.79002 9.24 9.83002 9.15 9.83002 9.06V8.55V8.55Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 11.5C5.75 11.0858 6.08579 10.75 6.5 10.75H13.5C13.9142 10.75 14.25 11.0858 14.25 11.5C14.25 11.9142 13.9142 12.25 13.5 12.25H6.5C6.08579 12.25 5.75 11.9142 5.75 11.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 14.5C5.75 14.0858 6.08579 13.75 6.5 13.75H13.5C13.9142 13.75 14.25 14.0858 14.25 14.5C14.25 14.9142 13.9142 15.25 13.5 15.25H6.5C6.08579 15.25 5.75 14.9142 5.75 14.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 2.5C2.5 1.39772 3.39772 0.5 4.5 0.5H11.19C11.7518 0.5 12.2816 0.738166 12.655 1.13125L12.6611 1.13764L16.973 5.83972C17.332 6.22336 17.5 6.72441 17.5 7.2V17.5C17.5 18.6023 16.6023 19.5 15.5 19.5H4.5C3.39772 19.5 2.5 18.6023 2.5 17.5V2.5ZM11.189 2.5H4.5V17.5H15.5V7.2C15.5 7.19748 15.4998 7.19465 15.4993 7.19185L11.2036 2.50742C11.203 2.5069 11.2022 2.50628 11.2012 2.5056C11.1991 2.50415 11.1968 2.50283 11.1944 2.50178C11.1915 2.50054 11.1896 2.50012 11.189 2.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.19 0.5C11.7423 0.5 12.19 0.947715 12.19 1.5V6.2H16.5C17.0523 6.2 17.5 6.64772 17.5 7.2C17.5 7.75228 17.0523 8.2 16.5 8.2H11.19C10.6377 8.2 10.19 7.75228 10.19 7.2V1.5C10.19 0.947715 10.6377 0.5 11.19 0.5Z" fill="currentColor"/>
 </svg>
 `;
 
@@ -1296,9 +1243,9 @@ const Electricity$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 `;
 
 const Enter$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M8.86676 8L10.9501 10.5L8.86676 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M8.8667 13L10.95 10.5L8.8667 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.70001 10.5L3.20001 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.86658 8L10.9499 10.5L8.86658 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.86658 13L10.9499 10.5L8.86658 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9.69995 10.5L3.19995 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <line x1="15.25" y1="17.5" x2="6.25" y2="17.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <line x1="15.25" y1="3.5" x2="6.25" y2="3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <path d="M6.25 17.5V13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -1389,10 +1336,10 @@ const FastForward$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 `;
 
 const File$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.5 11.25C6.08579 11.25 5.75 10.9142 5.75 10.5C5.75 10.0858 6.08579 9.75 6.5 9.75H13.5C13.9142 9.75 14.25 10.0858 14.25 10.5C14.25 10.9142 13.9142 11.25 13.5 11.25H6.5Z" fill="currentColor"/>
-<path d="M6.5 14.25C6.08579 14.25 5.75 13.9142 5.75 13.5C5.75 13.0858 6.08579 12.75 6.5 12.75H13.5C13.9142 12.75 14.25 13.0858 14.25 13.5C14.25 13.9142 13.9142 14.25 13.5 14.25H6.5Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11.1854 0.5H4.5C3.39543 0.5 2.5 1.39543 2.5 2.5V17.5C2.5 18.6046 3.39543 19.5 4.5 19.5H15.5C16.6046 19.5 17.5 18.6046 17.5 17.5V7.20179C17.5 6.70104 17.3122 6.21851 16.9736 5.84956L12.659 1.14777C12.2802 0.734983 11.7457 0.5 11.1854 0.5ZM4.5 17.5V2.5H11.1854L15.5 7.20179V17.5H4.5Z" fill="currentColor"/>
-<path d="M11.5 6.5H16.5C17.0523 6.5 17.5 6.94772 17.5 7.5C17.5 8.05228 17.0523 8.5 16.5 8.5H10.5C9.94772 8.5 9.5 8.05228 9.5 7.5V1.5C9.5 0.947715 9.94772 0.5 10.5 0.5C11.0523 0.5 11.5 0.947715 11.5 1.5V6.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 11.5C5.75 11.0858 6.08579 10.75 6.5 10.75H13.5C13.9142 10.75 14.25 11.0858 14.25 11.5C14.25 11.9142 13.9142 12.25 13.5 12.25H6.5C6.08579 12.25 5.75 11.9142 5.75 11.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 14.5C5.75 14.0858 6.08579 13.75 6.5 13.75H13.5C13.9142 13.75 14.25 14.0858 14.25 14.5C14.25 14.9142 13.9142 15.25 13.5 15.25H6.5C6.08579 15.25 5.75 14.9142 5.75 14.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 2.5C2.5 1.39772 3.39772 0.5 4.5 0.5H11.19C11.7518 0.5 12.2816 0.738166 12.655 1.13125L12.6611 1.13764L16.973 5.83972C17.332 6.22336 17.5 6.72441 17.5 7.2V17.5C17.5 18.6023 16.6023 19.5 15.5 19.5H4.5C3.39772 19.5 2.5 18.6023 2.5 17.5V2.5ZM11.189 2.5H4.5V17.5H15.5V7.2C15.5 7.19748 15.4998 7.19465 15.4993 7.19185L11.2036 2.50742C11.203 2.5069 11.2022 2.50628 11.2012 2.5056C11.1991 2.50415 11.1968 2.50283 11.1944 2.50178C11.1915 2.50054 11.1896 2.50012 11.189 2.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.19 0.5C11.7423 0.5 12.19 0.947715 12.19 1.5V6.2H16.5C17.0523 6.2 17.5 6.64772 17.5 7.2C17.5 7.75228 17.0523 8.2 16.5 8.2H11.19C10.6377 8.2 10.19 7.75228 10.19 7.2V1.5C10.19 0.947715 10.6377 0.5 11.19 0.5Z" fill="currentColor"/>
 </svg>
 `;
 
@@ -1533,6 +1480,14 @@ const Grab$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
+const Grid$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 5V8H8V5H5ZM4 3.5C3.72386 3.5 3.5 3.72386 3.5 4V9C3.5 9.27614 3.72386 9.5 4 9.5H9C9.27614 9.5 9.5 9.27614 9.5 9V4C9.5 3.72386 9.27614 3.5 9 3.5H4Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 5V8H15V5H12ZM11 3.5C10.7239 3.5 10.5 3.72386 10.5 4V9C10.5 9.27614 10.7239 9.5 11 9.5H16C16.2761 9.5 16.5 9.27614 16.5 9V4C16.5 3.72386 16.2761 3.5 16 3.5H11Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 12V15H8V12H5ZM4 10.5C3.72386 10.5 3.5 10.7239 3.5 11V16C3.5 16.2761 3.72386 16.5 4 16.5H9C9.27614 16.5 9.5 16.2761 9.5 16V11C9.5 10.7239 9.27614 10.5 9 10.5H4Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 12V15H15V12H12ZM11 10.5C10.7239 10.5 10.5 10.7239 10.5 11V16C10.5 16.2761 10.7239 16.5 11 16.5H16C16.2761 16.5 16.5 16.2761 16.5 16V11C16.5 10.7239 16.2761 10.5 16 10.5H11Z" fill="currentColor"/>
+</svg>
+`;
+
 const Hamburger$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3926 13.8047C17.6807 13.977 18.496 14.6978 18.496 15.9707C18.496 17.4603 17.3825 18.2975 15.5789 18.6781C14.3977 18.9273 13.0457 18.9984 10.7025 19.0035C10.5147 19.0039 10.3642 19.004 10.0282 19.004H9.99603H9.96381C9.62786 19.004 9.47739 19.0039 9.28951 19.0035C6.94638 18.9984 5.59438 18.9273 4.4132 18.6781C2.60956 18.2975 1.49603 17.4603 1.49603 15.9707C1.49603 14.6978 2.31131 13.977 3.5994 13.8047C4.34932 13.7043 4.77922 13.7271 7.01146 13.9165C8.28024 14.0242 9.10265 14.0719 9.99603 14.0719C10.8894 14.0719 11.7118 14.0242 12.9806 13.9165C15.2128 13.7271 15.6427 13.7043 16.3926 13.8047ZM10.6982 17.0035C14.762 16.9948 16.496 16.6289 16.496 15.9707C16.496 15.92 16.4979 15.8886 16.4842 15.867C16.4585 15.8264 16.378 15.8205 16.1274 15.787C15.594 15.7157 15.1646 15.7384 13.1497 15.9094C11.829 16.0214 10.9591 16.0719 9.99603 16.0719C9.03294 16.0719 8.16309 16.0214 6.84237 15.9094C4.82745 15.7384 4.39803 15.7157 3.86462 15.787C3.61407 15.8205 3.53356 15.8264 3.50786 15.867C3.49418 15.8886 3.49603 15.92 3.49603 15.9707C3.49603 16.6289 5.23006 16.9948 9.29381 17.0035C9.47977 17.0039 9.62857 17.004 9.9638 17.004L9.99603 17.004L10.0283 17.004C10.3635 17.004 10.5123 17.0039 10.6982 17.0035Z" fill="currentColor"/>
 <path d="M2.887 10.6424C2.53219 10.8562 2.07129 10.7418 1.85756 10.387C1.64382 10.0322 1.75819 9.57129 2.113 9.35756C2.78226 8.9544 3.50608 8.75 4.27059 8.75C4.79146 8.75 5.10019 8.84247 5.56693 9.0701L5.57882 9.0759C5.86725 9.21658 5.97953 9.25 6.25 9.25C6.51337 9.25 6.60676 9.22083 6.85951 9.08709L6.87097 9.08102C7.31358 8.84682 7.62078 8.75 8.14729 8.75C8.68251 8.75 8.99072 8.84947 9.43542 9.09084C9.68104 9.22415 9.7609 9.25 10 9.25C10.2388 9.25 10.3183 9.22426 10.5589 9.09345C11.0075 8.84961 11.3161 8.75 11.852 8.75C12.3817 8.75 12.6885 8.8467 13.139 9.08311L13.1443 9.08587C13.4023 9.22123 13.4939 9.25 13.75 9.25C14.0073 9.25 14.1022 9.22045 14.3653 9.08409C14.8249 8.84597 15.1316 8.75 15.6591 8.75C16.4138 8.75 17.1516 8.95039 17.8629 9.34364C18.2254 9.54405 18.3568 10.0004 18.1564 10.3629C17.9559 10.7254 17.4996 10.8568 17.1371 10.6564C16.6426 10.3829 16.1531 10.25 15.6591 10.25C15.4117 10.25 15.3206 10.2785 15.0615 10.4128L15.0554 10.4159C14.5978 10.653 14.2866 10.75 13.75 10.75C13.2122 10.75 12.9015 10.6524 12.4474 10.4141L12.4421 10.4114C12.1876 10.2778 12.0993 10.25 11.852 10.25C11.6055 10.25 11.5232 10.2766 11.2797 10.4089C10.8341 10.6512 10.5289 10.75 10 10.75C9.47095 10.75 9.16586 10.6512 8.72379 10.4113C8.47563 10.2766 8.39322 10.25 8.14729 10.25C7.90366 10.25 7.81782 10.2771 7.57252 10.4069L7.56106 10.4129C7.11071 10.6512 6.79449 10.75 6.25 10.75C5.71275 10.75 5.39638 10.6558 4.92128 10.4241L4.9094 10.4183C4.62925 10.2817 4.5235 10.25 4.27059 10.25C3.78102 10.25 3.32443 10.3789 2.887 10.6424Z" fill="currentColor"/>
@@ -1558,22 +1513,15 @@ const HandOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 `;
 
 const HandPoint$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1213_2440)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7.375 0.25C6.2014 0.25 5.25 1.2014 5.25 2.375V9.25974C3.04663 9.43262 1.69308 11.872 2.88492 13.8379C3.24037 14.4242 3.58755 14.9825 3.8661 15.4012C4.6545 16.7115 5.5996 17.8033 6.78006 18.5672C7.97296 19.3391 9.36656 19.75 11 19.75C12.611 19.75 14.2906 19.3491 15.5855 18.342C16.9089 17.3127 17.75 15.7107 17.75 13.5C17.75 13.4727 17.7485 13.4458 17.7457 13.4193V9.875C17.7457 8.7014 16.7943 7.75 15.6207 7.75H15.2457C15.1599 7.75 15.0756 7.75617 14.9931 7.76809C14.9382 6.64428 14.0096 5.75 12.8722 5.75C12.5702 5.75 12.283 5.81303 12.0229 5.92665C11.6744 5.22907 10.9535 4.75 10.1207 4.75C9.90477 4.75 9.69635 4.78221 9.5 4.84209V2.375C9.5 1.2014 8.54861 0.25 7.375 0.25ZM16.2496 13.5768C16.247 13.5515 16.2457 13.5259 16.2457 13.5V9.875C16.2457 9.52982 15.9659 9.25 15.6207 9.25H15.2457C15.1076 9.25 14.9957 9.36193 14.9957 9.5V10C14.9957 10.4142 14.6599 10.75 14.2457 10.75C13.8315 10.75 13.4957 10.4142 13.4957 10V9.5V7.87353C13.4957 7.52916 13.2166 7.25 12.8722 7.25C12.5273 7.25 12.2479 7.52998 12.2487 7.87486L12.25 8.49839C12.2501 8.5262 12.2486 8.55365 12.2457 8.58068V9.1C12.2457 9.51421 11.9099 9.85 11.4957 9.85C11.0815 9.85 10.7457 9.51421 10.7457 9.1V6.875C10.7457 6.52982 10.4659 6.25 10.1207 6.25C9.77554 6.25 9.49571 6.52982 9.49571 6.875V9.5C9.49571 9.91421 9.15993 10.25 8.74571 10.25C8.3315 10.25 7.99571 9.91421 7.99571 9.5V6.875C7.99571 6.79029 8.00067 6.70674 8.01031 6.62463C8.00353 6.58409 8 6.54246 8 6.5V2.375C8 2.02982 7.72018 1.75 7.375 1.75C7.02982 1.75 6.75 2.02982 6.75 2.375V12C6.75 12.4142 6.41422 12.75 6 12.75C5.58579 12.75 5.25 12.4142 5.25 12V10.7689C4.188 10.9323 3.5991 12.1226 4.16761 13.0603C4.52304 13.6466 4.85962 14.1871 5.12107 14.5795C5.12538 14.5859 5.12962 14.5924 5.13376 14.5989C5.1379 14.6055 5.14193 14.612 5.14584 14.6187C5.85493 15.7994 6.65621 16.7004 7.59494 17.3078C8.52705 17.9109 9.63345 18.25 11 18.25C12.3891 18.25 13.7094 17.9009 14.6645 17.158C15.5778 16.4477 16.231 15.3222 16.2496 13.5768Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 2.375C4.75 0.925253 5.92525 -0.25 7.375 -0.25C8.82475 -0.25 10 0.925253 10 2.375V4.25274C10.04 4.25092 10.0803 4.25 10.1207 4.25C10.992 4.25 11.7635 4.67454 12.2406 5.32665C12.4432 5.27654 12.6548 5.25 12.8722 5.25C14.1063 5.25 15.1412 6.10194 15.4211 7.25H15.6207C17.0705 7.25 18.2457 8.42525 18.2457 9.875V13.396C18.2486 13.4304 18.25 13.4651 18.25 13.5C18.25 15.8511 17.3482 17.6044 15.8924 18.7367C14.4843 19.8319 12.6848 20.25 11 20.25C9.27762 20.25 7.78828 19.8151 6.50844 18.987C5.24959 18.1724 4.25771 17.0195 3.44355 15.6688C3.16017 15.2423 2.81118 14.6808 2.45736 14.0971C1.1494 11.9397 2.46905 9.30914 4.75 8.82757V2.375ZM5.25 9.25974V2.375C5.25 1.2014 6.2014 0.25 7.375 0.25C8.54861 0.25 9.5 1.2014 9.5 2.375V4.84209C9.65952 4.79344 9.82699 4.76306 10 4.75337C10.04 4.75113 10.0802 4.75 10.1207 4.75C10.9535 4.75 11.6744 5.22907 12.0229 5.92665C12.283 5.81303 12.5702 5.75 12.8722 5.75C13.8713 5.75 14.7092 6.43993 14.9355 7.36933C14.9668 7.49806 14.9865 7.63138 14.9931 7.76809C15.0756 7.75617 15.1599 7.75 15.2457 7.75H15.6207C16.7943 7.75 17.7457 8.7014 17.7457 9.875V13.4193C17.7485 13.4458 17.75 13.4727 17.75 13.5C17.75 15.7107 16.9089 17.3127 15.5855 18.342C14.2906 19.3491 12.611 19.75 11 19.75C9.36656 19.75 7.97295 19.3391 6.78006 18.5672C5.5996 17.8033 4.6545 16.7115 3.8661 15.4012C3.58755 14.9825 3.24037 14.4242 2.88492 13.8379C1.69308 11.872 3.04663 9.43262 5.25 9.25974Z" fill="currentColor"/>
-</g>
-<defs>
-<clipPath id="clip0_1213_2440">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.375 0.5C6.2014 0.5 5.25 1.4514 5.25 2.625V9.50974C3.04663 9.68262 1.69308 12.122 2.88492 14.0879C3.24038 14.6743 3.58758 15.2326 3.86614 15.6513C4.66966 16.9857 5.63451 17.9639 6.83659 18.6003C8.03805 19.2364 9.41813 19.5 11 19.5C12.5596 19.5 14.2355 19.2444 15.541 18.374C16.9002 17.4679 17.75 15.9685 17.75 13.75C17.75 13.7227 17.7485 13.6958 17.7457 13.6693V10.125C17.7457 8.9514 16.7943 8 15.6207 8H15.2457C15.1599 8 15.0756 8.00617 14.9931 8.01809C14.9382 6.89428 14.0096 6 12.8722 6C12.5702 6 12.283 6.06303 12.0229 6.17665C11.6744 5.47907 10.9535 5 10.1207 5C9.90477 5 9.69635 5.03221 9.5 5.09209V2.625C9.5 1.4514 8.54861 0.5 7.375 0.5ZM16.2496 13.8268C16.247 13.8015 16.2457 13.7759 16.2457 13.75V10.125C16.2457 9.77982 15.9659 9.5 15.6207 9.5H15.2457C15.1076 9.5 14.9957 9.61193 14.9957 9.75V10.25C14.9957 10.6642 14.6599 11 14.2457 11C13.8315 11 13.4957 10.6642 13.4957 10.25V9.75V8.12353C13.4957 7.77916 13.2166 7.5 12.8722 7.5C12.5273 7.5 12.2479 7.77998 12.2487 8.12486L12.25 8.74839C12.2501 8.7762 12.2486 8.80365 12.2457 8.83068V9.35C12.2457 9.76421 11.9099 10.1 11.4957 10.1C11.0815 10.1 10.7457 9.76421 10.7457 9.35V7.125C10.7457 6.77982 10.4659 6.5 10.1207 6.5C9.77554 6.5 9.49571 6.77982 9.49571 7.125V9.75C9.49571 10.1642 9.15993 10.5 8.74571 10.5C8.3315 10.5 7.99571 10.1642 7.99571 9.75V7.125C7.99571 7.04029 8.00067 6.95674 8.01031 6.87463C8.00353 6.83409 8 6.79246 8 6.75V2.625C8 2.27982 7.72018 2 7.375 2C7.02982 2 6.75 2.27982 6.75 2.625V12.25C6.75 12.6642 6.41422 13 6 13C5.58579 13 5.25 12.6642 5.25 12.25V11.0189C4.188 11.1823 3.5991 12.3726 4.16761 13.3103C4.52304 13.8966 4.85962 14.4371 5.12107 14.8295C5.12538 14.8359 5.12962 14.8424 5.13376 14.8489C5.13789 14.8555 5.14191 14.862 5.14581 14.8686C5.83978 16.0238 6.6213 16.7891 7.53842 17.2747C8.46196 17.7636 9.58188 18 11 18C12.4404 18 13.7645 17.7556 14.709 17.126C15.5869 16.5407 16.2312 15.5604 16.2496 13.8268Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.60264 19.0422C5.30781 18.3567 4.28302 17.3098 3.44364 15.9189C3.16024 15.4924 2.81122 14.9308 2.45736 14.3471C1.1494 12.1897 2.46905 9.55914 4.75 9.07757V2.625C4.75 1.17525 5.92525 0 7.375 0C8.82475 0 10 1.17525 10 2.625V4.50274C10.04 4.50092 10.0803 4.5 10.1207 4.5C10.992 4.5 11.7635 4.92454 12.2406 5.57665C12.4432 5.52654 12.6548 5.5 12.8722 5.5C14.1063 5.5 15.1412 6.35194 15.4211 7.5H15.6207C17.0705 7.5 18.2457 8.67525 18.2457 10.125V13.646C18.2486 13.6804 18.25 13.7151 18.25 13.75C18.25 16.1138 17.3339 17.7797 15.8184 18.7901C14.3926 19.7406 12.5994 20 11 20C9.36357 20 7.89676 19.7274 6.60264 19.0422ZM3.86614 15.6513C4.66965 16.9857 5.63451 17.9639 6.83659 18.6003C8.03805 19.2364 9.41812 19.5 11 19.5C12.5596 19.5 14.2355 19.2444 15.541 18.374C16.9002 17.4679 17.75 15.9685 17.75 13.75C17.75 13.7227 17.7485 13.6958 17.7457 13.6693V10.125C17.7457 8.9514 16.7943 8 15.6207 8H15.2457C15.1599 8 15.0756 8.00617 14.9931 8.01809C14.9865 7.88138 14.9668 7.74806 14.9355 7.61933C14.7092 6.68993 13.8712 6 12.8722 6C12.5702 6 12.283 6.06303 12.0229 6.17665C11.6744 5.47907 10.9535 5 10.1207 5C10.0802 5 10.04 5.00113 10 5.00337C9.82699 5.01306 9.65952 5.04344 9.5 5.09209V2.625C9.5 1.4514 8.54861 0.5 7.375 0.5C6.2014 0.5 5.25 1.4514 5.25 2.625V9.50974C3.04663 9.68262 1.69308 12.122 2.88492 14.0879C3.24038 14.6743 3.58758 15.2326 3.86614 15.6513Z" fill="currentColor"/>
 </svg>
 `;
 
 const HandPointOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2486)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M7.375 0.25C6.2014 0.25 5.25 1.2014 5.25 2.375V9.9725L4.36973 8.94553C3.66233 8.12022 2.43583 7.98558 1.56622 8.63775C0.675955 9.30542 0.475845 10.5589 1.114 11.4706L3.87065 15.4088C4.65813 16.7157 5.60187 17.8048 6.78006 18.5672C7.97296 19.3391 9.36656 19.75 11 19.75C12.611 19.75 14.2906 19.3491 15.5855 18.342C16.9089 17.3127 17.75 15.7107 17.75 13.5C17.75 13.4727 17.7485 13.4458 17.7457 13.4193V9.875C17.7457 8.7014 16.7943 7.75 15.6207 7.75H15.2457C15.1599 7.75 15.0756 7.75617 14.9931 7.76809C14.9382 6.64428 14.0096 5.75 12.8722 5.75C12.5702 5.75 12.283 5.81303 12.0229 5.92665C11.6744 5.22907 10.9535 4.75 10.1207 4.75C9.90477 4.75 9.69635 4.78221 9.5 4.84209V2.375C9.5 1.2014 8.54861 0.25 7.375 0.25ZM16.2496 13.5768C16.247 13.5515 16.2457 13.5259 16.2457 13.5V9.875C16.2457 9.52982 15.9659 9.25 15.6207 9.25H15.2457C15.1076 9.25 14.9957 9.36193 14.9957 9.5V10C14.9957 10.4142 14.6599 10.75 14.2457 10.75C13.8315 10.75 13.4957 10.4142 13.4957 10V9.5V7.87353C13.4957 7.52916 13.2166 7.25 12.8722 7.25C12.5273 7.25 12.2479 7.52998 12.2487 7.87486L12.25 8.49839C12.2501 8.5262 12.2486 8.55366 12.2457 8.58069V9.1C12.2457 9.51421 11.9099 9.85 11.4957 9.85C11.0815 9.85 10.7457 9.51421 10.7457 9.1V6.875C10.7457 6.52982 10.4659 6.25 10.1207 6.25C9.77554 6.25 9.49571 6.52982 9.49571 6.875V9.5C9.49571 9.91421 9.15993 10.25 8.74571 10.25C8.3315 10.25 7.99571 9.91421 7.99571 9.5V6.875C7.99571 6.79029 8.00067 6.70674 8.01031 6.62463C8.00353 6.58409 8 6.54246 8 6.5V2.375C8 2.02982 7.72018 1.75 7.375 1.75C7.34787 1.75 7.32113 1.75173 7.29491 1.75508C6.98756 1.7944 6.75 2.05696 6.75 2.375V11.9949L6.74995 12.0094L6.74973 12.0204C6.74674 12.1321 6.71936 12.2376 6.67273 12.3319C6.6376 12.4032 6.59061 12.4698 6.532 12.5287C6.39615 12.6654 6.20796 12.75 6 12.75C5.87353 12.75 5.75436 12.7187 5.64984 12.6634C5.58542 12.6294 5.52513 12.5856 5.47131 12.532C5.45501 12.5158 5.43945 12.4988 5.42468 12.4812L3.23085 9.92172C3.03791 9.69662 2.70338 9.65989 2.4662 9.83777C2.22338 10.0199 2.1688 10.3618 2.34285 10.6104L5.11006 14.5637C5.11661 14.5728 5.12298 14.5822 5.12917 14.5918C5.13534 14.6013 5.14126 14.6108 5.14695 14.6205C5.85576 15.8003 6.6567 16.7007 7.59494 17.3078C8.52705 17.9109 9.63345 18.25 11 18.25C12.3891 18.25 13.7094 17.9009 14.6645 17.158C15.5778 16.4477 16.231 15.3222 16.2496 13.5768Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 2.375C4.75 0.925253 5.92526 -0.25 7.375 -0.25C8.82475 -0.25 10 0.925253 10 2.375V4.25274C10.04 4.25092 10.0803 4.25 10.1207 4.25C10.992 4.25 11.7635 4.67454 12.2406 5.32665C12.4432 5.27654 12.6548 5.25 12.8722 5.25C14.1063 5.25 15.1412 6.10194 15.4211 7.25H15.6207C17.0705 7.25 18.2457 8.42525 18.2457 9.875V13.3961C18.2486 13.4304 18.25 13.4651 18.25 13.5C18.25 15.8511 17.3482 17.6044 15.8924 18.7367C14.4843 19.8319 12.6848 20.25 11 20.25C9.27762 20.25 7.78828 19.8151 6.50844 18.987C5.25358 18.175 4.26401 17.0268 3.45131 15.6816L0.704379 11.7573C-0.0884702 10.6247 0.16015 9.06727 1.26623 8.23775C2.34665 7.42747 3.87047 7.59476 4.74936 8.62013L4.75 2.375ZM5.25 9.9725L4.36974 8.94553C3.66233 8.12022 2.43583 7.98558 1.56623 8.63775C0.675958 9.30542 0.475848 10.5589 1.114 11.4706L3.87066 15.4088C4.65813 16.7157 5.60187 17.8048 6.78007 18.5672C7.97296 19.339 9.36656 19.75 11 19.75C12.611 19.75 14.2906 19.3491 15.5855 18.342C16.9089 17.3127 17.75 15.7107 17.75 13.5C17.75 13.4727 17.7486 13.4458 17.7457 13.4193V9.875C17.7457 8.7014 16.7943 7.75 15.6207 7.75H15.2457C15.1599 7.75 15.0756 7.75617 14.9931 7.76809C14.9865 7.63138 14.9668 7.49806 14.9355 7.36933C14.7092 6.43993 13.8713 5.75 12.8722 5.75C12.5702 5.75 12.283 5.81303 12.0229 5.92665C11.6744 5.22907 10.9535 4.75 10.1207 4.75C10.0802 4.75 10.04 4.75113 10 4.75337C9.827 4.76306 9.65952 4.79344 9.5 4.84209V2.375C9.5 1.2014 8.54861 0.25 7.375 0.25C6.2014 0.25 5.25 1.2014 5.25 2.375V9.9725Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.375 0.5C6.2014 0.5 5.25 1.4514 5.25 2.625V10.2225L4.36973 9.19553C3.66233 8.37022 2.43583 8.23558 1.56622 8.88775C0.675955 9.55542 0.475845 10.8089 1.114 11.7206L3.87071 15.6589C4.67331 16.9894 5.63679 17.9652 6.83659 18.6003C8.03805 19.2364 9.41813 19.5 11 19.5C12.5596 19.5 14.2355 19.2444 15.541 18.374C16.9002 17.4679 17.75 15.9685 17.75 13.75C17.75 13.7227 17.7485 13.6958 17.7457 13.6693V10.125C17.7457 8.9514 16.7943 8 15.6207 8H15.2457C15.1599 8 15.0756 8.00617 14.9931 8.01809C14.9382 6.89428 14.0096 6 12.8722 6C12.5702 6 12.283 6.06303 12.0229 6.17665C11.6744 5.47907 10.9535 5 10.1207 5C9.90477 5 9.69635 5.03221 9.5 5.09209V2.625C9.5 1.4514 8.54861 0.5 7.375 0.5ZM16.2496 13.8268C16.247 13.8015 16.2457 13.7759 16.2457 13.75V10.125C16.2457 9.77982 15.9659 9.5 15.6207 9.5H15.2457C15.1076 9.5 14.9957 9.61193 14.9957 9.75V10.25C14.9957 10.6642 14.6599 11 14.2457 11C13.8315 11 13.4957 10.6642 13.4957 10.25V9.75V8.12353C13.4957 7.77916 13.2166 7.5 12.8722 7.5C12.5273 7.5 12.2479 7.77998 12.2487 8.12486L12.25 8.74839C12.2501 8.7762 12.2486 8.80366 12.2457 8.83069V9.35C12.2457 9.76421 11.9099 10.1 11.4957 10.1C11.0815 10.1 10.7457 9.76421 10.7457 9.35V7.125C10.7457 6.77982 10.4659 6.5 10.1207 6.5C9.77554 6.5 9.49571 6.77982 9.49571 7.125V9.75C9.49571 10.1642 9.15993 10.5 8.74571 10.5C8.3315 10.5 7.99571 10.1642 7.99571 9.75V7.125C7.99571 7.04029 8.00067 6.95674 8.01031 6.87463C8.00353 6.83409 8 6.79246 8 6.75V2.625C8 2.27982 7.72018 2 7.375 2C7.34787 2 7.32113 2.00173 7.29491 2.00508C6.98756 2.0444 6.75 2.30696 6.75 2.625V12.2449L6.74995 12.2594L6.74973 12.2704C6.74674 12.3821 6.71936 12.4876 6.67273 12.5819C6.6376 12.6532 6.59061 12.7198 6.532 12.7787C6.39615 12.9154 6.20796 13 6 13C5.87353 13 5.75436 12.9687 5.64984 12.9134C5.58542 12.8794 5.52513 12.8356 5.47131 12.782C5.45501 12.7658 5.43945 12.7488 5.42468 12.7312L3.23085 10.1717C3.03791 9.94662 2.70338 9.90989 2.4662 10.0878C2.22338 10.2699 2.1688 10.6118 2.34285 10.8604L5.11006 14.8137C5.11661 14.8228 5.12298 14.8322 5.12917 14.8418C5.13533 14.8512 5.14124 14.8608 5.14691 14.8704C5.84061 16.0246 6.62178 16.7894 7.53842 17.2747C8.46196 17.7636 9.58188 18 11 18C12.4404 18 13.7645 17.7556 14.709 17.126C15.5869 16.5406 16.2312 15.5604 16.2496 13.8268Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 2.625C4.75 1.17525 5.92526 0 7.375 0C8.82475 0 10 1.17525 10 2.625V4.50274C10.04 4.50092 10.0803 4.5 10.1207 4.5C10.992 4.5 11.7635 4.92454 12.2406 5.57665C12.4432 5.52654 12.6548 5.5 12.8722 5.5C14.1063 5.5 15.1412 6.35194 15.4211 7.5H15.6207C17.0705 7.5 18.2457 8.67525 18.2457 10.125V13.6461C18.2486 13.6804 18.25 13.7151 18.25 13.75C18.25 16.1138 17.3339 17.7797 15.8184 18.7901C14.3926 19.7406 12.5994 20 11 20C9.36357 20 7.89676 19.7274 6.60264 19.0422L6.83659 18.6003C8.03805 19.2364 9.41813 19.5 11 19.5C12.5597 19.5 14.2355 19.2444 15.541 18.374C16.9002 17.4679 17.75 15.9685 17.75 13.75C17.75 13.7227 17.7486 13.6958 17.7457 13.6693V10.125C17.7457 8.95139 16.7943 8 15.6207 8H15.2457C15.1599 8 15.0756 8.00617 14.9931 8.0181C14.9865 7.88138 14.9668 7.74806 14.9355 7.61933C14.7092 6.68993 13.8713 6 12.8722 6C12.5702 6 12.283 6.06303 12.0229 6.17665C11.6744 5.47906 10.9535 5 10.1207 5C10.0802 5 10.04 5.00113 10 5.00337C9.827 5.01306 9.65952 5.04344 9.5 5.09209V2.625C9.5 1.4514 8.54861 0.5 7.375 0.5C6.2014 0.5 5.25 1.4514 5.25 2.625V10.2225L4.36974 9.19553C3.66233 8.37022 2.43583 8.23558 1.56623 8.88775C0.675958 9.55542 0.475848 10.8089 1.114 11.7206L3.87071 15.6589C4.67331 16.9894 5.63679 17.9652 6.83659 18.6003L6.60264 19.0422C5.31185 18.3589 4.28939 17.3163 3.45146 15.9318L0.704379 12.0073C-0.0884702 10.8747 0.16015 9.31727 1.26623 8.48775C2.34665 7.67747 3.87047 7.84476 4.74936 8.87013L4.75 2.625Z" fill="currentColor"/>
 </g>
 <defs>
 <clipPath id="clip0_1213_2486">
@@ -1585,12 +1533,12 @@ const HandPointOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 
 const Handshake$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2541)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M19.5981 9.42822C20.0764 9.15208 20.2403 8.54049 19.9641 8.0622L16.9641 2.86604C16.688 2.38775 16.0764 2.22388 15.5981 2.50002L13.866 3.50002C13.3877 3.77616 13.2239 4.38775 13.5 4.86605L16.5 10.0622C16.7762 10.5405 17.3877 10.7044 17.866 10.4282L19.5981 9.42822ZM15.3571 4.08255C14.9983 4.28966 14.8754 4.74835 15.0825 5.10707C15.2896 5.46579 15.7483 5.5887 16.1071 5.38159C16.4658 5.17448 16.5887 4.71579 16.3816 4.35707C16.1745 3.99835 15.7158 3.87544 15.3571 4.08255Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M4.36603 2.75C3.88773 2.47386 3.27614 2.63773 3 3.11603L2.08616e-07 8.31218C-0.276142 8.79047 -0.112267 9.40206 0.366026 9.6782L2.09808 10.6782C2.57637 10.9543 3.18796 10.7905 3.4641 10.3122L6.4641 5.11603C6.74024 4.63773 6.57637 4.02614 6.09808 3.75L4.36603 2.75ZM1.85705 9.09567C2.21577 9.30278 2.67446 9.17987 2.88157 8.82115C3.08868 8.46243 2.96577 8.00374 2.60705 7.79663C2.24833 7.58953 1.78964 7.71243 1.58253 8.07115C1.37543 8.42987 1.49833 8.88856 1.85705 9.09567Z" fill="currentColor"/>
-<path d="M14.9916 4.37025C15.0632 4.91782 14.6774 5.41981 14.1299 5.49153L14.1265 5.49198L14.1125 5.49386L14.0544 5.50189C14.0029 5.50914 13.9267 5.52012 13.8306 5.53474C13.6381 5.56403 13.3672 5.6077 13.0559 5.66487C12.4236 5.781 11.6627 5.94603 11.0554 6.14851C10.9206 6.19345 10.6955 6.31376 10.3854 6.54033C10.0877 6.75786 9.76145 7.03625 9.42909 7.34548C8.81276 7.91893 8.21757 8.55894 7.80481 9.02154C8.01058 9.21723 8.23896 9.37384 8.46498 9.44192C8.67663 9.50567 8.96894 9.52329 9.40001 9.19998L9.42803 9.17896L10.4711 8.50528C10.7397 8.33178 11.3371 8.06141 11.9703 8.40814C12.2532 8.56306 12.569 8.80874 12.846 9.04095C13.1376 9.28536 13.443 9.56359 13.7165 9.82127C13.9912 10.0801 14.2404 10.3246 14.4205 10.504L14.4628 10.5461L14.4862 10.5385C14.6668 10.4775 14.8982 10.3541 15.1517 10.1854C15.3973 10.022 15.6249 9.84227 15.7939 9.70027C15.8774 9.63013 15.9442 9.57116 15.9891 9.53074C16.0115 9.51057 16.0283 9.49515 16.0388 9.4854L16.0498 9.4752L16.0508 9.47429C16.4514 9.09438 17.0844 9.11083 17.4645 9.51138C17.8446 9.91202 17.828 10.545 17.4274 10.9251L17.426 10.9264L17.4239 10.9284L17.4177 10.9342L17.3975 10.9531C17.3806 10.9687 17.3569 10.9904 17.3272 11.0172C17.2678 11.0706 17.1837 11.1448 17.0804 11.2315C16.8759 11.4034 16.5868 11.6327 16.2597 11.8505C15.9404 12.0629 15.5431 12.2925 15.1261 12.4334C14.7364 12.5649 14.1337 12.6849 13.5528 12.3944L13.4012 12.3187L13.2831 12.1972L13.0094 11.9212C12.838 11.7506 12.6025 11.5196 12.3449 11.2769C12.0861 11.033 11.8117 10.7836 11.5612 10.5737C11.4598 10.4886 11.3695 10.4163 11.2913 10.3564L10.57 10.8223C9.65388 11.4966 8.71601 11.6063 7.88814 11.3569C7.11706 11.1247 6.54261 10.6128 6.19662 10.237C5.49949 9.47973 5.65726 8.4304 6.21352 7.80141C6.64586 7.31255 7.33428 6.56273 8.06674 5.88124C8.43281 5.54064 8.8221 5.20563 9.20539 4.92554C9.57632 4.65448 9.99759 4.39295 10.4228 4.25118C11.164 4.00407 12.0336 3.81917 12.6946 3.69777C13.03 3.63618 13.3215 3.58919 13.5297 3.5575C13.6339 3.54164 13.7177 3.52956 13.776 3.52136L13.8439 3.51197L13.8625 3.50948L13.8694 3.50857C14.417 3.43691 14.9199 3.82263 14.9916 4.37025Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.3892 9.61687C19.8852 9.374 20.0904 8.77502 19.8475 8.279L17.2091 2.89026C16.9662 2.39424 16.3672 2.18901 15.8712 2.43187L14.075 3.31136C13.5789 3.55422 13.3737 4.1532 13.6166 4.64922L16.255 10.038C16.4979 10.534 17.0969 10.7392 17.5929 10.4964L19.3892 9.61687ZM15.5228 3.99427C15.1508 4.17642 14.9968 4.62566 15.179 4.99767C15.3611 5.36969 15.8104 5.5236 16.1824 5.34146C16.5544 5.15931 16.7083 4.71007 16.5262 4.33806C16.344 3.96604 15.8948 3.81212 15.5228 3.99427Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.02615 2.66825C3.52618 2.43362 2.93067 2.64871 2.69604 3.14868L0.146998 8.58029C-0.0876348 9.08025 0.12746 9.67576 0.627426 9.91039L2.43796 10.7601C2.93793 10.9947 3.53344 10.7796 3.76807 10.2796L6.31711 4.84804C6.55175 4.34807 6.33665 3.75256 5.83669 3.51793L4.02615 2.66825ZM2.06374 9.20365C2.43872 9.37962 2.88535 9.2183 3.06133 8.84333C3.2373 8.46835 3.07598 8.02172 2.70101 7.84575C2.32603 7.66977 1.8794 7.83109 1.70342 8.20607C1.52745 8.58104 1.68877 9.02767 2.06374 9.20365Z" fill="currentColor"/>
+<path d="M14.1125 5.49386L14.1265 5.49198L14.1299 5.49153C14.4376 5.45123 14.6942 5.27502 14.8473 5.0312L14.9916 4.37025C14.9199 3.82263 14.417 3.43691 13.8694 3.50857L13.8625 3.50948L13.8439 3.51197L13.776 3.52136C13.7177 3.52956 13.6339 3.54164 13.5297 3.5575C13.3215 3.58919 13.03 3.63618 12.6946 3.69777C12.0336 3.81917 11.164 4.00407 10.4228 4.25118C9.99759 4.39295 9.57632 4.65448 9.20539 4.92554C8.8221 5.20563 8.43281 5.54064 8.06674 5.88124C7.33428 6.56273 6.64586 7.31255 6.21352 7.80141C5.65726 8.4304 5.49949 9.47973 6.19662 10.237C6.54261 10.6128 7.11706 11.1247 7.88814 11.3569C8.71601 11.6063 9.65388 11.4966 10.57 10.8223L11.2913 10.3564C11.3695 10.4163 11.4598 10.4886 11.5612 10.5737C11.8117 10.7836 12.0861 11.033 12.3449 11.2769C12.6025 11.5196 12.838 11.7506 13.0094 11.9212C13.0949 12.0064 13.164 12.0761 13.2115 12.1242L13.2656 12.1793L13.2792 12.1932L13.2831 12.1972L13.4012 12.3187L13.5528 12.3944C14.1337 12.6849 14.7364 12.5649 15.1261 12.4334C15.5431 12.2925 15.9404 12.0629 16.2597 11.8505C16.5868 11.6327 16.8759 11.4034 17.0804 11.2315C17.1837 11.1448 17.2678 11.0706 17.3272 11.0172C17.3569 10.9904 17.3806 10.9687 17.3975 10.9531L17.4177 10.9342L17.4239 10.9284L17.426 10.9264L17.4274 10.9251C17.828 10.545 17.8446 9.91202 17.4645 9.51138C17.0844 9.11083 16.4514 9.09438 16.0508 9.47429L16.0498 9.4752L16.0388 9.4854C16.0283 9.49515 16.0115 9.51057 15.9891 9.53074C15.9442 9.57116 15.8774 9.63013 15.7939 9.70027C15.6249 9.84227 15.3973 10.022 15.1517 10.1854C14.8982 10.3541 14.6668 10.4775 14.4862 10.5385L14.4628 10.5461L14.4205 10.504C14.2559 10.3401 14.0338 10.1219 13.7871 9.88805L13.7165 9.82127C13.443 9.56359 13.1376 9.28536 12.846 9.04095C12.569 8.80874 12.2532 8.56306 11.9703 8.40814C11.3371 8.06141 10.7397 8.33178 10.4711 8.50528L9.42803 9.17896L9.40001 9.19998C8.96894 9.52329 8.67663 9.50567 8.46498 9.44192C8.23896 9.37384 8.01058 9.21723 7.80481 9.02154C8.21757 8.55894 8.81276 7.91893 9.42909 7.34548C9.76144 7.03625 10.0877 6.75786 10.3854 6.54033C10.6955 6.31376 10.9206 6.19345 11.0554 6.14851C11.6627 5.94603 12.4236 5.781 13.0559 5.66487C13.3672 5.6077 13.6381 5.56403 13.8306 5.53474C13.9267 5.52012 14.0029 5.50914 14.0544 5.50189L14.1125 5.49386Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.62862 4.07152C5.11583 4.27664 4.86642 4.85861 5.07153 5.37139C5.27664 5.88416 5.85859 6.13358 6.37136 5.92849L6.39747 5.91809L6.47527 5.8873C6.54293 5.86062 6.64057 5.82233 6.75944 5.77632C6.99765 5.68411 7.31898 5.56171 7.65425 5.43979C7.99171 5.31708 8.3331 5.19858 8.6144 5.11203C8.75567 5.06856 8.87075 5.03658 8.95659 5.01639C8.98632 5.00939 9.00766 5.005 9.02167 5.00232C9.03458 5.00376 9.05295 5.00609 9.07742 5.00986C9.13786 5.01915 9.21471 5.03392 9.30649 5.05432C9.49027 5.09516 9.70356 5.15177 9.91275 5.21155C10.1201 5.2708 10.314 5.33046 10.4567 5.3755C10.5277 5.39794 10.5854 5.41656 10.625 5.42944L10.6699 5.44416L10.6809 5.44781L10.6834 5.44862C11.2073 5.62321 11.774 5.34023 11.9487 4.81633C12.1233 4.29239 11.8402 3.72606 11.3163 3.55139L11.007 4.47898C11.3163 3.55139 11.3163 3.55141 11.3163 3.55139L11.3104 3.54945L11.2962 3.54474L11.2442 3.52772C11.1998 3.51324 11.1364 3.4928 11.059 3.46836C10.9047 3.41963 10.6924 3.35428 10.4623 3.28852C10.234 3.22328 9.97849 3.15487 9.7404 3.10195C9.52612 3.05433 9.2446 3 9.00001 3C8.81329 3 8.62301 3.04026 8.49851 3.06955C8.35192 3.10404 8.18966 3.15019 8.02623 3.20047C7.69816 3.30142 7.32081 3.43292 6.97076 3.56021C6.61853 3.68829 6.28362 3.81589 6.03745 3.91118C5.91413 3.95892 5.81255 3.99875 5.74154 4.02676L5.65894 4.05945L5.62862 4.07152Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.18332 9.76989C4.18332 9.76989 4.18332 9.76989 4.18332 9.76989L4.21444 9.79894L4.30513 9.88336C4.38379 9.95645 4.49712 10.0614 4.63517 10.1885C4.91155 10.4429 5.28577 10.7846 5.67874 11.1354C6.07301 11.4873 6.48011 11.843 6.82385 12.1274C6.99611 12.27 7.14576 12.3891 7.26597 12.4788C7.34717 12.5393 7.3987 12.5741 7.42541 12.5915L10.262 13.6553C10.5987 13.7815 10.9772 13.7173 11.2534 13.4872L13.3598 11.7318C13.7841 11.3782 14.4147 11.4355 14.7682 11.8598C15.1218 12.2841 15.0645 12.9147 14.6402 13.2682L12.5337 15.0236C11.7051 15.7141 10.5697 15.9066 9.5598 15.5279L6.59973 14.4179L6.55278 14.3944C6.27173 14.2539 5.88128 13.9434 5.54875 13.6683C5.17695 13.3606 4.74859 12.986 4.34691 12.6274C3.94393 12.2677 3.56174 11.9187 3.28069 11.66C3.14003 11.5306 3.02439 11.4234 2.94377 11.3485L2.85027 11.2615L2.81734 11.2307C2.41411 10.8534 2.39249 10.2199 2.76988 9.81668C3.14727 9.41345 3.78009 9.3925 4.18332 9.76989Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M3.43537 14.8588C3.78945 14.435 4.42009 14.3784 4.84393 14.7325L5.80216 15.533C5.94547 15.6527 6.11945 15.7299 6.30438 15.7559L7.54087 15.9293C8.0878 16.006 8.46899 16.5116 8.39227 17.0585C8.31556 17.6054 7.80999 17.9866 7.26306 17.9099L6.02657 17.7365C5.47178 17.6586 4.94986 17.427 4.51993 17.0679L3.5617 16.2674C3.13785 15.9133 3.08129 15.2827 3.43537 14.8588Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.43537 14.8589C3.78945 14.4351 4.42009 14.3785 4.84393 14.7326L5.80216 15.5331C5.94547 15.6528 6.11945 15.73 6.30438 15.756L7.54087 15.9294C8.0878 16.0061 8.46899 16.5117 8.39227 17.0586C8.31556 17.6056 7.80999 17.9867 7.26306 17.91L6.02657 17.7366C5.47178 17.6588 4.94986 17.4272 4.51993 17.068L3.5617 16.2675C3.13785 15.9134 3.08129 15.2828 3.43537 14.8589Z" fill="currentColor"/>
 </g>
 <defs>
 <clipPath id="clip0_1213_2541">
@@ -1642,6 +1590,12 @@ const House$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 `;
 
 const Identification$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.5 8H12" stroke="currentColor" stroke-linecap="round"/>
+<path d="M9.5 11.75L14.5 11.75" stroke="currentColor" stroke-linecap="round"/>
+<path d="M9.5 9.25H12H14.5M9.5 10.5H14.5" stroke="currentColor" stroke-linecap="round"/>
+<circle cx="6.5" cy="9.25" r="1.25" fill="currentColor"/>
+<path d="M8 11.6275C8 12.2582 7.32843 12.1985 6.5 12.1985C5.67157 12.1985 5 12.2582 5 11.6275C5 10.9968 5.67157 10.2 6.5 10.2C7.32843 10.2 8 10.9968 8 11.6275Z" fill="currentColor"/>
+<rect x="2" y="4.5" width="16" height="11" rx="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9 8C9 7.72386 9.22386 7.5 9.5 7.5H12C12.2761 7.5 12.5 7.72386 12.5 8C12.5 8.27614 12.2761 8.5 12 8.5H9.5C9.22386 8.5 9 8.27614 9 8Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9 11.75C9 11.4739 9.22386 11.25 9.5 11.25L14.5 11.25C14.7761 11.25 15 11.4739 15 11.75C15 12.0261 14.7761 12.25 14.5 12.25L9.5 12.25C9.22386 12.25 9 12.0261 9 11.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9 9.25C9 8.97386 9.22386 8.75 9.5 8.75H14.5C14.7761 8.75 15 8.97386 15 9.25C15 9.52614 14.7761 9.75 14.5 9.75H9.5C9.22386 9.75 9 9.52614 9 9.25ZM9 10.5C9 10.2239 9.22386 10 9.5 10H14.5C14.7761 10 15 10.2239 15 10.5C15 10.7761 14.7761 11 14.5 11H9.5C9.22386 11 9 10.7761 9 10.5Z" fill="currentColor"/>
@@ -1726,10 +1680,11 @@ const Letter$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 `;
 
 const LetterOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M17.4706 18.3375H2.53952C2.30966 18.3375 2.08979 18.2475 1.92989 18.0775C1.76998 17.9275 1.67004 17.6975 1.67004 17.4675V8.43748C1.67004 7.84748 1.94988 7.27748 2.42959 6.91748L2.69943 6.70748V5.33748C2.69943 4.85748 3.08919 4.46748 3.5689 4.46748H5.64766L8.86573 2.03748C9.51534 1.54748 10.4947 1.54748 11.1444 2.03748L14.3624 4.47748H16.4412C16.671 4.47748 16.9009 4.56748 17.0508 4.73748C17.2007 4.89748 17.3107 5.11748 17.3107 5.34748V6.71748L17.5805 6.92748C18.0502 7.28748 18.34 7.84748 18.34 8.43748V17.4675C18.34 17.6975 18.2501 17.9275 18.0802 18.0875C17.9203 18.2475 17.7004 18.3375 17.4706 18.3375V18.3375ZM3.39901 16.5975H16.6011V11.2175L11.1444 15.3775C10.4848 15.8675 9.52533 15.8675 8.86573 15.3775L3.39901 11.2175V16.5975ZM4.42839 9.82748L9.89511 13.9875C9.95507 14.0275 10.045 14.0275 10.095 13.9875L15.5717 9.82748V6.21748H4.42839V9.82748ZM11.4842 4.47748L10.095 3.40748C10.035 3.36748 9.94508 3.36748 9.89511 3.40748L8.50594 4.47748H11.4842Z" fill="currentColor"/>
-<path d="M13.3631 8.0876H6.61712C6.38726 8.0876 6.18738 7.8976 6.18738 7.6576C6.18738 7.4176 6.37726 7.2276 6.61712 7.2276H13.3631C13.5929 7.2276 13.7928 7.4176 13.7928 7.6576C13.7928 7.8976 13.6029 8.0876 13.3631 8.0876Z" fill="currentColor"/>
-<path d="M11.6541 11.5275H8.34606C8.1162 11.5275 7.91632 11.3375 7.91632 11.0975C7.91632 10.8575 8.10621 10.6675 8.34606 10.6675H11.6541C11.8839 10.6675 12.0838 10.8575 12.0838 11.0975C12.0838 11.3375 11.8939 11.5275 11.6541 11.5275Z" fill="currentColor"/>
-<path d="M13.3631 9.80757H6.61712C6.38726 9.80757 6.18738 9.61757 6.18738 9.37757C6.18738 9.13757 6.37726 8.94757 6.61712 8.94757H13.3631C13.5929 8.94757 13.7928 9.13757 13.7928 9.37757C13.7928 9.61757 13.6029 9.80757 13.3631 9.80757Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 7.5C3.05228 7.5 3.5 7.94772 3.5 8.5V16.5H16.5V8.5C16.5 7.94772 16.9477 7.5 17.5 7.5C18.0523 7.5 18.5 7.94772 18.5 8.5V17.5C18.5 18.0523 18.0523 18.5 17.5 18.5H2.5C1.94772 18.5 1.5 18.0523 1.5 17.5V8.5C1.5 7.94772 1.94772 7.5 2.5 7.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 5.5C2.5 4.94772 2.94772 4.5 3.5 4.5H16.5C17.0523 4.5 17.5 4.94772 17.5 5.5V10.17C17.5 10.5045 17.3328 10.8168 17.0544 11.0022L10.5544 15.3322C10.2186 15.5559 9.78136 15.5559 9.4456 15.3322L2.9456 11.0022C2.66723 10.8168 2.5 10.5045 2.5 10.17V5.5ZM4.5 6.5V9.63459L10 13.2984L15.5 9.63459V6.5H4.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.44531 1.66795C9.78121 1.44402 10.2188 1.44402 10.5547 1.66795L15.0547 4.66795L13.9453 6.33205L10 3.70185L6.05471 6.33205L4.94531 4.66795L9.44531 1.66795Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 8C6.5 7.72386 6.72386 7.5 7 7.5H13C13.2761 7.5 13.5 7.72386 13.5 8C13.5 8.27614 13.2761 8.5 13 8.5H7C6.72386 8.5 6.5 8.27614 6.5 8Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7 10C7 9.72386 7.22386 9.5 7.5 9.5H12.5C12.7761 9.5 13 9.72386 13 10C13 10.2761 12.7761 10.5 12.5 10.5H7.5C7.22386 10.5 7 10.2761 7 10Z" fill="currentColor"/>
 </svg>
 `;
 
@@ -1851,6 +1806,7 @@ const Microphone2$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 `;
 
 const Minus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <path d="M5 11C4.44772 11 4 10.5523 4 10C4 9.44772 4.44772 9 5 9H15C15.5523 9 16 9.44772 16 10C16 10.5523 15.5523 11 15 11H5Z" fill="currentColor"/>
 </svg>
 `;
@@ -1965,6 +1921,12 @@ const NextTrack$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 <path d="M14.8632 9.31771C15.2218 9.70192 15.2218 10.2981 14.8632 10.6823L10.2311 15.6453C9.61179 16.3088 8.50003 15.8706 8.50003 14.963V5.03705C8.50003 4.12943 9.6118 3.69121 10.2311 4.35473L14.8632 9.31771Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7643 10L10.5 7.57407V12.426L12.7643 10ZM14.8632 10.6823C15.2218 10.2981 15.2218 9.70192 14.8632 9.31771L10.2311 4.35473C9.6118 3.69121 8.50003 4.12943 8.50003 5.03705V14.963C8.50003 15.8706 9.61179 16.3088 10.2311 15.6453L14.8632 10.6823Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4C16.0523 4 16.5 4.44772 16.5 5V15C16.5 15.5523 16.0523 16 15.5 16C14.9477 16 14.5 15.5523 14.5 15V5C14.5 4.44772 14.9477 4 15.5 4Z" fill="currentColor"/>
+</svg>
+`;
+
+const NoEntry$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.6572 4.34294C16.0477 4.73347 16.0477 5.36663 15.6572 5.75716L5.75716 15.6572C5.36663 16.0477 4.73347 16.0477 4.34294 15.6572C3.95242 15.2666 3.95242 14.6335 4.34294 14.2429L14.2429 4.34294C14.6335 3.95242 15.2666 3.95242 15.6572 4.34294Z" fill="currentColor"/>
 </svg>
 `;
 
@@ -2186,30 +2148,18 @@ const Printer$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 `;
 
 const QrCode$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="path-1-inside-1_303_4977" fill="white">
-<rect x="4.5" y="4.5" width="5" height="5" rx="0.5"/>
-</mask>
-<rect x="4.5" y="4.5" width="5" height="5" rx="0.5" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" mask="url(#path-1-inside-1_303_4977)"/>
-<mask id="path-2-inside-2_303_4977" fill="white">
-<rect x="10.5" y="4.5" width="5" height="5" rx="0.5"/>
-</mask>
-<rect x="10.5" y="4.5" width="5" height="5" rx="0.5" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" mask="url(#path-2-inside-2_303_4977)"/>
-<mask id="path-3-inside-3_303_4977" fill="white">
-<rect x="4.5" y="10.5" width="5" height="5" rx="0.5"/>
-</mask>
-<rect x="4.5" y="10.5" width="5" height="5" rx="0.5" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" mask="url(#path-3-inside-3_303_4977)"/>
-<mask id="path-4-inside-4_303_4977" fill="white">
-<rect x="10.5" y="10.5" width="5" height="5" rx="0.5"/>
-</mask>
-<rect x="10.5" y="10.5" width="5" height="5" rx="0.5" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" mask="url(#path-4-inside-4_303_4977)"/>
-<path d="M3 3H6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-<path d="M3 3V6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-<path d="M3 17L3 13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-<path d="M3 17H6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-<path d="M17 17H13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-<path d="M17 17V13.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-<path d="M17 3V6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-<path d="M17 3L13.5 3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 6V8H8V6H6ZM5 4.5C4.72386 4.5 4.5 4.72386 4.5 5V9C4.5 9.27614 4.72386 9.5 5 9.5H9C9.27614 9.5 9.5 9.27614 9.5 9V5C9.5 4.72386 9.27614 4.5 9 4.5H5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12 6V8H14V6H12ZM11 4.5C10.7239 4.5 10.5 4.72386 10.5 5V9C10.5 9.27614 10.7239 9.5 11 9.5H15C15.2761 9.5 15.5 9.27614 15.5 9V5C15.5 4.72386 15.2761 4.5 15 4.5H11Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6 12V14H8V12H6ZM5 10.5C4.72386 10.5 4.5 10.7239 4.5 11V15C4.5 15.2761 4.72386 15.5 5 15.5H9C9.27614 15.5 9.5 15.2761 9.5 15V11C9.5 10.7239 9.27614 10.5 9 10.5H5Z" fill="currentColor"/>
+<path d="M10.5 11C10.5 10.7239 10.7239 10.5 11 10.5H15C15.2761 10.5 15.5 10.7239 15.5 11V15C15.5 15.2761 15.2761 15.5 15 15.5H11C10.7239 15.5 10.5 15.2761 10.5 15V11Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 3C2 2.44772 2.44772 2 3 2L6.5 2C7.05228 2 7.5 2.44772 7.5 3C7.5 3.55228 7.05228 4 6.5 4H3C2.44772 4 2 3.55228 2 3Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 2C3.55228 2 4 2.44772 4 3V6.5C4 7.05228 3.55228 7.5 3 7.5C2.44772 7.5 2 7.05228 2 6.5V3C2 2.44772 2.44772 2 3 2Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 18C2.44772 18 2 17.5523 2 17L2 13.5C2 12.9477 2.44772 12.5 3 12.5C3.55228 12.5 4 12.9477 4 13.5V17C4 17.5523 3.55228 18 3 18Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2 17C2 16.4477 2.44772 16 3 16H6.5C7.05228 16 7.5 16.4477 7.5 17C7.5 17.5523 7.05228 18 6.5 18H3C2.44772 18 2 17.5523 2 17Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 17C18 17.5523 17.5523 18 17 18H13.5C12.9477 18 12.5 17.5523 12.5 17C12.5 16.4477 12.9477 16 13.5 16H17C17.5523 16 18 16.4477 18 17Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17 18C16.4477 18 16 17.5523 16 17V13.5C16 12.9477 16.4477 12.5 17 12.5C17.5523 12.5 18 12.9477 18 13.5V17C18 17.5523 17.5523 18 17 18Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17 2C17.5523 2 18 2.44772 18 3V6.5C18 7.05228 17.5523 7.5 17 7.5C16.4477 7.5 16 7.05228 16 6.5V3C16 2.44772 16.4477 2 17 2Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M18 3C18 3.55228 17.5523 4 17 4L13.5 4C12.9477 4 12.5 3.55228 12.5 3C12.5 2.44772 12.9477 2 13.5 2L17 2C17.5523 2 18 2.44772 18 3Z" fill="currentColor"/>
 </svg>
 `;
 
@@ -2224,7 +2174,7 @@ const Question$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 const QuestionCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="10" cy="14.25" r="1" fill="currentColor"/>
 <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2"/>
-<path d="M10.996 8.73631C10.525 9.02473 10.3769 9.64035 10.6654 10.1113C10.9538 10.5823 11.5694 10.7304 12.0404 10.4419L10.996 8.73631ZM8.34637 6.5L8.92316 7.31689H8.92316L8.34637 6.5ZM6.55188 7.48076C6.44259 8.02212 6.79285 8.54958 7.33421 8.65888C7.87557 8.76817 8.40303 8.41791 8.51233 7.87655L6.55188 7.48076ZM10 7C11.0482 7 11.5 7.64441 11.5 8H13.5C13.5 6.14645 11.7132 5 10 5V7ZM11.5 8C11.5 8.22335 11.3676 8.50877 10.996 8.73631L12.0404 10.4419C12.8625 9.93849 13.5 9.07221 13.5 8H11.5ZM8.92316 7.31689C9.18596 7.13133 9.56102 7 10 7V5C9.17094 5 8.38819 5.24631 7.76957 5.68311L8.92316 7.31689ZM8.51233 7.87655C8.5474 7.70283 8.66922 7.49619 8.92316 7.31689L7.76957 5.68311C7.17557 6.10253 6.70525 6.72111 6.55188 7.48076L8.51233 7.87655Z" fill="currentColor"/>
+<path d="M11.5182 9.58913C12.1151 9.22363 12.5 8.64778 12.5 8C12.5 6.89543 11.3807 6 10 6C9.36598 6 8.78707 6.18882 8.34637 6.5C7.9224 6.79936 7.62632 7.21197 7.5321 7.67866" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <path d="M10 10.5V11.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <path d="M9.99999 10.5L11.52 9.58997" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <path d="M11 14.25C11 14.8023 10.5523 15.25 10 15.25C9.44772 15.25 9 14.8023 9 14.25C9 13.6977 9.44772 13.25 10 13.25C10.5523 13.25 11 13.6977 11 14.25Z" fill="currentColor"/>
@@ -2350,12 +2300,6 @@ const Shuffle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 `;
 
 const Sliders$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3.5 4.75H10M16.5 4.75H14.875" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-<circle cx="12.75" cy="5" r="1.75" stroke="currentColor" stroke-width="2"/>
-<path d="M3.5 14.75H10M16.5 14.75H14.875" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-<circle cx="12.75" cy="15" r="1.75" stroke="currentColor" stroke-width="2"/>
-<path d="M3.5 9.75H5.125M16.5 9.75H10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-<circle cx="7.75" cy="10" r="1.75" stroke="currentColor" stroke-width="2"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 4.75C2.5 4.19772 2.94772 3.75 3.5 3.75H10C10.5523 3.75 11 4.19772 11 4.75C11 5.30228 10.5523 5.75 10 5.75H3.5C2.94772 5.75 2.5 5.30228 2.5 4.75ZM13.875 4.75C13.875 4.19772 14.3227 3.75 14.875 3.75H16.5C17.0523 3.75 17.5 4.19772 17.5 4.75C17.5 5.30228 17.0523 5.75 16.5 5.75H14.875C14.3227 5.75 13.875 5.30228 13.875 4.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 5.75C13.1642 5.75 13.5 5.41421 13.5 5C13.5 4.58579 13.1642 4.25 12.75 4.25C12.3358 4.25 12 4.58579 12 5C12 5.41421 12.3358 5.75 12.75 5.75ZM12.75 7.75C14.2688 7.75 15.5 6.51878 15.5 5C15.5 3.48122 14.2688 2.25 12.75 2.25C11.2312 2.25 10 3.48122 10 5C10 6.51878 11.2312 7.75 12.75 7.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 14.75C2.5 14.1977 2.94772 13.75 3.5 13.75H10C10.5523 13.75 11 14.1977 11 14.75C11 15.3023 10.5523 15.75 10 15.75H3.5C2.94772 15.75 2.5 15.3023 2.5 14.75ZM13.875 14.75C13.875 14.1977 14.3227 13.75 14.875 13.75H16.5C17.0523 13.75 17.5 14.1977 17.5 14.75C17.5 15.3023 17.0523 15.75 16.5 15.75H14.875C14.3227 15.75 13.875 15.3023 13.875 14.75Z" fill="currentColor"/>
@@ -2370,6 +2314,19 @@ const Smartphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 0H5.5C4.39543 0 3.5 0.942558 3.5 2.10526V17.8947C3.5 19.0574 4.39543 20 5.5 20H14.5C15.6046 20 16.5 19.0574 16.5 17.8947V2.10526C16.5 0.942558 15.6046 0 14.5 0ZM5.5 18V2H14.5V18H5.5Z" fill="currentColor"/>
 <path d="M10.5 16.5C10.5 16.7761 10.2761 17 10 17C9.72386 17 9.5 16.7761 9.5 16.5C9.5 16.2239 9.72386 16 10 16C10.2761 16 10.5 16.2239 10.5 16.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9 16.5C9 15.9477 9.44772 15.5 10 15.5C10.5523 15.5 11 15.9477 11 16.5C11 17.0523 10.5523 17.5 10 17.5C9.44772 17.5 9 17.0523 9 16.5Z" fill="currentColor"/>
+</svg>
+`;
+
+const SmartphoneCutout$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1817_477)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 0H5.5C4.39543 0 3.5 0.89543 3.5 2V18C3.5 19.1046 4.39543 20 5.5 20H14.5C15.6046 20 16.5 19.1046 16.5 18V2C16.5 0.89543 15.6046 0 14.5 0ZM5.5 18V2H14.5V18H5.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3.5C7.5 2.94772 7.94772 2.5 8.5 2.5H11.5C12.0523 2.5 12.5 2.94772 12.5 3.5C12.5 4.05228 12.0523 4.5 11.5 4.5H8.5C7.94772 4.5 7.5 4.05228 7.5 3.5Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_1817_477">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
 </svg>
 `;
 
@@ -2457,6 +2414,19 @@ const StarFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
+const Stars$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1749_644)">
+<path d="M9 20C8.56 20 8.17 19.71 8.04 19.29L6.13 12.88L0.63 10.69C0.25 10.54 0 10.17 0 9.75C0 9.33 0.27 8.97 0.66 8.82L6.19 6.8L8.04 0.71C8.17 0.29 8.56 0 9 0C9.44 0 9.83 0.29 9.96 0.71L11.82 6.8L17.35 8.82C17.74 8.96 18 9.33 18.01 9.75C18.02 10.17 17.76 10.54 17.38 10.69L11.88 12.87L9.97 19.28C9.84 19.7 9.45 19.99 9.01 19.99L9 20ZM3.81 9.8L7.32 11.2C7.6 11.31 7.82 11.55 7.91 11.84L9 15.5L10.09 11.84C10.18 11.55 10.39 11.31 10.68 11.2L14.19 9.8L10.65 8.51C10.36 8.4 10.13 8.16 10.04 7.86L9 4.43L7.96 7.86C7.87 8.16 7.64 8.4 7.35 8.51L3.81 9.8V9.8Z" fill="currentColor"/>
+<path d="M17 20C16.7 20 16.45 19.77 16.42 19.47C16.22 17.52 16.14 17.15 14.53 17C14.22 16.96 14 16.72 14 16.42C14 16.12 14.23 15.87 14.53 15.84C16.14 15.69 16.23 15.44 16.42 13.52C16.45 13.22 16.7 13 17 13C17.3 13 17.55 13.23 17.58 13.52C17.77 15.44 17.86 15.69 19.47 15.84C19.77 15.87 20 16.12 20 16.42C20 16.72 19.78 16.97 19.48 17C17.87 17.15 17.78 17.52 17.58 19.47C17.55 19.77 17.3 19.99 17 19.99V20Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_1749_644">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+`;
+
 const Stopwatch$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5.5C6.96243 5.5 4.5 7.96243 4.5 11C4.5 14.0376 6.96243 16.5 10 16.5C13.0376 16.5 15.5 14.0376 15.5 11C15.5 7.96243 13.0376 5.5 10 5.5ZM2.5 11C2.5 6.85786 5.85786 3.5 10 3.5C14.1421 3.5 17.5 6.85786 17.5 11C17.5 15.1421 14.1421 18.5 10 18.5C5.85786 18.5 2.5 15.1421 2.5 11Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.79289 3.79292C3.18342 3.4024 3.81658 3.4024 4.20711 3.79292L5.70711 5.29292C6.09763 5.68345 6.09763 6.31661 5.70711 6.70714C5.31658 7.09766 4.68342 7.09766 4.29289 6.70714L2.79289 5.20714C2.40237 4.81661 2.40237 4.18345 2.79289 3.79292Z" fill="currentColor"/>
@@ -2494,6 +2464,7 @@ const StudioLightSide$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill=
 `;
 
 const Sun$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_0_1459)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 14C12.2091 14 14 12.2091 14 10C14 7.79086 12.2091 6 10 6C7.79086 6 6 7.79086 6 10C6 12.2091 7.79086 14 10 14ZM10 8C11.1046 8 12 8.89543 12 10C12 11.1046 11.1046 12 10 12C8.89543 12 8 11.1046 8 10C8 8.89543 8.89543 8 10 8Z" fill="currentColor"/>
 <path d="M0.5 10C0.5 9.44772 0.947715 9 1.5 9H3.5C4.05228 9 4.5 9.44772 4.5 10C4.5 10.5523 4.05228 11 3.5 11H1.5C0.947715 11 0.5 10.5523 0.5 10Z" fill="currentColor"/>
 <path d="M15.5 10C15.5 9.44772 15.9477 9 16.5 9H18.5C19.0523 9 19.5 9.44772 19.5 10C19.5 10.5523 19.0523 11 18.5 11H16.5C15.9477 11 15.5 10.5523 15.5 10Z" fill="currentColor"/>
@@ -2503,10 +2474,17 @@ const Sun$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 <path d="M10 0.5C10.5523 0.5 11 0.947715 11 1.5V3.5C11 4.05228 10.5523 4.5 10 4.5C9.44772 4.5 9 4.05228 9 3.5V1.5C9 0.947715 9.44772 0.5 10 0.5Z" fill="currentColor"/>
 <path d="M16.8284 2.99999C17.2189 3.39051 17.2189 4.02367 16.8284 4.4142L15.4142 5.82841C15.0237 6.21894 14.3905 6.21894 14 5.82841C13.6095 5.43789 13.6095 4.80472 14 4.4142L15.4142 2.99999C15.8047 2.60946 16.4379 2.60946 16.8284 2.99999Z" fill="currentColor"/>
 <path d="M5.82841 15.4142L4.4142 16.8284C4.02368 17.219 3.39051 17.219 2.99999 16.8284C2.60946 16.4379 2.60946 15.8048 2.99999 15.4142L4.4142 14C4.80472 13.6095 5.43789 13.6095 5.82841 14C6.21894 14.3905 6.21894 15.0237 5.82841 15.4142Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_0_1459">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
 </svg>
 `;
 
 const SunFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_0_1438)">
 <path d="M13.5 10C13.5 11.933 11.933 13.5 10 13.5C8.067 13.5 6.5 11.933 6.5 10C6.5 8.067 8.067 6.5 10 6.5C11.933 6.5 13.5 8.067 13.5 10Z" fill="currentColor"/>
 <path d="M0.5 10C0.5 9.44772 0.947715 9 1.5 9H3.5C4.05228 9 4.5 9.44772 4.5 10C4.5 10.5523 4.05228 11 3.5 11H1.5C0.947715 11 0.5 10.5523 0.5 10Z" fill="currentColor"/>
 <path d="M15.5 10C15.5 9.44772 15.9477 9 16.5 9H18.5C19.0523 9 19.5 9.44772 19.5 10C19.5 10.5523 19.0523 11 18.5 11H16.5C15.9477 11 15.5 10.5523 15.5 10Z" fill="currentColor"/>
@@ -2516,6 +2494,12 @@ const SunFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 <path d="M10 0.5C10.5523 0.5 11 0.947715 11 1.5V3.5C11 4.05228 10.5523 4.5 10 4.5C9.44772 4.5 9 4.05228 9 3.5V1.5C9 0.947715 9.44772 0.5 10 0.5Z" fill="currentColor"/>
 <path d="M16.8284 2.99999C17.2189 3.39051 17.2189 4.02367 16.8284 4.4142L15.4142 5.82841C15.0237 6.21894 14.3905 6.21894 14 5.82841C13.6095 5.43789 13.6095 4.80472 14 4.4142L15.4142 2.99999C15.8047 2.60946 16.4379 2.60946 16.8284 2.99999Z" fill="currentColor"/>
 <path d="M5.82841 14C6.21894 14.3905 6.21894 15.0237 5.82841 15.4142L4.4142 16.8284C4.02367 17.2189 3.39051 17.2189 2.99999 16.8284C2.60946 16.4379 2.60946 15.8047 2.99999 15.4142L4.4142 14C4.80472 13.6095 5.43789 13.6095 5.82841 14Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_0_1438">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
 </svg>
 `;
 
@@ -2566,6 +2550,22 @@ const TextBubble$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 <circle cx="10" cy="9" r="1" fill="currentColor"/>
 <circle cx="13" cy="9" r="1" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1 6V12.1024C1 13.7138 2.27046 15.0285 3.86436 15.0994C4.22426 16.3232 4.75773 17 5.70388 17C6.46059 17 7.38816 16.3911 8.83458 15.1024H16C17.6569 15.1024 19 13.7593 19 12.1024V6C19 4.34315 17.6569 3 16 3H4C2.34315 3 1 4.34315 1 6ZM8.06421 13.1024L7.77816 13.3625C6.91423 14.1477 6.23474 14.6664 5.90912 14.8838C5.81363 14.6587 5.71621 14.3271 5.62633 13.8976L5.45993 13.1024H4C3.44772 13.1024 3 12.6547 3 12.1024V6C3 5.44772 3.44772 5 4 5H16C16.5523 5 17 5.44772 17 6V12.1024C17 12.6547 16.5523 13.1024 16 13.1024H8.06421Z" fill="currentColor"/>
+</svg>
+`;
+
+const TextBubbles$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1812_524)">
+<path d="M5.00781 8C5.55979 8 6.00725 7.55228 6.00725 7C6.00725 6.44772 5.55979 6 5.00781 6C4.45583 6 4.00836 6.44772 4.00836 7C4.00836 7.55228 4.45583 8 5.00781 8Z" fill="currentColor"/>
+<path d="M8.00616 8C8.55814 8 9.0056 7.55228 9.0056 7C9.0056 6.44772 8.55814 6 8.00616 6C7.45418 6 7.00671 6.44772 7.00671 7C7.00671 7.55228 7.45418 8 8.00616 8Z" fill="currentColor"/>
+<path d="M11.0045 8C11.5564 8 12.0039 7.55228 12.0039 7C12.0039 6.44772 11.5564 6 11.0045 6C10.4525 6 10.005 6.44772 10.005 7C10.005 7.55228 10.4525 8 11.0045 8Z" fill="currentColor"/>
+<path d="M4.70706 14.5C3.72767 14.5 3.17801 13.51 2.8782 12.6C1.2792 12.54 0 11.22 0 9.6V4.5C0.00999375 2.85 1.35915 1.5 3.00812 1.5H13.0019C14.6508 1.5 16 2.85 16 4.5V9.6C16 11.25 14.6508 12.6 13.0019 12.6H7.8351C5.68645 14.5 4.9569 14.5 4.70706 14.5ZM3.00812 3.5C2.45846 3.5 2.00874 3.95 2.00874 4.5V9.6C2.00874 10.15 2.45846 10.6 3.00812 10.6H4.46721L4.6371 11.39C4.70706 11.71 4.81699 12.07 4.92692 12.33C5.38663 12.04 6.13617 11.45 6.78576 10.86L7.07558 10.6H13.0119C13.5615 10.6 14.0112 10.15 14.0112 9.6V4.5C14.0112 3.95 13.5615 3.5 13.0119 3.5H3.00812Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4009 8.70001C16.4009 8.14773 16.8486 7.70001 17.4009 7.70001C18.8332 7.70001 20 8.86825 20 10.3V14.38C20 15.7325 18.9589 16.8498 17.6363 16.9694C17.6211 17.0121 17.6051 17.0554 17.5884 17.099C17.503 17.321 17.3757 17.6063 17.1943 17.8538C17.0431 18.06 16.6636 18.5 16.0316 18.5C15.7599 18.5 15.5253 18.4117 15.3889 18.3529C15.2317 18.2851 15.0778 18.1989 14.9395 18.1136C14.6619 17.9423 14.3697 17.7259 14.1157 17.5262C13.8613 17.3263 13.6264 17.1283 13.4549 16.98H10.3948C8.96245 16.98 7.79565 15.8118 7.79565 14.38C7.79565 13.8277 8.24337 13.38 8.79565 13.38C9.34794 13.38 9.79565 13.8277 9.79565 14.38C9.79565 14.7083 10.0681 14.98 10.3948 14.98H14.22L14.506 15.2405L14.5091 15.2433L14.5212 15.2542L14.5706 15.2985C14.6142 15.3373 14.6779 15.3935 14.7561 15.4612C14.9135 15.5973 15.126 15.7765 15.3516 15.9538C15.494 16.0658 15.6346 16.1713 15.7647 16.2624C15.8019 16.1543 15.8331 16.0477 15.8571 15.9582C15.8732 15.8984 15.8852 15.8492 15.893 15.8163L15.9012 15.7803L15.9027 15.7738L15.9029 15.7726L16.0697 14.98H17.4009C17.7276 14.98 18 14.7083 18 14.38V10.3C18 9.97177 17.7276 9.70001 17.4009 9.70001C16.8486 9.70001 16.4009 9.2523 16.4009 8.70001Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_1812_524">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
 </svg>
 `;
 
@@ -2762,6 +2762,7 @@ const popChain = Chain$1;
 const popCheckmark = Checkmark$1;
 const popCircle = Circle$1;
 const popCircleFilled = CircleFilled;
+const popClapperboard = Clapperboard$1;
 const popClipboard = Clipboard$1;
 const popClipboardCheck = ClipboardCheck$1;
 const popClipboardCheckCircle = ClipboardCheckCircle$1;
@@ -2812,6 +2813,7 @@ const popGear = Gear$1;
 const popGearFilled = GearFilled;
 const popGift = Gift$1;
 const popGrab = Grab$1;
+const popGrid = Grid$1;
 const popHamburger = Hamburger$1;
 const popHandGrab = HandGrab$1;
 const popHandOpen = HandOpen$1;
@@ -2859,6 +2861,7 @@ const popMoveY = MoveY$1;
 const popMusicNoteDouble = MusicNoteDouble$1;
 const popMusicNoteSingle = MusicNoteSingle$1;
 const popNextTrack = NextTrack$1;
+const popNoEntry = NoEntry$1;
 const popOpen = Open$1;
 const popPaintPallet = PaintPallet$1;
 const popPause = Pause$1;
@@ -2901,6 +2904,7 @@ const popShareIos = ShareIos$1;
 const popShuffle = Shuffle$1;
 const popSliders = Sliders$1;
 const popSmartphone = Smartphone$1;
+const popSmartphoneCutout = SmartphoneCutout$1;
 const popSmartphoneNotch = SmartphoneNotch$1;
 const popSmartphone2 = Smartphone2$1;
 const popSoftDrink = SoftDrink$1;
@@ -2912,6 +2916,7 @@ const popSquare = Square$1;
 const popSquareFilled = SquareFilled;
 const popStar = Star$1;
 const popStarFilled = StarFilled;
+const popStars = Stars$1;
 const popStopwatch = Stopwatch$1;
 const popStudioBackdrop = StudioBackdrop$1;
 const popStudioLightFront = StudioLightFront$1;
@@ -2923,6 +2928,7 @@ const popTShirt = TShirt$1;
 const popTaxi = Taxi$1;
 const popTelevision = Television$1;
 const popTextBubble = TextBubble$1;
+const popTextBubbles = TextBubbles$1;
 const popThumbsDown = ThumbsDown$1;
 const popThumbsUp = ThumbsUp$1;
 const popTimes = Times$1;
@@ -2981,6 +2987,7 @@ const pop = {
     'checkmark': Checkmark$1,
     'circle': Circle$1,
     'circle-filled': CircleFilled,
+    'clapperboard': Clapperboard$1,
     'clipboard': Clipboard$1,
     'clipboard-check': ClipboardCheck$1,
     'clipboard-check-circle': ClipboardCheckCircle$1,
@@ -3031,6 +3038,7 @@ const pop = {
     'gear-filled': GearFilled,
     'gift': Gift$1,
     'grab': Grab$1,
+    'grid': Grid$1,
     'hamburger': Hamburger$1,
     'hand-grab': HandGrab$1,
     'hand-open': HandOpen$1,
@@ -3078,6 +3086,7 @@ const pop = {
     'music-note-double': MusicNoteDouble$1,
     'music-note-single': MusicNoteSingle$1,
     'next-track': NextTrack$1,
+    'no-entry': NoEntry$1,
     'open': Open$1,
     'paint-pallet': PaintPallet$1,
     'pause': Pause$1,
@@ -3120,6 +3129,7 @@ const pop = {
     'shuffle': Shuffle$1,
     'sliders': Sliders$1,
     'smartphone': Smartphone$1,
+    'smartphone-cutout': SmartphoneCutout$1,
     'smartphone-notch': SmartphoneNotch$1,
     'smartphone2': Smartphone2$1,
     'soft-drink': SoftDrink$1,
@@ -3131,6 +3141,7 @@ const pop = {
     'square-filled': SquareFilled,
     'star': Star$1,
     'star-filled': StarFilled,
+    'stars': Stars$1,
     'stopwatch': Stopwatch$1,
     'studio-backdrop': StudioBackdrop$1,
     'studio-light-front': StudioLightFront$1,
@@ -3142,6 +3153,7 @@ const pop = {
     'taxi': Taxi$1,
     'television': Television$1,
     'text-bubble': TextBubble$1,
+    'text-bubbles': TextBubbles$1,
     'thumbs-down': ThumbsDown$1,
     'thumbs-up': ThumbsUp$1,
     'times': Times$1,
@@ -3647,6 +3659,32 @@ const Circle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
+const Clapperboard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1817_475)">
+<g opacity="0.8">
+<path d="M3.15625 6.13737L16.9726 3.11229L17.5776 5.87555L3.76126 8.90063L3.15625 6.13737Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.1794 6.35125C2.06127 5.81174 2.40287 5.27863 2.94237 5.16051L16.7587 2.13543C17.2982 2.01731 17.8313 2.3589 17.9494 2.89841L18.5544 5.66167C18.6726 6.20117 18.331 6.73429 17.7915 6.85241L3.97516 9.87749C3.43565 9.99561 2.90254 9.65401 2.78441 9.11451L2.1794 6.35125ZM4.347 6.90034L4.52425 7.70988L16.3868 5.11258L16.2096 4.30303L4.347 6.90034Z" fill="currentColor"/>
+<path d="M3.92578 9.09309L18.0694 9.09309L18.0694 17.5792L3.92578 17.5792L3.92578 9.09309Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.92578 9.09309C2.92578 8.5408 3.3735 8.09309 3.92578 8.09309L18.0694 8.09309C18.6217 8.09309 19.0694 8.5408 19.0694 9.09309L19.0694 17.5792C19.0694 18.1315 18.6217 18.5792 18.0694 18.5792L3.92578 18.5792C3.3735 18.5792 2.92578 18.1315 2.92578 17.5792L2.92578 9.09309ZM4.92578 10.0931L4.92578 16.5792L17.0694 16.5792L17.0694 10.0931L4.92578 10.0931Z" fill="currentColor"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0.768074 4.97226C0.709012 4.7025 0.87981 4.43595 1.14956 4.37688L15.8025 1.16864C16.0722 1.10958 16.3388 1.28038 16.3978 1.55013L17.0395 4.48071C17.0985 4.75046 16.9277 5.01702 16.658 5.07608L2.00509 8.28432C1.73534 8.34338 1.46879 8.17259 1.40972 7.90283L0.768074 4.97226ZM1.85188 5.2468L2.27964 7.20052L15.9557 4.20616L15.5279 2.25244L1.85188 5.2468Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.8544 6.3378L7.25903 3.83499L7.95318 3.11516L10.5486 5.61797L9.8544 6.3378Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.94693 7.19333L3.35156 4.69052L4.04571 3.97069L6.64108 6.4735L5.94693 7.19333Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.7618 5.48226L11.1664 2.97945L11.8606 2.25963L14.456 4.76244L13.7618 5.48226Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.98873 11.2774L10.9887 8.27735L10.1567 7.72265L8.15668 10.7226L8.98873 11.2774Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M12.9887 11.2774L14.9887 8.27735L14.1567 7.72265L12.1567 10.7226L12.9887 11.2774Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.98873 11.2774L6.98873 8.27735L6.15668 7.72265L4.15668 10.7226L4.98873 11.2774Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M1.57269 8C1.57269 7.72386 1.79655 7.5 2.07269 7.5L17.0727 7.5C17.3488 7.5 17.5727 7.72386 17.5727 8L17.5727 17C17.5727 17.2761 17.3488 17.5 17.0727 17.5L2.07269 17.5C1.79655 17.5 1.57269 17.2761 1.57269 17L1.57269 8ZM2.57269 8.5L2.57269 16.5L16.5727 16.5L16.5727 8.5L2.57269 8.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5727 11.5L1.57269 11.5L1.57269 10.5L17.5727 10.5L17.5727 11.5Z" fill="black"/>
+</g>
+<defs>
+<clipPath id="clip0_1817_475">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+`;
+
 const Clipboard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4.35106C8 3.88103 8.41441 3.5 8.92562 3.5H15.0744C15.5856 3.5 16 3.88103 16 4.35106V7.64894C16 8.11897 15.5856 8.5 15.0744 8.5H8.92562C8.41441 8.5 8 8.11897 8 7.64894V4.35106Z" fill="currentColor"/>
@@ -3930,8 +3968,8 @@ const Enter = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 <g opacity="0.8">
 <rect x="8.25" y="4" width="10" height="15" rx="1" fill="currentColor"/>
 </g>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M8.8667 7.5L10.95 10L8.8667 7.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M8.86664 12.5L10.95 10L8.86664 12.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.86658 7.5L10.9499 10L8.86658 7.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M8.86658 12.5L10.9499 10L8.86658 12.5Z" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10.5 10L3 10" stroke="black" stroke-linecap="round"/>
 <path d="M15.5 17H6.3" stroke="black" stroke-linecap="round"/>
 <path d="M15.5 3L6.32626 3" stroke="black" stroke-linecap="round"/>
@@ -4074,8 +4112,8 @@ const File = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 <g opacity="0.8">
 <path d="M6.5 2L13.1854 2C13.6056 2 14.0065 2.17624 14.2906 2.48582L18.6052 7.18761C18.8591 7.46433 19 7.82623 19 8.20179V18.5C19 19.3284 18.3284 20 17.5 20H6.5C5.67157 20 5 19.3284 5 18.5V3.5C5 2.67157 5.67157 2 6.5 2Z" fill="currentColor"/>
 </g>
-<path d="M6.5 11C6.22386 11 6 10.7761 6 10.5C6 10.2239 6.22386 10 6.5 10H13.5C13.7761 10 14 10.2239 14 10.5C14 10.7761 13.7761 11 13.5 11H6.5Z" fill="black"/>
-<path d="M6.5 14C6.22386 14 6 13.7761 6 13.5C6 13.2239 6.22386 13 6.5 13H13.5C13.7761 13 14 13.2239 14 13.5C14 13.7761 13.7761 14 13.5 14H6.5Z" fill="black"/>
+<path d="M6.5 12C6.22386 12 6 11.7761 6 11.5C6 11.2239 6.22386 11 6.5 11H13.5C13.7761 11 14 11.2239 14 11.5C14 11.7761 13.7761 12 13.5 12H6.5Z" fill="black"/>
+<path d="M6.5 15C6.22386 15 6 14.7761 6 14.5C6 14.2239 6.22386 14 6.5 14H13.5C13.7761 14 14 14.2239 14 14.5C14 14.7761 13.7761 15 13.5 15H6.5Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.1854 1H4.5C3.67157 1 3 1.67157 3 2.5V17.5C3 18.3284 3.67157 19 4.5 19H15.5C16.3284 19 17 18.3284 17 17.5V7.20179C17 6.82623 16.8591 6.46433 16.6052 6.18761L12.2906 1.48582C12.0065 1.17624 11.6056 1 11.1854 1ZM4 2.5C4 2.22386 4.22386 2 4.5 2H11.1854C11.3255 2 11.4591 2.05875 11.5538 2.16194L15.8684 6.86373C15.953 6.95597 16 7.0766 16 7.20179V17.5C16 17.7761 15.7761 18 15.5 18H4.5C4.22386 18 4 17.7761 4 17.5V2.5Z" fill="black"/>
 <path d="M11 7H16.5C16.7761 7 17 7.22386 17 7.5C17 7.77614 16.7761 8 16.5 8H10.5C10.2239 8 10 7.77614 10 7.5V1.5C10 1.22386 10.2239 1 10.5 1C10.7761 1 11 1.22386 11 1.5V7Z" fill="black"/>
 </svg>
@@ -4245,6 +4283,18 @@ const Grab = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
+const Grid = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8">
+<path d="M5 5.5C5 5.22386 5.22386 5 5.5 5H17.5C17.7761 5 18 5.22386 18 5.5V17.5C18 17.7761 17.7761 18 17.5 18H5.5C5.22386 18 5 17.7761 5 17.5V5.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 6.5V16.5H16.5V6.5H6.5ZM5.5 5C5.22386 5 5 5.22386 5 5.5V17.5C5 17.7761 5.22386 18 5.5 18H17.5C17.7761 18 18 17.7761 18 17.5V5.5C18 5.22386 17.7761 5 17.5 5H5.5Z" fill="currentColor"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 4.5V8.5H8.5V4.5H4.5ZM4 3.5C3.72386 3.5 3.5 3.72386 3.5 4V9C3.5 9.27614 3.72386 9.5 4 9.5H9C9.27614 9.5 9.5 9.27614 9.5 9V4C9.5 3.72386 9.27614 3.5 9 3.5H4Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 4.5V8.5H15.5V4.5H11.5ZM11 3.5C10.7239 3.5 10.5 3.72386 10.5 4V9C10.5 9.27614 10.7239 9.5 11 9.5H16C16.2761 9.5 16.5 9.27614 16.5 9V4C16.5 3.72386 16.2761 3.5 16 3.5H11Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 11.5V15.5H8.5V11.5H4.5ZM4 10.5C3.72386 10.5 3.5 10.7239 3.5 11V16C3.5 16.2761 3.72386 16.5 4 16.5H9C9.27614 16.5 9.5 16.2761 9.5 16V11C9.5 10.7239 9.27614 10.5 9 10.5H4Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 11.5V15.5H15.5V11.5H11.5ZM11 10.5C10.7239 10.5 10.5 10.7239 10.5 11V16C10.5 16.2761 10.7239 16.5 11 16.5H16C16.2761 16.5 16.5 16.2761 16.5 16V11C16.5 10.7239 16.2761 10.5 16 10.5H11Z" fill="black"/>
+</svg>
+`;
+
 const Hamburger = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_531)">
 <g opacity="0.8">
@@ -4281,15 +4331,8 @@ const HandGrab = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 `;
 
 const HandOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_1213_2395)">
-<path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M9.96867 2.02246C10.2196 1.28251 10.92 0.75 11.7448 0.75C12.421 0.75 13.0137 1.10805 13.3435 1.64493C13.6613 1.39743 14.0608 1.25 14.4948 1.25C15.5303 1.25 16.3698 2.08946 16.3698 3.125V4.46626C16.631 4.32818 16.9287 4.25 17.2448 4.25C18.2803 4.25 19.1198 5.08947 19.1198 6.125V12.25C19.1198 14.1027 18.7345 16.0777 17.7959 17.6077C16.8427 19.1614 15.3166 20.25 13.1198 20.25C10.5524 20.25 9.03133 19.7353 7.90278 18.6773C7.3529 18.1618 6.91857 17.5376 6.50307 16.8425C6.26964 16.4519 6.02838 16.0141 5.77357 15.5517C5.58572 15.2108 5.3905 14.8566 5.18563 14.4981L5.17875 14.486L3.32462 10.7778C2.84278 9.81408 3.28749 8.64439 4.28786 8.24424C5.17717 7.88851 6.1907 8.27386 6.61904 9.13056L7.11975 10.132L7.11975 3.625C7.11975 2.58947 7.95922 1.75 8.99475 1.75C9.35141 1.75 9.68481 1.84958 9.96867 2.02246Z" fill="currentColor"/>
-<path d="M3.87027 13.2502L3.87138 13.2521L3.87037 13.2504L3.87027 13.2502ZM5.8699 11.2497L5.86999 11.2497L5.86562 11.241L4.92294 9.35559L5.87016 9.13198V11.2391H5.87004L5.87027 11.2496L5.87027 11.2497L5.8702 11.2501L5.86954 11.25L5.87019 11.2502L5.87013 11.2506L5.87027 11.2502L5.87051 11.2503L5.8699 11.2497ZM5.87047 11.2501L5.87031 11.2501L5.87045 11.2497L5.87046 11.2496L5.87046 11.2497L5.87045 11.25L5.86966 11.2503L5.87048 11.2502L5.87057 11.2501L5.87047 11.2501ZM14.1202 4.29612L14.8538 3.9083C15.0448 3.80737 15.2625 3.75 15.4952 3.75C14.7358 3.75 14.1202 4.36561 14.1202 5.125V4.29612ZM11.1679 0.906647L11.4604 1.38274L11.9012 1.03938C12.1342 0.857856 12.4264 0.75 12.7452 0.75C11.9864 0.75 11.3713 1.3645 11.3702 2.12296V1.625C11.3702 0.867407 10.7575 0.252917 10.0005 0.25001C10.4937 0.251904 10.9261 0.51307 11.1679 0.906647ZM7.95899 1.4495L8.4921 1.77418L8.69258 1.18305C8.86234 0.682495 9.31234 0.312192 9.85457 0.257099C9.16122 0.327513 8.62016 0.91307 8.62016 1.625L8.62016 2.625C8.62016 1.86561 8.00455 1.25 7.24516 1.25C7.5075 1.25 7.75127 1.32298 7.95899 1.4495ZM4.47768 14.3389L4.48022 14.3435C4.5063 14.3909 4.5322 14.4379 4.55795 14.4847C4.52622 14.4271 4.4942 14.369 4.46188 14.3104L4.46106 14.3089C4.27652 13.974 4.08283 13.6226 3.87943 13.2662C4.0982 13.6494 4.293 14.0033 4.47768 14.3389ZM3.87223 13.2536L3.87698 13.262L3.87223 13.2536Z" fill="currentColor" stroke="black" stroke-linecap="round"/>
-</g>
-<defs>
-<clipPath id="clip0_1213_2395">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
+<path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M9.90005 1.7164C10.1451 1.01541 10.7933 0.5 11.5791 0.5C12.2196 0.5 12.7688 0.842535 13.0826 1.3489C13.3774 1.12214 13.7443 0.986486 14.1474 0.986486C15.1519 0.986486 15.9316 1.8288 15.9316 2.82432V4.09114C16.1668 3.97248 16.4324 3.90541 16.7158 3.90541C17.7203 3.90541 18.5 4.74772 18.5 5.74324V11.7027C18.5 13.5039 18.1406 15.4252 17.2634 16.9149C16.3725 18.4277 14.938 19.5 12.8632 19.5C10.4562 19.5 9.023 18.9964 7.96085 17.9591C7.44516 17.4554 7.03871 16.8466 6.65069 16.1703C6.43265 15.7902 6.20718 15.364 5.96912 14.914C5.79367 14.5823 5.61138 14.2377 5.42018 13.8891L5.41366 13.8772L3.68192 10.269C3.23616 9.34028 3.63796 8.19449 4.59575 7.79537C5.45713 7.43642 6.42361 7.83255 6.82495 8.66879L7.22648 9.50539L7.22648 3.31081C7.22648 2.31528 8.0062 1.47297 9.01067 1.47297C9.33725 1.47297 9.64006 1.56201 9.90005 1.7164Z" fill="currentColor"/>
+<path d="M3.87027 13.5002L3.87138 13.5021L3.87037 13.5004L3.87027 13.5002ZM5.8699 11.4997L5.86999 11.4997L5.86562 11.491L4.92294 9.60559L5.87016 9.38198V11.4891H5.87004L5.87027 11.4996L5.87027 11.4997L5.8702 11.5001L5.86954 11.5L5.87019 11.5002L5.87013 11.5006L5.87027 11.5002L5.87051 11.5003L5.8699 11.4997ZM5.87047 11.5001L5.87031 11.5001L5.87045 11.4997L5.87046 11.4996L5.87046 11.4997L5.87045 11.5L5.86966 11.5003L5.87048 11.5002L5.87057 11.5001L5.87047 11.5001ZM14.1202 4.54612L14.8538 4.1583C15.0448 4.05737 15.2625 4 15.4952 4C14.7358 4 14.1202 4.61561 14.1202 5.375V4.54612ZM11.1679 1.15665L11.4604 1.63274L11.9012 1.28938C12.1342 1.10786 12.4264 1 12.7452 1C11.9864 1 11.3713 1.6145 11.3702 2.37296V1.875C11.3702 1.11741 10.7575 0.502917 10.0005 0.50001C10.4937 0.501904 10.9261 0.76307 11.1679 1.15665ZM7.95899 1.6995L8.4921 2.02418L8.69258 1.43305C8.86234 0.932495 9.31234 0.562192 9.85457 0.507099C9.16122 0.577513 8.62016 1.16307 8.62016 1.875L8.62016 2.875C8.62016 2.11561 8.00455 1.5 7.24516 1.5C7.5075 1.5 7.75127 1.57298 7.95899 1.6995ZM4.47768 14.5889L4.48022 14.5935C4.5063 14.6409 4.5322 14.6879 4.55795 14.7347C4.52622 14.6771 4.4942 14.619 4.46188 14.5604L4.46106 14.5589C4.27652 14.224 4.08283 13.8726 3.87943 13.5162C4.0982 13.8994 4.293 14.2533 4.47768 14.5889ZM3.87223 13.5036L3.87698 13.512L3.87223 13.5036Z" fill="currentColor" stroke="black" stroke-linecap="round"/>
 </svg>
 `;
 
@@ -4324,17 +4367,18 @@ const HandPointOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 const Handshake = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2579)">
 <g opacity="0.8">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M4.24646 3.91896C3.74289 3.69216 3.15081 3.91652 2.92401 4.42009L0.760673 9.22329C0.533869 9.72686 0.758231 10.3189 1.2618 10.5457L2.75161 11.2167C3.25518 11.4436 3.84726 11.2192 4.07406 10.7156L6.2374 5.91242C6.4642 5.40885 6.23984 4.81677 5.73627 4.58997L4.24646 3.91896ZM2.47306 9.84575C2.81617 10.0003 3.2196 9.84741 3.37413 9.5043C3.52867 9.16119 3.3758 8.75776 3.03268 8.60323C2.68957 8.44869 2.28615 8.60156 2.13161 8.94468C1.97707 9.28779 2.12995 9.69121 2.47306 9.84575Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M19.6149 10.6767C20.1313 10.481 20.3914 9.90371 20.1957 9.38725L18.3294 4.46105C18.1337 3.94459 17.5564 3.68454 17.0399 3.88021L15.512 4.4591C14.9955 4.65477 14.7355 5.23207 14.9311 5.74853L16.7975 10.6747C16.9932 11.1912 17.5705 11.4512 18.0869 11.2556L19.6149 10.6767ZM16.6783 5.23165C16.3264 5.36497 16.1492 5.75832 16.2826 6.11022C16.4159 6.46212 16.8092 6.63931 17.1611 6.50599C17.513 6.37266 17.6902 5.97931 17.5569 5.62742C17.4236 5.27552 17.0302 5.09833 16.6783 5.23165Z" fill="currentColor"/>
-<path d="M15.4853 5.5354L15.4617 5.53751L15.369 5.54603C15.2881 5.55362 15.1707 5.565 15.0254 5.58006C14.7347 5.6102 14.3334 5.65501 13.8909 5.71362C12.9921 5.83269 11.9708 6.00296 11.3472 6.21085C11.1398 6.28 10.8657 6.43562 10.5404 6.67331C10.2213 6.90648 9.87929 7.19903 9.53851 7.51609C8.85711 8.15008 8.20515 8.85915 7.78716 9.3318C7.64335 9.4944 7.66735 9.66771 7.75017 9.75767C8.01547 10.0458 8.36988 10.3366 8.77077 10.4573C9.13874 10.5682 9.59531 10.5527 10.15 10.1367L10.164 10.1261L11.1924 9.46197C11.4005 9.32753 11.7864 9.16779 12.1801 9.38337C12.4168 9.51298 12.7008 9.73111 12.9748 9.9608C13.2561 10.1966 13.5538 10.4676 13.8236 10.7218C14.094 10.9766 14.3398 11.2178 14.5178 11.395C14.6057 11.4825 14.6773 11.5547 14.7274 11.6055C14.794 11.6164 14.9101 11.6117 15.0962 11.5489C15.3359 11.4679 15.6088 11.3179 15.8787 11.1383C16.1447 10.9614 16.3876 10.7692 16.5655 10.6198C16.654 10.5455 16.7251 10.4827 16.7736 10.439C16.7979 10.4172 16.8164 10.4002 16.8285 10.389L17.5078 11.1228C17.4925 11.137 17.4706 11.1571 17.4427 11.1822C17.3869 11.2324 17.3071 11.3028 17.2088 11.3854C17.0132 11.5498 16.7394 11.7667 16.4327 11.9709C16.1299 12.1723 15.774 12.3754 15.4161 12.4963C15.0719 12.6125 14.6289 12.6851 14.2264 12.4839L14.1506 12.446L14.0916 12.3853L14.0174 12.3097C13.9691 12.2607 13.8989 12.1899 13.8122 12.1036C13.6386 11.9307 13.3997 11.6964 13.1378 11.4497C12.8754 11.2023 12.5932 10.9457 12.3324 10.7272C12.0953 10.5284 11.8956 10.378 11.7528 10.2912C11.7474 10.2942 11.7414 10.2978 11.7349 10.302L10.7355 10.9475C9.93854 11.5391 9.15884 11.6186 8.48235 11.4148C7.83467 11.2198 7.33357 10.7816 7.01447 10.435C6.52211 9.90018 6.6193 9.14285 7.03807 8.66932C7.46563 8.18587 8.14189 7.44963 8.85733 6.78397C9.21497 6.45122 9.58851 6.13036 9.9504 5.86591C10.3061 5.60598 10.6783 5.37975 11.0309 5.26219C11.7559 5.02048 12.8651 4.84078 13.7596 4.72228C14.2138 4.66212 14.6248 4.61623 14.9223 4.58539C15.0712 4.56996 15.1918 4.55827 15.2755 4.55041L15.3723 4.54151L15.3979 4.53923L15.4064 4.53849C15.6816 4.51484 15.9245 4.71864 15.9482 4.99377C15.9718 5.26889 15.7679 5.51109 15.4928 5.53475L15.4853 5.5354Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M5.64698 6.49619L5.45001 6.03662L5.25311 5.57702L5.29327 5.55987L5.4061 5.51188C5.50341 5.4706 5.64282 5.41169 5.81163 5.34103C6.14905 5.19978 6.60478 5.01119 7.07681 4.82238C7.54781 4.63399 8.03959 4.44353 8.44766 4.2995C8.65118 4.22767 8.83967 4.16532 8.99722 4.12031C9.13377 4.0813 9.30752 4.03662 9.45001 4.03662C9.57966 4.03662 9.71681 4.06634 9.82982 4.09647C9.95173 4.12898 10.0859 4.17332 10.2224 4.22297C10.496 4.32244 10.8048 4.45271 11.0906 4.57972C11.3777 4.70731 11.648 4.83452 11.8461 4.92961C11.9453 4.97723 12.0267 5.01696 12.0835 5.04488L12.1495 5.07744L12.1671 5.08618L12.1731 5.08914C12.4201 5.21263 12.5207 5.51324 12.3972 5.76023C12.2737 6.00721 11.9734 6.10732 11.7264 5.98385C11.7264 5.98384 11.7264 5.98385 11.7264 5.98385L11.7214 5.98132L11.7053 5.97334L11.6426 5.94243C11.5881 5.91566 11.5094 5.87727 11.4133 5.83113C11.2208 5.73872 10.9598 5.61593 10.6844 5.49353C10.4077 5.37053 10.1228 5.2508 9.8807 5.16277C9.75944 5.11867 9.65531 5.08488 9.57215 5.06271C9.50072 5.04366 9.4638 5.03846 9.45302 5.03709C9.45191 5.03743 9.44912 5.03798 9.44448 5.0389C9.42469 5.04284 9.3713 5.05345 9.27194 5.08184C9.14237 5.11886 8.9754 5.1737 8.78048 5.24249C8.39168 5.37972 7.91471 5.56426 7.4482 5.75086C6.98273 5.93705 6.53222 6.12346 6.19776 6.26347C6.03063 6.33343 5.8927 6.39171 5.79665 6.43246L5.68561 6.47969L5.64698 6.49619ZM4.99044 6.23358C4.88166 5.97977 4.9993 5.6858 5.25311 5.57702L5.45001 6.03662L5.64698 6.49619C5.39317 6.60496 5.09921 6.4874 4.99044 6.23358Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M3.08669 10.1931C3.2764 9.99246 3.59285 9.98358 3.79351 10.1733L3.45001 10.5366L3.10651 10.9C2.90585 10.7102 2.89698 10.3938 3.08669 10.1931ZM7.65682 13.5802L10.4197 14.6163C10.9705 14.8228 11.5912 14.6884 12.0071 14.2724L14.0965 12.1831C14.2917 11.9878 14.6083 11.9878 14.8036 12.1831C14.9988 12.3783 14.9988 12.6949 14.8036 12.8902L12.7142 14.9795C12.021 15.6728 10.9866 15.8968 10.0686 15.5526L7.24988 14.4956L7.22641 14.4838C7.09942 14.4203 6.94336 14.3083 6.79182 14.1918C6.63032 14.0677 6.44015 13.9117 6.23492 13.7378C5.82395 13.3895 5.33892 12.9575 4.87689 12.5384C4.41423 12.1186 3.97178 11.7092 3.64519 11.4048C3.48184 11.2526 3.34732 11.1265 3.25358 11.0384L3.14502 10.9363L3.10651 10.9L3.45001 10.5366L3.79351 10.1733L3.83095 10.2086L3.93831 10.3096C4.03121 10.3969 4.16472 10.5221 4.32695 10.6732C4.65154 10.9757 5.09051 11.382 5.54879 11.7977C6.00771 12.214 6.48315 12.6373 6.88147 12.9749C7.08089 13.1439 7.25757 13.2886 7.40129 13.399C7.53303 13.5003 7.61616 13.5564 7.65682 13.5802Z" fill="currentColor"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M3.88539 15.3956C4.23947 14.9717 4.8701 14.9152 5.29395 15.2692L6.25217 16.0697C6.39549 16.1895 6.56946 16.2667 6.75439 16.2926L7.99088 16.466C8.53781 16.5427 8.919 17.0483 8.84228 17.5952C8.76557 18.1422 8.26 18.5234 7.71307 18.4466L6.47658 18.2732C5.92179 18.1954 5.39987 17.9638 4.96994 17.6046L4.01171 16.8041C3.58786 16.45 3.53131 15.8194 3.88539 15.3956Z" fill="currentColor"/>
-<path d="M5.07712 5.99524L7.57712 4.99524H10.0771L14.95 5.53662L15.95 8.03662L16.95 10.5366L14.95 12.0366L11.45 15.0366L7.57712 14.1647L5.45001 12.5366L3.45001 10.5366L5.07712 5.99524Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4.16519 4.11513C3.66162 3.88833 3.06954 4.11269 2.84274 4.61626L0.760672 9.23902C0.533868 9.74259 0.75823 10.3347 1.2618 10.5615L2.66139 11.1918C3.16496 11.4186 3.75704 11.1943 3.98384 10.6907L6.06591 6.06795C6.29271 5.56439 6.06835 4.9723 5.56479 4.7455L4.16519 4.11513ZM2.41525 9.86925C2.74902 10.0196 3.14146 9.87087 3.29179 9.5371C3.44212 9.20333 3.29341 8.81089 2.95964 8.66056C2.62587 8.51024 2.23343 8.65895 2.0831 8.99272C1.93277 9.32649 2.08148 9.71893 2.41525 9.86925Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.0649 10.6873C19.5813 10.4916 19.8414 9.91433 19.6457 9.39787L17.8494 4.65673C17.6538 4.14027 17.0765 3.88021 16.56 4.07588L15.1246 4.61972C14.6081 4.81539 14.3481 5.39269 14.5437 5.90915L16.34 10.6503C16.5357 11.1668 17.113 11.4268 17.6294 11.2311L19.0649 10.6873ZM16.2337 5.38078C15.8914 5.51047 15.719 5.89311 15.8487 6.23543C15.9784 6.57775 16.3611 6.75011 16.7034 6.62042C17.0457 6.49073 17.2181 6.10809 17.0884 5.76577C16.9587 5.42345 16.576 5.25109 16.2337 5.38078Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.0817 5.68929C15.0817 5.68929 15.0817 5.68929 15.0817 5.68929L15.0744 5.68992L15.0514 5.69197L14.9613 5.70026C14.8827 5.70764 14.7685 5.7187 14.6273 5.73335C14.3445 5.76266 13.9543 5.80623 13.524 5.86323C12.6496 5.97906 11.6573 6.14456 11.0521 6.34634C10.8534 6.41258 10.5897 6.5618 10.2756 6.7909C9.96763 7.01554 9.63722 7.2976 9.30751 7.60387C8.64825 8.21627 8.01615 8.90259 7.60709 9.36458C7.46305 9.52725 7.4883 9.69877 7.57009 9.78676C7.82872 10.065 8.17019 10.3408 8.55403 10.4538C8.90555 10.5573 9.34247 10.5408 9.87501 10.1414L9.88902 10.1309L10.8836 9.48854C11.0929 9.35341 11.4802 9.1946 11.8735 9.41256C12.3113 9.65516 12.9667 10.2409 13.4709 10.7162C13.7329 10.9632 13.9709 11.1967 14.1432 11.3683C14.2262 11.451 14.2941 11.5195 14.3425 11.5684C14.4048 11.5777 14.5141 11.5727 14.6903 11.5132C14.9219 11.435 15.1862 11.2898 15.4483 11.1154C15.7065 10.9436 15.9424 10.757 16.1152 10.6119C16.2011 10.5397 16.2702 10.4787 16.3173 10.4363C16.3409 10.4152 16.3588 10.3987 16.3706 10.3878L16.3834 10.3758L16.3862 10.3732C16.3862 10.3732 16.3862 10.3733 16.3862 10.3732M13.7076 12.3492L13.7667 12.4099L13.8425 12.4478C14.2389 12.646 14.6741 12.5741 15.0102 12.4606C15.36 12.3425 15.7073 12.1442 16.0023 11.9479C16.3013 11.749 16.568 11.5376 16.7585 11.3775C16.8543 11.297 16.9321 11.2285 16.9864 11.1796C17.0136 11.1551 17.035 11.1355 17.0499 11.1216L17.0674 11.1053L17.0724 11.1007L17.0739 11.0992C17.074 11.0992 17.0747 11.0984 16.7306 10.7357L17.0747 11.0984C17.2751 10.9084 17.2834 10.5919 17.0933 10.3916C16.9033 10.1913 16.5865 10.1833 16.3862 10.3732M13.7076 12.3492L13.7033 12.3448L13.6896 12.3308L13.636 12.2762C13.5893 12.2288 13.5214 12.1604 13.4375 12.0769C13.2696 11.9097 13.0385 11.6829 12.7849 11.4438C12.2872 10.9747 11.7584 10.512 11.4426 10.3187C11.4375 10.3215 11.4321 10.3248 11.4262 10.3286L10.4604 10.9523C9.68828 11.5254 8.93107 11.6073 8.27162 11.4131C7.64035 11.2273 7.15111 10.8048 6.83765 10.4676C6.34126 9.93359 6.43947 9.17479 6.85839 8.70167C7.27706 8.22882 7.93353 7.5153 8.62692 6.8712C8.97354 6.54923 9.33549 6.23888 9.68629 5.98299C10.031 5.73157 10.3925 5.51214 10.7358 5.39767C11.4424 5.16209 12.5226 4.98715 13.3927 4.87189C13.8347 4.81334 14.2347 4.76869 14.5241 4.73868C14.669 4.72366 14.7864 4.71228 14.8678 4.70463L14.962 4.69597L14.987 4.69376L14.9953 4.69303C15.2704 4.66938 15.5134 4.87318 15.537 5.14831C15.5607 5.42343 15.3568 5.66563 15.0817 5.68929" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.50811 6.62356L5.31114 6.16399L5.11424 5.70439L5.15332 5.68769L5.26311 5.641C5.35778 5.60084 5.49342 5.54353 5.65765 5.47478C5.98593 5.33736 6.42933 5.15388 6.88859 4.97017C7.34682 4.78688 7.82542 4.60153 8.22264 4.46133C8.42073 4.39142 8.60439 4.33067 8.75802 4.28677C8.89066 4.24887 9.06144 4.20483 9.20222 4.20483C9.33017 4.20483 9.46498 4.23412 9.5752 4.26352C9.69432 4.29528 9.82524 4.33856 9.95828 4.38693C10.2248 4.48385 10.5256 4.61072 10.8037 4.73431C11.0831 4.85851 11.3461 4.98231 11.5389 5.07485C11.6355 5.12119 11.7147 5.15986 11.7701 5.18703L11.8343 5.21873L11.8514 5.22724L11.8572 5.23013C12.1042 5.35362 12.2049 5.65422 12.0814 5.90121C11.9579 6.14819 11.6576 6.24831 11.4106 6.12483C11.4106 6.12483 11.4106 6.12483 11.4106 6.12483L11.4057 6.12239L11.3901 6.11463L11.3292 6.08458C11.2762 6.05856 11.1997 6.02123 11.1062 5.97637C10.919 5.88651 10.6653 5.76712 10.3975 5.64813C10.1284 5.52853 9.85161 5.41221 9.61654 5.32673C9.49878 5.28391 9.39791 5.25118 9.31754 5.22975C9.25177 5.21221 9.21687 5.20699 9.2056 5.20546C9.20425 5.20581 9.2015 5.20637 9.19723 5.20723C9.17778 5.21115 9.12677 5.22143 9.03274 5.24829C8.90709 5.2842 8.74496 5.33744 8.55546 5.40432C8.1775 5.53772 7.71373 5.71715 7.25998 5.89865C6.80727 6.07973 6.3691 6.26104 6.04379 6.39722C5.88123 6.46527 5.74708 6.52195 5.65366 6.56158L5.54566 6.60751L5.50811 6.62356ZM4.85157 6.36095C4.74279 6.10714 4.86043 5.81317 5.11424 5.70439L5.31114 6.16399L5.50811 6.62356C5.2543 6.73233 4.96034 6.61477 4.85157 6.36095Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.00227 10.1979C3.19198 9.99722 3.50844 9.98834 3.7091 10.1781L3.3656 10.5414L3.0221 10.9047C2.82144 10.715 2.81256 10.3985 3.00227 10.1979ZM7.46371 13.4897L10.1175 14.4849C10.6683 14.6914 11.2889 14.557 11.7049 14.1411L13.7125 12.1334C13.9078 11.9381 14.2244 11.9381 14.4196 12.1334C14.6149 12.3286 14.6149 12.6452 14.4196 12.8405L12.412 14.8482C11.7187 15.5414 10.6843 15.7654 9.76638 15.4212L7.05655 14.405L7.03308 14.3933C6.90824 14.3309 6.75551 14.2212 6.60811 14.1079C6.45077 13.9869 6.2656 13.835 6.06588 13.6658C5.66593 13.3268 5.19397 12.9065 4.74448 12.4987C4.29436 12.0904 3.86391 11.692 3.54619 11.3959C3.38726 11.2478 3.2564 11.1251 3.1652 11.0395L3.05957 10.9401L3.0221 10.9047L3.3656 10.5414L3.7091 10.1781L3.74551 10.2124L3.84993 10.3107C3.94028 10.3956 4.07015 10.5173 4.22795 10.6643C4.54367 10.9585 4.97064 11.3537 5.41638 11.7581C5.86276 12.163 6.32512 12.5746 6.71243 12.9029C6.90634 13.0672 7.07803 13.2078 7.21759 13.3151C7.34492 13.413 7.42489 13.4669 7.46371 13.4897Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.76823 15.2505C4.12231 14.8267 4.75294 14.7701 5.17679 15.1242L6.09698 15.8929C6.2403 16.0127 6.41427 16.0899 6.5992 16.1158L7.78662 16.2824C8.33355 16.3591 8.71473 16.8646 8.63802 17.4116C8.5613 17.9585 8.05574 18.3397 7.50881 18.263L6.32139 18.0964C5.7666 18.0186 5.24468 17.787 4.81475 17.4278L3.89455 16.6591C3.47071 16.305 3.41415 15.6744 3.76823 15.2505Z" fill="currentColor"/>
+<path d="M4.9484 6.12365L7.38033 5.15088H9.81226L14.5525 5.67752L15.5252 8.10945L16.498 10.5414L14.5525 12.0005L11.1478 14.9189L7.38033 14.0706L5.31114 12.4869L3.3656 10.5414L4.9484 6.12365Z" fill="currentColor"/>
 </g>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.64645 2.49062C3.14289 2.26382 2.5508 2.48818 2.324 2.99174L0.160666 7.79495C-0.0661367 8.29851 0.158225 8.8906 0.661791 9.1174L2.15161 9.7884C2.65517 10.0152 3.24725 9.79085 3.47406 9.28728L5.63739 4.48407C5.8642 3.98051 5.63983 3.38843 5.13627 3.16162L3.64645 2.49062ZM1.87305 8.4174C2.21617 8.57194 2.61959 8.41907 2.77413 8.07596C2.92866 7.73284 2.77579 7.32942 2.43268 7.17488C2.08956 7.02035 1.68614 7.17322 1.5316 7.51633C1.37707 7.85944 1.52994 8.26287 1.87305 8.4174Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.0149 9.24833C19.5313 9.05266 19.7914 8.47537 19.5957 7.95891L17.7294 3.03271C17.5337 2.51625 16.9564 2.25619 16.4399 2.45186L14.912 3.03076C14.3955 3.22643 14.1354 3.80372 14.3311 4.32018L16.1975 9.24638C16.3932 9.76285 16.9705 10.0229 17.4869 9.82723L19.0149 9.24833ZM16.0783 3.8033C15.7264 3.93663 15.5492 4.32998 15.6826 4.68187C15.8159 5.03377 16.2092 5.21096 16.5611 5.07764C16.913 4.94432 17.0902 4.55097 16.9569 4.19907C16.8236 3.84717 16.4302 3.66998 16.0783 3.8033Z" fill="black"/>
-<path d="M14.8853 4.10706L14.8616 4.10916L14.769 4.11769C14.6881 4.12528 14.5707 4.13665 14.4254 4.15171C14.1347 4.18186 13.7334 4.22666 13.2909 4.28528C12.3921 4.40434 11.3708 4.57462 10.7472 4.78251C10.5398 4.85166 10.2657 5.00727 9.9404 5.24496C9.62132 5.47814 9.27928 5.77068 8.9385 6.08775C8.2571 6.72173 7.60515 7.43081 7.18715 7.90345C7.04335 8.06606 7.06735 8.23936 7.15016 8.32932C7.41547 8.61749 7.76988 8.90824 8.17077 9.029C8.53874 9.13984 8.9953 9.12434 9.55001 8.70831L9.56402 8.6978L10.5924 8.03362C10.8005 7.89918 11.1864 7.73944 11.5801 7.95503C11.8168 8.08463 12.1008 8.30276 12.3748 8.53246C12.6561 8.76826 12.9538 9.03928 13.2236 9.2935C13.494 9.5483 13.7398 9.78941 13.9178 9.96663C14.0057 10.0542 14.0773 10.1263 14.1274 10.1771C14.194 10.1881 14.31 10.1834 14.4962 10.1205C14.7359 10.0396 15.0088 9.88959 15.2787 9.70998C15.5447 9.53301 15.7876 9.34087 15.9655 9.19142C16.0539 9.11711 16.1251 9.05436 16.1736 9.01068C16.1979 8.98886 16.2285 8.96065 16.2285 8.96065L16.9078 9.69447C16.8925 9.70864 16.8706 9.72878 16.8427 9.75389C16.7869 9.80408 16.7071 9.87443 16.6088 9.95704C16.4132 10.1214 16.1394 10.3384 15.8327 10.5425C15.5299 10.744 15.174 10.9471 14.8161 11.068C14.4719 11.1842 14.0289 11.2568 13.6264 11.0555L13.5506 11.0177L13.4915 10.9569L13.2122 10.6753C13.0386 10.5024 12.7997 10.268 12.5378 10.0213C12.2754 9.774 11.9932 9.5174 11.7324 9.29883C11.4953 9.1001 11.2956 8.94962 11.1528 8.86284C11.1474 8.86588 11.1414 8.86946 11.1349 8.87365L10.1355 9.51917C9.33854 10.1108 8.55883 10.1903 7.88235 9.9865C7.23466 9.79141 6.73356 9.35323 6.41447 9.00663C5.92211 8.47183 6.01929 7.7145 6.43806 7.24098C6.86562 6.75752 7.54188 6.02129 8.25733 5.35563C8.61496 5.02288 8.9885 4.70202 9.35039 4.43757C9.7061 4.17763 10.0783 3.9514 10.4309 3.83384C11.1559 3.59214 12.2651 3.41244 13.1596 3.29394C13.6138 3.23377 14.0248 3.18789 14.3223 3.15705C14.4711 3.14161 14.5918 3.12992 14.6755 3.12206L14.7723 3.11316L14.7979 3.11089L14.8064 3.11014C15.0816 3.08649 15.3245 3.29029 15.3482 3.56542C15.3718 3.84054 15.1679 4.08274 14.8928 4.1064L14.8853 4.10706Z" fill="black" stroke="black" stroke-width="0.1" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.8853 4.10706L14.8928 4.1064C15.1679 4.08274 15.3718 3.84054 15.3482 3.56542C15.3245 3.29029 15.0816 3.08649 14.8064 3.11014L14.7979 3.11089L14.7723 3.11316L14.6755 3.12206C14.5918 3.12992 14.4711 3.14161 14.3223 3.15705C14.0248 3.18789 13.6138 3.23377 13.1596 3.29394C12.2651 3.41244 11.1559 3.59214 10.4309 3.83384C10.0783 3.9514 9.7061 4.17763 9.35039 4.43757C8.9885 4.70202 8.61496 5.02288 8.25733 5.35563C7.54188 6.02129 6.86562 6.75752 6.43806 7.24098C6.01929 7.7145 5.92211 8.47183 6.41447 9.00663C6.73356 9.35323 7.23466 9.79141 7.88235 9.9865C8.55883 10.1903 9.33854 10.1108 10.1355 9.51917L11.1349 8.87365C11.1414 8.86946 11.1474 8.86588 11.1528 8.86284C11.2956 8.94962 11.4953 9.1001 11.7324 9.29883C11.9932 9.5174 12.2754 9.774 12.5378 10.0213C12.7997 10.268 13.0386 10.5024 13.2122 10.6753C13.2989 10.7616 13.3691 10.8324 13.4174 10.8814L13.4729 10.9378L13.4871 10.9523L13.4915 10.9569L13.5506 11.0177L13.6264 11.0555C14.0289 11.2568 14.4719 11.1842 14.8161 11.068C15.174 10.9471 15.5299 10.744 15.8327 10.5425C16.1394 10.3384 16.4132 10.1214 16.6088 9.95704C16.7071 9.87443 16.7869 9.80408 16.8427 9.75389C16.8706 9.72878 16.8925 9.70864 16.9078 9.69447L16.9258 9.67779L16.9308 9.67301L16.9324 9.67156C16.9324 9.67156 16.8442 9.3627 16.5 9L16.2285 9.33984L16 10L13.4915 10.9569L14 10.5L13.7317 9.78269C13.5833 9.63691 13.4093 9.46844 13.2236 9.2935C12.9538 9.03928 12.6561 8.76826 12.3748 8.53246C12.1008 8.30276 11.8168 8.08463 11.5801 7.95503C11.1864 7.73944 10.8005 7.89918 10.5924 8.03362L9.56402 8.6978L9.55001 8.70831C8.9953 9.12434 8.53874 9.13984 8.17077 9.029C7.76988 8.90824 7.41547 8.61749 7.15016 8.32932C7.06735 8.23936 7.04335 8.06606 7.18715 7.90345C7.60515 7.43081 8.2571 6.72173 8.9385 6.08775C9.27928 5.77068 9.62132 5.47814 9.9404 5.24496C10.2657 5.00727 10.5398 4.85166 10.7472 4.78251C11.3708 4.57461 12.3921 4.40434 13.2909 4.28528C13.7334 4.22666 14.1347 4.18186 14.4254 4.15171C14.5707 4.13665 14.6881 4.12528 14.769 4.11769L14.8616 4.10916L14.8853 4.10706Z" fill="black"/>
+<path d="M14.1274 10.1771C14.0773 10.1263 14.0057 10.0542 13.9178 9.96663C13.862 9.91108 13.7995 9.84925 13.7317 9.78269L14 10.5L13.4915 10.9569L16 10L16.2285 9.33984L16.5 9L16.2447 8.94558L16.2418 8.94828L16.2285 8.96065C16.2164 8.97187 16.1979 8.98886 16.1736 9.01068C16.1251 9.05436 16.0539 9.11711 15.9655 9.19142C15.7876 9.34087 15.5447 9.53301 15.2787 9.70998C15.0088 9.88959 14.7359 10.0396 14.4962 10.1205C14.31 10.1834 14.194 10.1881 14.1274 10.1771Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.04698 5.06784L4.85 4.60828L4.65311 4.14868L4.69326 4.13152L4.80609 4.08353C4.9034 4.04225 5.04281 3.98334 5.21162 3.91268C5.54904 3.77144 6.00478 3.58285 6.47681 3.39404C6.9478 3.20564 7.43958 3.01518 7.84765 2.87116C8.05117 2.79933 8.23967 2.73698 8.39721 2.69197C8.53376 2.65295 8.70752 2.60828 8.85 2.60828C8.97965 2.60828 9.1168 2.63799 9.22981 2.66813C9.35173 2.70064 9.48589 2.74498 9.62244 2.79463C9.89597 2.8941 10.2048 3.02437 10.4906 3.15137C10.7777 3.27897 11.048 3.40618 11.2461 3.50126C11.3453 3.54888 11.4267 3.58861 11.4835 3.61653L11.5495 3.64909L11.5671 3.65784L11.5731 3.66079C11.8201 3.78429 11.9207 4.08489 11.7972 4.33188C11.6737 4.57887 11.3734 4.67898 11.1264 4.5555C11.1264 4.5555 11.1264 4.5555 11.1264 4.5555L11.1214 4.55298L11.1053 4.545L11.0426 4.51408C10.9881 4.48732 10.9094 4.44892 10.8133 4.40279C10.6208 4.31037 10.3598 4.18758 10.0844 4.06518C9.80769 3.94218 9.52279 3.82246 9.28069 3.73442C9.15943 3.69033 9.05531 3.65654 8.97215 3.63436C8.90071 3.61531 8.8638 3.61012 8.85301 3.60875C8.8519 3.60908 8.84911 3.60964 8.84447 3.61056C8.82468 3.61449 8.7713 3.6251 8.67193 3.65349C8.54237 3.69051 8.3754 3.74535 8.18047 3.81415C7.79167 3.95137 7.3147 4.13591 6.8482 4.32251C6.38273 4.5087 5.93221 4.69512 5.59776 4.83512C5.43063 4.90508 5.2927 4.96336 5.19664 5.00411L5.0856 5.05134L5.04698 5.06784ZM4.39043 4.80524C4.28165 4.55142 4.39929 4.25745 4.65311 4.14868L4.85 4.60828L5.04698 5.06784C4.79316 5.17662 4.49921 5.05905 4.39043 4.80524Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.48668 8.76478C2.67639 8.56412 2.99285 8.55524 3.19351 8.74495L2.85001 9.10828L2.50651 9.47161C2.30585 9.2819 2.29697 8.96544 2.48668 8.76478ZM7.05681 12.1518L9.81974 13.1879C10.3705 13.3945 10.9912 13.26 11.4071 12.8441L13.4965 10.7547C13.6917 10.5595 14.0083 10.5595 14.2036 10.7547C14.3988 10.95 14.3988 11.2666 14.2036 11.4618L12.1142 13.5512C11.421 14.2444 10.3866 14.4685 9.46862 14.1243L6.64987 13.0672L6.6264 13.0555C6.49941 12.992 6.34336 12.88 6.19181 12.7635C6.03031 12.6393 5.84014 12.4834 5.63491 12.3094C5.22395 11.9611 4.73892 11.5292 4.27689 11.11C3.81423 10.6903 3.37178 10.2808 3.04519 9.97647C2.88183 9.82424 2.74732 9.69817 2.65358 9.6101L2.54501 9.50794L2.50651 9.47161L2.85001 9.10828L3.19351 8.74495L3.23095 8.78028L3.33831 8.8813C3.4312 8.96858 3.56472 9.09371 3.72695 9.2449C4.05154 9.54738 4.4905 9.95362 4.94879 10.3694C5.4077 10.7857 5.88314 11.209 6.28147 11.5466C6.48088 11.7156 6.65757 11.8602 6.80129 11.9707C6.93302 12.072 7.01616 12.1281 7.05681 12.1518Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.66911 14.2878C3.84615 14.0759 4.16147 14.0476 4.37339 14.2246L5.33162 15.0251C5.54659 15.2047 5.80754 15.3205 6.08494 15.3594L7.32143 15.5329C7.5949 15.5712 7.78549 15.824 7.74713 16.0975C7.70878 16.3709 7.45599 16.5615 7.18253 16.5232L5.94603 16.3497C5.48371 16.2849 5.04878 16.0919 4.6905 15.7926L3.73227 14.9921C3.52035 14.815 3.49207 14.4997 3.66911 14.2878Z" fill="black"/>
@@ -4512,12 +4556,15 @@ const Letter = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 
 const LetterOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
-<path d="M5.53 6.3125C5.25 6.3125 5.03 6.5325 5.03 6.8125V8.3625L4.61 8.6825C4.23 8.9725 4 9.4325 4 9.9125V18.9325C4 19.0625 4.05 19.1925 4.14 19.2725C4.24 19.3725 4.37 19.4325 4.5 19.4325H19.43C19.57 19.4325 19.69 19.3825 19.78 19.2925C19.88 19.1925 19.93 19.0625 19.93 18.9325V9.9025C19.93 9.4325 19.7 8.9725 19.32 8.6825L18.9 8.3525V6.8025C18.9 6.6825 18.84 6.5525 18.74 6.4425C18.66 6.3525 18.53 6.3025 18.4 6.3025H16.2L12.88 3.7925C12.37 3.4025 11.57 3.4025 11.05 3.7925L7.73 6.3125H5.53Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10.9453 3.16795C11.2812 2.94402 11.7188 2.94402 12.0547 3.16795L16.3028 6H18C18.5523 6 19 6.44772 19 7V9C19.5523 9 20 9.44772 20 10V19C20 19.5523 19.5523 20 19 20H4C3.44772 20 3 19.5523 3 19V10C3 9.44772 3.44772 9 4 9V7C4 6.44772 4.44772 6 5 6H6.69722L10.9453 3.16795Z" fill="currentColor"/>
 </g>
-<path d="M3.53 4.8125C3.25 4.8125 3.03 5.0325 3.03 5.3125V6.8625L2.61 7.1825C2.23 7.4725 2 7.9325 2 8.4125V17.4325C2 17.5625 2.05 17.6925 2.14 17.7725C2.24 17.8725 2.37 17.9325 2.5 17.9325H17.43C17.57 17.9325 17.69 17.8825 17.78 17.7925C17.88 17.6925 17.93 17.5625 17.93 17.4325V8.4025C17.93 7.9325 17.7 7.4725 17.32 7.1825L16.9 6.8525V5.3025C16.9 5.1825 16.84 5.0525 16.74 4.9425C16.66 4.8525 16.53 4.8025 16.4 4.8025H14.2L10.88 2.2925C10.37 1.9025 9.57 1.9025 9.05 2.2925L5.73 4.8125H3.53ZM16.94 16.9325H3V10.4425L9.06 15.0525C9.58 15.4425 10.37 15.4425 10.89 15.0525L16.94 10.4425V16.9325V16.9325ZM9.97 14.3525C9.86 14.3525 9.75 14.3225 9.65 14.2525L4.03 9.9725V5.8125H15.91V9.9725L10.29 14.2425C10.21 14.3125 10.09 14.3525 9.98 14.3525H9.97ZM12.54 4.8125H7.39L9.64 3.0825C9.81 2.9425 10.08 2.9325 10.27 3.0825L12.53 4.8125H12.54Z" fill="black"/>
-<path d="M13.34 8.05238H6.59003C6.36003 8.05238 6.16003 7.86238 6.16003 7.62238C6.16003 7.38238 6.35003 7.19238 6.59003 7.19238H13.34C13.57 7.19238 13.77 7.38238 13.77 7.62238C13.77 7.86238 13.58 8.05238 13.34 8.05238Z" fill="black"/>
-<path d="M11.62 11.4924H8.31C8.08 11.4924 7.88 11.3024 7.88 11.0624C7.88 10.8224 8.07 10.6324 8.31 10.6324H11.62C11.85 10.6324 12.05 10.8224 12.05 11.0624C12.05 11.3024 11.86 11.4924 11.62 11.4924Z" fill="black"/>
-<path d="M13.34 9.77248H6.59003C6.36003 9.77248 6.16003 9.58248 6.16003 9.34248C6.16003 9.10248 6.35003 8.91248 6.59003 8.91248H13.34C13.57 8.91248 13.77 9.10248 13.77 9.34248C13.77 9.58248 13.58 9.77248 13.34 9.77248Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 8C2.77614 8 3 8.22386 3 8.5V17H17V8.5C17 8.22386 17.2239 8 17.5 8C17.7761 8 18 8.22386 18 8.5V17.5C18 17.7761 17.7761 18 17.5 18H2.5C2.22386 18 2 17.7761 2 17.5V8.5C2 8.22386 2.22386 8 2.5 8Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 5.5C3 5.22386 3.22386 5 3.5 5H16.5C16.7761 5 17 5.22386 17 5.5V10.17C17 10.3372 16.9164 10.4934 16.7772 10.5861L10.2772 14.9161C10.1093 15.028 9.89068 15.028 9.7228 14.9161L3.2228 10.5861C3.08361 10.4934 3 10.3372 3 10.17V5.5ZM4 6V9.90229L10 13.8992L16 9.90229V6H4Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M9.72266 2.08397C9.89061 1.97201 10.1094 1.97201 10.2774 2.08397L14.7774 5.08397L14.2227 5.91603L10 3.10093L5.77736 5.91603L5.22266 5.08397L9.72266 2.08397Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.8535 7.14642L17.8535 8.14642L17.1464 8.85353L16.1464 7.85353L16.8535 7.14642Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.85353 7.85353L2.85353 8.85353L2.14642 8.14642L3.14642 7.14642L3.85353 7.85353Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 8C6.75 7.86193 6.86193 7.75 7 7.75H13C13.1381 7.75 13.25 7.86193 13.25 8C13.25 8.13807 13.1381 8.25 13 8.25H7C6.86193 8.25 6.75 8.13807 6.75 8Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.25 10C7.25 9.86193 7.36193 9.75 7.5 9.75H12.5C12.6381 9.75 12.75 9.86193 12.75 10C12.75 10.1381 12.6381 10.25 12.5 10.25H7.5C7.36193 10.25 7.25 10.1381 7.25 10Z" fill="black"/>
 </svg>
 `;
 
@@ -4875,6 +4922,15 @@ const NextTrack = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
+const NoEntry = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.8">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5 11.5C5 7.35786 8.35786 4 12.5 4C16.6421 4 20 7.35786 20 11.5C20 15.6421 16.6421 19 12.5 19C8.35786 19 5 15.6421 5 11.5Z" fill="currentColor"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 3.5C6.41015 3.5 3.5 6.41015 3.5 10C3.5 13.5899 6.41015 16.5 10 16.5C13.5899 16.5 16.5 13.5899 16.5 10C16.5 6.41015 13.5899 3.5 10 3.5ZM2.5 10C2.5 5.85786 5.85786 2.5 10 2.5C14.1421 2.5 17.5 5.85786 17.5 10C17.5 14.1421 14.1421 17.5 10 17.5C5.85786 17.5 2.5 14.1421 2.5 10Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.3036 4.6965C15.4989 4.89176 15.4989 5.20834 15.3036 5.4036L5.4036 15.3036C5.20834 15.4989 4.89176 15.4989 4.6965 15.3036C4.50123 15.1083 4.50123 14.7918 4.6965 14.5965L14.5965 4.6965C14.7918 4.50123 15.1083 4.50123 15.3036 4.6965Z" fill="black"/>
+</svg>
+`;
+
 const Open = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect opacity="0.8" x="7" y="6" width="11" height="11" rx="1" fill="currentColor"/>
 <path d="M14.5 14.5V11.25C14.5 10.9739 14.7239 10.75 15 10.75C15.2761 10.75 15.5 10.9739 15.5 11.25V15C15.5 15.2761 15.2761 15.5 15 15.5H5C4.72386 15.5 4.5 15.2761 4.5 15V5C4.5 4.72386 4.72386 4.5 5 4.5H8.75C9.02614 4.5 9.25 4.72386 9.25 5C9.25 5.27614 9.02614 5.5 8.75 5.5H5.5V14.5H14.5Z" fill="black"/>
@@ -5225,35 +5281,22 @@ const Printer = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 
 const QrCode = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
-<mask id="path-1-inside-1_303_5008" fill="white">
-<rect x="5" y="5" width="13.5" height="13.5" rx="0.5"/>
-</mask>
-<rect x="5" y="5" width="13.5" height="13.5" rx="0.5" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linecap="square" stroke-linejoin="round" mask="url(#path-1-inside-1_303_5008)"/>
+<path d="M5 5.5C5 5.22386 5.22386 5 5.5 5H18C18.2761 5 18.5 5.22386 18.5 5.5V18C18.5 18.2761 18.2761 18.5 18 18.5H5.5C5.22386 18.5 5 18.2761 5 18V5.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 6.5V17H17V6.5H6.5ZM5.5 5C5.22386 5 5 5.22386 5 5.5V18C5 18.2761 5.22386 18.5 5.5 18.5H18C18.2761 18.5 18.5 18.2761 18.5 18V5.5C18.5 5.22386 18.2761 5 18 5H5.5Z" fill="currentColor"/>
 </g>
-<mask id="path-2-inside-2_303_5008" fill="white">
-<rect x="4.5" y="4.5" width="5" height="5" rx="0.5"/>
-</mask>
-<rect x="4.5" y="4.5" width="5" height="5" rx="0.5" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" mask="url(#path-2-inside-2_303_5008)"/>
-<mask id="path-3-inside-3_303_5008" fill="white">
-<rect x="10.5" y="4.5" width="5" height="5" rx="0.5"/>
-</mask>
-<rect x="10.5" y="4.5" width="5" height="5" rx="0.5" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" mask="url(#path-3-inside-3_303_5008)"/>
-<mask id="path-4-inside-4_303_5008" fill="white">
-<rect x="4.5" y="10.5" width="5" height="5" rx="0.5"/>
-</mask>
-<rect x="4.5" y="10.5" width="5" height="5" rx="0.5" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" mask="url(#path-4-inside-4_303_5008)"/>
-<mask id="path-5-inside-5_303_5008" fill="white">
-<rect x="10.5" y="10.5" width="5" height="5" rx="0.5"/>
-</mask>
-<rect x="10.5" y="10.5" width="5" height="5" rx="0.5" fill="black" stroke="black" stroke-width="2" stroke-linecap="square" stroke-linejoin="round" mask="url(#path-5-inside-5_303_5008)"/>
-<path d="M3 3H6.5" stroke="black" stroke-linecap="round"/>
-<path d="M3 3V6.5" stroke="black" stroke-linecap="round"/>
-<path d="M3 17L3 13.5" stroke="black" stroke-linecap="round"/>
-<path d="M3 17H6.5" stroke="black" stroke-linecap="round"/>
-<path d="M17 17H13.5" stroke="black" stroke-linecap="round"/>
-<path d="M17 17V13.5" stroke="black" stroke-linecap="round"/>
-<path d="M17 3V6.5" stroke="black" stroke-linecap="round"/>
-<path d="M17 3L13.5 3" stroke="black" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 5.5V8.5H8.5V5.5H5.5ZM5 4.5C4.72386 4.5 4.5 4.72386 4.5 5V9C4.5 9.27614 4.72386 9.5 5 9.5H9C9.27614 9.5 9.5 9.27614 9.5 9V5C9.5 4.72386 9.27614 4.5 9 4.5H5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 5.5V8.5H14.5V5.5H11.5ZM11 4.5C10.7239 4.5 10.5 4.72386 10.5 5V9C10.5 9.27614 10.7239 9.5 11 9.5H15C15.2761 9.5 15.5 9.27614 15.5 9V5C15.5 4.72386 15.2761 4.5 15 4.5H11Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 11.5V14.5H8.5V11.5H5.5ZM5 10.5C4.72386 10.5 4.5 10.7239 4.5 11V15C4.5 15.2761 4.72386 15.5 5 15.5H9C9.27614 15.5 9.5 15.2761 9.5 15V11C9.5 10.7239 9.27614 10.5 9 10.5H5Z" fill="black"/>
+<path d="M10.5 11C10.5 10.7239 10.7239 10.5 11 10.5H15C15.2761 10.5 15.5 10.7239 15.5 11V15C15.5 15.2761 15.2761 15.5 15 15.5H11C10.7239 15.5 10.5 15.2761 10.5 15V11Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 11.5V14.5H14.5V11.5H11.5ZM11 10.5C10.7239 10.5 10.5 10.7239 10.5 11V15C10.5 15.2761 10.7239 15.5 11 15.5H15C15.2761 15.5 15.5 15.2761 15.5 15V11C15.5 10.7239 15.2761 10.5 15 10.5H11Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 3C2.5 2.72386 2.72386 2.5 3 2.5H6.5C6.77614 2.5 7 2.72386 7 3C7 3.27614 6.77614 3.5 6.5 3.5H3C2.72386 3.5 2.5 3.27614 2.5 3Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 2.5C3.27614 2.5 3.5 2.72386 3.5 3L3.5 6.5C3.5 6.77614 3.27614 7 3 7C2.72386 7 2.5 6.77614 2.5 6.5V3C2.5 2.72386 2.72386 2.5 3 2.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3 17.5C2.72386 17.5 2.5 17.2761 2.5 17L2.5 13.5C2.5 13.2239 2.72386 13 3 13C3.27614 13 3.5 13.2239 3.5 13.5L3.5 17C3.5 17.2761 3.27614 17.5 3 17.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 17C2.5 16.7239 2.72386 16.5 3 16.5H6.5C6.77614 16.5 7 16.7239 7 17C7 17.2761 6.77614 17.5 6.5 17.5H3C2.72386 17.5 2.5 17.2761 2.5 17Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 17C17.5 17.2761 17.2761 17.5 17 17.5H13.5C13.2239 17.5 13 17.2761 13 17C13 16.7239 13.2239 16.5 13.5 16.5H17C17.2761 16.5 17.5 16.7239 17.5 17Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17 17.5C16.7239 17.5 16.5 17.2761 16.5 17V13.5C16.5 13.2239 16.7239 13 17 13C17.2761 13 17.5 13.2239 17.5 13.5V17C17.5 17.2761 17.2761 17.5 17 17.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17 2.5C17.2761 2.5 17.5 2.72386 17.5 3V6.5C17.5 6.77614 17.2761 7 17 7C16.7239 7 16.5 6.77614 16.5 6.5V3C16.5 2.72386 16.7239 2.5 17 2.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 3C17.5 3.27614 17.2761 3.5 17 3.5L13.5 3.5C13.2239 3.5 13 3.27614 13 3C13 2.72386 13.2239 2.5 13.5 2.5L17 2.5C17.2761 2.5 17.5 2.72386 17.5 3Z" fill="black"/>
 </svg>
 `;
 
@@ -5468,6 +5511,13 @@ const Smartphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
+const SmartphoneCutout = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M6 2.5C6 1.67157 6.67157 1 7.5 1H15.5C16.3284 1 17 1.67157 17 2.5V18.5C17 19.3284 16.3284 20 15.5 20H7.5C6.67157 20 6 19.3284 6 18.5V2.5Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M4 2C4 1.17157 4.67157 0.5 5.5 0.5H14.5C15.3284 0.5 16 1.17157 16 2V18C16 18.8284 15.3284 19.5 14.5 19.5H5.5C4.67157 19.5 4 18.8284 4 18V2ZM5.5 1.5C5.22386 1.5 5 1.72386 5 2V18C5 18.2761 5.22386 18.5 5.5 18.5H14.5C14.7761 18.5 15 18.2761 15 18V2C15 1.72386 14.7761 1.5 14.5 1.5H5.5Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3C7.5 2.44772 7.94772 2 8.5 2H11.5C12.0523 2 12.5 2.44772 12.5 3C12.5 3.55228 12.0523 4 11.5 4H8.5C7.94772 4 7.5 3.55228 7.5 3Z" fill="black"/>
+</svg>
+`;
+
 const SmartphoneNotch = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6 2.5C6 1.67157 6.67157 1 7.5 1H16.5C17.3284 1 18 1.67157 18 2.5V18.5C18 19.3284 17.3284 20 16.5 20H7.5C6.67157 20 6 19.3284 6 18.5V2.5Z" fill="currentColor"/>
@@ -5560,6 +5610,19 @@ const Star = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 15.8995L6.86475 18L7.39781 12.8702L4 9.03851L8.96471 7.96859L11.5 3.5L14.0353 7.96859L19 9.03851L15.6022 12.8702L16.1353 18L11.5 15.8995Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.57113 17.4554L10 15.4484L14.4289 17.4554C14.7806 17.6148 15.1725 17.3324 15.1326 16.9483L14.6223 12.0373L17.8741 8.37025C18.128 8.08399 17.9794 7.63033 17.6053 7.54973L12.8596 6.52701L10.4349 2.25327C10.2433 1.91558 9.75672 1.91558 9.56513 2.25327L7.14039 6.52701L2.39468 7.54973C2.02067 7.63033 1.87207 8.08399 2.12591 8.37025L5.37776 12.0373L4.86744 16.9483C4.82753 17.3324 5.21945 17.6148 5.57113 17.4554ZM9.79364 14.4441L5.95215 16.1849L6.39514 11.9218C6.40963 11.7824 6.36492 11.6433 6.27192 11.5384L3.44186 8.34701L7.57005 7.45737C7.70938 7.42735 7.82927 7.33929 7.8996 7.21533L10 3.51324L12.1004 7.21533C12.1708 7.33929 12.2906 7.42735 12.43 7.45737L16.5582 8.34701L13.7281 11.5384C13.6351 11.6433 13.5904 11.7824 13.6049 11.9218L14.0479 16.1849L10.2064 14.4441C10.0752 14.3846 9.9248 14.3846 9.79364 14.4441Z" fill="black"/>
+</svg>
+`;
+
+const Stars = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1749_644)">
+<path d="M9 20C8.56 20 8.17 19.71 8.04 19.29L6.13 12.88L0.63 10.69C0.25 10.54 0 10.17 0 9.75C0 9.33 0.27 8.97 0.66 8.82L6.19 6.8L8.04 0.71C8.17 0.29 8.56 0 9 0C9.44 0 9.83 0.29 9.96 0.71L11.82 6.8L17.35 8.82C17.74 8.96 18 9.33 18.01 9.75C18.02 10.17 17.76 10.54 17.38 10.69L11.88 12.87L9.97 19.28C9.84 19.7 9.45 19.99 9.01 19.99L9 20ZM3.81 9.8L7.32 11.2C7.6 11.31 7.82 11.55 7.91 11.84L9 15.5L10.09 11.84C10.18 11.55 10.39 11.31 10.68 11.2L14.19 9.8L10.65 8.51C10.36 8.4 10.13 8.16 10.04 7.86L9 4.43L7.96 7.86C7.87 8.16 7.64 8.4 7.35 8.51L3.81 9.8V9.8Z" fill="currentColor"/>
+<path d="M17 20C16.7 20 16.45 19.77 16.42 19.47C16.22 17.52 16.14 17.15 14.53 17C14.22 16.96 14 16.72 14 16.42C14 16.12 14.23 15.87 14.53 15.84C16.14 15.69 16.23 15.44 16.42 13.52C16.45 13.22 16.7 13 17 13C17.3 13 17.55 13.23 17.58 13.52C17.77 15.44 17.86 15.69 19.47 15.84C19.77 15.87 20 16.12 20 16.42C20 16.72 19.78 16.97 19.48 17C17.87 17.15 17.78 17.52 17.58 19.47C17.55 19.77 17.3 19.99 17 19.99V20Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_1749_644">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
 </svg>
 `;
 
@@ -5721,6 +5784,22 @@ const TextBubble = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 <circle cx="7" cy="9" r="1" fill="black"/>
 <circle cx="10" cy="9" r="1" fill="black"/>
 <circle cx="13" cy="9" r="1" fill="black"/>
+</svg>
+`;
+
+const TextBubbles = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1812_524)">
+<path d="M5.00781 8C5.55979 8 6.00725 7.55228 6.00725 7C6.00725 6.44772 5.55979 6 5.00781 6C4.45583 6 4.00836 6.44772 4.00836 7C4.00836 7.55228 4.45583 8 5.00781 8Z" fill="currentColor"/>
+<path d="M8.00616 8C8.55814 8 9.0056 7.55228 9.0056 7C9.0056 6.44772 8.55814 6 8.00616 6C7.45418 6 7.00671 6.44772 7.00671 7C7.00671 7.55228 7.45418 8 8.00616 8Z" fill="currentColor"/>
+<path d="M11.0045 8C11.5564 8 12.0039 7.55228 12.0039 7C12.0039 6.44772 11.5564 6 11.0045 6C10.4525 6 10.005 6.44772 10.005 7C10.005 7.55228 10.4525 8 11.0045 8Z" fill="currentColor"/>
+<path d="M4.70706 14.5C3.72767 14.5 3.17801 13.51 2.8782 12.6C1.2792 12.54 0 11.22 0 9.6V4.5C0.00999375 2.85 1.35915 1.5 3.00812 1.5H13.0019C14.6508 1.5 16 2.85 16 4.5V9.6C16 11.25 14.6508 12.6 13.0019 12.6H7.8351C5.68645 14.5 4.9569 14.5 4.70706 14.5ZM3.00812 3.5C2.45846 3.5 2.00874 3.95 2.00874 4.5V9.6C2.00874 10.15 2.45846 10.6 3.00812 10.6H4.46721L4.6371 11.39C4.70706 11.71 4.81699 12.07 4.92692 12.33C5.38663 12.04 6.13617 11.45 6.78576 10.86L7.07558 10.6H13.0119C13.5615 10.6 14.0112 10.15 14.0112 9.6V4.5C14.0112 3.95 13.5615 3.5 13.0119 3.5H3.00812Z" fill="currentColor"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4009 8.70001C16.4009 8.14773 16.8486 7.70001 17.4009 7.70001C18.8332 7.70001 20 8.86825 20 10.3V14.38C20 15.7325 18.9589 16.8498 17.6363 16.9694C17.6211 17.0121 17.6051 17.0554 17.5884 17.099C17.503 17.321 17.3757 17.6063 17.1943 17.8538C17.0431 18.06 16.6636 18.5 16.0316 18.5C15.7599 18.5 15.5253 18.4117 15.3889 18.3529C15.2317 18.2851 15.0778 18.1989 14.9395 18.1136C14.6619 17.9423 14.3697 17.7259 14.1157 17.5262C13.8613 17.3263 13.6264 17.1283 13.4549 16.98H10.3948C8.96245 16.98 7.79565 15.8118 7.79565 14.38C7.79565 13.8277 8.24337 13.38 8.79565 13.38C9.34794 13.38 9.79565 13.8277 9.79565 14.38C9.79565 14.7083 10.0681 14.98 10.3948 14.98H14.22L14.506 15.2405L14.5091 15.2433L14.5212 15.2542L14.5706 15.2985C14.6142 15.3373 14.6779 15.3935 14.7561 15.4612C14.9135 15.5973 15.126 15.7765 15.3516 15.9538C15.494 16.0658 15.6346 16.1713 15.7647 16.2624C15.8019 16.1543 15.8331 16.0477 15.8571 15.9582C15.8732 15.8984 15.8852 15.8492 15.893 15.8163L15.9012 15.7803L15.9027 15.7738L15.9029 15.7726L16.0697 14.98H17.4009C17.7276 14.98 18 14.7083 18 14.38V10.3C18 9.97177 17.7276 9.70001 17.4009 9.70001C16.8486 9.70001 16.4009 9.2523 16.4009 8.70001Z" fill="currentColor"/>
+</g>
+<defs>
+<clipPath id="clip0_1812_524">
+<rect width="20" height="20" fill="white"/>
+</clipPath>
+</defs>
 </svg>
 `;
 
@@ -6013,6 +6092,7 @@ const printCellphoneLoop = CellphoneLoop;
 const printChain = Chain;
 const printCheckmark = Checkmark;
 const printCircle = Circle;
+const printClapperboard = Clapperboard;
 const printClipboard = Clipboard;
 const printClipboardCheck = ClipboardCheck;
 const printClipboardCheckCircle = ClipboardCheckCircle;
@@ -6058,6 +6138,7 @@ const printFoldingStool = FoldingStool;
 const printGear = Gear;
 const printGift = Gift;
 const printGrab = Grab;
+const printGrid = Grid;
 const printHamburger = Hamburger;
 const printHandGrab = HandGrab;
 const printHandOpen = HandOpen;
@@ -6103,6 +6184,7 @@ const printMoveY = MoveY;
 const printMusicNoteDouble = MusicNoteDouble;
 const printMusicNoteSingle = MusicNoteSingle;
 const printNextTrack = NextTrack;
+const printNoEntry = NoEntry;
 const printOpen = Open;
 const printPaintPallet = PaintPallet;
 const printPause = Pause;
@@ -6141,6 +6223,7 @@ const printShareIos = ShareIos;
 const printShuffle = Shuffle;
 const printSliders = Sliders;
 const printSmartphone = Smartphone;
+const printSmartphoneCutout = SmartphoneCutout;
 const printSmartphoneNotch = SmartphoneNotch;
 const printSmartphone2 = Smartphone2;
 const printSoftDrink = SoftDrink;
@@ -6150,6 +6233,7 @@ const printSpeakerLow = SpeakerLow;
 const printSpeakerOff = SpeakerOff;
 const printSquare = Square;
 const printStar = Star;
+const printStars = Stars;
 const printStopwatch = Stopwatch;
 const printStudioBackdrop = StudioBackdrop;
 const printStudioLightFront = StudioLightFront;
@@ -6160,6 +6244,7 @@ const printTShirt = TShirt;
 const printTaxi = Taxi;
 const printTelevision = Television;
 const printTextBubble = TextBubble;
+const printTextBubbles = TextBubbles;
 const printThumbsDown = ThumbsDown;
 const printThumbsUp = ThumbsUp;
 const printTimes = Times;
@@ -6212,6 +6297,7 @@ const print = {
     'chain': Chain,
     'checkmark': Checkmark,
     'circle': Circle,
+    'clapperboard': Clapperboard,
     'clipboard': Clipboard,
     'clipboard-check': ClipboardCheck,
     'clipboard-check-circle': ClipboardCheckCircle,
@@ -6257,6 +6343,7 @@ const print = {
     'gear': Gear,
     'gift': Gift,
     'grab': Grab,
+    'grid': Grid,
     'hamburger': Hamburger,
     'hand-grab': HandGrab,
     'hand-open': HandOpen,
@@ -6302,6 +6389,7 @@ const print = {
     'music-note-double': MusicNoteDouble,
     'music-note-single': MusicNoteSingle,
     'next-track': NextTrack,
+    'no-entry': NoEntry,
     'open': Open,
     'paint-pallet': PaintPallet,
     'pause': Pause,
@@ -6340,6 +6428,7 @@ const print = {
     'shuffle': Shuffle,
     'sliders': Sliders,
     'smartphone': Smartphone,
+    'smartphone-cutout': SmartphoneCutout,
     'smartphone-notch': SmartphoneNotch,
     'smartphone2': Smartphone2,
     'soft-drink': SoftDrink,
@@ -6349,6 +6438,7 @@ const print = {
     'speaker-off': SpeakerOff,
     'square': Square,
     'star': Star,
+    'stars': Stars,
     'stopwatch': Stopwatch,
     'studio-backdrop': StudioBackdrop,
     'studio-light-front': StudioLightFront,
@@ -6359,6 +6449,7 @@ const print = {
     'taxi': Taxi,
     'television': Television,
     'text-bubble': TextBubble,
+    'text-bubbles': TextBubbles,
     'thumbs-down': ThumbsDown,
     'thumbs-up': ThumbsUp,
     'times': Times,
@@ -6548,6 +6639,7 @@ exports.popChain = popChain;
 exports.popCheckmark = popCheckmark;
 exports.popCircle = popCircle;
 exports.popCircleFilled = popCircleFilled;
+exports.popClapperboard = popClapperboard;
 exports.popClipboard = popClipboard;
 exports.popClipboardCheck = popClipboardCheck;
 exports.popClipboardCheckCircle = popClipboardCheckCircle;
@@ -6598,6 +6690,7 @@ exports.popGear = popGear;
 exports.popGearFilled = popGearFilled;
 exports.popGift = popGift;
 exports.popGrab = popGrab;
+exports.popGrid = popGrid;
 exports.popHamburger = popHamburger;
 exports.popHandGrab = popHandGrab;
 exports.popHandOpen = popHandOpen;
@@ -6645,6 +6738,7 @@ exports.popMoveY = popMoveY;
 exports.popMusicNoteDouble = popMusicNoteDouble;
 exports.popMusicNoteSingle = popMusicNoteSingle;
 exports.popNextTrack = popNextTrack;
+exports.popNoEntry = popNoEntry;
 exports.popOpen = popOpen;
 exports.popPaintPallet = popPaintPallet;
 exports.popPause = popPause;
@@ -6688,6 +6782,7 @@ exports.popShuffle = popShuffle;
 exports.popSliders = popSliders;
 exports.popSmartphone = popSmartphone;
 exports.popSmartphone2 = popSmartphone2;
+exports.popSmartphoneCutout = popSmartphoneCutout;
 exports.popSmartphoneNotch = popSmartphoneNotch;
 exports.popSoftDrink = popSoftDrink;
 exports.popSort = popSort;
@@ -6698,6 +6793,7 @@ exports.popSquare = popSquare;
 exports.popSquareFilled = popSquareFilled;
 exports.popStar = popStar;
 exports.popStarFilled = popStarFilled;
+exports.popStars = popStars;
 exports.popStopwatch = popStopwatch;
 exports.popStudioBackdrop = popStudioBackdrop;
 exports.popStudioLightFront = popStudioLightFront;
@@ -6709,6 +6805,7 @@ exports.popTShirt = popTShirt;
 exports.popTaxi = popTaxi;
 exports.popTelevision = popTelevision;
 exports.popTextBubble = popTextBubble;
+exports.popTextBubbles = popTextBubbles;
 exports.popThumbsDown = popThumbsDown;
 exports.popThumbsUp = popThumbsUp;
 exports.popTimes = popTimes;
@@ -6765,6 +6862,7 @@ exports.printCellphoneLoop = printCellphoneLoop;
 exports.printChain = printChain;
 exports.printCheckmark = printCheckmark;
 exports.printCircle = printCircle;
+exports.printClapperboard = printClapperboard;
 exports.printClipboard = printClipboard;
 exports.printClipboardCheck = printClipboardCheck;
 exports.printClipboardCheckCircle = printClipboardCheckCircle;
@@ -6810,6 +6908,7 @@ exports.printFoldingStool = printFoldingStool;
 exports.printGear = printGear;
 exports.printGift = printGift;
 exports.printGrab = printGrab;
+exports.printGrid = printGrid;
 exports.printHamburger = printHamburger;
 exports.printHandGrab = printHandGrab;
 exports.printHandOpen = printHandOpen;
@@ -6855,6 +6954,7 @@ exports.printMoveY = printMoveY;
 exports.printMusicNoteDouble = printMusicNoteDouble;
 exports.printMusicNoteSingle = printMusicNoteSingle;
 exports.printNextTrack = printNextTrack;
+exports.printNoEntry = printNoEntry;
 exports.printOpen = printOpen;
 exports.printPaintPallet = printPaintPallet;
 exports.printPause = printPause;
@@ -6894,6 +6994,7 @@ exports.printShuffle = printShuffle;
 exports.printSliders = printSliders;
 exports.printSmartphone = printSmartphone;
 exports.printSmartphone2 = printSmartphone2;
+exports.printSmartphoneCutout = printSmartphoneCutout;
 exports.printSmartphoneNotch = printSmartphoneNotch;
 exports.printSoftDrink = printSoftDrink;
 exports.printSort = printSort;
@@ -6902,6 +7003,7 @@ exports.printSpeakerLow = printSpeakerLow;
 exports.printSpeakerOff = printSpeakerOff;
 exports.printSquare = printSquare;
 exports.printStar = printStar;
+exports.printStars = printStars;
 exports.printStopwatch = printStopwatch;
 exports.printStudioBackdrop = printStudioBackdrop;
 exports.printStudioLightFront = printStudioLightFront;
@@ -6912,6 +7014,7 @@ exports.printTShirt = printTShirt;
 exports.printTaxi = printTaxi;
 exports.printTelevision = printTelevision;
 exports.printTextBubble = printTextBubble;
+exports.printTextBubbles = printTextBubbles;
 exports.printThumbsDown = printThumbsDown;
 exports.printThumbsUp = printThumbsUp;
 exports.printTimes = printTimes;
