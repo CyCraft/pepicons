@@ -16,6 +16,18 @@ const renameColor = () =>
       .catch(reject)
   })
 
+const removeClutter = () =>
+  new Promise((resolve, reject) => {
+    const path = PATH_PEPICONS + '/svg/**/*.svg'
+    replace({
+      files: path,
+      from: /<defs>\n<clipPath id="(.+?)">\n<rect width="20" height="20" fill="white"\/>\n<\/clipPath>\n<\/defs>/gi,
+      to: '',
+    })
+      .then(resolve)
+      .catch(reject)
+  })
+
 // const svgoIcons = () =>
 //   new Promise((resolve, reject) => {
 //     const path = PATH_PEPICONS + '/svg/**/*.svg'
@@ -33,5 +45,6 @@ const renameColor = () =>
  */
 export async function cleanupSvgs() {
   await renameColor()
+  await removeClutter()
   // await svgoIcons()
 }

@@ -1,10 +1,7 @@
 <script lang="ts">
-import { defineComponent, reactive, computed, watch, ref } from 'vue'
+import { defineComponent, computed, watch, ref } from 'vue'
 import {
-  pop,
-  print,
   Pepicon,
-  PepiconPrint,
   synonyms,
   synonymsJa,
   categories,
@@ -17,72 +14,61 @@ import PepInput from '../components/PepInput.vue'
 import Pickers from '../components/Pickers.vue'
 import PepLink from '../components/PepLink.vue'
 import ProfileCard from '../components/ProfileCard.vue'
-import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
+import { setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
-import { defaultsIconConfig, IconConfig } from '../types'
+import { defaultsIconConfig } from '../types'
 import DialogWrapper from '../components/DialogWrapper.vue'
 import IconInfo from '../components/IconInfo.vue'
 
 export default defineComponent({
   name: 'LandingPage',
   components: { Stack, PepLink, Pickers, PepInput, ProfileCard, IconGrid, DialogWrapper, IconInfo },
-  emits: ['set-is-dark-mode'],
-  created() {
-    document.body.classList.add('light-mode')
-    document.body.classList.add(`${defaultsIconConfig().type}-mode`)
-  },
+  emits: ['set-is-dark-mode', 'set-config'],
   setup(props, { emit }) {
     const hash = getQueryFromUrl()
 
-    const _ = reactive({
-      searchInput: hash || '',
-      config: defaultsIconConfig({ isDarkMode: false }),
-    })
+    const searchInput = ref(hash || '')
+    const config = ref(defaultsIconConfig({ isDarkMode: false }))
 
     const configComputed = computed(() => {
-      const { type, color: _color, stroke: _stroke, isDarkMode } = _.config
+      const { type, color: _color, stroke: _stroke, isDarkMode } = config.value
       const useColorAsStroke = type === 'print' && isDarkMode
       const color = useColorAsStroke ? 'black' : _color
       const stroke = useColorAsStroke ? _color : _stroke
       return { type, color, stroke }
     })
 
+    // watch config for side effects
     watch(
-      () => _.config.type,
-      (newVal) => {
+      config,
+      (conf) => {
+        emit('set-config', conf)
+        const { type, color, isDarkMode } = conf
+
+        // color
+        setPrimaryColor(color)
+
+        // type
         document.body.className = document.body.className.replace(
           /(print|pop)-mode/g,
-          `${newVal}-mode`,
+          `${type}-mode`,
         )
+
+        // dark mode
+        emit('set-is-dark-mode', isDarkMode)
+        const mode = isDarkMode ? 'dark-mode' : 'light-mode'
+        document.body.className = document.body.className.replace(/(dark|light)-mode/g, mode)
       },
-    )
-    watch(
-      () => _.config.color,
-      (newVal) => {
-        setPrimaryColor(newVal)
-      },
-    )
-    watch(
-      () => _.config.isDarkMode,
-      (isDarkMode) => {
-        if (isDarkMode === false) {
-          document.body.className = document.body.className.replace(/dark-mode/g, 'light-mode')
-          emit('set-is-dark-mode', false)
-        }
-        if (isDarkMode === true) {
-          document.body.className = document.body.className.replace(/light-mode/g, 'dark-mode')
-          emit('set-is-dark-mode', true)
-        }
-      },
+      { deep: true, immediate: true },
     )
 
     const categoryIconNamesDic = computed(() =>
       Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
         if (!(iconCategory in dic)) dic[iconCategory] = []
-        const iconNonExistent = _.config.type === 'print' && iconName.endsWith('-filled')
+        const iconNonExistent = config.value.type === 'print' && iconName.endsWith('-filled')
         if (iconNonExistent) return dic
-        const searchText = cleanupForSearch(_.searchInput)
+        const searchText = cleanupForSearch(searchInput.value)
         if (searchText) {
           const _synonyms: string[] = [
             ...synonyms[iconName as Pepicon],
@@ -107,16 +93,14 @@ export default defineComponent({
     }
     const scrollPageTo = (navEl) => {
       console.log(`#${navEl}`)
-      let element = document.querySelector(`#${navEl}`)
-      console.log(element)
-      element?.scrollIntoView({
-        block: 'center',
-        behavior: 'smooth',
-      })
+      const element = document.querySelector(`#${navEl}`)
+
+      element?.scrollIntoView({ block: 'center', behavior: 'smooth' })
     }
 
     return {
-      _,
+      config,
+      searchInput,
       setUrlQuery,
       configComputed,
       categories,
@@ -136,10 +120,16 @@ export default defineComponent({
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
           <Stack class="ml-auto" classes="items-center">
-            <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
+            <PepLink
+              href="https://github.com/CyCraft/pepicons"
+              content="GitHub"
+              icon="github"
+              :config="config"
+            />
             <PepLink
               content="About Us"
               icon="info-filled"
+              :config="config"
               class="cursor-arrow-down"
               @click.stop.prevent="scrollPageTo('about-us')"
             />
@@ -157,19 +147,20 @@ export default defineComponent({
           href="https://github.com/sponsors/mesqueeb"
           content="sponsoring us on GitHub"
           retroUnderline
+          :config="config"
         />!
       </div>
-      <Pickers v-model="_.config" :configComputed="configComputed" class="mb-md" />
+      <Pickers v-model="config" :configComputed="configComputed" class="mb-md" />
       <PepInput
         id="top"
-        v-model="_.searchInput"
+        v-model="searchInput"
         class="mb-xxl"
-        :color="_.config.color"
+        :color="config.color"
         :debounce="200"
-        :isDarkMode="_.config.isDarkMode"
+        :isDarkMode="config.isDarkMode"
         :iconConfig="{ ...configComputed, name: 'loop' }"
-        @blur="() => setUrlQuery(_.searchInput)"
-        @keydown.meta="() => setUrlQuery(_.searchInput)"
+        @blur="() => setUrlQuery(searchInput)"
+        @keydown.meta="() => setUrlQuery(searchInput)"
       />
       <template v-for="category in categories">
         <div v-if="categoryIconNamesDic[category].length" :key="category" class="mb-xxl">
@@ -177,7 +168,7 @@ export default defineComponent({
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
             :config="configComputed"
-            :searchInput="_.searchInput"
+            :searchInput="searchInput"
             @clickTile="openIconModal"
           />
         </div>
@@ -190,6 +181,7 @@ export default defineComponent({
             href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
             retroUnderline
             content="request"
+            :config="config"
           />
           a new icon on GitHub. 　🙃
         </div>
@@ -202,6 +194,7 @@ export default defineComponent({
             href="https://medium.com/@lucaban/pepicons-retro-icon-set-now-available-for-designers-and-coders-40db866a7460"
             retroUnderline
             content="announcement blog post"
+            :config="config"
           />
           to read about our motivation for creating Pepicons!<br /><br />Pepicons was made by these
           peeps:
@@ -228,6 +221,7 @@ export default defineComponent({
         <PepLink
           class="cursor-arrow-up px-md py-sm"
           content="Go to top"
+          :config="config"
           @click.stop.prevent="scrollPageTo('top')"
         />
         <div class="mt-xxl">
@@ -235,13 +229,14 @@ export default defineComponent({
             href="https://github.com/sponsors/mesqueeb"
             retroUnderline
             content="Sponsor development"
+            :config="config"
           />
         </div>
       </div>
     </div>
   </div>
   <DialogWrapper :isVisible="iconInfoIsVisible" @close="iconInfoIsVisible = false">
-    <IconInfo :config="{ ...configComputed, name: iconInfoName }" :configOptionButtons="_.config" />
+    <IconInfo :config="{ ...configComputed, name: iconInfoName }" :configOptionButtons="config" />
   </DialogWrapper>
 </template>
 

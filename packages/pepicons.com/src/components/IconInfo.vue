@@ -1,6 +1,6 @@
 <script lang="ts">
 import copyToClipboard from 'copy-text-to-clipboard'
-import { defineComponent, computed, reactive, PropType, ref } from 'vue'
+import { defineComponent, PropType, ref } from 'vue'
 import { pepiconSvgString } from 'pepicons'
 import { Pepicon } from '@pepicons/vue'
 import CodeBlock from './CodeBlock.vue'
@@ -56,32 +56,32 @@ export default defineComponent({
   },
   setup(props) {
     const selectedTab = ref<'Vue' | 'SVG'>('Vue')
-    const _ = reactive({
-      openCodeTab: 'Vue',
-      codeShown: false,
-      downloadSvgDone: false,
-      copySvgDone: false,
-      downloadPngDone: false,
-      copyPngDone: false,
-    })
+    const codeShown = ref(false)
+    const downloadSvgDone = ref(false)
+    const copySvgDone = ref(false)
+    const downloadPngDone = ref(false)
+    const copyPngDone = ref(false)
 
     const codeSvg = pepiconSvgString(props.config as any)
     const codeVue = generateVueCode(props.config.name || '', props.config)
 
     function downloadSvg(): void {
       downloadFile(codeSvg, `${props.config.name}.svg`)
-      _.downloadSvgDone = true
+      downloadSvgDone.value = true
     }
+
     function copySvg(): void {
       const copied = copyToClipboard(codeSvg)
-      _.copySvgDone = copied
+      copySvgDone.value = copied
     }
+
     async function downloadPng(): Promise<void> {
       const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
       const pngString = await svgToBase64Png(_codeSvg)
       downloadBase64AsFile(pngString, `${props.config.name}.png`)
-      _.downloadPngDone = true
+      downloadPngDone.value = true
     }
+
     async function copyPng(): Promise<void> {
       const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
       const pngString = await svgToBase64Png(_codeSvg)
@@ -91,32 +91,45 @@ export default defineComponent({
       // @ts-ignore
       if (window.navigator?.clipboard?.write) {
         // @ts-ignore
-        window.navigator.clipboard.write([item]).then(() => (_.copyPngDone = true))
+        window.navigator.clipboard.write([item]).then(() => (copyPngDone.value = true))
       }
     }
 
-    return { _, codeSvg, codeVue, selectedTab, copySvg, copyPng, downloadSvg, downloadPng }
+    return {
+      codeShown,
+      selectedTab,
+      copySvgDone,
+      copyPngDone,
+      downloadSvgDone,
+      downloadPngDone,
+      codeSvg,
+      codeVue,
+      copySvg,
+      copyPng,
+      downloadSvg,
+      downloadPng,
+    }
   },
 })
 </script>
 
 <template>
   <div class="icon-info">
-    <HtmlButton v-model="_.codeShown" class="_toggle-code-button" v-bind="config" />
+    <HtmlButton v-model="codeShown" class="_toggle-code-button" v-bind="config" />
     <div class="_code-section">
       <div>
         <Tabs
-          v-model:selectedTab="_.openCodeTab"
+          v-model:selectedTab="selectedTab"
           class="_tab-panels"
           :tabs="['Vue', 'SVG']"
           :color="config.color"
         >
-          <template v-if="_.openCodeTab === 'Vue'">
+          <template v-if="selectedTab === 'Vue'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
               <CodeBlock lang="html" :content="codeVue" class="_code-block" />
             </div>
           </template>
-          <template v-if="_.openCodeTab === 'SVG'">
+          <template v-if="selectedTab === 'SVG'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
               <CodeBlock lang="html" :content="codeSvg" class="_code-block" />
             </div>
@@ -125,7 +138,7 @@ export default defineComponent({
       </div>
     </div>
 
-    <div class="_top-door" :class="{ '_top-door-transform': _.codeShown }">
+    <div class="_top-door" :class="{ '_top-door-transform': codeShown }">
       <Pepicon
         :name="config.name"
         :type="config.type"
@@ -135,7 +148,7 @@ export default defineComponent({
       />
       <div class="text-h5 mt-xl">{{ config.name }}</div>
     </div>
-    <div class="_bottom-door text-h6 px-xl" :class="{ '_bottom-door-transform': _.codeShown }">
+    <div class="_bottom-door text-h6 px-xl" :class="{ '_bottom-door-transform': codeShown }">
       <div class="flex-center relative">
         <div>SVG</div>
         <div class="flex gutter-x-sm mt-xs">
@@ -144,7 +157,7 @@ export default defineComponent({
               ...configOptionButtons,
               name: 'cloud-down',
             }"
-            :isActive="_.downloadSvgDone"
+            :isActive="downloadSvgDone"
             @click="downloadSvg"
           />
           <IconButton
@@ -152,7 +165,7 @@ export default defineComponent({
               ...configOptionButtons,
               name: 'clipboard',
             }"
-            :isActive="_.copySvgDone"
+            :isActive="copySvgDone"
             @click="copySvg"
           />
         </div>
@@ -165,7 +178,7 @@ export default defineComponent({
               ...configOptionButtons,
               name: 'cloud-down',
             }"
-            :isActive="_.downloadPngDone"
+            :isActive="downloadPngDone"
             @click="downloadPng"
           />
           <IconButton
@@ -173,7 +186,7 @@ export default defineComponent({
               ...configOptionButtons,
               name: 'clipboard',
             }"
-            :isActive="_.copyPngDone"
+            :isActive="copyPngDone"
             @click="copyPng"
           />
         </div>

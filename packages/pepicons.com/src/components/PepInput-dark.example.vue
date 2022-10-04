@@ -7,17 +7,7 @@ const v = ref('')
 function log() {
   console.log('blurred')
 }
-// const _ = reactive({
-//       searchInput: hash || '',
-//       config: defaultsIconConfig({ isDarkMode: false }),
-//     })
-// const configComputed = computed(() => {
-//   const { type, color: _color, stroke: _stroke, isDarkMode } = _.config
-//   const useColorAsStroke = type === 'print' && isDarkMode
-//   const color = useColorAsStroke ? 'black' : _color
-//   const stroke = useColorAsStroke ? _color : _stroke
-//   return { type, color, stroke }
-// })
+
 const iconConfig = {
   name: 'loop' as PepiconName,
   type: 'print' as const,
