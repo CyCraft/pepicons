@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, reactive, computed, watch, ref } from 'vue'
+import { defineComponent, computed, watch, ref } from 'vue'
 import {
   Pepicon,
   synonyms,
@@ -25,20 +25,14 @@ export default defineComponent({
   name: 'LandingPage',
   components: { Stack, PepLink, Pickers, PepInput, ProfileCard, IconGrid, DialogWrapper, IconInfo },
   emits: ['set-is-dark-mode', 'set-config'],
-  created() {
-    document.body.classList.add('light-mode')
-    document.body.classList.add(`${defaultsIconConfig().type}-mode`)
-  },
   setup(props, { emit }) {
     const hash = getQueryFromUrl()
 
-    const _ = reactive({
-      searchInput: hash || '',
-      config: defaultsIconConfig({ isDarkMode: false }),
-    })
+    const searchInput = ref(hash || '')
+    const config = ref(defaultsIconConfig({ isDarkMode: false }))
 
     const configComputed = computed(() => {
-      const { type, color: _color, stroke: _stroke, isDarkMode } = _.config
+      const { type, color: _color, stroke: _stroke, isDarkMode } = config.value
       const useColorAsStroke = type === 'print' && isDarkMode
       const color = useColorAsStroke ? 'black' : _color
       const stroke = useColorAsStroke ? _color : _stroke
@@ -47,7 +41,7 @@ export default defineComponent({
 
     // watch config for side effects
     watch(
-      () => _.config,
+      config,
       (conf) => {
         emit('set-config', conf)
         const { type, color, isDarkMode } = conf
@@ -72,9 +66,9 @@ export default defineComponent({
     const categoryIconNamesDic = computed(() =>
       Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
         if (!(iconCategory in dic)) dic[iconCategory] = []
-        const iconNonExistent = _.config.type === 'print' && iconName.endsWith('-filled')
+        const iconNonExistent = config.value.type === 'print' && iconName.endsWith('-filled')
         if (iconNonExistent) return dic
-        const searchText = cleanupForSearch(_.searchInput)
+        const searchText = cleanupForSearch(searchInput.value)
         if (searchText) {
           const _synonyms: string[] = [
             ...synonyms[iconName as Pepicon],
@@ -105,7 +99,8 @@ export default defineComponent({
     }
 
     return {
-      _,
+      config,
+      searchInput,
       setUrlQuery,
       configComputed,
       categories,
@@ -129,12 +124,12 @@ export default defineComponent({
               href="https://github.com/CyCraft/pepicons"
               content="GitHub"
               icon="github"
-              :config="_.config"
+              :config="config"
             />
             <PepLink
               content="About Us"
               icon="info-filled"
-              :config="_.config"
+              :config="config"
               class="cursor-arrow-down"
               @click.stop.prevent="scrollPageTo('about-us')"
             />
@@ -152,20 +147,20 @@ export default defineComponent({
           href="https://github.com/sponsors/mesqueeb"
           content="sponsoring us on GitHub"
           retroUnderline
-          :config="_.config"
+          :config="config"
         />!
       </div>
-      <Pickers v-model="_.config" :configComputed="configComputed" class="mb-md" />
+      <Pickers v-model="config" :configComputed="configComputed" class="mb-md" />
       <PepInput
         id="top"
-        v-model="_.searchInput"
+        v-model="searchInput"
         class="mb-xxl"
-        :color="_.config.color"
+        :color="config.color"
         :debounce="200"
-        :isDarkMode="_.config.isDarkMode"
+        :isDarkMode="config.isDarkMode"
         :iconConfig="{ ...configComputed, name: 'loop' }"
-        @blur="() => setUrlQuery(_.searchInput)"
-        @keydown.meta="() => setUrlQuery(_.searchInput)"
+        @blur="() => setUrlQuery(searchInput)"
+        @keydown.meta="() => setUrlQuery(searchInput)"
       />
       <template v-for="category in categories">
         <div v-if="categoryIconNamesDic[category].length" :key="category" class="mb-xxl">
@@ -173,7 +168,7 @@ export default defineComponent({
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
             :config="configComputed"
-            :searchInput="_.searchInput"
+            :searchInput="searchInput"
             @clickTile="openIconModal"
           />
         </div>
@@ -186,7 +181,7 @@ export default defineComponent({
             href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
             retroUnderline
             content="request"
-            :config="_.config"
+            :config="config"
           />
           a new icon on GitHub. 　🙃
         </div>
@@ -199,7 +194,7 @@ export default defineComponent({
             href="https://medium.com/@lucaban/pepicons-retro-icon-set-now-available-for-designers-and-coders-40db866a7460"
             retroUnderline
             content="announcement blog post"
-            :config="_.config"
+            :config="config"
           />
           to read about our motivation for creating Pepicons!<br /><br />Pepicons was made by these
           peeps:
@@ -226,7 +221,7 @@ export default defineComponent({
         <PepLink
           class="cursor-arrow-up px-md py-sm"
           content="Go to top"
-          :config="_.config"
+          :config="config"
           @click.stop.prevent="scrollPageTo('top')"
         />
         <div class="mt-xxl">
@@ -234,14 +229,14 @@ export default defineComponent({
             href="https://github.com/sponsors/mesqueeb"
             retroUnderline
             content="Sponsor development"
-            :config="_.config"
+            :config="config"
           />
         </div>
       </div>
     </div>
   </div>
   <DialogWrapper :isVisible="iconInfoIsVisible" @close="iconInfoIsVisible = false">
-    <IconInfo :config="{ ...configComputed, name: iconInfoName }" :configOptionButtons="_.config" />
+    <IconInfo :config="{ ...configComputed, name: iconInfoName }" :configOptionButtons="config" />
   </DialogWrapper>
 </template>
 
