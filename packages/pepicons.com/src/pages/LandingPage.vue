@@ -1,10 +1,7 @@
 <script lang="ts">
 import { defineComponent, reactive, computed, watch, ref } from 'vue'
 import {
-  pop,
-  print,
   Pepicon,
-  PepiconPrint,
   synonyms,
   synonymsJa,
   categories,
@@ -17,10 +14,10 @@ import PepInput from '../components/PepInput.vue'
 import Pickers from '../components/Pickers.vue'
 import PepLink from '../components/PepLink.vue'
 import ProfileCard from '../components/ProfileCard.vue'
-import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
+import { setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
-import { defaultsIconConfig, IconConfig } from '../types'
+import { defaultsIconConfig } from '../types'
 import DialogWrapper from '../components/DialogWrapper.vue'
 import IconInfo from '../components/IconInfo.vue'
 
@@ -47,40 +44,29 @@ export default defineComponent({
       const stroke = useColorAsStroke ? _color : _stroke
       return { type, color, stroke }
     })
+
+    // watch config for side effects
     watch(
       () => _.config,
-      (newVal) => {
-        console.log(`newVal → `, newVal)
-        emit('set-config', newVal)
-      },
-    )
-    watch(
-      () => _.config.type,
-      (newVal) => {
+      (conf) => {
+        emit('set-config', conf)
+        const { type, color, isDarkMode } = conf
+
+        // color
+        setPrimaryColor(color)
+
+        // type
         document.body.className = document.body.className.replace(
           /(print|pop)-mode/g,
-          `${newVal}-mode`,
+          `${type}-mode`,
         )
+
+        // dark mode
+        emit('set-is-dark-mode', isDarkMode)
+        const mode = isDarkMode ? 'dark-mode' : 'light-mode'
+        document.body.className = document.body.className.replace(/(dark|light)-mode/g, mode)
       },
-    )
-    watch(
-      () => _.config.color,
-      (newVal) => {
-        setPrimaryColor(newVal)
-      },
-    )
-    watch(
-      () => _.config.isDarkMode,
-      (isDarkMode) => {
-        if (isDarkMode === false) {
-          document.body.className = document.body.className.replace(/dark-mode/g, 'light-mode')
-          // emit('set-is-dark-mode', false)
-        }
-        if (isDarkMode === true) {
-          document.body.className = document.body.className.replace(/light-mode/g, 'dark-mode')
-          // emit('set-is-dark-mode', true)
-        }
-      },
+      { deep: true, immediate: true },
     )
 
     const categoryIconNamesDic = computed(() =>
@@ -113,12 +99,9 @@ export default defineComponent({
     }
     const scrollPageTo = (navEl) => {
       console.log(`#${navEl}`)
-      let element = document.querySelector(`#${navEl}`)
-      console.log(element)
-      element?.scrollIntoView({
-        block: 'center',
-        behavior: 'smooth',
-      })
+      const element = document.querySelector(`#${navEl}`)
+
+      element?.scrollIntoView({ block: 'center', behavior: 'smooth' })
     }
 
     return {
