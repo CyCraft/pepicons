@@ -7,9 +7,5 @@
 <rect x="13.1369" y="1.19175" width="7" height="11" rx="3.5" transform="rotate(33.0385 13.1369 1.19175)" stroke="black" stroke-linecap="round"/>
 <rect x="8.18903" y="5.13108" width="7" height="11" rx="3.5" transform="rotate(33.0385 8.18903 5.13108)" stroke="black" stroke-linecap="round"/>
 </g>
-<defs>
-<clipPath id="clip0_303_4993">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
+
 </svg>

@@ -10,10 +10,6 @@ export default `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6.5C10.2761 6.5 10.5 6.72386 10.5 7V10.5C10.5 10.7761 10.2761 11 10 11C9.72386 11 9.5 10.7761 9.5 10.5V7C9.5 6.72386 9.72386 6.5 10 6.5Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 10.5C13.5 10.7761 13.2761 11 13 11H10C9.72386 11 9.5 10.7761 9.5 10.5C9.5 10.2239 9.72386 10 10 10H13C13.2761 10 13.5 10.2239 13.5 10.5Z" fill="black"/>
 </g>
-<defs>
-<clipPath id="clip0_1213_1907">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
+
 </svg>
 `

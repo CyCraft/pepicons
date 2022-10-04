@@ -10,9 +10,5 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9C1.5 8.44772 1.94772 8 2.5 8L17.5 8C18.0523 8 18.5 8.44772 18.5 9L18.5 18C18.5 18.5523 18.0523 19 17.5 19L2.5 19C1.94772 19 1.5 18.5523 1.5 18L1.5 9ZM3.5 10L3.5 17L16.5 17L16.5 10L3.5 10Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18 13L2 13L2 11L18 11L18 13Z" fill="currentColor"/>
 </g>
-<defs>
-<clipPath id="clip0_1817_474">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
+
 </svg>

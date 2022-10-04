@@ -16,9 +16,5 @@
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.57269 8C1.57269 7.72386 1.79655 7.5 2.07269 7.5L17.0727 7.5C17.3488 7.5 17.5727 7.72386 17.5727 8L17.5727 17C17.5727 17.2761 17.3488 17.5 17.0727 17.5L2.07269 17.5C1.79655 17.5 1.57269 17.2761 1.57269 17L1.57269 8ZM2.57269 8.5L2.57269 16.5L16.5727 16.5L16.5727 8.5L2.57269 8.5Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5727 11.5L1.57269 11.5L1.57269 10.5L17.5727 10.5L17.5727 11.5Z" fill="black"/>
 </g>
-<defs>
-<clipPath id="clip0_1817_475">
-<rect width="20" height="20" fill="white"/>
-</clipPath>
-</defs>
+
 </svg>
