@@ -1,13 +1,6 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'MyComponent',
-  props: {},
-  setup(props) {
-    return {}
-  },
-})
+<script lang="ts" setup>
+// const props = defineProps<{}>()
+// const emit = defineEmits<{}>()
 </script>
 
 <template>
