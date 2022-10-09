@@ -1,32 +1,25 @@
-<script lang="ts">
-import { defineComponent, PropType } from 'vue'
+<script lang="ts" setup>
+import { PropType } from 'vue'
 import Picker from './Picker.vue'
 import Stack from './Stack.vue'
 import { defaultsIconConfig, IconConfig } from '../types'
-
-export default defineComponent({
-  name: 'Pickers',
-  components: { Picker, Stack },
-  props: {
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string } & { isDarkMode: boolean }}
-     */
-    modelValue: {
-      type: Object as PropType<Partial<IconConfig> & { isDarkMode: boolean }>,
-      default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
-    },
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    configComputed: {
-      type: Object as PropType<Partial<IconConfig>>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
+const props = defineProps({
+  /**
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string } & { isDarkMode: boolean }}
+   */
+  modelValue: {
+    type: Object as PropType<Partial<IconConfig> & { isDarkMode: boolean }>,
+    default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
   },
-  setup() {
-    return {}
+  /**
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   */
+  configComputed: {
+    type: Object as PropType<Partial<IconConfig>>,
+    default: () => ({ ...defaultsIconConfig() }),
   },
 })
+const emit = defineEmits(['update:modelValue'])
 </script>
 
 <template>
@@ -34,21 +27,21 @@ export default defineComponent({
     <Picker
       kind="type"
       :modelValue="modelValue"
-      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
       :configComputed="configComputed"
+      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
     />
     <Picker
       class="_middle-section"
       kind="color"
       :modelValue="modelValue"
-      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
       :configComputed="configComputed"
+      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
     />
     <Picker
       kind="background"
       :modelValue="modelValue"
-      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
       :configComputed="configComputed"
+      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
     />
   </Stack>
 </template>

@@ -1,23 +1,16 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { Pepicon } from '@pepicons/vue'
-import { defineComponent, PropType } from 'vue'
-export default defineComponent({
-  name: 'HtmlButton',
-  components: { Pepicon },
-  emits: ['update:modelValue'],
-  props: {
-    modelValue: { type: Boolean, default: false },
-    type: { type: String as PropType<'pop' | 'print' | undefined> },
-    color: { type: String },
-    stroke: { type: String },
-  },
-  setup(props, { emit }) {
-    function toggle() {
-      emit('update:modelValue', !props.modelValue)
-    }
-    return { toggle }
-  },
+import { PropType } from 'vue'
+const emit = defineEmits(['update:modelValue'])
+const props = defineProps({
+  modelValue: { type: Boolean, default: false },
+  type: { type: String as PropType<'pop' | 'print' | undefined> },
+  color: { type: String },
+  stroke: { type: String },
 })
+function toggle() {
+  emit('update:modelValue', !props.modelValue)
+}
 </script>
 
 <template>

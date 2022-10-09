@@ -1,43 +1,33 @@
-<script lang="ts">
-import { defineComponent, PropType, computed } from 'vue'
+<script lang="ts" setup>
+import { PropType, computed } from 'vue'
 import { pepiconSvgString } from 'pepicons'
 import { Pepicon, PepiconName } from '@pepicons/vue'
 import CompanyLogo from './CompanyLogo.vue'
 import { defaultsIconConfig, IconConfig } from '../types'
 
-export default defineComponent({
-  name: 'PepLink',
-  components: { CompanyLogo, Pepicon },
-  props: {
-    href: { type: String },
-    content: { type: String },
-    icon: { type: String as PropType<PepiconName | 'github' | undefined> },
-    retroUnderline: { type: Boolean },
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    config: {
-      type: Object as PropType<Partial<IconConfig>>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
+const props = defineProps({
+  href: { type: String },
+  content: { type: String },
+  icon: { type: String as PropType<PepiconName | 'github' | undefined> },
+  retroUnderline: { type: Boolean },
+  /**
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   */
+  config: {
+    type: Object as PropType<Partial<IconConfig>>,
+    default: () => ({ ...defaultsIconConfig() }),
   },
-  setup(props) {
-    const svgString = computed<string>(() =>
-      pepiconSvgString({
-        name: 'hand-point',
-        color: props.config.color,
-        type: props.config.type,
-        stroke: props.config.stroke,
-      }).replace(/\n/g, ''),
-    )
-    const customCursor = computed(() => {
-      return `url("data:image/svg+xml,${encodeURI(svgString.value)}"), pointer`
-    })
-
-    return {
-      customCursor,
-    }
-  },
+})
+const svgString = computed<string>(() =>
+  pepiconSvgString({
+    name: 'hand-point',
+    color: props.config.color,
+    type: props.config.type,
+    stroke: props.config.stroke,
+  }).replace(/\n/g, ''),
+)
+const customCursor = computed(() => {
+  return `url("data:image/svg+xml,${encodeURI(svgString.value)}"), pointer`
 })
 </script>
 

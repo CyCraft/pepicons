@@ -1,6 +1,6 @@
-<script lang="ts">
+<script lang="ts" setup>
 import copyToClipboard from 'copy-text-to-clipboard'
-import { defineComponent, PropType, ref } from 'vue'
+import { PropType, ref } from 'vue'
 import { pepiconSvgString } from 'pepicons'
 import { Pepicon } from '@pepicons/vue'
 import CodeBlock from './CodeBlock.vue'
@@ -11,6 +11,8 @@ import { svgToBase64Png, base64ToBlob } from '../helpers/conversion'
 import { defaultsIconConfig, IconConfig } from '../types'
 import Tabs from './Tabs.vue'
 
+// this error https://github.com/johnsoncodehk/volar/issues/34
+// https://youtrack.jetbrains.com/issue/WEB-54809/Vue3-typescript-service-false-TS1184-Modifiers-cannot-appear-here-error-for-export-interfacetype-in-script-setup-block
 declare class ClipboardItem {
   constructor(data: { [mimeType: string]: Blob })
 }
@@ -35,82 +37,61 @@ export default {
 <\/script>`
 }
 
-export default defineComponent({
-  name: 'IconInfo',
-  components: { IconButton, HtmlButton, Pepicon, CodeBlock, Tabs },
-  props: {
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    config: {
-      type: Object as PropType<IconConfig>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    configOptionButtons: {
-      type: Object as PropType<IconConfig>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
+const props = defineProps({
+  /**
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   */
+  config: {
+    type: Object as PropType<IconConfig>,
+    default: () => ({ ...defaultsIconConfig() }),
   },
-  setup(props) {
-    const selectedTab = ref<'Vue' | 'SVG'>('Vue')
-    const codeShown = ref(false)
-    const downloadSvgDone = ref(false)
-    const copySvgDone = ref(false)
-    const downloadPngDone = ref(false)
-    const copyPngDone = ref(false)
-
-    const codeSvg = pepiconSvgString(props.config as any)
-    const codeVue = generateVueCode(props.config.name || '', props.config)
-
-    function downloadSvg(): void {
-      downloadFile(codeSvg, `${props.config.name}.svg`)
-      downloadSvgDone.value = true
-    }
-
-    function copySvg(): void {
-      const copied = copyToClipboard(codeSvg)
-      copySvgDone.value = copied
-    }
-
-    async function downloadPng(): Promise<void> {
-      const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
-      const pngString = await svgToBase64Png(_codeSvg)
-      downloadBase64AsFile(pngString, `${props.config.name}.png`)
-      downloadPngDone.value = true
-    }
-
-    async function copyPng(): Promise<void> {
-      const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
-      const pngString = await svgToBase64Png(_codeSvg)
-      const item = new ClipboardItem({
-        'image/png': base64ToBlob(pngString),
-      })
-      // @ts-ignore
-      if (window.navigator?.clipboard?.write) {
-        // @ts-ignore
-        window.navigator.clipboard.write([item]).then(() => (copyPngDone.value = true))
-      }
-    }
-
-    return {
-      codeShown,
-      selectedTab,
-      copySvgDone,
-      copyPngDone,
-      downloadSvgDone,
-      downloadPngDone,
-      codeSvg,
-      codeVue,
-      copySvg,
-      copyPng,
-      downloadSvg,
-      downloadPng,
-    }
+  /**
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   */
+  configOptionButtons: {
+    type: Object as PropType<IconConfig>,
+    default: () => ({ ...defaultsIconConfig() }),
   },
 })
+const selectedTab = ref<'Vue' | 'SVG'>('Vue')
+const codeShown = ref(false)
+const downloadSvgDone = ref(false)
+const copySvgDone = ref(false)
+const downloadPngDone = ref(false)
+const copyPngDone = ref(false)
+
+const codeSvg = pepiconSvgString(props.config as any)
+const codeVue = generateVueCode(props.config.name || '', props.config)
+
+function downloadSvg(): void {
+  downloadFile(codeSvg, `${props.config.name}.svg`)
+  downloadSvgDone.value = true
+}
+
+function copySvg(): void {
+  const copied = copyToClipboard(codeSvg)
+  copySvgDone.value = copied
+}
+
+async function downloadPng(): Promise<void> {
+  const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
+  const pngString = await svgToBase64Png(_codeSvg)
+  downloadBase64AsFile(pngString, `${props.config.name}.png`)
+  downloadPngDone.value = true
+}
+
+async function copyPng(): Promise<void> {
+  const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
+  const pngString = await svgToBase64Png(_codeSvg)
+  const item = new ClipboardItem({
+    'image/png': base64ToBlob(pngString),
+  })
+  // @ts-ignore
+  if (window.navigator?.clipboard?.write) {
+    // @ts-ignore
+    window.navigator.clipboard.write([item]).then(() => (copyPngDone.value = true))
+  }
+}
 </script>
 
 <template>
