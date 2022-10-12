@@ -11,12 +11,6 @@ import { svgToBase64Png, base64ToBlob } from '../helpers/conversion'
 import { defaultsIconConfig, IconConfig } from '../types'
 import Tabs from './Tabs.vue'
 
-// this error https://github.com/johnsoncodehk/volar/issues/34
-// https://youtrack.jetbrains.com/issue/WEB-54809/Vue3-typescript-service-false-TS1184-Modifiers-cannot-appear-here-error-for-export-interfacetype-in-script-setup-block
-declare class ClipboardItem {
-  constructor(data: { [mimeType: string]: Blob })
-}
-
 function generateVueCode(iconName: string, config: IconConfig): string {
   const _stroke =
     config.stroke && config.stroke !== 'black' ? `\n    stroke="${config.stroke}"` : ''
@@ -83,7 +77,7 @@ async function downloadPng(): Promise<void> {
 async function copyPng(): Promise<void> {
   const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
   const pngString = await svgToBase64Png(_codeSvg)
-  const item = new ClipboardItem({
+  const item = new window.ClipboardItem({
     'image/png': base64ToBlob(pngString),
   })
   // @ts-ignore
