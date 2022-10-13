@@ -1,31 +1,24 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { PepiconName } from 'pepicons'
-import { defineComponent, PropType } from 'vue'
+import { PropType } from 'vue'
 import { defaultsIconConfig, IconConfig } from '../types'
 import IconTile from './IconTile.vue'
 
-export default defineComponent({
-  name: 'IconGrid',
-  components: { IconTile },
-  emits: ['click-tile'],
-  props: {
-    iconNames: { type: Array as PropType<PepiconName[]> },
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    config: {
-      type: Object as PropType<Partial<IconConfig>>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
-    searchInput: { type: String },
+const emit = defineEmits(['click-tile'])
+const props = defineProps({
+  iconNames: { type: Array as PropType<PepiconName[]> },
+  /**
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   */
+  config: {
+    type: Object as PropType<Partial<IconConfig>>,
+    default: () => ({ ...defaultsIconConfig() }),
   },
-  setup(props, { emit }) {
-    function clickTile(icon: string): void {
-      emit('click-tile', icon)
-    }
-    return { clickTile }
-  },
+  searchInput: { type: String },
 })
+function clickTile(icon: string): void {
+  emit('click-tile', icon)
+}
 </script>
 <template>
   <transition-group class="icon-grid" name="anim-grid" tag="div">

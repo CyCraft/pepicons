@@ -1,20 +1,16 @@
-<script lang="ts">
-import { defineComponent, PropType } from 'vue'
+<script lang="ts" setup>
+import { PropType } from 'vue'
 
-export default defineComponent({
-  props: {
-    tabs: { type: Array as PropType<string[]>, required: true },
-    selectedTab: { type: String, required: true },
-    color: { type: String, required: true },
-  },
-  setup(props, context) {
-    function setTab(tab) {
-      context.emit('selected', tab)
-      context.emit('update:selectedTab', tab)
-    }
-    return { setTab }
-  },
+const props = defineProps({
+  tabs: { type: Array as PropType<string[]>, required: true },
+  selectedTab: { type: String, required: true },
+  color: { type: String, required: true },
 })
+const emit = defineEmits(['selected', 'update:selectedTab'])
+function setTab(tab) {
+  emit('selected', tab)
+  emit('update:selectedTab', tab)
+}
 </script>
 <template>
   <div class="flex">

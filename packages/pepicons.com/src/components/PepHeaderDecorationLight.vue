@@ -1,7 +1,6 @@
-<script lang="ts">
-import { defineComponent, PropType, computed, onMounted, ref, toRef, Ref } from 'vue'
+<script lang="ts" setup>
+import { computed, onMounted } from 'vue'
 import { cssVar } from '../helpers/colorHelpers'
-// import { roll } from 'roll-anything'
 
 const randomAnimeFloatPerIcon = [
   8, // g
@@ -38,32 +37,25 @@ const randomAnimeFloatPerIcon = [
   7,
 ]
 
-export default defineComponent({
-  name: 'PepHeaderDecorationLight',
-  props: {
-    isDarkMode: { type: Boolean, default: false },
-  },
-  setup(props) {
-    onMounted(() => {
-      const shapes = document.querySelectorAll('.pep-header-decoration-light svg > g')
-      // const shapes = this.$el.querySelectorAll('svg > g')
-      shapes.forEach((g: any, index: number) => {
-        g.classList.add(`anime-float`)
-        g.classList.add(`anime-float-${randomAnimeFloatPerIcon[index]}`)
-      })
-    })
-    const shadowColor = computed(() => (props.isDarkMode ? 'black' : 'currentColor'))
-    const strokeColor = computed(() => (props.isDarkMode ? 'currentColor' : 'black'))
-    const colors = {
-      green: cssVar('sig-green'),
-      yellow: cssVar('sig-yellow'),
-      blue: cssVar('sig-blue'),
-      pink: cssVar('sig-pink'),
-    }
-
-    return { strokeColor, shadowColor, colors }
-  },
+const props = defineProps({
+  isDarkMode: { type: Boolean, default: false },
 })
+onMounted(() => {
+  const shapes = document.querySelectorAll('.pep-header-decoration-light svg > g')
+  // const shapes = this.$el.querySelectorAll('svg > g')
+  shapes.forEach((g: any, index: number) => {
+    g.classList.add(`anime-float`)
+    g.classList.add(`anime-float-${randomAnimeFloatPerIcon[index]}`)
+  })
+})
+const shadowColor = computed(() => (props.isDarkMode ? 'black' : 'currentColor'))
+const strokeColor = computed(() => (props.isDarkMode ? 'currentColor' : 'black'))
+const colors = {
+  green: cssVar('sig-green'),
+  yellow: cssVar('sig-yellow'),
+  blue: cssVar('sig-blue'),
+  pink: cssVar('sig-pink'),
+}
 </script>
 
 <template>

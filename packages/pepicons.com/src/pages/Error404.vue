@@ -1,22 +1,10 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'MyComponent',
-  props: {},
-  setup(props) {
-    return {}
-  },
-})
-</script>
-
 <template>
   <div class="_error-page text-white text-center">
     <div style="font-size: 30vh">404</div>
 
     <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
 
-    <router-link to="/" tag="button" class="_button">Go Home</router-link>
+    <router-link to="/" class="_button">Go Home</router-link>
   </div>
 </template>
 

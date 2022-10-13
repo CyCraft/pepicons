@@ -1,22 +1,15 @@
-<script lang="ts">
-import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue'
+<script lang="ts" setup>
+import { PropType, computed, ref, toRef, Ref } from 'vue'
 import CompanyLogo from './CompanyLogo.vue'
 import Stack from './Stack.vue'
 
-export default defineComponent({
-  name: 'ProfileCard',
-  components: { CompanyLogo, Stack },
-  props: {
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    profileUrl: { type: String, required: true },
-    profileImgStyle: { type: String, default: '' },
-    color: { type: String, required: true },
-    links: { type: Array as PropType<string[]>, default: () => [] },
-  },
-  setup(props) {
-    return {}
-  },
+const props = defineProps({
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  profileUrl: { type: String, required: true },
+  profileImgStyle: { type: String, default: '' },
+  color: { type: String, required: true },
+  links: { type: Array as PropType<string[]>, default: () => [] },
 })
 </script>
 

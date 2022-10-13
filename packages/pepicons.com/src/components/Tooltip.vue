@@ -1,12 +1,10 @@
-<script lang="ts">
-import { defineComponent, ref, computed } from 'vue'
+<script lang="ts" setup>
+import { ref, computed } from 'vue'
 
-export default defineComponent({
-  props: {
-    text: { type: String, default: 'Pop!' },
-    backgroundColor: { type: String, default: '#000' },
-    textColor: { type: String, default: '#fff' },
-  },
+const props = defineProps({
+  text: { type: String, default: 'Pop!' },
+  backgroundColor: { type: String, default: '#000' },
+  textColor: { type: String, default: '#fff' },
 })
 </script>
 <template>

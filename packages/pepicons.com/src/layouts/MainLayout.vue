@@ -1,19 +1,11 @@
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script lang="ts" setup>
+import { ref } from 'vue'
 import PepHero from '../components/PepHero.vue'
 import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue'
 import PepLink from '../components/PepLink.vue'
 
-export default defineComponent({
-  name: 'MainLayout',
-  props: {},
-  setup(props) {
-    const isDarkMode = ref(false)
-    const config = ref<any>({})
-    return { isDarkMode, config }
-  },
-  components: { PepHero, PepHeaderDecorationLight, PepLink },
-})
+const isDarkMode = ref(false)
+const config = ref<any>({})
 </script>
 
 <template>
@@ -24,8 +16,8 @@ export default defineComponent({
       </PepHero>
     </header>
     <router-view
-      @set-is-dark-mode="(newVal) => (isDarkMode = newVal)"
-      @set-config="(newVal) => (config = newVal)"
+      @setConfig="(newVal) => (config = newVal)"
+      @setIsDarkMode="(newVal) => (isDarkMode = newVal)"
     />
     <div class="pb-xxxl"></div>
     <div class="footer">

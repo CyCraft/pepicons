@@ -1,41 +1,33 @@
-<script lang="ts">
-import { computed, defineComponent, PropType } from 'vue'
+<script lang="ts" setup>
+import { computed, PropType } from 'vue'
 import { Pepicon as PepiconType, synonyms } from 'pepicons'
 import { Pepicon } from '@pepicons/vue'
 import { cleanupForSearch } from '../helpers/search'
 import { defaultsIconConfig, IconConfig } from '../types'
 
-export default defineComponent({
-  name: 'IconTile',
-  components: { Pepicon },
-  props: {
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    config: {
-      type: Object as PropType<Partial<IconConfig>>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
-    searchInput: { type: String, default: '' },
+const props = defineProps({
+  /**
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   */
+  config: {
+    type: Object as PropType<Partial<IconConfig>>,
+    default: () => ({ ...defaultsIconConfig() }),
   },
-  setup(props) {
-    const searchInputSynonymHit = computed(() => {
-      const searchText = cleanupForSearch(props.searchInput)
-      if (!searchText) return undefined
-      const _synonyms = synonyms[props.config.name as PepiconType] || []
-      return _synonyms.find((s) => cleanupForSearch(s).includes(searchText))
-    })
-    const synonymHtml = computed(() => {
-      if (!searchInputSynonymHit.value) return ''
-      const text = searchInputSynonymHit.value.replace(
-        props.searchInput,
-        `<span class="c-old-tucan">${props.searchInput}</span>`,
-      )
-      return `<div class="c-washed-cloth" style="opacity: 0.8">${text}</div>`
-    })
-
-    return { synonymHtml }
-  },
+  searchInput: { type: String, default: '' },
+})
+const searchInputSynonymHit = computed(() => {
+  const searchText = cleanupForSearch(props.searchInput)
+  if (!searchText) return undefined
+  const _synonyms = synonyms[props.config.name as PepiconType] || []
+  return _synonyms.find((s) => cleanupForSearch(s).includes(searchText))
+})
+const synonymHtml = computed(() => {
+  if (!searchInputSynonymHit.value) return ''
+  const text = searchInputSynonymHit.value.replace(
+    props.searchInput,
+    `<span class="c-old-tucan">${props.searchInput}</span>`,
+  )
+  return `<div class="c-washed-cloth" style="opacity: 0.8">${text}</div>`
 })
 </script>
 <template>

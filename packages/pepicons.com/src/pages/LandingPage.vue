@@ -1,5 +1,5 @@
-<script lang="ts">
-import { defineComponent, computed, watch, ref } from 'vue'
+<script lang="ts" setup>
+import { computed, watch, ref } from 'vue'
 import {
   Pepicon,
   synonyms,
@@ -20,98 +20,76 @@ import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
 import { defaultsIconConfig } from '../types'
 import DialogWrapper from '../components/DialogWrapper.vue'
 import IconInfo from '../components/IconInfo.vue'
+const emit = defineEmits(['set-is-dark-mode', 'set-config'])
 
-export default defineComponent({
-  name: 'LandingPage',
-  components: { Stack, PepLink, Pickers, PepInput, ProfileCard, IconGrid, DialogWrapper, IconInfo },
-  emits: ['set-is-dark-mode', 'set-config'],
-  setup(props, { emit }) {
-    const hash = getQueryFromUrl()
+const hash = getQueryFromUrl()
 
-    const searchInput = ref(hash || '')
-    const config = ref(defaultsIconConfig({ isDarkMode: false }))
+const searchInput = ref(hash || '')
+const config = ref(defaultsIconConfig({ isDarkMode: false }))
 
-    const configComputed = computed(() => {
-      const { type, color: _color, stroke: _stroke, isDarkMode } = config.value
-      const useColorAsStroke = type === 'print' && isDarkMode
-      const color = useColorAsStroke ? 'black' : _color
-      const stroke = useColorAsStroke ? _color : _stroke
-      return { type, color, stroke }
-    })
-
-    // watch config for side effects
-    watch(
-      config,
-      (conf) => {
-        emit('set-config', conf)
-        const { type, color, isDarkMode } = conf
-
-        // color
-        setPrimaryColor(color)
-
-        // type
-        document.body.className = document.body.className.replace(
-          /(print|pop)-mode/g,
-          `${type}-mode`,
-        )
-
-        // dark mode
-        emit('set-is-dark-mode', isDarkMode)
-        const mode = isDarkMode ? 'dark-mode' : 'light-mode'
-        document.body.className = document.body.className.replace(/(dark|light)-mode/g, mode)
-      },
-      { deep: true, immediate: true },
-    )
-
-    const categoryIconNamesDic = computed(() =>
-      Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
-        if (!(iconCategory in dic)) dic[iconCategory] = []
-        const iconNonExistent = config.value.type === 'print' && iconName.endsWith('-filled')
-        if (iconNonExistent) return dic
-        const searchText = cleanupForSearch(searchInput.value)
-        if (searchText) {
-          const _synonyms: string[] = [
-            ...synonyms[iconName as Pepicon],
-            ...synonymsJa[iconName as Pepicon],
-            iconCategory,
-          ]
-          const searchHit =
-            cleanupForSearch(iconName).includes(searchText) ||
-            _synonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
-          if (!searchHit) return dic
-        }
-        dic[iconCategory].push(iconName as any)
-        return dic
-      }, {} as { [category: string]: PepiconName[] }),
-    )
-
-    const iconInfoIsVisible = ref(false)
-    const iconInfoName = ref<PepiconName>('airplane')
-    function openIconModal(icon: PepiconName): void {
-      iconInfoIsVisible.value = true
-      iconInfoName.value = icon
-    }
-    const scrollPageTo = (navEl) => {
-      console.log(`#${navEl}`)
-      const element = document.querySelector(`#${navEl}`)
-
-      element?.scrollIntoView({ block: 'center', behavior: 'smooth' })
-    }
-
-    return {
-      config,
-      searchInput,
-      setUrlQuery,
-      configComputed,
-      categories,
-      categoryIconNamesDic,
-      scrollPageTo,
-      iconInfoIsVisible,
-      openIconModal,
-      iconInfoName,
-    }
-  },
+const configComputed = computed(() => {
+  const { type, color: _color, stroke: _stroke, isDarkMode } = config.value
+  const useColorAsStroke = type === 'print' && isDarkMode
+  const color = useColorAsStroke ? 'black' : _color
+  const stroke = useColorAsStroke ? _color : _stroke
+  return { type, color, stroke }
 })
+
+// watch config for side effects
+watch(
+  config,
+  (conf) => {
+    emit('set-config', conf)
+    const { type, color, isDarkMode } = conf
+
+    // color
+    setPrimaryColor(color)
+
+    // type
+    document.body.className = document.body.className.replace(/(print|pop)-mode/g, `${type}-mode`)
+
+    // dark mode
+    emit('set-is-dark-mode', isDarkMode)
+    const mode = isDarkMode ? 'dark-mode' : 'light-mode'
+    document.body.className = document.body.className.replace(/(dark|light)-mode/g, mode)
+  },
+  { deep: true, immediate: true },
+)
+
+const categoryIconNamesDic = computed(() =>
+  Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
+    if (!(iconCategory in dic)) dic[iconCategory] = []
+    const iconNonExistent = config.value.type === 'print' && iconName.endsWith('-filled')
+    if (iconNonExistent) return dic
+    const searchText = cleanupForSearch(searchInput.value)
+    if (searchText) {
+      const _synonyms: string[] = [
+        ...synonyms[iconName as Pepicon],
+        ...synonymsJa[iconName as Pepicon],
+        iconCategory,
+      ]
+      const searchHit =
+        cleanupForSearch(iconName).includes(searchText) ||
+        _synonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
+      if (!searchHit) return dic
+    }
+    dic[iconCategory].push(iconName as any)
+    return dic
+  }, {} as { [category: string]: PepiconName[] }),
+)
+
+const iconInfoIsVisible = ref(false)
+const iconInfoName = ref<PepiconName>('airplane')
+function openIconModal(icon: PepiconName): void {
+  iconInfoIsVisible.value = true
+  iconInfoName.value = icon
+}
+const scrollPageTo = (navEl) => {
+  console.log(`#${navEl}`)
+  const element = document.querySelector(`#${navEl}`)
+
+  element?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+}
 </script>
 
 <template>
