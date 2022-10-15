@@ -20,6 +20,9 @@ import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
 import { defaultsIconConfig } from '../types'
 import DialogWrapper from '../components/DialogWrapper.vue'
 import IconInfo from '../components/IconInfo.vue'
+
+document.body.classList.add('light-mode')
+
 const emit = defineEmits(['set-is-dark-mode', 'set-config'])
 
 const hash = getQueryFromUrl()
