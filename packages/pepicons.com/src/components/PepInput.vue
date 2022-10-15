@@ -66,7 +66,7 @@ function emitInput(newVal: any) {
   width: 100%
   transition: all 200ms ease-in-out
   &:focus
-    outline: 2px solid v-bind(color)
+    box-shadow: 0 0 0 2px v-bind(color)
 
 .dark-mode .pep-input
   background-color:#202020
