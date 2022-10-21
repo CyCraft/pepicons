@@ -1,696 +1,698 @@
-'use strict';
+(function (global, factory) {
+  typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports) :
+  typeof define === 'function' && define.amd ? define(['exports'], factory) :
+  (global = typeof globalThis !== 'undefined' ? globalThis : global || self, factory(global.Pepicons = {}));
+})(this, (function (exports) { 'use strict';
 
-Object.defineProperty(exports, '__esModule', { value: true });
+  /** Do not edit! This file is auto-generated. */
+  const pepiconArray = ['airplane', 'alarm', 'angle-down', 'angle-left', 'angle-right', 'angle-up', 'arrow-down', 'arrow-down-left', 'arrow-down-right', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-up-left', 'arrow-up-right', 'bank', 'battery', 'bell', 'bell-off', 'bicycle', 'bluetooth', 'book', 'bookmark', 'bookmark-filled', 'briefcase', 'building', 'calculator', 'calendar', 'camera', 'can', 'car', 'cart', 'cellphone-eye', 'cellphone-loop', 'chain', 'checkmark', 'circle', 'circle-filled', 'clapperboard', 'clipboard', 'clipboard-check', 'clipboard-check-circle', 'clock', 'cloud', 'cloud-down', 'cloud-down-filled', 'cloud-filled', 'cloud-up', 'cloud-up-filled', 'coctail', 'code', 'color-picker', 'contract', 'controller', 'countdown', 'credit-card', 'crown', 'cup', 'cv', 'division', 'dots-x', 'dots-y', 'dress', 'duplicate', 'electricity', 'enter', 'exclamation', 'exclamation-circle', 'exclamation-filled', 'expand', 'eye', 'eye-closed', 'eye-frame', 'eye-off', 'fast-forward', 'file', 'file-loop', 'film-frame', 'fire', 'flag', 'flag-straight', 'flower', 'flower-bud', 'folder', 'folding-stool', 'gear', 'gear-filled', 'gift', 'grab', 'grid', 'hamburger', 'hand-grab', 'hand-open', 'hand-point', 'hand-point-open', 'handshake', 'hash', 'headphone', 'heart', 'hourglass', 'house', 'identification', 'info', 'info-circle', 'info-filled', 'internet', 'key', 'knive-fork', 'label', 'leave', 'letter', 'letter-open', 'list', 'lock-closed', 'lock-open', 'loop', 'loop-minus', 'loop-plus', 'magnet', 'map', 'megaphone', 'menu', 'microphone', 'microphone2', 'minus', 'monitor', 'monitor-eye', 'monitor-loop', 'monitor2', 'moon', 'moon-filled', 'motorcycle', 'move-x', 'move-y', 'music-note-double', 'music-note-single', 'next-track', 'no-entry', 'open', 'paint-pallet', 'pause', 'pen', 'people', 'person', 'person-checkmark', 'person-filled', 'person-plus', 'persons', 'phone', 'photo', 'photo-camera', 'photo-studio', 'pill', 'pin', 'pinpoint', 'pinpoint-filled', 'pinpoint-off', 'pinpoint-off-filled', 'play', 'plus', 'power', 'previous-track', 'printer', 'qr-code', 'question', 'question-circle', 'question-filled', 'radio', 'refresh', 'reload', 'repeat', 'rewind', 'rewind-time', 'scissors', 'send', 'share-android', 'share-ios', 'shuffle', 'sliders', 'smartphone', 'smartphone-cutout', 'smartphone-notch', 'smartphone2', 'soft-drink', 'sort', 'speaker-high', 'speaker-low', 'speaker-off', 'square', 'square-filled', 'star', 'star-filled', 'stars', 'stopwatch', 'studio-backdrop', 'studio-light-front', 'studio-light-side', 'sun', 'sun-filled', 'syringe', 't-shirt', 'taxi', 'television', 'text-bubble', 'text-bubbles', 'thumbs-down', 'thumbs-up', 'times', 'tool', 'train', 'trash', 'triangle-down', 'triangle-down-filled', 'triangle-left', 'triangle-left-filled', 'triangle-right', 'triangle-right-filled', 'triangle-up', 'triangle-up-filled', 'trophy', 'truck', 'umbrella', 'watch', 'water-drop', 'wifi'];
 
-/** Do not edit! This file is auto-generated. */
-const pepiconArray = ['airplane', 'alarm', 'angle-down', 'angle-left', 'angle-right', 'angle-up', 'arrow-down', 'arrow-down-left', 'arrow-down-right', 'arrow-left', 'arrow-right', 'arrow-up', 'arrow-up-left', 'arrow-up-right', 'bank', 'battery', 'bell', 'bell-off', 'bicycle', 'bluetooth', 'book', 'bookmark', 'bookmark-filled', 'briefcase', 'building', 'calculator', 'calendar', 'camera', 'can', 'car', 'cart', 'cellphone-eye', 'cellphone-loop', 'chain', 'checkmark', 'circle', 'circle-filled', 'clapperboard', 'clipboard', 'clipboard-check', 'clipboard-check-circle', 'clock', 'cloud', 'cloud-down', 'cloud-down-filled', 'cloud-filled', 'cloud-up', 'cloud-up-filled', 'coctail', 'code', 'color-picker', 'contract', 'controller', 'countdown', 'credit-card', 'crown', 'cup', 'cv', 'division', 'dots-x', 'dots-y', 'dress', 'duplicate', 'electricity', 'enter', 'exclamation', 'exclamation-circle', 'exclamation-filled', 'expand', 'eye', 'eye-closed', 'eye-frame', 'eye-off', 'fast-forward', 'file', 'file-loop', 'film-frame', 'fire', 'flag', 'flag-straight', 'flower', 'flower-bud', 'folder', 'folding-stool', 'gear', 'gear-filled', 'gift', 'grab', 'grid', 'hamburger', 'hand-grab', 'hand-open', 'hand-point', 'hand-point-open', 'handshake', 'hash', 'headphone', 'heart', 'hourglass', 'house', 'identification', 'info', 'info-circle', 'info-filled', 'internet', 'key', 'knive-fork', 'label', 'leave', 'letter', 'letter-open', 'list', 'lock-closed', 'lock-open', 'loop', 'loop-minus', 'loop-plus', 'magnet', 'map', 'megaphone', 'menu', 'microphone', 'microphone2', 'minus', 'monitor', 'monitor-eye', 'monitor-loop', 'monitor2', 'moon', 'moon-filled', 'motorcycle', 'move-x', 'move-y', 'music-note-double', 'music-note-single', 'next-track', 'no-entry', 'open', 'paint-pallet', 'pause', 'pen', 'people', 'person', 'person-checkmark', 'person-filled', 'person-plus', 'persons', 'phone', 'photo', 'photo-camera', 'photo-studio', 'pill', 'pin', 'pinpoint', 'pinpoint-filled', 'pinpoint-off', 'pinpoint-off-filled', 'play', 'plus', 'power', 'previous-track', 'printer', 'qr-code', 'question', 'question-circle', 'question-filled', 'radio', 'refresh', 'reload', 'repeat', 'rewind', 'rewind-time', 'scissors', 'send', 'share-android', 'share-ios', 'shuffle', 'sliders', 'smartphone', 'smartphone-cutout', 'smartphone-notch', 'smartphone2', 'soft-drink', 'sort', 'speaker-high', 'speaker-low', 'speaker-off', 'square', 'square-filled', 'star', 'star-filled', 'stars', 'stopwatch', 'studio-backdrop', 'studio-light-front', 'studio-light-side', 'sun', 'sun-filled', 'syringe', 't-shirt', 'taxi', 'television', 'text-bubble', 'text-bubbles', 'thumbs-down', 'thumbs-up', 'times', 'tool', 'train', 'trash', 'triangle-down', 'triangle-down-filled', 'triangle-left', 'triangle-left-filled', 'triangle-right', 'triangle-right-filled', 'triangle-up', 'triangle-up-filled', 'trophy', 'truck', 'umbrella', 'watch', 'water-drop', 'wifi'];
+  /** Do not edit! This file is auto-generated. */
+  const categories = ['ui', 'transport', 'time', 'text', 'sound', 'social', 'shape', 'nature', 'location', 'leisure', 'item', 'hand', 'food-drinks', 'device', 'arrows'];
+  const pepiconCategoryDic = {
+      'airplane': 'transport',
+      'alarm': 'time',
+      'angle-down': 'arrows',
+      'angle-left': 'arrows',
+      'angle-right': 'arrows',
+      'angle-up': 'arrows',
+      'arrow-down': 'arrows',
+      'arrow-down-left': 'arrows',
+      'arrow-down-right': 'arrows',
+      'arrow-left': 'arrows',
+      'arrow-right': 'arrows',
+      'arrow-up': 'arrows',
+      'arrow-up-left': 'arrows',
+      'arrow-up-right': 'arrows',
+      'bank': 'location',
+      'battery': 'device',
+      'bell': 'sound',
+      'bell-off': 'sound',
+      'bicycle': 'transport',
+      'bluetooth': 'ui',
+      'book': 'leisure',
+      'bookmark': 'text',
+      'bookmark-filled': 'text',
+      'briefcase': 'item',
+      'building': 'location',
+      'calculator': 'device',
+      'calendar': 'time',
+      'camera': 'device',
+      'can': 'food-drinks',
+      'car': 'transport',
+      'cart': 'leisure',
+      'cellphone-eye': 'ui',
+      'cellphone-loop': 'ui',
+      'chain': 'ui',
+      'checkmark': 'ui',
+      'circle': 'shape',
+      'circle-filled': 'shape',
+      'clapperboard': 'device',
+      'clipboard': 'text',
+      'clipboard-check': 'text',
+      'clipboard-check-circle': 'text',
+      'clock': 'time',
+      'cloud': 'ui',
+      'cloud-down': 'ui',
+      'cloud-down-filled': 'ui',
+      'cloud-filled': 'ui',
+      'cloud-up': 'ui',
+      'cloud-up-filled': 'ui',
+      'coctail': 'food-drinks',
+      'code': 'ui',
+      'color-picker': 'ui',
+      'contract': 'arrows',
+      'controller': 'leisure',
+      'countdown': 'time',
+      'credit-card': 'item',
+      'crown': 'item',
+      'cup': 'food-drinks',
+      'cv': 'social',
+      'division': 'shape',
+      'dots-x': 'ui',
+      'dots-y': 'ui',
+      'dress': 'item',
+      'duplicate': 'ui',
+      'electricity': 'nature',
+      'enter': 'ui',
+      'exclamation': 'text',
+      'exclamation-circle': 'text',
+      'exclamation-filled': 'text',
+      'expand': 'arrows',
+      'eye': 'ui',
+      'eye-closed': 'ui',
+      'eye-frame': 'ui',
+      'eye-off': 'ui',
+      'fast-forward': 'sound',
+      'file': 'ui',
+      'file-loop': 'ui',
+      'film-frame': 'leisure',
+      'fire': 'nature',
+      'flag': 'location',
+      'flag-straight': 'location',
+      'flower': 'nature',
+      'flower-bud': 'nature',
+      'folder': 'ui',
+      'folding-stool': 'device',
+      'gear': 'ui',
+      'gear-filled': 'ui',
+      'gift': 'social',
+      'grab': 'ui',
+      'grid': 'ui',
+      'hamburger': 'food-drinks',
+      'hand-grab': 'hand',
+      'hand-open': 'hand',
+      'hand-point': 'hand',
+      'hand-point-open': 'hand',
+      'handshake': 'hand',
+      'hash': 'ui',
+      'headphone': 'sound',
+      'heart': 'social',
+      'hourglass': 'time',
+      'house': 'location',
+      'identification': 'item',
+      'info': 'text',
+      'info-circle': 'text',
+      'info-filled': 'text',
+      'internet': 'location',
+      'key': 'item',
+      'knive-fork': 'food-drinks',
+      'label': 'ui',
+      'leave': 'ui',
+      'letter': 'social',
+      'letter-open': 'social',
+      'list': 'ui',
+      'lock-closed': 'item',
+      'lock-open': 'item',
+      'loop': 'ui',
+      'loop-minus': 'ui',
+      'loop-plus': 'ui',
+      'magnet': 'item',
+      'map': 'transport',
+      'megaphone': 'item',
+      'menu': 'ui',
+      'microphone': 'sound',
+      'microphone2': 'leisure',
+      'minus': 'shape',
+      'monitor': 'device',
+      'monitor-eye': 'ui',
+      'monitor-loop': 'ui',
+      'monitor2': 'device',
+      'moon': 'nature',
+      'moon-filled': 'nature',
+      'motorcycle': 'transport',
+      'move-x': 'arrows',
+      'move-y': 'arrows',
+      'music-note-double': 'sound',
+      'music-note-single': 'sound',
+      'next-track': 'sound',
+      'no-entry': 'ui',
+      'open': 'ui',
+      'paint-pallet': 'leisure',
+      'pause': 'sound',
+      'pen': 'text',
+      'people': 'social',
+      'person': 'social',
+      'person-checkmark': 'social',
+      'person-filled': 'social',
+      'person-plus': 'social',
+      'persons': 'social',
+      'phone': 'social',
+      'photo': 'item',
+      'photo-camera': 'device',
+      'photo-studio': 'location',
+      'pill': 'item',
+      'pin': 'item',
+      'pinpoint': 'location',
+      'pinpoint-filled': 'location',
+      'pinpoint-off': 'location',
+      'pinpoint-off-filled': 'location',
+      'play': 'sound',
+      'plus': 'shape',
+      'power': 'ui',
+      'previous-track': 'sound',
+      'printer': 'device',
+      'qr-code': 'ui',
+      'question': 'text',
+      'question-circle': 'text',
+      'question-filled': 'text',
+      'radio': 'sound',
+      'refresh': 'arrows',
+      'reload': 'arrows',
+      'repeat': 'sound',
+      'rewind': 'sound',
+      'rewind-time': 'time',
+      'scissors': 'item',
+      'send': 'social',
+      'share-android': 'social',
+      'share-ios': 'social',
+      'shuffle': 'sound',
+      'sliders': 'ui',
+      'smartphone': 'device',
+      'smartphone-cutout': 'device',
+      'smartphone-notch': 'device',
+      'smartphone2': 'device',
+      'soft-drink': 'food-drinks',
+      'sort': 'arrows',
+      'speaker-high': 'sound',
+      'speaker-low': 'sound',
+      'speaker-off': 'sound',
+      'square': 'shape',
+      'square-filled': 'shape',
+      'star': 'nature',
+      'star-filled': 'nature',
+      'stars': 'nature',
+      'stopwatch': 'time',
+      'studio-backdrop': 'location',
+      'studio-light-front': 'device',
+      'studio-light-side': 'device',
+      'sun': 'nature',
+      'sun-filled': 'nature',
+      'syringe': 'item',
+      't-shirt': 'item',
+      'taxi': 'transport',
+      'television': 'device',
+      'text-bubble': 'social',
+      'text-bubbles': 'social',
+      'thumbs-down': 'social',
+      'thumbs-up': 'social',
+      'times': 'shape',
+      'tool': 'ui',
+      'train': 'transport',
+      'trash': 'ui',
+      'triangle-down': 'shape',
+      'triangle-down-filled': 'shape',
+      'triangle-left': 'shape',
+      'triangle-left-filled': 'shape',
+      'triangle-right': 'shape',
+      'triangle-right-filled': 'shape',
+      'triangle-up': 'shape',
+      'triangle-up-filled': 'shape',
+      'trophy': 'item',
+      'truck': 'transport',
+      'umbrella': 'item',
+      'watch': 'time',
+      'water-drop': 'nature',
+      'wifi': 'ui',
+  };
 
-/** Do not edit! This file is auto-generated. */
-const categories = ['ui', 'transport', 'time', 'text', 'sound', 'social', 'shape', 'nature', 'location', 'leisure', 'item', 'hand', 'food-drinks', 'device', 'arrows'];
-const pepiconCategoryDic = {
-    'airplane': 'transport',
-    'alarm': 'time',
-    'angle-down': 'arrows',
-    'angle-left': 'arrows',
-    'angle-right': 'arrows',
-    'angle-up': 'arrows',
-    'arrow-down': 'arrows',
-    'arrow-down-left': 'arrows',
-    'arrow-down-right': 'arrows',
-    'arrow-left': 'arrows',
-    'arrow-right': 'arrows',
-    'arrow-up': 'arrows',
-    'arrow-up-left': 'arrows',
-    'arrow-up-right': 'arrows',
-    'bank': 'location',
-    'battery': 'device',
-    'bell': 'sound',
-    'bell-off': 'sound',
-    'bicycle': 'transport',
-    'bluetooth': 'ui',
-    'book': 'leisure',
-    'bookmark': 'text',
-    'bookmark-filled': 'text',
-    'briefcase': 'item',
-    'building': 'location',
-    'calculator': 'device',
-    'calendar': 'time',
-    'camera': 'device',
-    'can': 'food-drinks',
-    'car': 'transport',
-    'cart': 'leisure',
-    'cellphone-eye': 'ui',
-    'cellphone-loop': 'ui',
-    'chain': 'ui',
-    'checkmark': 'ui',
-    'circle': 'shape',
-    'circle-filled': 'shape',
-    'clapperboard': 'device',
-    'clipboard': 'text',
-    'clipboard-check': 'text',
-    'clipboard-check-circle': 'text',
-    'clock': 'time',
-    'cloud': 'ui',
-    'cloud-down': 'ui',
-    'cloud-down-filled': 'ui',
-    'cloud-filled': 'ui',
-    'cloud-up': 'ui',
-    'cloud-up-filled': 'ui',
-    'coctail': 'food-drinks',
-    'code': 'ui',
-    'color-picker': 'ui',
-    'contract': 'arrows',
-    'controller': 'leisure',
-    'countdown': 'time',
-    'credit-card': 'item',
-    'crown': 'item',
-    'cup': 'food-drinks',
-    'cv': 'social',
-    'division': 'shape',
-    'dots-x': 'ui',
-    'dots-y': 'ui',
-    'dress': 'item',
-    'duplicate': 'ui',
-    'electricity': 'nature',
-    'enter': 'ui',
-    'exclamation': 'text',
-    'exclamation-circle': 'text',
-    'exclamation-filled': 'text',
-    'expand': 'arrows',
-    'eye': 'ui',
-    'eye-closed': 'ui',
-    'eye-frame': 'ui',
-    'eye-off': 'ui',
-    'fast-forward': 'sound',
-    'file': 'ui',
-    'file-loop': 'ui',
-    'film-frame': 'leisure',
-    'fire': 'nature',
-    'flag': 'location',
-    'flag-straight': 'location',
-    'flower': 'nature',
-    'flower-bud': 'nature',
-    'folder': 'ui',
-    'folding-stool': 'device',
-    'gear': 'ui',
-    'gear-filled': 'ui',
-    'gift': 'social',
-    'grab': 'ui',
-    'grid': 'ui',
-    'hamburger': 'food-drinks',
-    'hand-grab': 'hand',
-    'hand-open': 'hand',
-    'hand-point': 'hand',
-    'hand-point-open': 'hand',
-    'handshake': 'hand',
-    'hash': 'ui',
-    'headphone': 'sound',
-    'heart': 'social',
-    'hourglass': 'time',
-    'house': 'location',
-    'identification': 'item',
-    'info': 'text',
-    'info-circle': 'text',
-    'info-filled': 'text',
-    'internet': 'location',
-    'key': 'item',
-    'knive-fork': 'food-drinks',
-    'label': 'ui',
-    'leave': 'ui',
-    'letter': 'social',
-    'letter-open': 'social',
-    'list': 'ui',
-    'lock-closed': 'item',
-    'lock-open': 'item',
-    'loop': 'ui',
-    'loop-minus': 'ui',
-    'loop-plus': 'ui',
-    'magnet': 'item',
-    'map': 'transport',
-    'megaphone': 'item',
-    'menu': 'ui',
-    'microphone': 'sound',
-    'microphone2': 'leisure',
-    'minus': 'shape',
-    'monitor': 'device',
-    'monitor-eye': 'ui',
-    'monitor-loop': 'ui',
-    'monitor2': 'device',
-    'moon': 'nature',
-    'moon-filled': 'nature',
-    'motorcycle': 'transport',
-    'move-x': 'arrows',
-    'move-y': 'arrows',
-    'music-note-double': 'sound',
-    'music-note-single': 'sound',
-    'next-track': 'sound',
-    'no-entry': 'ui',
-    'open': 'ui',
-    'paint-pallet': 'leisure',
-    'pause': 'sound',
-    'pen': 'text',
-    'people': 'social',
-    'person': 'social',
-    'person-checkmark': 'social',
-    'person-filled': 'social',
-    'person-plus': 'social',
-    'persons': 'social',
-    'phone': 'social',
-    'photo': 'item',
-    'photo-camera': 'device',
-    'photo-studio': 'location',
-    'pill': 'item',
-    'pin': 'item',
-    'pinpoint': 'location',
-    'pinpoint-filled': 'location',
-    'pinpoint-off': 'location',
-    'pinpoint-off-filled': 'location',
-    'play': 'sound',
-    'plus': 'shape',
-    'power': 'ui',
-    'previous-track': 'sound',
-    'printer': 'device',
-    'qr-code': 'ui',
-    'question': 'text',
-    'question-circle': 'text',
-    'question-filled': 'text',
-    'radio': 'sound',
-    'refresh': 'arrows',
-    'reload': 'arrows',
-    'repeat': 'sound',
-    'rewind': 'sound',
-    'rewind-time': 'time',
-    'scissors': 'item',
-    'send': 'social',
-    'share-android': 'social',
-    'share-ios': 'social',
-    'shuffle': 'sound',
-    'sliders': 'ui',
-    'smartphone': 'device',
-    'smartphone-cutout': 'device',
-    'smartphone-notch': 'device',
-    'smartphone2': 'device',
-    'soft-drink': 'food-drinks',
-    'sort': 'arrows',
-    'speaker-high': 'sound',
-    'speaker-low': 'sound',
-    'speaker-off': 'sound',
-    'square': 'shape',
-    'square-filled': 'shape',
-    'star': 'nature',
-    'star-filled': 'nature',
-    'stars': 'nature',
-    'stopwatch': 'time',
-    'studio-backdrop': 'location',
-    'studio-light-front': 'device',
-    'studio-light-side': 'device',
-    'sun': 'nature',
-    'sun-filled': 'nature',
-    'syringe': 'item',
-    't-shirt': 'item',
-    'taxi': 'transport',
-    'television': 'device',
-    'text-bubble': 'social',
-    'text-bubbles': 'social',
-    'thumbs-down': 'social',
-    'thumbs-up': 'social',
-    'times': 'shape',
-    'tool': 'ui',
-    'train': 'transport',
-    'trash': 'ui',
-    'triangle-down': 'shape',
-    'triangle-down-filled': 'shape',
-    'triangle-left': 'shape',
-    'triangle-left-filled': 'shape',
-    'triangle-right': 'shape',
-    'triangle-right-filled': 'shape',
-    'triangle-up': 'shape',
-    'triangle-up-filled': 'shape',
-    'trophy': 'item',
-    'truck': 'transport',
-    'umbrella': 'item',
-    'watch': 'time',
-    'water-drop': 'nature',
-    'wifi': 'ui',
-};
+  /** Do not edit! This file is auto-generated. */
+  const synonyms$1 = {
+      'airplane': ['aeroplane', 'fly', 'travel', 'vacation', 'trip', 'flight', 'airport'],
+      'alarm': ['alarm-clock', 'siren', 'bell', 'wake-up', 'early', 'timer'],
+      'angle-down': ['arrow-down', 'chevron-down', 'bracket-down', 'to-bottom', 'go-down'],
+      'angle-left': ['arrow-left', 'chevron-left', 'bracket-left', 'bracket-open', 'opening-bracket', 'less-than', 'back', 'previous', 'before'],
+      'angle-right': ['arrow-right', 'chevron-right', 'bracket-right', 'bracket-close', 'closing-bracket', 'greater-than', 'more-than', 'next', 'after', 'forward'],
+      'angle-up': ['arrow-up', 'chevron-up', 'bracket-up', 'to-top', 'go-up'],
+      'arrow-down': ['south', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation', 'to-bottom', 'go-down'],
+      'arrow-down-left': ['south-west', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation'],
+      'arrow-down-right': ['south-east', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation'],
+      'arrow-left': ['west', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation', 'previous', 'back', 'before'],
+      'arrow-right': ['east', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation', 'next', 'after', '', 'next', 'after', 'forward'],
+      'arrow-up': ['north', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation', 'to-top', 'go-up'],
+      'arrow-up-left': ['north-west', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation'],
+      'arrow-up-right': ['north-east', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation'],
+      'bank': ['finance', 'financial-institution', 'money', 'cash', 'savings', 'investment', 'lending', 'loans', 'reserve', 'stock-market', 'payment', 'deposit'],
+      'battery': ['charge'],
+      'bell': ['notification', 'attention', 'alert'],
+      'bell-off': ['no-notification', 'no-attention', 'quiet', 'silent', 'no-alert'],
+      'bicycle': ['bike'],
+      'bluetooth': [],
+      'book': ['read', 'bookmark'],
+      'bookmark': ['flag', 'clip'],
+      'bookmark-filled': ['flag', 'clip'],
+      'briefcase': ['handbag', 'shoulder-bag', 'container', 'luggage', 'travel', 'work'],
+      'building': ['office', 'sky-scraper', 'business', 'work', 'workplace', 'headquarters', 'enterprise', 'company', 'firm', 'bureau', 'agency', 'corporation'],
+      'calculator': ['calculate'],
+      'calendar': ['date', 'when', 'event', 'deadline'],
+      'camera': ['record', 'video'],
+      'can': ['pepsi', 'soft-drink', 'fizzy', 'cola', 'cold-drink', 'refresher', 'juice'],
+      'car': ['automobile', 'drive'],
+      'cart': ['shopping', 'payout', 'commerce', 'transaction', 'buy', 'purchase'],
+      'cellphone-eye': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
+      'cellphone-loop': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
+      'chain': ['link', 'url', 'anchor', 'open', 'website', 'shackle', 'connect', 'bond', 'bind', 'joint', 'knot'],
+      'checkmark': ['check', 'toggle', 'tick', 'ok', 'confirmed'],
+      'circle': ['bullet', 'ball'],
+      'circle-filled': ['bullet', 'ball'],
+      'clapperboard': ['dumb-slate', 'filmmaking', 'video-production', 'scenes', 'takes', 'clapboard', 'clapstick', 'marker', 'slate-board', 'sync-slate', 'action', 'filming'],
+      'clipboard': ['copy', 'duplicate', 'paste'],
+      'clipboard-check': ['copy', 'duplicate', 'paste'],
+      'clipboard-check-circle': ['copy', 'duplicate', 'paste'],
+      'clock': ['time', 'timer', 'countdown', 'deadline', 'hour', 'watch'],
+      'cloud': ['upload', 'online', 'storage', 'save'],
+      'cloud-down': ['download', 'storage', 'retrieve', 'fetch', 'local', 'load'],
+      'cloud-down-filled': ['download', 'storage', 'retrieve', 'fetch', 'local', 'load'],
+      'cloud-filled': ['upload', 'online', 'storage', 'save'],
+      'cloud-up': ['upload', 'storage', 'save'],
+      'cloud-up-filled': ['upload', 'storage', 'save'],
+      'coctail': ['alcohol', 'tropical'],
+      'code': ['programming', 'coding', 'html', 'xml'],
+      'color-picker': [],
+      'contract': ['shrink', 'close', 'zoom-out', 'minimize'],
+      'controller': ['video-game', 'console'],
+      'countdown': ['timer', 'clock', 'stopwatch'],
+      'credit-card': ['master-card', 'visa', 'cashless', 'payment', 'checkout'],
+      'crown': ['coronet', 'diadem', 'tiara', 'circlet', 'title', 'award', 'accolade', 'honor', 'honour', 'distinction', 'glory', 'kudos', 'trophy', 'cup', 'medal', 'monarch', 'sovereign', 'king', 'queen', 'emperor', 'empress'],
+      'cup': ['coffee', 'hot-drink'],
+      'cv': ['life-history', 'biography', 'details', 'curriculum-vitae', 'entry', 'participation', 'candidate', 'applicant', 'submission', 'submit', 'apply', 'enter', 'interview'],
+      'division': ['divide'],
+      'dots-x': ['dots-horizontal', 'more', 'details', 'menu'],
+      'dots-y': ['dots-vertical', 'more', 'details', 'menu'],
+      'dress': ['one-piece', 'clothing', 'gown', 'frock', 'garment'],
+      'duplicate': ['copy'],
+      'electricity': ['thunder', 'lightning'],
+      'enter': ['login', 'log-in', 'signin', 'sign-in', 'join', 'embark', 'start', 'begin', 'into', 'enlist', 'entrance', 'submit', 'advance', 'register'],
+      'exclamation': ['bang', 'exclamation-mark', 'exclamation-point', 'shriek', 'pling', 'note-of-admiration', 'warning', 'danger', 'error'],
+      'exclamation-circle': ['bang', 'exclamation-mark', 'exclamation-point', 'shriek', 'pling', 'note-of-admiration', 'warning', 'danger', 'error'],
+      'exclamation-filled': ['bang', 'exclamation-mark', 'exclamation-point', 'shriek', 'pling', 'note-of-admiration', 'warning', 'danger', 'error'],
+      'expand': ['fullscreen', 'open', 'zoom-in', 'maximize'],
+      'eye': ['password-visible', 'see', 'watch', 'awake'],
+      'eye-closed': ['password-hidden', 'invisible', 'hide', 'secret', 'asleep'],
+      'eye-frame': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
+      'eye-off': ['password-hidden', 'invisible', 'hide', 'secret', 'not-allowed', 'no-access'],
+      'fast-forward': ['audio', 'media-controls', 'music'],
+      'file': ['document', 'record', 'note', 'data', 'archive'],
+      'file-loop': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
+      'film-frame': ['picture', 'movie', 'roll', 'feature', 'tv', 'television', 'programme', 'motion-picture', 'animation', 'flick', 'cinema'],
+      'fire': ['inferno', 'ablaze', 'combustion', 'flames', 'heat', 'warmth', 'ignite', 'burn', 'fiery', 'popular', 'trending', 'attention', 'important', 'dangerous'],
+      'flag': ['banner', 'country', 'important', 'pin'],
+      'flag-straight': ['banner', 'country', 'important', 'pin'],
+      'flower': ['tulip'],
+      'flower-bud': ['daisy'],
+      'folder': ['container', 'binder', 'files', 'archive', 'save', 'record', 'keep'],
+      'folding-stool': ['directors-chair', 'seat', 'photo-shoot', 'modelling', 'filming'],
+      'gear': ['settings', 'cogwheel', 'configuration', 'mechanical', 'machinery'],
+      'gear-filled': ['settings', 'cogwheel', 'configuration', 'mechanical', 'machinery'],
+      'gift': ['present', 'surprise', 'give'],
+      'grab': ['handle', 'move', 'drag'],
+      'grid': ['cards', 'table', 'list', 'to-do', 'todo', 'items', 'sort', 'organise', 'organize', 'tasks', 'sheet', 'entries', 'register', 'directory', 'catalogue', 'inventory', 'index', 'checklist', 'table'],
+      'hamburger': ['fast-food'],
+      'hand-grab': ['hold', 'take', 'move', 'drag'],
+      'hand-open': ['hello', 'greeting', 'salutation', 'raise-hand'],
+      'hand-point': ['direction', 'extend', 'finger', 'touch'],
+      'hand-point-open': ['direction', 'extend', 'finger', 'thumb', 'touch'],
+      'handshake': ['grasp', 'greeting', 'touch', 'agreement', 'deal', 'pact', 'arrangement', 'business', 'friendship'],
+      'hash': ['hashtag', 'tag', 'pound-key'],
+      'headphone': ['headset', 'earphone', 'music', 'listen', 'anc'],
+      'heart': ['love', 'like'],
+      'hourglass': ['sandglass', 'countdown', 'stopwatch', 'clock'],
+      'house': ['home', 'residence'],
+      'identification': ['id', 'papers', 'identity', 'bona fides', 'credentials', 'id-card', 'pass', 'badge', 'warrant', 'licence', 'permit', 'passport', 'proof-of-identity', 'certificate', 'diploma'],
+      'info': ['information', 'help', 'hint', 'guide', 'tooltip'],
+      'info-circle': ['information', 'help', 'hint', 'guide', 'tooltip'],
+      'info-filled': ['information', 'help', 'hint', 'guide', 'tooltip'],
+      'internet': ['web', 'cyber', 'remote'],
+      'key': ['lock', 'unlock', 'encrypt', 'decrypt', 'safe', 'secret', 'solution', 'answer'],
+      'knive-fork': ['eat', 'cutlery'],
+      'label': ['tag', 'flag', 'ticket', 'badge'],
+      'leave': ['logout', 'log-out', 'sign-out', 'signout', 'stop', 'depart', 'retire', 'withdraw', 'exit', 'abandon', 'quit', 'resign', 'retire', 'gone'],
+      'letter': ['email', 'post', 'inbox'],
+      'letter-open': ['offered', 'offer-letter', 'invitation', 'message', 'written', 'communication', 'note', 'report', 'correspondence', 'information', 'intelligence', 'mail', 'post'],
+      'list': ['to-do', 'todo', 'items', 'sort', 'organise', 'organize', 'tasks', 'sheet', 'entries', 'register', 'directory', 'catalogue', 'inventory', 'index', 'checklist', 'table'],
+      'lock-closed': ['lock', 'encrypt'],
+      'lock-open': ['unlock', 'decrypt'],
+      'loop': ['zoom', 'magnify', 'detective'],
+      'loop-minus': ['zoom-out', 'magnify-out', 'farther', 'further'],
+      'loop-plus': ['zoom-in', 'magnify-in', 'closer'],
+      'magnet': ['attraction', 'repel', 'repulsion'],
+      'map': ['location', 'directions'],
+      'megaphone': ['public-speaker', 'speech', 'lecture', 'yell', 'shout', 'announce', 'broadcast', 'proclaim', 'disclose'],
+      'menu': ['hamburger', 'list', 'align', 'text', 'show-more'],
+      'microphone': ['record', 'voice', 'radio'],
+      'microphone2': ['record', 'voice', 'radio', 'talent', 'idol', 'music', 'dance', 'singing', 'performance', 'live'],
+      'minus': ['dash', 'hyphen', 'line'],
+      'monitor': ['computer', 'desktop', 'screen'],
+      'monitor-eye': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
+      'monitor-loop': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
+      'monitor2': ['computer', 'desktop', 'screen'],
+      'moon': ['dark-mode', 'night', 'lights-out'],
+      'moon-filled': ['dark-mode', 'lights-out'],
+      'motorcycle': ['bike'],
+      'move-x': ['x-axis', 'width', 'drag', 'left-right', 'expand', 'grow', 'stretch'],
+      'move-y': ['y-axis', 'height', 'drag', 'up-down', 'expand', 'grow', 'stretch'],
+      'music-note-double': ['score', 'solfege', 'song'],
+      'music-note-single': ['score', 'solfege', 'song'],
+      'next-track': ['audio', 'media-controls', 'music'],
+      'no-entry': [],
+      'open': ['link', 'new-tab', 'external', 'go'],
+      'paint-pallet': ['painter', 'art'],
+      'pause': ['audio', 'media-controls', 'music'],
+      'pen': ['edit', 'write', 'pencil', 'draw', 'modify', 'update'],
+      'people': ['3-persons', '3-people', 'group', 'following', 'crowd', 'band', 'gathering', 'company', 'assembly', 'association', 'club', 'society', 'guild', 'league', 'union', 'mass', 'triplet', 'accounts'],
+      'person': ['human', 'man', 'someone', 'unknown', 'identity', 'profile', 'you', 'account'],
+      'person-checkmark': ['added', 'friends', 'know', 'following'],
+      'person-filled': ['human', 'man', 'someone', 'unknown', 'identity', 'profile', 'you', 'account'],
+      'person-plus': ['friend', 'plus', 'cross', 'add', 'new', 'follow'],
+      'persons': ['human', 'man', 'someone', 'unknown', 'identity', 'profile', 'you', '2-persons', '2-people', 'pair', 'partnership', 'couple', 'duo', 'duplet', 'accounts'],
+      'phone': ['call', 'talk', 'telephone'],
+      'photo': ['photograph', 'picture', 'shot', 'snap', 'image', 'camera-roll'],
+      'photo-camera': ['photography', 'shutter', 'picture'],
+      'photo-studio': ['backdrop', 'photo-shoot', 'modelling', 'filming'],
+      'pill': ['medicine', 'capsule', 'pellet', 'doctor', 'sick', 'disease', 'cure', 'drugs'],
+      'pin': ['nail', 'peg', 'stick', 'attach', 'fix', 'keep'],
+      'pinpoint': ['location-marker', 'pin', 'position', 'map', 'here', 'where'],
+      'pinpoint-filled': ['location-marker', 'pin', 'position', 'map', 'here', 'where'],
+      'pinpoint-off': ['location-marker-off', 'pin', 'position', 'map', 'here', 'where'],
+      'pinpoint-off-filled': ['location-marker-off', 'pin', 'position', 'map', 'here', 'where'],
+      'play': ['audio', 'media-controls', 'music'],
+      'plus': ['cross', 'add', 'new'],
+      'power': ['turn-off', 'shut-down'],
+      'previous-track': ['audio', 'media-controls', 'music'],
+      'printer': ['pdf'],
+      'qr-code': ['bar-code', 'barcode', 'scan'],
+      'question': ['inquiry', 'query', 'interrogate', 'doubt', 'quiz', 'help', 'hint', 'tooltip'],
+      'question-circle': ['inquiry', 'query', 'interrogate', 'doubt', 'quiz', 'help', 'hint', 'tooltip'],
+      'question-filled': ['inquiry', 'query', 'interrogate', 'doubt', 'quiz', 'help', 'hint', 'tooltip'],
+      'radio': ['music', 'listening', 'podcast'],
+      'refresh': ['reload', 'fetch', 'twist', 'turn', 'go-round', 'spin'],
+      'reload': ['refresh', 'turn', 'start-over', 'back', 'around', 'spin'],
+      'repeat': ['audio', 'media-controls', 'music'],
+      'rewind': ['audio', 'media-controls', 'music'],
+      'rewind-time': ['turn-back-time', 'go-back', 'previous'],
+      'scissors': ['cut', 'hair', 'clippers', 'shears', 'trimmer', 'barber', 'stylist', 'beauty-parlor', 'coiffeuse', 'coiffeur'],
+      'send': ['email', 'paper-plane'],
+      'share-android': ['forward', 'connect'],
+      'share-ios': ['forward', 'connect'],
+      'shuffle': ['audio', 'media-controls', 'music'],
+      'sliders': ['settings', 'options', 'configuration', 'toggles', 'filters', 'knobs'],
+      'smartphone': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
+      'smartphone-cutout': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
+      'smartphone-notch': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
+      'smartphone2': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
+      'soft-drink': ['cold-drink', 'refresher', 'juice'],
+      'sort': ['order', 'arrows', 'arrange', 'organise', 'organize', 'rate', 'tabulate'],
+      'speaker-high': ['high-volume', 'loud'],
+      'speaker-low': ['low-volume', 'quiet'],
+      'speaker-off': ['no-volume', 'silent'],
+      'square': [],
+      'square-filled': [],
+      'star': ['favourite', 'favorite', 'rate', 'rating', 'score', 'flag'],
+      'star-filled': ['favourite', 'favorite', 'rate', 'rating', 'score', 'flag'],
+      'stars': ['sparkle', 'twinkle', 'shine', 'new', 'shiny'],
+      'stopwatch': ['alarm', 'timer', 'clock', 'countdown', 'race', 'track', 'pedometer'],
+      'studio-backdrop': ['photo-shoot', 'modelling', 'filming'],
+      'studio-light-front': ['lamp', 'beacon', 'photo-shoot', 'modelling', 'filming'],
+      'studio-light-side': ['lamp', 'beacon', 'photo-shoot', 'modelling', 'filming'],
+      'sun': ['light-mode', 'day', 'lights-on', 'brightness'],
+      'sun-filled': ['light-mode', 'lights-on', 'brightness'],
+      'syringe': ['hypodermic', 'injection', 'vaccine', 'vaccination', 'doctor', 'sick', 'disease', 'cure', 'drugs'],
+      't-shirt': ['clothing'],
+      'taxi': ['cab'],
+      'television': ['tv', 'telly'],
+      'text-bubble': ['message', 'chat', 'say', 'typing'],
+      'text-bubbles': ['messages', 'chatting', 'saying', 'typing', 'group-chat'],
+      'thumbs-down': ['dislike', 'hate', 'vote', 'downvote', 'gesture', 'block'],
+      'thumbs-up': ['like', 'love', 'vote', 'upvote', 'gesture', 'favorite', 'favourite'],
+      'times': ['cross', 'x', 'wrong', 'close', 'stop'],
+      'tool': ['wrench', 'hardware', 'fix', 'repair', 'bolt'],
+      'train': ['tube', 'metro'],
+      'trash': ['delete', 'remove', 'dispense', 'trashcan', 'can', 'garbage'],
+      'triangle-down': ['arrow-down'],
+      'triangle-down-filled': ['arrow-down'],
+      'triangle-left': ['arrow-left'],
+      'triangle-left-filled': ['arrow-left'],
+      'triangle-right': ['arrow-right'],
+      'triangle-right-filled': ['arrow-right'],
+      'triangle-up': ['arrow-up'],
+      'triangle-up-filled': ['arrow-up'],
+      'trophy': ['cup', 'medal', 'prize', 'award', 'accolade', 'honour', 'distinction', 'glory', 'kudos', 'holy-grail'],
+      'truck': ['heavy-goods-vehicle', 'juggernaut', 'van', 'pickup', 'lorry', 'move', 'wares', 'deliver', 'haul', 'distribution', 'delivery'],
+      'umbrella': ['parasol', 'rain'],
+      'watch': ['wristwatch', 'time', 'clock', 'pocket-watch'],
+      'water-drop': ['aqua', 'liquid', 'drip', 'sprinkle', 'wet', 'damp', 'moist', 'spray', 'soak', 'splash', 'dilute'],
+      'wifi': ['internet', 'reception', 'connection', 'sonic', 'waves'],
+  };
 
-/** Do not edit! This file is auto-generated. */
-const synonyms$1 = {
-    'airplane': ['aeroplane', 'fly', 'travel', 'vacation', 'trip', 'flight', 'airport'],
-    'alarm': ['alarm-clock', 'siren', 'bell', 'wake-up', 'early', 'timer'],
-    'angle-down': ['arrow-down', 'chevron-down', 'bracket-down', 'to-bottom', 'go-down'],
-    'angle-left': ['arrow-left', 'chevron-left', 'bracket-left', 'bracket-open', 'opening-bracket', 'less-than', 'back', 'previous', 'before'],
-    'angle-right': ['arrow-right', 'chevron-right', 'bracket-right', 'bracket-close', 'closing-bracket', 'greater-than', 'more-than', 'next', 'after', 'forward'],
-    'angle-up': ['arrow-up', 'chevron-up', 'bracket-up', 'to-top', 'go-up'],
-    'arrow-down': ['south', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation', 'to-bottom', 'go-down'],
-    'arrow-down-left': ['south-west', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation'],
-    'arrow-down-right': ['south-east', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation'],
-    'arrow-left': ['west', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation', 'previous', 'back', 'before'],
-    'arrow-right': ['east', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation', 'next', 'after', '', 'next', 'after', 'forward'],
-    'arrow-up': ['north', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation', 'to-top', 'go-up'],
-    'arrow-up-left': ['north-west', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation'],
-    'arrow-up-right': ['north-east', 'point', 'bolt', 'dart', 'compass', 'direction', 'needle', 'orientation'],
-    'bank': ['finance', 'financial-institution', 'money', 'cash', 'savings', 'investment', 'lending', 'loans', 'reserve', 'stock-market', 'payment', 'deposit'],
-    'battery': ['charge'],
-    'bell': ['notification', 'attention', 'alert'],
-    'bell-off': ['no-notification', 'no-attention', 'quiet', 'silent', 'no-alert'],
-    'bicycle': ['bike'],
-    'bluetooth': [],
-    'book': ['read', 'bookmark'],
-    'bookmark': ['flag', 'clip'],
-    'bookmark-filled': ['flag', 'clip'],
-    'briefcase': ['handbag', 'shoulder-bag', 'container', 'luggage', 'travel', 'work'],
-    'building': ['office', 'sky-scraper', 'business', 'work', 'workplace', 'headquarters', 'enterprise', 'company', 'firm', 'bureau', 'agency', 'corporation'],
-    'calculator': ['calculate'],
-    'calendar': ['date', 'when', 'event', 'deadline'],
-    'camera': ['record', 'video'],
-    'can': ['pepsi', 'soft-drink', 'fizzy', 'cola', 'cold-drink', 'refresher', 'juice'],
-    'car': ['automobile', 'drive'],
-    'cart': ['shopping', 'payout', 'commerce', 'transaction', 'buy', 'purchase'],
-    'cellphone-eye': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
-    'cellphone-loop': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
-    'chain': ['link', 'url', 'anchor', 'open', 'website', 'shackle', 'connect', 'bond', 'bind', 'joint', 'knot'],
-    'checkmark': ['check', 'toggle', 'tick', 'ok', 'confirmed'],
-    'circle': ['bullet', 'ball'],
-    'circle-filled': ['bullet', 'ball'],
-    'clapperboard': ['dumb-slate', 'filmmaking', 'video-production', 'scenes', 'takes', 'clapboard', 'clapstick', 'marker', 'slate-board', 'sync-slate', 'action', 'filming'],
-    'clipboard': ['copy', 'duplicate', 'paste'],
-    'clipboard-check': ['copy', 'duplicate', 'paste'],
-    'clipboard-check-circle': ['copy', 'duplicate', 'paste'],
-    'clock': ['time', 'timer', 'countdown', 'deadline', 'hour', 'watch'],
-    'cloud': ['upload', 'online', 'storage', 'save'],
-    'cloud-down': ['download', 'storage', 'retrieve', 'fetch', 'local', 'load'],
-    'cloud-down-filled': ['download', 'storage', 'retrieve', 'fetch', 'local', 'load'],
-    'cloud-filled': ['upload', 'online', 'storage', 'save'],
-    'cloud-up': ['upload', 'storage', 'save'],
-    'cloud-up-filled': ['upload', 'storage', 'save'],
-    'coctail': ['alcohol', 'tropical'],
-    'code': ['programming', 'coding', 'html', 'xml'],
-    'color-picker': [],
-    'contract': ['shrink', 'close', 'zoom-out', 'minimize'],
-    'controller': ['video-game', 'console'],
-    'countdown': ['timer', 'clock', 'stopwatch'],
-    'credit-card': ['master-card', 'visa', 'cashless', 'payment', 'checkout'],
-    'crown': ['coronet', 'diadem', 'tiara', 'circlet', 'title', 'award', 'accolade', 'honor', 'honour', 'distinction', 'glory', 'kudos', 'trophy', 'cup', 'medal', 'monarch', 'sovereign', 'king', 'queen', 'emperor', 'empress'],
-    'cup': ['coffee', 'hot-drink'],
-    'cv': ['life-history', 'biography', 'details', 'curriculum-vitae', 'entry', 'participation', 'candidate', 'applicant', 'submission', 'submit', 'apply', 'enter', 'interview'],
-    'division': ['divide'],
-    'dots-x': ['dots-horizontal', 'more', 'details', 'menu'],
-    'dots-y': ['dots-vertical', 'more', 'details', 'menu'],
-    'dress': ['one-piece', 'clothing', 'gown', 'frock', 'garment'],
-    'duplicate': ['copy'],
-    'electricity': ['thunder', 'lightning'],
-    'enter': ['login', 'log-in', 'signin', 'sign-in', 'join', 'embark', 'start', 'begin', 'into', 'enlist', 'entrance', 'submit', 'advance', 'register'],
-    'exclamation': ['bang', 'exclamation-mark', 'exclamation-point', 'shriek', 'pling', 'note-of-admiration', 'warning', 'danger', 'error'],
-    'exclamation-circle': ['bang', 'exclamation-mark', 'exclamation-point', 'shriek', 'pling', 'note-of-admiration', 'warning', 'danger', 'error'],
-    'exclamation-filled': ['bang', 'exclamation-mark', 'exclamation-point', 'shriek', 'pling', 'note-of-admiration', 'warning', 'danger', 'error'],
-    'expand': ['fullscreen', 'open', 'zoom-in', 'maximize'],
-    'eye': ['password-visible', 'see', 'watch', 'awake'],
-    'eye-closed': ['password-hidden', 'invisible', 'hide', 'secret', 'asleep'],
-    'eye-frame': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
-    'eye-off': ['password-hidden', 'invisible', 'hide', 'secret', 'not-allowed', 'no-access'],
-    'fast-forward': ['audio', 'media-controls', 'music'],
-    'file': ['document', 'record', 'note', 'data', 'archive'],
-    'file-loop': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
-    'film-frame': ['picture', 'movie', 'roll', 'feature', 'tv', 'television', 'programme', 'motion-picture', 'animation', 'flick', 'cinema'],
-    'fire': ['inferno', 'ablaze', 'combustion', 'flames', 'heat', 'warmth', 'ignite', 'burn', 'fiery', 'popular', 'trending', 'attention', 'important', 'dangerous'],
-    'flag': ['banner', 'country', 'important', 'pin'],
-    'flag-straight': ['banner', 'country', 'important', 'pin'],
-    'flower': ['tulip'],
-    'flower-bud': ['daisy'],
-    'folder': ['container', 'binder', 'files', 'archive', 'save', 'record', 'keep'],
-    'folding-stool': ['directors-chair', 'seat', 'photo-shoot', 'modelling', 'filming'],
-    'gear': ['settings', 'cogwheel', 'configuration', 'mechanical', 'machinery'],
-    'gear-filled': ['settings', 'cogwheel', 'configuration', 'mechanical', 'machinery'],
-    'gift': ['present', 'surprise', 'give'],
-    'grab': ['handle', 'move', 'drag'],
-    'grid': ['cards', 'table', 'list', 'to-do', 'todo', 'items', 'sort', 'organise', 'organize', 'tasks', 'sheet', 'entries', 'register', 'directory', 'catalogue', 'inventory', 'index', 'checklist', 'table'],
-    'hamburger': ['fast-food'],
-    'hand-grab': ['hold', 'take', 'move', 'drag'],
-    'hand-open': ['hello', 'greeting', 'salutation', 'raise-hand'],
-    'hand-point': ['direction', 'extend', 'finger', 'touch'],
-    'hand-point-open': ['direction', 'extend', 'finger', 'thumb', 'touch'],
-    'handshake': ['grasp', 'greeting', 'touch', 'agreement', 'deal', 'pact', 'arrangement', 'business', 'friendship'],
-    'hash': ['hashtag', 'tag', 'pound-key'],
-    'headphone': ['headset', 'earphone', 'music', 'listen', 'anc'],
-    'heart': ['love', 'like'],
-    'hourglass': ['sandglass', 'countdown', 'stopwatch', 'clock'],
-    'house': ['home', 'residence'],
-    'identification': ['id', 'papers', 'identity', 'bona fides', 'credentials', 'id-card', 'pass', 'badge', 'warrant', 'licence', 'permit', 'passport', 'proof-of-identity', 'certificate', 'diploma'],
-    'info': ['information', 'help', 'hint', 'guide', 'tooltip'],
-    'info-circle': ['information', 'help', 'hint', 'guide', 'tooltip'],
-    'info-filled': ['information', 'help', 'hint', 'guide', 'tooltip'],
-    'internet': ['web', 'cyber', 'remote'],
-    'key': ['lock', 'unlock', 'encrypt', 'decrypt', 'safe', 'secret', 'solution', 'answer'],
-    'knive-fork': ['eat', 'cutlery'],
-    'label': ['tag', 'flag', 'ticket', 'badge'],
-    'leave': ['logout', 'log-out', 'sign-out', 'signout', 'stop', 'depart', 'retire', 'withdraw', 'exit', 'abandon', 'quit', 'resign', 'retire', 'gone'],
-    'letter': ['email', 'post', 'inbox'],
-    'letter-open': ['offered', 'offer-letter', 'invitation', 'message', 'written', 'communication', 'note', 'report', 'correspondence', 'information', 'intelligence', 'mail', 'post'],
-    'list': ['to-do', 'todo', 'items', 'sort', 'organise', 'organize', 'tasks', 'sheet', 'entries', 'register', 'directory', 'catalogue', 'inventory', 'index', 'checklist', 'table'],
-    'lock-closed': ['lock', 'encrypt'],
-    'lock-open': ['unlock', 'decrypt'],
-    'loop': ['zoom', 'magnify', 'detective'],
-    'loop-minus': ['zoom-out', 'magnify-out', 'farther', 'further'],
-    'loop-plus': ['zoom-in', 'magnify-in', 'closer'],
-    'magnet': ['attraction', 'repel', 'repulsion'],
-    'map': ['location', 'directions'],
-    'megaphone': ['public-speaker', 'speech', 'lecture', 'yell', 'shout', 'announce', 'broadcast', 'proclaim', 'disclose'],
-    'menu': ['hamburger', 'list', 'align', 'text', 'show-more'],
-    'microphone': ['record', 'voice', 'radio'],
-    'microphone2': ['record', 'voice', 'radio', 'talent', 'idol', 'music', 'dance', 'singing', 'performance', 'live'],
-    'minus': ['dash', 'hyphen', 'line'],
-    'monitor': ['computer', 'desktop', 'screen'],
-    'monitor-eye': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
-    'monitor-loop': ['preview', 'document', 'analysis', 'evaluation', 'assessment', 'examination', 'check', 'inspection', 'probe', 'audit', 'survey', 'browse'],
-    'monitor2': ['computer', 'desktop', 'screen'],
-    'moon': ['dark-mode', 'night', 'lights-out'],
-    'moon-filled': ['dark-mode', 'lights-out'],
-    'motorcycle': ['bike'],
-    'move-x': ['x-axis', 'width', 'drag', 'left-right', 'expand', 'grow', 'stretch'],
-    'move-y': ['y-axis', 'height', 'drag', 'up-down', 'expand', 'grow', 'stretch'],
-    'music-note-double': ['score', 'solfege', 'song'],
-    'music-note-single': ['score', 'solfege', 'song'],
-    'next-track': ['audio', 'media-controls', 'music'],
-    'no-entry': [],
-    'open': ['link', 'new-tab', 'external', 'go'],
-    'paint-pallet': ['painter', 'art'],
-    'pause': ['audio', 'media-controls', 'music'],
-    'pen': ['edit', 'write', 'pencil', 'draw', 'modify', 'update'],
-    'people': ['3-persons', '3-people', 'group', 'following', 'crowd', 'band', 'gathering', 'company', 'assembly', 'association', 'club', 'society', 'guild', 'league', 'union', 'mass', 'triplet', 'accounts'],
-    'person': ['human', 'man', 'someone', 'unknown', 'identity', 'profile', 'you', 'account'],
-    'person-checkmark': ['added', 'friends', 'know', 'following'],
-    'person-filled': ['human', 'man', 'someone', 'unknown', 'identity', 'profile', 'you', 'account'],
-    'person-plus': ['friend', 'plus', 'cross', 'add', 'new', 'follow'],
-    'persons': ['human', 'man', 'someone', 'unknown', 'identity', 'profile', 'you', '2-persons', '2-people', 'pair', 'partnership', 'couple', 'duo', 'duplet', 'accounts'],
-    'phone': ['call', 'talk', 'telephone'],
-    'photo': ['photograph', 'picture', 'shot', 'snap', 'image', 'camera-roll'],
-    'photo-camera': ['photography', 'shutter', 'picture'],
-    'photo-studio': ['backdrop', 'photo-shoot', 'modelling', 'filming'],
-    'pill': ['medicine', 'capsule', 'pellet', 'doctor', 'sick', 'disease', 'cure', 'drugs'],
-    'pin': ['nail', 'peg', 'stick', 'attach', 'fix', 'keep'],
-    'pinpoint': ['location-marker', 'pin', 'position', 'map', 'here', 'where'],
-    'pinpoint-filled': ['location-marker', 'pin', 'position', 'map', 'here', 'where'],
-    'pinpoint-off': ['location-marker-off', 'pin', 'position', 'map', 'here', 'where'],
-    'pinpoint-off-filled': ['location-marker-off', 'pin', 'position', 'map', 'here', 'where'],
-    'play': ['audio', 'media-controls', 'music'],
-    'plus': ['cross', 'add', 'new'],
-    'power': ['turn-off', 'shut-down'],
-    'previous-track': ['audio', 'media-controls', 'music'],
-    'printer': ['pdf'],
-    'qr-code': ['bar-code', 'barcode', 'scan'],
-    'question': ['inquiry', 'query', 'interrogate', 'doubt', 'quiz', 'help', 'hint', 'tooltip'],
-    'question-circle': ['inquiry', 'query', 'interrogate', 'doubt', 'quiz', 'help', 'hint', 'tooltip'],
-    'question-filled': ['inquiry', 'query', 'interrogate', 'doubt', 'quiz', 'help', 'hint', 'tooltip'],
-    'radio': ['music', 'listening', 'podcast'],
-    'refresh': ['reload', 'fetch', 'twist', 'turn', 'go-round', 'spin'],
-    'reload': ['refresh', 'turn', 'start-over', 'back', 'around', 'spin'],
-    'repeat': ['audio', 'media-controls', 'music'],
-    'rewind': ['audio', 'media-controls', 'music'],
-    'rewind-time': ['turn-back-time', 'go-back', 'previous'],
-    'scissors': ['cut', 'hair', 'clippers', 'shears', 'trimmer', 'barber', 'stylist', 'beauty-parlor', 'coiffeuse', 'coiffeur'],
-    'send': ['email', 'paper-plane'],
-    'share-android': ['forward', 'connect'],
-    'share-ios': ['forward', 'connect'],
-    'shuffle': ['audio', 'media-controls', 'music'],
-    'sliders': ['settings', 'options', 'configuration', 'toggles', 'filters', 'knobs'],
-    'smartphone': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
-    'smartphone-cutout': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
-    'smartphone-notch': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
-    'smartphone2': ['iphone', 'mobile-phone', 'cell-phone', 'gsm'],
-    'soft-drink': ['cold-drink', 'refresher', 'juice'],
-    'sort': ['order', 'arrows', 'arrange', 'organise', 'organize', 'rate', 'tabulate'],
-    'speaker-high': ['high-volume', 'loud'],
-    'speaker-low': ['low-volume', 'quiet'],
-    'speaker-off': ['no-volume', 'silent'],
-    'square': [],
-    'square-filled': [],
-    'star': ['favourite', 'favorite', 'rate', 'rating', 'score', 'flag'],
-    'star-filled': ['favourite', 'favorite', 'rate', 'rating', 'score', 'flag'],
-    'stars': ['sparkle', 'twinkle', 'shine', 'new', 'shiny'],
-    'stopwatch': ['alarm', 'timer', 'clock', 'countdown', 'race', 'track', 'pedometer'],
-    'studio-backdrop': ['photo-shoot', 'modelling', 'filming'],
-    'studio-light-front': ['lamp', 'beacon', 'photo-shoot', 'modelling', 'filming'],
-    'studio-light-side': ['lamp', 'beacon', 'photo-shoot', 'modelling', 'filming'],
-    'sun': ['light-mode', 'day', 'lights-on', 'brightness'],
-    'sun-filled': ['light-mode', 'lights-on', 'brightness'],
-    'syringe': ['hypodermic', 'injection', 'vaccine', 'vaccination', 'doctor', 'sick', 'disease', 'cure', 'drugs'],
-    't-shirt': ['clothing'],
-    'taxi': ['cab'],
-    'television': ['tv', 'telly'],
-    'text-bubble': ['message', 'chat', 'say', 'typing'],
-    'text-bubbles': ['messages', 'chatting', 'saying', 'typing', 'group-chat'],
-    'thumbs-down': ['dislike', 'hate', 'vote', 'downvote', 'gesture', 'block'],
-    'thumbs-up': ['like', 'love', 'vote', 'upvote', 'gesture', 'favorite', 'favourite'],
-    'times': ['cross', 'x', 'wrong', 'close', 'stop'],
-    'tool': ['wrench', 'hardware', 'fix', 'repair', 'bolt'],
-    'train': ['tube', 'metro'],
-    'trash': ['delete', 'remove', 'dispense', 'trashcan', 'can', 'garbage'],
-    'triangle-down': ['arrow-down'],
-    'triangle-down-filled': ['arrow-down'],
-    'triangle-left': ['arrow-left'],
-    'triangle-left-filled': ['arrow-left'],
-    'triangle-right': ['arrow-right'],
-    'triangle-right-filled': ['arrow-right'],
-    'triangle-up': ['arrow-up'],
-    'triangle-up-filled': ['arrow-up'],
-    'trophy': ['cup', 'medal', 'prize', 'award', 'accolade', 'honour', 'distinction', 'glory', 'kudos', 'holy-grail'],
-    'truck': ['heavy-goods-vehicle', 'juggernaut', 'van', 'pickup', 'lorry', 'move', 'wares', 'deliver', 'haul', 'distribution', 'delivery'],
-    'umbrella': ['parasol', 'rain'],
-    'watch': ['wristwatch', 'time', 'clock', 'pocket-watch'],
-    'water-drop': ['aqua', 'liquid', 'drip', 'sprinkle', 'wet', 'damp', 'moist', 'spray', 'soak', 'splash', 'dilute'],
-    'wifi': ['internet', 'reception', 'connection', 'sonic', 'waves'],
-};
+  /** This file is to be manually edited. */
+  const synonyms = {
+      'airplane': ['飛行機', '飛ぶ', '飛行', '旅行', '休暇', '旅'],
+      'alarm': ['アラーム'],
+      'angle-down': ['下矢印', '下', 'やじるし', '矢印', '下がる'],
+      'angle-left': ['左矢印', '左', '矢印', 'やじるし', '戻る', '小なり', '山かっこ', '山括弧'],
+      'angle-right': ['右矢印', '右', '矢印', 'やじるし', '大なり', '進む', '山かっこ', '山括弧'],
+      'angle-up': ['上矢印', '上', '矢印', 'やじるし'],
+      'arrow-down-left': ['左下矢印'],
+      'arrow-down-right': ['右下矢印'],
+      'arrow-down': ['下矢印'],
+      'arrow-left': ['左矢印'],
+      'arrow-right': ['右矢印'],
+      'arrow-up-left': ['左上矢印'],
+      'arrow-up-right': ['右上矢印'],
+      'arrow-up': ['上矢印'],
+      'bank': ['銀行'],
+      'battery': ['充電', 'バッテリー', '電池'],
+      'bell-off': ['ベル', '消音', '静か', 'サイレント', '鐘', '鈴'],
+      'bell': ['ベル', '通知', '警告', '注意', '鐘', '鈴'],
+      'bicycle': ['自転車', '乗り物', 'サイクリング'],
+      'bluetooth': ['ブルートゥース'],
+      'book': ['本', '読書', 'ブックマーク', '読む'],
+      'bookmark-filled': ['ブックマーク', 'クリップ', 'お気に入り'],
+      'bookmark': ['ブックマーク', 'クリップ', 'お気に入り'],
+      'briefcase': ['ブリーフケース'],
+      'building': ['ビル', 'オフィス', 'ビジネス', '仕事', '会社', '企業', '職場', '法人', '事務所', '建物'],
+      'calculator': ['電卓', '計算', '会計'],
+      'calendar': ['カレンダー', '予定', 'スケジュール', 'いつ'],
+      'camera': ['ビデオカメラ', '記録', 'ビデオ', '動画', 'ムービー', '映画'],
+      'can': ['カン', '缶', 'ペプシ', 'ソフトドリンク', '炭酸', 'コーラ', 'コールドドリンク', 'リフレッシュ', '缶ジュース', '飲み物'],
+      'car': ['車', '乗り物', '自動車', '運転'],
+      'cart': ['カート', 'ショッピングカート', '買い物', '支払い', '通販', '買う', '購入'],
+      'cellphone-eye': ['携帯・目'],
+      'cellphone-loop': ['携帯・飯メガネ'],
+      'chain': ['チェーン', 'リンク'],
+      'checkmark': ['チェック', 'チェックマーク', 'しるし', 'ok', '確認済み'],
+      'circle-filled': ['丸', '円', 'ボール'],
+      'circle': ['丸', '円', 'ボール'],
+      'clapperboard': ['カチンコ'],
+      'clipboard-check-circle': ['クリップボード・チェック・サークル'],
+      'clipboard-check': ['クリップボード・チェック'],
+      'clipboard': ['クリップボード', 'コピー'],
+      'clock': ['時計', '時間', 'アラーム', 'タイマー', 'カウントダウン'],
+      'cloud-down-filled': ['ダウンロード', 'ストレージ', '保存', 'クラウド'],
+      'cloud-down': ['ダウンロード', '容量', 'ストレージ', '保存', 'クラウド', '天気', 'くもり'],
+      'cloud-filled': ['雲', 'アップロード', 'オンライン', 'ストレージ', '保存', 'クラウド', '天気', 'くもり'],
+      'cloud-up-filled': ['アップロード', 'ストレージ', '保存', 'クラウド'],
+      'cloud-up': ['アップロード', 'ストレージ', '保存', 'クラウド'],
+      'cloud': ['雲', 'アップロード', 'オンライン', '容量', 'ストレージ', '保存', 'クラウド', '天気', 'くもり'],
+      'coctail': ['カクテル', 'お酒', 'トロピカル', 'アルコール', 'バー', '飲み物', 'ドリンク', 'グラス'],
+      'code': ['コード'],
+      'color-picker': ['スポイト', 'カラーピッカー'],
+      'contract': ['縮小', '閉じる', 'ズームアウト'],
+      'controller': ['コントローラー', 'ゲーム', '遊び'],
+      'countdown': ['カウントダウン'],
+      'credit-card': ['クレジットカード', 'マスターカード', 'visa', 'キャッシュレス', '支払い', 'チェックアウト', 'カード'],
+      'crown': ['王冠'],
+      'cup': ['カップ', 'コーヒー', 'ホットドリンク', '飲み物', 'カフェ', 'ティーカップ'],
+      'cv': ['履歴'],
+      'division': ['割る', '計算'],
+      'dots-x': ['三点リーダー', '点', '詳細', 'メニュー'],
+      'dots-y': ['三点リーダー', '点', '詳細', 'メニュー'],
+      'dress': ['ワンピース', '服', 'ドレス'],
+      'duplicate': ['コピー', '複製'],
+      'electricity': ['カミナリ', '雷', '稲妻', '天気'],
+      'enter': ['入る', 'サインイン', 'ログイン'],
+      'exclamation-circle': ['ビックリマーク・サークル', 'エクスクラメーションマーク', '注意', '警告', '危険', '注目'],
+      'exclamation-filled': ['ビックリマーク', 'エクスクラメーションマーク', '注意', '警告', '危険', '注目'],
+      'exclamation': ['ビックリマーク', 'エクスクラメーションマーク', '注意', '警告', '危険', '注目'],
+      'expand': ['拡大', 'フルスクリーン', '開く', 'ズームイン', '最大化'],
+      'eye-closed': ['目', 'パスワードを隠す', '見える', '隠す', '秘密', '寝る'],
+      'eye-frame': ['目・フレーム', 'スキャン'],
+      'eye-off': ['非表示', '目', '隠す', '秘密', '見えない'],
+      'eye': ['目', 'パスワードを見る', '見る', '気づく', '起きる'],
+      'fast-forward': [],
+      'file-loop': [],
+      'file': ['ファイル', '記録', 'ノート', 'データ', 'アーカイブ', 'ドキュメント', '文書'],
+      'film-frame': ['映画', '動画', 'ムービー', '再生', 'プログラム', 'ドラマ', 'シネマ'],
+      'fire': [],
+      'flag-straight': ['旗'],
+      'flag': ['旗', '国', '重要', 'ピン'],
+      'flower-bud': ['花', 'つぼみ'],
+      'flower': ['花', 'チューリップ'],
+      'folder': ['ファイル', 'フォルダー', 'アーカイブ', '保存', '記録'],
+      'folding-stool': [],
+      'gear-filled': [],
+      'gear': ['歯車', '設定', 'コンフィグ', 'ギア', 'セッティング'],
+      'gift': ['ギフト', 'プレゼント', 'サプライズ', '贈る', '贈り物', '誕生日', 'バースデープレゼント'],
+      'grab': ['メニュー', 'インターフェース', 'ナビゲーション'],
+      'grid': [],
+      'hamburger': ['ハンバーガー', 'ファストフード', '食事'],
+      'hand-grab': [],
+      'hand-open': [],
+      'hand-point-open': [],
+      'hand-point': [],
+      'handshake': [],
+      'hash': ['ハッシュタグ'],
+      'headphone': ['ヘッドホン', 'ヘッドセット', 'イヤホン', 'ミュージック', '音楽', '聴く', '視聴'],
+      'heart': ['ハート', 'ラブ', '好き'],
+      'hourglass': [],
+      'house': ['家', '住宅', '家庭', 'ホーム'],
+      'identification': ['身分証明'],
+      'info-circle': [],
+      'info-filled': ['インフォメーション', 'ヘルプ', 'ヒント', 'ガイド'],
+      'info': ['インフォメーション', 'ヘルプ', 'ヒント', 'ガイド'],
+      'internet': ['地球', 'インターネット', 'サイバー', 'ネット'],
+      'key': ['鍵', 'カギ', 'ロック', 'アンロック', '暗号化', '複合化', '安全', '秘密', '解決', '答え'],
+      'knive-fork': ['カトラリー', 'ナイフ', 'フォーク', '食事'],
+      'label': ['ラベル', 'タグ'],
+      'leave': ['出る', 'ログアウト', 'サインアウト'],
+      'letter-open': ['手紙'],
+      'letter': ['手紙', 'メール', '送信', '受信', 'コンタクト', '封筒'],
+      'list': ['リスト'],
+      'lock-closed': ['ロック', '暗号化', 'セキュリティ', '南京錠', 'パスワード'],
+      'lock-open': ['アンロック', '複合化', '南京錠', 'セキュリティ', 'パスワード'],
+      'loop-minus': ['ズームアウト', '縮小'],
+      'loop-plus': ['ズームイン', '拡大'],
+      'loop': ['虫眼鏡', 'ズーム', '拡大', '検索', '調査'],
+      'magnet': ['マグネット', '磁石'],
+      'map': ['地図', '現在地', '目的地', '位置', '場所'],
+      'megaphone': ['メガホン'],
+      'menu': [],
+      'microphone': ['マイク', '録音', '音声', 'ラジオ'],
+      'microphone2': [],
+      'minus': ['マイナス', '引く', 'ハイフン', '線', '計算'],
+      'monitor-eye': [],
+      'monitor-loop': [],
+      'monitor': ['モニター', 'パソコン', 'コンピューター', 'デスクトップ', 'スクリーン'],
+      'monitor2': ['モニター', 'パソコン', 'コンピューター', 'デスクトップ', 'スクリーン'],
+      'moon-filled': ['月', 'ダークモード', '夜', '消灯', 'おやすみ'],
+      'moon': ['月', 'ダークモード', '夜', '消灯', 'おやすみ', '天気'],
+      'motorcycle': ['バイク', '乗り物', '運転'],
+      'move-x': ['横ドラッグ'],
+      'move-y': ['縦ドラッグ'],
+      'music-note-double': ['８分音符', '音符', '曲', '歌', '音楽', 'ミュージック'],
+      'music-note-single': ['８分音符', '音符', '曲', '歌', '音楽', 'ミュージック'],
+      'next-track': [],
+      'no-entry': [],
+      'open': ['開く', '新しいウィンドウ'],
+      'paint-pallet': ['パレット', 'ペイント', 'アート'],
+      'pause': [],
+      'pen': ['ペン', '編集', '書く', '鉛筆', '描く'],
+      'people': ['三人', '人々'],
+      'person-checkmark': ['人チェックマーク'],
+      'person-filled': ['人', '人間', '人物', '誰か', '個性', 'プロフィール', '君'],
+      'person-plus': ['人プラス'],
+      'person': ['人', '人間', '人物', '誰か', '個性', 'プロフィール', '君'],
+      'persons': ['二人', '人々'],
+      'phone': ['受話器', '電話', '通話'],
+      'photo-camera': ['カメラ', 'シャッター', '写真'],
+      'photo-studio': [],
+      'photo': ['写真'],
+      'pill': ['薬', 'カプセル', '錠剤', 'ドクター', '病気', '治す', 'ドラッグ', '治療'],
+      'pin': [],
+      'pinpoint-filled': ['ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
+      'pinpoint-off-filled': ['現在地オフ', 'ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
+      'pinpoint-off': ['現在地オフ', 'ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
+      'pinpoint': ['ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
+      'play': [],
+      'plus': ['プラス', '足す', '加える', '新しい', '計算'],
+      'power': ['電源', 'オフ', 'シャットダウン', 'ボタン'],
+      'previous-track': [],
+      'printer': ['プリンター', '印刷'],
+      'qr-code': ['QRコード'],
+      'question-circle': [],
+      'question-filled': [],
+      'question': [],
+      'radio': [],
+      'refresh': ['更新', 'リロード', 'アップデート'],
+      'reload': ['更新', 'やり直し', '再読み込み', '戻る'],
+      'repeat': [],
+      'rewind-time': [],
+      'rewind': [],
+      'scissors': ['ハサミ', 'はさみ', 'カット', '切る', '髪', '切り取り', 'トリミング', '理容室', 'ヘアサロン', '美容室', 'スタイリスト', '美容師'],
+      'send': ['紙飛行機', 'メール', '送信', '送る'],
+      'share-android': ['シェア', '共有'],
+      'share-ios': ['シェア', '共有'],
+      'shuffle': [],
+      'sliders': [],
+      'smartphone-cutout': [],
+      'smartphone-notch': ['スマートフォン', 'スマホ', 'アイフォン', '携帯電話', '電話'],
+      'smartphone': ['スマートフォン', 'スマホ', 'アイフォン', '携帯電話', '電話'],
+      'smartphone2': ['スマートフォン', 'スマホ', 'アイフォン', '携帯電話', '電話'],
+      'soft-drink': ['ソフトドリンク', 'コールドドリンク', 'リフレッシュ', 'ジュース', '飲み物'],
+      'sort': ['ソート'],
+      'speaker-high': ['音量', 'スピーカー', '大きく', 'ボリューム', '音声', 'サウンド'],
+      'speaker-low': ['音量', 'スピーカー', '小さく', 'ボリューム', '音声', 'サウンド'],
+      'speaker-off': ['音量オフ', 'サイレント', 'スピーカー', '小さく', 'ボリューム', '音声', 'サウンド'],
+      'square-filled': ['四角'],
+      'square': ['四角'],
+      'star-filled': ['星', 'お気に入り', 'スター', 'ブックマーク'],
+      'star': ['星', 'お気に入り', 'スター', 'ブックマーク'],
+      'stars': [],
+      'stopwatch': [],
+      'studio-backdrop': [],
+      'studio-light-front': [],
+      'studio-light-side': [],
+      'sun-filled': ['太陽', 'ライトモード', '日', 'おはよう', '明るい', '天気'],
+      'sun': ['太陽', 'ライトモード', '日', 'おはよう', '明るい', '天気'],
+      'syringe': ['注射器', 'ワクチン', '予防接種', '医者', '病気', '治療', '薬'],
+      't-shirt': ['Tシャツ', '服', '着る'],
+      'taxi': ['タクシー', '乗り物'],
+      'television': ['テレビ', 'モニター'],
+      'text-bubble': ['吹き出し', 'メッセージ', 'チャット', '言う', 'タイピング'],
+      'text-bubbles': [],
+      'thumbs-down': ['いいね'],
+      'thumbs-up': ['好きじゃない'],
+      'times': ['クロス', 'エックス', '不正解', '間違い', 'クローズ', '止める', '計算', '掛ける'],
+      'tool': ['レンチ', '工具', '修理', '直す', 'ボルト'],
+      'train': ['電車', 'メトロ', '地下鉄', '乗り物'],
+      'trash': ['ゴミ箱', '消去', '捨てる', '分別', '廃棄物'],
+      'triangle-down-filled': ['三角', '下矢印'],
+      'triangle-down': ['三角', '下矢印'],
+      'triangle-left-filled': ['三角', '左矢印'],
+      'triangle-left': ['三角', '左矢印'],
+      'triangle-right-filled': ['三角', '右矢印'],
+      'triangle-right': ['三角', '右矢印'],
+      'triangle-up-filled': ['三角', '上矢印'],
+      'triangle-up': ['三角', '上矢印'],
+      'trophy': ['トロフィー', '賞品', '景品'],
+      'truck': ['トラック', 'バン', 'ピックアップ', '運送', '荷物', '配送', '運搬', '流通', '乗り物'],
+      'umbrella': ['傘', 'パラソル', '雨', '天気'],
+      'watch': [],
+      'water-drop': [],
+      'wifi': ['ワイファイ', 'インターネット', '通信', '電波'],
+  };
 
-/** This file is to be manually edited. */
-const synonyms = {
-    'airplane': ['飛行機', '飛ぶ', '飛行', '旅行', '休暇', '旅'],
-    'alarm': ['アラーム'],
-    'angle-down': ['下矢印', '下', 'やじるし', '矢印', '下がる'],
-    'angle-left': ['左矢印', '左', '矢印', 'やじるし', '戻る', '小なり', '山かっこ', '山括弧'],
-    'angle-right': ['右矢印', '右', '矢印', 'やじるし', '大なり', '進む', '山かっこ', '山括弧'],
-    'angle-up': ['上矢印', '上', '矢印', 'やじるし'],
-    'arrow-down-left': ['左下矢印'],
-    'arrow-down-right': ['右下矢印'],
-    'arrow-down': ['下矢印'],
-    'arrow-left': ['左矢印'],
-    'arrow-right': ['右矢印'],
-    'arrow-up-left': ['左上矢印'],
-    'arrow-up-right': ['右上矢印'],
-    'arrow-up': ['上矢印'],
-    'bank': ['銀行'],
-    'battery': ['充電', 'バッテリー', '電池'],
-    'bell-off': ['ベル', '消音', '静か', 'サイレント', '鐘', '鈴'],
-    'bell': ['ベル', '通知', '警告', '注意', '鐘', '鈴'],
-    'bicycle': ['自転車', '乗り物', 'サイクリング'],
-    'bluetooth': ['ブルートゥース'],
-    'book': ['本', '読書', 'ブックマーク', '読む'],
-    'bookmark-filled': ['ブックマーク', 'クリップ', 'お気に入り'],
-    'bookmark': ['ブックマーク', 'クリップ', 'お気に入り'],
-    'briefcase': ['ブリーフケース'],
-    'building': ['ビル', 'オフィス', 'ビジネス', '仕事', '会社', '企業', '職場', '法人', '事務所', '建物'],
-    'calculator': ['電卓', '計算', '会計'],
-    'calendar': ['カレンダー', '予定', 'スケジュール', 'いつ'],
-    'camera': ['ビデオカメラ', '記録', 'ビデオ', '動画', 'ムービー', '映画'],
-    'can': ['カン', '缶', 'ペプシ', 'ソフトドリンク', '炭酸', 'コーラ', 'コールドドリンク', 'リフレッシュ', '缶ジュース', '飲み物'],
-    'car': ['車', '乗り物', '自動車', '運転'],
-    'cart': ['カート', 'ショッピングカート', '買い物', '支払い', '通販', '買う', '購入'],
-    'cellphone-eye': ['携帯・目'],
-    'cellphone-loop': ['携帯・飯メガネ'],
-    'chain': ['チェーン', 'リンク'],
-    'checkmark': ['チェック', 'チェックマーク', 'しるし', 'ok', '確認済み'],
-    'circle-filled': ['丸', '円', 'ボール'],
-    'circle': ['丸', '円', 'ボール'],
-    'clapperboard': ['カチンコ'],
-    'clipboard-check-circle': ['クリップボード・チェック・サークル'],
-    'clipboard-check': ['クリップボード・チェック'],
-    'clipboard': ['クリップボード', 'コピー'],
-    'clock': ['時計', '時間', 'アラーム', 'タイマー', 'カウントダウン'],
-    'cloud-down-filled': ['ダウンロード', 'ストレージ', '保存', 'クラウド'],
-    'cloud-down': ['ダウンロード', '容量', 'ストレージ', '保存', 'クラウド', '天気', 'くもり'],
-    'cloud-filled': ['雲', 'アップロード', 'オンライン', 'ストレージ', '保存', 'クラウド', '天気', 'くもり'],
-    'cloud-up-filled': ['アップロード', 'ストレージ', '保存', 'クラウド'],
-    'cloud-up': ['アップロード', 'ストレージ', '保存', 'クラウド'],
-    'cloud': ['雲', 'アップロード', 'オンライン', '容量', 'ストレージ', '保存', 'クラウド', '天気', 'くもり'],
-    'coctail': ['カクテル', 'お酒', 'トロピカル', 'アルコール', 'バー', '飲み物', 'ドリンク', 'グラス'],
-    'code': ['コード'],
-    'color-picker': ['スポイト', 'カラーピッカー'],
-    'contract': ['縮小', '閉じる', 'ズームアウト'],
-    'controller': ['コントローラー', 'ゲーム', '遊び'],
-    'countdown': ['カウントダウン'],
-    'credit-card': ['クレジットカード', 'マスターカード', 'visa', 'キャッシュレス', '支払い', 'チェックアウト', 'カード'],
-    'crown': ['王冠'],
-    'cup': ['カップ', 'コーヒー', 'ホットドリンク', '飲み物', 'カフェ', 'ティーカップ'],
-    'cv': ['履歴'],
-    'division': ['割る', '計算'],
-    'dots-x': ['三点リーダー', '点', '詳細', 'メニュー'],
-    'dots-y': ['三点リーダー', '点', '詳細', 'メニュー'],
-    'dress': ['ワンピース', '服', 'ドレス'],
-    'duplicate': ['コピー', '複製'],
-    'electricity': ['カミナリ', '雷', '稲妻', '天気'],
-    'enter': ['入る', 'サインイン', 'ログイン'],
-    'exclamation-circle': ['ビックリマーク・サークル', 'エクスクラメーションマーク', '注意', '警告', '危険', '注目'],
-    'exclamation-filled': ['ビックリマーク', 'エクスクラメーションマーク', '注意', '警告', '危険', '注目'],
-    'exclamation': ['ビックリマーク', 'エクスクラメーションマーク', '注意', '警告', '危険', '注目'],
-    'expand': ['拡大', 'フルスクリーン', '開く', 'ズームイン', '最大化'],
-    'eye-closed': ['目', 'パスワードを隠す', '見える', '隠す', '秘密', '寝る'],
-    'eye-frame': ['目・フレーム', 'スキャン'],
-    'eye-off': ['非表示', '目', '隠す', '秘密', '見えない'],
-    'eye': ['目', 'パスワードを見る', '見る', '気づく', '起きる'],
-    'fast-forward': [],
-    'file-loop': [],
-    'file': ['ファイル', '記録', 'ノート', 'データ', 'アーカイブ', 'ドキュメント', '文書'],
-    'film-frame': ['映画', '動画', 'ムービー', '再生', 'プログラム', 'ドラマ', 'シネマ'],
-    'fire': [],
-    'flag-straight': ['旗'],
-    'flag': ['旗', '国', '重要', 'ピン'],
-    'flower-bud': ['花', 'つぼみ'],
-    'flower': ['花', 'チューリップ'],
-    'folder': ['ファイル', 'フォルダー', 'アーカイブ', '保存', '記録'],
-    'folding-stool': [],
-    'gear-filled': [],
-    'gear': ['歯車', '設定', 'コンフィグ', 'ギア', 'セッティング'],
-    'gift': ['ギフト', 'プレゼント', 'サプライズ', '贈る', '贈り物', '誕生日', 'バースデープレゼント'],
-    'grab': ['メニュー', 'インターフェース', 'ナビゲーション'],
-    'grid': [],
-    'hamburger': ['ハンバーガー', 'ファストフード', '食事'],
-    'hand-grab': [],
-    'hand-open': [],
-    'hand-point-open': [],
-    'hand-point': [],
-    'handshake': [],
-    'hash': ['ハッシュタグ'],
-    'headphone': ['ヘッドホン', 'ヘッドセット', 'イヤホン', 'ミュージック', '音楽', '聴く', '視聴'],
-    'heart': ['ハート', 'ラブ', '好き'],
-    'hourglass': [],
-    'house': ['家', '住宅', '家庭', 'ホーム'],
-    'identification': ['身分証明'],
-    'info-circle': [],
-    'info-filled': ['インフォメーション', 'ヘルプ', 'ヒント', 'ガイド'],
-    'info': ['インフォメーション', 'ヘルプ', 'ヒント', 'ガイド'],
-    'internet': ['地球', 'インターネット', 'サイバー', 'ネット'],
-    'key': ['鍵', 'カギ', 'ロック', 'アンロック', '暗号化', '複合化', '安全', '秘密', '解決', '答え'],
-    'knive-fork': ['カトラリー', 'ナイフ', 'フォーク', '食事'],
-    'label': ['ラベル', 'タグ'],
-    'leave': ['出る', 'ログアウト', 'サインアウト'],
-    'letter-open': ['手紙'],
-    'letter': ['手紙', 'メール', '送信', '受信', 'コンタクト', '封筒'],
-    'list': ['リスト'],
-    'lock-closed': ['ロック', '暗号化', 'セキュリティ', '南京錠', 'パスワード'],
-    'lock-open': ['アンロック', '複合化', '南京錠', 'セキュリティ', 'パスワード'],
-    'loop-minus': ['ズームアウト', '縮小'],
-    'loop-plus': ['ズームイン', '拡大'],
-    'loop': ['虫眼鏡', 'ズーム', '拡大', '検索', '調査'],
-    'magnet': ['マグネット', '磁石'],
-    'map': ['地図', '現在地', '目的地', '位置', '場所'],
-    'megaphone': ['メガホン'],
-    'menu': [],
-    'microphone': ['マイク', '録音', '音声', 'ラジオ'],
-    'microphone2': [],
-    'minus': ['マイナス', '引く', 'ハイフン', '線', '計算'],
-    'monitor-eye': [],
-    'monitor-loop': [],
-    'monitor': ['モニター', 'パソコン', 'コンピューター', 'デスクトップ', 'スクリーン'],
-    'monitor2': ['モニター', 'パソコン', 'コンピューター', 'デスクトップ', 'スクリーン'],
-    'moon-filled': ['月', 'ダークモード', '夜', '消灯', 'おやすみ'],
-    'moon': ['月', 'ダークモード', '夜', '消灯', 'おやすみ', '天気'],
-    'motorcycle': ['バイク', '乗り物', '運転'],
-    'move-x': ['横ドラッグ'],
-    'move-y': ['縦ドラッグ'],
-    'music-note-double': ['８分音符', '音符', '曲', '歌', '音楽', 'ミュージック'],
-    'music-note-single': ['８分音符', '音符', '曲', '歌', '音楽', 'ミュージック'],
-    'next-track': [],
-    'no-entry': [],
-    'open': ['開く', '新しいウィンドウ'],
-    'paint-pallet': ['パレット', 'ペイント', 'アート'],
-    'pause': [],
-    'pen': ['ペン', '編集', '書く', '鉛筆', '描く'],
-    'people': ['三人', '人々'],
-    'person-checkmark': ['人チェックマーク'],
-    'person-filled': ['人', '人間', '人物', '誰か', '個性', 'プロフィール', '君'],
-    'person-plus': ['人プラス'],
-    'person': ['人', '人間', '人物', '誰か', '個性', 'プロフィール', '君'],
-    'persons': ['二人', '人々'],
-    'phone': ['受話器', '電話', '通話'],
-    'photo-camera': ['カメラ', 'シャッター', '写真'],
-    'photo-studio': [],
-    'photo': ['写真'],
-    'pill': ['薬', 'カプセル', '錠剤', 'ドクター', '病気', '治す', 'ドラッグ', '治療'],
-    'pin': [],
-    'pinpoint-filled': ['ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
-    'pinpoint-off-filled': ['現在地オフ', 'ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
-    'pinpoint-off': ['現在地オフ', 'ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
-    'pinpoint': ['ピン', '現在地', ' 位置', '地図', 'ここ', '場所', 'マップ'],
-    'play': [],
-    'plus': ['プラス', '足す', '加える', '新しい', '計算'],
-    'power': ['電源', 'オフ', 'シャットダウン', 'ボタン'],
-    'previous-track': [],
-    'printer': ['プリンター', '印刷'],
-    'qr-code': ['QRコード'],
-    'question-circle': [],
-    'question-filled': [],
-    'question': [],
-    'radio': [],
-    'refresh': ['更新', 'リロード', 'アップデート'],
-    'reload': ['更新', 'やり直し', '再読み込み', '戻る'],
-    'repeat': [],
-    'rewind-time': [],
-    'rewind': [],
-    'scissors': ['ハサミ', 'はさみ', 'カット', '切る', '髪', '切り取り', 'トリミング', '理容室', 'ヘアサロン', '美容室', 'スタイリスト', '美容師'],
-    'send': ['紙飛行機', 'メール', '送信', '送る'],
-    'share-android': ['シェア', '共有'],
-    'share-ios': ['シェア', '共有'],
-    'shuffle': [],
-    'sliders': [],
-    'smartphone-cutout': [],
-    'smartphone-notch': ['スマートフォン', 'スマホ', 'アイフォン', '携帯電話', '電話'],
-    'smartphone': ['スマートフォン', 'スマホ', 'アイフォン', '携帯電話', '電話'],
-    'smartphone2': ['スマートフォン', 'スマホ', 'アイフォン', '携帯電話', '電話'],
-    'soft-drink': ['ソフトドリンク', 'コールドドリンク', 'リフレッシュ', 'ジュース', '飲み物'],
-    'sort': ['ソート'],
-    'speaker-high': ['音量', 'スピーカー', '大きく', 'ボリューム', '音声', 'サウンド'],
-    'speaker-low': ['音量', 'スピーカー', '小さく', 'ボリューム', '音声', 'サウンド'],
-    'speaker-off': ['音量オフ', 'サイレント', 'スピーカー', '小さく', 'ボリューム', '音声', 'サウンド'],
-    'square-filled': ['四角'],
-    'square': ['四角'],
-    'star-filled': ['星', 'お気に入り', 'スター', 'ブックマーク'],
-    'star': ['星', 'お気に入り', 'スター', 'ブックマーク'],
-    'stars': [],
-    'stopwatch': [],
-    'studio-backdrop': [],
-    'studio-light-front': [],
-    'studio-light-side': [],
-    'sun-filled': ['太陽', 'ライトモード', '日', 'おはよう', '明るい', '天気'],
-    'sun': ['太陽', 'ライトモード', '日', 'おはよう', '明るい', '天気'],
-    'syringe': ['注射器', 'ワクチン', '予防接種', '医者', '病気', '治療', '薬'],
-    't-shirt': ['Tシャツ', '服', '着る'],
-    'taxi': ['タクシー', '乗り物'],
-    'television': ['テレビ', 'モニター'],
-    'text-bubble': ['吹き出し', 'メッセージ', 'チャット', '言う', 'タイピング'],
-    'text-bubbles': [],
-    'thumbs-down': ['いいね'],
-    'thumbs-up': ['好きじゃない'],
-    'times': ['クロス', 'エックス', '不正解', '間違い', 'クローズ', '止める', '計算', '掛ける'],
-    'tool': ['レンチ', '工具', '修理', '直す', 'ボルト'],
-    'train': ['電車', 'メトロ', '地下鉄', '乗り物'],
-    'trash': ['ゴミ箱', '消去', '捨てる', '分別', '廃棄物'],
-    'triangle-down-filled': ['三角', '下矢印'],
-    'triangle-down': ['三角', '下矢印'],
-    'triangle-left-filled': ['三角', '左矢印'],
-    'triangle-left': ['三角', '左矢印'],
-    'triangle-right-filled': ['三角', '右矢印'],
-    'triangle-right': ['三角', '右矢印'],
-    'triangle-up-filled': ['三角', '上矢印'],
-    'triangle-up': ['三角', '上矢印'],
-    'trophy': ['トロフィー', '賞品', '景品'],
-    'truck': ['トラック', 'バン', 'ピックアップ', '運送', '荷物', '配送', '運搬', '流通', '乗り物'],
-    'umbrella': ['傘', 'パラソル', '雨', '天気'],
-    'watch': [],
-    'water-drop': [],
-    'wifi': ['ワイファイ', 'インターネット', '通信', '電波'],
-};
-
-const Airplane$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Airplane$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_2570)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7549 12.9963L12.6137 11.2918L14.0858 16.5607C14.2873 17.2817 15.1804 17.5338 15.7291 17.0246C17.3078 15.5597 18.1699 14.2058 18.2479 12.8948C18.3038 11.9539 17.8659 10.1553 16.9294 7.33446L17.1593 7.12366C19.4079 4.87645 20.0577 2.91564 18.5923 1.45023C17.1271 -0.0150314 15.1661 0.634362 12.9482 2.85086L12.7079 3.11245C9.88669 2.17579 8.08782 1.73782 7.14683 1.79379C5.83588 1.87176 4.48194 2.73388 3.01704 4.31253C2.50783 4.86128 2.75997 5.75441 3.48097 5.95585L8.75056 7.42815L7.0465 9.28692C5.32628 9.0514 4.24908 8.94907 3.72656 8.98019C2.78982 9.03596 1.86795 9.623 0.89294 10.6737C0.38371 11.2225 0.635886 12.1156 1.35692 12.317L6.01025 13.6169L6.42478 14.0314L7.72462 18.6847C7.92603 19.4058 8.81919 19.658 9.36796 19.1487C10.4187 18.1737 11.0057 17.2518 11.0615 16.3151C11.0926 15.7927 10.9903 14.7159 10.7549 12.9963ZM9.01615 11.8772C8.77322 12.0999 8.65566 12.4281 8.70187 12.7544C8.94065 14.4405 9.06247 15.5704 9.06757 16.0585L8.28047 13.2407C8.23421 13.0751 8.14603 12.9242 8.02445 12.8027L7.239 12.0172C7.11742 11.8956 6.96654 11.8075 6.80093 11.7612L3.98319 10.9741C4.47143 10.9792 5.60166 11.1011 7.28845 11.34C7.61484 11.3862 7.94304 11.2686 8.16579 11.0256L11.3255 7.57908C11.8296 7.02922 11.5759 6.14093 10.8574 5.9402L5.73365 4.50864C6.33268 4.04943 6.84845 3.81507 7.26558 3.79026C7.90809 3.75204 9.78145 4.2286 12.6835 5.21408C13.059 5.34156 13.4743 5.2352 13.7422 4.94295L14.3922 4.23396C15.8992 2.7292 16.7584 2.44469 17.1781 2.86445C17.5977 3.28405 17.3131 4.14277 15.7764 5.67951L15.0987 6.29966C14.8065 6.5676 14.7002 6.98285 14.8276 7.35825C15.8131 10.2603 16.2896 12.1336 16.2514 12.7761C16.2266 13.1932 15.9922 13.709 15.533 14.308L14.1016 9.18478C13.9009 8.46628 13.0125 8.21263 12.4627 8.71682L9.01615 11.8772Z" fill="currentColor"/>
 </g>
@@ -698,7 +700,7 @@ const Airplane$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Alarm$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Alarm$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5.5C6.96243 5.5 4.5 7.96243 4.5 11C4.5 14.0376 6.96243 16.5 10 16.5C13.0376 16.5 15.5 14.0376 15.5 11C15.5 7.96243 13.0376 5.5 10 5.5ZM2.5 11C2.5 6.85786 5.85786 3.5 10 3.5C14.1421 3.5 17.5 6.85786 17.5 11C17.5 15.1421 14.1421 18.5 10 18.5C5.85786 18.5 2.5 15.1421 2.5 11Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.79289 18.2071C3.18342 18.5976 3.81658 18.5976 4.20711 18.2071L5.70711 16.7071C6.09763 16.3166 6.09763 15.6834 5.70711 15.2929C5.31658 14.9023 4.68342 14.9023 4.29289 15.2929L2.79289 16.7929C2.40237 17.1834 2.40237 17.8166 2.79289 18.2071Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 15.2929C14.6834 14.9024 15.3166 14.9024 15.7071 15.2929L17.2071 16.7929C17.5976 17.1834 17.5976 17.8166 17.2071 18.2071C16.8166 18.5977 16.1834 18.5977 15.7929 18.2071L14.2929 16.7071C13.9024 16.3166 13.9024 15.6834 14.2929 15.2929Z" fill="currentColor"/>
@@ -709,87 +711,87 @@ const Alarm$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const AngleDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const AngleDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16.6402 8.26824L10.6402 13.2682C9.61589 14.1218 8.33552 12.5854 9.35982 11.7318L15.3598 6.7318C16.3841 5.87822 17.6645 7.41466 16.6402 8.26824Z" fill="currentColor"/>
 <path d="M4.64019 6.7318L10.6402 11.7318C11.6645 12.5854 10.3841 14.1218 9.35982 13.2682L3.35982 8.26824C2.33552 7.41466 3.61589 5.87822 4.64019 6.7318Z" fill="currentColor"/>
 </svg>
 `;
 
-const AngleLeft$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const AngleLeft$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6.73177 10.6402C6.37821 10.2159 6.43553 9.58537 6.85981 9.2318C7.28409 8.87824 7.91465 8.93556 8.26822 9.35984L13.2682 15.3598C13.6218 15.7841 13.5645 16.4147 13.1402 16.7682C12.7159 17.1218 12.0853 17.0645 11.7318 16.6402L6.73177 10.6402Z" fill="currentColor"/>
 <path d="M8.26822 10.6402C7.91465 11.0645 7.28409 11.1218 6.85981 10.7682C6.43553 10.4147 6.37821 9.78412 6.73177 9.35984L11.7318 3.35984C12.0853 2.93556 12.7159 2.87824 13.1402 3.2318C13.5645 3.58537 13.6218 4.21593 13.2682 4.64021L8.26822 10.6402Z" fill="currentColor"/>
 </svg>
 `;
 
-const AngleRight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const AngleRight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.7318 9.35984C12.0854 8.93556 12.7159 8.87824 13.1402 9.2318C13.5645 9.58537 13.6218 10.2159 13.2682 10.6402L8.26825 16.6402C7.91468 17.0645 7.28412 17.1218 6.85984 16.7682C6.43556 16.4147 6.37824 15.7841 6.7318 15.3598L11.7318 9.35984Z" fill="currentColor"/>
 <path d="M6.7318 4.64021C6.37824 4.21593 6.43556 3.58537 6.85984 3.2318C7.28412 2.87824 7.91468 2.93556 8.26825 3.35984L13.2682 9.35984C13.6218 9.78412 13.5645 10.4147 13.1402 10.7682C12.7159 11.1218 12.0854 11.0645 11.7318 10.6402L6.7318 4.64021Z" fill="currentColor"/>
 </svg>
 `;
 
-const AngleUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const AngleUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.3598 13.2682L9.35979 8.26824C8.33549 7.41466 9.61586 5.87822 10.6402 6.7318L16.6402 11.7318C17.6645 12.5854 16.3841 14.1218 15.3598 13.2682Z" fill="currentColor"/>
 <path d="M3.35979 11.7318L9.35979 6.7318C10.3841 5.87822 11.6645 7.41466 10.6402 8.26824L4.64016 13.2682C3.61586 14.1218 2.33549 12.5854 3.35979 11.7318Z" fill="currentColor"/>
 </svg>
 `;
 
-const ArrowDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7682 11.0265C15.1218 11.4507 15.0645 12.0813 14.6402 12.4349L10.6402 15.7682C10.2159 16.1218 9.58535 16.0644 9.23179 15.6402C8.87822 15.2159 8.93555 14.5853 9.35983 14.2318L13.3598 10.8984C13.7841 10.5449 14.4147 10.6022 14.7682 11.0265Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.23179 11.0265C5.58535 10.6022 6.21592 10.5449 6.64019 10.8984L10.6402 14.2318C11.0645 14.5853 11.1218 15.2159 10.7682 15.6402C10.4147 16.0644 9.7841 16.1218 9.35983 15.7682L5.35983 12.4349C4.93555 12.0813 4.87822 11.4507 5.23179 11.0265Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 14C9.44772 14 9 13.5523 9 13V5C9 4.44771 9.44772 4 10 4C10.5523 4 11 4.44771 11 5V13C11 13.5523 10.5523 14 10 14Z" fill="currentColor"/>
 </svg>
 `;
 
-const ArrowDownLeft$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowDownLeft$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6458 14.0975C12.5958 14.6475 12.1094 15.0529 11.5594 15.0029L6.37394 14.5314C5.82393 14.4814 5.41859 13.995 5.46859 13.445C5.51859 12.895 6.005 12.4897 6.55502 12.5397L11.7405 13.0111C12.2905 13.0611 12.6958 13.5475 12.6458 14.0975Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.90254 7.35427C6.45255 7.30427 6.93896 7.70961 6.98897 8.25963L7.46037 13.4451C7.51037 13.9951 7.10503 14.4815 6.55501 14.5315C6.005 14.5815 5.51859 14.1762 5.46858 13.6261L4.99718 8.4407C4.94718 7.89068 5.35252 7.40427 5.90254 7.35427Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.17155 12.8286C6.78103 12.438 6.78103 11.8049 7.17155 11.4144L12.8284 5.7575C13.2189 5.36697 13.8521 5.36697 14.2426 5.7575C14.6331 6.14802 14.6331 6.78119 14.2426 7.17171L8.58577 12.8286C8.19524 13.2191 7.56208 13.2191 7.17155 12.8286Z" fill="currentColor"/>
 </svg>
 `;
 
-const ArrowDownRight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowDownRight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0975 7.35427C14.6475 7.40427 15.0528 7.89068 15.0028 8.4407L14.5314 13.6261C14.4814 14.1762 13.995 14.5815 13.445 14.5315C12.895 14.4815 12.4896 13.9951 12.5396 13.4451L13.011 8.25963C13.061 7.70961 13.5474 7.30427 14.0975 7.35427Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.35418 14.0975C7.30418 13.5475 7.70952 13.0611 8.25953 13.0111L13.445 12.5397C13.995 12.4897 14.4814 12.895 14.5314 13.445C14.5814 13.995 14.1761 14.4814 13.6261 14.5314L8.44061 15.0029C7.89059 15.0529 7.40418 14.6475 7.35418 14.0975Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8284 12.8285C12.4379 13.2191 11.8048 13.2191 11.4142 12.8285L5.75738 7.17168C5.36685 6.78116 5.36685 6.14799 5.75738 5.75747C6.1479 5.36695 6.78107 5.36695 7.17159 5.75747L12.8284 11.4143C13.219 11.8048 13.219 12.438 12.8284 12.8285Z" fill="currentColor"/>
 </svg>
 `;
 
-const ArrowLeft$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowLeft$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.97353 14.7682C8.54926 15.1218 7.91869 15.0645 7.56513 14.6402L4.23179 10.6402C3.87823 10.2159 3.93555 9.58537 4.35983 9.2318C4.78411 8.87824 5.41467 8.93556 5.76824 9.35984L9.10157 13.3598C9.45513 13.7841 9.39781 14.4147 8.97353 14.7682Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.97353 5.2318C9.39781 5.58537 9.45513 6.21593 9.10157 6.64021L5.76824 10.6402C5.41467 11.0645 4.78411 11.1218 4.35983 10.7682C3.93555 10.4147 3.87823 9.78412 4.23179 9.35984L7.56513 5.35984C7.91869 4.93556 8.54926 4.87824 8.97353 5.2318Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.99997 10C5.99997 9.44772 6.44768 9 6.99997 9L15 9C15.5523 9 16 9.44772 16 10C16 10.5523 15.5523 11 15 11L6.99997 11C6.44768 11 5.99997 10.5523 5.99997 10Z" fill="currentColor"/>
 </svg>
 `;
 
-const ArrowRight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowRight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0264 5.23175C11.4507 4.87819 12.0813 4.93551 12.4348 5.35979L15.7682 9.35979C16.1217 9.78407 16.0644 10.4146 15.6401 10.7682C15.2159 11.1218 14.5853 11.0644 14.2317 10.6402L10.8984 6.64016C10.5448 6.21588 10.6022 5.58532 11.0264 5.23175Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.0264 14.7682C10.6022 14.4146 10.5448 13.7841 10.8984 13.3598L14.2317 9.35979C14.5853 8.93551 15.2159 8.87819 15.6401 9.23175C16.0644 9.58532 16.1217 10.2159 15.7682 10.6402L12.4348 14.6402C12.0813 15.0644 11.4507 15.1218 11.0264 14.7682Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10C14 10.5523 13.5523 11 13 11L5 11C4.44771 11 4 10.5523 4 10C4 9.44772 4.44771 9 5 9L13 9C13.5523 9 14 9.44772 14 10Z" fill="currentColor"/>
 </svg>
 `;
 
-const ArrowUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.23178 8.97353C4.87822 8.54926 4.93554 7.91869 5.35982 7.56513L9.35982 4.23179C9.7841 3.87823 10.4147 3.93555 10.7682 4.35983C11.1218 4.78411 11.0645 5.41467 10.6402 5.76824L6.64019 9.10157C6.21591 9.45513 5.58535 9.39781 5.23178 8.97353Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7682 8.97353C14.4147 9.39781 13.7841 9.45513 13.3598 9.10157L9.35982 5.76824C8.93554 5.41467 8.87822 4.78411 9.23178 4.35983C9.58535 3.93555 10.2159 3.87823 10.6402 4.23179L14.6402 7.56513C15.0645 7.91869 15.1218 8.54926 14.7682 8.97353Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6C10.5523 6 11 6.44772 11 7V15C11 15.5523 10.5523 16 10 16C9.44772 16 9 15.5523 9 15V7C9 6.44772 9.44772 6 10 6Z" fill="currentColor"/>
 </svg>
 `;
 
-const ArrowUpLeft$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowUpLeft$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.90254 12.6459C5.35252 12.5959 4.94718 12.1094 4.99718 11.5594L5.46858 6.37397C5.51858 5.82396 6.005 5.41862 6.55501 5.46862C7.10503 5.51862 7.51037 6.00503 7.46037 6.55505L6.98897 11.7405C6.93896 12.2905 6.45255 12.6959 5.90254 12.6459Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6458 5.90263C12.6958 6.45264 12.2905 6.93906 11.7405 6.98906L6.55502 7.46046C6.005 7.51046 5.51859 7.10512 5.46859 6.5551C5.41858 6.00509 5.82393 5.51868 6.37394 5.46868L11.5594 4.99727C12.1094 4.94727 12.5958 5.35261 12.6458 5.90263Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.17156 7.17158C7.56208 6.78106 8.19524 6.78106 8.58577 7.17158L14.2426 12.8284C14.6331 13.219 14.6331 13.8521 14.2426 14.2427C13.8521 14.6332 13.2189 14.6332 12.8284 14.2427L7.17156 8.5858C6.78103 8.19527 6.78103 7.56211 7.17156 7.17158Z" fill="currentColor"/>
 </svg>
 `;
 
-const ArrowUpRight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowUpRight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.35412 5.90263C7.40412 5.35261 7.89053 4.94727 8.44054 4.99727L13.626 5.46868C14.176 5.51868 14.5814 6.00509 14.5314 6.5551C14.4814 7.10512 13.9949 7.51046 13.4449 7.46046L8.25947 6.98906C7.70946 6.93906 7.30411 6.45264 7.35412 5.90263Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.0974 12.6459C13.5474 12.6959 13.061 12.2905 13.011 11.7405L12.5396 6.55505C12.4896 6.00503 12.8949 5.51862 13.4449 5.46862C13.9949 5.41862 14.4814 5.82396 14.5314 6.37397L15.0028 11.5594C15.0528 12.1094 14.6474 12.5959 14.0974 12.6459Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8284 7.17156C13.2189 7.56208 13.2189 8.19524 12.8284 8.58577L7.17153 14.2426C6.78101 14.6331 6.14784 14.6331 5.75732 14.2426C5.36679 13.8521 5.36679 13.2189 5.75732 12.8284L11.4142 7.17156C11.8047 6.78103 12.4379 6.78103 12.8284 7.17156Z" fill="currentColor"/>
 </svg>
 `;
 
-const Bank$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Bank$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 3.86364L7.40193 5.5H12.5981L10 3.86364ZM10.2665 1.66783C10.1036 1.56527 9.89637 1.56527 9.73353 1.66783L1.9393 6.57693C1.51501 6.84416 1.70433 7.5 2.20577 7.5H17.7942C18.2957 7.5 18.485 6.84416 18.0607 6.57693L10.2665 1.66783Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 17C1.5 16.4477 1.94772 16 2.5 16H17.5C18.0523 16 18.5 16.4477 18.5 17C18.5 17.5523 18.0523 18 17.5 18H2.5C1.94772 18 1.5 17.5523 1.5 17Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4 8.5C4.55228 8.5 5 8.94772 5 9.5V14.5C5 15.0523 4.55228 15.5 4 15.5C3.44772 15.5 3 15.0523 3 14.5L3 9.5C3 8.94772 3.44772 8.5 4 8.5Z" fill="currentColor"/>
@@ -800,7 +802,7 @@ const Bank$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Battery$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Battery$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="17" y="7.5" width="2" height="5" rx="0.5" fill="currentColor"/>
 <path d="M4 7.5H7V12.5H4V7.5Z" fill="currentColor"/>
 <path d="M7.5 7.5H10.5V12.5H7.5V7.5Z" fill="currentColor"/>
@@ -809,14 +811,14 @@ const Battery$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Bell$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Bell$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.5 17C7.5 16.4477 7.94772 16 8.5 16C9.05228 16 9.5 16.4477 9.5 17C9.5 17.2761 9.72386 17.5 10 17.5C10.2761 17.5 10.5 17.2761 10.5 17C10.5 16.4477 10.9477 16 11.5 16C12.0523 16 12.5 16.4477 12.5 17C12.5 18.3807 11.3807 19.5 10 19.5C8.61929 19.5 7.5 18.3807 7.5 17Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18 14.5C18 13.3482 17.4284 12.2866 16.5 11.6488V9C16.5 5.68629 13.8137 3 10.5 3H9.5C6.18629 3 3.5 5.68629 3.5 9V11.6488C2.57159 12.2867 2 13.3482 2 14.5C2 15.8807 3.11929 17 4.5 17H15.5C16.8807 17 18 15.8807 18 14.5ZM14.5 12.8819L15.0904 13.147L15.1434 13.1709C15.665 13.4075 16 13.9273 16 14.5C16 14.7761 15.7761 15 15.5 15H4.5C4.22386 15 4 14.7761 4 14.5C4 13.9273 4.335 13.4075 4.85658 13.1709L4.90959 13.147L5.5 12.8819V9C5.5 6.79086 7.29086 5 9.5 5H10.5C12.7091 5 14.5 6.79086 14.5 9V12.8819Z" fill="currentColor"/>
 <path d="M9 1.5C9 0.947715 9.44772 0.5 10 0.5C10.5523 0.5 11 0.947716 11 1.5L11 4C11 4.55229 10.5523 5 10 5C9.44771 5 9 4.55228 9 4L9 1.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const BellOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const BellOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.5 17C7.5 16.4477 7.94772 16 8.5 16C9.05229 16 9.5 16.4477 9.5 17C9.5 17.2761 9.72386 17.5 10 17.5C10.2761 17.5 10.5 17.2761 10.5 17C10.5 16.4477 10.9477 16 11.5 16C12.0523 16 12.5 16.4477 12.5 17C12.5 18.3807 11.3807 19.5 10 19.5C8.61929 19.5 7.5 18.3807 7.5 17Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18 14.5C18 13.3482 17.4284 12.2866 16.5 11.6488V9C16.5 5.68629 13.8137 3 10.5 3H9.5C6.18629 3 3.5 5.68629 3.5 9V11.6488C2.57159 12.2867 2 13.3482 2 14.5C2 15.8807 3.11929 17 4.5 17H15.5C16.8807 17 18 15.8807 18 14.5ZM14.5 12.8819L15.0904 13.147L15.1434 13.1709C15.665 13.4075 16 13.9273 16 14.5C16 14.7761 15.7761 15 15.5 15H4.5C4.22386 15 4 14.7761 4 14.5C4 13.9273 4.335 13.4075 4.85658 13.1709L4.90959 13.147L5.5 12.8819V9C5.5 6.79086 7.29086 5 9.5 5H10.5C12.7091 5 14.5 6.79086 14.5 9V12.8819Z" fill="currentColor"/>
 <path d="M9 1.5C9 0.947715 9.44772 0.5 10 0.5C10.5523 0.5 11 0.947716 11 1.5L11 4C11 4.55229 10.5523 5 10 5C9.44771 5 9 4.55228 9 4L9 1.5Z" fill="currentColor"/>
@@ -824,7 +826,7 @@ const BellOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Bicycle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Bicycle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.0616 3.93632C12.5103 3.97032 12.0359 3.55102 12.0019 2.99978C11.9679 2.44854 12.3872 1.97411 12.9384 1.94011C16.8273 1.70025 19 2.46051 19 4.44073C19 6.01406 18.0221 6.71355 16.1454 6.9894C15.599 7.06971 15.0909 6.69187 15.0106 6.14545C14.9303 5.59904 15.3082 5.09098 15.8546 5.01066C16.8709 4.86127 17 4.76892 17 4.44073C17 4.14373 15.9059 3.76088 13.0616 3.93632Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 20C17.9853 20 20 17.9853 20 15.5C20 13.0147 17.9853 11 15.5 11C13.0147 11 11 13.0147 11 15.5C11 17.9853 13.0147 20 15.5 20ZM15.5 13C16.8807 13 18 14.1193 18 15.5C18 16.8807 16.8807 18 15.5 18C14.1193 18 13 16.8807 13 15.5C13 14.1193 14.1193 13 15.5 13Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 20C6.98528 20 9 17.9853 9 15.5C9 13.0147 6.98528 11 4.5 11C2.01472 11 0 13.0147 0 15.5C0 17.9853 2.01472 20 4.5 20ZM4.5 13C5.88071 13 7 14.1193 7 15.5C7 16.8807 5.88071 18 4.5 18C3.11929 18 2 16.8807 2 15.5C2 14.1193 3.11929 13 4.5 13Z" fill="currentColor"/>
@@ -834,7 +836,7 @@ const Bicycle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Bluetooth$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Bluetooth$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5351 10.7951L17.1065 6.54508C17.6312 6.14486 17.6312 5.35514 17.1065 4.95492L11.5351 0.704921C10.8769 0.202853 9.92857 0.672195 9.92857 1.5L9.92857 10C9.92857 10.8278 10.8769 11.2971 11.5351 10.7951ZM11.9286 3.52056L14.8512 5.75L11.9286 7.97945L11.9286 3.52056Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5351 19.2951L17.1065 15.0451C17.6312 14.6449 17.6312 13.8551 17.1065 13.4549L11.5351 9.20492C10.8769 8.70285 9.92857 9.1722 9.92857 10L9.92857 18.5C9.92857 19.3278 10.8769 19.7971 11.5351 19.2951ZM11.9286 12.0206L14.8512 14.25L11.9286 16.4794L11.9286 12.0206Z" fill="currentColor"/>
 <path d="M11.5264 9.19846C11.9692 9.52866 12.0604 10.1552 11.7302 10.5979C11.4 11.0406 10.7734 11.1318 10.3307 10.8016L3.36641 5.60719C2.9237 5.27699 2.8325 4.65043 3.1627 4.20772C3.4929 3.76502 4.11946 3.67382 4.56216 4.00402L11.5264 9.19846Z" fill="currentColor"/>
@@ -842,23 +844,23 @@ const Bluetooth$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Book$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Book$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 5.29733C11 4.80746 10.6451 4.38971 10.1617 4.31049L2.32344 3.02599C2.21652 3.00847 2.10835 2.99966 2 2.99966C0.89543 2.99966 0 3.89509 0 4.99966V14.7366C0 15.7218 0.717527 16.5603 1.69094 16.7125L9.84547 17.988C10.452 18.0829 11 17.6139 11 17V5.29733ZM2 14.7366V4.99966L9 6.14679V15.8314L2 14.7366Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M20 4.99966C20 3.89509 19.1046 2.99966 18 2.99966C17.8917 2.99966 17.7835 3.00847 17.6766 3.02599L9.83828 4.31049C9.35486 4.38971 9 4.80746 9 5.29733V17C9 17.6139 9.54801 18.0829 10.1545 17.988L18.3091 16.7125C19.2825 16.5603 20 15.7218 20 14.7366V4.99966ZM18 14.7366L11 15.8314V6.14679L18 4.99966V14.7366Z" fill="currentColor"/>
 </svg>
 `;
 
-const Bookmark$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Bookmark$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.24548 17.6665L10 13.4673L13.7545 17.6665C14.3665 18.3509 15.5 17.9181 15.5 17V3C15.5 2.44772 15.0523 2 14.5 2H5.5C4.94772 2 4.5 2.44772 4.5 3V17C4.5 17.9181 5.63355 18.3509 6.24548 17.6665ZM6.5 14.3812V4H13.5V14.3812L10.7455 11.3004C10.3479 10.8558 9.65206 10.8558 9.25452 11.3004L6.5 14.3812Z" fill="currentColor"/>
 </svg>
 `;
 
-const BookmarkFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const BookmarkFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 13.4673L6.24548 17.6665C5.63355 18.3509 4.5 17.9181 4.5 17V3C4.5 2.44772 4.94772 2 5.5 2H14.5C15.0523 2 15.5 2.44772 15.5 3V17C15.5 17.9181 14.3665 18.3509 13.7545 17.6665L10 13.4673Z" fill="currentColor"/>
 </svg>
 `;
 
-const Briefcase$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Briefcase$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 11V15C3.5 15.5523 3.94772 16 4.5 16H15.5C16.0523 16 16.5 15.5523 16.5 15V11H18.5V15C18.5 16.6569 17.1569 18 15.5 18H4.5C2.84315 18 1.5 16.6569 1.5 15V11H3.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1 7C1 5.89543 1.89543 5 3 5H17C18.1046 5 19 5.89543 19 7V10C19 11.6569 17.6569 13 16 13H4C2.34315 13 1 11.6569 1 10V7ZM17 7H3V10C3 10.5523 3.44772 11 4 11H16C16.5523 11 17 10.5523 17 10V7Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7 4.74621V6.5H5V4.74621C5 4.50093 5.03008 4.25657 5.08957 4.0186L5.15113 3.77239C5.485 2.43689 6.68495 1.5 8.06155 1.5H11.9384C13.3151 1.5 14.515 2.43689 14.8489 3.77239L14.9104 4.0186C14.9699 4.25657 15 4.50093 15 4.74621V6.5H13V4.74621C13 4.66445 12.99 4.583 12.9701 4.50368L12.9086 4.25746C12.7973 3.8123 12.3973 3.5 11.9384 3.5L8.06155 3.5C7.60268 3.5 7.2027 3.8123 7.09141 4.25746L7.02986 4.50368C7.01003 4.583 7 4.66445 7 4.74621Z" fill="currentColor"/>
@@ -869,7 +871,7 @@ const Briefcase$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Building$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Building$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2 18.5C1.44772 18.5 1 18.0523 1 17.5C1 16.9477 1.44772 16.5 2 16.5H18C18.5523 16.5 19 16.9477 19 17.5C19 18.0523 18.5523 18.5 18 18.5H2Z" fill="currentColor"/>
 <path d="M6.5 17C6.5 17.5523 6.05228 18 5.5 18C4.94772 18 4.5 17.5523 4.5 17V4.30769C4.5 2.51017 5.80881 1 7.5 1H12.5C14.1912 1 15.5 2.51017 15.5 4.30769V17C15.5 17.5523 15.0523 18 14.5 18C13.9477 18 13.5 17.5523 13.5 17V4.30769C13.5 3.55621 13.018 3 12.5 3H7.5C6.98205 3 6.5 3.55621 6.5 4.30769V17Z" fill="currentColor"/>
 <path d="M8 4H9C9.27614 4 9.5 4.22386 9.5 4.5V5.5C9.5 5.77614 9.27614 6 9 6H8C7.72386 6 7.5 5.77614 7.5 5.5V4.5C7.5 4.22386 7.72386 4 8 4Z" fill="currentColor"/>
@@ -883,7 +885,7 @@ const Building$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Calculator$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Calculator$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 3L2 17C2 18.6569 3.34315 20 5 20H15C16.6569 20 18 18.6569 18 17V3C18 1.34315 16.6569 0 15 0H5C3.34315 0 2 1.34315 2 3ZM5 18C4.44772 18 4 17.5523 4 17L4 3C4 2.44772 4.44772 2 5 2H15C15.5523 2 16 2.44772 16 3V17C16 17.5523 15.5523 18 15 18H5Z" fill="currentColor"/>
 <path d="M5 7.5V3.5C5 3.22386 5.22386 3 5.5 3L14.5 3C14.7761 3 15 3.22386 15 3.5V7.5C15 7.77614 14.7761 8 14.5 8H5.5C5.22386 8 5 7.77614 5 7.5Z" fill="currentColor"/>
 <path d="M12 15.7V10.8C12 10.3582 12.3582 10 12.8 10H14.2C14.6418 10 15 10.3582 15 10.8V15.7C15 16.1418 14.6418 16.5 14.2 16.5H12.8C12.3582 16.5 12 16.1418 12 15.7Z" fill="currentColor"/>
@@ -894,7 +896,7 @@ const Calculator$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const Calendar$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Calendar$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 4H17C17.5523 4 18 4.44772 18 5V17C18 17.5523 17.5523 18 17 18H3C2.44772 18 2 17.5523 2 17V5C2 4.44772 2.44772 4 3 4ZM4 8V16H16V8H4Z" fill="currentColor"/>
 <circle cx="6.5" cy="10.5" r="1.5" fill="currentColor"/>
 <circle cx="5.5" cy="4.5" r="1.5" fill="currentColor"/>
@@ -902,19 +904,19 @@ const Calendar$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Camera$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Camera$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 4H4.5C2.84315 4 1.5 5.34315 1.5 7V13C1.5 14.6569 2.84315 16 4.5 16H11.5C13.1569 16 14.5 14.6569 14.5 13V7C14.5 5.34315 13.1569 4 11.5 4ZM3.5 7C3.5 6.44772 3.94772 6 4.5 6H11.5C12.0523 6 12.5 6.44772 12.5 7V13C12.5 13.5523 12.0523 14 11.5 14H4.5C3.94772 14 3.5 13.5523 3.5 13V7Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9339 5.17564L13.4659 7.55708C13.1971 7.74161 13.0352 8.04554 13.032 8.37151L13 11.5867C12.9967 11.9197 13.1594 12.2325 13.4339 12.421L16.9339 14.8244C17.5975 15.28 18.5 14.8049 18.5 14V6C18.5 5.19508 17.5975 4.72 16.9339 5.17564ZM16.5 12.1003L15.0052 11.0739L15.0267 8.91141L16.5 7.89974V12.1003Z" fill="currentColor"/>
 </svg>
 `;
 
-const Can$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Can$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5 2H7.5C5.83333 2.66667 4.83333 3.66667 4.5 5V15C4.5 16.6569 5.84315 18 7.5 18H12.5C14.1569 18 15.5 16.6569 15.5 15V5C15.1667 3.66667 14.1667 2.66667 12.5 2ZM6.5 15V5.29379C6.68962 4.79195 7.1237 4.36779 7.91138 4H12.0886C12.8763 4.36779 13.3104 4.79195 13.5 5.29379V15C13.5 15.5523 13.0523 16 12.5 16H7.5C6.94772 16 6.5 15.5523 6.5 15Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7 9.5C7 11.7091 8.79086 13.5 11 13.5C13.2091 13.5 15 11.7091 15 9.5C15 7.29086 13.2091 5.5 11 5.5C8.79086 5.5 7 7.29086 7 9.5ZM9.80484 10.9055C9.55673 10.9664 9.15223 11.09 8.58357 11.2782C8.56278 11.25 8.54246 11.2214 8.52264 11.1925C9.78121 10.8145 10.7946 10.2379 11.5554 9.45908C12.2367 8.7617 12.6995 8.01039 12.9365 7.20862C13.0856 7.33479 13.2223 7.47526 13.3443 7.62791C13.4677 8.46285 13.3733 9.08532 13.0855 9.51186C12.7303 10.0384 12.1353 10.3668 11.5805 10.5122C11.5089 10.5309 11.3794 10.5603 11.1777 10.6038C11.1136 10.6176 10.9312 10.6565 10.7798 10.6887C10.683 10.7093 10.5989 10.7273 10.5665 10.7342L10.4542 10.7584C10.1799 10.8176 9.9714 10.8646 9.80484 10.9055Z" fill="currentColor"/>
 </svg>
 `;
 
-const Car$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Car$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.65265 2.78967C4.74897 3.00861 4.04146 3.71098 3.81595 4.61304L2.68528 9.1357C1.70458 9.47358 1 10.4045 1 11.4999V14.4999C1 15.8807 2.11929 16.9999 3.5 16.9999H16.5C17.8807 16.9999 19 15.8807 19 14.4999V11.4999C19 10.4045 18.2954 9.47358 17.3147 9.1357L16.184 4.61293C15.9585 3.71099 15.2512 3.00867 14.3476 2.78962C12.9007 2.43894 11.4512 2.26331 10.0007 2.26331C8.55011 2.26331 7.10023 2.43896 5.65265 2.78967ZM3.5 10.9999C3.95887 10.9999 4.35885 10.6876 4.47014 10.2425L5.75623 5.09811C5.80133 4.9177 5.94284 4.77722 6.12357 4.73344C7.41806 4.41982 8.70992 4.26331 10.0007 4.26331C11.2914 4.26331 12.5828 4.41978 13.8765 4.73333C14.0572 4.77714 14.1986 4.91761 14.2437 5.09801L15.5299 10.2425C15.6411 10.6876 16.0411 10.9999 16.5 10.9999C16.7761 10.9999 17 11.2238 17 11.4999V14.4999C17 14.7761 16.7761 14.9999 16.5 14.9999H3.5C3.22386 14.9999 3 14.7761 3 14.4999V11.4999C3 11.2238 3.22386 10.9999 3.5 10.9999Z" fill="currentColor"/>
 <path d="M16.5 13C16.5 13.8284 15.8284 14.5 15 14.5C14.1716 14.5 13.5 13.8284 13.5 13C13.5 12.1716 14.1716 11.5 15 11.5C15.8284 11.5 16.5 12.1716 16.5 13Z" fill="currentColor"/>
 <path d="M6.5 13C6.5 13.8284 5.82843 14.5 5 14.5C4.17157 14.5 3.5 13.8284 3.5 13C3.5 12.1716 4.17157 11.5 5 11.5C5.82843 11.5 6.5 12.1716 6.5 13Z" fill="currentColor"/>
@@ -924,7 +926,7 @@ const Car$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Cart$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Cart$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_978)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5131 6L7.48727 6C7.29999 6 7.11329 6.02105 6.9307 6.06274C5.58464 6.37013 4.74263 7.71051 5.05002 9.05657L5.96345 13.0566C6.2231 14.1936 7.23443 15 8.40071 15L15.5996 15C16.7659 15 17.7772 14.1936 18.0369 13.0566L18.9503 9.05657C18.992 8.87398 19.0131 8.68729 19.0131 8.5C19.0131 7.11929 17.8938 6 16.5131 6ZM7.37596 8.01255C7.41248 8.00421 7.44982 8 7.48727 8L16.5131 8C16.7892 8 17.0131 8.22386 17.0131 8.5C17.0131 8.53746 17.0089 8.5748 17.0005 8.61131L16.0871 12.6113C16.0352 12.8387 15.8329 13 15.5996 13L8.40071 13C8.16745 13 7.96519 12.8387 7.91326 12.6113L6.99982 8.61131C6.93835 8.3421 7.10675 8.07403 7.37596 8.01255Z" fill="currentColor"/>
 <path d="M3.49044 2L2 2C1.44772 2 1 1.55228 1 1C1 0.447715 1.44772 0 2 0L4.28977 0C4.75718 0 5.16223 0.323776 5.2652 0.779696L7.97543 12.7797C8.0971 13.3184 7.75902 13.8538 7.2203 13.9754C6.68159 14.0971 6.14624 13.759 6.02457 13.2203L3.49044 2Z" fill="currentColor"/>
@@ -935,7 +937,7 @@ const Cart$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const CellphoneEye$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CellphoneEye$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12.675 15.1375C12.675 15.5103 12.3727 15.8125 12 15.8125C11.6272 15.8125 11.325 15.5103 11.325 15.1375C11.325 14.7647 11.6272 14.4625 12 14.4625C12.3727 14.4625 12.675 14.7647 12.675 15.1375Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 14.9625C11.9033 14.9625 11.825 15.0409 11.825 15.1375C11.825 15.2342 11.9033 15.3125 12 15.3125C12.0966 15.3125 12.175 15.2342 12.175 15.1375C12.175 15.0409 12.0966 14.9625 12 14.9625ZM10.825 15.1375C10.825 14.4886 11.351 13.9625 12 13.9625C12.6489 13.9625 13.175 14.4886 13.175 15.1375C13.175 15.7865 12.6489 16.3125 12 16.3125C11.351 16.3125 10.825 15.7865 10.825 15.1375Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 3.5C5.5 1.84315 6.84315 0.5 8.5 0.5H15.5C17.1569 0.5 18.5 1.84315 18.5 3.5V16.5C18.5 18.1569 17.1569 19.5 15.5 19.5H8C6.61929 19.5 5.5 18.3807 5.5 17V16.5C5.5 15.9477 5.94772 15.5 6.5 15.5C7.05228 15.5 7.5 15.9477 7.5 16.5V17C7.5 17.2761 7.72386 17.5 8 17.5H15.5C16.0523 17.5 16.5 17.0523 16.5 16.5V3.5C16.5 2.94772 16.0523 2.5 15.5 2.5H8.5C7.94772 2.5 7.5 2.94772 7.5 3.5V5.75C7.5 6.30228 7.05228 6.75 6.5 6.75C5.94772 6.75 5.5 6.30228 5.5 5.75V3.5Z" fill="currentColor"/>
@@ -950,7 +952,7 @@ const CellphoneEye$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="no
 </svg>
 `;
 
-const CellphoneLoop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CellphoneLoop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2307)">
 <path d="M12.675 15.1375C12.675 15.5103 12.3727 15.8125 12 15.8125C11.6272 15.8125 11.325 15.5103 11.325 15.1375C11.325 14.7647 11.6272 14.4625 12 14.4625C12.3727 14.4625 12.675 14.7647 12.675 15.1375Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 14.9625C11.9033 14.9625 11.825 15.0409 11.825 15.1375C11.825 15.2342 11.9033 15.3125 12 15.3125C12.0966 15.3125 12.175 15.2342 12.175 15.1375C12.175 15.0409 12.0966 14.9625 12 14.9625ZM10.825 15.1375C10.825 14.4886 11.351 13.9625 12 13.9625C12.6489 13.9625 13.175 14.4886 13.175 15.1375C13.175 15.7865 12.6489 16.3125 12 16.3125C11.351 16.3125 10.825 15.7865 10.825 15.1375Z" fill="currentColor"/>
@@ -961,29 +963,29 @@ const CellphoneLoop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 </svg>
 `;
 
-const Chain$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Chain$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="12.7835" y="2.38351" width="6" height="10" rx="3" transform="rotate(33.0385 12.7835 2.38351)" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <rect x="7.83558" y="6.32284" width="6" height="10" rx="3" transform="rotate(33.0385 7.83558 6.32284)" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 </svg>
 `;
 
-const Checkmark$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Checkmark$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.3742 5.98559L10.3742 14.9856C9.72664 16.1511 7.97832 15.1798 8.62585 14.0143L13.6258 5.01431C14.2734 3.84876 16.0217 4.82005 15.3742 5.98559Z" fill="currentColor"/>
 <path d="M5.1247 9.71907L10.1247 13.7191C11.1659 14.552 9.91646 16.1137 8.87531 15.2808L3.87531 11.2808C2.83415 10.4479 4.08354 8.88615 5.1247 9.71907Z" fill="currentColor"/>
 </svg>
 `;
 
-const Circle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Circle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 10C4.5 13.0376 6.96243 15.5 10 15.5C13.0376 15.5 15.5 13.0376 15.5 10C15.5 6.96243 13.0376 4.5 10 4.5C6.96243 4.5 4.5 6.96243 4.5 10ZM13.5 10C13.5 11.933 11.933 13.5 10 13.5C8.067 13.5 6.5 11.933 6.5 10C6.5 8.067 8.067 6.5 10 6.5C11.933 6.5 13.5 8.067 13.5 10Z" fill="currentColor"/>
 </svg>
 `;
 
-const CircleFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CircleFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="10" cy="10" r="6" fill="currentColor"/>
 </svg>
 `;
 
-const Clapperboard$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Clapperboard$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1817_474)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.706986 6.07919C0.588862 5.53969 0.930458 5.00658 1.46996 4.88845L16.1229 1.68021C16.6624 1.56208 17.1955 1.90368 17.3136 2.44318L17.9552 5.37376C18.0734 5.91327 17.7318 6.44638 17.1923 6.5645L2.53938 9.77275C1.99987 9.89087 1.46676 9.54928 1.34863 9.00977L0.706986 6.07919ZM2.87459 6.62829L3.08847 7.60515L15.7876 4.82467L15.5738 3.84781L2.87459 6.62829Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.9346 7.69771L7.33923 5.1949L8.72754 3.75525L11.3229 6.25806L9.9346 7.69771Z" fill="currentColor"/>
@@ -999,7 +1001,7 @@ const Clapperboard$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="no
 </svg>
 `;
 
-const Clipboard$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Clipboard$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="6.67499" y="2.5" width="6.64286" height="3.875" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
 <path d="M16.0857 18H3.90713C3.29567 18 2.79999 17.5043 2.79999 16.8929V3.60714C2.79999 2.99568 3.29567 2.5 3.90713 2.5H7.22856V4.71429H5.01427V15.7857H14.9786V4.71429H12.7643V2.5H16.0857C16.6972 2.5 17.1928 2.99568 17.1928 3.60714V16.8929C17.1928 17.5043 16.6972 18 16.0857 18Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.67499 2.5C5.67499 1.94772 6.1227 1.5 6.67499 1.5H13.3178C13.8701 1.5 14.3178 1.94772 14.3178 2.5V6.375C14.3178 6.92728 13.8701 7.375 13.3178 7.375H6.67499C6.1227 7.375 5.67499 6.92728 5.67499 6.375V2.5ZM7.67499 3.5V5.375H12.3178V3.5H7.67499Z" fill="currentColor"/>
@@ -1007,14 +1009,14 @@ const Clipboard$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const ClipboardCheck$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ClipboardCheck$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.67499 2.5C5.67499 1.94772 6.1227 1.5 6.67499 1.5H13.3178C13.8701 1.5 14.3178 1.94772 14.3178 2.5V6.375C14.3178 6.92728 13.8701 7.375 13.3178 7.375H6.67499C6.1227 7.375 5.67499 6.92728 5.67499 6.375V2.5ZM7.67499 3.5V5.375H12.3178V3.5H7.67499Z" fill="currentColor"/>
 <path d="M16.0857 18H3.90713C3.29567 18 2.79999 17.5043 2.79999 16.8929V3.60714C2.79999 2.99568 3.29567 2.5 3.90713 2.5H7.22856V4.71429H5.01427V15.7857H14.9786V4.71429H12.7643V2.5H16.0857C16.6972 2.5 17.1928 2.99568 17.1928 3.60714V16.8929C17.1928 17.5043 16.6972 18 16.0857 18Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5674 8.67659C13.0221 8.98997 13.1368 9.61267 12.8234 10.0674L11.0564 12.6317C10.5674 13.3413 9.58243 13.494 8.90161 12.9656L7.38689 11.79C6.95059 11.4514 6.87139 10.8232 7.21001 10.3869C7.54862 9.95059 8.17682 9.8714 8.61312 10.21L9.70981 11.0612L11.1765 8.93262C11.4899 8.47785 12.1126 8.36322 12.5674 8.67659Z" fill="currentColor"/>
 </svg>
 `;
 
-const ClipboardCheckCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ClipboardCheckCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.67999 2.5C5.67999 1.94772 6.12771 1.5 6.67999 1.5H13.3228C13.8751 1.5 14.3228 1.94772 14.3228 2.5V6.375C14.3228 6.92728 13.8751 7.375 13.3228 7.375H6.67999C6.12771 7.375 5.67999 6.92728 5.67999 6.375V2.5ZM7.67999 3.5V5.375H12.3228V3.5H7.67999Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1979 9.4286V3.60714C17.1979 2.99568 16.7022 2.5 16.0907 2.5H12.7693V4.71429H14.9836V8.20241C15.8188 8.43582 16.5738 8.86145 17.1979 9.4286ZM5.01928 15.7857H8.49598C8.90391 16.6773 9.54315 17.441 10.3369 18H3.91214C3.30068 18 2.80499 17.5043 2.80499 16.8929V3.60714C2.80499 2.99568 3.30068 2.5 3.91214 2.5H7.23356V4.71429H5.01928V15.7857Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5 17C15.433 17 17 15.433 17 13.5C17 11.567 15.433 10 13.5 10C11.567 10 10 11.567 10 13.5C10 15.433 11.567 17 13.5 17ZM13.5 19C16.5376 19 19 16.5376 19 13.5C19 10.4624 16.5376 8 13.5 8C10.4624 8 8 10.4624 8 13.5C8 16.5376 10.4624 19 13.5 19Z" fill="currentColor"/>
@@ -1022,19 +1024,19 @@ const ClipboardCheckCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" 
 </svg>
 `;
 
-const Clock$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Clock$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6C10.5523 6 11 6.44772 11 7V10C11 10.5523 10.5523 11 10 11C9.44772 11 9 10.5523 9 10V7C9 6.44772 9.44772 6 10 6Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 10C14 10.5523 13.5523 11 13 11H10C9.44772 11 9 10.5523 9 10C9 9.44772 9.44772 9 10 9H13C13.5523 9 14 9.44772 14 10Z" fill="currentColor"/>
 </svg>
 `;
 
-const Cloud$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Cloud$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 3H10C8.13616 3 6.57006 4.27477 6.12602 6H6C3.79086 6 2 7.79086 2 10C2 12.2091 3.79086 14 6 14H14C16.2091 14 18 12.2091 18 10C18 8.09985 16.6751 6.50915 14.8987 6.10135C14.4909 4.32493 12.9002 3 11 3ZM7.67644 8L8.06289 6.49852C8.28793 5.62419 9.08228 5 10 5H11C11.9367 5 12.7431 5.65018 12.9494 6.54883L13.2297 7.77025L14.4512 8.05064C15.3498 8.25694 16 9.06327 16 10C16 11.1046 15.1046 12 14 12H6C4.89543 12 4 11.1046 4 10C4 8.89543 4.89543 8 6 8H7.67644Z" fill="currentColor"/>
 </svg>
 `;
 
-const CloudDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CloudDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 3H10C8.13616 3 6.57006 4.27477 6.12602 6H6C3.79086 6 2 7.79086 2 10C2 12.2091 3.79086 14 6 14H14C16.2091 14 18 12.2091 18 10C18 8.09985 16.6751 6.50915 14.8987 6.10135C14.4909 4.32493 12.9002 3 11 3ZM7.67644 8L8.06289 6.49852C8.28793 5.62419 9.08228 5 10 5H11C11.9367 5 12.7431 5.65018 12.9494 6.54883L13.2297 7.77025L14.4512 8.05064C15.3498 8.25694 16 9.06327 16 10C16 11.1046 15.1046 12 14 12H6C4.89543 12 4 11.1046 4 10C4 8.89543 4.89543 8 6 8H7.67644Z" fill="currentColor"/>
 <path d="M9.5 10C9.5 9.44771 9.94772 9 10.5 9C11.0523 9 11.5 9.44771 11.5 10L11.5 17.5C11.5 18.0523 11.0523 18.5 10.5 18.5C9.94772 18.5 9.5 18.0523 9.5 17.5V10Z" fill="currentColor"/>
 <path d="M12.3753 14.7191C12.8065 14.3741 13.4358 14.444 13.7808 14.8753C14.1258 15.3065 14.0559 15.9358 13.6247 16.2808L11.1247 18.2808C10.6934 18.6258 10.0641 18.5559 9.71909 18.1247C9.37408 17.6934 9.44401 17.0641 9.87527 16.7191L12.3753 14.7191Z" fill="currentColor"/>
@@ -1042,7 +1044,7 @@ const CloudDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const CloudDownFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CloudDownFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 14V9.25C12 8.42157 11.3284 7.75 10.5 7.75C9.67157 7.75 9 8.42157 9 9.25V14H6C3.79086 14 2 12.2091 2 10C2 7.79086 3.79086 6 6 6H6.12602C6.57006 4.27477 8.13616 3 10 3H11C12.9002 3 14.4909 4.32493 14.8987 6.10135C16.6751 6.50915 18 8.09985 18 10C18 12.2091 16.2091 14 14 14H12Z" fill="currentColor"/>
 <path d="M9.5 9.5C9.5 8.94771 9.94772 8.5 10.5 8.5C11.0523 8.5 11.5 8.94771 11.5 9.5L11.5 17C11.5 17.5523 11.0523 18 10.5 18C9.94772 18 9.5 17.5523 9.5 17V9.5Z" fill="currentColor"/>
 <path d="M12.3753 14.7191C12.8065 14.3741 13.4358 14.444 13.7808 14.8753C14.1258 15.3065 14.0559 15.9358 13.6247 16.2808L11.1247 18.2808C10.6934 18.6258 10.0641 18.5559 9.71909 18.1247C9.37408 17.6934 9.44401 17.0641 9.87527 16.7191L12.3753 14.7191Z" fill="currentColor"/>
@@ -1050,7 +1052,7 @@ const CloudDownFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 </svg>
 `;
 
-const CloudFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CloudFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="2" y="6" width="16" height="8" rx="4" fill="currentColor"/>
 <rect x="6" y="3" width="9" height="8" rx="4" fill="currentColor"/>
 <rect x="2" y="6" width="16" height="8" rx="4" fill="currentColor"/>
@@ -1058,7 +1060,7 @@ const CloudFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const CloudUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CloudUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 3H10C8.13616 3 6.57006 4.27477 6.12602 6H6C3.79086 6 2 7.79086 2 10C2 12.2091 3.79086 14 6 14H14C16.2091 14 18 12.2091 18 10C18 8.09985 16.6751 6.50915 14.8987 6.10135C14.4909 4.32493 12.9002 3 11 3ZM7.67644 8L8.06289 6.49852C8.28793 5.62419 9.08228 5 10 5H11C11.9367 5 12.7431 5.65018 12.9494 6.54883L13.2297 7.77025L14.4512 8.05064C15.3498 8.25694 16 9.06327 16 10C16 11.1046 15.1046 12 14 12H6C4.89543 12 4 11.1046 4 10C4 8.89543 4.89543 8 6 8H7.67644Z" fill="currentColor"/>
 <path d="M11.5 16C11.5 16.5523 11.0523 17 10.5 17C9.94772 17 9.5 16.5523 9.5 16V8.5C9.5 7.94772 9.94772 7.5 10.5 7.5C11.0523 7.5 11.5 7.94772 11.5 8.5V16Z" fill="currentColor"/>
 <path d="M8.62473 11.2809C8.19347 11.6259 7.56418 11.556 7.21917 11.1247C6.87416 10.6935 6.94408 10.0642 7.37534 9.71917L9.87534 7.71917C10.3066 7.37416 10.9359 7.44408 11.2809 7.87534C11.6259 8.3066 11.556 8.9359 11.1247 9.28091L8.62473 11.2809Z" fill="currentColor"/>
@@ -1066,12 +1068,12 @@ const CloudUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const CloudUpFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CloudUpFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 14V10.6777L12.252 11.2653C12.6872 11.6053 13.3157 11.5281 13.6557 11.0929C13.9957 10.6577 13.9186 10.0293 13.4834 9.68924L11.1791 7.88897C10.9911 7.71827 10.7494 7.6299 10.5057 7.63022C10.262 7.6299 10.0203 7.71827 9.83225 7.88897L7.52801 9.68924C7.0928 10.0293 7.01564 10.6577 7.35566 11.0929C7.69568 11.5281 8.32413 11.6053 8.75933 11.2653L9.5 10.6866V14H6C3.79086 14 2 12.2091 2 10C2 7.79086 3.79086 6 6 6H6.12602C6.57006 4.27477 8.13616 3 10 3H11C12.9002 3 14.4909 4.32493 14.8987 6.10135C16.6751 6.50915 18 8.09985 18 10C18 12.2091 16.2091 14 14 14H11.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const Coctail$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Coctail$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_384)">
 <path d="M6 8C5.72386 8 5.5 7.77614 5.5 7.5C5.5 7.22386 5.72386 7 6 7H14C14.2761 7 14.5 7.22386 14.5 7.5C14.5 7.77614 14.2761 8 14 8H6Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.7672 5.68045L9.2672 12.6805C9.66284 13.1065 10.3372 13.1065 10.7328 12.6805L17.2328 5.68045C17.8269 5.0406 17.3732 4 16.5 4L3.5 4C2.62683 4 2.17306 5.0406 2.7672 5.68045ZM14.2068 6L10 10.5304L5.79321 6L14.2068 6Z" fill="currentColor"/>
@@ -1084,7 +1086,7 @@ const Coctail$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Code$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Code$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.59009 9.33104C1.95955 8.92053 2.59184 8.88726 3.00235 9.25671L6.33568 12.2567C6.74619 12.6262 6.77947 13.2585 6.41001 13.669C6.04055 14.0795 5.40826 14.1128 4.99775 13.7433L1.66442 10.7433C1.25391 10.3738 1.22063 9.74155 1.59009 9.33104Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.41001 6.33104C6.77947 6.74155 6.74619 7.37384 6.33568 7.7433L3.00235 10.7433C2.59184 11.1128 1.95955 11.0795 1.59009 10.669C1.22063 10.2585 1.25391 9.62617 1.66442 9.25671L4.99775 6.25671C5.40826 5.88726 6.04055 5.92053 6.41001 6.33104Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.41 9.33104C18.7795 9.74155 18.7462 10.3738 18.3357 10.7433L15.0023 13.7433C14.5918 14.1128 13.9595 14.0795 13.5901 13.669C13.2206 13.2585 13.2539 12.6262 13.6644 12.2567L16.9978 9.25671C17.4083 8.88726 18.0406 8.92053 18.41 9.33104Z" fill="currentColor"/>
@@ -1093,7 +1095,7 @@ const Code$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const ColorPicker$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ColorPicker$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_3113)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5356 15.2365C5.97633 15.853 3.27902 17.6075 2.80762 17.1361C2.50215 16.8306 3.13133 15.5905 3.77986 14.331L8.44113 14.331C8.2399 14.5322 7.93805 14.8341 7.5356 15.2365Z" fill="currentColor"/>
 <path d="M15.8033 5.55458C16.1938 5.16405 16.827 5.16405 17.2175 5.55458C17.608 5.9451 17.608 6.57827 17.2175 6.96879L8.2427 15.9436C8.14598 16.0403 8.03045 16.1162 7.90325 16.1665C7.50693 16.3231 7.10375 16.5206 6.15047 17.0117C5.67929 17.2544 5.47123 17.3604 5.21668 17.4858C3.46858 18.3471 2.81156 18.5542 2.10051 17.8432C1.3908 17.1334 1.59727 16.4757 2.45235 14.7382C2.57905 14.4807 2.68634 14.2702 2.93201 13.7932C3.42303 12.8399 3.62052 12.4367 3.77721 12.0404C3.82749 11.9132 3.90334 11.7977 4.00006 11.701L12.9749 2.72615C13.3654 2.33563 13.9986 2.33563 14.3891 2.72615C14.7796 3.11667 14.7796 3.74984 14.3891 4.14036L5.55695 12.9725C5.38269 13.3873 5.16356 13.8285 4.71001 14.709C4.47005 15.1749 4.36624 15.3786 4.24682 15.6213C4.22195 15.6718 4.19798 15.721 4.17491 15.7688C4.22595 15.7441 4.27855 15.7184 4.33275 15.6917C4.5729 15.5734 4.77428 15.4708 5.23465 15.2337C6.11519 14.7801 6.55635 14.561 6.97116 14.3867L15.8033 5.55458Z" fill="currentColor"/>
@@ -1104,7 +1106,7 @@ const ColorPicker$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const Contract$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Contract$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.7071 9.70711C11.3166 10.0976 10.6834 10.0976 10.2929 9.70711C9.90237 9.31658 9.90237 8.68342 10.2929 8.29289L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L11.7071 9.70711Z" fill="currentColor"/>
 <path d="M11 10C10.4477 10 10 9.55228 10 9C10 8.44772 10.4477 8 11 8H15C15.5523 8 16 8.44772 16 9C16 9.55228 15.5523 10 15 10H11Z" fill="currentColor"/>
 <path d="M12 9C12 9.55228 11.5523 10 11 10C10.4477 10 10 9.55228 10 9V5C10 4.44772 10.4477 4 11 4C11.5523 4 12 4.44772 12 5V9Z" fill="currentColor"/>
@@ -1114,7 +1116,7 @@ const Contract$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Controller$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Controller$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12.25 10C11.5596 10 11 9.44036 11 8.75C11 8.05964 11.5596 7.5 12.25 7.5C12.9404 7.5 13.5 8.05964 13.5 8.75C13.5 9.44036 12.9404 10 12.25 10Z" fill="currentColor"/>
 <path d="M14.25 12.5C13.5596 12.5 13 11.9404 13 11.25C13 10.5596 13.5596 10 14.25 10C14.9404 10 15.5 10.5596 15.5 11.25C15.5 11.9404 14.9404 12.5 14.25 12.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 4H5.5C2.73858 4 0.5 6.23858 0.5 9V11C0.5 13.7614 2.73858 16 5.5 16H14.5C17.2614 16 19.5 13.7614 19.5 11V9C19.5 6.23858 17.2614 4 14.5 4ZM2.5 9C2.5 7.34315 3.84315 6 5.5 6H14.5C16.1569 6 17.5 7.34315 17.5 9V11C17.5 12.6569 16.1569 14 14.5 14H5.5C3.84315 14 2.5 12.6569 2.5 11V9Z" fill="currentColor"/>
@@ -1123,7 +1125,7 @@ const Controller$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const Countdown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Countdown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 3C9.5 2.44772 9.94772 2 10.5 2C14.9183 2 18.5 5.58172 18.5 10C18.5 14.4183 14.9183 18 10.5 18C6.08172 18 2.5 14.4183 2.5 10C2.5 9.44772 2.94772 9 3.5 9C4.05228 9 4.5 9.44772 4.5 10C4.5 13.3137 7.18629 16 10.5 16C13.8137 16 16.5 13.3137 16.5 10C16.5 6.68629 13.8137 4 10.5 4C9.94772 4 9.5 3.55228 9.5 3Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.39443 11.4472C6.64142 10.9533 6.44119 10.3526 5.94721 10.1056L3.94721 9.1056C3.45324 8.85861 2.85256 9.05883 2.60557 9.55281C2.35858 10.0468 2.55881 10.6475 3.05279 10.8945L5.05279 11.8945C5.54677 12.1414 6.14744 11.9412 6.39443 11.4472Z" fill="currentColor"/>
 <path d="M8.5 3.5C8.5 4.05228 8.05228 4.5 7.5 4.5C6.94772 4.5 6.5 4.05228 6.5 3.5C6.5 2.94772 6.94772 2.5 7.5 2.5C8.05228 2.5 8.5 2.94772 8.5 3.5Z" fill="currentColor"/>
@@ -1135,14 +1137,14 @@ const Countdown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const CreditCard$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CreditCard$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 3.5H4C2.34315 3.5 1 4.84315 1 6.5V13.5C1 15.1569 2.34315 16.5 4 16.5H16C17.6569 16.5 19 15.1569 19 13.5V6.5C19 4.84315 17.6569 3.5 16 3.5ZM3 6.5C3 5.94772 3.44772 5.5 4 5.5H16C16.5523 5.5 17 5.94772 17 6.5V13.5C17 14.0523 16.5523 14.5 16 14.5H4C3.44772 14.5 3 14.0523 3 13.5V6.5Z" fill="currentColor"/>
 <path d="M2.5 6.5H17.5C17.7761 6.5 18 6.72386 18 7V8C18 8.27614 17.7761 8.5 17.5 8.5H2.5C2.22386 8.5 2 8.27614 2 8V7C2 6.72386 2.22386 6.5 2.5 6.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 9.5H5C4.44772 9.5 4 9.94772 4 10.5V11.5C4 12.0523 4.44772 12.5 5 12.5H6C6.55228 12.5 7 12.0523 7 11.5V10.5C7 9.94772 6.55228 9.5 6 9.5ZM5 11.5V10.5H6V11.5H5Z" fill="currentColor"/>
 </svg>
 `;
 
-const Crown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Crown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.2666 9.92826L14.8997 10.1618C13.5228 11.0379 11.6981 10.6528 10.7929 9.29487L10 8.10556L9.20712 9.29487C8.30186 10.6528 6.47719 11.0379 5.10034 10.1618L4.73342 9.92826L5.54178 13H14.4582L15.2666 9.92826ZM3.65358 6.87047C2.88614 6.38209 1.91813 7.08891 2.14963 7.96862L3.80381 14.2545C3.91942 14.6938 4.31662 15 4.77089 15H15.2291C15.6834 15 16.0806 14.6938 16.1962 14.2545L17.8504 7.96862C18.0819 7.08891 17.1139 6.38209 16.3464 6.87047L13.8259 8.47443C13.367 8.76649 12.7587 8.6381 12.457 8.18547L10.832 5.74808C10.4362 5.15435 9.56377 5.15435 9.16795 5.74808L7.54302 8.18547C7.24127 8.6381 6.63304 8.76649 6.1741 8.47443L3.65358 6.87047Z" fill="currentColor"/>
 <path d="M11 3.5C11 4.05228 10.5523 4.5 10 4.5C9.44772 4.5 9 4.05228 9 3.5C9 2.94772 9.44772 2.5 10 2.5C10.5523 2.5 11 2.94772 11 3.5Z" fill="currentColor"/>
 <path d="M19 5.5C19 6.05228 18.5523 6.5 18 6.5C17.4477 6.5 17 6.05228 17 5.5C17 4.94772 17.4477 4.5 18 4.5C18.5523 4.5 19 4.94772 19 5.5Z" fill="currentColor"/>
@@ -1151,14 +1153,14 @@ const Crown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Cup$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Cup$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 4H3.5C2.94772 4 2.5 4.44772 2.5 5C2.5 9.91828 5.56129 14 9.5 14C13.4387 14 16.5 9.91828 16.5 5C16.5 4.44772 16.0523 4 15.5 4ZM9.5 12C7.04469 12 4.90411 9.43007 4.55098 6H14.449C14.0959 9.43007 11.9553 12 9.5 12Z" fill="currentColor"/>
 <path d="M4 14.5H15C15.5523 14.5 16 14.9477 16 15.5C16 16.0523 15.5523 16.5 15 16.5H4C3.44772 16.5 3 16.0523 3 15.5C3 14.9477 3.44772 14.5 4 14.5Z" fill="currentColor"/>
 <path d="M14.0244 10.8095L14.5756 8.88698C14.8334 8.96088 15.115 9 15.4073 9C16.5144 9 17.3 8.45687 17.3 8C17.3 7.54313 16.5144 7 15.4073 7V5C17.4953 5 19.3 6.24773 19.3 8C19.3 9.75227 17.4953 11 15.4073 11C14.9297 11 14.4625 10.9351 14.0244 10.8095Z" fill="currentColor"/>
 </svg>
 `;
 
-const Cv$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Cv$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.79998 6.35002C8.35998 6.35002 8.80998 5.90002 8.80998 5.34002C8.80998 4.78002 8.35998 4.33002 7.79998 4.33002C7.23998 4.33002 6.78998 4.78002 6.78998 5.34002C6.78998 5.90002 7.23998 6.35002 7.79998 6.35002Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.83002 8.55C9.83002 7.47 8.92002 6.69 7.80002 6.69C6.68002 6.69 5.77002 7.47 5.77002 8.55V9.06C5.77002 9.15 5.81002 9.24 5.87002 9.3C5.93002 9.36 6.02002 9.4 6.11002 9.4H9.49002C9.58002 9.4 9.67002 9.36 9.73002 9.3C9.79002 9.24 9.83002 9.15 9.83002 9.06V8.55Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 11.5C5.75 11.0858 6.08579 10.75 6.5 10.75H13.5C13.9142 10.75 14.25 11.0858 14.25 11.5C14.25 11.9142 13.9142 12.25 13.5 12.25H6.5C6.08579 12.25 5.75 11.9142 5.75 11.5Z" fill="currentColor"/>
@@ -1168,28 +1170,28 @@ const Cv$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Division$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Division$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5 11C4.44772 11 4 10.5523 4 10C4 9.44772 4.44772 9 5 9H15C15.5523 9 16 9.44772 16 10C16 10.5523 15.5523 11 15 11H5Z" fill="currentColor"/>
 <circle cx="10" cy="5.5" r="1.5" fill="currentColor"/>
 <circle cx="10" cy="14.5" r="1.5" fill="currentColor"/>
 </svg>
 `;
 
-const DotsX$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const DotsX$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="5" cy="10" r="2" fill="currentColor"/>
 <circle cx="10" cy="10" r="2" fill="currentColor"/>
 <circle cx="15" cy="10" r="2" fill="currentColor"/>
 </svg>
 `;
 
-const DotsY$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const DotsY$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="10" cy="15" r="2" fill="currentColor"/>
 <circle cx="10" cy="10" r="2" fill="currentColor"/>
 <circle cx="10" cy="5" r="2" fill="currentColor"/>
 </svg>
 `;
 
-const Dress$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Dress$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_631)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99927 2.70211L9.64627 2.5941C9.28672 2.48409 8.90774 2.45252 8.53495 2.50153C7.09604 2.69069 6.08292 4.01049 6.27208 5.4494L6.46159 6.89101C6.65785 8.38388 7.93029 9.5 9.436 9.5H10.563C12.0687 9.5 13.3412 8.38388 13.5374 6.89101L13.7269 5.4494C13.7759 5.07661 13.7444 4.69765 13.6344 4.33811C13.2098 2.95027 11.7405 2.1694 10.3527 2.59398L9.99927 2.70211ZM8.79562 4.48447C8.88468 4.47276 8.97522 4.48031 9.06112 4.50659L9.99924 4.79362L10.9378 4.50648C11.2694 4.40504 11.6204 4.59161 11.7219 4.9232C11.7482 5.00911 11.7557 5.09965 11.744 5.18872L11.5545 6.63033C11.4891 7.12796 11.0649 7.5 10.563 7.5H9.436C8.9341 7.5 8.50995 7.12796 8.44453 6.63033L8.25502 5.18872C8.20983 4.84496 8.45187 4.52966 8.79562 4.48447Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9944 8L7.76658 8C7.22684 8 6.69709 8.14562 6.23318 8.42149C4.53499 9.43138 3.28005 10.5679 2.46835 11.8311C2.20882 12.235 1.94566 12.6035 1.69984 12.9477C0.629095 14.4468 -0.112873 15.4856 1.20518 16.9893C2.82583 18.8381 6.25948 20 9.62895 20C12.9984 20 16.355 19.3152 18.5339 16.9893C20.1469 15.2674 19.4765 14.4997 18.4337 13.3053C18.0679 12.8863 17.6561 12.4148 17.2811 11.8311C16.4381 10.5193 15.1772 9.37695 13.4983 8.40423C13.0413 8.13944 12.5225 8 11.9944 8ZM15.5985 12.9123C15.791 13.2119 15.9976 13.4982 16.2256 13.7871C16.2732 13.8474 16.4181 14.0186 16.5949 14.2274C16.8774 14.5611 17.2411 14.9907 17.4184 15.2167C17.3498 15.31 17.2393 15.4458 17.0743 15.622C15.557 17.2417 13.041 18 9.62895 18C6.72121 18 3.87183 16.9973 2.70916 15.6709C2.51428 15.4486 2.49949 15.4439 2.49975 15.4404C2.49978 15.44 2.50002 15.4396 2.50019 15.4389C2.52953 15.3206 2.64581 15.0964 2.89442 14.7271C2.92791 14.6773 3.04237 14.5151 3.18785 14.309C3.45827 13.9257 3.83589 13.3906 3.99994 13.1434C4.05145 13.0658 4.10169 12.9889 4.15093 12.9123C4.78162 11.9308 5.8079 11.0013 7.25545 10.1405C7.41007 10.0485 7.58667 10 7.76658 10L11.9944 10C12.1704 10 12.3434 10.0465 12.4957 10.1347C13.9132 10.9561 14.9381 11.8845 15.5985 12.9123Z" fill="currentColor"/>
@@ -1203,18 +1205,18 @@ const Dress$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Duplicate$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Duplicate$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 6.5H7.5C6.94772 6.5 6.5 6.94772 6.5 7.5V15.5C6.5 16.0523 6.94772 16.5 7.5 16.5H15.5C16.0523 16.5 16.5 16.0523 16.5 15.5V7.5C16.5 6.94772 16.0523 6.5 15.5 6.5ZM8.5 14.5V8.5H14.5V14.5H8.5Z" fill="currentColor"/>
 <path d="M6.5 13.5H4.5C3.94772 13.5 3.5 13.0523 3.5 12.5V4.5C3.5 3.94772 3.94772 3.5 4.5 3.5H12.5C13.0523 3.5 13.5 3.94772 13.5 4.5V6.5H11.5V5.5H5.5V11.5H6.5V13.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const Electricity$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Electricity$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15 8H11.9451L13.9191 3.39392C14.2019 2.73405 13.7179 2 13 2H8C7.59997 2 7.23843 2.2384 7.08086 2.60608L4.08086 9.60608C3.79805 10.2659 4.28208 11 5 11H6.73423L4.07207 17.6273C3.67234 18.6223 4.90667 19.4633 5.68646 18.7272L10.7099 13.9849L15.6501 9.75985C16.3559 9.156 15.9289 8 15 8ZM9.50943 8.60608C9.22663 9.26595 9.71066 10 10.4286 10H12.2929L9.37334 12.4979L7.62514 14.1477L9.14152 10.3727C9.40546 9.71569 8.92168 9 8.21359 9H6.51654L8.6594 4H11.4835L9.50943 8.60608Z" fill="currentColor"/>
 </svg>
 `;
 
-const Enter$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Enter$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.86658 8L10.9499 10.5L8.86658 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.86658 13L10.9499 10.5L8.86658 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M9.69995 10.5L3.19995 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -1226,25 +1228,25 @@ const Enter$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Exclamation$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Exclamation$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 2C11.1046 2 12 2.89543 12 4V11C12 12.1046 11.1046 13 10 13C8.89543 13 8 12.1046 8 11V4C8 2.89543 8.89543 2 10 2Z" fill="currentColor"/>
 <path d="M12 16C12 17.1046 11.1046 18 10 18C8.89543 18 8 17.1046 8 16C8 14.8954 8.89543 14 10 14C11.1046 14 12 14.8954 12 16Z" fill="currentColor"/>
 </svg>
 `;
 
-const ExclamationCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ExclamationCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9 7C9 6.44772 9.44772 6 10 6C10.5523 6 11 6.44772 11 7V11C11 11.5523 10.5523 12 10 12C9.44772 12 9 11.5523 9 11V7Z" fill="currentColor"/>
 <circle cx="10" cy="14" r="1" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10ZM16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10Z" fill="currentColor"/>
 </svg>
 `;
 
-const ExclamationFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ExclamationFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18ZM10 6C9.44772 6 9 6.44772 9 7V11C9 11.5523 9.44772 12 10 12C10.5523 12 11 11.5523 11 11V7C11 6.44772 10.5523 6 10 6ZM10 15C10.5523 15 11 14.5523 11 14C11 13.4477 10.5523 13 10 13C9.44772 13 9 13.4477 9 14C9 14.5523 9.44772 15 10 15Z" fill="currentColor"/>
 </svg>
 `;
 
-const Expand$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Expand$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L8.29289 10.2929C8.68342 9.90237 9.31658 9.90237 9.70711 10.2929C10.0976 10.6834 10.0976 11.3166 9.70711 11.7071L5.70711 15.7071Z" fill="currentColor"/>
 <path d="M5 16C4.44772 16 4 15.5523 4 15C4 14.4477 4.44772 14 5 14H9C9.55228 14 10 14.4477 10 15C10 15.5523 9.55228 16 9 16H5Z" fill="currentColor"/>
 <path d="M6 15C6 15.5523 5.55228 16 5 16C4.44772 16 4 15.5523 4 15V11C4 10.4477 4.44772 10 5 10C5.55228 10 6 10.4477 6 11V15Z" fill="currentColor"/>
@@ -1254,7 +1256,7 @@ const Expand$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Eye$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Eye$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 16.5C14.8972 16.5 19 14.1922 19 11C19 7.80784 14.8972 5.5 10 5.5C5.10282 5.5 1 7.80784 1 11C1 14.1922 5.10282 16.5 10 16.5ZM10 7.5C13.9394 7.5 17 9.2216 17 11C17 12.7784 13.9394 14.5 10 14.5C6.06062 14.5 3 12.7784 3 11C3 9.2216 6.06062 7.5 10 7.5Z" fill="currentColor"/>
 <path d="M9 3.5C9 2.94772 9.44772 2.5 10 2.5C10.5523 2.5 11 2.94772 11 3.5L11 6.5C11 7.05228 10.5523 7.5 10 7.5C9.44772 7.5 9 7.05228 9 6.5L9 3.5Z" fill="currentColor"/>
 <path d="M13.0194 3.80383C13.1277 3.26227 13.6546 2.91106 14.1961 3.01937C14.7377 3.12768 15.0889 3.65451 14.9806 4.19606L14.4806 6.69606C14.3723 7.23762 13.8455 7.58884 13.3039 7.48053C12.7623 7.37222 12.4111 6.84539 12.5194 6.30383L13.0194 3.80383Z" fill="currentColor"/>
@@ -1265,7 +1267,7 @@ const Eye$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const EyeClosed$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const EyeClosed$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.68788 8.3059C1.36566 7.85735 1.46807 7.23252 1.91662 6.9103C2.36517 6.58809 2.99 6.6905 3.31221 7.13905C3.61607 7.56204 4.08478 7.96552 4.6918 8.31591C5.98518 9.0625 7.7771 9.5 9.7043 9.5C11.6315 9.5 13.4234 9.0625 14.7168 8.31591C15.3238 7.96552 15.7925 7.56204 16.0964 7.13905C16.4186 6.6905 17.0434 6.58809 17.492 6.9103C17.9405 7.23252 18.0429 7.85735 17.7207 8.3059C17.2402 8.97475 16.5568 9.56308 15.7167 10.048C14.1049 10.9784 11.9685 11.5 9.7043 11.5C7.44007 11.5 5.30367 10.9784 3.69195 10.048C2.85179 9.56308 2.16836 8.97475 1.68788 8.3059Z" fill="currentColor"/>
 <path d="M11 11C11 10.4477 10.5523 10 10 10C9.44772 10 9 10.4477 9 11L9 13.5C9 14.0523 9.44772 14.5 10 14.5C10.5523 14.5 11 14.0523 11 13.5L11 11Z" fill="currentColor"/>
 <path d="M5.52987 10.7575C5.66381 10.2217 6.20675 9.8959 6.74254 10.0298C7.27834 10.1638 7.6041 10.7067 7.47015 11.2425L6.97015 13.2425C6.8362 13.7783 6.29327 14.1041 5.75747 13.9701C5.22168 13.8362 4.89592 13.2933 5.02987 12.7575L5.52987 10.7575Z" fill="currentColor"/>
@@ -1275,7 +1277,7 @@ const EyeClosed$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const EyeFrame$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const EyeFrame$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.07095 12.0821C7.76993 12.4753 8.8029 12.75 9.99837 12.75C11.1938 12.75 12.2268 12.4753 12.9258 12.0821C13.6561 11.6713 13.8317 11.2603 13.8317 11.0312C13.8317 10.8022 13.6561 10.3912 12.9258 9.98038C12.2268 9.5872 11.1938 9.3125 9.99837 9.3125C8.8029 9.3125 7.76993 9.5872 7.07095 9.98038C6.34063 10.3912 6.16504 10.8022 6.16504 11.0312C6.16504 11.2603 6.34063 11.6713 7.07095 12.0821ZM6.09043 13.8253C5.07143 13.2521 4.16504 12.3037 4.16504 11.0312C4.16504 9.75876 5.07143 8.81041 6.09043 8.23723C7.14077 7.64641 8.52447 7.3125 9.99837 7.3125C11.4723 7.3125 12.856 7.64641 13.9063 8.23723C14.9253 8.81041 15.8317 9.75876 15.8317 11.0312C15.8317 12.3037 14.9253 13.2521 13.9063 13.8253C12.856 14.4161 11.4723 14.75 9.99837 14.75C8.52447 14.75 7.14077 14.4161 6.09043 13.8253Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.99841 5.5C10.5507 5.5 10.9984 5.94772 10.9984 6.5L10.9984 8.3125C10.9984 8.86478 10.5507 9.3125 9.99841 9.3125C9.44613 9.3125 8.99841 8.86478 8.99841 8.3125L8.99841 6.5C8.99841 5.94772 9.44613 5.5 9.99841 5.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.6112 5.82149C13.1527 5.9298 13.504 6.45663 13.3956 6.99819L13.0936 8.50861C12.9853 9.05017 12.4584 9.40138 11.9169 9.29307C11.3753 9.18476 11.0241 8.65793 11.1324 8.11637L11.4345 6.60596C11.5428 6.0644 12.0696 5.71318 12.6112 5.82149Z" fill="currentColor"/>
@@ -1287,7 +1289,7 @@ const EyeFrame$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const EyeOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const EyeOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 16.5C14.8972 16.5 19 14.1922 19 11C19 7.80784 14.8972 5.5 10 5.5C5.10282 5.5 1 7.80784 1 11C1 14.1922 5.10282 16.5 10 16.5ZM10 7.5C13.9394 7.5 17 9.2216 17 11C17 12.7784 13.9394 14.5 10 14.5C6.06062 14.5 3 12.7784 3 11C3 9.2216 6.06062 7.5 10 7.5Z" fill="currentColor"/>
 <path d="M9 3.5C9 2.94772 9.44772 2.5 10 2.5C10.5523 2.5 11 2.94772 11 3.5L11 6.5C11 7.05228 10.5523 7.5 10 7.5C9.44772 7.5 9 7.05228 9 6.5L9 3.5Z" fill="currentColor"/>
 <path d="M13.0194 3.80383C13.1277 3.26227 13.6546 2.91106 14.1961 3.01937C14.7377 3.12768 15.0889 3.65451 14.9806 4.19606L14.4806 6.69606C14.3723 7.23762 13.8455 7.58884 13.3039 7.48053C12.7623 7.37222 12.4111 6.84539 12.5194 6.30383L13.0194 3.80383Z" fill="currentColor"/>
@@ -1299,7 +1301,7 @@ const EyeOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const FastForward$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FastForward$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3632 9.31771C11.7218 9.70192 11.7218 10.2981 11.3632 10.6823L6.73105 15.6453C6.11176 16.3088 5 15.8706 5 14.963L5 5.03705C5 4.12943 6.11176 3.69121 6.73105 4.35473L11.3632 9.31771Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.26422 10L7 7.57407L7 12.426L9.26422 10ZM11.3632 10.6823C11.7218 10.2981 11.7218 9.70192 11.3632 9.31771L6.73105 4.35473C6.11176 3.69121 5 4.12943 5 5.03705L5 14.963C5 15.8706 6.11176 16.3088 6.73105 15.6453L11.3632 10.6823Z" fill="currentColor"/>
 <path d="M16.3632 9.31771C16.7218 9.70192 16.7218 10.2981 16.3632 10.6823L11.731 15.6453C11.1118 16.3088 10 15.8706 10 14.963V5.03705C10 4.12943 11.1118 3.69121 11.7311 4.35473L16.3632 9.31771Z" fill="currentColor"/>
@@ -1307,7 +1309,7 @@ const FastForward$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const File$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const File$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 11.5C5.75 11.0858 6.08579 10.75 6.5 10.75H13.5C13.9142 10.75 14.25 11.0858 14.25 11.5C14.25 11.9142 13.9142 12.25 13.5 12.25H6.5C6.08579 12.25 5.75 11.9142 5.75 11.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.75 14.5C5.75 14.0858 6.08579 13.75 6.5 13.75H13.5C13.9142 13.75 14.25 14.0858 14.25 14.5C14.25 14.9142 13.9142 15.25 13.5 15.25H6.5C6.08579 15.25 5.75 14.9142 5.75 14.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 2.5C2.5 1.39772 3.39772 0.5 4.5 0.5H11.19C11.7518 0.5 12.2816 0.738166 12.655 1.13125L12.6611 1.13764L16.973 5.83972C17.332 6.22336 17.5 6.72441 17.5 7.2V17.5C17.5 18.6023 16.6023 19.5 15.5 19.5H4.5C3.39772 19.5 2.5 18.6023 2.5 17.5V2.5ZM11.189 2.5H4.5V17.5H15.5V7.2C15.5 7.19748 15.4998 7.19465 15.4993 7.19185L11.2036 2.50742C11.203 2.5069 11.2022 2.50628 11.2012 2.5056C11.1991 2.50415 11.1968 2.50283 11.1944 2.50178C11.1915 2.50054 11.1896 2.50012 11.189 2.5Z" fill="currentColor"/>
@@ -1315,7 +1317,7 @@ const File$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const FileLoop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FileLoop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_1995)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.00012 4C5.00012 2.61929 6.11941 1.5 7.50012 1.5H12.6001C12.8627 1.5 13.1147 1.60327 13.3018 1.78752L17.7018 6.12085C17.8927 6.30881 18.0001 6.56547 18.0001 6.83333V14C18.0001 15.3807 16.8808 16.5 15.5001 16.5H9.00012C8.44784 16.5 8.00012 16.0523 8.00012 15.5C8.00012 14.9477 8.44784 14.5 9.00012 14.5H15.5001C15.7763 14.5 16.0001 14.2761 16.0001 14V7.83333H13.6001C12.4956 7.83333 11.6001 6.9379 11.6001 5.83333V3.5H7.50012C7.22398 3.5 7.00012 3.72386 7.00012 4V5.5C7.00012 6.05228 6.55241 6.5 6.00012 6.5C5.44784 6.5 5.00012 6.05228 5.00012 5.5V4ZM13.6001 4.88839L14.5596 5.83333H13.6001V4.88839Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.04893 8.67825C6.97953 8.10989 5.65186 8.51607 5.0835 9.58547C4.51514 10.6549 4.92131 11.9825 5.99071 12.5509C7.06012 13.1193 8.38779 12.7131 8.95614 11.6437C9.5245 10.5743 9.11833 9.24661 8.04893 8.67825ZM3.31743 8.64685C4.40418 6.60207 6.94277 5.82544 8.98755 6.91218C11.0323 7.99893 11.809 10.5375 10.7222 12.5823C9.7972 14.3228 7.82033 15.1445 5.99144 14.6803L4.3146 17.8354C4.05541 18.3231 3.44994 18.5083 2.96226 18.2491C2.47457 17.9899 2.28934 17.3845 2.54853 16.8968L4.22537 13.7417C2.81743 12.4855 2.39242 10.3873 3.31743 8.64685Z" fill="currentColor"/>
@@ -1324,12 +1326,12 @@ const FileLoop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const FilmFrame$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FilmFrame$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 2.5C0.947715 2.5 0.5 2.94772 0.5 3.5V16.5C0.5 17.0523 0.947715 17.5 1.5 17.5H18.5C19.0523 17.5 19.5 17.0523 19.5 16.5V3.5C19.5 2.94772 19.0523 2.5 18.5 2.5H1.5ZM15.5 4.5H16.5C16.7761 4.5 17 4.72386 17 5V6C17 6.27614 16.7761 6.5 16.5 6.5H15.5C15.2239 6.5 15 6.27614 15 6V5C15 4.72386 15.2239 4.5 15.5 4.5ZM16.5 7.5H15.5C15.2239 7.5 15 7.72386 15 8V9C15 9.27614 15.2239 9.5 15.5 9.5H16.5C16.7761 9.5 17 9.27614 17 9V8C17 7.72386 16.7761 7.5 16.5 7.5ZM15.5 10.5H16.5C16.7761 10.5 17 10.7239 17 11V12C17 12.2761 16.7761 12.5 16.5 12.5H15.5C15.2239 12.5 15 12.2761 15 12V11C15 10.7239 15.2239 10.5 15.5 10.5ZM16.5 13.5H15.5C15.2239 13.5 15 13.7239 15 14V15C15 15.2761 15.2239 15.5 15.5 15.5H16.5C16.7761 15.5 17 15.2761 17 15V14C17 13.7239 16.7761 13.5 16.5 13.5ZM3.5 4.5H4.5C4.77614 4.5 5 4.72386 5 5V6C5 6.27614 4.77614 6.5 4.5 6.5H3.5C3.22386 6.5 3 6.27614 3 6V5C3 4.72386 3.22386 4.5 3.5 4.5ZM4.5 7.5H3.5C3.22386 7.5 3 7.72386 3 8V9C3 9.27614 3.22386 9.5 3.5 9.5H4.5C4.77614 9.5 5 9.27614 5 9V8C5 7.72386 4.77614 7.5 4.5 7.5ZM3.5 10.5H4.5C4.77614 10.5 5 10.7239 5 11V12C5 12.2761 4.77614 12.5 4.5 12.5H3.5C3.22386 12.5 3 12.2761 3 12V11C3 10.7239 3.22386 10.5 3.5 10.5ZM4.5 13.5H3.5C3.22386 13.5 3 13.7239 3 14V15C3 15.2761 3.22386 15.5 3.5 15.5H4.5C4.77614 15.5 5 15.2761 5 15V14C5 13.7239 4.77614 13.5 4.5 13.5ZM6.5 15.5V4.5H13.5V15.5H6.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const Fire$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Fire$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.95969 13.1C7.45675 13.1 7.85969 13.5029 7.85969 14C7.85969 15.182 8.81794 16.1403 10 16.1403C11.1821 16.1403 12.1403 15.182 12.1403 14C12.1403 13.5029 12.5433 13.1 13.0403 13.1C13.5374 13.1 13.9403 13.5029 13.9403 14C13.9403 16.1761 12.1762 17.9403 10 17.9403C7.82383 17.9403 6.05969 16.1761 6.05969 14C6.05969 13.5029 6.46264 13.1 6.95969 13.1Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0425 9.69343C10.2838 9.25893 10.8318 9.10238 11.2663 9.34377C12.748 10.1669 13.431 11.3437 13.7286 12.3214C13.8751 12.8029 13.9276 13.2318 13.9435 13.544C13.9515 13.7008 13.9503 13.8302 13.9467 13.9247C13.9449 13.9721 13.9425 14.0109 13.9402 14.0402C13.9391 14.0549 13.938 14.0673 13.9371 14.0772L13.9358 14.0901L13.9353 14.0952L13.935 14.0974L13.9349 14.0984C13.9349 14.0989 13.9348 14.0994 13.0403 14L13.9348 14.0994C13.8799 14.5934 13.435 14.9494 12.9409 14.8945C12.4493 14.8399 12.0943 14.3988 12.1451 13.9076C12.145 13.9084 12.145 13.9086 12.145 13.9085M12.1451 13.9076C12.1452 13.9067 12.1453 13.9053 12.1454 13.9032C12.146 13.8954 12.1471 13.8795 12.148 13.8561C12.1498 13.8092 12.1508 13.7335 12.1458 13.6354C12.1358 13.438 12.1019 13.1587 12.0066 12.8455C11.8205 12.234 11.3979 11.476 10.3921 10.9173C9.95761 10.6759 9.80106 10.1279 10.0425 9.69343" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.84936 10.2165C8.5047 9.8583 7.93496 9.84736 7.5768 10.192C6.69733 11.0384 6.31831 12.0064 6.16035 12.7531C6.08149 13.1258 6.05649 13.4481 6.05153 13.6819C6.04905 13.7993 6.05158 13.8956 6.05515 13.9663C6.05694 14.0018 6.05899 14.0309 6.06082 14.0533L6.06334 14.0816L6.06437 14.0918L6.06481 14.096L6.065 14.0978L6.06509 14.0986C6.06514 14.099 6.06518 14.0994 6.93883 14.0023L6.06518 14.0994C6.12007 14.5934 6.56505 14.9494 7.05907 14.8945C7.55075 14.8399 7.9057 14.3988 7.85492 13.9076M7.8548 13.9062C7.85485 13.9068 7.85489 13.9072 7.85492 13.9076C7.85495 13.908 7.85498 13.9082 7.85499 13.9084C7.85501 13.9086 7.85501 13.9086 7.85497 13.9081L7.8548 13.9062ZM7.85434 13.9021L7.85448 13.9034L7.85471 13.9056L7.8548 13.9062C7.85445 13.9018 7.85367 13.8915 7.85287 13.8757C7.85127 13.844 7.84963 13.7908 7.85113 13.72C7.85414 13.5778 7.86974 13.3697 7.92137 13.1256C8.02439 12.6386 8.26596 12.0269 8.82493 11.489C9.18309 11.1443 9.19402 10.5746 8.84936 10.2165M7.85426 13.9014C7.85426 13.9014 7.85426 13.9014 7.85426 13.9014L7.85429 13.9016C7.85428 13.9016 7.85427 13.9015 7.85426 13.9014Z" fill="currentColor"/>
@@ -1345,19 +1347,19 @@ const Fire$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Flag$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Flag$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.80448 2.63235L6.16667 2.89616C4.85526 3.43858 4 4.71786 4 6.13702V10.5225C4 10.7701 4.06299 11.0136 4.18304 11.2301C4.57382 11.9348 5.46192 12.1894 6.16667 11.7986L6.39359 11.6727C7.60021 11.0037 9.06646 11.0037 10.2731 11.6727L10.7269 11.9244C11.9335 12.5935 13.3998 12.5935 14.6064 11.9244L15.3405 11.5173C16.3646 10.9495 17 9.87065 17 8.69964V4.63805C17 4.47989 16.9766 4.3226 16.9306 4.17129C16.6728 3.32398 15.7769 2.84607 14.9296 3.10386L14.0366 3.37555C13.1508 3.64503 12.199 3.5989 11.3435 3.24503L9.86219 2.63235C8.88317 2.22741 7.78349 2.22741 6.80448 2.63235ZM11.6968 10.1753L11.243 9.92365C9.6212 9.02438 7.68677 8.93089 6 9.64316V6.13702C6 5.52716 6.36754 4.9774 6.93109 4.74431L7.56891 4.4805C8.05841 4.27803 8.60825 4.27803 9.09776 4.4805L10.579 5.09318C11.8624 5.62399 13.2901 5.69318 14.6187 5.28896L15 5.17296V8.69964C15 9.14374 14.759 9.55287 14.3707 9.76823L13.6365 10.1753C13.0332 10.5098 12.3001 10.5098 11.6968 10.1753Z" fill="currentColor"/>
 <rect x="4" y="2" width="2" height="16" rx="1" fill="currentColor"/>
 </svg>
 `;
 
-const FlagStraight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FlagStraight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 4V10H14.6587L13.4619 8.29029C12.9196 7.51557 12.9196 6.48443 13.4619 5.70971L14.6587 4H4.5ZM3.5 2C2.94772 2 2.5 2.44772 2.5 3V11C2.5 11.5523 2.94772 12 3.5 12H16.5793C17.3884 12 17.8625 11.0893 17.3986 10.4265L15.1004 7.14337C15.0401 7.05729 15.0401 6.94271 15.1004 6.85663L17.3986 3.57346C17.8625 2.91068 17.3884 2 16.5793 2H3.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 3C4.05228 3 4.5 3.44772 4.5 4L4.5 17C4.5 17.5523 4.05228 18 3.5 18C2.94772 18 2.5 17.5523 2.5 17L2.5 4C2.5 3.44772 2.94772 3 3.5 3Z" fill="currentColor"/>
 </svg>
 `;
 
-const Flower$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Flower$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1397)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5883 2.36575L12.5166 2.44429C12.4102 2.5604 12.3177 2.65963 12.2363 2.7445C12.1783 2.6674 12.131 2.60442 12.1069 2.57222C12.0962 2.55804 12.0901 2.54982 12.0895 2.54901C11.781 2.14919 11.521 1.85543 11.2421 1.61995C10.8599 1.29718 10.4625 1.10176 10 1.10176C9.75073 1.10176 9.51343 1.16296 9.29033 1.27123C8.80211 1.50815 8.44017 1.90299 7.95721 2.57792C7.93063 2.61506 7.88552 2.67912 7.83669 2.74871C7.74548 2.6579 7.64046 2.55003 7.51765 2.42149L7.44953 2.35008C6.89581 1.76866 6.74857 1.6202 6.50141 1.4188C6.26666 1.22751 6.05621 1.09922 5.79569 1.03537C5.22149 0.894639 4.64828 1.18504 4.43938 1.76057C4.1503 2.55696 4 3.41174 4 4.28812C4 8.2285 6.21172 11 10 11C13.7883 11 16 8.2285 16 4.28812C16 3.41174 15.8497 2.55696 15.5606 1.76057C15.3529 1.18826 14.7801 0.89035 14.2009 1.03736C13.938 1.10408 13.7302 1.23584 13.4994 1.43184C13.2609 1.63445 13.1249 1.77767 12.5883 2.36575ZM10 9.00002C7.42805 9.00002 6 7.21053 6 4.28812C6 4.10858 6.00853 3.93059 6.02539 3.75471L6.07157 3.80311C6.48039 4.23101 6.73147 4.4747 6.99228 4.67463C7.63975 5.17099 8.29621 5.36404 8.89641 4.67838C9.00414 4.55531 9.10967 4.4156 9.25158 4.21495C9.26057 4.20223 9.28945 4.16095 9.32704 4.10719C9.41015 3.98837 9.53586 3.80861 9.58368 3.74178C9.75942 3.4962 9.90624 3.31505 10.0126 3.20218C10.1467 3.32743 10.3081 3.51428 10.5059 3.77068C10.4612 3.71264 11.0562 4.50836 11.2051 4.67838C11.8078 5.36697 12.4722 5.16831 13.1048 4.66706C13.3559 4.46807 13.5972 4.22516 13.9795 3.80818C13.9931 3.96663 14 4.12675 14 4.28812C14 7.21053 12.572 9.00002 10 9.00002Z" fill="currentColor"/>
 <path d="M9 11C9 10.4477 9.44772 10 10 10C10.5523 10 11 10.4477 11 11V17.5C11 18.0523 10.5523 18.5 10 18.5C9.44772 18.5 9 18.0523 9 17.5V11Z" fill="currentColor"/>
@@ -1368,18 +1370,18 @@ const Flower$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const FlowerBud$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FlowerBud$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4899 13.7135C17.9689 13.1201 19 11.6725 19 10C19 8.32751 17.9689 6.87985 16.4899 6.28652C16.4966 6.19151 16.5 6.09596 16.5 6C16.5 3.79086 14.7091 2 12.5 2C11.5711 2 10.6958 2.31953 10 2.87701C9.30417 2.31953 8.42887 2 7.5 2C5.29086 2 3.5 3.79086 3.5 6C3.5 6.09596 3.5034 6.19151 3.51015 6.28652C2.03108 6.87985 1 8.32751 1 10C1 11.6725 2.03108 13.1201 3.51015 13.7135C3.5034 13.8085 3.5 13.904 3.5 14C3.5 16.2091 5.29086 18 7.5 18C8.42887 18 9.30417 17.6805 10 17.123C10.6958 17.6805 11.5711 18 12.5 18C14.7091 18 16.5 16.2091 16.5 14C16.5 13.904 16.4966 13.8085 16.4899 13.7135ZM14.3824 6.67818C14.1626 7.28797 14.5722 7.94249 15.2167 8.01152C16.2258 8.1196 17 8.97583 17 10C17 11.0242 16.2258 11.8804 15.2167 11.9885C14.5722 12.0575 14.1626 12.712 14.3824 13.3218C14.4599 13.5369 14.5 13.765 14.5 14C14.5 15.1046 13.6046 16 12.5 16C11.8214 16 11.2019 15.6605 10.8327 15.1052C10.4371 14.5101 9.56294 14.5101 9.16727 15.1052C8.79807 15.6605 8.17862 16 7.5 16C6.39543 16 5.5 15.1046 5.5 14C5.5 13.765 5.54013 13.5369 5.61762 13.3218C5.83737 12.712 5.42783 12.0575 4.78334 11.9885C3.77418 11.8804 3 11.0242 3 10C3 8.97583 3.77418 8.1196 4.78334 8.01152C5.42783 7.94249 5.83737 7.28797 5.61762 6.67818C5.54013 6.46315 5.5 6.23504 5.5 6C5.5 4.89543 6.39543 4 7.5 4C8.17862 4 8.79807 4.3395 9.16727 4.89478C9.56294 5.48988 10.4371 5.48988 10.8327 4.89478C11.2019 4.3395 11.8214 4 12.5 4C13.6046 4 14.5 4.89543 14.5 6C14.5 6.23504 14.4599 6.46315 14.3824 6.67818Z" fill="currentColor"/>
 <path d="M13.5 10C13.5 11.933 11.933 13.5 10 13.5C8.067 13.5 6.5 11.933 6.5 10C6.5 8.067 8.067 6.5 10 6.5C11.933 6.5 13.5 8.067 13.5 10Z" fill="currentColor"/>
 </svg>
 `;
 
-const Folder$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Folder$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5 5H10.5089L9.94408 4.01158C9.40996 3.07686 8.41593 2.5 7.33935 2.5H4.5C2.84315 2.5 1.5 3.84315 1.5 5.5V15C1.5 16.6569 2.84315 18 4.5 18H15.5C17.1569 18 18.5 16.6569 18.5 15V8C18.5 6.34315 17.1569 5 15.5 5ZM4.5 16C3.94772 16 3.5 15.5523 3.5 15V5.5C3.5 4.94772 3.94772 4.5 4.5 4.5H7.33935C7.69821 4.5 8.02956 4.69229 8.2076 5.00386L9.06033 6.49614C9.23837 6.80771 9.56971 7 9.92857 7H15.5C16.0523 7 16.5 7.44772 16.5 8V15C16.5 15.5523 16.0523 16 15.5 16H4.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const FoldingStool$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FoldingStool$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 11C3.5 10.1716 4.17157 9.5 5 9.5H15C15.8284 9.5 16.5 10.1716 16.5 11C16.5 11.8284 15.8284 12.5 15 12.5H5C4.17157 12.5 3.5 11.8284 3.5 11Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 1C6.55228 1 7 1.44772 7 2V7C7 7.55228 6.55228 8 6 8C5.44772 8 5 7.55228 5 7V2C5 1.44772 5.44772 1 6 1Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6C6.55228 6 7 6.44772 7 7V9.5C7 10.0523 6.55228 10.5 6 10.5C5.44772 10.5 5 10.0523 5 9.5V7C5 6.44772 5.44772 6 6 6Z" fill="currentColor"/>
@@ -1394,7 +1396,7 @@ const FoldingStool$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="no
 </svg>
 `;
 
-const Gear$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Gear$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 12C11.1046 12 12 11.1046 12 10C12 8.89543 11.1046 8 10 8C8.89543 8 8 8.89543 8 10C8 11.1046 8.89543 12 10 12ZM10 14C12.2091 14 14 12.2091 14 10C14 7.79086 12.2091 6 10 6C7.79086 6 6 7.79086 6 10C6 12.2091 7.79086 14 10 14Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.5043 2.71039C14.2743 2.3254 15.2042 2.47631 15.8129 3.08503L16.915 4.18705C17.5237 4.79577 17.6746 5.72571 17.2896 6.49569L16.9048 7.26523C16.6578 7.75921 16.0572 7.95944 15.5632 7.71245C15.0692 7.46546 14.869 6.86478 15.116 6.37081L15.5007 5.60126L14.3987 4.49925L13.6292 4.88402C13.1352 5.13101 12.5345 4.93078 12.2875 4.43681C12.0405 3.94283 12.2408 3.34215 12.7347 3.09516L13.5043 2.71039Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6439 5.88763C16.1577 5.68521 16.7384 5.93767 16.9408 6.45153L17.4004 7.61832C17.6029 8.13217 17.3504 8.71283 16.8366 8.91525C16.3227 9.11767 15.742 8.86521 15.5396 8.35136L15.08 7.18456C14.8776 6.67071 15.13 6.09006 15.6439 5.88763Z" fill="currentColor"/>
@@ -1415,7 +1417,7 @@ const Gear$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const GearFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const GearFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.5577 2.25C10.8545 2.25 11.1234 2.42509 11.2435 2.69656L11.6859 3.69656C11.9053 4.1924 11.5423 4.75 11.0001 4.75L9.00006 4.75C8.477 4.75 8.11458 4.22806 8.29733 3.73796L8.67022 2.73796C8.77963 2.44455 9.05981 2.25 9.37295 2.25H10.5577Z" fill="currentColor"/>
 <path d="M9.44259 17.75C9.14574 17.75 8.87682 17.5749 8.75672 17.3034L8.31431 16.3034C8.09494 15.8076 8.45799 15.25 9.00018 15.25H11.0002C11.5232 15.25 11.8857 15.7719 11.7029 16.262L11.33 17.262C11.2206 17.5554 10.9404 17.75 10.6273 17.75H9.44259Z" fill="currentColor"/>
 <path d="M17.7501 10.5575C17.7501 10.8544 17.575 11.1233 17.3036 11.2434L16.3036 11.6858C15.8077 11.9052 15.2501 11.5421 15.2501 10.9999V8.99994C15.2501 8.47688 15.7721 8.11445 16.2622 8.29721L17.2622 8.6701C17.5556 8.77951 17.7501 9.05969 17.7501 9.37283V10.5575Z" fill="currentColor"/>
@@ -1428,7 +1430,7 @@ const GearFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Gift$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Gift$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect x="9" y="7" width="2" height="11" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3558 6.99849C11.3338 5.87341 10.5775 3.56252 9.27135 2.4271C7.99198 1.31497 6.1989 1.1107 5.22938 2.22601C4.25986 3.34132 4.71168 5.08851 5.99105 6.20065C7.4709 7.48706 9.33813 8.1692 10.3558 6.99849ZM8.8514 5.68071C8.90578 5.62028 8.96325 5.5902 8.99267 5.58096C8.96386 5.57852 8.91045 5.57208 8.8458 5.55793C8.85778 5.62324 8.85887 5.66785 8.84798 5.68427L8.8514 5.68071ZM7.30317 4.69123C7.69096 5.02833 8.19021 5.33453 8.60456 5.4859C8.69553 5.51913 8.77703 5.54289 8.8458 5.55793C8.78479 5.22531 8.44136 4.35563 7.95923 3.93652C7.41925 3.46713 6.85627 3.40299 6.7388 3.53813C6.62133 3.67326 6.76319 4.22184 7.30317 4.69123Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.88591 6.99849C8.90789 5.87341 9.66423 3.56252 10.9704 2.4271C12.2497 1.31497 14.0428 1.1107 15.0123 2.22601C15.9819 3.34132 15.53 5.08851 14.2507 6.20065C12.7708 7.48706 10.9036 8.1692 9.88591 6.99849ZM11.3903 5.68071C11.3359 5.62028 11.2785 5.5902 11.2491 5.58096C11.2779 5.57852 11.3313 5.57208 11.3959 5.55793C11.3839 5.62324 11.3829 5.66785 11.3937 5.68427L11.3903 5.68071ZM12.9386 4.69123C12.5508 5.02833 12.0515 5.33453 11.6372 5.4859C11.5462 5.51913 11.4647 5.54289 11.3959 5.55793C11.4569 5.22531 11.8004 4.35563 12.2825 3.93652C12.8225 3.46713 13.3855 3.40299 13.5029 3.53813C13.6204 3.67326 13.4785 4.22184 12.9386 4.69123Z" fill="currentColor"/>
@@ -1437,14 +1439,14 @@ const Gift$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Grab$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Grab$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M2.5 8C1.94772 8 1.5 7.55228 1.5 7C1.5 6.44772 1.94772 6 2.5 6H17.5C18.0523 6 18.5 6.44772 18.5 7C18.5 7.55228 18.0523 8 17.5 8H2.5Z" fill="currentColor"/>
 <path d="M2.5 11.25C1.94772 11.25 1.5 10.8023 1.5 10.25C1.5 9.69772 1.94772 9.25 2.5 9.25H17.5C18.0523 9.25 18.5 9.69772 18.5 10.25C18.5 10.8023 18.0523 11.25 17.5 11.25H2.5Z" fill="currentColor"/>
 <path d="M2.5 14.5C1.94772 14.5 1.5 14.0523 1.5 13.5C1.5 12.9477 1.94772 12.5 2.5 12.5H17.5C18.0523 12.5 18.5 12.9477 18.5 13.5C18.5 14.0523 18.0523 14.5 17.5 14.5H2.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const Grid$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Grid$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 5V8H8V5H5ZM4 3.5C3.72386 3.5 3.5 3.72386 3.5 4V9C3.5 9.27614 3.72386 9.5 4 9.5H9C9.27614 9.5 9.5 9.27614 9.5 9V4C9.5 3.72386 9.27614 3.5 9 3.5H4Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5V8H15V5H12ZM11 3.5C10.7239 3.5 10.5 3.72386 10.5 4V9C10.5 9.27614 10.7239 9.5 11 9.5H16C16.2761 9.5 16.5 9.27614 16.5 9V4C16.5 3.72386 16.2761 3.5 16 3.5H11Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 12V15H8V12H5ZM4 10.5C3.72386 10.5 3.5 10.7239 3.5 11V16C3.5 16.2761 3.72386 16.5 4 16.5H9C9.27614 16.5 9.5 16.2761 9.5 16V11C9.5 10.7239 9.27614 10.5 9 10.5H4Z" fill="currentColor"/>
@@ -1452,7 +1454,7 @@ const Grid$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Hamburger$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Hamburger$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3926 13.8047C17.6807 13.977 18.496 14.6978 18.496 15.9707C18.496 17.4603 17.3825 18.2975 15.5789 18.6781C14.3977 18.9273 13.0457 18.9984 10.7025 19.0035C10.5147 19.0039 10.3642 19.004 10.0282 19.004H9.99603H9.96381C9.62786 19.004 9.47739 19.0039 9.28951 19.0035C6.94638 18.9984 5.59438 18.9273 4.4132 18.6781C2.60956 18.2975 1.49603 17.4603 1.49603 15.9707C1.49603 14.6978 2.31131 13.977 3.5994 13.8047C4.34932 13.7043 4.77922 13.7271 7.01146 13.9165C8.28024 14.0242 9.10265 14.0719 9.99603 14.0719C10.8894 14.0719 11.7118 14.0242 12.9806 13.9165C15.2128 13.7271 15.6427 13.7043 16.3926 13.8047ZM10.6982 17.0035C14.762 16.9948 16.496 16.6289 16.496 15.9707C16.496 15.92 16.4979 15.8886 16.4842 15.867C16.4585 15.8264 16.378 15.8205 16.1274 15.787C15.594 15.7157 15.1646 15.7384 13.1497 15.9094C11.829 16.0214 10.9591 16.0719 9.99603 16.0719C9.03294 16.0719 8.16309 16.0214 6.84237 15.9094C4.82745 15.7384 4.39803 15.7157 3.86462 15.787C3.61407 15.8205 3.53356 15.8264 3.50786 15.867C3.49418 15.8886 3.49603 15.92 3.49603 15.9707C3.49603 16.6289 5.23006 16.9948 9.29381 17.0035C9.47977 17.0039 9.62857 17.004 9.9638 17.004L9.99603 17.004L10.0283 17.004C10.3635 17.004 10.5123 17.0039 10.6982 17.0035Z" fill="currentColor"/>
 <path d="M2.887 10.6424C2.53219 10.8562 2.07129 10.7418 1.85756 10.387C1.64382 10.0322 1.75819 9.57129 2.113 9.35756C2.78226 8.9544 3.50608 8.75 4.27059 8.75C4.79146 8.75 5.10019 8.84247 5.56693 9.0701L5.57882 9.0759C5.86725 9.21658 5.97953 9.25 6.25 9.25C6.51337 9.25 6.60676 9.22083 6.85951 9.08709L6.87097 9.08102C7.31358 8.84682 7.62078 8.75 8.14729 8.75C8.68251 8.75 8.99072 8.84947 9.43542 9.09084C9.68104 9.22415 9.7609 9.25 10 9.25C10.2388 9.25 10.3183 9.22426 10.5589 9.09345C11.0075 8.84961 11.3161 8.75 11.852 8.75C12.3817 8.75 12.6885 8.8467 13.139 9.08311L13.1443 9.08587C13.4023 9.22123 13.4939 9.25 13.75 9.25C14.0073 9.25 14.1022 9.22045 14.3653 9.08409C14.8249 8.84597 15.1316 8.75 15.6591 8.75C16.4138 8.75 17.1516 8.95039 17.8629 9.34364C18.2254 9.54405 18.3568 10.0004 18.1564 10.3629C17.9559 10.7254 17.4996 10.8568 17.1371 10.6564C16.6426 10.3829 16.1531 10.25 15.6591 10.25C15.4117 10.25 15.3206 10.2785 15.0615 10.4128L15.0554 10.4159C14.5978 10.653 14.2866 10.75 13.75 10.75C13.2122 10.75 12.9015 10.6524 12.4474 10.4141L12.4421 10.4114C12.1876 10.2778 12.0993 10.25 11.852 10.25C11.6055 10.25 11.5232 10.2766 11.2797 10.4089C10.8341 10.6512 10.5289 10.75 10 10.75C9.47095 10.75 9.16586 10.6512 8.72379 10.4113C8.47563 10.2766 8.39322 10.25 8.14729 10.25C7.90366 10.25 7.81782 10.2771 7.57252 10.4069L7.56106 10.4129C7.11071 10.6512 6.79449 10.75 6.25 10.75C5.71275 10.75 5.39638 10.6558 4.92128 10.4241L4.9094 10.4183C4.62925 10.2817 4.5235 10.25 4.27059 10.25C3.78102 10.25 3.32443 10.3789 2.887 10.6424Z" fill="currentColor"/>
 <path d="M3 11.25H17C18.3333 11.25 18.3333 13.25 17 13.25H3C1.66667 13.25 1.66667 11.25 3 11.25Z" fill="currentColor"/>
@@ -1465,24 +1467,24 @@ const Hamburger$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const HandGrab$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const HandGrab$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.37071 4.75C7.71589 4.75 7.99571 5.02982 7.99571 5.375V7V7.5C7.99571 7.91421 8.3315 8.25 8.74571 8.25C9.15992 8.25 9.49571 7.91421 9.49571 7.5V7V5.375V3.875C9.49571 3.52982 9.77553 3.25 10.1207 3.25C10.4659 3.25 10.7457 3.52982 10.7457 3.875V4.87296L10.7457 4.875V5L10.7457 5.00121V7C10.7457 7.41421 11.0815 7.75 11.4957 7.75C11.9099 7.75 12.2457 7.41421 12.2457 7L12.2457 5V4.875L12.2457 4.8739C12.2463 4.52923 12.5259 4.25 12.8707 4.25C13.2159 4.25 13.4957 4.52982 13.4957 4.875V6.5V7.5C13.4957 7.91421 13.8315 8.25 14.2457 8.25C14.6599 8.25 14.9957 7.91421 14.9957 7.5V6.5C14.9957 6.36193 15.1076 6.25 15.2457 6.25H15.6207C15.9659 6.25 16.2457 6.52982 16.2457 6.875V11.5C16.2457 11.5259 16.247 11.5515 16.2496 11.5768C16.2309 13.3334 15.5701 14.6009 14.6267 15.4394C13.6559 16.3024 12.3402 16.75 11 16.75C8.40357 16.75 6.60085 15.0421 5.14586 12.6187C5.14194 12.6121 5.13791 12.6055 5.13376 12.5989C5.12962 12.5924 5.12538 12.5859 5.12107 12.5795C4.85962 12.1871 4.52304 11.6466 4.16761 11.0603C3.59987 10.1238 4.18642 8.93556 5.24571 8.76958V10C5.24571 10.4142 5.5815 10.75 5.99571 10.75C6.40992 10.75 6.74571 10.4142 6.74571 10V5.375C6.74571 5.02982 7.02553 4.75 7.37071 4.75ZM3.86607 13.4012C3.58752 12.9825 3.24035 12.4242 2.88492 11.8379C1.69385 9.87328 3.04487 7.43579 5.24571 7.26008V5.375C5.24571 4.2014 6.1971 3.25 7.37071 3.25C7.61111 3.25 7.84219 3.28992 8.05768 3.36349C8.28664 2.43697 9.12345 1.75 10.1207 1.75C10.9533 1.75 11.674 2.22878 12.0226 2.92601C12.2824 2.81279 12.5692 2.75 12.8707 2.75C14.0085 2.75 14.9374 3.64416 14.9931 4.7681C15.0756 4.75618 15.1599 4.75 15.2457 4.75H15.6207C16.7943 4.75 17.7457 5.7014 17.7457 6.875V11.4193C17.7485 11.4458 17.75 11.4727 17.75 11.5C17.75 13.7035 16.9162 15.4113 15.6233 16.5606C14.3441 17.6976 12.6598 18.25 11 18.25C7.6048 18.25 5.41012 15.9692 3.86607 13.4012Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.44345 13.6686C3.16009 13.2421 2.81114 12.6807 2.45735 12.0971C1.15022 9.94105 2.46741 7.31244 4.74571 6.82848V5.375C4.74571 3.92525 5.92096 2.75 7.37071 2.75C7.49471 2.75 7.61688 2.75863 7.73661 2.77536C8.15256 1.875 9.06319 1.25 10.1207 1.25C10.9918 1.25 11.7632 1.67439 12.2403 2.32631C12.4426 2.27642 12.6538 2.25 12.8707 2.25C14.1051 2.25 15.1403 3.10186 15.4208 4.25H15.6207C17.0705 4.25 18.2457 5.42525 18.2457 6.875V11.396C18.2486 11.4304 18.25 11.4651 18.25 11.5C18.25 13.8391 17.3604 15.6854 15.9555 16.9343C14.5735 18.1627 12.7663 18.75 11 18.75C7.3415 18.75 5.01698 16.2821 3.44345 13.6686ZM3.86607 13.4012C3.58752 12.9825 3.24035 12.4242 2.88492 11.8379C1.69385 9.87328 3.04487 7.43579 5.24571 7.26008V5.375C5.24571 4.2014 6.1971 3.25 7.37071 3.25C7.48368 3.25 7.59458 3.25882 7.70278 3.2758C7.82484 3.29495 7.94345 3.32449 8.05767 3.36349C8.08723 3.2439 8.12691 3.12829 8.17576 3.01764C8.50534 2.27107 9.25217 1.75 10.1207 1.75C10.9533 1.75 11.674 2.22878 12.0226 2.92601C12.2824 2.81279 12.5692 2.75 12.8707 2.75C13.8709 2.75 14.7097 3.441 14.9357 4.37164C14.9668 4.49966 14.9863 4.6322 14.9931 4.7681C15.0756 4.75618 15.1599 4.75 15.2457 4.75H15.6207C16.7943 4.75 17.7457 5.7014 17.7457 6.875V11.4193C17.7485 11.4458 17.75 11.4727 17.75 11.5C17.75 13.7035 16.9162 15.4113 15.6233 16.5606C14.3441 17.6976 12.6598 18.25 11 18.25C7.6048 18.25 5.41012 15.9692 3.86607 13.4012Z" fill="currentColor"/>
 </svg>
 `;
 
-const HandOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const HandOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.9383 13.9407C3.94402 13.9523 3.94995 13.9639 3.95609 13.9753C3.96216 13.9867 3.96853 13.9981 3.97495 14.0092C4.15462 14.3238 4.32925 14.6405 4.50028 14.9508L4.50277 14.9553C4.73656 15.3795 4.96496 15.7938 5.18341 16.1593C5.57624 16.8165 6.01207 17.4506 6.58352 17.9863C7.7924 19.1196 9.3843 19.6106 11.8252 19.6106C14.1053 19.6106 15.7086 18.462 16.6877 16.8661C17.6336 15.3242 18 13.3802 18 11.6062V6.0031C18 4.67689 16.9249 3.60178 15.5987 3.60178C15.5604 3.60178 15.5222 3.60268 15.4843 3.60447V3.25873C15.4843 1.93252 14.4092 0.857418 13.083 0.857418C12.7673 0.857418 12.4652 0.918563 12.1884 1.02975C11.7615 0.639087 11.1923 0.400024 10.5674 0.400024C9.77046 0.400024 9.06483 0.788251 8.62837 1.38462C8.44336 1.33898 8.25014 1.31481 8.05168 1.31481C6.72547 1.31481 5.65037 2.38992 5.65037 3.71613V7.50938C5.02547 7.10977 4.22538 7.01101 3.49107 7.30473C2.20326 7.81986 1.63077 9.32564 2.25106 10.5662L3.93743 13.9389L3.9383 13.9407ZM8.62343 3.71613C8.62343 3.40036 8.36745 3.14439 8.05168 3.14439C7.73592 3.14439 7.47994 3.40036 7.47994 3.71613V11.5913C7.48067 11.6258 7.47877 11.6602 7.47434 11.6942C7.46208 11.79 7.43007 11.8796 7.38254 11.9588C7.29184 12.1099 7.14461 12.2232 6.9701 12.2694C6.87823 12.2939 6.78409 12.2985 6.69327 12.2849C6.60392 12.2718 6.52017 12.2415 6.4455 12.1974C6.32787 12.1279 6.23277 12.0243 6.17382 11.9003L4.85565 9.26392C4.72977 9.01216 4.43191 8.89891 4.17056 9.00345C3.87657 9.12105 3.74587 9.4648 3.88748 9.74801L5.56945 13.1119C5.77573 13.4733 5.95613 13.8012 6.12446 14.1071C6.34459 14.5071 6.54409 14.8697 6.75385 15.2206C7.11278 15.8212 7.4459 16.2869 7.83484 16.6515C8.57323 17.3438 9.63069 17.781 11.8252 17.781C13.3846 17.781 14.4351 17.0392 15.1282 15.9093C15.8414 14.7469 16.1704 13.1689 16.1704 11.6062V6.0031C16.1704 5.68733 15.9144 5.43136 15.5987 5.43136C15.2829 5.43136 15.0269 5.68733 15.0269 6.0031V7.12371V9.99184C15.0269 10.3708 14.7198 10.6779 14.3408 10.6779C13.9619 10.6779 13.6548 10.3708 13.6548 9.99184V7.12371V6.0031V3.25873C13.6548 2.94297 13.3988 2.68699 13.083 2.68699C12.7673 2.68699 12.5113 2.94297 12.5113 3.25874V8.40442V9.3192C12.5113 9.69812 12.2041 10.0053 11.8252 10.0053C11.4463 10.0053 11.1391 9.69812 11.1391 9.3192V8.40442V3.25874V2.80134C11.1391 2.48558 10.8831 2.2296 10.5674 2.2296C10.2516 2.2296 9.99561 2.48558 9.99561 2.80134V3.71613V7.94702V9.7766C9.99561 10.1555 9.68843 10.4627 9.30952 10.4627C8.9306 10.4627 8.62343 10.1555 8.62343 9.7766V7.94702V3.71613Z" fill="currentColor"/>
 </svg>
 `;
 
-const HandPoint$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const HandPoint$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.375 0.5C6.2014 0.5 5.25 1.4514 5.25 2.625V9.50974C3.04663 9.68262 1.69308 12.122 2.88492 14.0879C3.24038 14.6743 3.58758 15.2326 3.86614 15.6513C4.66966 16.9857 5.63451 17.9639 6.83659 18.6003C8.03805 19.2364 9.41813 19.5 11 19.5C12.5596 19.5 14.2355 19.2444 15.541 18.374C16.9002 17.4679 17.75 15.9685 17.75 13.75C17.75 13.7227 17.7485 13.6958 17.7457 13.6693V10.125C17.7457 8.9514 16.7943 8 15.6207 8H15.2457C15.1599 8 15.0756 8.00617 14.9931 8.01809C14.9382 6.89428 14.0096 6 12.8722 6C12.5702 6 12.283 6.06303 12.0229 6.17665C11.6744 5.47907 10.9535 5 10.1207 5C9.90477 5 9.69635 5.03221 9.5 5.09209V2.625C9.5 1.4514 8.54861 0.5 7.375 0.5ZM16.2496 13.8268C16.247 13.8015 16.2457 13.7759 16.2457 13.75V10.125C16.2457 9.77982 15.9659 9.5 15.6207 9.5H15.2457C15.1076 9.5 14.9957 9.61193 14.9957 9.75V10.25C14.9957 10.6642 14.6599 11 14.2457 11C13.8315 11 13.4957 10.6642 13.4957 10.25V9.75V8.12353C13.4957 7.77916 13.2166 7.5 12.8722 7.5C12.5273 7.5 12.2479 7.77998 12.2487 8.12486L12.25 8.74839C12.2501 8.7762 12.2486 8.80365 12.2457 8.83068V9.35C12.2457 9.76421 11.9099 10.1 11.4957 10.1C11.0815 10.1 10.7457 9.76421 10.7457 9.35V7.125C10.7457 6.77982 10.4659 6.5 10.1207 6.5C9.77554 6.5 9.49571 6.77982 9.49571 7.125V9.75C9.49571 10.1642 9.15993 10.5 8.74571 10.5C8.3315 10.5 7.99571 10.1642 7.99571 9.75V7.125C7.99571 7.04029 8.00067 6.95674 8.01031 6.87463C8.00353 6.83409 8 6.79246 8 6.75V2.625C8 2.27982 7.72018 2 7.375 2C7.02982 2 6.75 2.27982 6.75 2.625V12.25C6.75 12.6642 6.41422 13 6 13C5.58579 13 5.25 12.6642 5.25 12.25V11.0189C4.188 11.1823 3.5991 12.3726 4.16761 13.3103C4.52304 13.8966 4.85962 14.4371 5.12107 14.8295C5.12538 14.8359 5.12962 14.8424 5.13376 14.8489C5.13789 14.8555 5.14191 14.862 5.14581 14.8686C5.83978 16.0238 6.6213 16.7891 7.53842 17.2747C8.46196 17.7636 9.58188 18 11 18C12.4404 18 13.7645 17.7556 14.709 17.126C15.5869 16.5407 16.2312 15.5604 16.2496 13.8268Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.60264 19.0422C5.30781 18.3567 4.28302 17.3098 3.44364 15.9189C3.16024 15.4924 2.81122 14.9308 2.45736 14.3471C1.1494 12.1897 2.46905 9.55914 4.75 9.07757V2.625C4.75 1.17525 5.92525 0 7.375 0C8.82475 0 10 1.17525 10 2.625V4.50274C10.04 4.50092 10.0803 4.5 10.1207 4.5C10.992 4.5 11.7635 4.92454 12.2406 5.57665C12.4432 5.52654 12.6548 5.5 12.8722 5.5C14.1063 5.5 15.1412 6.35194 15.4211 7.5H15.6207C17.0705 7.5 18.2457 8.67525 18.2457 10.125V13.646C18.2486 13.6804 18.25 13.7151 18.25 13.75C18.25 16.1138 17.3339 17.7797 15.8184 18.7901C14.3926 19.7406 12.5994 20 11 20C9.36357 20 7.89676 19.7274 6.60264 19.0422ZM3.86614 15.6513C4.66965 16.9857 5.63451 17.9639 6.83659 18.6003C8.03805 19.2364 9.41812 19.5 11 19.5C12.5596 19.5 14.2355 19.2444 15.541 18.374C16.9002 17.4679 17.75 15.9685 17.75 13.75C17.75 13.7227 17.7485 13.6958 17.7457 13.6693V10.125C17.7457 8.9514 16.7943 8 15.6207 8H15.2457C15.1599 8 15.0756 8.00617 14.9931 8.01809C14.9865 7.88138 14.9668 7.74806 14.9355 7.61933C14.7092 6.68993 13.8712 6 12.8722 6C12.5702 6 12.283 6.06303 12.0229 6.17665C11.6744 5.47907 10.9535 5 10.1207 5C10.0802 5 10.04 5.00113 10 5.00337C9.82699 5.01306 9.65952 5.04344 9.5 5.09209V2.625C9.5 1.4514 8.54861 0.5 7.375 0.5C6.2014 0.5 5.25 1.4514 5.25 2.625V9.50974C3.04663 9.68262 1.69308 12.122 2.88492 14.0879C3.24038 14.6743 3.58758 15.2326 3.86614 15.6513Z" fill="currentColor"/>
 </svg>
 `;
 
-const HandPointOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const HandPointOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2486)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.375 0.5C6.2014 0.5 5.25 1.4514 5.25 2.625V10.2225L4.36973 9.19553C3.66233 8.37022 2.43583 8.23558 1.56622 8.88775C0.675955 9.55542 0.475845 10.8089 1.114 11.7206L3.87071 15.6589C4.67331 16.9894 5.63679 17.9652 6.83659 18.6003C8.03805 19.2364 9.41813 19.5 11 19.5C12.5596 19.5 14.2355 19.2444 15.541 18.374C16.9002 17.4679 17.75 15.9685 17.75 13.75C17.75 13.7227 17.7485 13.6958 17.7457 13.6693V10.125C17.7457 8.9514 16.7943 8 15.6207 8H15.2457C15.1599 8 15.0756 8.00617 14.9931 8.01809C14.9382 6.89428 14.0096 6 12.8722 6C12.5702 6 12.283 6.06303 12.0229 6.17665C11.6744 5.47907 10.9535 5 10.1207 5C9.90477 5 9.69635 5.03221 9.5 5.09209V2.625C9.5 1.4514 8.54861 0.5 7.375 0.5ZM16.2496 13.8268C16.247 13.8015 16.2457 13.7759 16.2457 13.75V10.125C16.2457 9.77982 15.9659 9.5 15.6207 9.5H15.2457C15.1076 9.5 14.9957 9.61193 14.9957 9.75V10.25C14.9957 10.6642 14.6599 11 14.2457 11C13.8315 11 13.4957 10.6642 13.4957 10.25V9.75V8.12353C13.4957 7.77916 13.2166 7.5 12.8722 7.5C12.5273 7.5 12.2479 7.77998 12.2487 8.12486L12.25 8.74839C12.2501 8.7762 12.2486 8.80366 12.2457 8.83069V9.35C12.2457 9.76421 11.9099 10.1 11.4957 10.1C11.0815 10.1 10.7457 9.76421 10.7457 9.35V7.125C10.7457 6.77982 10.4659 6.5 10.1207 6.5C9.77554 6.5 9.49571 6.77982 9.49571 7.125V9.75C9.49571 10.1642 9.15993 10.5 8.74571 10.5C8.3315 10.5 7.99571 10.1642 7.99571 9.75V7.125C7.99571 7.04029 8.00067 6.95674 8.01031 6.87463C8.00353 6.83409 8 6.79246 8 6.75V2.625C8 2.27982 7.72018 2 7.375 2C7.34787 2 7.32113 2.00173 7.29491 2.00508C6.98756 2.0444 6.75 2.30696 6.75 2.625V12.2449L6.74995 12.2594L6.74973 12.2704C6.74674 12.3821 6.71936 12.4876 6.67273 12.5819C6.6376 12.6532 6.59061 12.7198 6.532 12.7787C6.39615 12.9154 6.20796 13 6 13C5.87353 13 5.75436 12.9687 5.64984 12.9134C5.58542 12.8794 5.52513 12.8356 5.47131 12.782C5.45501 12.7658 5.43945 12.7488 5.42468 12.7312L3.23085 10.1717C3.03791 9.94662 2.70338 9.90989 2.4662 10.0878C2.22338 10.2699 2.1688 10.6118 2.34285 10.8604L5.11006 14.8137C5.11661 14.8228 5.12298 14.8322 5.12917 14.8418C5.13533 14.8512 5.14124 14.8608 5.14691 14.8704C5.84061 16.0246 6.62178 16.7894 7.53842 17.2747C8.46196 17.7636 9.58188 18 11 18C12.4404 18 13.7645 17.7556 14.709 17.126C15.5869 16.5406 16.2312 15.5604 16.2496 13.8268Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.75 2.625C4.75 1.17525 5.92526 0 7.375 0C8.82475 0 10 1.17525 10 2.625V4.50274C10.04 4.50092 10.0803 4.5 10.1207 4.5C10.992 4.5 11.7635 4.92454 12.2406 5.57665C12.4432 5.52654 12.6548 5.5 12.8722 5.5C14.1063 5.5 15.1412 6.35194 15.4211 7.5H15.6207C17.0705 7.5 18.2457 8.67525 18.2457 10.125V13.6461C18.2486 13.6804 18.25 13.7151 18.25 13.75C18.25 16.1138 17.3339 17.7797 15.8184 18.7901C14.3926 19.7406 12.5994 20 11 20C9.36357 20 7.89676 19.7274 6.60264 19.0422L6.83659 18.6003C8.03805 19.2364 9.41813 19.5 11 19.5C12.5597 19.5 14.2355 19.2444 15.541 18.374C16.9002 17.4679 17.75 15.9685 17.75 13.75C17.75 13.7227 17.7486 13.6958 17.7457 13.6693V10.125C17.7457 8.95139 16.7943 8 15.6207 8H15.2457C15.1599 8 15.0756 8.00617 14.9931 8.0181C14.9865 7.88138 14.9668 7.74806 14.9355 7.61933C14.7092 6.68993 13.8713 6 12.8722 6C12.5702 6 12.283 6.06303 12.0229 6.17665C11.6744 5.47906 10.9535 5 10.1207 5C10.0802 5 10.04 5.00113 10 5.00337C9.827 5.01306 9.65952 5.04344 9.5 5.09209V2.625C9.5 1.4514 8.54861 0.5 7.375 0.5C6.2014 0.5 5.25 1.4514 5.25 2.625V10.2225L4.36974 9.19553C3.66233 8.37022 2.43583 8.23557 1.56623 8.88775C0.675958 9.55542 0.475848 10.8089 1.114 11.7206L3.87071 15.6589C4.67331 16.9894 5.63679 17.9652 6.83659 18.6003L6.60264 19.0422C5.31185 18.3589 4.28939 17.3163 3.45146 15.9318L0.704379 12.0073C-0.0884702 10.8747 0.16015 9.31727 1.26623 8.48775C2.34665 7.67747 3.87047 7.84476 4.74936 8.87013L4.75 2.625Z" fill="currentColor"/>
@@ -1491,7 +1493,7 @@ const HandPointOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 </svg>
 `;
 
-const Handshake$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Handshake$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2541)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.3892 9.61687C19.8852 9.374 20.0904 8.77502 19.8475 8.279L17.2091 2.89026C16.9662 2.39424 16.3672 2.18901 15.8712 2.43187L14.075 3.31136C13.5789 3.55422 13.3737 4.1532 13.6166 4.64922L16.255 10.038C16.4979 10.534 17.0969 10.7392 17.5929 10.4964L19.3892 9.61687ZM15.5228 3.99427C15.1508 4.17642 14.9968 4.62566 15.179 4.99767C15.3611 5.36969 15.8104 5.5236 16.1824 5.34146C16.5544 5.15931 16.7083 4.71007 16.5262 4.33806C16.344 3.96604 15.8948 3.81212 15.5228 3.99427Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.02615 2.66825C3.52618 2.43362 2.93067 2.64871 2.69604 3.14868L0.146998 8.58029C-0.0876348 9.08025 0.12746 9.67576 0.627426 9.91039L2.43796 10.7601C2.93793 10.9947 3.53344 10.7796 3.76807 10.2796L6.31711 4.84804C6.55175 4.34807 6.33665 3.75256 5.83669 3.51793L4.02615 2.66825ZM2.06374 9.20365C2.43872 9.37962 2.88535 9.2183 3.06133 8.84333C3.2373 8.46835 3.07598 8.02172 2.70101 7.84575C2.32603 7.66977 1.8794 7.83109 1.70342 8.20607C1.52745 8.58104 1.68877 9.02767 2.06374 9.20365Z" fill="currentColor"/>
@@ -1504,7 +1506,7 @@ const Handshake$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Hash$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Hash$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <line x1="4" y1="7.25" x2="16" y2="7.25" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <line x1="4" y1="12.75" x2="16" y2="12.75" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <path d="M7.75 4L6.75 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -1512,19 +1514,19 @@ const Hash$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Headphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Headphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M17.8801 15.0685C17.7061 15.5927 17.1402 15.8766 16.616 15.7027C16.0918 15.5287 15.8079 14.9628 15.9818 14.4386C16.3221 13.4132 16.5 12.3064 16.5 11.166C16.5 6.71008 13.7442 3.75354 10 3.75354C6.25581 3.75354 3.5 6.71008 3.5 11.166C3.5 12.3064 3.67791 13.4132 4.01817 14.4386C4.1921 14.9628 3.90817 15.5287 3.38399 15.7027C2.85981 15.8766 2.29387 15.5927 2.11994 15.0685C1.71209 13.8394 1.5 12.5199 1.5 11.166C1.5 5.63571 5.11859 1.75354 10 1.75354C14.8814 1.75354 18.5 5.63571 18.5 11.166C18.5 12.5199 18.2879 13.8394 17.8801 15.0685Z" fill="currentColor"/>
 <path d="M5.97747 17.0341C4.32744 17.0028 3.01262 15.6445 3.03496 13.9943L3.03526 13.972C3.05752 12.3274 4.40876 11.0123 6.05335 11.0345C6.06146 11.0346 6.06146 11.0346 6.06958 11.0348C6.61963 11.0452 7.05795 11.498 7.0505 12.0481L6.99636 16.0478C6.98886 16.6022 6.53179 17.0446 5.97747 17.0341Z" fill="currentColor"/>
 <path d="M14.0888 11.0002C15.7388 11.0315 17.0536 12.3898 17.0313 14.04L17.031 14.0623C17.0087 15.7069 15.6575 17.022 14.0129 16.9998C14.0048 16.9997 14.0048 16.9997 13.9967 16.9995C13.4466 16.9891 13.0083 16.5363 13.0158 15.9862L13.0699 11.9865C13.0774 11.4321 13.5345 10.9897 14.0888 11.0002Z" fill="currentColor"/>
 </svg>
 `;
 
-const Heart$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Heart$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5.72187C11.6893 2.69854 17.5 3.75425 17.5 8.12206C17.5 11.0398 15 13.7042 10 16.1154C5 13.7042 2.5 11.0398 2.5 8.12206C2.5 3.75425 8.31066 2.69854 10 5.72187Z" fill="currentColor"/>
 </svg>
 `;
 
-const Hourglass$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Hourglass$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.20299 4C7.33379 4.81869 7.52606 5.59514 7.77794 6.08409C7.97599 6.46853 8.36428 6.95849 8.89645 7.49121C9.26075 7.85589 9.64792 8.19679 10 8.48728C10.3521 8.19679 10.7392 7.85589 11.1035 7.49121C11.6357 6.95849 12.024 6.46853 12.222 6.08409C12.4739 5.59514 12.6662 4.81869 12.797 4H7.20299ZM6.54146 2C5.69701 2 5.02278 2.69677 5.12064 3.53553C5.24621 4.6119 5.49855 6.02661 6 7C6.67249 8.30543 8.21838 9.6428 9.17938 10.3928C9.66546 10.7722 10.3345 10.7722 10.8206 10.3928C11.7816 9.6428 13.3275 8.30543 14 7C14.5014 6.02661 14.7538 4.6119 14.8794 3.53553C14.9772 2.69677 14.303 2 13.4585 2H6.54146Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.797 16C12.6662 15.1813 12.4739 14.4049 12.2221 13.9159C12.024 13.5315 11.6357 13.0415 11.1036 12.5088C10.7393 12.1441 10.3521 11.8032 10 11.5127C9.64792 11.8032 9.26076 12.1441 8.89646 12.5088C8.36428 13.0415 7.976 13.5315 7.77795 13.9159C7.52607 14.4049 7.3338 15.1813 7.203 16H12.797ZM13.4585 18C14.303 18 14.9772 17.3032 14.8794 16.4645C14.7538 15.3881 14.5014 13.9734 14 13C13.3275 11.6946 11.7816 10.3572 10.8206 9.60718C10.3345 9.22781 9.66547 9.22781 9.17938 9.60718C8.21839 10.3572 6.6725 11.6946 6 13C5.49856 13.9734 5.24622 15.3881 5.12064 16.4645C5.02279 17.3032 5.69702 18 6.54147 18L13.4585 18Z" fill="currentColor"/>
 <path d="M7 15.7502C7 15.7502 9 14.25 10 14.25C11 14.25 13 15.7502 13 15.7502V16.25H7V15.7502Z" fill="currentColor"/>
@@ -1533,7 +1535,7 @@ const Hourglass$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const House$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const House$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1203)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1 11C0.0804861 11 -0.351616 9.86349 0.335639 9.25259L9.33564 1.25259C9.71453 0.915803 10.2855 0.915803 10.6644 1.25259L19.6644 9.25259C20.3516 9.86349 19.9195 11 19 11H18V18C18 18.5523 17.5523 19 17 19H3C2.44772 19 2 18.5523 2 18V11H1ZM7 17V12C7 11.4477 7.44772 11 8 11H12C12.5523 11 13 11.4477 13 12V17H16V10C16 9.62477 16.2067 9.29781 16.5124 9.12674L10 3.33795L3.48762 9.12674C3.79334 9.29781 4 9.62477 4 10V17H7ZM9 17V13H11V17H9Z" fill="currentColor"/>
 </g>
@@ -1541,7 +1543,7 @@ const House$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Identification$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Identification$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.5 8H12" stroke="currentColor" stroke-linecap="round"/>
 <path d="M9.5 11.75L14.5 11.75" stroke="currentColor" stroke-linecap="round"/>
 <path d="M9.5 9.25H12H14.5M9.5 10.5H14.5" stroke="currentColor" stroke-linecap="round"/>
@@ -1557,25 +1559,25 @@ const Identification$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="
 </svg>
 `;
 
-const Info$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Info$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 7C11.1046 7 12 7.89543 12 9V16C12 17.1046 11.1046 18 10 18C8.89543 18 8 17.1046 8 16V9C8 7.89543 8.89543 7 10 7Z" fill="currentColor"/>
 <path d="M12 4C12 5.10457 11.1046 6 10 6C8.89543 6 8 5.10457 8 4C8 2.89543 8.89543 2 10 2C11.1046 2 12 2.89543 12 4Z" fill="currentColor"/>
 </svg>
 `;
 
-const InfoCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const InfoCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9 10C9 9.44772 9.44772 9 10 9C10.5523 9 11 9.44772 11 10V14C11 14.5523 10.5523 15 10 15C9.44772 15 9 14.5523 9 14V10Z" fill="currentColor"/>
 <circle cx="10" cy="7" r="1" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 10C2 14.4183 5.58172 18 10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10ZM16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10Z" fill="currentColor"/>
 </svg>
 `;
 
-const InfoFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const InfoFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18ZM10 8.92857C9.44772 8.92857 9 9.37629 9 9.92857V13.9286C9 14.4809 9.44772 14.9286 10 14.9286C10.5523 14.9286 11 14.4809 11 13.9286V9.92857C11 9.37629 10.5523 8.92857 10 8.92857ZM10 7.5C10.5523 7.5 11 7.05228 11 6.5C11 5.94772 10.5523 5.5 10 5.5C9.44772 5.5 9 5.94772 9 6.5C9 7.05228 9.44772 7.5 10 7.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const Internet$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Internet$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.25 10C1.25 14.8325 5.16751 18.75 10 18.75C14.8325 18.75 18.75 14.8325 18.75 10C18.75 5.16751 14.8325 1.25 10 1.25C5.16751 1.25 1.25 5.16751 1.25 10ZM17.25 10C17.25 14.0041 14.0041 17.25 10 17.25C5.99594 17.25 2.75 14.0041 2.75 10C2.75 5.99594 5.99594 2.75 10 2.75C14.0041 2.75 17.25 5.99594 17.25 10Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25 10C6.25 14.5222 7.74111 18.25 10 18.25C12.2589 18.25 13.75 14.5222 13.75 10C13.75 5.47778 12.2589 1.75 10 1.75C7.74111 1.75 6.25 5.47778 6.25 10ZM12.25 10C12.25 13.7621 11.0548 16.75 10 16.75C8.94518 16.75 7.75 13.7621 7.75 10C7.75 6.23795 8.94518 3.25 10 3.25C11.0548 3.25 12.25 6.23795 12.25 10Z" fill="currentColor"/>
 <path d="M3.60174 5.46733L4.60789 4.35483C4.70859 4.4459 4.817 4.53499 4.9328 4.62175C6.2041 5.57424 8.2323 6.16108 10.4482 6.16108C12.3391 6.16108 14.1005 5.73495 15.3792 5.00363C15.687 4.82759 15.9613 4.63663 16.1979 4.43451L17.1722 5.57496C16.8622 5.83981 16.511 6.08431 16.1239 6.3057C14.6076 7.17293 12.5898 7.66108 10.4482 7.66108C7.92613 7.66108 5.58282 6.98307 4.03339 5.82219C3.88117 5.70814 3.73712 5.58977 3.60174 5.46733Z" fill="currentColor"/>
@@ -1584,13 +1586,13 @@ const Internet$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Key$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Key$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.7184 12.3066C12.899 12.1201 13 11.8707 13 11.6111V9.00059C14.2398 8.07058 15 6.60167 15 5C15 2.23858 12.7614 0 10 0C7.23858 0 5 2.23858 5 5C5 6.60167 5.76016 8.07058 7 9.00059V17C7 18.6569 8.34315 20 10 20C11.6569 20 13 18.6569 13 17C13 16.701 12.8662 16.4178 12.6354 16.2278L12.4094 16.0419L12.4966 15.9919C12.8079 15.8138 13 15.4826 13 15.124V14.3488C13 14.0841 12.8951 13.8302 12.7082 13.6427L12.0571 12.9897L12.7184 12.3066ZM10.9686 8.7495C10.9894 8.83017 11 8.91395 11 9V11.2063L9.93681 12.3044C9.55743 12.6963 9.56201 13.3198 9.94709 13.706L10.8616 14.6233L10.1586 15.0255C9.55121 15.373 9.47947 16.221 10.0198 16.6656L10.9156 17.4027C10.7607 17.7544 10.409 18 10 18C9.44772 18 9 17.5523 9 17V9C9 8.91395 9.01064 8.83017 9.03138 8.7495C9.14475 8.30859 8.94599 7.84676 8.54786 7.62597C7.59988 7.10025 7 6.10326 7 5C7 3.34315 8.34315 2 10 2C11.6569 2 13 3.34315 13 5C13 6.10326 12.4001 7.10025 11.4521 7.62597C11.054 7.84676 10.8553 8.30859 10.9686 8.7495Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5.5C10.8284 5.5 11.5 4.82843 11.5 4C11.5 3.17157 10.8284 2.5 10 2.5C9.17157 2.5 8.5 3.17157 8.5 4C8.5 4.82843 9.17157 5.5 10 5.5ZM10 3.5C10.2761 3.5 10.5 3.72386 10.5 4C10.5 4.27614 10.2761 4.5 10 4.5C9.72386 4.5 9.5 4.27614 9.5 4C9.5 3.72386 9.72386 3.5 10 3.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const KniveFork$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const KniveFork$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2703 5.50648C11.2703 7.44763 12.333 8.81357 14.2703 9.50037V11C14.2703 11.5523 14.718 12 15.2703 12C15.8225 12 16.2703 11.5523 16.2703 11V8.77387C16.2706 8.75962 16.2706 8.74541 16.2703 8.73125V1.5C16.2703 0.759224 15.4929 0.275595 14.8284 0.602925C12.5118 1.74402 11.2703 3.40205 11.2703 5.50648ZM13.2703 5.50648C13.2703 4.6856 13.5885 3.97142 14.2703 3.34478V7.31599C13.5752 6.90454 13.2703 6.31705 13.2703 5.50648Z" fill="currentColor"/>
 <path d="M13.2703 17.5V12.5C13.2703 11.3954 14.1657 10.5 15.2703 10.5C16.3748 10.5 17.2703 11.3954 17.2703 12.5V17.5C17.2703 18.6046 16.3748 19.5 15.2703 19.5C14.1657 19.5 13.2703 18.6046 13.2703 17.5Z" fill="currentColor"/>
 <path d="M3.28304 2.4501C3.3106 1.8985 3.7801 1.47369 4.33169 1.50125C4.88329 1.5288 5.30811 1.9983 5.28055 2.5499C5.20048 4.15251 5.28317 5.23192 5.48057 5.7078C5.57632 5.93862 5.73403 6.02281 6.19257 5.99644C6.74395 5.96472 7.21664 6.38598 7.24836 6.93735C7.28007 7.48873 6.85881 7.96142 6.30744 7.99313C5.04935 8.06551 4.07832 7.54714 3.6332 6.47411C3.28974 5.64613 3.18904 4.33157 3.28304 2.4501Z" fill="currentColor"/>
@@ -1600,7 +1602,7 @@ const KniveFork$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Label$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Label$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4974)">
 <path d="M2.97872 2.63551C2.97881 2.63462 2.97889 2.63373 2.97897 2.63284C2.97986 2.63276 2.98075 2.63267 2.98164 2.63259C3.43843 2.59036 4.07526 2.54622 4.79712 2.51753C6.25646 2.45955 7.9903 2.46795 9.2767 2.65973C9.3352 2.66845 9.41101 2.70095 9.48715 2.77708L17.2405 10.5304C17.4358 10.7257 17.4358 11.0423 17.2405 11.2375L11.5836 16.8944C11.3884 17.0897 11.0718 17.0897 10.8765 16.8944L3.12319 9.14104C3.04705 9.06491 3.01455 8.98909 3.00583 8.9306C2.81406 7.6442 2.80567 5.91035 2.86367 4.451C2.89235 3.72913 2.9365 3.0923 2.97872 2.63551Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <circle cx="7.4346" cy="7.17334" r="1" transform="rotate(-45 7.4346 7.17334)" fill="currentColor"/>
@@ -1609,7 +1611,7 @@ const Label$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Leave$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Leave$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6667 8L17.7501 10.5L15.6667 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6667 13L17.75 10.5L15.6667 13Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M16.5 10.5L10 10.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -1621,13 +1623,13 @@ const Leave$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Letter$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Letter$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17 3.5H3C2.44772 3.5 2 3.94772 2 4.5V15.5C2 16.0523 2.44772 16.5 3 16.5H17C17.5523 16.5 18 16.0523 18 15.5V4.5C18 3.94772 17.5523 3.5 17 3.5ZM4 14.5V5.5H16V14.5H4Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.6484 5.26131L10.6034 11.2613C10.2279 11.5811 9.67524 11.5794 9.30177 11.2572L2.34679 5.25718C1.64501 4.65176 2.07317 3.5 3 3.5H17C17.93 3.5 18.3564 4.65833 17.6484 5.26131ZM5.69006 5.5L9.95917 9.18292L14.2835 5.5H5.69006Z" fill="currentColor"/>
 </svg>
 `;
 
-const LetterOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const LetterOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M17.5 8.5V17.5H2.5V8.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M10 14.5L3.5 10.17V5.5H16.5V10.17L10 14.5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
 <path d="M5.5 5.5L10 2.5L14.5 5.5" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
@@ -1641,7 +1643,7 @@ const LetterOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const List$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const List$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="5" cy="6" r="1.5" fill="currentColor"/>
 <circle cx="5" cy="10" r="1.5" fill="currentColor"/>
 <circle cx="5" cy="14" r="1.5" fill="currentColor"/>
@@ -1651,21 +1653,21 @@ const List$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const LockClosed$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const LockClosed$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C8 14.1046 8.89543 15 10 15C11.1046 15 12 14.1046 12 13C12 11.8954 11.1046 11 10 11C8.89543 11 8 11.8954 8 13ZM10.5 13C10.5 13.2761 10.2761 13.5 10 13.5C9.72386 13.5 9.5 13.2761 9.5 13C9.5 12.7239 9.72386 12.5 10 12.5C10.2761 12.5 10.5 12.7239 10.5 13Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7H7C4.79086 7 3 8.79086 3 11V15C3 17.2091 4.79086 19 7 19H13C15.2091 19 17 17.2091 17 15V11C17 8.79086 15.2091 7 13 7ZM5 11C5 9.89543 5.89543 9 7 9H13C14.1046 9 15 9.89543 15 11V15C15 16.1046 14.1046 17 13 17H7C5.89543 17 5 16.1046 5 15V11Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 4C14 1.79086 12.2091 0 10 0C7.79086 0 6 1.79086 6 4V9H14V4ZM12 4V7H8V4C8 2.89543 8.89543 2 10 2C11.1046 2 12 2.89543 12 4Z" fill="currentColor"/>
 </svg>
 `;
 
-const LockOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const LockOpen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 7H7C4.79086 7 3 8.79086 3 11V15C3 17.2091 4.79086 19 7 19H13C15.2091 19 17 17.2091 17 15V11C17 8.79086 15.2091 7 13 7ZM5 11C5 9.89543 5.89543 9 7 9H13C14.1046 9 15 9.89543 15 11V15C15 16.1046 14.1046 17 13 17H7C5.89543 17 5 16.1046 5 15V11Z" fill="currentColor"/>
 <path d="M8 8C8 8.55229 7.55228 9 7 9C6.44772 9 6 8.55229 6 8V4C6 1.79086 7.79086 0 10 0C12.2091 0 14 1.79086 14 4V4.5C14 5.05228 13.5523 5.5 13 5.5C12.4477 5.5 12 5.05228 12 4.5V4C12 2.89543 11.1046 2 10 2C8.89543 2 8 2.89543 8 4V8Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 13C8 14.1046 8.89543 15 10 15C11.1046 15 12 14.1046 12 13C12 11.8954 11.1046 11 10 11C8.89543 11 8 11.8954 8 13ZM10.5 13C10.5 13.2761 10.2761 13.5 10 13.5C9.72386 13.5 9.5 13.2761 9.5 13C9.5 12.7239 9.72386 12.5 10 12.5C10.2761 12.5 10.5 12.7239 10.5 13Z" fill="currentColor"/>
 </svg>
 `;
 
-const Loop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Loop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_3316)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.47487 4.4749C2.32698 6.62279 2.32698 10.1052 4.47487 12.2531C6.62275 14.401 10.1052 14.401 12.253 12.2531C14.4009 10.1052 14.4009 6.62279 12.253 4.4749C10.1052 2.32702 6.62275 2.32702 4.47487 4.4749ZM10.8388 10.8389C9.47199 12.2057 7.25591 12.2057 5.88908 10.8389C4.52224 9.47203 4.52224 7.25595 5.88908 5.88912C7.25591 4.52228 9.47199 4.52228 10.8388 5.88912C12.2057 7.25595 12.2057 9.47203 10.8388 10.8389Z" fill="currentColor"/>
 <path d="M11.1924 13.3137C10.6066 12.7279 10.6066 11.7782 11.1924 11.1924C11.7782 10.6066 12.7279 10.6066 13.3137 11.1924L16.8492 14.7279C17.435 15.3137 17.435 16.2635 16.8492 16.8492C16.2635 17.435 15.3137 17.435 14.7279 16.8492L11.1924 13.3137Z" fill="currentColor"/>
@@ -1674,14 +1676,14 @@ const Loop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const LoopMinus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const LoopMinus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.82843 4.82846C2.48529 7.1716 2.48529 10.9706 4.82843 13.3137C7.17158 15.6569 10.9706 15.6569 13.3137 13.3137C15.6569 10.9706 15.6569 7.1716 13.3137 4.82846C10.9706 2.48531 7.17158 2.48531 4.82843 4.82846ZM11.8995 11.8995C10.3374 13.4616 7.80475 13.4616 6.24265 11.8995C4.68055 10.3374 4.68055 7.80477 6.24265 6.24267C7.80475 4.68057 10.3374 4.68057 11.8995 6.24267C13.4616 7.80477 13.4616 10.3374 11.8995 11.8995Z" fill="currentColor"/>
 <path d="M11.8995 14.7279C11.3137 14.1421 11.3137 13.1924 11.8995 12.6066C12.4853 12.0208 13.435 12.0208 14.0208 12.6066L17.5563 16.1421C18.1421 16.7279 18.1421 17.6776 17.5563 18.2634C16.9706 18.8492 16.0208 18.8492 15.435 18.2634L11.8995 14.7279Z" fill="currentColor"/>
 <path d="M6.70709 9.91418C6.15481 9.91418 5.70709 9.46647 5.70709 8.91418C5.70709 8.3619 6.15481 7.91418 6.70709 7.91418H11.1924C11.7447 7.91418 12.1924 8.3619 12.1924 8.91418C12.1924 9.46647 11.7447 9.91418 11.1924 9.91418H6.70709Z" fill="currentColor"/>
 </svg>
 `;
 
-const LoopPlus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const LoopPlus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.82847 4.82846C2.48532 7.1716 2.48532 10.9706 4.82847 13.3137C7.17161 15.6569 10.9706 15.6569 13.3137 13.3137C15.6569 10.9706 15.6569 7.1716 13.3137 4.82846C10.9706 2.48531 7.17161 2.48531 4.82847 4.82846ZM11.8995 11.8995C10.3374 13.4616 7.80478 13.4616 6.24268 11.8995C4.68058 10.3374 4.68058 7.80477 6.24268 6.24267C7.80478 4.68057 10.3374 4.68057 11.8995 6.24267C13.4616 7.80477 13.4616 10.3374 11.8995 11.8995Z" fill="currentColor"/>
 <path d="M11.8995 14.7279C11.3138 14.1421 11.3138 13.1924 11.8995 12.6066C12.4853 12.0208 13.4351 12.0208 14.0209 12.6066L17.5564 16.1421C18.1422 16.7279 18.1422 17.6776 17.5564 18.2634C16.9706 18.8492 16.0209 18.8492 15.4351 18.2634L11.8995 14.7279Z" fill="currentColor"/>
 <path d="M7.20715 10.1642C6.65487 10.1642 6.20715 9.71647 6.20715 9.16418C6.20715 8.6119 6.65487 8.16418 7.20715 8.16418H11.2072C11.7594 8.16418 12.2072 8.6119 12.2072 9.16418C12.2072 9.71647 11.7594 10.1642 11.2072 10.1642H7.20715Z" fill="currentColor"/>
@@ -1689,7 +1691,7 @@ const LoopPlus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Magnet$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Magnet$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_8_1)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29286 1.39339C7.68339 1.00286 8.31655 1.00286 8.70708 1.39339L12.2426 4.92892C12.6331 5.31944 12.6331 5.95261 12.2426 6.34313L7.29286 11.2929C6.90234 11.6834 6.90234 12.3166 7.29286 12.7071C7.68339 13.0976 8.31655 13.0976 8.70708 12.7071L13.6568 7.75735C14.0473 7.36682 14.6805 7.36682 15.071 7.75735L18.6066 11.2929C18.9971 11.6834 18.9971 12.3166 18.6066 12.7071L13.6568 17.6568C10.5326 20.781 5.46732 20.781 2.34312 17.6568C-0.781075 14.5326 -0.781077 9.46733 2.34312 6.34313L7.29286 1.39339ZM7.99997 3.51471L3.75733 7.75734C1.41419 10.1005 1.41419 13.8995 3.75734 16.2426C6.10048 18.5858 9.89947 18.5858 12.2426 16.2426L16.4853 12L14.3639 9.87867L10.1213 14.1213C8.94972 15.2929 7.05022 15.2929 5.87865 14.1213C4.70708 12.9497 4.70708 11.0502 5.87865 9.87867L10.1213 5.63603L7.99997 3.51471Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.29286 8.46446L5.17154 6.34314L6.58575 4.92892L8.70707 7.05024L7.29286 8.46446Z" fill="currentColor"/>
@@ -1700,14 +1702,14 @@ const Magnet$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Map$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Map$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 10C11.3807 10 12.5 8.88071 12.5 7.5C12.5 6.11929 11.3807 5 10 5C8.61929 5 7.5 6.11929 7.5 7.5C7.5 8.88071 8.61929 10 10 10ZM10 7C10.2761 7 10.5 7.22386 10.5 7.5C10.5 7.77614 10.2761 8 10 8C9.72386 8 9.5 7.77614 9.5 7.5C9.5 7.22386 9.72386 7 10 7Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 7.28555C5 10.1987 7.80453 15 10 15C12.1955 15 15 10.1987 15 7.28555C15 4.38124 12.7774 2 10 2C7.22258 2 5 4.38124 5 7.28555ZM13 7.28555C13 9.2396 10.8035 13 10 13C9.19652 13 7 9.2396 7 7.28555C7 5.45617 8.35914 4 10 4C11.6409 4 13 5.45617 13 7.28555Z" fill="currentColor"/>
 <path d="M13.7298 10C13.1775 10 12.7298 9.55228 12.7298 9C12.7298 8.44772 13.1775 8 13.7298 8C15.0774 8 16.2597 8.89861 16.6204 10.1971L18.0093 15.1971C18.4527 16.7935 17.5181 18.4471 15.9216 18.8906C15.6602 18.9632 15.3901 19 15.1187 19H4.88128C3.22442 19 1.88128 17.6569 1.88128 16C1.88128 15.7286 1.9181 15.4585 1.99073 15.1971L3.37961 10.1971C3.7403 8.89861 4.92254 8 6.27017 8C6.82245 8 7.27017 8.44772 7.27017 9C7.27017 9.55228 6.82245 10 6.27017 10C5.82096 10 5.42688 10.2995 5.30665 10.7324L3.91776 15.7324C3.89355 15.8195 3.88128 15.9095 3.88128 16C3.88128 16.5523 4.32899 17 4.88128 17H15.1187C15.2092 17 15.2992 16.9877 15.3864 16.9635C15.9185 16.8157 16.23 16.2645 16.0822 15.7324L14.6933 10.7324C14.5731 10.2995 14.179 10 13.7298 10Z" fill="currentColor"/>
 </svg>
 `;
 
-const Megaphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Megaphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.39996 10.0542L13 11.5815V5.6185L7.39996 7.14578V10.0542ZM5.39996 10.818C5.39996 11.269 5.70178 11.6642 6.13685 11.7828L13.7369 13.8555C14.373 14.029 15 13.5501 15 12.8908V4.30925C15 3.64988 14.373 3.171 13.7369 3.34449L6.13685 5.41722C5.70178 5.53588 5.39996 5.93104 5.39996 6.38199L5.39996 10.818Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.01605 9.80002V7.4H3.96888C3.54859 8.13534 3.54744 9.0554 3.9729 9.80002H5.01605ZM6.01605 11.8C6.56834 11.8 7.01605 11.3523 7.01605 10.8L7.01605 6.4C7.01605 5.84772 6.56834 5.4 6.01605 5.4L3.25275 5.4C3.10164 5.4 2.95718 5.46215 2.85326 5.57185C1.25087 7.26348 1.25751 9.9249 2.85144 11.6245C2.95597 11.736 3.10274 11.8 3.25555 11.8H6.01605Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.42422 12H5.83956L5.07426 15H5.65708L6.42422 12ZM5.83956 10C4.9254 10 4.1276 10.6198 3.90163 11.5056L2.81816 15.7528C2.65686 16.3851 3.13458 17 3.78713 17H5.65708C6.57081 17 7.36836 16.3807 7.59473 15.4955L8.36187 12.4955C8.68532 11.2306 7.7298 10 6.42422 10H5.83956Z" fill="currentColor"/>
@@ -1717,7 +1719,7 @@ const Megaphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Menu$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Menu$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8C2 7.44772 2.44772 7 3 7H13.3077C13.86 7 14.3077 7.44772 14.3077 8C14.3077 8.55228 13.86 9 13.3077 9H3C2.44772 9 2 8.55228 2 8Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 4C2 3.44772 2.44772 3 3 3H17C17.5523 3 18 3.44772 18 4C18 4.55228 17.5523 5 17 5H3C2.44772 5 2 4.55228 2 4Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 12C2 11.4477 2.44772 11 3 11H17C17.5523 11 18 11.4477 18 12C18 12.5523 17.5523 13 17 13H3C2.44772 13 2 12.5523 2 12Z" fill="currentColor"/>
@@ -1725,7 +1727,7 @@ const Menu$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Microphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Microphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 4.5C7.5 3.11929 8.61929 2 10 2C11.3807 2 12.5 3.11929 12.5 4.5V8.5C12.5 9.88071 11.3807 11 10 11C8.61929 11 7.5 9.88071 7.5 8.5V4.5Z" fill="currentColor"/>
 <path d="M10 18.5C7.16602 18.5 5.5 18.2917 5.5 17.5C5.5 16.7083 7.16602 16.5 10 16.5C12.834 16.5 14.5 16.7083 14.5 17.5C14.5 18.2917 12.834 18.5 10 18.5Z" fill="currentColor"/>
 <path d="M9.03572 13.5H11.0357V18H9.03572V13.5Z" fill="currentColor"/>
@@ -1733,7 +1735,7 @@ const Microphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const Microphone2$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Microphone2$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1232_1628)">
 <circle cx="11.6629" cy="5.11788" r="3" transform="rotate(38.2702 11.6629 5.11788)" stroke="currentColor" stroke-width="2"/>
 <path d="M8.54428 5.84189L3.98186 12.4324" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -1746,13 +1748,13 @@ const Microphone2$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const Minus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Minus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5 10H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
 <path d="M5 11C4.44772 11 4 10.5523 4 10C4 9.44772 4.44772 9 5 9H15C15.5523 9 16 9.44772 16 10C16 10.5523 15.5523 11 15 11H5Z" fill="currentColor"/>
 </svg>
 `;
 
-const Monitor$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Monitor$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 1H2.5C1.11929 1 0 2.11929 0 3.5V13.5C0 14.8807 1.11929 16 2.5 16H17.5C18.8807 16 20 14.8807 20 13.5V3.5C20 2.11929 18.8807 1 17.5 1ZM2 3.5C2 3.22386 2.22386 3 2.5 3H17.5C17.7761 3 18 3.22386 18 3.5V13.5C18 13.7761 17.7761 14 17.5 14H2.5C2.22386 14 2 13.7761 2 13.5V3.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 14.5H8.5C7.94772 14.5 7.5 14.9477 7.5 15.5V18C7.5 18.5523 7.94772 19 8.5 19H11.5C12.0523 19 12.5 18.5523 12.5 18V15.5C12.5 14.9477 12.0523 14.5 11.5 14.5ZM9 17.5V16H11V17.5H9Z" fill="currentColor"/>
 <path d="M5.5 19.5C4.94772 19.5 4.5 19.0523 4.5 18.5C4.5 17.9477 4.94772 17.5 5.5 17.5H14.5C15.0523 17.5 15.5 17.9477 15.5 18.5C15.5 19.0523 15.0523 19.5 14.5 19.5H5.5Z" fill="currentColor"/>
@@ -1760,7 +1762,7 @@ const Monitor$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const MonitorEye$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MonitorEye$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 4.5C4.5 3.11929 5.61929 2 7 2H16.7816C18.1623 2 19.2816 3.11929 19.2816 4.5V11.7311C19.2816 13.1118 18.1623 14.2311 16.7816 14.2311H12.8908V16.0714C12.8908 16.6237 12.4431 17.0714 11.8908 17.0714C11.3385 17.0714 10.8908 16.6237 10.8908 16.0714V14.2252C10.3899 14.1708 10 13.7465 10 13.2311C10 12.6788 10.4477 12.2311 11 12.2311H16.7816C17.0577 12.2311 17.2816 12.0073 17.2816 11.7311V4.5C17.2816 4.22386 17.0577 4 16.7816 4H7C6.72386 4 6.5 4.22386 6.5 4.5V5.75842C6.5 6.3107 6.05228 6.75842 5.5 6.75842C4.94772 6.75842 4.5 6.3107 4.5 5.75842V4.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.69543 16.6451C7.69543 16.0929 8.14315 15.6451 8.69543 15.6451H15.0862C15.6385 15.6451 16.0862 16.0929 16.0862 16.6451C16.0862 17.1974 15.6385 17.6451 15.0862 17.6451H8.69543C8.14315 17.6451 7.69543 17.1974 7.69543 16.6451Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.13766 12.3592C3.67091 12.6592 4.47491 12.8762 5.41748 12.8762C6.36005 12.8762 7.16405 12.6592 7.6973 12.3592C8.26189 12.0416 8.33496 11.7594 8.33496 11.6726C8.33496 11.5859 8.26189 11.3036 7.6973 10.986C7.16405 10.6861 6.36005 10.4691 5.41748 10.4691C4.47491 10.4691 3.67091 10.6861 3.13766 10.986C2.57308 11.3036 2.5 11.5859 2.5 11.6726C2.5 11.7594 2.57308 12.0416 3.13766 12.3592ZM2.15714 14.1024C1.30388 13.6224 0.5 12.8029 0.5 11.6726C0.5 10.5424 1.30388 9.72285 2.15714 9.24289C3.04175 8.7453 4.19648 8.46906 5.41748 8.46906C6.63848 8.46906 7.79321 8.7453 8.67782 9.24289C9.53108 9.72285 10.335 10.5424 10.335 11.6726C10.335 12.8029 9.53108 13.6224 8.67782 14.1024C7.79321 14.6 6.63848 14.8762 5.41748 14.8762C4.19648 14.8762 3.04175 14.6 2.15714 14.1024Z" fill="currentColor"/>
@@ -1774,7 +1776,7 @@ const MonitorEye$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const MonitorLoop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MonitorLoop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2209)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 4.5C1.5 3.11929 2.61929 2 4 2H15.7479C17.1287 2 18.2479 3.11929 18.2479 4.5V12.1513C18.2479 13.532 17.1287 14.6513 15.7479 14.6513H10.874V16.9286C10.874 17.4809 10.4263 17.9286 9.87397 17.9286C9.32169 17.9286 8.87397 17.4809 8.87397 16.9286V14.4311C8.64595 14.2479 8.5 13.9666 8.5 13.6513C8.5 13.099 8.94772 12.6513 9.5 12.6513H15.7479C16.0241 12.6513 16.2479 12.4274 16.2479 12.1513V4.5C16.2479 4.22386 16.0241 4 15.7479 4H4C3.72386 4 3.5 4.22386 3.5 4.5V6C3.5 6.55228 3.05228 7 2.5 7C1.94772 7 1.5 6.55228 1.5 6V4.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.18701 17.5905C5.18701 17.0382 5.63473 16.5905 6.18701 16.5905H13.561C14.1133 16.5905 14.561 17.0382 14.561 17.5905C14.561 18.1427 14.1133 18.5905 13.561 18.5905H6.18701C5.63473 18.5905 5.18701 18.1427 5.18701 17.5905Z" fill="currentColor"/>
@@ -1784,7 +1786,7 @@ const MonitorLoop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const Monitor2$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Monitor2$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 1H2.5C1.11929 1 0 2.11929 0 3.5V13.5C0 14.8807 1.11929 16 2.5 16H17.5C18.8807 16 20 14.8807 20 13.5V3.5C20 2.11929 18.8807 1 17.5 1ZM2 3.5C2 3.22386 2.22386 3 2.5 3H17.5C17.7761 3 18 3.22386 18 3.5V13.5C18 13.7761 17.7761 14 17.5 14H2.5C2.22386 14 2 13.7761 2 13.5V3.5Z" fill="currentColor"/>
 <path d="M10 13.75C9.58579 13.75 9.25 13.4142 9.25 13C9.25 12.5858 9.58579 12.25 10 12.25C10.4142 12.25 10.75 12.5858 10.75 13C10.75 13.4142 10.4142 13.75 10 13.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 14.5H8.5C7.94772 14.5 7.5 14.9477 7.5 15.5V18C7.5 18.5523 7.94772 19 8.5 19H11.5C12.0523 19 12.5 18.5523 12.5 18V15.5C12.5 14.9477 12.0523 14.5 11.5 14.5ZM9 17.5V16H11V17.5H9Z" fill="currentColor"/>
@@ -1793,17 +1795,17 @@ const Monitor2$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Moon$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Moon$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.76447 6.1275C9.07052 4.68767 10.0433 3.51293 11.3637 2.93174C12.2938 2.52236 12.0913 1.14759 11.0826 1.02391C6.47122 0.458427 2.16189 3.52205 1.18835 8.10223C0.15323 12.9721 3.2549 17.7583 8.11727 18.7918C12.9796 19.8254 17.7599 16.7145 18.795 11.8446C18.9477 11.1264 19.0122 10.4004 18.9896 9.67855C18.9577 8.66019 17.6015 8.33612 17.1127 9.23007C16.1656 10.9622 14.1849 11.891 12.2283 11.4751C9.79778 10.9585 8.24645 8.56461 8.76447 6.1275ZM8.53309 16.8355C4.752 16.0318 2.339 12.3083 3.14464 8.51805C3.68521 5.97489 5.54698 4.0327 7.871 3.28807C7.36391 4.00107 6.99737 4.82159 6.80818 5.71168C6.06068 9.22838 8.30068 12.685 11.8125 13.4314C13.445 13.7784 15.0883 13.478 16.449 12.6805C15.176 15.7335 11.8789 17.5467 8.53309 16.8355Z" fill="currentColor"/>
 </svg>
 `;
 
-const MoonFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MoonFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3637 2.93174C10.0433 3.51293 9.07052 4.68767 8.76447 6.1275C8.24645 8.56461 9.79778 10.9585 12.2283 11.4751C14.1849 11.891 16.1656 10.9622 17.1127 9.23007C17.6015 8.33612 18.9577 8.66019 18.9896 9.67855C19.0122 10.4004 18.9477 11.1264 18.795 11.8446C17.7599 16.7145 12.9796 19.8254 8.11727 18.7918C3.2549 17.7583 0.15323 12.9721 1.18835 8.10223C2.16189 3.52205 6.47122 0.458427 11.0826 1.02391C12.0913 1.14759 12.2938 2.52236 11.3637 2.93174Z" fill="currentColor"/>
 </svg>
 `;
 
-const Motorcycle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Motorcycle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M12.75 12.5C12.75 13.0523 12.3023 13.5 11.75 13.5C11.1977 13.5 10.75 13.0523 10.75 12.5C10.75 11.9477 11.1977 11.5 11.75 11.5C12.3023 11.5 12.75 11.9477 12.75 12.5Z" fill="currentColor"/>
 <path d="M9.25 12.5C9.25 13.0523 8.80228 13.5 8.25 13.5C7.69772 13.5 7.25 13.0523 7.25 12.5C7.25 11.9477 7.69772 11.5 8.25 11.5C8.80228 11.5 9.25 11.9477 9.25 12.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 8C11.933 8 13.5 6.433 13.5 4.5C13.5 2.567 11.933 1 10 1C8.067 1 6.5 2.567 6.5 4.5C6.5 6.433 8.067 8 10 8ZM10 3C10.8284 3 11.5 3.67157 11.5 4.5C11.5 5.32843 10.8284 6 10 6C9.17157 6 8.5 5.32843 8.5 4.5C8.5 3.67157 9.17157 3 10 3Z" fill="currentColor"/>
@@ -1816,7 +1818,7 @@ const Motorcycle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const MoveX$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MoveX$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0265 5.23175C13.4508 4.87819 14.0813 4.93551 14.4349 5.35979L17.7682 9.35979C18.1218 9.78407 18.0645 10.4146 17.6402 10.7682C17.2159 11.1218 16.5853 11.0644 16.2318 10.6402L12.8984 6.64016C12.5449 6.21588 12.6022 5.58532 13.0265 5.23175Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0265 14.7682C12.6022 14.4146 12.5449 13.7841 12.8984 13.3598L16.2318 9.35979C16.5853 8.93551 17.2159 8.87819 17.6402 9.23175C18.0645 9.58532 18.1218 10.2159 17.7682 10.6402L14.4349 14.6402C14.0813 15.0644 13.4508 15.1218 13.0265 14.7682Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 10C16 10.5523 15.5523 11 15 11L7.00004 11C6.44775 11 6.00004 10.5523 6.00004 10C6.00004 9.44771 6.44775 9 7.00004 9L15 9C15.5523 9 16 9.44772 16 10Z" fill="currentColor"/>
@@ -1826,7 +1828,7 @@ const MoveX$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const MoveY$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MoveY$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.23178 6.97353C4.87822 6.54926 4.93554 5.91869 5.35982 5.56513L9.35982 2.23179C9.78409 1.87823 10.4147 1.93555 10.7682 2.35983C11.1218 2.78411 11.0645 3.41467 10.6402 3.76824L6.64019 7.10157C6.21591 7.45513 5.58534 7.39781 5.23178 6.97353Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7682 6.97353C14.4147 7.39781 13.7841 7.45513 13.3598 7.10157L9.35982 3.76824C8.93554 3.41467 8.87822 2.78411 9.23178 2.35983C9.58534 1.93555 10.2159 1.87823 10.6402 2.23179L14.6402 5.56513C15.0645 5.91869 15.1218 6.54926 14.7682 6.97353Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4C10.5523 4 11 4.44772 11 5V13C11 13.5523 10.5523 14 10 14C9.44772 14 9 13.5523 9 13V5C9 4.44772 9.44772 4 10 4Z" fill="currentColor"/>
@@ -1836,7 +1838,7 @@ const MoveY$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const MusicNoteDouble$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MusicNoteDouble$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 3.80989C6.75 3.29386 7.14265 2.86257 7.65642 2.81428L16.6564 1.96832C17.2431 1.91318 17.75 2.37468 17.75 2.96393V5.14519C17.75 5.65923 17.3603 6.08955 16.8487 6.1403L7.84873 7.03323C7.26031 7.09161 6.75 6.62943 6.75 6.03812V3.80989Z" fill="currentColor"/>
 <ellipse cx="14.75" cy="15" rx="3" ry="2.5" fill="currentColor"/>
 <ellipse cx="5.75" cy="16" rx="3" ry="2.5" fill="currentColor"/>
@@ -1845,14 +1847,14 @@ const MusicNoteDouble$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill=
 </svg>
 `;
 
-const MusicNoteSingle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MusicNoteSingle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.78103 1.69759C14.1038 4.63512 16.25 6.76176 16.25 8.30413C16.25 9.79646 15.4291 11.0034 13.8541 11.8872C13.418 12.132 12.9324 11.6555 13.1688 11.2148C13.5756 10.4565 13.4416 9.60793 12.7079 8.59803C11.934 7.53285 10.8174 6.75731 9.34301 6.26969C9.13826 6.20198 9 6.01063 9 5.79498V2.11114C9 1.70978 9.44906 1.47201 9.78103 1.69759Z" fill="currentColor"/>
 <path d="M7.75 17.75C5.97914 17.75 4.5 16.607 4.5 15.125C4.5 13.643 5.97914 12.5 7.75 12.5C9.52086 12.5 11 13.643 11 15.125C11 16.607 9.52086 17.75 7.75 17.75Z" fill="currentColor"/>
 <path d="M10 4C10.5523 4 11 4.44772 11 5V15C11 15.5523 10.5523 16 10 16C9.44772 16 9 15.5523 9 15V5C9 4.44772 9.44772 4 10 4Z" fill="currentColor"/>
 </svg>
 `;
 
-const NextTrack$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const NextTrack$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9.8632 9.31771C10.2218 9.70192 10.2218 10.2981 9.8632 10.6823L5.23108 15.6453C4.61179 16.3088 3.50003 15.8706 3.50003 14.963L3.50003 5.03705C3.50003 4.12943 4.61179 3.69121 5.23108 4.35473L9.8632 9.31771Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.76425 10L5.50003 7.57407L5.50003 12.426L7.76425 10ZM9.8632 10.6823C10.2218 10.2981 10.2218 9.70192 9.8632 9.31771L5.23108 4.35473C4.6118 3.69121 3.50003 4.12943 3.50003 5.03705L3.50003 14.963C3.50003 15.8706 4.61179 16.3088 5.23108 15.6453L9.8632 10.6823Z" fill="currentColor"/>
 <path d="M14.8632 9.31771C15.2218 9.70192 15.2218 10.2981 14.8632 10.6823L10.2311 15.6453C9.61179 16.3088 8.50003 15.8706 8.50003 14.963V5.03705C8.50003 4.12943 9.61179 3.69121 10.2311 4.35473L14.8632 9.31771Z" fill="currentColor"/>
@@ -1861,13 +1863,13 @@ const NextTrack$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const NoEntry$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const NoEntry$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4C6.68629 4 4 6.68629 4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4ZM2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18C5.58172 18 2 14.4183 2 10Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6572 4.34294C16.0477 4.73347 16.0477 5.36663 15.6572 5.75716L5.75716 15.6572C5.36663 16.0477 4.73347 16.0477 4.34294 15.6572C3.95242 15.2666 3.95242 14.6335 4.34294 14.2429L14.2429 4.34294C14.6335 3.95242 15.2666 3.95242 15.6572 4.34294Z" fill="currentColor"/>
 </svg>
 `;
 
-const Open$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Open$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.7071 10.7071C10.3166 11.0976 9.68342 11.0976 9.29289 10.7071C8.90237 10.3166 8.90237 9.68342 9.29289 9.29289L15.2929 3.29289C15.6834 2.90237 16.3166 2.90237 16.7071 3.29289C17.0976 3.68342 17.0976 4.31658 16.7071 4.70711L10.7071 10.7071Z" fill="currentColor"/>
 <path d="M15 15V11.5C15 10.9477 15.4477 10.5 16 10.5C16.5523 10.5 17 10.9477 17 11.5V16C17 16.5523 16.5523 17 16 17H4C3.44772 17 3 16.5523 3 16V4C3 3.44772 3.44772 3 4 3H8.5C9.05228 3 9.5 3.44772 9.5 4C9.5 4.55228 9.05228 5 8.5 5H5V15H15Z" fill="currentColor"/>
 <path d="M17 8C17 8.55228 16.5523 9 16 9C15.4477 9 15 8.55228 15 8V4C15 3.44772 15.4477 3 16 3C16.5523 3 17 3.44772 17 4V8Z" fill="currentColor"/>
@@ -1875,7 +1877,7 @@ const Open$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const PaintPallet$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PaintPallet$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1031)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.2196 13.9555C17.2636 10.0595 14.7915 6.03562 10.731 4.94761C6.14492 3.71877 -0.364424 6.91181 1.08416 11.0092C1.56325 12.3643 2.48817 12.6814 4.23088 12.7061L4.33978 12.7075C5.26123 12.7191 5.52041 12.7792 5.59794 12.9054C5.72536 13.1128 5.72679 13.4439 5.58387 14.3543C5.51634 14.7845 5.49418 14.9355 5.46808 15.1703C5.30897 16.6011 5.55075 17.7169 6.48838 18.7268C9.41611 21.8802 15.0412 18.3535 16.2196 13.9555ZM2.96979 10.3425C2.24104 8.28126 6.9056 5.99314 10.2134 6.87946C13.2298 7.68772 15.0393 10.6331 14.2878 13.4379C13.4497 16.5656 9.50636 19.0379 7.95406 17.366C7.47464 16.8496 7.35504 16.2977 7.45583 15.3913C7.47737 15.1975 7.49709 15.0631 7.55967 14.6645C7.77887 13.2683 7.77611 12.6302 7.30206 11.8585C6.70834 10.8921 6.00236 10.7282 4.36491 10.7076L4.25922 10.7063C3.29465 10.6926 3.06582 10.6141 2.96979 10.3425Z" fill="currentColor"/>
 <path d="M6 10C5.30964 10 4.75 9.44036 4.75 8.75C4.75 8.05964 5.30964 7.5 6 7.5C6.69036 7.5 7.25 8.05964 7.25 8.75C7.25 9.44036 6.69036 10 6 10Z" fill="currentColor"/>
@@ -1889,13 +1891,13 @@ const PaintPallet$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const Pause$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Pause$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 3C5.64543 3 4.75 3.89543 4.75 5V15C4.75 16.1046 5.64543 17 6.75 17C7.85457 17 8.75 16.1046 8.75 15V5C8.75 3.89543 7.85457 3 6.75 3Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.25 3C12.1454 3 11.25 3.89543 11.25 5V15C11.25 16.1046 12.1454 17 13.25 17C14.3546 17 15.25 16.1046 15.25 15V5C15.25 3.89543 14.3546 3 13.25 3Z" fill="currentColor"/>
 </svg>
 `;
 
-const Pen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Pen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_2439)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.1976 1.21963L3.11966 11.2976C2.96919 11.448 2.87064 11.6426 2.83835 11.8529L2.1329 16.4474C2.0304 17.115 2.6055 17.6901 3.27308 17.5876L7.86761 16.8822C8.07794 16.8499 8.27249 16.7513 8.42296 16.6009L18.5009 6.52294C18.8914 6.13241 18.8914 5.49925 18.5009 5.10872L14.6118 1.21963C14.2213 0.82911 13.5881 0.829111 13.1976 1.21963ZM4.31655 15.404L4.76547 12.4802L13.9047 3.34095L16.3796 5.81583L7.24035 14.9551L4.31655 15.404Z" fill="currentColor"/>
 <path d="M11.442 5.24658L12.5027 4.18592L15.7436 7.42683L14.6829 8.48749L11.442 5.24658Z" fill="currentColor"/>
@@ -1904,7 +1906,7 @@ const Pen$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const People$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const People$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4 8.25C4.55228 8.25 5 7.80228 5 7.25C5 6.69772 4.55228 6.25 4 6.25C3.44772 6.25 3 6.69772 3 7.25C3 7.80228 3.44772 8.25 4 8.25ZM4 10.25C5.65685 10.25 7 8.90685 7 7.25C7 5.59315 5.65685 4.25 4 4.25C2.34315 4.25 1 5.59315 1 7.25C1 8.90685 2.34315 10.25 4 10.25Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.05007 11C3.22162 11 2.55003 11.6716 2.55003 12.5L2.55002 14C2.55001 14.5523 2.1023 15 1.55001 15C0.997727 15 0.550015 14.5523 0.550018 14L0.550027 12.5C0.550039 10.567 2.11706 9 4.05007 9C5.98305 9 7.55004 10.567 7.55004 12.5V14C7.55004 14.5523 7.10233 15 6.55004 15C5.99776 15 5.55004 14.5523 5.55004 14V12.5C5.55004 11.6716 4.87848 11 4.05007 11Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 8.25C15.4477 8.25 15 7.80228 15 7.25C15 6.69772 15.4477 6.25 16 6.25C16.5523 6.25 17 6.69772 17 7.25C17 7.80228 16.5523 8.25 16 8.25ZM16 10.25C14.3431 10.25 13 8.90685 13 7.25C13 5.59315 14.3431 4.25 16 4.25C17.6569 4.25 19 5.59315 19 7.25C19 8.90685 17.6569 10.25 16 10.25Z" fill="currentColor"/>
@@ -1914,13 +1916,13 @@ const People$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Person$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Person$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6C6 8.20914 7.79086 10 10 10C12.2091 10 14 8.20914 14 6C14 3.79086 12.2091 2 10 2C7.79086 2 6 3.79086 6 6ZM12 6C12 7.10457 11.1046 8 10 8C8.89543 8 8 7.10457 8 6C8 4.89543 8.89543 4 10 4C11.1046 4 12 4.89543 12 6Z" fill="currentColor"/>
 <path d="M17 18C17 18.5523 16.5523 19 16 19C15.4477 19 15 18.5523 15 18V15.5C15 13.0059 12.7945 11 10.0162 11C7.23004 11 5 13.0132 5 15.4992L5.00204 17.9992C5.0025 18.5515 4.55515 18.9995 4.00286 19C3.45058 19.0005 3.0025 18.5531 3.00205 18.0008L3 15.5C3 11.8604 6.16851 9 10.0162 9C13.859 9 17 11.8567 17 15.5V18Z" fill="currentColor"/>
 </svg>
 `;
 
-const PersonCheckmark$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PersonCheckmark$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C6.20818 5 5.5 5.67902 5.5 6.6C5.5 7.52098 6.20818 8.2 7 8.2C7.79182 8.2 8.5 7.52098 8.5 6.6C8.5 5.67902 7.79182 5 7 5ZM3.5 6.6C3.5 4.6491 5.0304 3 7 3C8.9696 3 10.5 4.6491 10.5 6.6C10.5 8.5509 8.9696 10.2 7 10.2C5.0304 10.2 3.5 8.5509 3.5 6.6Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1 14.8333C1 11.538 3.78924 9.06665 7.01348 9.06665C10.2449 9.06665 13 11.5447 13 14.8333V17C13 17.5523 12.5523 18 12 18C11.4477 18 11 17.5523 11 17V14.8333C11 12.7527 9.24668 11.0667 7.01348 11.0667C4.77323 11.0667 3.00022 12.7593 3 14.8329C3 14.8331 3 14.8328 3 14.8329L3.0017 16.9992C3.00214 17.5515 2.55478 17.9995 2.00249 18C1.45021 18.0004 1.00214 17.5531 1.0017 17.0008L1 14.8333Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.5968 4.12584C19.0795 4.39405 19.2535 5.00286 18.9853 5.48564L16.2075 10.4856C15.9393 10.9684 15.3305 11.1424 14.8477 10.8742C14.3649 10.6059 14.191 9.99714 14.4592 9.51436L17.237 4.51436C17.5052 4.03157 18.114 3.85763 18.5968 4.12584Z" fill="currentColor"/>
@@ -1928,13 +1930,13 @@ const PersonCheckmark$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill=
 </svg>
 `;
 
-const PersonFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PersonFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 9C11.6569 9 13 7.65685 13 6C13 4.34315 11.6569 3 10 3C8.34315 3 7 4.34315 7 6C7 7.65685 8.34315 9 10 9Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 15.5C16 12.309 13.314 10 10 10C6.686 10 4 12.309 4 15.5L4.002 17C4.002 17.2652 4.10736 17.5196 4.29489 17.7071C4.48243 17.8946 4.73678 18 5.002 18H15C15.2652 18 15.5196 17.8946 15.7071 17.7071C15.8946 17.5196 16 17.2652 16 17V15.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const PersonPlus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PersonPlus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.45 7.75C11.45 7.19772 11.8977 6.75 12.45 6.75H17.7C18.2523 6.75 18.7 7.19772 18.7 7.75C18.7 8.30228 18.2523 8.75 17.7 8.75H12.45C11.8977 8.75 11.45 8.30228 11.45 7.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15 11.5C14.4477 11.5 14 11.0523 14 10.5V5.25001C14 4.69772 14.4477 4.25001 15 4.25001C15.5523 4.25001 16 4.69772 16 5.25001V10.5C16 11.0523 15.5523 11.5 15 11.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7 5C6.20818 5 5.5 5.67902 5.5 6.6C5.5 7.52098 6.20818 8.2 7 8.2C7.79182 8.2 8.5 7.52098 8.5 6.6C8.5 5.67902 7.79182 5 7 5ZM3.5 6.6C3.5 4.6491 5.0304 3 7 3C8.9696 3 10.5 4.6491 10.5 6.6C10.5 8.5509 8.9696 10.2 7 10.2C5.0304 10.2 3.5 8.5509 3.5 6.6Z" fill="currentColor"/>
@@ -1942,7 +1944,7 @@ const PersonPlus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const Persons$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Persons$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4950)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.2359 10.0547C3.69336 10.8685 3.40385 11.8247 3.40385 12.8028L3.40385 13.5C3.40385 14.0522 2.95614 14.5 2.40385 14.5C1.85157 14.5 1.40385 14.0522 1.40385 13.5L1.40385 12.8028C1.40385 11.4299 1.81023 10.0877 2.5718 8.94531L4.2359 10.0547Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.20663 9C5.41471 9 4.67519 9.39578 4.23591 10.0547L2.57181 8.9453C3.38202 7.72998 4.74601 7 6.20663 7H6.40386C6.95614 7 7.40386 7.44772 7.40386 8C7.40386 8.55228 6.95614 9 6.40386 9H6.20663Z" fill="currentColor"/>
@@ -1959,12 +1961,12 @@ const Persons$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Phone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Phone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.5208 10.1924L11.9389 10.7743C10.9366 9.8925 9.99425 8.94935 9.11168 7.94467L9.69239 7.36396C10.864 6.19239 10.864 4.2929 9.69239 3.12132L8.27818 1.70711C7.1066 0.535537 5.20711 0.535537 4.03554 1.70711L1.22986 4.51278C0.952963 4.78968 0.863168 5.20273 1.00011 5.5696C3.37438 11.9301 7.81798 16.4042 14.3082 18.882C14.6766 19.0227 15.0932 18.9337 15.372 18.6549L18.1777 15.8492C19.3492 14.6777 19.3492 12.7782 18.1777 11.6066L16.7635 10.1924C15.5919 9.02082 13.6924 9.02082 12.5208 10.1924ZM16.7635 13.0208C17.154 13.4113 17.154 14.0445 16.7635 14.435L14.4224 16.7761C8.99792 14.5464 5.24854 10.7759 3.10516 5.46592L5.44975 3.12132C5.84027 2.7308 6.47344 2.7308 6.86396 3.12132L8.27818 4.53554C8.6687 4.92606 8.6687 5.55923 8.27818 5.94975L7.04425 7.18368C6.6793 7.54863 6.65204 8.13136 6.98132 8.52879C8.30406 10.1253 9.76179 11.5841 11.3539 12.9048C11.7513 13.2344 12.3343 13.2073 12.6994 12.8422L13.935 11.6066C14.3256 11.2161 14.9587 11.2161 15.3492 11.6066L16.7635 13.0208Z" fill="currentColor"/>
 </svg>
 `;
 
-const Photo$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Photo$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 9C9.10457 9 10 8.10457 10 7C10 5.89543 9.10457 5 8 5C6.89543 5 6 5.89543 6 7C6 8.10457 6.89543 9 8 9Z" fill="currentColor"/>
 <path d="M6.69703 10.0817C7.09685 9.54308 7.90313 9.54308 8.30294 10.0817L10.2123 12.654C10.7022 13.3138 10.2312 14.25 9.40939 14.25H5.59058C4.76881 14.25 4.29782 13.3138 4.78763 12.654L6.69703 10.0817Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.49999 11.5166L6.58443 12.75H8.41554L7.49999 11.5166ZM8.30294 10.0817C7.90313 9.54308 7.09685 9.54308 6.69703 10.0817L4.78763 12.654C4.29782 13.3138 4.76881 14.25 5.59058 14.25H9.40939C10.2312 14.25 10.7022 13.3138 10.2123 12.654L8.30294 10.0817Z" fill="currentColor"/>
@@ -1974,13 +1976,13 @@ const Photo$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const PhotoCamera$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PhotoCamera$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.69572 5.07845L5.39825 6H4.5C2.84315 6 1.5 7.34315 1.5 9V15C1.5 16.6569 2.84315 18 4.5 18H15.5C17.1569 18 18.5 16.6569 18.5 15V9C18.5 7.34315 17.1569 6 15.5 6H14.6013L14.3038 5.07845C13.9039 3.83958 12.7507 3 11.4489 3H8.55067C7.24886 3 6.09561 3.83958 5.69572 5.07845ZM4.5 8H6.85428L7.59902 5.69282C7.73232 5.27986 8.11673 5 8.55067 5H11.4489C11.8828 5 12.2672 5.27986 12.4005 5.69282L13.1453 8H15.5C16.0523 8 16.5 8.44772 16.5 9V15C16.5 15.5523 16.0523 16 15.5 16H4.5C3.94772 16 3.5 15.5523 3.5 15V9C3.5 8.44772 3.94772 8 4.5 8Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 11.5C6.5 13.433 8.067 15 10 15C11.933 15 13.5 13.433 13.5 11.5C13.5 9.567 11.933 8 10 8C8.067 8 6.5 9.567 6.5 11.5ZM11.5 11.5C11.5 12.3284 10.8284 13 10 13C9.17157 13 8.5 12.3284 8.5 11.5C8.5 10.6716 9.17157 10 10 10C10.8284 10 11.5 10.6716 11.5 11.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const PhotoStudio$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PhotoStudio$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.900055 2.5C0.900055 1.67157 1.57163 1 2.40005 1H8.60005C9.42848 1 10.1001 1.67157 10.1001 2.5V6.3C10.1001 7.12843 9.42848 7.8 8.60005 7.8H2.40006C1.57163 7.8 0.900055 7.12843 0.900055 6.3V2.5ZM2.90005 3V5.8H8.10005V3H2.90005Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M0.149994 2C0.149994 1.44772 0.597709 1 1.14999 1H9.84999C10.4023 1 10.85 1.44772 10.85 2C10.85 2.55228 10.4023 3 9.84999 3H1.14999C0.597709 3 0.149994 2.55228 0.149994 2Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.21982 10L2.88059 6.69613L0.919433 6.30389L0.139044 10.2058C-0.0465934 11.134 0.663346 12 1.60992 12H9.39011C10.3367 12 11.0466 11.134 10.861 10.2058L10.0806 6.30389L8.11943 6.69613L8.78021 10H2.21982Z" fill="currentColor"/>
@@ -1990,12 +1992,12 @@ const PhotoStudio$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const Pill$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Pill$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5459 4.18199L16.9099 10.5459C18.6673 12.3033 18.6673 15.1525 16.9099 16.9099C15.1525 18.6673 12.3033 18.6673 10.5459 16.9099L4.18199 10.5459C2.42463 8.78859 2.42463 5.93935 4.18199 4.18199C5.93935 2.42463 8.78859 2.42463 10.5459 4.18199ZM13 9.50001C12.3333 8.83334 11.5 8.66667 10.5 9.00001C9.50001 9.33334 8.83334 10.3333 8.50001 12L11.9203 15.4437C11.9223 15.4457 11.9243 15.4477 11.9263 15.4498C12.8993 16.4227 14.4768 16.4227 15.4498 15.4498C15.4522 15.4473 15.4547 15.4448 15.4572 15.4423C16.4253 14.466 16.4186 12.8898 15.4423 11.9217L13 9.50001Z" fill="currentColor"/>
 </svg>
 `;
 
-const Pin$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Pin$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1210_796)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6847 3.90256C11.2262 3.59468 10.6049 3.71679 10.297 4.17529L7.78845 7.9112L6.12805 6.79628L8.63663 3.06037C9.56027 1.68484 11.4241 1.31852 12.7996 2.24215L16.1204 4.472C17.496 5.39564 17.8623 7.25948 16.9386 8.635L14.4301 12.3709L12.7697 11.256L15.2782 7.52007C15.5861 7.06157 15.464 6.44029 15.0055 6.13241L11.6847 3.90256Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.51657 8.58705C2.82445 8.12855 3.44573 8.00644 3.90424 8.31431L13.8667 15.0039C14.3252 15.3118 14.4473 15.933 14.1394 16.3915C13.8315 16.85 13.2102 16.9722 12.7517 16.6643L2.78931 9.97472C2.3308 9.66684 2.20869 9.04556 2.51657 8.58705Z" fill="currentColor"/>
@@ -2007,48 +2009,48 @@ const Pin$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Pinpoint$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Pinpoint$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 11.5C11.933 11.5 13.5 9.933 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.067 4.5 6.5 6.067 6.5 8C6.5 9.933 8.067 11.5 10 11.5ZM10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.82843 10.8284 9.5 10 9.5C9.17157 9.5 8.5 8.82843 8.5 8C8.5 7.17157 9.17157 6.5 10 6.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 8.12313C2.5 12.3656 6.88183 19.5 10 19.5C13.1182 19.5 17.5 12.3656 17.5 8.12313C17.5 3.91715 14.1464 0.5 10 0.5C5.85362 0.5 2.5 3.91715 2.5 8.12313ZM15.5 8.12313C15.5 11.4027 11.7551 17.5 10 17.5C8.24487 17.5 4.5 11.4027 4.5 8.12313C4.5 5.0134 6.96668 2.5 10 2.5C13.0333 2.5 15.5 5.0134 15.5 8.12313Z" fill="currentColor"/>
 </svg>
 `;
 
-const PinpointFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PinpointFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 8.12313C2.5 12.3656 6.88183 19.5 10 19.5C13.1182 19.5 17.5 12.3656 17.5 8.12313C17.5 3.91715 14.1464 0.5 10 0.5C5.85362 0.5 2.5 3.91715 2.5 8.12313ZM10 5.5C11.3807 5.5 12.5 6.61929 12.5 8C12.5 9.38071 11.3807 10.5 10 10.5C8.61929 10.5 7.5 9.38071 7.5 8C7.5 6.61929 8.61929 5.5 10 5.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const PinpointOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PinpointOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.29289 2.70711C0.902369 2.31658 0.902369 1.68342 1.29289 1.29289C1.68342 0.902369 2.31658 0.902369 2.70711 1.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L1.29289 2.70711Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 11.5C11.933 11.5 13.5 9.933 13.5 8C13.5 6.067 11.933 4.5 10 4.5C8.067 4.5 6.5 6.067 6.5 8C6.5 9.933 8.067 11.5 10 11.5ZM10 6.5C10.8284 6.5 11.5 7.17157 11.5 8C11.5 8.82843 10.8284 9.5 10 9.5C9.17157 9.5 8.5 8.82843 8.5 8C8.5 7.17157 9.17157 6.5 10 6.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 8.12313C2.5 12.3656 6.88183 19.5 10 19.5C13.1182 19.5 17.5 12.3656 17.5 8.12313C17.5 3.91715 14.1464 0.5 10 0.5C5.85362 0.5 2.5 3.91715 2.5 8.12313ZM15.5 8.12313C15.5 11.4027 11.7551 17.5 10 17.5C8.24487 17.5 4.5 11.4027 4.5 8.12313C4.5 5.0134 6.96668 2.5 10 2.5C13.0333 2.5 15.5 5.0134 15.5 8.12313Z" fill="currentColor"/>
 </svg>
 `;
 
-const PinpointOffFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PinpointOffFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 8.12313C2.5 12.3656 6.88183 19.5 10 19.5C13.1182 19.5 17.5 12.3656 17.5 8.12313C17.5 3.91715 14.1464 0.5 10 0.5C5.85362 0.5 2.5 3.91715 2.5 8.12313ZM10 5.5C11.3807 5.5 12.5 6.61929 12.5 8C12.5 9.38071 11.3807 10.5 10 10.5C8.61929 10.5 7.5 9.38071 7.5 8C7.5 6.61929 8.61929 5.5 10 5.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.29289 1.29289C1.68342 0.902369 2.31658 0.902369 2.70711 1.29289L18.7071 17.2929C19.0976 17.6834 19.0976 18.3166 18.7071 18.7071C18.3166 19.0976 17.6834 19.0976 17.2929 18.7071L1.29289 2.70711C0.902369 2.31658 0.902369 1.68342 1.29289 1.29289Z" fill="currentColor"/>
 </svg>
 `;
 
-const Play$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Play$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.5444 9.59028C16.1942 9.99643 16.1645 10.9526 15.4907 11.3176L6.47627 16.2004C5.80997 16.5613 4.99999 16.0788 4.99999 15.3211V10V4.80427C4.99999 4.01884 5.86394 3.53999 6.52999 3.95627L15.5444 9.59028Z" fill="currentColor"/>
 </svg>
 `;
 
-const Plus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Plus$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5 11C4.44772 11 4 10.5523 4 10C4 9.44772 4.44772 9 5 9H15C15.5523 9 16 9.44772 16 10C16 10.5523 15.5523 11 15 11H5Z" fill="currentColor"/>
 <path d="M9 5C9 4.44772 9.44772 4 10 4C10.5523 4 11 4.44772 11 5V15C11 15.5523 10.5523 16 10 16C9.44772 16 9 15.5523 9 15V5Z" fill="currentColor"/>
 </svg>
 `;
 
-const Power$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Power$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4.33819 5.17875C4.72595 4.78548 5.3591 4.78103 5.75236 5.16879C6.14563 5.55656 6.15008 6.18971 5.76232 6.58297C4.64106 7.72013 4 9.25726 4 10.9008C4 14.2724 6.68947 17 10 17C13.3105 17 16 14.2724 16 10.9008C16 9.25726 15.3589 7.72013 14.2377 6.58297C13.8499 6.18971 13.8544 5.55656 14.2476 5.16879C14.6409 4.78103 15.274 4.78548 15.6618 5.17875C17.1491 6.68714 18 8.72737 18 10.9008C18 15.3708 14.4215 19 10 19C5.57855 19 2 15.3708 2 10.9008C2 8.72737 2.85088 6.68714 4.33819 5.17875Z" fill="currentColor"/>
 <rect x="9" y="1" width="2" height="10.5" rx="1" fill="currentColor"/>
 </svg>
 `;
 
-const PreviousTrack$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PreviousTrack$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10.1368 9.31771C9.77821 9.70192 9.77821 10.2981 10.1368 10.6823L14.7689 15.6453C15.3882 16.3088 16.5 15.8706 16.5 14.963V5.03705C16.5 4.12943 15.3882 3.69121 14.7689 4.35473L10.1368 9.31771Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2357 10L14.5 7.57407V12.426L12.2357 10ZM10.1368 10.6823C9.77821 10.2981 9.77821 9.70192 10.1368 9.31771L14.7689 4.35473C15.3882 3.69121 16.5 4.12943 16.5 5.03705V14.963C16.5 15.8706 15.3882 16.3088 14.7689 15.6453L10.1368 10.6823Z" fill="currentColor"/>
 <path d="M5.1368 9.31771C4.77821 9.70192 4.77821 10.2981 5.1368 10.6823L9.76892 15.6453C10.3882 16.3088 11.5 15.8706 11.5 14.963V5.03705C11.5 4.12943 10.3882 3.69121 9.76892 4.35473L5.1368 9.31771Z" fill="currentColor"/>
@@ -2057,7 +2059,7 @@ const PreviousTrack$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 </svg>
 `;
 
-const Printer$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Printer$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 7V3C5 2.44772 5.3731 2 5.83333 2H14.1667C14.6269 2 15 2.44772 15 3V7" fill="white"/>
 <path d="M6 3V7C6 7.55228 5.55228 8 5 8C4.44772 8 4 7.55228 4 7V3C4 1.93165 4.77637 1 5.83333 1H14.1667C15.2236 1 16 1.93165 16 3V7C16 7.55228 15.5523 8 15 8C14.4477 8 14 7.55228 14 7V3H6Z" fill="currentColor"/>
 <path d="M4 6H16C17.6569 6 19 7.34315 19 9V14C19 15.6569 17.6569 17 16 17H4C2.34315 17 1 15.6569 1 14L1 9C1 7.34315 2.34315 6 4 6Z" fill="currentColor"/>
@@ -2068,7 +2070,7 @@ const Printer$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const QrCode$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const QrCode$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 6V8H8V6H6ZM5 4.5C4.72386 4.5 4.5 4.72386 4.5 5V9C4.5 9.27614 4.72386 9.5 5 9.5H9C9.27614 9.5 9.5 9.27614 9.5 9V5C9.5 4.72386 9.27614 4.5 9 4.5H5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 6V8H14V6H12ZM11 4.5C10.7239 4.5 10.5 4.72386 10.5 5V9C10.5 9.27614 10.7239 9.5 11 9.5H15C15.2761 9.5 15.5 9.27614 15.5 9V5C15.5 4.72386 15.2761 4.5 15 4.5H11Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 12V14H8V12H6ZM5 10.5C4.72386 10.5 4.5 10.7239 4.5 11V15C4.5 15.2761 4.72386 15.5 5 15.5H9C9.27614 15.5 9.5 15.2761 9.5 15V11C9.5 10.7239 9.27614 10.5 9 10.5H5Z" fill="currentColor"/>
@@ -2084,7 +2086,7 @@ const QrCode$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Question$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Question$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.7387 16.2133C11.7387 17.3178 10.8432 18.2133 9.73868 18.2133C8.63411 18.2133 7.73868 17.3178 7.73868 16.2133C7.73868 15.1087 8.63411 14.2133 9.73868 14.2133C10.8432 14.2133 11.7387 15.1087 11.7387 16.2133Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.70982 4.76475C9.03953 4.76475 8.46488 4.96522 8.06038 5.25085C7.66959 5.52678 7.47719 5.84837 7.42132 6.1251C7.26284 6.91007 6.49802 7.41795 5.71305 7.25947C4.92807 7.101 4.42019 6.33618 4.57867 5.5512C4.80607 4.42486 5.5038 3.50597 6.38766 2.88188C7.30812 2.23194 8.47392 1.86475 9.70982 1.86475C12.2675 1.86475 14.9179 3.57476 14.9179 6.32121C14.9179 7.91038 13.9731 9.19715 12.7492 9.94661C12.0662 10.3648 11.1736 10.1502 10.7554 9.46724C10.3372 8.7843 10.5518 7.89165 11.2348 7.47345C11.8053 7.12405 12.0179 6.67955 12.0179 6.32121C12.0179 5.74681 11.3032 4.76475 9.70982 4.76475Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.70979 8.62927C10.5106 8.62927 11.1598 9.27846 11.1598 10.0793V11.5825C11.1598 12.3833 10.5106 13.0325 9.70979 13.0325C8.90898 13.0325 8.25979 12.3833 8.25979 11.5825V10.0793C8.25979 9.27846 8.90898 8.62927 9.70979 8.62927Z" fill="currentColor"/>
@@ -2092,7 +2094,7 @@ const Question$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const QuestionCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const QuestionCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="10" cy="14.25" r="1" fill="currentColor"/>
 <circle cx="10" cy="10" r="7" stroke="currentColor" stroke-width="2"/>
 <path d="M11.5182 9.58913C12.1151 9.22363 12.5 8.64778 12.5 8C12.5 6.89543 11.3807 6 10 6C9.36598 6 8.78707 6.18882 8.34637 6.5C7.9224 6.79936 7.62632 7.21197 7.5321 7.67866" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -2106,12 +2108,12 @@ const QuestionCircle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="
 </svg>
 `;
 
-const QuestionFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const QuestionFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 14.4183 14.4183 18 10 18ZM11 14.25C11 14.8023 10.5523 15.25 10 15.25C9.44772 15.25 9 14.8023 9 14.25C9 13.6977 9.44772 13.25 10 13.25C10.5523 13.25 11 13.6977 11 14.25ZM8.92316 7.31689C9.18596 7.13133 9.56102 7 10 7C11.0482 7 11.5 7.64441 11.5 8C11.5 8.22335 11.3676 8.50877 10.996 8.73631C10.9823 8.74469 10.9689 8.75334 10.9557 8.76226L9.50025 9.63364C9.34172 9.72528 9.21068 9.85919 9.12253 10.02C9.03922 10.1726 8.99686 10.345 9 10.519V11.5C9 12.0523 9.44772 12.5 10 12.5C10.5523 12.5 11 12.0523 11 11.5V11.0668L12.0337 10.448C12.0567 10.4341 12.0791 10.4195 12.1006 10.4042C12.8935 9.89581 13.5 9.04587 13.5 8C13.5 6.14645 11.7132 5 10 5C9.17094 5 8.38819 5.24631 7.76957 5.68311C7.17557 6.10253 6.70525 6.72111 6.55188 7.48076C6.44259 8.02212 6.79285 8.54958 7.33421 8.65888C7.87557 8.76817 8.40303 8.41791 8.51233 7.87655C8.5474 7.70283 8.66922 7.49619 8.92316 7.31689Z" fill="currentColor"/>
 </svg>
 `;
 
-const Radio$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Radio$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15 8H5C4.44772 8 4 8.44772 4 9V15C4 15.5523 4.44772 16 5 16H15C15.5523 16 16 15.5523 16 15V9C16 8.44772 15.5523 8 15 8ZM5 6C3.34315 6 2 7.34315 2 9V15C2 16.6569 3.34315 18 5 18H15C16.6569 18 18 16.6569 18 15V9C18 7.34315 16.6569 6 15 6H5Z" fill="currentColor"/>
 <path d="M10 12C10 13.3807 8.88071 14.5 7.5 14.5C6.11929 14.5 5 13.3807 5 12C5 10.6193 6.11929 9.5 7.5 9.5C8.88071 9.5 10 10.6193 10 12Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6708 1.66457C14.8561 2.03505 14.7059 2.48556 14.3354 2.6708L4.33541 7.67083C3.96492 7.85607 3.51442 7.7059 3.32917 7.33542C3.14393 6.96493 3.2941 6.51443 3.66458 6.32919L13.6646 1.32916C14.0351 1.14392 14.4856 1.29408 14.6708 1.66457Z" fill="currentColor"/>
@@ -2121,7 +2123,7 @@ const Radio$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Refresh$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Refresh$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.05028 14.9497C4.65975 14.5592 4.65975 13.9261 5.05028 13.5355C5.4408 13.145 6.07397 13.145 6.46449 13.5355C7.39677 14.4678 8.655 15 10 15C12.7614 15 15 12.7614 15 10C15 9.44772 15.4477 9 16 9C16.5523 9 17 9.44772 17 10C17 13.866 13.866 17 10 17C8.11912 17 6.35391 16.2534 5.05028 14.9497Z" fill="currentColor"/>
 <path d="M13.5585 12.832C13.099 13.1384 12.4781 13.0141 12.1718 12.5546C11.8655 12.0951 11.9897 11.4742 12.4492 11.1679L15.4496 9.16787C15.9091 8.86154 16.53 8.98575 16.8363 9.4453C17.1426 9.90484 17.0184 10.5257 16.5589 10.832L13.5585 12.832Z" fill="currentColor"/>
 <path d="M18.8321 12.4452C19.1384 12.9048 19.0143 13.5256 18.5547 13.832C18.0952 14.1383 17.4743 14.0142 17.168 13.5546L15.168 10.5546C14.8616 10.0951 14.9858 9.47424 15.4453 9.16789C15.9049 8.86153 16.5257 8.98571 16.8321 9.44524L18.8321 12.4452Z" fill="currentColor"/>
@@ -2131,14 +2133,14 @@ const Refresh$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Reload$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Reload$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.9372 4.21148C14.3936 4.52244 14.5115 5.14453 14.2005 5.60095C13.8896 6.05738 13.2675 6.1753 12.8111 5.86434C11.9885 5.30394 11.0183 5 10 5C7.23858 5 5 7.23858 5 10C5 12.7614 7.23858 15 10 15C12.7614 15 15 12.7614 15 10C15 9.44772 15.4477 9 16 9C16.5523 9 17 9.44772 17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C11.4232 3 12.7852 3.42666 13.9372 4.21148Z" fill="currentColor"/>
 <path d="M13.5385 12.5062C13.0732 12.8038 12.4548 12.6679 12.1572 12.2026C11.8596 11.7373 11.9955 11.1189 12.4608 10.8214L15.9426 8.59426C16.4079 8.29667 17.0263 8.43258 17.3239 8.89784C17.6215 9.36309 17.4855 9.98149 17.0203 10.2791L13.5385 12.5062Z" fill="currentColor"/>
 <path d="M18.9034 12.4104C19.1284 12.9147 18.9019 13.506 18.3976 13.731C17.8932 13.956 17.3019 13.7295 17.0769 13.2252L15.5688 9.84436C15.3438 9.33999 15.5702 8.74871 16.0746 8.52371C16.579 8.29871 17.1703 8.52519 17.3953 9.02957L18.9034 12.4104Z" fill="currentColor"/>
 </svg>
 `;
 
-const Repeat$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Repeat$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5187 2.74864C14.8453 2.49387 15.3165 2.5521 15.5713 2.8787L17.1178 4.86126C17.3726 5.18786 17.3144 5.65915 16.9878 5.91392C16.6612 6.16868 16.1899 6.11045 15.9351 5.78385L14.3886 3.8013C14.1338 3.4747 14.1921 3.00341 14.5187 2.74864Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.9827 4.72731C16.654 4.47531 16.1832 4.53752 15.9312 4.86626L14.3847 6.88372C14.1327 7.21246 14.1949 7.68324 14.5237 7.93524C14.8524 8.18724 15.3232 8.12503 15.5752 7.79629L17.1217 5.77883C17.3737 5.45009 17.3115 4.97931 16.9827 4.72731Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.47998 9.32257C2.47998 6.56115 4.71856 4.32257 7.47998 4.32257H15.3404C15.8927 4.32257 16.3404 4.77029 16.3404 5.32257C16.3404 5.87486 15.8927 6.32257 15.3404 6.32257H7.47998C5.82313 6.32257 4.47998 7.66572 4.47998 9.32257V10.3226C4.47998 10.8749 4.03227 11.3226 3.47998 11.3226C2.9277 11.3226 2.47998 10.8749 2.47998 10.3226V9.32257Z" fill="currentColor"/>
@@ -2148,7 +2150,7 @@ const Repeat$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Rewind$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Rewind$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.6368 9.31771C8.27821 9.70192 8.27821 10.2981 8.6368 10.6823L13.2689 15.6453C13.8882 16.3088 15 15.8706 15 14.963V5.03705C15 4.12943 13.8882 3.69121 13.2689 4.35473L8.6368 9.31771Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7357 10L13 7.57407V12.426L10.7357 10ZM8.6368 10.6823C8.27821 10.2981 8.27821 9.70192 8.6368 9.31771L13.2689 4.35473C13.8882 3.69121 15 4.12943 15 5.03705V14.963C15 15.8706 13.8882 16.3088 13.2689 15.6453L8.6368 10.6823Z" fill="currentColor"/>
 <path d="M3.6368 9.31771C3.27821 9.70192 3.27821 10.2981 3.6368 10.6823L8.26892 15.6453C8.88821 16.3088 9.99997 15.8706 9.99997 14.963V5.03705C9.99997 4.12943 8.88821 3.69121 8.26892 4.35473L3.6368 9.31771Z" fill="currentColor"/>
@@ -2156,7 +2158,7 @@ const Rewind$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const RewindTime$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const RewindTime$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_1889)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.95519 5.80495C4.61543 7.12621 4.03442 8.92824 4.21873 10.6756C4.27667 11.2248 3.87839 11.717 3.32915 11.775C2.77991 11.8329 2.2877 11.4346 2.22977 10.8854C1.9846 8.56104 2.75801 6.14902 4.55083 4.38094C7.68655 1.28852 12.7409 1.34092 15.84 4.48348C18.9392 7.62603 18.9214 12.6806 15.7856 15.773C14.2745 17.2633 12.3143 18.0239 10.3456 18.0589C9.57816 18.0726 8.80873 17.9762 8.06284 17.7697C7.53056 17.6224 7.2185 17.0715 7.36582 16.5392C7.51315 16.0069 8.06407 15.6949 8.59634 15.8422C9.15593 15.9971 9.73363 16.0695 10.31 16.0593C11.7873 16.033 13.2509 15.4638 14.3813 14.349C16.724 12.0386 16.7461 8.25048 14.416 5.88783C12.086 3.52518 8.29791 3.49457 5.95519 5.80495Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.96719 11.6946C3.60013 12.1073 2.96805 12.1442 2.55539 11.7772L0.835358 10.2472C0.422704 9.88011 0.385745 9.24802 0.752808 8.83537C1.11987 8.42272 1.75196 8.38576 2.16461 8.75282L3.88464 10.2828C4.2973 10.6499 4.33426 11.282 3.96719 11.6946Z" fill="currentColor"/>
@@ -2168,7 +2170,7 @@ const RewindTime$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const Scissors$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Scissors$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 5.5C2 7.433 3.567 9 5.5 9C7.433 9 9 7.433 9 5.5C9 3.567 7.433 2 5.5 2C3.567 2 2 3.567 2 5.5ZM7 5.5C7 6.32843 6.32843 7 5.5 7C4.67157 7 4 6.32843 4 5.5C4 4.67157 4.67157 4 5.5 4C6.32843 4 7 4.67157 7 5.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 14C2 15.933 3.567 17.5 5.5 17.5C7.433 17.5 9 15.933 9 14C9 12.067 7.433 10.5 5.5 10.5C3.567 10.5 2 12.067 2 14ZM7 14C7 14.8284 6.32843 15.5 5.5 15.5C4.67157 15.5 4 14.8284 4 14C4 13.1716 4.67157 12.5 5.5 12.5C6.32843 12.5 7 13.1716 7 14Z" fill="currentColor"/>
 <path d="M16.7071 15.2929C17.0976 15.6834 17.0976 16.3166 16.7071 16.7071C16.3166 17.0976 15.6834 17.0976 15.2929 16.7071L6.79289 8.20711C6.40237 7.81658 6.40237 7.18342 6.79289 6.79289C7.18342 6.40237 7.81658 6.40237 8.20711 6.79289L16.7071 15.2929Z" fill="currentColor"/>
@@ -2176,7 +2178,7 @@ const Scissors$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Send$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Send$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1876)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.68542 6.65868C0.758716 6.96758 0.779177 8.28543 1.71502 8.56541L9.20844 10.8072L11.6551 18.5165C11.948 19.4394 13.2507 19.4488 13.5569 18.5302L18.8602 2.62029C19.1208 1.83853 18.3771 1.09479 17.5953 1.35538L1.68542 6.65868ZM5.31842 7.55586L16.3304 3.8852L12.6316 14.9817L10.9548 9.69826C10.8547 9.38295 10.6052 9.13754 10.2883 9.04272L5.31842 7.55586Z" fill="currentColor"/>
 <path d="M17.7674 1.43951L18.8105 2.51742L9.98262 11.0605L8.93948 9.98265L17.7674 1.43951Z" fill="currentColor"/>
@@ -2185,7 +2187,7 @@ const Send$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const ShareAndroid$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ShareAndroid$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 13C6.65685 13 8 11.6569 8 10C8 8.34315 6.65685 7 5 7C3.34315 7 2 8.34315 2 10C2 11.6569 3.34315 13 5 13ZM5 9C5.55228 9 6 9.44772 6 10C6 10.5523 5.55228 11 5 11C4.44772 11 4 10.5523 4 10C4 9.44772 4.44772 9 5 9Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 8C15.6569 8 17 6.65685 17 5C17 3.34315 15.6569 2 14 2C12.3431 2 11 3.34315 11 5C11 6.65685 12.3431 8 14 8ZM14 4C14.5523 4 15 4.44772 15 5C15 5.55228 14.5523 6 14 6C13.4477 6 13 5.55228 13 5C13 4.44772 13.4477 4 14 4Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 18C15.6569 18 17 16.6569 17 15C17 13.3431 15.6569 12 14 12C12.3431 12 11 13.3431 11 15C11 16.6569 12.3431 18 14 18ZM14 14C14.5523 14 15 14.4477 15 15C15 15.5523 14.5523 16 14 16C13.4477 16 13 15.5523 13 15C13 14.4477 13.4477 14 14 14Z" fill="currentColor"/>
@@ -2194,7 +2196,7 @@ const ShareAndroid$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="no
 </svg>
 `;
 
-const ShareIos$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ShareIos$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M9 3C9 2.44772 9.44772 2 10 2C10.5523 2 11 2.44772 11 3L11 13.5C11 14.0523 10.5523 14.5 10 14.5C9.44772 14.5 9 14.0523 9 13.5L9 3Z" fill="currentColor"/>
 <path d="M10.6402 2.76826C11.0645 2.41469 11.1218 1.78413 10.7682 1.35985C10.4147 0.935575 9.7841 0.878251 9.35982 1.23181L6.35982 3.73181C5.93554 4.08538 5.87822 4.71594 6.23178 5.14022C6.58535 5.5645 7.21591 5.62182 7.64019 5.26826L10.6402 2.76826Z" fill="currentColor"/>
 <path d="M9.35981 2.76826C8.93553 2.41469 8.87821 1.78413 9.23177 1.35985C9.58534 0.935575 10.2159 0.878251 10.6402 1.23181L13.6402 3.73181C14.0645 4.08538 14.1218 4.71594 13.7682 5.14022C13.4147 5.5645 12.7841 5.62182 12.3598 5.26826L9.35981 2.76826Z" fill="currentColor"/>
@@ -2202,7 +2204,7 @@ const ShareIos$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Shuffle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Shuffle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5.75C3 5.19772 3.44772 4.75 4 4.75C7.33476 4.75 10.5 6.87603 10.5 10C10.5 13.124 7.33476 15.25 4 15.25C3.44772 15.25 3 14.8023 3 14.25C3 13.6977 3.44772 13.25 4 13.25C6.74037 13.25 8.5 11.5705 8.5 10C8.5 8.42955 6.74037 6.75 4 6.75C3.44772 6.75 3 6.30228 3 5.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16 5.75C16 5.19772 15.5523 4.75 15 4.75C11.6652 4.75 8.5 6.87603 8.5 10C8.5 13.124 11.6652 15.25 15 15.25C15.5523 15.25 16 14.8023 16 14.25C16 13.6977 15.5523 13.25 15 13.25C12.2596 13.25 10.5 11.5705 10.5 10C10.5 8.42955 12.2596 6.75 15 6.75C15.5523 6.75 16 6.30228 16 5.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.4594 14.7783C16.132 15.0321 15.6609 14.9723 15.4071 14.6449L13.9071 12.7094C13.6534 12.382 13.7131 11.9109 14.0405 11.6571C14.3679 11.4034 14.8391 11.4631 15.0928 11.7905L16.5928 13.7261C16.8465 14.0535 16.7868 14.5246 16.4594 14.7783Z" fill="currentColor"/>
@@ -2212,7 +2214,7 @@ const Shuffle$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Sliders$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Sliders$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 4.75C2.5 4.19772 2.94772 3.75 3.5 3.75H10C10.5523 3.75 11 4.19772 11 4.75C11 5.30228 10.5523 5.75 10 5.75H3.5C2.94772 5.75 2.5 5.30228 2.5 4.75ZM13.875 4.75C13.875 4.19772 14.3227 3.75 14.875 3.75H16.5C17.0523 3.75 17.5 4.19772 17.5 4.75C17.5 5.30228 17.0523 5.75 16.5 5.75H14.875C14.3227 5.75 13.875 5.30228 13.875 4.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 5.75C13.1642 5.75 13.5 5.41421 13.5 5C13.5 4.58579 13.1642 4.25 12.75 4.25C12.3358 4.25 12 4.58579 12 5C12 5.41421 12.3358 5.75 12.75 5.75ZM12.75 7.75C14.2688 7.75 15.5 6.51878 15.5 5C15.5 3.48122 14.2688 2.25 12.75 2.25C11.2312 2.25 10 3.48122 10 5C10 6.51878 11.2312 7.75 12.75 7.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 14.75C2.5 14.1977 2.94772 13.75 3.5 13.75H10C10.5523 13.75 11 14.1977 11 14.75C11 15.3023 10.5523 15.75 10 15.75H3.5C2.94772 15.75 2.5 15.3023 2.5 14.75ZM13.875 14.75C13.875 14.1977 14.3227 13.75 14.875 13.75H16.5C17.0523 13.75 17.5 14.1977 17.5 14.75C17.5 15.3023 17.0523 15.75 16.5 15.75H14.875C14.3227 15.75 13.875 15.3023 13.875 14.75Z" fill="currentColor"/>
@@ -2222,7 +2224,7 @@ const Sliders$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Smartphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Smartphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.25 3C6.25 2.86193 6.36193 2.75 6.5 2.75H13.5C13.6381 2.75 13.75 2.86193 13.75 3V15C13.75 15.1381 13.6381 15.25 13.5 15.25H6.5C6.36193 15.25 6.25 15.1381 6.25 15V3Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 0H5.5C4.39543 0 3.5 0.942558 3.5 2.10526V17.8947C3.5 19.0574 4.39543 20 5.5 20H14.5C15.6046 20 16.5 19.0574 16.5 17.8947V2.10526C16.5 0.942558 15.6046 0 14.5 0ZM5.5 18V2H14.5V18H5.5Z" fill="currentColor"/>
 <path d="M10.5 16.5C10.5 16.7761 10.2761 17 10 17C9.72386 17 9.5 16.7761 9.5 16.5C9.5 16.2239 9.72386 16 10 16C10.2761 16 10.5 16.2239 10.5 16.5Z" fill="currentColor"/>
@@ -2230,7 +2232,7 @@ const Smartphone$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const SmartphoneCutout$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SmartphoneCutout$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1817_477)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 0H5.5C4.39543 0 3.5 0.89543 3.5 2V18C3.5 19.1046 4.39543 20 5.5 20H14.5C15.6046 20 16.5 19.1046 16.5 18V2C16.5 0.89543 15.6046 0 14.5 0ZM5.5 18V2H14.5V18H5.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3.5C7.5 2.94772 7.94772 2.5 8.5 2.5H11.5C12.0523 2.5 12.5 2.94772 12.5 3.5C12.5 4.05228 12.0523 4.5 11.5 4.5H8.5C7.94772 4.5 7.5 4.05228 7.5 3.5Z" fill="currentColor"/>
@@ -2239,12 +2241,12 @@ const SmartphoneCutout$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill
 </svg>
 `;
 
-const SmartphoneNotch$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SmartphoneNotch$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6 0H15C16.1046 0 17 0.942558 17 2.10526V17.8947C17 19.0574 16.1046 20 15 20H6C4.89543 20 4 19.0574 4 17.8947V2.10526C4 0.942558 4.89543 0 6 0ZM7 2C6.44772 2 6 2.44772 6 3V17C6 17.5523 6.44772 18 7 18H14C14.5523 18 15 17.5523 15 17V3C15 2.44772 14.5523 2 14 2H13V3.5C13 3.77614 12.7761 4 12.5 4H8.5C8.22386 4 8 3.77614 8 3.5V2H7Z" fill="currentColor"/>
 </svg>
 `;
 
-const Smartphone2$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Smartphone2$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_144)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 0H5.5C4.39543 0 3.5 0.89543 3.5 2V18C3.5 19.1046 4.39543 20 5.5 20H14.5C15.6046 20 16.5 19.1046 16.5 18V2C16.5 0.89543 15.6046 0 14.5 0ZM5.5 18V2H14.5V18H5.5Z" fill="currentColor"/>
 <path d="M10 17.25C9.30964 17.25 8.75 16.6904 8.75 16C8.75 15.3096 9.30964 14.75 10 14.75C10.6904 14.75 11.25 15.3096 11.25 16C11.25 16.6904 10.6904 17.25 10 17.25Z" fill="currentColor"/>
@@ -2253,7 +2255,7 @@ const Smartphone2$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const SoftDrink$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SoftDrink$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.411 4H6.58933C6.48813 4 6.38701 4.00615 6.28655 4.0184C4.916 4.18563 3.94052 5.43224 4.10774 6.80278L5.32785 16.8028C5.48089 18.0571 6.54584 19 7.80945 19H12.1937C13.4576 19 14.5227 18.0567 14.6754 16.8021L15.8927 6.80209C15.9049 6.70186 15.911 6.60097 15.911 6.5C15.911 5.11929 14.7917 4 13.411 4ZM6.52878 6.00368C6.54887 6.00123 6.56909 6 6.58933 6H13.411C13.6871 6 13.911 6.22386 13.911 6.5C13.911 6.52019 13.9097 6.54037 13.9073 6.56042L12.69 16.5604C12.6595 16.8113 12.4465 17 12.1937 17H7.80945C7.55673 17 7.34374 16.8114 7.31313 16.5606L6.09302 6.56056C6.05957 6.28645 6.25467 6.03713 6.52878 6.00368Z" fill="currentColor"/>
 <path d="M9.21684 14.7206C9.09502 15.1165 8.67533 15.3386 8.27944 15.2168C7.88354 15.095 7.66135 14.6753 7.78317 14.2794L11.7832 1.27944C11.905 0.88354 12.3247 0.661352 12.7206 0.783167C13.1165 0.904981 13.3386 1.32467 13.2168 1.72057L9.21684 14.7206Z" fill="currentColor"/>
 <path d="M5.5 10.25C5.08579 10.25 4.75 9.91421 4.75 9.5C4.75 9.08579 5.08579 8.75 5.5 8.75H14.5C14.9142 8.75 15.25 9.08579 15.25 9.5C15.25 9.91421 14.9142 10.25 14.5 10.25H5.5Z" fill="currentColor"/>
@@ -2261,7 +2263,7 @@ const SoftDrink$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Sort$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Sort$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2929 7.70711C9.90237 7.31658 9.90237 6.68342 10.2929 6.29289L13.2929 3.29289C13.6834 2.90237 14.3166 2.90237 14.7071 3.29289C15.0976 3.68342 15.0976 4.31658 14.7071 4.70711L11.7071 7.70711C11.3166 8.09763 10.6834 8.09763 10.2929 7.70711Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.7071 7.70711C17.3166 8.09763 16.6834 8.09763 16.2929 7.70711L13.2929 4.70711C12.9024 4.31658 12.9024 3.68342 13.2929 3.29289C13.6834 2.90237 14.3166 2.90237 14.7071 3.29289L17.7071 6.29289C18.0976 6.68342 18.0976 7.31658 17.7071 7.70711Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5C14.5523 5 15 5.44772 15 6V14C15 14.5523 14.5523 15 14 15C13.4477 15 13 14.5523 13 14V6C13 5.44772 13.4477 5 14 5Z" fill="currentColor"/>
@@ -2271,20 +2273,20 @@ const Sort$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const SpeakerHigh$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SpeakerHigh$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3341 1.75396L5.6534 5.93183H2C1.44772 5.93183 1 6.37954 1 6.93183V12.9318C1 13.4841 1.44772 13.9318 2 13.9318H5.53532L10.3314 18.2437C10.9751 18.8223 12 18.3655 12 17.5V2.5C12 1.63618 10.9785 1.17875 10.3341 1.75396ZM6.6659 7.70891L10 4.73298V15.2563L6.87443 12.4463C6.70368 12.1394 6.37609 11.9318 6 11.9318H3V7.93183H5.75114C6.05292 8.01082 6.39317 7.95234 6.6659 7.70891Z" fill="currentColor"/>
 <path d="M15.4888 13.0688C15.1747 13.3388 14.7012 13.303 14.4312 12.9889C14.1612 12.6747 14.197 12.2012 14.5112 11.9312C14.545 11.9021 14.5784 11.8705 14.6111 11.8366C14.7486 11.6941 14.872 11.5127 14.9728 11.3008C15.1512 10.9258 15.25 10.4758 15.25 10C15.25 9.24552 15.0002 8.56671 14.6111 8.16341C14.5784 8.12949 14.545 8.09794 14.5112 8.06882C14.197 7.79884 14.1612 7.32532 14.4312 7.01118C14.7012 6.69703 15.1747 6.66123 15.4888 6.93121C15.5585 6.99105 15.6258 7.05473 15.6907 7.12202C16.3619 7.8178 16.75 8.87235 16.75 10C16.75 10.6958 16.6028 11.3662 16.3272 11.9454C16.1586 12.2997 15.9438 12.6156 15.6907 12.878C15.6258 12.9453 15.5585 13.009 15.4888 13.0688Z" fill="currentColor"/>
 <path d="M16.4113 16.1272C16.065 16.3543 15.6 16.2577 15.3729 15.9114C15.1457 15.565 15.2423 15.1001 15.5887 14.8729C15.7519 14.7658 15.9098 14.6509 16.0616 14.5287C16.2134 14.4065 16.359 14.2771 16.4979 14.1411C16.6367 14.005 16.7687 13.8625 16.8933 13.7139C17.0178 13.5654 17.1348 13.4111 17.2438 13.2516C17.3527 13.0921 17.4536 12.9276 17.5461 12.7585C17.6384 12.5896 17.7222 12.4164 17.7971 12.2393C17.8719 12.0626 17.9378 11.8823 17.9945 11.6989C18.051 11.5161 18.0984 11.3304 18.1363 11.1423C18.1741 10.9551 18.2026 10.7656 18.2216 10.5744C18.2405 10.3844 18.25 10.1929 18.25 10C18.25 9.80718 18.2405 9.6156 18.2216 9.42568C18.2026 9.23441 18.1741 9.04493 18.1363 8.85772C18.0984 8.66962 18.051 8.48393 17.9945 8.30115C17.9378 8.11775 17.8719 7.93743 17.7971 7.76072C17.7222 7.58369 17.6384 7.41043 17.5461 7.24153C17.4536 7.07247 17.3527 6.90792 17.2438 6.74848C17.1348 6.58891 17.0178 6.43461 16.8933 6.28613C16.7687 6.13758 16.6367 5.99502 16.4979 5.859C16.359 5.72293 16.2134 5.59354 16.0616 5.47135C15.9098 5.34914 15.7519 5.23426 15.5887 5.12716C15.2423 4.89999 15.1457 4.43505 15.3729 4.08869C15.6 3.74233 16.065 3.64571 16.4113 3.87289C16.6153 4.00666 16.8125 4.15018 17.0022 4.30288C17.1919 4.45561 17.374 4.61737 17.5477 4.78755C17.7214 4.95777 17.8866 5.13625 18.0426 5.32231C18.1987 5.50844 18.3455 5.70199 18.4823 5.90223C18.6192 6.10255 18.746 6.30939 18.8622 6.52202C18.9785 6.73469 19.0841 6.95295 19.1785 7.17608C19.2728 7.39899 19.356 7.62654 19.4275 7.85804C19.4989 8.08883 19.5587 8.32333 19.6067 8.56084C19.6544 8.79714 19.6903 9.03622 19.7143 9.27743C19.738 9.51659 19.75 9.75765 19.75 10C19.75 10.2424 19.738 10.4835 19.7143 10.7226C19.6903 10.9638 19.6544 11.2029 19.6067 11.4392C19.5587 11.6767 19.4989 11.9112 19.4275 12.142C19.356 12.3735 19.2728 12.6011 19.1785 12.824C19.0841 13.0471 18.9785 13.2654 18.8622 13.478C18.746 13.6907 18.6192 13.8975 18.4823 14.0978C18.3455 14.2981 18.1987 14.4916 18.0426 14.6777C17.8866 14.8638 17.7214 15.0423 17.5477 15.2125C17.374 15.3827 17.1919 15.5444 17.0022 15.6972C16.8125 15.8499 16.6153 15.9934 16.4113 16.1272Z" fill="currentColor"/>
 </svg>
 `;
 
-const SpeakerLow$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SpeakerLow$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3341 1.75396L5.6534 5.93183H2C1.44772 5.93183 1 6.37954 1 6.93183V12.9318C1 13.4841 1.44772 13.9318 2 13.9318H5.53532L10.3314 18.2437C10.9751 18.8223 12 18.3655 12 17.5V2.5C12 1.63618 10.9785 1.17875 10.3341 1.75396ZM6.6659 7.70891L10 4.73298V15.2563L6.87443 12.4463C6.70368 12.1394 6.37609 11.9318 6 11.9318H3V7.93183H5.75114C6.05292 8.01082 6.39317 7.95234 6.6659 7.70891Z" fill="currentColor"/>
 <path d="M15.4889 13.0688C15.1747 13.3388 14.7012 13.303 14.4312 12.9889C14.1612 12.6747 14.197 12.2012 14.5112 11.9312C14.5451 11.9021 14.5784 11.8705 14.6111 11.8366C14.7486 11.6941 14.872 11.5127 14.9728 11.3008C15.1512 10.9258 15.25 10.4758 15.25 10C15.25 9.24552 15.0002 8.56671 14.6111 8.16341C14.5784 8.12949 14.5451 8.09794 14.5112 8.06882C14.197 7.79884 14.1612 7.32532 14.4312 7.01118C14.7012 6.69703 15.1747 6.66123 15.4889 6.93121C15.5585 6.99105 15.6258 7.05473 15.6907 7.12202C16.3619 7.8178 16.75 8.87235 16.75 10C16.75 10.6958 16.6028 11.3662 16.3272 11.9454C16.1586 12.2997 15.9439 12.6156 15.6907 12.878C15.6258 12.9453 15.5585 13.009 15.4889 13.0688Z" fill="currentColor"/>
 </svg>
 `;
 
-const SpeakerOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SpeakerOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_2158)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.3341 1.75396L5.6534 5.93183H2C1.44772 5.93183 1 6.37954 1 6.93183V12.9318C1 13.4841 1.44772 13.9318 2 13.9318H5.53532L10.3314 18.2437C10.9751 18.8223 12 18.3655 12 17.5V2.5C12 1.63618 10.9785 1.17875 10.3341 1.75396ZM6.6659 7.70891L10 4.73298V15.2563L6.87443 12.4463C6.70368 12.1394 6.37609 11.9318 6 11.9318H3V7.93183H5.75114C6.05292 8.01082 6.39317 7.95234 6.6659 7.70891Z" fill="currentColor"/>
 <path d="M15.4889 13.0688C15.1747 13.3388 14.7012 13.303 14.4312 12.9889C14.1612 12.6747 14.197 12.2012 14.5112 11.9312C14.5451 11.9021 14.5784 11.8705 14.6111 11.8366C14.7486 11.6941 14.872 11.5127 14.9728 11.3008C15.1512 10.9258 15.25 10.4758 15.25 10C15.25 9.24552 15.0002 8.56671 14.6111 8.16341C14.5784 8.12949 14.5451 8.09794 14.5112 8.06882C14.197 7.79884 14.1612 7.32532 14.4312 7.01118C14.7012 6.69703 15.1747 6.66123 15.4889 6.93121C15.5585 6.99105 15.6258 7.05473 15.6907 7.12202C16.3619 7.8178 16.75 8.87235 16.75 10C16.75 10.6958 16.6028 11.3662 16.3272 11.9454C16.1586 12.2997 15.9439 12.6156 15.6907 12.878C15.6258 12.9453 15.5585 13.009 15.4889 13.0688Z" fill="currentColor"/>
@@ -2295,27 +2297,27 @@ const SpeakerOff$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const Square$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Square$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14 5H6C5.44772 5 5 5.44772 5 6V14C5 14.5523 5.44772 15 6 15H14C14.5523 15 15 14.5523 15 14V6C15 5.44772 14.5523 5 14 5ZM7 13V7H13V13H7Z" fill="currentColor"/>
 </svg>
 `;
 
-const SquareFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SquareFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M6 4.5H14C14.8284 4.5 15.5 5.17157 15.5 6V14C15.5 14.8284 14.8284 15.5 14 15.5H6C5.17157 15.5 4.5 14.8284 4.5 14V6C4.5 5.17157 5.17157 4.5 6 4.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const Star$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Star$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.70492 17.8855L10 15.9706L14.2951 17.8855C14.9986 18.1991 15.7777 17.6331 15.6967 16.8671L15.2028 12.1905L18.3513 8.69737C18.8669 8.12523 18.5694 7.20937 17.8159 7.04961L13.2155 6.07423L10.8663 2.00044C10.4815 1.33319 9.5185 1.33319 9.13372 2.00044L6.78449 6.07423L2.18413 7.04961C1.43063 7.20937 1.13305 8.12523 1.64874 8.69737L4.79719 12.1905L4.30325 16.8671C4.22234 17.6331 5.00142 18.1991 5.70492 17.8855ZM9.5928 13.9623L6.47433 15.3527L6.83295 11.9572C6.86276 11.675 6.77127 11.3934 6.58129 11.1826L4.29534 8.64644L7.63546 7.93826C7.91305 7.8794 8.15257 7.70538 8.29432 7.45957L10 4.50177L11.7057 7.45957C11.8474 7.70538 12.0869 7.8794 12.3645 7.93826L15.7047 8.64644L13.4187 11.1826C13.2287 11.3934 13.1372 11.675 13.167 11.9572L13.5257 15.3527L10.4072 13.9623C10.148 13.8468 9.85197 13.8468 9.5928 13.9623Z" fill="currentColor"/>
 </svg>
 `;
 
-const StarFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const StarFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M10 15.9706L5.70492 17.8855C5.00142 18.1991 4.22234 17.6331 4.30325 16.8671L4.79719 12.1905L1.64874 8.69737C1.13305 8.12523 1.43063 7.20937 2.18413 7.04961L6.78449 6.07423L9.13372 2.00044C9.5185 1.33319 10.4815 1.33319 10.8663 2.00044L13.2155 6.07423L17.8159 7.04961C18.5694 7.20937 18.8669 8.12523 18.3513 8.69737L15.2028 12.1905L15.6967 16.8671C15.7777 17.6331 14.9986 18.1991 14.2951 17.8855L10 15.9706Z" fill="currentColor"/>
 </svg>
 `;
 
-const Stars$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Stars$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1749_644)">
 <path d="M6.99858 7.57089L9.0003 1L11.0016 7.57116L17 9.76359L11.0478 12.1277L9.0003 19L6.95229 12.128L1 9.76359L6.99858 7.57089Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
 <path d="M17.0846 13.5744C17.0805 13.5322 17.0437 13.5 17 13.5C16.9563 13.5 16.9195 13.5322 16.9154 13.5744C16.7161 15.5682 16.5699 16.1515 14.5766 16.339C14.5332 16.343 14.5 16.3787 14.5 16.4211C14.5 16.4636 14.5332 16.4989 14.5766 16.5033C16.5424 16.6883 16.7126 17.3987 16.9154 19.4256C16.9195 19.4678 16.9563 19.5 17 19.5C17.0437 19.5 17.0805 19.4678 17.0846 19.4256C17.2871 17.3987 17.4573 16.6883 19.4234 16.5033C19.4668 16.4992 19.5 16.4636 19.5 16.4211C19.5 16.3787 19.4668 16.343 19.4234 16.339C17.4301 16.1512 17.2839 15.5682 17.0846 13.5744Z" fill="currentColor" stroke="currentColor"/>
@@ -2326,7 +2328,7 @@ const Stars$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Stopwatch$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Stopwatch$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 5.5C6.96243 5.5 4.5 7.96243 4.5 11C4.5 14.0376 6.96243 16.5 10 16.5C13.0376 16.5 15.5 14.0376 15.5 11C15.5 7.96243 13.0376 5.5 10 5.5ZM2.5 11C2.5 6.85786 5.85786 3.5 10 3.5C14.1421 3.5 17.5 6.85786 17.5 11C17.5 15.1421 14.1421 18.5 10 18.5C5.85786 18.5 2.5 15.1421 2.5 11Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.79289 3.79292C3.18342 3.4024 3.81658 3.4024 4.20711 3.79292L5.70711 5.29292C6.09763 5.68345 6.09763 6.31661 5.70711 6.70714C5.31658 7.09766 4.68342 7.09766 4.29289 6.70714L2.79289 5.20714C2.40237 4.81661 2.40237 4.18345 2.79289 3.79292Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2929 6.70708C14.6834 7.0976 15.3166 7.0976 15.7071 6.70708L17.2071 5.20708C17.5976 4.81655 17.5976 4.18339 17.2071 3.79286C16.8166 3.40234 16.1834 3.40234 15.7929 3.79286L14.2929 5.29286C13.9024 5.68339 13.9024 6.31655 14.2929 6.70708Z" fill="currentColor"/>
@@ -2336,14 +2338,14 @@ const Stopwatch$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const StudioBackdrop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const StudioBackdrop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3C3 2.17157 3.67157 1.5 4.5 1.5H15.5C16.3284 1.5 17 2.17157 17 3V10C17 10.8284 16.3284 11.5 15.5 11.5H4.5C3.67157 11.5 3 10.8284 3 10V3ZM5 3.5V9.5H15V3.5H5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M1.75 2.5C1.75 1.94772 2.19772 1.5 2.75 1.5H17.25C17.8023 1.5 18.25 1.94772 18.25 2.5C18.25 3.05228 17.8023 3.5 17.25 3.5H2.75C2.19772 3.5 1.75 3.05228 1.75 2.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.7198 16.5L4.98058 10.1961L3.01942 9.80389L1.63903 16.7058C1.45339 17.634 2.16333 18.5 3.1099 18.5H16.8901C17.8367 18.5 18.5466 17.634 18.361 16.7058L16.9806 9.80389L15.0194 10.1961L16.2802 16.5H3.7198Z" fill="currentColor"/>
 </svg>
 `;
 
-const StudioLightFront$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const StudioLightFront$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 8C10.5523 8 11 7.55228 11 7C11 6.44772 10.5523 6 10 6C9.44772 6 9 6.44772 9 7C9 7.55228 9.44772 8 10 8ZM10 10C11.6569 10 13 8.65685 13 7C13 5.34315 11.6569 4 10 4C8.34315 4 7 5.34315 7 7C7 8.65685 8.34315 10 10 10Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.01349 3.50774C5.23572 2.17443 6.19747 0.5 7.74105 0.5H12.259C13.8026 0.5 14.7643 2.17443 13.9865 3.50774L12.2388 6.50387L10.5112 5.49613L12.259 2.5H7.74105L9.48879 5.49613L7.76123 6.50387L6.01349 3.50774Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9865 10.4923C14.7643 11.8256 13.8025 13.5 12.259 13.5H7.74102C6.19744 13.5 5.2357 11.8256 6.01347 10.4923L7.76121 7.49613L9.48877 8.50387L7.74102 11.5H12.259L10.5112 8.50387L12.2388 7.49613L13.9865 10.4923Z" fill="currentColor"/>
@@ -2353,7 +2355,7 @@ const StudioLightFront$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill
 </svg>
 `;
 
-const StudioLightSide$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const StudioLightSide$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8906 4.45595C15.2197 3.56988 17 4.52266 17 6.12006V9.38302C17 10.9804 15.2197 11.9332 13.8906 11.0471L10.9453 9.08359L11.8333 7.75154L10.9453 6.41949L13.8906 4.45595ZM12.5528 7.75154L15 9.38302L15 6.12006L12.5528 7.75154Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9138 18.1577C13.6895 18.6624 13.0985 18.8897 12.5939 18.6653L9.49999 17.2903V18.2515C9.49999 18.8038 9.05228 19.2515 8.49999 19.2515C7.94771 19.2515 7.49999 18.8038 7.49999 18.2515L7.49999 17.2903L4.40613 18.6653C3.90145 18.8897 3.31049 18.6624 3.08618 18.1577C2.86188 17.653 3.08917 17.062 3.59386 16.8377L7.49999 15.1017V11.2515C7.49999 10.6993 7.94771 10.2515 8.49999 10.2515C9.05228 10.2515 9.49999 10.6993 9.49999 11.2515V15.1017L13.4061 16.8377C13.9108 17.062 14.1381 17.653 13.9138 18.1577Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 5.75154C4.5 4.64697 5.39543 3.75154 6.5 3.75154H10.5C11.6046 3.75154 12.5 4.64697 12.5 5.75154V9.75154C12.5 10.8561 11.6046 11.7515 10.5 11.7515H6.5C5.39543 11.7515 4.5 10.8561 4.5 9.75154V5.75154ZM10.5 5.75154H6.5V9.75154H10.5V5.75154Z" fill="currentColor"/>
@@ -2362,7 +2364,7 @@ const StudioLightSide$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill=
 </svg>
 `;
 
-const Sun$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Sun$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1459)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 14C12.2091 14 14 12.2091 14 10C14 7.79086 12.2091 6 10 6C7.79086 6 6 7.79086 6 10C6 12.2091 7.79086 14 10 14ZM10 8C11.1046 8 12 8.89543 12 10C12 11.1046 11.1046 12 10 12C8.89543 12 8 11.1046 8 10C8 8.89543 8.89543 8 10 8Z" fill="currentColor"/>
 <path d="M0.5 10C0.5 9.44772 0.947715 9 1.5 9H3.5C4.05228 9 4.5 9.44772 4.5 10C4.5 10.5523 4.05228 11 3.5 11H1.5C0.947715 11 0.5 10.5523 0.5 10Z" fill="currentColor"/>
@@ -2378,7 +2380,7 @@ const Sun$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const SunFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SunFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1438)">
 <path d="M13.5 10C13.5 11.933 11.933 13.5 10 13.5C8.067 13.5 6.5 11.933 6.5 10C6.5 8.067 8.067 6.5 10 6.5C11.933 6.5 13.5 8.067 13.5 10Z" fill="currentColor"/>
 <path d="M0.5 10C0.5 9.44772 0.947715 9 1.5 9H3.5C4.05228 9 4.5 9.44772 4.5 10C4.5 10.5523 4.05228 11 3.5 11H1.5C0.947715 11 0.5 10.5523 0.5 10Z" fill="currentColor"/>
@@ -2394,7 +2396,7 @@ const SunFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Syringe$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Syringe$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.35354 10.7175C3.37723 11.6938 3.37723 13.2767 4.35354 14.253L5.76776 15.6673C6.74407 16.6436 8.32698 16.6436 9.30329 15.6673L16.2744 8.69611C16.7572 8.21339 17.0215 7.55425 17.006 6.87175L16.9742 5.46465C16.9436 4.11666 15.8497 3.03572 14.5014 3.02138L13.1266 3.00676C12.4543 2.99961 11.8076 3.2635 11.3322 3.73885L4.35354 10.7175ZM14.8602 7.2819L7.88908 14.253C7.69381 14.4483 7.37723 14.4483 7.18197 14.253L5.76776 12.8388C5.57249 12.6436 5.57249 12.327 5.76776 12.1317L12.7464 5.15307C12.8415 5.058 12.9708 5.00522 13.1053 5.00665L14.4801 5.02127C14.7498 5.02414 14.9686 5.24033 14.9747 5.50992L15.0065 6.91703C15.0096 7.05353 14.9568 7.18536 14.8602 7.2819Z" fill="currentColor"/>
 <path d="M11.0208 11.6066C11.2161 11.8019 11.2161 12.1185 11.0208 12.3137C10.8256 12.509 10.509 12.509 10.3137 12.3137L8.8995 10.8995C8.70424 10.7042 8.70424 10.3877 8.8995 10.1924C9.09476 9.99713 9.41134 9.99713 9.60661 10.1924L11.0208 11.6066Z" fill="currentColor"/>
 <path d="M5.71751 16.9099C6.10804 17.3004 6.10804 17.9336 5.71751 18.3241C5.32699 18.7146 4.69382 18.7146 4.3033 18.3241L1.47487 15.4957C1.08435 15.1052 1.08435 14.472 1.47487 14.0815C1.8654 13.6909 2.49856 13.6909 2.88909 14.0815L5.71751 16.9099Z" fill="currentColor"/>
@@ -2405,7 +2407,7 @@ const Syringe$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const TShirt$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TShirt$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_734)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.4481 10.3965L2.99999 10.1199V17C2.99999 18.6569 4.34314 20 5.99999 20H14C15.6568 20 17 18.6569 17 17V10.118L17.5528 10.3944C18.1347 10.6854 18.835 10.352 18.9762 9.71693L19.9762 5.21693C20.0503 4.88317 19.9489 4.53465 19.7071 4.29289L17.2929 1.87868C16.7303 1.31607 15.9672 1 15.1716 1H13C12.5133 1 12.0973 1.35042 12.0145 1.83004C11.7469 3.3817 11.1284 4 9.99902 4C8.86986 4 8.25211 3.38205 7.98555 1.83066C7.90309 1.35075 7.48694 1 6.99999 1H4.82884C4.03282 1 3.26943 1.31637 2.70676 1.87945L0.294793 4.29315C0.0533553 4.53476 -0.0480615 4.88289 0.0258427 5.21637L1.02368 9.71889C1.16458 10.3547 1.86593 10.6883 2.4481 10.3965ZM4.12148 3.29315C4.30904 3.10546 4.5635 3 4.82884 3H6.20588C6.77637 4.92818 8.07723 6 9.99902 6C11.9208 6 13.2221 4.92825 13.7936 3H15.1716C15.4368 3 15.6911 3.10536 15.8787 3.29289L17.9047 5.31894L17.3016 8.03279L16.4472 7.60557C15.7823 7.27312 15 7.75662 15 8.5V17C15 17.5523 14.5523 18 14 18H5.99999C5.44771 18 4.99999 17.5523 4.99999 17V8.5C4.99999 7.75618 4.21684 7.27271 3.55188 7.60602L2.69873 8.03367L2.09711 5.31898L4.12148 3.29315Z" fill="currentColor"/>
 <path d="M11.5 10.5C10.9477 10.5 10.5 10.0523 10.5 9.5C10.5 8.94772 10.9477 8.5 11.5 8.5H13.5C14.0523 8.5 14.5 8.94772 14.5 9.5C14.5 10.0523 14.0523 10.5 13.5 10.5H11.5Z" fill="currentColor"/>
@@ -2414,7 +2416,7 @@ const TShirt$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Taxi$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Taxi$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.17116 3C5.024 3 4.02404 3.78074 3.74581 4.89366L2.68528 9.13576C1.70458 9.47364 1 10.4045 1 11.5V14.5C1 15.8807 2.11929 17 3.5 17H16.5C17.8807 17 19 15.8807 19 14.5V11.5C19 10.4045 18.2954 9.47364 17.3147 9.13576L16.2542 4.89366C15.976 3.78074 14.976 3 13.8288 3H6.17116ZM3.5 11C3.95887 11 4.35885 10.6877 4.47014 10.2425L5.68609 5.37873C5.74174 5.15615 5.94173 5 6.17116 5H10.0007H13.8288C14.0583 5 14.2583 5.15615 14.3139 5.37873L15.5299 10.2425C15.6411 10.6877 16.0411 11 16.5 11C16.7761 11 17 11.2239 17 11.5V14.5C17 14.7761 16.7761 15 16.5 15H3.5C3.22386 15 3 14.7761 3 14.5V11.5C3 11.2239 3.22386 11 3.5 11Z" fill="currentColor"/>
 <path d="M16.5 13C16.5 13.8284 15.8284 14.5 15 14.5C14.1716 14.5 13.5 13.8284 13.5 13C13.5 12.1716 14.1716 11.5 15 11.5C15.8284 11.5 16.5 12.1716 16.5 13Z" fill="currentColor"/>
 <path d="M6.5 13C6.5 13.8284 5.82843 14.5 5 14.5C4.17157 14.5 3.5 13.8284 3.5 13C3.5 12.1716 4.17157 11.5 5 11.5C5.82843 11.5 6.5 12.1716 6.5 13Z" fill="currentColor"/>
@@ -2425,14 +2427,14 @@ const Taxi$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Television$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Television$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 8L2 15C2 16.6569 3.34315 18 5 18H15C16.6569 18 18 16.6569 18 15V8C18 6.34315 16.6569 5 15 5H5C3.34315 5 2 6.34315 2 8ZM5 16C4.44772 16 4 15.5523 4 15V8C4 7.44771 4.44772 7 5 7H15C15.5523 7 16 7.44771 16 8V15C16 15.5523 15.5523 16 15 16H5Z" fill="currentColor"/>
 <path d="M11.2809 5.62469C10.9359 6.05596 10.3066 6.12588 9.87531 5.78087C9.44405 5.43586 9.37413 4.80657 9.71914 4.3753L11.7191 1.8753C12.0641 1.44404 12.6934 1.37412 13.1247 1.71913C13.556 2.06414 13.6259 2.69343 13.2809 3.12469L11.2809 5.62469Z" fill="currentColor"/>
 <path d="M8.71912 5.62469C9.06413 6.05596 9.69343 6.12588 10.1247 5.78087C10.556 5.43586 10.6259 4.80657 10.2809 4.3753L8.28086 1.8753C7.93585 1.44404 7.30656 1.37412 6.8753 1.71913C6.44404 2.06414 6.37412 2.69343 6.71912 3.12469L8.71912 5.62469Z" fill="currentColor"/>
 </svg>
 `;
 
-const TextBubble$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TextBubble$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle cx="7" cy="9" r="1" fill="currentColor"/>
 <circle cx="10" cy="9" r="1" fill="currentColor"/>
 <circle cx="13" cy="9" r="1" fill="currentColor"/>
@@ -2444,7 +2446,7 @@ const TextBubble$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const TextBubbles$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TextBubbles$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M5.53984 8.38334C5.99982 8.38334 6.37271 8.01025 6.37271 7.55001C6.37271 7.08977 5.99982 6.71667 5.53984 6.71667C5.07986 6.71667 4.70697 7.08977 4.70697 7.55001C4.70697 8.01025 5.07986 8.38334 5.53984 8.38334Z" fill="currentColor"/>
 <path d="M8.03844 8.38334C8.49842 8.38334 8.87131 8.01025 8.87131 7.55001C8.87131 7.08977 8.49842 6.71667 8.03844 6.71667C7.57846 6.71667 7.20557 7.08977 7.20557 7.55001C7.20557 8.01025 7.57846 8.38334 8.03844 8.38334Z" fill="currentColor"/>
 <path d="M10.537 8.38334C10.997 8.38334 11.3699 8.01025 11.3699 7.55001C11.3699 7.08977 10.997 6.71667 10.537 6.71667C10.0771 6.71667 9.70416 7.08977 9.70416 7.55001C9.70416 8.01025 10.0771 8.38334 10.537 8.38334Z" fill="currentColor"/>
@@ -2458,30 +2460,30 @@ const TextBubbles$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const ThumbsDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ThumbsDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.8107 12.1077C17.363 12.1077 17.8107 11.66 17.8107 11.1077V9.10773V5.60773C17.8107 5.05544 17.363 4.60773 16.8107 4.60773H14.3107C13.7584 4.60773 13.3107 5.05544 13.3107 5.60773V11.1077C13.3107 11.66 13.7584 12.1077 14.3107 12.1077H16.8107ZM15.5607 6.10773C15.0084 6.10773 14.5607 6.55544 14.5607 7.10773C14.5607 7.66001 15.0084 8.10773 15.5607 8.10773C16.113 8.10773 16.5607 7.66001 16.5607 7.10773C16.5607 6.55544 16.113 6.10773 15.5607 6.10773Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.82937 15.4429C8.91585 15.5294 9.05999 15.496 9.10299 15.3867L9.29719 14.2216C9.50109 12.9982 10.1373 11.8957 11.08 11.1085L11.08 6.42753L6.88389 5.58831C6.85816 5.58316 6.83285 5.57707 6.808 5.57008L6.808 5.57011C6.19161 5.39591 5.53451 5.65219 5.19882 6.19771L4.9814 6.55105L4.47473 7.88886C4.13143 8.79532 4.13826 9.79671 4.49301 10.6978L4.80359 11.3189C5.04451 11.8008 5.53616 12.1057 6.07457 12.1077L6.07999 12.1077H7.57999C7.62215 12.1077 7.66371 12.1103 7.7045 12.1154C7.82413 12.1002 7.94855 12.1066 8.07257 12.1376C8.60836 12.2716 8.9341 12.8146 8.80013 13.3503L8.65161 13.9443C8.60687 14.1233 8.58737 14.3076 8.59368 14.4919L8.60773 14.9022C8.61429 15.0939 8.68558 15.2775 8.80962 15.4232L8.82937 15.4429ZM12.2581 4.62355L7.30993 3.63391C5.84497 3.23971 4.29234 3.85458 3.49548 5.14956L3.23993 5.56485C3.21619 5.60166 3.19466 5.64039 3.17558 5.68093C3.16162 5.71041 3.14923 5.74031 3.13837 5.77052L2.60437 7.18051C2.07955 8.56625 2.09556 10.0986 2.64896 11.4729C2.65983 11.5005 2.67201 11.5279 2.68554 11.555L3.01474 12.2134C3.59524 13.3744 4.78189 14.1078 6.07994 14.1078V14.1077H6.07999H6.60513C6.59313 14.2581 6.58968 14.4092 6.59486 14.5603L6.6089 14.9706C6.63178 15.639 6.88907 16.2779 7.3357 16.7756C7.34768 16.789 7.36007 16.802 7.37289 16.8149L7.41515 16.8571C8.60633 18.0483 10.6416 17.4846 11.0501 15.8503L11.0501 15.8503C11.0565 15.8247 11.0619 15.7986 11.0663 15.7721L11.27 14.5504C11.4129 13.6928 11.9027 12.9321 12.6239 12.447C12.8984 12.2688 13.08 11.9594 13.08 11.6077L13.08 5.62726C13.0819 5.53328 13.0705 5.44113 13.0473 5.35301C12.9721 5.06864 12.7734 4.82629 12.5004 4.70012C12.4243 4.66483 12.3431 4.63882 12.2581 4.62355Z" fill="currentColor"/>
 </svg>
 `;
 
-const ThumbsUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ThumbsUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.5 8C2.94772 8 2.5 8.44772 2.5 9V11V14.5C2.5 15.0523 2.94772 15.5 3.5 15.5H6C6.55228 15.5 7 15.0523 7 14.5V9C7 8.44772 6.55228 8 6 8H3.5ZM4.75 14C5.30228 14 5.75 13.5523 5.75 13C5.75 12.4477 5.30228 12 4.75 12C4.19772 12 3.75 12.4477 3.75 13C3.75 13.5523 4.19772 14 4.75 14Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4813 4.66482C11.3948 4.57833 11.2507 4.61173 11.2077 4.72103L11.0135 5.88612C10.8096 7.10949 10.1734 8.21206 9.23071 8.99921V13.6802L13.4268 14.5194C13.4546 14.525 13.4819 14.5316 13.5086 14.5393C14.1233 14.7102 14.7773 14.4538 15.1119 13.9101L15.3292 13.5568L15.836 12.2189C16.1793 11.3124 16.1724 10.311 15.8177 9.40995L15.5071 8.78878C15.2662 8.30694 14.7745 8.00199 14.2361 7.99999L14.2307 8H12.7307C12.6885 8 12.647 7.99739 12.6062 7.99232C12.4866 8.00748 12.3622 8.0011 12.2381 7.97009C11.7023 7.83612 11.3766 7.29317 11.5106 6.75738L11.6591 6.1634C11.7038 5.98448 11.7233 5.80018 11.717 5.61585L11.703 5.2055C11.6964 5.01383 11.6251 4.83027 11.5011 4.68456L11.4813 4.66482ZM8.05258 15.4842L12.9999 16.4736C14.4651 16.8683 16.0182 16.2535 16.8152 14.9582L17.0716 14.5416C17.0931 14.5081 17.1128 14.4731 17.1305 14.4365C17.1465 14.4035 17.1606 14.37 17.1727 14.3361L17.7063 12.9272C18.2311 11.5415 18.2151 10.0091 17.6617 8.6348C17.6509 8.60718 17.6387 8.57981 17.6252 8.55275L17.296 7.89436C16.7155 6.73335 15.5288 5.99996 14.2308 5.99998V6H14.2307H13.7056C13.7176 5.84964 13.721 5.69853 13.7158 5.54743L13.7018 5.13708C13.6789 4.46875 13.4216 3.82978 12.975 3.33208C12.963 3.31876 12.9506 3.30568 12.9378 3.29287L12.8955 3.2506C11.7044 2.05943 9.66913 2.62316 9.26056 4.25744L9.26057 4.25744C9.25419 4.28306 9.24877 4.30913 9.24436 4.33562L9.04073 5.5573C8.89778 6.41494 8.40796 7.17565 7.68682 7.6607C7.41229 7.83897 7.23071 8.14828 7.23071 8.5V14.4805C7.22877 14.5744 7.24017 14.6666 7.26344 14.7547C7.33856 15.0391 7.53733 15.2814 7.81032 15.4076C7.88637 15.4429 7.96761 15.4689 8.05258 15.4842Z" fill="currentColor"/>
 </svg>
 `;
 
-const Times$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Times$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.17158 14.2426C6.78105 14.6332 6.14789 14.6332 5.75736 14.2426C5.36684 13.8521 5.36684 13.2189 5.75736 12.8284L12.8284 5.75735C13.219 5.36682 13.8521 5.36682 14.2426 5.75735C14.6332 6.14787 14.6332 6.78104 14.2426 7.17156L7.17158 14.2426Z" fill="currentColor"/>
 <path d="M5.75736 7.17152C5.36684 6.781 5.36684 6.14783 5.75736 5.75731C6.14789 5.36679 6.78105 5.36679 7.17158 5.75731L14.2426 12.8284C14.6332 13.2189 14.6332 13.8521 14.2426 14.2426C13.8521 14.6331 13.219 14.6331 12.8284 14.2426L5.75736 7.17152Z" fill="currentColor"/>
 </svg>
 `;
 
-const Tool$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Tool$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5617 13.5712L12.2594 7.2522C12.1884 7.16762 12.1136 7.08658 12.0352 7.00933C12.2547 5.6013 11.8405 4.10669 10.8614 2.93989C9.55326 1.38087 7.50228 0.72522 5.67031 1.2589C4.97701 1.46088 4.71979 2.30861 5.18396 2.86178L6.92543 4.93718L6.34416 5.42492L4.60269 3.34953C4.13852 2.79635 3.259 2.90246 2.93971 3.55015C2.09601 5.26161 2.38555 7.39529 3.69372 8.95431C4.65968 10.1055 6.03568 10.7711 7.44204 10.8155C7.51041 10.9169 7.58419 11.0149 7.66312 11.1089L12.9654 17.4279C14.0304 18.6972 15.9227 18.8627 17.1919 17.7977C18.4611 16.7327 18.6267 14.8404 17.5617 13.5712ZM5.22581 7.66873C4.90858 7.29067 4.68922 6.86235 4.56962 6.42156L4.81207 6.7105C5.52207 7.55665 6.78358 7.66702 7.62973 6.95701L8.211 6.46927C9.05715 5.75927 9.16752 4.49776 8.45752 3.65161L8.21507 3.36267C8.62839 3.557 9.01211 3.84739 9.32935 4.22546C10.034 5.06518 10.261 6.15832 9.96754 7.09453C9.83235 7.52578 10.0032 7.9941 10.3843 8.23698C10.5132 8.31907 10.6288 8.42044 10.7273 8.53778L16.0296 14.8568C16.3846 15.2799 16.3294 15.9106 15.9063 16.2656C15.4832 16.6206 14.8525 16.5654 14.4975 16.1424L9.19521 9.82335C9.09345 9.70209 9.01169 9.56568 8.95274 9.41921C8.7843 9.00068 8.35647 8.74677 7.90839 8.79941C6.94383 8.91271 5.92226 8.49873 5.22581 7.66873Z" fill="currentColor"/>
 </svg>
 `;
 
-const Train$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Train$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_2681)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 5C17.5 2.79086 15.7092 1 13.5 1L6.5 1C4.29086 1 2.5 2.79086 2.5 5V11.9894C2.5 13.7416 3.64042 15.2898 5.31383 15.8095C6.87197 16.2933 8.43504 16.5359 10 16.5359C11.565 16.5359 13.128 16.2933 14.6862 15.8095C16.3596 15.2898 17.5 13.7416 17.5 11.9894L17.5 5ZM4.5 11.9894V5C4.5 3.89543 5.39543 3 6.5 3L13.5 3C14.6046 3 15.5 3.89543 15.5 5L15.5 11.9894C15.5 12.8655 14.9298 13.6396 14.0931 13.8994C12.7248 14.3243 11.3615 14.5359 10 14.5359C8.63854 14.5359 7.2752 14.3243 5.90691 13.8994C5.07021 13.6396 4.5 12.8655 4.5 11.9894Z" fill="currentColor"/>
 <path d="M8 12C8 12.8284 7.32843 13.5 6.5 13.5C5.67157 13.5 5 12.8284 5 12C5 11.1716 5.67157 10.5 6.5 10.5C7.32843 10.5 8 11.1716 8 12Z" fill="currentColor"/>
@@ -2495,54 +2497,54 @@ const Train$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Trash$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Trash$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.937 4.5H11.9362H8.0632C8.02115 4.33649 8.00031 4.16864 8.00031 4.00049C8.00031 2.89728 8.8974 1.99976 10.0001 1.99976C11.1028 1.99976 11.9999 2.89728 11.9999 4.00049C11.9999 4.16937 11.9788 4.33716 11.9372 4.49927L11.937 4.5Z" fill="currentColor"/>
 <path d="M4.5 5.5C3.94772 5.5 3.5 5.05228 3.5 4.5C3.5 3.94772 3.94772 3.5 4.5 3.5H15.5C16.0523 3.5 16.5 3.94772 16.5 4.5C16.5 5.05228 16.0523 5.5 15.5 5.5H4.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 18.5C15.0523 18.5 15.5 18.0523 15.5 17.5V7C15.5 6.44772 15.0523 6 14.5 6H5.5C4.94772 6 4.5 6.44772 4.5 7V17.5C4.5 18.0523 4.94772 18.5 5.5 18.5H14.5ZM12.5 8.5C12.5 8.22386 12.7239 8 13 8C13.2761 8 13.5 8.22386 13.5 8.5V15.5C13.5 15.7761 13.2761 16 13 16C12.7239 16 12.5 15.7761 12.5 15.5V8.5ZM10 8C9.72386 8 9.5 8.22386 9.5 8.5V15.5C9.5 15.7761 9.72386 16 10 16C10.2761 16 10.5 15.7761 10.5 15.5V8.5C10.5 8.22386 10.2761 8 10 8ZM6.5 8.5C6.5 8.22386 6.72386 8 7 8C7.27614 8 7.5 8.22386 7.5 8.5V15.5C7.5 15.7761 7.27614 16 7 16C6.72386 16 6.5 15.7761 6.5 15.5V8.5Z" fill="currentColor"/>
 </svg>
 `;
 
-const TriangleDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleDown$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.15199 7.53L9.15199 15.53C9.54366 16.1567 10.4563 16.1567 10.848 15.53L15.848 7.53C16.2643 6.86395 15.7854 6 15 6L4.99999 6C4.21455 6 3.73571 6.86395 4.15199 7.53ZM13.1957 8L9.99999 13.1132L6.80424 8H13.1957Z" fill="currentColor"/>
 </svg>
 `;
 
-const TriangleDownFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleDownFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M8.72805 15.795L3.72805 7.795C3.10363 6.79593 3.82189 5.5 5.00004 5.5L15 5.5C16.1782 5.5 16.8965 6.79593 16.272 7.795L11.272 15.795C10.6845 16.735 9.31555 16.735 8.72805 15.795Z" fill="currentColor"/>
 </svg>
 `;
 
-const TriangleLeft$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleLeft$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.47 4.15199L4.47 9.15199C3.84333 9.54366 3.84333 10.4563 4.47 10.848L12.47 15.848C13.136 16.2643 14 15.7854 14 15V4.99999C14 4.21455 13.136 3.73571 12.47 4.15199ZM12 6.80424V13.1957L6.8868 9.99999L12 6.80424Z" fill="currentColor"/>
 </svg>
 `;
 
-const TriangleLeftFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleLeftFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M4.205 8.72805L12.205 3.72805C13.2041 3.10363 14.5 3.82189 14.5 5.00004V15C14.5 16.1782 13.2041 16.8965 12.205 16.272L4.205 11.272C3.265 10.6845 3.265 9.31555 4.205 8.72805Z" fill="currentColor"/>
 </svg>
 `;
 
-const TriangleRight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleRight$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.53 15.848L15.53 10.848C16.1567 10.4563 16.1567 9.54368 15.53 9.15201L7.53 4.15201C6.86395 3.73573 6 4.21458 6 5.00001L6 15C6 15.7854 6.86395 16.2643 7.53 15.848ZM8 13.1958L8 6.80426L13.1132 10L8 13.1958Z" fill="currentColor"/>
 </svg>
 `;
 
-const TriangleRightFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleRightFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M15.795 11.272L7.795 16.272C6.79593 16.8964 5.5 16.1782 5.5 15L5.5 5.00002C5.5 3.82186 6.79593 3.1036 7.795 3.72802L15.795 8.72802C16.735 9.31552 16.735 10.6845 15.795 11.272Z" fill="currentColor"/>
 </svg>
 `;
 
-const TriangleUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleUp$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.848 13.47L10.848 5.47C10.4563 4.84333 9.54368 4.84333 9.15201 5.47L4.15201 13.47C3.73573 14.136 4.21458 15 5.00001 15H15C15.7854 15 16.2643 14.136 15.848 13.47ZM6.80426 13L10 7.8868L13.1958 13H6.80426Z" fill="currentColor"/>
 </svg>
 `;
 
-const TriangleUpFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleUpFilled = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.272 5.205L16.272 13.205C16.8964 14.2041 16.1782 15.5 15 15.5H5.00002C3.82186 15.5 3.1036 14.2041 3.72802 13.205L8.72802 5.205C9.31552 4.265 10.6845 4.265 11.272 5.205Z" fill="currentColor"/>
 </svg>
 `;
 
-const Trophy$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Trophy$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.6753 4.5H6.22664L6.22664 4.5L6.86235 8.91807C8.08378 11.5412 11.8181 11.5412 13.0395 8.91807L13.6753 4.5ZM6.22664 2.5C5.00872 2.5 4.07357 3.57935 4.24703 4.78485L4.88683 9.23134C4.91129 9.40134 4.95992 9.56698 5.03125 9.72322C6.95602 13.9395 12.9459 13.9395 14.8707 9.72322C14.942 9.56698 14.9906 9.40134 15.0151 9.23134L15.6549 4.78484C15.8283 3.57935 14.8932 2.5 13.6753 2.5H6.22664Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.95093 15.5V12.5H10.9509V15.5H8.95093Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.0584 16.5C9.12351 15.5072 10.7785 15.5072 11.8436 16.5H8.0584ZM12.9673 15.5C11.2988 13.8405 8.60316 13.8405 6.93464 15.5L6.13935 16.291C5.50675 16.9201 5.95232 18 6.84453 18H13.0574C13.9496 18 14.3952 16.9202 13.7626 16.291L12.9673 15.5Z" fill="currentColor"/>
@@ -2553,7 +2555,7 @@ const Trophy$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Truck$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Truck$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M7.5 18.75C6.25736 18.75 5.25 17.7426 5.25 16.5C5.25 15.2574 6.25736 14.25 7.5 14.25C8.74264 14.25 9.75 15.2574 9.75 16.5C9.75 17.7426 8.74264 18.75 7.5 18.75Z" fill="currentColor"/>
 <path d="M16.5 18.75C15.2574 18.75 14.25 17.7426 14.25 16.5C14.25 15.2574 15.2574 14.25 16.5 14.25C17.7426 14.25 18.75 15.2574 18.75 16.5C18.75 17.7426 17.7426 18.75 16.5 18.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18 4.5H8C6.89543 4.5 6 5.39543 6 6.5V14C6 15.1046 6.89543 16 8 16H18C19.1046 16 20 15.1046 20 14V6.5C20 5.39543 19.1046 4.5 18 4.5ZM8 14V6.5H18V14H8Z" fill="currentColor"/>
@@ -2565,14 +2567,14 @@ const Truck$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Umbrella$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Umbrella$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M11.3863 17.3581C11.515 17.3581 11.6111 17.1982 11.6111 16.3198C11.6111 15.7676 12.0588 15.3198 12.6111 15.3198C13.1634 15.3198 13.6111 15.7676 13.6111 16.3198C13.6111 18.1592 12.8907 19.3581 11.3863 19.3581C10.0411 19.3581 9.17227 18.507 9.00701 17.1182L9 17V10.5C9 9.94772 9.44772 9.5 10 9.5C10.5523 9.5 11 9.94772 11 10.5V16.9379C11.0488 17.3087 11.1119 17.3581 11.3863 17.3581Z" fill="currentColor"/>
 <path d="M9 1.5C9 0.947715 9.44772 0.5 10 0.5C10.5523 0.5 11 0.947715 11 1.5V3C11 3.55228 10.5523 4 10 4C9.44772 4 9 3.55228 9 3L9 1.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.66803 11.2348C5.70837 11.1785 5.74282 11.1304 5.75566 11.1127C5.91724 10.8896 6.04642 10.7345 6.12513 10.6432C6.1774 10.6826 6.24691 10.737 6.34702 10.8162C7.06596 11.3853 7.47315 11.6014 8.16417 11.4864C8.56768 11.4193 8.88935 11.2531 9.3036 10.964C9.36217 10.9231 9.41133 10.888 9.50965 10.817C9.851 10.571 9.98417 10.5004 10.0162 10.4999C10.017 10.4999 10.1455 10.5685 10.4822 10.8134L10.5664 10.8745C11.0756 11.2426 11.3943 11.4194 11.8497 11.4886C12.543 11.5941 12.9334 11.3718 13.6611 10.7686C13.755 10.6908 13.8227 10.6353 13.875 10.5938C13.8792 10.5992 13.8837 10.6048 13.8882 10.6105C13.9659 10.7084 14.0873 10.8613 14.2344 11.0701C14.2391 11.0768 14.2556 11.1004 14.2783 11.1329C14.342 11.224 14.4546 11.3853 14.4962 11.4435C14.6062 11.5979 14.6973 11.7186 14.7894 11.8282C15.1433 12.2496 15.4778 12.4979 15.9962 12.4999C17.2043 12.5045 18 11.6884 18 10.5C18 6.00945 14.5737 2.5 10.1135 2.5C5.61932 2.5 2 6.04373 2 10.5C2 11.691 2.80684 12.4653 3.97058 12.4996C4.49773 12.5151 4.84171 12.2702 5.20109 11.8524C5.29327 11.7452 5.38393 11.6278 5.49488 11.4756C5.52617 11.4327 5.60443 11.3235 5.66803 11.2348ZM4.0123 10.1117C4.21305 6.95433 6.84728 4.5 10.1135 4.5C13.3213 4.5 15.7905 6.89462 15.9873 10.0869L15.8695 9.91849C15.2637 9.05819 14.8777 8.65893 14.2005 8.52031C13.7705 8.43229 13.384 8.53828 13.0099 8.76164C12.8134 8.879 12.7042 8.96398 12.3847 9.22882C12.2299 9.35714 12.1385 9.42855 12.0688 9.47431C12.0017 9.43641 11.8947 9.36694 11.7382 9.25373L11.6585 9.19592C10.9452 8.67711 10.5954 8.49025 9.98384 8.50013C9.38495 8.50981 9.02693 8.69953 8.34016 9.19458C8.2447 9.26343 8.20591 9.29119 8.15893 9.32398C8.04542 9.40321 7.96278 9.45402 7.90806 9.48298C7.83841 9.4411 7.74687 9.37356 7.58824 9.248C7.26436 8.99166 7.16224 8.91568 6.96646 8.80468C6.59508 8.59412 6.21204 8.49791 5.79041 8.58829C5.12256 8.73144 4.72218 9.13005 4.13588 9.93956C4.11944 9.96226 4.07861 10.0192 4.03366 10.0819L4.0123 10.1117Z" fill="currentColor"/>
 </svg>
 `;
 
-const Watch$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Watch$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 6.5C8.067 6.5 6.5 8.067 6.5 10C6.5 11.933 8.067 13.5 10 13.5C11.933 13.5 13.5 11.933 13.5 10C13.5 8.067 11.933 6.5 10 6.5ZM4.5 10C4.5 6.96243 6.96243 4.5 10 4.5C13.0376 4.5 15.5 6.96243 15.5 10C15.5 13.0376 13.0376 15.5 10 15.5C6.96243 15.5 4.5 13.0376 4.5 10Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 7.75C10.4142 7.75 10.75 8.08579 10.75 8.5V10C10.75 10.4142 10.4142 10.75 10 10.75C9.58579 10.75 9.25 10.4142 9.25 10V8.5C9.25 8.08579 9.58579 7.75 10 7.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.25 10C12.25 10.4142 11.9142 10.75 11.5 10.75H10C9.58579 10.75 9.25 10.4142 9.25 10C9.25 9.58579 9.58579 9.25 10 9.25H11.5C11.9142 9.25 12.25 9.58579 12.25 10Z" fill="currentColor"/>
@@ -2585,7 +2587,7 @@ const Watch$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const WaterDrop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const WaterDrop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1210_972)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0246 4.40211C12.6555 4.21159 12.5566 3.96243 12.5853 3.68921C12.6118 3.43679 12.7472 3.16384 12.8793 2.89762C12.9035 2.84894 12.9275 2.80048 12.9508 2.75241C13.1688 2.30174 13.3165 1.88554 12.828 1.64128C12.4889 1.67875 12.1581 1.72751 11.8358 1.78652C11.6087 1.82811 11.3857 1.87479 11.167 1.92619C11.1525 1.92961 11.1379 1.93306 11.1234 1.93652C7.00751 2.91817 4.39166 5.57417 3.41378 7.46836C1.60656 10.969 2.97937 15.2719 6.48004 17.0792C9.98071 18.8864 14.2836 17.5136 16.0908 14.0129C17.8981 10.5122 16.5253 6.20933 13.0246 4.40211ZM10.6085 4.16232C7.66402 5.14998 5.84596 7.117 5.19094 8.38582C3.89041 10.905 4.87832 14.0015 7.3975 15.302C9.91668 16.6025 13.0132 15.6146 14.3137 13.0954C15.6142 10.5763 14.6263 7.47979 12.1071 6.17926C11.7102 5.97432 11.2914 5.65969 10.9857 5.17924C10.7717 4.84304 10.6568 4.49408 10.6085 4.16232Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.45759 10.1833C7.55826 9.64401 7.20519 9.1235 6.6657 9.01843C6.1236 8.91286 5.59856 9.26673 5.49298 9.80883L6.47454 9.99999C5.49298 9.80883 5.49304 9.80855 5.49298 9.80883L5.49252 9.81121L5.492 9.81394L5.49079 9.8204L5.48774 9.8373C5.48546 9.8503 5.48271 9.86677 5.47967 9.88646C5.47359 9.92578 5.46633 9.97828 5.45946 10.0419C5.44581 10.1685 5.43333 10.343 5.43583 10.5483C5.44071 10.9485 5.50303 11.521 5.77236 12.0895C6.04052 12.6555 6.43851 13.0639 6.74266 13.3205C6.89836 13.4518 7.0398 13.552 7.14544 13.6212C7.19854 13.656 7.24339 13.6835 7.27747 13.7036C7.29453 13.7137 7.30897 13.722 7.32046 13.7284L7.3355 13.7368L7.34131 13.74L7.34378 13.7413L7.3449 13.7419C7.34516 13.7421 7.34595 13.7425 7.81978 12.8619L7.34595 13.7425C7.8323 14.0042 8.4387 13.822 8.70039 13.3357C8.96081 12.8517 8.78171 12.2488 8.30067 11.9851C8.30067 11.9851 8.30067 11.9851 8.30067 11.9851C8.29955 11.9844 8.2974 11.9832 8.29432 11.9814C8.28474 11.9757 8.26641 11.9646 8.24136 11.9482C8.19069 11.915 8.11597 11.8624 8.03225 11.7918C7.85757 11.6444 7.6837 11.4525 7.57976 11.2331C7.47697 11.0162 7.43854 10.758 7.43568 10.5239C7.43432 10.4121 7.44123 10.3185 7.44794 10.2563C7.45125 10.2256 7.45441 10.2035 7.45621 10.1919L7.45759 10.1833Z" fill="currentColor"/>
@@ -2594,7 +2596,7 @@ const WaterDrop$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Wifi$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Wifi$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M13.6961 11.2821C14.0926 11.6665 14.1024 12.2996 13.7179 12.6961C13.3335 13.0926 12.7004 13.1024 12.3039 12.7179C12.273 12.688 12.2391 12.6581 12.2022 12.6285C12.0406 12.4986 11.8292 12.3788 11.5791 12.2796C11.1265 12.1001 10.5793 12 10 12C9.08604 12 8.26716 12.2511 7.79777 12.6285C7.76089 12.6581 7.72699 12.688 7.69613 12.7179C7.29964 13.1024 6.66655 13.0926 6.28209 12.6961C5.89762 12.2996 5.90738 11.6665 6.30387 11.2821C6.37977 11.2085 6.46015 11.1377 6.54472 11.0697C7.39422 10.3868 8.65538 10 10 10C10.8267 10 11.6239 10.1459 12.3163 10.4204C12.7456 10.5907 13.131 10.809 13.4553 11.0697C13.5399 11.1377 13.6202 11.2085 13.6961 11.2821Z" fill="currentColor"/>
 <path d="M16.2128 8.68869C16.6002 9.08238 16.595 9.71553 16.2013 10.1029C15.8076 10.4902 15.1745 10.485 14.7872 10.0913C14.6908 9.99338 14.5866 9.89798 14.4751 9.80557C14.362 9.71196 14.2416 9.62159 14.1142 9.53491C13.9855 9.44731 13.8498 9.36361 13.7078 9.28424C13.5647 9.20419 13.4152 9.12866 13.2601 9.05801C13.104 8.9869 12.9424 8.92084 12.7758 8.86013C12.6085 8.79914 12.4364 8.74364 12.2601 8.6939C12.0833 8.64404 11.9026 8.60002 11.7185 8.56207C11.5345 8.52413 11.3472 8.49229 11.1573 8.46673C10.968 8.44124 10.7762 8.42202 10.5824 8.40919C10.3899 8.39644 10.1956 8.39001 10 8.39001C9.80443 8.39001 9.61014 8.39644 9.4176 8.40919C9.22385 8.42202 9.03203 8.44124 8.84266 8.46673C8.65277 8.49229 8.46552 8.52413 8.28146 8.56207C8.09736 8.60002 7.91666 8.64404 7.73993 8.6939C7.56364 8.74364 7.39152 8.79914 7.22416 8.86013C7.0576 8.92084 6.89597 8.9869 6.73987 9.05801C6.58477 9.12866 6.43534 9.20419 6.29217 9.28424C6.15018 9.36361 6.01455 9.44731 5.88581 9.53491C5.75842 9.62159 5.63797 9.71196 5.52494 9.80557C5.41338 9.89798 5.30922 9.99338 5.21284 10.0913C4.82551 10.485 4.19237 10.4902 3.79868 10.1029C3.40498 9.71553 3.39983 9.08238 3.78716 8.68869C3.93166 8.54182 4.0859 8.40053 4.24924 8.26525C4.41113 8.13118 4.58183 8.0031 4.76069 7.8814C4.93819 7.76061 5.12361 7.6462 5.31623 7.53851C5.50766 7.4315 5.70608 7.3312 5.91079 7.23795C6.11446 7.14517 6.32421 7.05944 6.53934 6.98104C6.75355 6.90297 6.97295 6.83222 7.19683 6.76905C7.41971 6.70617 7.64688 6.65083 7.87767 6.60326C8.10719 6.55594 8.34013 6.51634 8.57585 6.48461C8.80999 6.45309 9.04673 6.42936 9.28546 6.41356C9.522 6.39789 9.76036 6.39001 10 6.39001C10.2396 6.39001 10.478 6.39789 10.7145 6.41356C10.9533 6.42936 11.19 6.45309 11.4241 6.48461C11.6599 6.51634 11.8928 6.55594 12.1223 6.60326C12.3531 6.65083 12.5803 6.70617 12.8032 6.76905C13.0271 6.83222 13.2464 6.90297 13.4607 6.98104C13.6758 7.05944 13.8855 7.14517 14.0892 7.23795C14.2939 7.3312 14.4923 7.4315 14.6838 7.53851C14.8764 7.6462 15.0618 7.76061 15.2393 7.8814C15.4182 8.0031 15.5889 8.13118 15.7508 8.26525C15.9141 8.40053 16.0683 8.54182 16.2128 8.68869Z" fill="currentColor"/>
 <path d="M18.2454 6.22201C18.6136 6.63366 18.5783 7.26584 18.1667 7.63403C17.755 8.00221 17.1228 7.96697 16.7546 7.55532C16.6133 7.3973 16.4611 7.24398 16.2987 7.09599C16.1352 6.94702 15.9614 6.80363 15.7782 6.66645C15.5939 6.5285 15.4001 6.397 15.1977 6.27253C14.9944 6.14748 14.7825 6.02968 14.5629 5.91965C14.3426 5.80922 14.1147 5.70676 13.8801 5.61271C13.6448 5.51841 13.4031 5.43268 13.1558 5.35591C12.9082 5.27907 12.6552 5.21129 12.3976 5.15288C12.1404 5.09455 11.8788 5.04562 11.6136 5.00636C11.3494 4.96723 11.0818 4.93773 10.8116 4.91805C10.5433 4.89851 10.2725 4.88866 10 4.88866C9.72751 4.88866 9.45676 4.89851 9.18838 4.91805C8.91819 4.93773 8.65062 4.96723 8.38638 5.00636C8.12121 5.04562 7.85962 5.09455 7.60238 5.15288C7.34479 5.21129 7.0918 5.27907 6.84422 5.35591C6.59687 5.43268 6.35518 5.51841 6.11995 5.61271C5.88536 5.70676 5.65746 5.80922 5.43708 5.91965C5.2175 6.02968 5.00564 6.14748 4.80229 6.27253C4.59988 6.397 4.40615 6.5285 4.22185 6.66645C4.03857 6.80363 3.86484 6.94702 3.70132 7.09599C3.53888 7.24398 3.38671 7.3973 3.24538 7.55532C2.87719 7.96697 2.24501 8.00221 1.83335 7.63403C1.4217 7.26584 1.38646 6.63366 1.75464 6.22201C1.94178 6.01278 2.14198 5.81106 2.35441 5.61753C2.56577 5.42498 2.78906 5.24069 3.02339 5.06529C3.2567 4.89067 3.50075 4.725 3.75463 4.56888C4.00757 4.41334 4.27004 4.26739 4.54111 4.13157C4.81132 3.99617 5.08986 3.87094 5.37575 3.75633C5.66085 3.64203 5.95304 3.53839 6.25138 3.4458C6.54872 3.35351 6.85193 3.27227 7.1601 3.20239C7.46682 3.13284 7.77822 3.0746 8.09344 3.02793C8.40671 2.98154 8.72353 2.94661 9.04309 2.92334C9.35982 2.90027 9.67904 2.88866 10 2.88866C10.321 2.88866 10.6402 2.90027 10.9569 2.92334C11.2765 2.94661 11.5933 2.98154 11.9066 3.02793C12.2218 3.0746 12.5332 3.13284 12.8399 3.20239C13.1481 3.27227 13.4513 3.35351 13.7486 3.4458C14.047 3.53839 14.3392 3.64203 14.6243 3.75633C14.9102 3.87094 15.1887 3.99617 15.4589 4.13157C15.73 4.26739 15.9925 4.41334 16.2454 4.56888C16.4993 4.725 16.7433 4.89067 16.9766 5.06529C17.211 5.24069 17.4342 5.42498 17.6456 5.61753C17.858 5.81106 18.0582 6.01278 18.2454 6.22201Z" fill="currentColor"/>
@@ -2602,462 +2604,462 @@ const Wifi$1 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-/** Do not edit! This file is auto-generated. */
-// ======= //
-/* EXPORTS */
-// ======= //
-const popAirplane = Airplane$1;
-const popAlarm = Alarm$1;
-const popAngleDown = AngleDown$1;
-const popAngleLeft = AngleLeft$1;
-const popAngleRight = AngleRight$1;
-const popAngleUp = AngleUp$1;
-const popArrowDown = ArrowDown$1;
-const popArrowDownLeft = ArrowDownLeft$1;
-const popArrowDownRight = ArrowDownRight$1;
-const popArrowLeft = ArrowLeft$1;
-const popArrowRight = ArrowRight$1;
-const popArrowUp = ArrowUp$1;
-const popArrowUpLeft = ArrowUpLeft$1;
-const popArrowUpRight = ArrowUpRight$1;
-const popBank = Bank$1;
-const popBattery = Battery$1;
-const popBell = Bell$1;
-const popBellOff = BellOff$1;
-const popBicycle = Bicycle$1;
-const popBluetooth = Bluetooth$1;
-const popBook = Book$1;
-const popBookmark = Bookmark$1;
-const popBookmarkFilled = BookmarkFilled;
-const popBriefcase = Briefcase$1;
-const popBuilding = Building$1;
-const popCalculator = Calculator$1;
-const popCalendar = Calendar$1;
-const popCamera = Camera$1;
-const popCan = Can$1;
-const popCar = Car$1;
-const popCart = Cart$1;
-const popCellphoneEye = CellphoneEye$1;
-const popCellphoneLoop = CellphoneLoop$1;
-const popChain = Chain$1;
-const popCheckmark = Checkmark$1;
-const popCircle = Circle$1;
-const popCircleFilled = CircleFilled;
-const popClapperboard = Clapperboard$1;
-const popClipboard = Clipboard$1;
-const popClipboardCheck = ClipboardCheck$1;
-const popClipboardCheckCircle = ClipboardCheckCircle$1;
-const popClock = Clock$1;
-const popCloud = Cloud$1;
-const popCloudDown = CloudDown$1;
-const popCloudDownFilled = CloudDownFilled;
-const popCloudFilled = CloudFilled;
-const popCloudUp = CloudUp$1;
-const popCloudUpFilled = CloudUpFilled;
-const popCoctail = Coctail$1;
-const popCode = Code$1;
-const popColorPicker = ColorPicker$1;
-const popContract = Contract$1;
-const popController = Controller$1;
-const popCountdown = Countdown$1;
-const popCreditCard = CreditCard$1;
-const popCrown = Crown$1;
-const popCup = Cup$1;
-const popCv = Cv$1;
-const popDivision = Division$1;
-const popDotsX = DotsX$1;
-const popDotsY = DotsY$1;
-const popDress = Dress$1;
-const popDuplicate = Duplicate$1;
-const popElectricity = Electricity$1;
-const popEnter = Enter$1;
-const popExclamation = Exclamation$1;
-const popExclamationCircle = ExclamationCircle$1;
-const popExclamationFilled = ExclamationFilled;
-const popExpand = Expand$1;
-const popEye = Eye$1;
-const popEyeClosed = EyeClosed$1;
-const popEyeFrame = EyeFrame$1;
-const popEyeOff = EyeOff$1;
-const popFastForward = FastForward$1;
-const popFile = File$1;
-const popFileLoop = FileLoop$1;
-const popFilmFrame = FilmFrame$1;
-const popFire = Fire$1;
-const popFlag = Flag$1;
-const popFlagStraight = FlagStraight$1;
-const popFlower = Flower$1;
-const popFlowerBud = FlowerBud$1;
-const popFolder = Folder$1;
-const popFoldingStool = FoldingStool$1;
-const popGear = Gear$1;
-const popGearFilled = GearFilled;
-const popGift = Gift$1;
-const popGrab = Grab$1;
-const popGrid = Grid$1;
-const popHamburger = Hamburger$1;
-const popHandGrab = HandGrab$1;
-const popHandOpen = HandOpen$1;
-const popHandPoint = HandPoint$1;
-const popHandPointOpen = HandPointOpen$1;
-const popHandshake = Handshake$1;
-const popHash = Hash$1;
-const popHeadphone = Headphone$1;
-const popHeart = Heart$1;
-const popHourglass = Hourglass$1;
-const popHouse = House$1;
-const popIdentification = Identification$1;
-const popInfo = Info$1;
-const popInfoCircle = InfoCircle$1;
-const popInfoFilled = InfoFilled;
-const popInternet = Internet$1;
-const popKey = Key$1;
-const popKniveFork = KniveFork$1;
-const popLabel = Label$1;
-const popLeave = Leave$1;
-const popLetter = Letter$1;
-const popLetterOpen = LetterOpen$1;
-const popList = List$1;
-const popLockClosed = LockClosed$1;
-const popLockOpen = LockOpen$1;
-const popLoop = Loop$1;
-const popLoopMinus = LoopMinus$1;
-const popLoopPlus = LoopPlus$1;
-const popMagnet = Magnet$1;
-const popMap = Map$1;
-const popMegaphone = Megaphone$1;
-const popMenu = Menu$1;
-const popMicrophone = Microphone$1;
-const popMicrophone2 = Microphone2$1;
-const popMinus = Minus$1;
-const popMonitor = Monitor$1;
-const popMonitorEye = MonitorEye$1;
-const popMonitorLoop = MonitorLoop$1;
-const popMonitor2 = Monitor2$1;
-const popMoon = Moon$1;
-const popMoonFilled = MoonFilled;
-const popMotorcycle = Motorcycle$1;
-const popMoveX = MoveX$1;
-const popMoveY = MoveY$1;
-const popMusicNoteDouble = MusicNoteDouble$1;
-const popMusicNoteSingle = MusicNoteSingle$1;
-const popNextTrack = NextTrack$1;
-const popNoEntry = NoEntry$1;
-const popOpen = Open$1;
-const popPaintPallet = PaintPallet$1;
-const popPause = Pause$1;
-const popPen = Pen$1;
-const popPeople = People$1;
-const popPerson = Person$1;
-const popPersonCheckmark = PersonCheckmark$1;
-const popPersonFilled = PersonFilled;
-const popPersonPlus = PersonPlus$1;
-const popPersons = Persons$1;
-const popPhone = Phone$1;
-const popPhoto = Photo$1;
-const popPhotoCamera = PhotoCamera$1;
-const popPhotoStudio = PhotoStudio$1;
-const popPill = Pill$1;
-const popPin = Pin$1;
-const popPinpoint = Pinpoint$1;
-const popPinpointFilled = PinpointFilled;
-const popPinpointOff = PinpointOff$1;
-const popPinpointOffFilled = PinpointOffFilled;
-const popPlay = Play$1;
-const popPlus = Plus$1;
-const popPower = Power$1;
-const popPreviousTrack = PreviousTrack$1;
-const popPrinter = Printer$1;
-const popQrCode = QrCode$1;
-const popQuestion = Question$1;
-const popQuestionCircle = QuestionCircle$1;
-const popQuestionFilled = QuestionFilled;
-const popRadio = Radio$1;
-const popRefresh = Refresh$1;
-const popReload = Reload$1;
-const popRepeat = Repeat$1;
-const popRewind = Rewind$1;
-const popRewindTime = RewindTime$1;
-const popScissors = Scissors$1;
-const popSend = Send$1;
-const popShareAndroid = ShareAndroid$1;
-const popShareIos = ShareIos$1;
-const popShuffle = Shuffle$1;
-const popSliders = Sliders$1;
-const popSmartphone = Smartphone$1;
-const popSmartphoneCutout = SmartphoneCutout$1;
-const popSmartphoneNotch = SmartphoneNotch$1;
-const popSmartphone2 = Smartphone2$1;
-const popSoftDrink = SoftDrink$1;
-const popSort = Sort$1;
-const popSpeakerHigh = SpeakerHigh$1;
-const popSpeakerLow = SpeakerLow$1;
-const popSpeakerOff = SpeakerOff$1;
-const popSquare = Square$1;
-const popSquareFilled = SquareFilled;
-const popStar = Star$1;
-const popStarFilled = StarFilled;
-const popStars = Stars$1;
-const popStopwatch = Stopwatch$1;
-const popStudioBackdrop = StudioBackdrop$1;
-const popStudioLightFront = StudioLightFront$1;
-const popStudioLightSide = StudioLightSide$1;
-const popSun = Sun$1;
-const popSunFilled = SunFilled;
-const popSyringe = Syringe$1;
-const popTShirt = TShirt$1;
-const popTaxi = Taxi$1;
-const popTelevision = Television$1;
-const popTextBubble = TextBubble$1;
-const popTextBubbles = TextBubbles$1;
-const popThumbsDown = ThumbsDown$1;
-const popThumbsUp = ThumbsUp$1;
-const popTimes = Times$1;
-const popTool = Tool$1;
-const popTrain = Train$1;
-const popTrash = Trash$1;
-const popTriangleDown = TriangleDown$1;
-const popTriangleDownFilled = TriangleDownFilled;
-const popTriangleLeft = TriangleLeft$1;
-const popTriangleLeftFilled = TriangleLeftFilled;
-const popTriangleRight = TriangleRight$1;
-const popTriangleRightFilled = TriangleRightFilled;
-const popTriangleUp = TriangleUp$1;
-const popTriangleUpFilled = TriangleUpFilled;
-const popTrophy = Trophy$1;
-const popTruck = Truck$1;
-const popUmbrella = Umbrella$1;
-const popWatch = Watch$1;
-const popWaterDrop = WaterDrop$1;
-const popWifi = Wifi$1;
-const pop = {
-    'airplane': Airplane$1,
-    'alarm': Alarm$1,
-    'angle-down': AngleDown$1,
-    'angle-left': AngleLeft$1,
-    'angle-right': AngleRight$1,
-    'angle-up': AngleUp$1,
-    'arrow-down': ArrowDown$1,
-    'arrow-down-left': ArrowDownLeft$1,
-    'arrow-down-right': ArrowDownRight$1,
-    'arrow-left': ArrowLeft$1,
-    'arrow-right': ArrowRight$1,
-    'arrow-up': ArrowUp$1,
-    'arrow-up-left': ArrowUpLeft$1,
-    'arrow-up-right': ArrowUpRight$1,
-    'bank': Bank$1,
-    'battery': Battery$1,
-    'bell': Bell$1,
-    'bell-off': BellOff$1,
-    'bicycle': Bicycle$1,
-    'bluetooth': Bluetooth$1,
-    'book': Book$1,
-    'bookmark': Bookmark$1,
-    'bookmark-filled': BookmarkFilled,
-    'briefcase': Briefcase$1,
-    'building': Building$1,
-    'calculator': Calculator$1,
-    'calendar': Calendar$1,
-    'camera': Camera$1,
-    'can': Can$1,
-    'car': Car$1,
-    'cart': Cart$1,
-    'cellphone-eye': CellphoneEye$1,
-    'cellphone-loop': CellphoneLoop$1,
-    'chain': Chain$1,
-    'checkmark': Checkmark$1,
-    'circle': Circle$1,
-    'circle-filled': CircleFilled,
-    'clapperboard': Clapperboard$1,
-    'clipboard': Clipboard$1,
-    'clipboard-check': ClipboardCheck$1,
-    'clipboard-check-circle': ClipboardCheckCircle$1,
-    'clock': Clock$1,
-    'cloud': Cloud$1,
-    'cloud-down': CloudDown$1,
-    'cloud-down-filled': CloudDownFilled,
-    'cloud-filled': CloudFilled,
-    'cloud-up': CloudUp$1,
-    'cloud-up-filled': CloudUpFilled,
-    'coctail': Coctail$1,
-    'code': Code$1,
-    'color-picker': ColorPicker$1,
-    'contract': Contract$1,
-    'controller': Controller$1,
-    'countdown': Countdown$1,
-    'credit-card': CreditCard$1,
-    'crown': Crown$1,
-    'cup': Cup$1,
-    'cv': Cv$1,
-    'division': Division$1,
-    'dots-x': DotsX$1,
-    'dots-y': DotsY$1,
-    'dress': Dress$1,
-    'duplicate': Duplicate$1,
-    'electricity': Electricity$1,
-    'enter': Enter$1,
-    'exclamation': Exclamation$1,
-    'exclamation-circle': ExclamationCircle$1,
-    'exclamation-filled': ExclamationFilled,
-    'expand': Expand$1,
-    'eye': Eye$1,
-    'eye-closed': EyeClosed$1,
-    'eye-frame': EyeFrame$1,
-    'eye-off': EyeOff$1,
-    'fast-forward': FastForward$1,
-    'file': File$1,
-    'file-loop': FileLoop$1,
-    'film-frame': FilmFrame$1,
-    'fire': Fire$1,
-    'flag': Flag$1,
-    'flag-straight': FlagStraight$1,
-    'flower': Flower$1,
-    'flower-bud': FlowerBud$1,
-    'folder': Folder$1,
-    'folding-stool': FoldingStool$1,
-    'gear': Gear$1,
-    'gear-filled': GearFilled,
-    'gift': Gift$1,
-    'grab': Grab$1,
-    'grid': Grid$1,
-    'hamburger': Hamburger$1,
-    'hand-grab': HandGrab$1,
-    'hand-open': HandOpen$1,
-    'hand-point': HandPoint$1,
-    'hand-point-open': HandPointOpen$1,
-    'handshake': Handshake$1,
-    'hash': Hash$1,
-    'headphone': Headphone$1,
-    'heart': Heart$1,
-    'hourglass': Hourglass$1,
-    'house': House$1,
-    'identification': Identification$1,
-    'info': Info$1,
-    'info-circle': InfoCircle$1,
-    'info-filled': InfoFilled,
-    'internet': Internet$1,
-    'key': Key$1,
-    'knive-fork': KniveFork$1,
-    'label': Label$1,
-    'leave': Leave$1,
-    'letter': Letter$1,
-    'letter-open': LetterOpen$1,
-    'list': List$1,
-    'lock-closed': LockClosed$1,
-    'lock-open': LockOpen$1,
-    'loop': Loop$1,
-    'loop-minus': LoopMinus$1,
-    'loop-plus': LoopPlus$1,
-    'magnet': Magnet$1,
-    'map': Map$1,
-    'megaphone': Megaphone$1,
-    'menu': Menu$1,
-    'microphone': Microphone$1,
-    'microphone2': Microphone2$1,
-    'minus': Minus$1,
-    'monitor': Monitor$1,
-    'monitor-eye': MonitorEye$1,
-    'monitor-loop': MonitorLoop$1,
-    'monitor2': Monitor2$1,
-    'moon': Moon$1,
-    'moon-filled': MoonFilled,
-    'motorcycle': Motorcycle$1,
-    'move-x': MoveX$1,
-    'move-y': MoveY$1,
-    'music-note-double': MusicNoteDouble$1,
-    'music-note-single': MusicNoteSingle$1,
-    'next-track': NextTrack$1,
-    'no-entry': NoEntry$1,
-    'open': Open$1,
-    'paint-pallet': PaintPallet$1,
-    'pause': Pause$1,
-    'pen': Pen$1,
-    'people': People$1,
-    'person': Person$1,
-    'person-checkmark': PersonCheckmark$1,
-    'person-filled': PersonFilled,
-    'person-plus': PersonPlus$1,
-    'persons': Persons$1,
-    'phone': Phone$1,
-    'photo': Photo$1,
-    'photo-camera': PhotoCamera$1,
-    'photo-studio': PhotoStudio$1,
-    'pill': Pill$1,
-    'pin': Pin$1,
-    'pinpoint': Pinpoint$1,
-    'pinpoint-filled': PinpointFilled,
-    'pinpoint-off': PinpointOff$1,
-    'pinpoint-off-filled': PinpointOffFilled,
-    'play': Play$1,
-    'plus': Plus$1,
-    'power': Power$1,
-    'previous-track': PreviousTrack$1,
-    'printer': Printer$1,
-    'qr-code': QrCode$1,
-    'question': Question$1,
-    'question-circle': QuestionCircle$1,
-    'question-filled': QuestionFilled,
-    'radio': Radio$1,
-    'refresh': Refresh$1,
-    'reload': Reload$1,
-    'repeat': Repeat$1,
-    'rewind': Rewind$1,
-    'rewind-time': RewindTime$1,
-    'scissors': Scissors$1,
-    'send': Send$1,
-    'share-android': ShareAndroid$1,
-    'share-ios': ShareIos$1,
-    'shuffle': Shuffle$1,
-    'sliders': Sliders$1,
-    'smartphone': Smartphone$1,
-    'smartphone-cutout': SmartphoneCutout$1,
-    'smartphone-notch': SmartphoneNotch$1,
-    'smartphone2': Smartphone2$1,
-    'soft-drink': SoftDrink$1,
-    'sort': Sort$1,
-    'speaker-high': SpeakerHigh$1,
-    'speaker-low': SpeakerLow$1,
-    'speaker-off': SpeakerOff$1,
-    'square': Square$1,
-    'square-filled': SquareFilled,
-    'star': Star$1,
-    'star-filled': StarFilled,
-    'stars': Stars$1,
-    'stopwatch': Stopwatch$1,
-    'studio-backdrop': StudioBackdrop$1,
-    'studio-light-front': StudioLightFront$1,
-    'studio-light-side': StudioLightSide$1,
-    'sun': Sun$1,
-    'sun-filled': SunFilled,
-    'syringe': Syringe$1,
-    't-shirt': TShirt$1,
-    'taxi': Taxi$1,
-    'television': Television$1,
-    'text-bubble': TextBubble$1,
-    'text-bubbles': TextBubbles$1,
-    'thumbs-down': ThumbsDown$1,
-    'thumbs-up': ThumbsUp$1,
-    'times': Times$1,
-    'tool': Tool$1,
-    'train': Train$1,
-    'trash': Trash$1,
-    'triangle-down': TriangleDown$1,
-    'triangle-down-filled': TriangleDownFilled,
-    'triangle-left': TriangleLeft$1,
-    'triangle-left-filled': TriangleLeftFilled,
-    'triangle-right': TriangleRight$1,
-    'triangle-right-filled': TriangleRightFilled,
-    'triangle-up': TriangleUp$1,
-    'triangle-up-filled': TriangleUpFilled,
-    'trophy': Trophy$1,
-    'truck': Truck$1,
-    'umbrella': Umbrella$1,
-    'watch': Watch$1,
-    'water-drop': WaterDrop$1,
-    'wifi': Wifi$1,
-};
+  /** Do not edit! This file is auto-generated. */
+  // ======= //
+  /* EXPORTS */
+  // ======= //
+  const popAirplane = Airplane$1;
+  const popAlarm = Alarm$1;
+  const popAngleDown = AngleDown$1;
+  const popAngleLeft = AngleLeft$1;
+  const popAngleRight = AngleRight$1;
+  const popAngleUp = AngleUp$1;
+  const popArrowDown = ArrowDown$1;
+  const popArrowDownLeft = ArrowDownLeft$1;
+  const popArrowDownRight = ArrowDownRight$1;
+  const popArrowLeft = ArrowLeft$1;
+  const popArrowRight = ArrowRight$1;
+  const popArrowUp = ArrowUp$1;
+  const popArrowUpLeft = ArrowUpLeft$1;
+  const popArrowUpRight = ArrowUpRight$1;
+  const popBank = Bank$1;
+  const popBattery = Battery$1;
+  const popBell = Bell$1;
+  const popBellOff = BellOff$1;
+  const popBicycle = Bicycle$1;
+  const popBluetooth = Bluetooth$1;
+  const popBook = Book$1;
+  const popBookmark = Bookmark$1;
+  const popBookmarkFilled = BookmarkFilled;
+  const popBriefcase = Briefcase$1;
+  const popBuilding = Building$1;
+  const popCalculator = Calculator$1;
+  const popCalendar = Calendar$1;
+  const popCamera = Camera$1;
+  const popCan = Can$1;
+  const popCar = Car$1;
+  const popCart = Cart$1;
+  const popCellphoneEye = CellphoneEye$1;
+  const popCellphoneLoop = CellphoneLoop$1;
+  const popChain = Chain$1;
+  const popCheckmark = Checkmark$1;
+  const popCircle = Circle$1;
+  const popCircleFilled = CircleFilled;
+  const popClapperboard = Clapperboard$1;
+  const popClipboard = Clipboard$1;
+  const popClipboardCheck = ClipboardCheck$1;
+  const popClipboardCheckCircle = ClipboardCheckCircle$1;
+  const popClock = Clock$1;
+  const popCloud = Cloud$1;
+  const popCloudDown = CloudDown$1;
+  const popCloudDownFilled = CloudDownFilled;
+  const popCloudFilled = CloudFilled;
+  const popCloudUp = CloudUp$1;
+  const popCloudUpFilled = CloudUpFilled;
+  const popCoctail = Coctail$1;
+  const popCode = Code$1;
+  const popColorPicker = ColorPicker$1;
+  const popContract = Contract$1;
+  const popController = Controller$1;
+  const popCountdown = Countdown$1;
+  const popCreditCard = CreditCard$1;
+  const popCrown = Crown$1;
+  const popCup = Cup$1;
+  const popCv = Cv$1;
+  const popDivision = Division$1;
+  const popDotsX = DotsX$1;
+  const popDotsY = DotsY$1;
+  const popDress = Dress$1;
+  const popDuplicate = Duplicate$1;
+  const popElectricity = Electricity$1;
+  const popEnter = Enter$1;
+  const popExclamation = Exclamation$1;
+  const popExclamationCircle = ExclamationCircle$1;
+  const popExclamationFilled = ExclamationFilled;
+  const popExpand = Expand$1;
+  const popEye = Eye$1;
+  const popEyeClosed = EyeClosed$1;
+  const popEyeFrame = EyeFrame$1;
+  const popEyeOff = EyeOff$1;
+  const popFastForward = FastForward$1;
+  const popFile = File$1;
+  const popFileLoop = FileLoop$1;
+  const popFilmFrame = FilmFrame$1;
+  const popFire = Fire$1;
+  const popFlag = Flag$1;
+  const popFlagStraight = FlagStraight$1;
+  const popFlower = Flower$1;
+  const popFlowerBud = FlowerBud$1;
+  const popFolder = Folder$1;
+  const popFoldingStool = FoldingStool$1;
+  const popGear = Gear$1;
+  const popGearFilled = GearFilled;
+  const popGift = Gift$1;
+  const popGrab = Grab$1;
+  const popGrid = Grid$1;
+  const popHamburger = Hamburger$1;
+  const popHandGrab = HandGrab$1;
+  const popHandOpen = HandOpen$1;
+  const popHandPoint = HandPoint$1;
+  const popHandPointOpen = HandPointOpen$1;
+  const popHandshake = Handshake$1;
+  const popHash = Hash$1;
+  const popHeadphone = Headphone$1;
+  const popHeart = Heart$1;
+  const popHourglass = Hourglass$1;
+  const popHouse = House$1;
+  const popIdentification = Identification$1;
+  const popInfo = Info$1;
+  const popInfoCircle = InfoCircle$1;
+  const popInfoFilled = InfoFilled;
+  const popInternet = Internet$1;
+  const popKey = Key$1;
+  const popKniveFork = KniveFork$1;
+  const popLabel = Label$1;
+  const popLeave = Leave$1;
+  const popLetter = Letter$1;
+  const popLetterOpen = LetterOpen$1;
+  const popList = List$1;
+  const popLockClosed = LockClosed$1;
+  const popLockOpen = LockOpen$1;
+  const popLoop = Loop$1;
+  const popLoopMinus = LoopMinus$1;
+  const popLoopPlus = LoopPlus$1;
+  const popMagnet = Magnet$1;
+  const popMap = Map$1;
+  const popMegaphone = Megaphone$1;
+  const popMenu = Menu$1;
+  const popMicrophone = Microphone$1;
+  const popMicrophone2 = Microphone2$1;
+  const popMinus = Minus$1;
+  const popMonitor = Monitor$1;
+  const popMonitorEye = MonitorEye$1;
+  const popMonitorLoop = MonitorLoop$1;
+  const popMonitor2 = Monitor2$1;
+  const popMoon = Moon$1;
+  const popMoonFilled = MoonFilled;
+  const popMotorcycle = Motorcycle$1;
+  const popMoveX = MoveX$1;
+  const popMoveY = MoveY$1;
+  const popMusicNoteDouble = MusicNoteDouble$1;
+  const popMusicNoteSingle = MusicNoteSingle$1;
+  const popNextTrack = NextTrack$1;
+  const popNoEntry = NoEntry$1;
+  const popOpen = Open$1;
+  const popPaintPallet = PaintPallet$1;
+  const popPause = Pause$1;
+  const popPen = Pen$1;
+  const popPeople = People$1;
+  const popPerson = Person$1;
+  const popPersonCheckmark = PersonCheckmark$1;
+  const popPersonFilled = PersonFilled;
+  const popPersonPlus = PersonPlus$1;
+  const popPersons = Persons$1;
+  const popPhone = Phone$1;
+  const popPhoto = Photo$1;
+  const popPhotoCamera = PhotoCamera$1;
+  const popPhotoStudio = PhotoStudio$1;
+  const popPill = Pill$1;
+  const popPin = Pin$1;
+  const popPinpoint = Pinpoint$1;
+  const popPinpointFilled = PinpointFilled;
+  const popPinpointOff = PinpointOff$1;
+  const popPinpointOffFilled = PinpointOffFilled;
+  const popPlay = Play$1;
+  const popPlus = Plus$1;
+  const popPower = Power$1;
+  const popPreviousTrack = PreviousTrack$1;
+  const popPrinter = Printer$1;
+  const popQrCode = QrCode$1;
+  const popQuestion = Question$1;
+  const popQuestionCircle = QuestionCircle$1;
+  const popQuestionFilled = QuestionFilled;
+  const popRadio = Radio$1;
+  const popRefresh = Refresh$1;
+  const popReload = Reload$1;
+  const popRepeat = Repeat$1;
+  const popRewind = Rewind$1;
+  const popRewindTime = RewindTime$1;
+  const popScissors = Scissors$1;
+  const popSend = Send$1;
+  const popShareAndroid = ShareAndroid$1;
+  const popShareIos = ShareIos$1;
+  const popShuffle = Shuffle$1;
+  const popSliders = Sliders$1;
+  const popSmartphone = Smartphone$1;
+  const popSmartphoneCutout = SmartphoneCutout$1;
+  const popSmartphoneNotch = SmartphoneNotch$1;
+  const popSmartphone2 = Smartphone2$1;
+  const popSoftDrink = SoftDrink$1;
+  const popSort = Sort$1;
+  const popSpeakerHigh = SpeakerHigh$1;
+  const popSpeakerLow = SpeakerLow$1;
+  const popSpeakerOff = SpeakerOff$1;
+  const popSquare = Square$1;
+  const popSquareFilled = SquareFilled;
+  const popStar = Star$1;
+  const popStarFilled = StarFilled;
+  const popStars = Stars$1;
+  const popStopwatch = Stopwatch$1;
+  const popStudioBackdrop = StudioBackdrop$1;
+  const popStudioLightFront = StudioLightFront$1;
+  const popStudioLightSide = StudioLightSide$1;
+  const popSun = Sun$1;
+  const popSunFilled = SunFilled;
+  const popSyringe = Syringe$1;
+  const popTShirt = TShirt$1;
+  const popTaxi = Taxi$1;
+  const popTelevision = Television$1;
+  const popTextBubble = TextBubble$1;
+  const popTextBubbles = TextBubbles$1;
+  const popThumbsDown = ThumbsDown$1;
+  const popThumbsUp = ThumbsUp$1;
+  const popTimes = Times$1;
+  const popTool = Tool$1;
+  const popTrain = Train$1;
+  const popTrash = Trash$1;
+  const popTriangleDown = TriangleDown$1;
+  const popTriangleDownFilled = TriangleDownFilled;
+  const popTriangleLeft = TriangleLeft$1;
+  const popTriangleLeftFilled = TriangleLeftFilled;
+  const popTriangleRight = TriangleRight$1;
+  const popTriangleRightFilled = TriangleRightFilled;
+  const popTriangleUp = TriangleUp$1;
+  const popTriangleUpFilled = TriangleUpFilled;
+  const popTrophy = Trophy$1;
+  const popTruck = Truck$1;
+  const popUmbrella = Umbrella$1;
+  const popWatch = Watch$1;
+  const popWaterDrop = WaterDrop$1;
+  const popWifi = Wifi$1;
+  const pop = {
+      'airplane': Airplane$1,
+      'alarm': Alarm$1,
+      'angle-down': AngleDown$1,
+      'angle-left': AngleLeft$1,
+      'angle-right': AngleRight$1,
+      'angle-up': AngleUp$1,
+      'arrow-down': ArrowDown$1,
+      'arrow-down-left': ArrowDownLeft$1,
+      'arrow-down-right': ArrowDownRight$1,
+      'arrow-left': ArrowLeft$1,
+      'arrow-right': ArrowRight$1,
+      'arrow-up': ArrowUp$1,
+      'arrow-up-left': ArrowUpLeft$1,
+      'arrow-up-right': ArrowUpRight$1,
+      'bank': Bank$1,
+      'battery': Battery$1,
+      'bell': Bell$1,
+      'bell-off': BellOff$1,
+      'bicycle': Bicycle$1,
+      'bluetooth': Bluetooth$1,
+      'book': Book$1,
+      'bookmark': Bookmark$1,
+      'bookmark-filled': BookmarkFilled,
+      'briefcase': Briefcase$1,
+      'building': Building$1,
+      'calculator': Calculator$1,
+      'calendar': Calendar$1,
+      'camera': Camera$1,
+      'can': Can$1,
+      'car': Car$1,
+      'cart': Cart$1,
+      'cellphone-eye': CellphoneEye$1,
+      'cellphone-loop': CellphoneLoop$1,
+      'chain': Chain$1,
+      'checkmark': Checkmark$1,
+      'circle': Circle$1,
+      'circle-filled': CircleFilled,
+      'clapperboard': Clapperboard$1,
+      'clipboard': Clipboard$1,
+      'clipboard-check': ClipboardCheck$1,
+      'clipboard-check-circle': ClipboardCheckCircle$1,
+      'clock': Clock$1,
+      'cloud': Cloud$1,
+      'cloud-down': CloudDown$1,
+      'cloud-down-filled': CloudDownFilled,
+      'cloud-filled': CloudFilled,
+      'cloud-up': CloudUp$1,
+      'cloud-up-filled': CloudUpFilled,
+      'coctail': Coctail$1,
+      'code': Code$1,
+      'color-picker': ColorPicker$1,
+      'contract': Contract$1,
+      'controller': Controller$1,
+      'countdown': Countdown$1,
+      'credit-card': CreditCard$1,
+      'crown': Crown$1,
+      'cup': Cup$1,
+      'cv': Cv$1,
+      'division': Division$1,
+      'dots-x': DotsX$1,
+      'dots-y': DotsY$1,
+      'dress': Dress$1,
+      'duplicate': Duplicate$1,
+      'electricity': Electricity$1,
+      'enter': Enter$1,
+      'exclamation': Exclamation$1,
+      'exclamation-circle': ExclamationCircle$1,
+      'exclamation-filled': ExclamationFilled,
+      'expand': Expand$1,
+      'eye': Eye$1,
+      'eye-closed': EyeClosed$1,
+      'eye-frame': EyeFrame$1,
+      'eye-off': EyeOff$1,
+      'fast-forward': FastForward$1,
+      'file': File$1,
+      'file-loop': FileLoop$1,
+      'film-frame': FilmFrame$1,
+      'fire': Fire$1,
+      'flag': Flag$1,
+      'flag-straight': FlagStraight$1,
+      'flower': Flower$1,
+      'flower-bud': FlowerBud$1,
+      'folder': Folder$1,
+      'folding-stool': FoldingStool$1,
+      'gear': Gear$1,
+      'gear-filled': GearFilled,
+      'gift': Gift$1,
+      'grab': Grab$1,
+      'grid': Grid$1,
+      'hamburger': Hamburger$1,
+      'hand-grab': HandGrab$1,
+      'hand-open': HandOpen$1,
+      'hand-point': HandPoint$1,
+      'hand-point-open': HandPointOpen$1,
+      'handshake': Handshake$1,
+      'hash': Hash$1,
+      'headphone': Headphone$1,
+      'heart': Heart$1,
+      'hourglass': Hourglass$1,
+      'house': House$1,
+      'identification': Identification$1,
+      'info': Info$1,
+      'info-circle': InfoCircle$1,
+      'info-filled': InfoFilled,
+      'internet': Internet$1,
+      'key': Key$1,
+      'knive-fork': KniveFork$1,
+      'label': Label$1,
+      'leave': Leave$1,
+      'letter': Letter$1,
+      'letter-open': LetterOpen$1,
+      'list': List$1,
+      'lock-closed': LockClosed$1,
+      'lock-open': LockOpen$1,
+      'loop': Loop$1,
+      'loop-minus': LoopMinus$1,
+      'loop-plus': LoopPlus$1,
+      'magnet': Magnet$1,
+      'map': Map$1,
+      'megaphone': Megaphone$1,
+      'menu': Menu$1,
+      'microphone': Microphone$1,
+      'microphone2': Microphone2$1,
+      'minus': Minus$1,
+      'monitor': Monitor$1,
+      'monitor-eye': MonitorEye$1,
+      'monitor-loop': MonitorLoop$1,
+      'monitor2': Monitor2$1,
+      'moon': Moon$1,
+      'moon-filled': MoonFilled,
+      'motorcycle': Motorcycle$1,
+      'move-x': MoveX$1,
+      'move-y': MoveY$1,
+      'music-note-double': MusicNoteDouble$1,
+      'music-note-single': MusicNoteSingle$1,
+      'next-track': NextTrack$1,
+      'no-entry': NoEntry$1,
+      'open': Open$1,
+      'paint-pallet': PaintPallet$1,
+      'pause': Pause$1,
+      'pen': Pen$1,
+      'people': People$1,
+      'person': Person$1,
+      'person-checkmark': PersonCheckmark$1,
+      'person-filled': PersonFilled,
+      'person-plus': PersonPlus$1,
+      'persons': Persons$1,
+      'phone': Phone$1,
+      'photo': Photo$1,
+      'photo-camera': PhotoCamera$1,
+      'photo-studio': PhotoStudio$1,
+      'pill': Pill$1,
+      'pin': Pin$1,
+      'pinpoint': Pinpoint$1,
+      'pinpoint-filled': PinpointFilled,
+      'pinpoint-off': PinpointOff$1,
+      'pinpoint-off-filled': PinpointOffFilled,
+      'play': Play$1,
+      'plus': Plus$1,
+      'power': Power$1,
+      'previous-track': PreviousTrack$1,
+      'printer': Printer$1,
+      'qr-code': QrCode$1,
+      'question': Question$1,
+      'question-circle': QuestionCircle$1,
+      'question-filled': QuestionFilled,
+      'radio': Radio$1,
+      'refresh': Refresh$1,
+      'reload': Reload$1,
+      'repeat': Repeat$1,
+      'rewind': Rewind$1,
+      'rewind-time': RewindTime$1,
+      'scissors': Scissors$1,
+      'send': Send$1,
+      'share-android': ShareAndroid$1,
+      'share-ios': ShareIos$1,
+      'shuffle': Shuffle$1,
+      'sliders': Sliders$1,
+      'smartphone': Smartphone$1,
+      'smartphone-cutout': SmartphoneCutout$1,
+      'smartphone-notch': SmartphoneNotch$1,
+      'smartphone2': Smartphone2$1,
+      'soft-drink': SoftDrink$1,
+      'sort': Sort$1,
+      'speaker-high': SpeakerHigh$1,
+      'speaker-low': SpeakerLow$1,
+      'speaker-off': SpeakerOff$1,
+      'square': Square$1,
+      'square-filled': SquareFilled,
+      'star': Star$1,
+      'star-filled': StarFilled,
+      'stars': Stars$1,
+      'stopwatch': Stopwatch$1,
+      'studio-backdrop': StudioBackdrop$1,
+      'studio-light-front': StudioLightFront$1,
+      'studio-light-side': StudioLightSide$1,
+      'sun': Sun$1,
+      'sun-filled': SunFilled,
+      'syringe': Syringe$1,
+      't-shirt': TShirt$1,
+      'taxi': Taxi$1,
+      'television': Television$1,
+      'text-bubble': TextBubble$1,
+      'text-bubbles': TextBubbles$1,
+      'thumbs-down': ThumbsDown$1,
+      'thumbs-up': ThumbsUp$1,
+      'times': Times$1,
+      'tool': Tool$1,
+      'train': Train$1,
+      'trash': Trash$1,
+      'triangle-down': TriangleDown$1,
+      'triangle-down-filled': TriangleDownFilled,
+      'triangle-left': TriangleLeft$1,
+      'triangle-left-filled': TriangleLeftFilled,
+      'triangle-right': TriangleRight$1,
+      'triangle-right-filled': TriangleRightFilled,
+      'triangle-up': TriangleUp$1,
+      'triangle-up-filled': TriangleUpFilled,
+      'trophy': Trophy$1,
+      'truck': Truck$1,
+      'umbrella': Umbrella$1,
+      'watch': Watch$1,
+      'water-drop': WaterDrop$1,
+      'wifi': Wifi$1,
+  };
 
-const Airplane = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Airplane = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M11.2237 13.805C11.4794 15.6396 11.5923 16.7828 11.5624 17.2854C11.5159 18.0655 10.9931 18.8865 10.0279 19.7822C9.75347 20.0369 9.30689 19.9108 9.20619 19.5502L7.87106 14.7706L7.27107 14.1706L2.49144 12.8355C2.13092 12.7348 2.00483 12.2882 2.25945 12.0138C3.15519 11.0485 3.97614 10.5258 4.75628 10.4793C5.25901 10.4494 6.40254 10.5624 8.23783 10.8181L10.6694 8.16575L4.61552 6.47431C4.25502 6.37359 4.12895 5.92703 4.38355 5.65265C5.76919 4.15943 7.02218 3.36158 8.17652 3.29293C9.06242 3.24023 10.9254 3.70483 13.8567 4.68935L14.3016 4.20455C16.3494 2.15809 18.0349 1.59992 19.2388 2.80381C20.4427 4.00777 19.8842 5.69305 17.8214 7.75516L17.3524 8.1852C18.3369 11.1164 18.8014 12.9793 18.7488 13.8652C18.6801 15.0195 17.8823 16.2725 16.389 17.6581C16.1147 17.9127 15.6681 17.7867 15.5674 17.4262L13.8761 11.3729L11.2237 13.805Z" fill="currentColor"/>
 </g>
@@ -3065,7 +3067,7 @@ const Airplane = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Alarm = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Alarm = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path opacity="0.8" d="M18 11.25C18 14.8399 15.0899 17.75 11.5 17.75C7.91015 17.75 5 14.8399 5 11.25C5 7.66015 7.91015 4.75 11.5 4.75C15.0899 4.75 18 7.66015 18 11.25Z" fill="currentColor"/>
 </g>
@@ -3081,7 +3083,7 @@ const Alarm = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const AngleDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const AngleDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.5475L6.96027 7.34769C5.42382 6.06732 3.50327 8.37199 5.03971 9.65236L10.9878 14.6091C11.2603 14.8652 11.6176 15.0286 12 15.0275C12.3824 15.0286 12.7397 14.8652 13.0122 14.6091L18.9603 9.65236C20.4967 8.37199 18.5762 6.06732 17.0397 7.34769L12 11.5475Z" fill="currentColor"/>
 </g>
@@ -3092,7 +3094,7 @@ const AngleDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const AngleLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const AngleLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4526 11L15.6523 5.96027C16.9327 4.42382 14.628 2.50327 13.3477 4.03971L8.39095 9.98776C8.13482 10.2603 7.97147 10.6176 7.97251 11C7.97147 11.3824 8.13482 11.7397 8.39095 12.0122L13.3477 17.9603C14.628 19.4967 16.9327 17.5762 15.6523 16.0397L11.4526 11Z" fill="currentColor"/>
 </g>
@@ -3103,7 +3105,7 @@ const AngleLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const AngleRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const AngleRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M15.8116 11.7288C15.7624 11.8174 15.7036 11.9018 15.6355 11.9805L10.6524 17.9603C10.122 18.5967 9.17618 18.6827 8.53976 18.1524C7.90335 17.622 7.81736 16.6762 8.34771 16.0398L12.5475 11L8.34771 5.96031C7.81736 5.3239 7.90335 4.37805 8.53976 3.84771C9.17618 3.31736 10.122 3.40335 10.6524 4.03976L15.6524 10.0398C16.0606 10.5296 16.1036 11.2028 15.8116 11.7288L15.8116 11.7288Z" fill="currentColor"/>
 </g>
@@ -3112,7 +3114,7 @@ const AngleRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const AngleUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const AngleUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9878 7.39098L5.03971 12.3477C3.50327 13.6281 5.42382 15.9327 6.96027 14.6524L12 10.4526L17.0397 14.6524C18.5762 15.9327 20.4967 13.6281 18.9603 12.3477L13.0122 7.39098C12.7397 7.13485 12.3824 6.9715 12 6.97254C11.6176 6.9715 11.2603 7.13485 10.9878 7.39098Z" fill="currentColor"/>
 </g>
@@ -3123,7 +3125,7 @@ const AngleUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const ArrowDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1523 11.2064C17.6827 11.8428 17.5967 12.7886 16.9603 13.319L12.9603 16.6523C12.3239 17.1827 11.378 17.0967 10.8477 16.4603C10.3173 15.8239 10.4033 14.878 11.0397 14.3477L15.0397 11.0143C15.6761 10.484 16.622 10.57 17.1523 11.2064Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.84766 11.2064C7.37801 10.57 8.32385 10.484 8.96027 11.0143L12.9603 14.3477C13.5967 14.878 13.6827 15.8239 13.1523 16.4603C12.622 17.0967 11.6761 17.1827 11.0397 16.6523L7.03972 13.319C6.4033 12.7886 6.31731 11.8428 6.84766 11.2064Z" fill="currentColor"/>
@@ -3135,7 +3137,7 @@ const ArrowDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const ArrowDownLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowDownLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4997)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1438 14.1427C15.0688 14.9678 14.3392 15.5758 13.5142 15.5008L8.32874 15.0294C7.50371 14.9544 6.8957 14.2247 6.9707 13.3997C7.0457 12.5747 7.77532 11.9667 8.60034 12.0417L13.7858 12.5131C14.6108 12.5881 15.2188 13.3177 15.1438 14.1427Z" fill="currentColor"/>
@@ -3150,7 +3152,7 @@ const ArrowDownLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const ArrowDownRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowDownRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4996)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.1426 6.85632C16.9677 6.93132 17.5757 7.66094 17.5007 8.48597L17.0293 13.6714C16.9543 14.4964 16.2247 15.1045 15.3996 15.0295C14.5746 14.9544 13.9666 14.2248 14.0416 13.3998L14.513 8.21436C14.588 7.38933 15.3176 6.78132 16.1426 6.85632Z" fill="currentColor"/>
@@ -3165,7 +3167,7 @@ const ArrowDownRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="no
 </svg>
 `;
 
-const ArrowLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2936 15.6524C10.6572 16.1827 9.71134 16.0967 9.18099 15.4603L5.84766 11.4603C5.31731 10.8239 5.4033 9.87805 6.03971 9.34771C6.67613 8.81736 7.62197 8.90335 8.15232 9.53976L11.4857 13.5398C12.016 14.1762 11.93 15.122 11.2936 15.6524Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2936 5.34771C11.93 5.87805 12.016 6.8239 11.4857 7.46031L8.15232 11.4603C7.62197 12.0967 6.67613 12.1827 6.03971 11.6524C5.4033 11.122 5.31731 10.1762 5.84766 9.53976L9.18099 5.53976C9.71134 4.90335 10.6572 4.81736 11.2936 5.34771Z" fill="currentColor"/>
@@ -3177,7 +3179,7 @@ const ArrowLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const ArrowRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2064 5.84775C12.8428 5.31741 13.7886 5.40339 14.319 6.03981L17.6523 10.0398C18.1826 10.6762 18.0967 11.6221 17.4602 12.1524C16.8238 12.6828 15.878 12.5968 15.3476 11.9604L12.0143 7.96036C11.484 7.32395 11.5699 6.3781 12.2064 5.84775Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.2064 16.1524C11.5699 15.6221 11.484 14.6762 12.0143 14.0398L15.3476 10.0398C15.878 9.40339 16.8238 9.31741 17.4602 9.84775C18.0967 10.3781 18.1826 11.3239 17.6523 11.9604L14.319 15.9604C13.7886 16.5968 12.8428 16.6828 12.2064 16.1524Z" fill="currentColor"/>
@@ -3189,7 +3191,7 @@ const ArrowRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const ArrowUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.84766 9.79361C6.31731 9.1572 6.4033 8.21135 7.03972 7.681L11.0397 4.34767C11.6761 3.81733 12.622 3.90331 13.1523 4.53973C13.6827 5.17614 13.5967 6.12199 12.9603 6.65234L8.96027 9.98567C8.32385 10.516 7.37801 10.43 6.84766 9.79361Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1523 9.79361C16.622 10.43 15.6761 10.516 15.0397 9.98567L11.0397 6.65234C10.4033 6.12199 10.3173 5.17614 10.8477 4.53973C11.378 3.90331 12.3239 3.81733 12.9603 4.34767L16.9603 7.681C17.5967 8.21135 17.6827 9.1572 17.1523 9.79361Z" fill="currentColor"/>
@@ -3201,7 +3203,7 @@ const ArrowUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const ArrowUpLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowUpLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4999)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.85721 13.6409C7.03218 13.5659 6.42417 12.8363 6.49917 12.0112L6.97057 6.82578C7.04558 6.00075 7.77519 5.39274 8.60022 5.46774C9.42524 5.54274 10.0333 6.27236 9.95825 7.09738L9.48685 12.2828C9.41185 13.1079 8.68223 13.7159 7.85721 13.6409Z" fill="currentColor"/>
@@ -3216,7 +3218,7 @@ const ArrowUpLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const ArrowUpRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ArrowUpRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4998)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.85617 6.35739C8.93117 5.53236 9.66079 4.92435 10.4858 4.99935L15.6713 5.47076C16.4963 5.54576 17.1043 6.27538 17.0293 7.1004C16.9543 7.92543 16.2247 8.53344 15.3997 8.45844L10.2142 7.98703C9.38918 7.91203 8.78117 7.18241 8.85617 6.35739Z" fill="currentColor"/>
@@ -3231,7 +3233,7 @@ const ArrowUpRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const Bank = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Bank = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M9.98353 2.1678C10.1464 2.06524 10.3536 2.06524 10.5165 2.1678L18.3107 7.0769C18.735 7.34413 18.5457 7.99997 18.0442 7.99997H2.45577C1.95433 7.99997 1.76501 7.34413 2.1893 7.0769L9.98353 2.1678Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.25 4.36361L7.65193 5.99997H12.8481L10.25 4.36361ZM10.5165 2.1678C10.3536 2.06524 10.1464 2.06524 9.98353 2.1678L2.1893 7.0769C1.76501 7.34413 1.95433 7.99997 2.45577 7.99997H18.0442C18.5457 7.99997 18.735 7.34413 18.3107 7.0769L10.5165 2.1678Z" fill="currentColor"/>
@@ -3252,7 +3254,7 @@ const Bank = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Battery = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Battery = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <rect x="3" y="7" width="13" height="8" rx="1" fill="currentColor"/>
 <rect x="16.5" y="8.5" width="2" height="5" rx="0.5" fill="currentColor"/>
@@ -3265,7 +3267,7 @@ const Battery = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Bell = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Bell = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 5.02242C15.3033 5.27504 17.5 7.63098 17.5 10.5V13.4254C18.4211 13.9472 19 14.9279 19 16C19 17.1046 18.1046 18 17 18H13.5C13.5 19.1046 12.6046 20 11.5 20C10.3954 20 9.5 19.1046 9.5 18H6C4.89543 18 4 17.1046 4 16C4 14.9279 4.5789 13.9472 5.5 13.4254V10.5C5.5 7.63098 7.69675 5.27504 10.5 5.02242L10.5 3C10.5 2.44771 10.9477 2 11.5 2C12.0523 2 12.5 2.44772 12.5 3L12.5 5.02242Z" fill="currentColor"/>
 <path d="M8 17C8 16.7239 8.22386 16.5 8.5 16.5C8.77614 16.5 9 16.7239 9 17C9 17.5523 9.44772 18 10 18C10.5523 18 11 17.5523 11 17C11 16.7239 11.2239 16.5 11.5 16.5C11.7761 16.5 12 16.7239 12 17C12 18.1046 11.1046 19 10 19C8.89543 19 8 18.1046 8 17Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 14.5C17.5 13.4279 16.9211 12.4472 16 11.9254V9C16 5.96243 13.5376 3.5 10.5 3.5H9.5C6.46243 3.5 4 5.96243 4 9V11.9254C3.0789 12.4472 2.5 13.4279 2.5 14.5C2.5 15.6046 3.39543 16.5 4.5 16.5H15.5C16.6046 16.5 17.5 15.6046 17.5 14.5ZM15 12.5583L15.2952 12.6908L15.35 12.7155C16.0502 13.0332 16.5 13.7311 16.5 14.5C16.5 15.0523 16.0523 15.5 15.5 15.5H4.5C3.94772 15.5 3.5 15.0523 3.5 14.5C3.5 13.7311 3.94976 13.0332 4.65004 12.7155L4.7048 12.6908L5 12.5583V9C5 6.51472 7.01472 4.5 9.5 4.5H10.5C12.9853 4.5 15 6.51472 15 9V12.5583Z" fill="black"/>
@@ -3273,7 +3275,7 @@ const Bell = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const BellOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const BellOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M12.5 5.02242C15.3033 5.27504 17.5 7.63098 17.5 10.5V13.4254C18.4211 13.9472 19 14.9279 19 16C19 17.1046 18.1046 18 17 18H13.5C13.5 19.1046 12.6046 20 11.5 20C10.3954 20 9.5 19.1046 9.5 18H6C4.89543 18 4 17.1046 4 16C4 14.9279 4.5789 13.9472 5.5 13.4254V10.5C5.5 7.63098 7.69675 5.27504 10.5 5.02242L10.5 3C10.5 2.44771 10.9477 2 11.5 2C12.0523 2 12.5 2.44772 12.5 3L12.5 5.02242Z" fill="currentColor"/>
 <path d="M8 17C8 16.7239 8.22386 16.5 8.5 16.5C8.77614 16.5 9 16.7239 9 17C9 17.5523 9.44772 18 10 18C10.5523 18 11 17.5523 11 17C11 16.7239 11.2239 16.5 11.5 16.5C11.7761 16.5 12 16.7239 12 17C12 18.1046 11.1046 19 10 19C8.89543 19 8 18.1046 8 17Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.5 14.5C17.5 13.4279 16.9211 12.4472 16 11.9254V9C16 5.96243 13.5376 3.5 10.5 3.5H9.5C6.46243 3.5 4 5.96243 4 9V11.9254C3.0789 12.4472 2.5 13.4279 2.5 14.5C2.5 15.6046 3.39543 16.5 4.5 16.5H15.5C16.6046 16.5 17.5 15.6046 17.5 14.5ZM15 12.5583L15.2952 12.6908L15.35 12.7155C16.0502 13.0332 16.5 13.7311 16.5 14.5C16.5 15.0523 16.0523 15.5 15.5 15.5H4.5C3.94772 15.5 3.5 15.0523 3.5 14.5C3.5 13.7311 3.94976 13.0332 4.65004 12.7155L4.7048 12.6908L5 12.5583V9C5 6.51472 7.01472 4.5 9.5 4.5H10.5C12.9853 4.5 15 6.51472 15 9V12.5583Z" fill="black"/>
@@ -3282,7 +3284,7 @@ const BellOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Bicycle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Bicycle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 20C7.03981 20 8.723 18.4732 8.96905 16.5H10.7105C11.0479 16.5 11.2884 16.1727 11.1877 15.8507L11.1519 15.7363L14.3662 10.323L14.8118 12.1794C13.1829 12.6855 12 14.2046 12 16C12 18.2091 13.7909 20 16 20C18.2091 20 20 18.2091 20 16C20 13.8966 18.3765 12.1724 16.3142 12.0122L14.4395 4.20066C15.5947 4.15838 16.4782 4.21094 17.078 4.35228C17.6121 4.47813 17.75 4.59459 17.75 4.67811C17.75 5.18897 17.51 5.34761 16.5749 5.25375C16.1628 5.21238 15.7951 5.51295 15.7537 5.9251C15.7124 6.33724 16.013 6.70488 16.4251 6.74625C18.1567 6.92006 19.25 6.19744 19.25 4.67811C19.25 2.97369 17.2603 2.49573 13.5094 2.74763C13.4582 2.74825 13.407 2.7537 13.3567 2.76375C13.3302 2.76887 13.3042 2.77537 13.2788 2.78317C12.9408 2.88486 12.6683 3.19872 12.7654 3.65171C12.768 3.66423 12.7709 3.67662 12.774 3.68888L13.9571 8.61839H8.92533L8.34087 6.75H9.5C9.91421 6.75 10.25 6.41421 10.25 6C10.25 5.58579 9.91421 5.25 9.5 5.25H5.5C5.08579 5.25 4.75 5.58579 4.75 6C4.75 6.41421 5.08579 6.75 5.5 6.75H7.29308L8.12324 9.40383L6.69192 12.3744C6.17806 12.1342 5.6047 12 5 12C2.79086 12 1 13.7909 1 16C1 18.2091 2.79086 20 5 20Z" fill="currentColor"/>
 </g>
@@ -3295,7 +3297,7 @@ const Bicycle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Bluetooth = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Bluetooth = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_3466)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 11.7967L5.44352 16.6048C5.1095 16.8497 4.64015 16.7775 4.3952 16.4435C4.15025 16.1094 4.22245 15.6401 4.55648 15.3951L11.2317 10.5L4.55648 5.6048C4.22245 5.35985 4.15025 4.8905 4.3952 4.55647C4.64015 4.22245 5.1095 4.15024 5.44352 4.39519L12 9.20328L12 1.49995C12 1.08792 12.4704 0.852734 12.8 1.09995L18.8 5.59995C19.0667 5.79995 19.0667 6.19995 18.8 6.39995L13.3333 10.4999L18.8 14.5999C19.0667 14.7999 19.0667 15.1999 18.8 15.3999L12.8 19.8999C12.4704 20.1472 12 19.912 12 19.4999L12 11.7967Z" fill="currentColor"/>
@@ -3309,7 +3311,7 @@ const Bluetooth = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Book = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Book = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M11 5.78986L18.3136 4.52084C18.3935 4.50697 18.4745 4.5 18.5556 4.5C19.357 4.5 20 5.164 20 5.97522V15.761C20 16.4819 19.489 17.1009 18.7868 17.2172L11.0817 18.4933C11.0203 18.5035 10.9599 18.502 10.9028 18.4907L3.25492 17.2241C2.53094 17.1042 2 16.4781 2 15.7443V6.01091C2 5.18248 2.67157 4.51091 3.5 4.51091C3.58596 4.51091 3.67175 4.5183 3.75644 4.53299L11 5.78986Z" fill="currentColor"/>
 </g>
@@ -3318,7 +3320,7 @@ const Book = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Bookmark = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Bookmark = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M12 14.6764L7.35472 19.3524C7.04021 19.669 6.5 19.4462 6.5 19V5C6.5 4.72386 6.72386 4.5 7 4.5H17C17.2761 4.5 17.5 4.72386 17.5 5V19C17.5 19.4462 16.9598 19.669 16.6453 19.3524L12 14.6764Z" fill="currentColor"/>
 </g>
@@ -3326,7 +3328,7 @@ const Bookmark = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Briefcase = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Briefcase = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1210_869)">
 <g opacity="0.8">
 <path d="M6.4906 17.5H17.2094C18.3139 17.5 19.2094 16.6046 19.2094 15.5V13.5C19.2094 12.3954 18.3139 11.5 17.2094 11.5H6.4906C5.38603 11.5 4.4906 12.3954 4.4906 13.5V15.5C4.4906 16.6046 5.38603 17.5 6.4906 17.5Z" fill="currentColor"/>
@@ -3347,7 +3349,7 @@ const Briefcase = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Building = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Building = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17 18.25H19C19.4142 18.25 19.75 18.5858 19.75 19C19.75 19.4142 19.4142 19.75 19 19.75H5C4.58579 19.75 4.25 19.4142 4.25 19C4.25 18.5858 4.58579 18.25 5 18.25H7V6.30769C7 4.77168 8.10212 3.5 9.5 3.5H14.5C15.8979 3.5 17 4.77168 17 6.30769V18.25Z" fill="currentColor"/>
 </g>
@@ -3364,7 +3366,7 @@ const Building = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Calculator = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Calculator = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M4 18.1053L4 3.89474C4 2.8483 4.86558 2 5.93333 2H16.5667C17.6344 2 18.5 2.8483 18.5 3.89474V18.1053C18.5 19.1517 17.6344 20 16.5667 20H5.93333C4.86558 20 4 19.1517 4 18.1053Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 3V17C2.5 18.3807 3.61929 19.5 5 19.5H15C16.3807 19.5 17.5 18.3807 17.5 17V3C17.5 1.61929 16.3807 0.5 15 0.5H5C3.61929 0.5 2.5 1.61929 2.5 3ZM5 18.5C4.17157 18.5 3.5 17.8284 3.5 17V3C3.5 2.17157 4.17157 1.5 5 1.5H15C15.8284 1.5 16.5 2.17157 16.5 3V17C16.5 17.8284 15.8284 18.5 15 18.5H5Z" fill="black"/>
 <path d="M5 7.5V3.5C5 3.22386 5.22386 3 5.5 3H14.5C14.7761 3 15 3.22386 15 3.5V7.5C15 7.77614 14.7761 8 14.5 8H5.5C5.22386 8 5 7.77614 5 7.5Z" fill="black"/>
@@ -3376,7 +3378,7 @@ const Calculator = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Calendar = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Calendar = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect opacity="0.8" x="5" y="6" width="14" height="12" rx="1" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 4.5H3.5C3.22386 4.5 3 4.72386 3 5V16C3 16.2761 3.22386 16.5 3.5 16.5H16.5C16.7761 16.5 17 16.2761 17 16V5C17 4.72386 16.7761 4.5 16.5 4.5ZM4 15.5V5.5H16V15.5H4Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 4.5H3.5C3.22386 4.5 3 4.72386 3 5V8C3 8.27614 3.22386 8.5 3.5 8.5H16.5C16.7761 8.5 17 8.27614 17 8V5C17 4.72386 16.7761 4.5 16.5 4.5ZM4 7.5V5.5H16V7.5H4Z" fill="black"/>
@@ -3386,7 +3388,7 @@ const Calendar = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Camera = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Camera = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 6.5H7C5.61929 6.5 4.5 7.61929 4.5 9V14C4.5 15.3807 5.61929 16.5 7 16.5H13C14.3807 16.5 15.5 15.3807 15.5 14V13.9759L17.8477 15.541C18.1799 15.7625 18.625 15.5243 18.625 15.125V8.125C18.625 7.72565 18.1799 7.48746 17.8477 7.70897L15.5 9.27408V9C15.5 7.61929 14.3807 6.5 13 6.5Z" fill="currentColor"/>
 </g>
@@ -3395,7 +3397,7 @@ const Camera = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Can = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Can = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M9 3H14C15.6667 3.66667 16.6667 4.66667 17 6V16C17 17.6569 15.6569 19 14 19H9C7.34315 19 6 17.6569 6 16V6C6.33333 4.66667 7.33333 3.66667 9 3Z" fill="currentColor"/>
 </g>
@@ -3406,7 +3408,7 @@ const Can = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="
 </svg>
 `;
 
-const Car = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Car = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.27323 4.00237C6.54965 4.17438 5.98127 4.73371 5.79768 5.45445L4.60127 10.1512C3.68774 10.336 3 11.1434 3 12.1115V15C3 15.8061 3.4769 16.5008 4.16395 16.8174C4.05913 17.0222 4 17.2542 4 17.5V18.5C4 19.3284 4.67157 20 5.5 20C6.32843 20 7 19.3284 7 18.5V17.5C7 17.3247 6.96992 17.1564 6.91465 17H16.0854C16.0301 17.1564 16 17.3247 16 17.5V18.5C16 19.3284 16.6716 20 17.5 20C18.3284 20 19 19.3284 19 18.5V17.5C19 17.2542 18.9409 17.0222 18.836 16.8174C19.5231 16.5008 20 15.8061 20 15V12.1115C20 11.1434 19.3123 10.336 18.3987 10.1512L17.2023 5.45433C17.0187 4.73367 16.4504 4.17437 15.7269 4.00229C14.3193 3.66752 12.9103 3.5 11.5007 3.5C10.0911 3.5 8.68164 3.66755 7.27323 4.00237Z" fill="currentColor"/>
 </g>
@@ -3419,7 +3421,7 @@ const Car = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="
 </svg>
 `;
 
-const Cart = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Cart = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.21893 2.75H4.2C3.78579 2.75 3.45 2.41421 3.45 2C3.45 1.58579 3.78579 1.25 4.2 1.25H5.80284C6.14621 1.25 6.44573 1.48319 6.52994 1.81608L8.03184 7.7535C8.19308 7.66344 8.36948 7.59443 8.5583 7.55091C8.70507 7.51708 8.85517 7.5 9.00574 7.5H16.9946C18.1032 7.5 19 8.40519 19 9.51948C19 9.67043 18.9832 9.82091 18.9499 9.96809L18.1669 13.4291C17.9591 14.3474 17.1482 15 16.2115 15H9.78879C8.85212 15 8.04122 14.3474 7.83348 13.4291L7.05044 9.96809C7.0395 9.91977 7.03039 9.87144 7.02305 9.8232C7.00217 9.77935 6.98527 9.73281 6.9729 9.68392L5.21893 2.75ZM9.25 18.5C10.2165 18.5 11 17.7165 11 16.75C11 15.7835 10.2165 15 9.25 15C8.2835 15 7.5 15.7835 7.5 16.75C7.5 17.7165 8.2835 18.5 9.25 18.5ZM16.25 18.5C17.2165 18.5 18 17.7165 18 16.75C18 15.7835 17.2165 15 16.25 15C15.2835 15 14.5 15.7835 14.5 16.75C14.5 17.7165 15.2835 18.5 16.25 18.5Z" fill="currentColor"/>
 </g>
@@ -3430,7 +3432,7 @@ const Cart = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const CellphoneEye = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CellphoneEye = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2298)">
 <g opacity="0.8">
 <path d="M17 3H10C8.89543 3 8 3.89543 8 5V18V18.5C8 19.3284 8.67157 20 9.5 20H17C18.1046 20 19 19.1046 19 18V5C19 3.89543 18.1046 3 17 3Z" fill="currentColor"/>
@@ -3459,7 +3461,7 @@ const CellphoneEye = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const CellphoneLoop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CellphoneLoop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2325)">
 <g opacity="0.8">
 <path d="M17.0001 2.5H10.0001C8.89555 2.5 8.00012 3.39543 8.00012 4.5V17.5V18C8.00012 18.8284 8.67169 19.5 9.50012 19.5H17.0001C18.1047 19.5 19.0001 18.6046 19.0001 17.5V4.5C19.0001 3.39543 18.1047 2.5 17.0001 2.5Z" fill="currentColor"/>
@@ -3476,7 +3478,7 @@ const CellphoneLoop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const Chain = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Chain = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4993)">
 <g opacity="0.8">
 <rect x="14.7836" y="3.38351" width="6" height="10" rx="3" transform="rotate(33.0385 14.7836 3.38351)" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -3489,7 +3491,7 @@ const Chain = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Checkmark = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Checkmark = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.8699 17.1228L17.8112 8.22845C18.7825 6.48013 16.1601 5.0232 15.1888 6.77152L11.0509 14.2197L7.43705 11.3287C5.87531 10.0793 4.00122 12.4219 5.56296 13.6713L10.4686 17.5958C10.524 17.6454 10.5829 17.6914 10.6446 17.7332C11.0317 18.0105 11.4337 18.0749 11.7947 17.9963C12.1586 17.9321 12.5062 17.7201 12.7591 17.3167C12.8004 17.2546 12.8375 17.1897 12.8699 17.1228Z" fill="currentColor"/>
 </g>
@@ -3498,13 +3500,13 @@ const Checkmark = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Circle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Circle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle opacity="0.8" cx="12" cy="11" r="6" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4 10C4 13.3137 6.68629 16 10 16C13.3137 16 16 13.3137 16 10C16 6.68629 13.3137 4 10 4C6.68629 4 4 6.68629 4 10ZM15 10C15 12.7614 12.7614 15 10 15C7.23858 15 5 12.7614 5 10C5 7.23858 7.23858 5 10 5C12.7614 5 15 7.23858 15 10Z" fill="black"/>
 </svg>
 `;
 
-const Clapperboard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Clapperboard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1817_475)">
 <g opacity="0.8">
 <path d="M3.15625 6.13737L16.9726 3.11229L17.5776 5.87555L3.76126 8.90063L3.15625 6.13737Z" fill="currentColor"/>
@@ -3526,7 +3528,7 @@ const Clapperboard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const Clipboard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Clipboard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4.35106C8 3.88103 8.41441 3.5 8.92562 3.5H15.0744C15.5856 3.5 16 3.88103 16 4.35106V7.64894C16 8.11897 15.5856 8.5 15.0744 8.5H8.92562C8.41441 8.5 8 8.11897 8 7.64894V4.35106Z" fill="currentColor"/>
 <path d="M6.46154 19H17.0385C17.5695 19 18 18.5523 18 18V6C18 5.44772 17.5695 5 17.0385 5H14.1538H9.34615H6.46154C5.9305 5 5.5 5.44772 5.5 6V18C5.5 18.5523 5.9305 19 6.46154 19Z" fill="currentColor"/>
@@ -3536,7 +3538,7 @@ const Clipboard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const ClipboardCheck = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ClipboardCheck = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4.35106C8 3.88103 8.41441 3.5 8.92562 3.5H15.0744C15.5856 3.5 16 3.88103 16 4.35106V7.64894C16 8.11897 15.5856 8.5 15.0744 8.5H8.92562C8.41441 8.5 8 8.11897 8 7.64894V4.35106Z" fill="currentColor"/>
 <path d="M6.46154 19H17.0385C17.5695 19 18 18.5523 18 18V6C18 5.44772 17.5695 5 17.0385 5H14.1538H9.34615H6.46154C5.9305 5 5.5 5.44772 5.5 6V18C5.5 18.5523 5.9305 19 6.46154 19Z" fill="currentColor"/>
@@ -3547,7 +3549,7 @@ const ClipboardCheck = `<svg width="20" height="20" viewBox="0 0 20 20" fill="no
 </svg>
 `;
 
-const ClipboardCheckCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ClipboardCheckCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 4.35106C8 3.88103 8.41441 3.5 8.92562 3.5H15.0744C15.5856 3.5 16 3.88103 16 4.35106V7.64894C16 8.11897 15.5856 8.5 15.0744 8.5H8.92562C8.41441 8.5 8 8.11897 8 7.64894V4.35106Z" fill="currentColor"/>
 <path d="M6.46154 19H17.0385C17.5695 19 18 18.5523 18 18V6C18 5.44772 17.5695 5 17.0385 5H14.1538H9.34615H6.46154C5.9305 5 5.5 5.44772 5.5 6V18C5.5 18.5523 5.9305 19 6.46154 19Z" fill="currentColor"/>
@@ -3560,7 +3562,7 @@ const ClipboardCheckCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fi
 </svg>
 `;
 
-const Clock = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Clock = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M18.75 11C18.75 14.866 15.616 18 11.75 18C7.88401 18 4.75 14.866 4.75 11C4.75 7.13401 7.88401 4 11.75 4C15.616 4 18.75 7.13401 18.75 11Z" fill="currentColor"/>
 </g>
@@ -3570,7 +3572,7 @@ const Clock = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Cloud = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Cloud = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4H12C10.1362 4 8.57006 5.27477 8.12602 7H8C5.79086 7 4 8.79086 4 11C4 13.2091 5.79086 15 8 15H16C18.2091 15 20 13.2091 20 11C20 9.09985 18.6751 7.50915 16.8987 7.10135C16.4909 5.32493 14.9002 4 13 4Z" fill="currentColor"/>
 </g>
@@ -3578,7 +3580,7 @@ const Cloud = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const CloudDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CloudDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4H12C10.1362 4 8.57006 5.27477 8.12602 7H8C5.79086 7 4 8.79086 4 11C4 13.2091 5.79086 15 8 15H16C18.2091 15 20 13.2091 20 11C20 9.09985 18.6751 7.50915 16.8987 7.10135C16.4909 5.32493 14.9002 4 13 4Z" fill="currentColor"/>
 </g>
@@ -3589,7 +3591,7 @@ const CloudDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const CloudUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CloudUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 4H12C10.1362 4 8.57006 5.27477 8.12602 7H8C5.79086 7 4 8.79086 4 11C4 13.2091 5.79086 15 8 15H16C18.2091 15 20 13.2091 20 11C20 9.09985 18.6751 7.50915 16.8987 7.10135C16.4909 5.32493 14.9002 4 13 4Z" fill="currentColor"/>
 </g>
@@ -3600,7 +3602,7 @@ const CloudUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Coctail = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Coctail = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_488)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.75 18.0241V12.9271L18.8664 6.34023C19.1635 6.0203 18.9366 5.5 18.5 5.5H5.5C5.06342 5.5 4.83653 6.0203 5.1336 6.34023L11.25 12.9271V18.0241C9.1328 18.1626 7.5 18.8897 7.5 20H16.5C16.5 18.8897 14.8672 18.1626 12.75 18.0241Z" fill="currentColor"/>
@@ -3616,7 +3618,7 @@ const Coctail = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Code = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Code = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.58997 10.331C2.95943 9.92053 3.59172 9.88726 4.00223 10.2567L7.33556 13.2567C7.74607 13.6262 7.77935 14.2585 7.40989 14.669C7.04043 15.0795 6.40814 15.1128 5.99763 14.7433L2.6643 11.7433C2.25379 11.3738 2.22051 10.7416 2.58997 10.331Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.40989 7.33104C7.77935 7.74155 7.74607 8.37384 7.33556 8.7433L4.00223 11.7433C3.59172 12.1128 2.95943 12.0795 2.58997 11.669C2.22051 11.2585 2.25379 10.6262 2.6643 10.2567L5.99763 7.25671C6.40814 6.88726 7.04043 6.92053 7.40989 7.33104Z" fill="currentColor"/>
@@ -3632,14 +3634,14 @@ const Code = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const ColorPicker = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ColorPicker = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" d="M17.9277 3.76777C18.904 4.74409 18.7457 6.48529 17.5741 7.65686L8.5993 16.6317C8.50258 16.7284 8.39036 16.8076 8.26957 16.8642C7.89322 17.0409 7.50717 17.2555 6.59242 17.7851C6.13998 18.047 5.94029 18.1616 5.69635 18.2979C4.02271 19.2327 3.40315 19.4773 2.81066 18.8848C2.21914 18.2933 2.46327 17.6732 3.39241 16.0084C3.52989 15.762 3.64568 15.5603 3.91037 15.103C4.43991 14.1883 4.65454 13.8022 4.8312 13.4259C4.88789 13.3051 4.96705 13.1929 5.06377 13.0961L14.0386 4.12133C15.2102 2.94976 16.9514 2.79146 17.9277 3.76777Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.3241 6.71747C17.3004 5.74116 17.3004 4.15825 16.3241 3.18194C15.3478 2.20563 13.7649 2.20563 12.7886 3.18194L3.81377 12.1568L3.70234 12.3265C3.5371 12.7444 3.33627 13.1544 2.83666 14.1244C1.58211 16.56 1.38155 17.0592 1.91421 17.5918C2.44688 18.1245 2.94604 17.9239 5.38167 16.6694C6.35163 16.1698 6.76162 15.969 7.17957 15.8037L7.3493 15.6923L16.3241 6.71747ZM15.617 3.88905C16.2028 4.47483 16.2028 5.42458 15.617 6.01037L6.71449 14.9129C6.28793 15.087 5.85619 15.3001 4.92376 15.7804C3.97451 16.2693 3.57256 16.4667 3.15836 16.6331C2.98657 16.7021 2.84067 16.7521 2.72339 16.7827C2.75395 16.6654 2.80392 16.5195 2.87295 16.3477C3.03937 15.9335 3.23672 15.5315 3.72566 14.5823C4.20594 13.6499 4.41909 13.2181 4.59317 12.7916L13.4957 3.88905C14.0815 3.30326 15.0312 3.30326 15.617 3.88905Z" fill="black"/>
 <path d="M9.85103 3.82413C9.65577 3.62887 9.65577 3.31229 9.85103 3.11703C10.0463 2.92177 10.3629 2.92177 10.5581 3.11703L16.215 8.77388C16.4103 8.96914 16.4103 9.28573 16.215 9.48099C16.0197 9.67625 15.7031 9.67625 15.5079 9.48099L9.85103 3.82413Z" fill="black"/>
 </svg>
 `;
 
-const Contract = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Contract = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M13 5.5H17C17.2761 5.5 17.5 5.72386 17.5 6V10C17.5 10.2761 17.2761 10.5 17 10.5H13C12.7239 10.5 12.5 10.2761 12.5 10V6C12.5 5.72386 12.7239 5.5 13 5.5Z" fill="currentColor"/>
 <path d="M7 11H11C11.5523 11 12 11.4477 12 12V16C12 16.5523 11.5523 17 11 17H7C6.44772 17 6 16.5523 6 16V12C6 11.4477 6.44772 11 7 11Z" fill="currentColor"/>
@@ -3653,7 +3655,7 @@ const Contract = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Controller = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Controller = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6.5 6.5H15.5C17.9853 6.5 20 8.51472 20 11V13C20 15.4853 17.9853 17.5 15.5 17.5H6.5C4.01472 17.5 2 15.4853 2 13V11C2 8.51472 4.01472 6.5 6.5 6.5Z" fill="currentColor"/>
 </g>
@@ -3665,7 +3667,7 @@ const Controller = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Countdown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Countdown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M19 11C19 14.866 15.866 18 12 18C8.13401 18 5 14.866 5 11C5 7.13401 8.13401 4 12 4C15.866 4 19 7.13401 19 11Z" fill="currentColor"/>
 </g>
@@ -3680,7 +3682,7 @@ const Countdown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const CreditCard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const CreditCard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M5.5 6H17.5C18.8807 6 20 7.11929 20 8.5V15.5C20 16.8807 18.8807 18 17.5 18H5.5C4.11929 18 3 16.8807 3 15.5V8.5C3 7.11929 4.11929 6 5.5 6Z" fill="currentColor"/>
 </g>
@@ -3690,7 +3692,7 @@ const CreditCard = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Crown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Crown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M4.62008 8.49566C4.40264 7.60382 5.40113 6.91478 6.1578 7.43451L7.98763 8.69136C8.45858 9.01484 9.10437 8.87867 9.40461 8.39257L10.6492 6.37749C11.04 5.74482 11.96 5.74482 12.3508 6.37749L13.5954 8.39257C13.8957 8.87867 14.5414 9.01485 15.0124 8.69136L16.8422 7.43451C17.5989 6.91478 18.5974 7.60382 18.3799 8.49566L16.9802 14.2369C16.871 14.6848 16.4697 15 16.0086 15H6.99138C6.53033 15 6.12904 14.6848 6.01984 14.2369L4.62008 8.49566Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.8249 10.5319C14.4523 11.2446 12.7283 10.7945 11.8938 9.44356L11.5 8.80596L11.1062 9.44356C10.2718 10.7945 8.54768 11.2446 7.17512 10.5319L7.77686 13H15.2232L15.8249 10.5319ZM6.1578 7.43451C5.40113 6.91478 4.40264 7.60382 4.62008 8.49566L6.01984 14.2369C6.12904 14.6848 6.53033 15 6.99138 15H16.0086C16.4697 15 16.871 14.6848 16.9802 14.2369L18.3799 8.49566C18.5974 7.60382 17.5989 6.91478 16.8422 7.43451L15.0124 8.69136C14.5414 9.01485 13.8957 8.87867 13.5954 8.39257L12.3508 6.37749C11.96 5.74482 11.04 5.74482 10.6492 6.37749L9.40461 8.39257C9.10437 8.87867 8.45858 9.01484 7.98763 8.69136L6.1578 7.43451Z" fill="currentColor"/>
@@ -3707,7 +3709,7 @@ const Crown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Cup = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Cup = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M5.5 16H16.5C17.0523 16 17.5 16.4477 17.5 17C17.5 17.5523 17.0523 18 16.5 18H5.5C4.94772 18 4.5 17.5523 4.5 17C4.5 16.4477 4.94772 16 5.5 16Z" fill="currentColor"/>
 <path d="M17.4778 7.20915C18.6708 7.59201 19.5 8.46066 19.5 9.5C19.5 10.9284 17.9501 12 16.1073 12C16.0589 12 16.0107 11.9993 15.9627 11.9978C14.7459 13.8773 12.9524 15 11 15C7.37379 15 4.5 11.1683 4.5 6.5C4.5 6.22386 4.72386 6 5 6H17C17.2761 6 17.5 6.22386 17.5 6.5C17.5 6.7377 17.4926 6.97422 17.4778 7.20915Z" fill="currentColor"/>
@@ -3718,7 +3720,7 @@ const Cup = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="
 </svg>
 `;
 
-const Cv = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Cv = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6.5 2L13.1854 2C13.6056 2 14.0065 2.17624 14.2906 2.48582L18.6052 7.18761C18.8591 7.46433 19 7.82623 19 8.20179V18.5C19 19.3284 18.3284 20 17.5 20H6.5C5.67157 20 5 19.3284 5 18.5V3.5C5 2.67157 5.67157 2 6.5 2Z" fill="currentColor"/>
 </g>
@@ -3731,7 +3733,7 @@ const Cv = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="h
 </svg>
 `;
 
-const Division = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Division = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6.5 12.5C5.67157 12.5 5 11.8284 5 11C5 10.1716 5.67157 9.5 6.5 9.5H16.5C17.3284 9.5 18 10.1716 18 11C18 11.8284 17.3284 12.5 16.5 12.5H6.5Z" fill="currentColor"/>
 <circle cx="11" cy="7" r="2" fill="currentColor"/>
@@ -3743,7 +3745,7 @@ const Division = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const DotsX = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const DotsX = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6.5 13C5.67157 13 5 12.3284 5 11.5C5 10.6716 5.67157 10 6.5 10H17.5C18.3284 10 19 10.6716 19 11.5C19 12.3284 18.3284 13 17.5 13H6.5Z" fill="currentColor"/>
 </g>
@@ -3753,7 +3755,7 @@ const DotsX = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const DotsY = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const DotsY = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M11 6.5C11 5.67157 11.6716 5 12.5 5C13.3284 5 14 5.67157 14 6.5L14 17.5C14 18.3284 13.3284 19 12.5 19C11.6716 19 11 18.3284 11 17.5L11 6.5Z" fill="currentColor"/>
 </g>
@@ -3763,7 +3765,7 @@ const DotsY = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Dress = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Dress = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5369 0.8076C14.1545 0.648426 13.7155 0.829394 13.5563 1.2118L12.35 4.10993C11.9475 4.00207 11.5101 4.00605 11.0846 4.1455L10.9999 4.17325L10.9156 4.14561C10.6054 4.04395 10.2767 4.01186 9.95275 4.05162C9.84916 4.06433 9.74811 4.08398 9.65001 4.11004L8.44231 1.21155C8.28299 0.8292 7.84389 0.648392 7.46154 0.807705C7.07919 0.967018 6.89838 1.40612 7.05769 1.78847L8.30769 4.78847C8.33521 4.8545 8.37106 4.91452 8.41353 4.96782C8.10234 5.40433 7.94722 5.95405 8.01767 6.52807L8.13236 7.46266C8.20459 8.05129 8.45059 8.58048 8.81514 9.00134C8.31895 9.01612 7.83367 9.15382 7.40309 9.40272C5.80865 10.3244 4.62921 11.3608 3.86476 12.5119C3.61888 12.8821 3.36958 13.2199 3.13669 13.5354C2.1223 14.9096 1.41938 15.8618 2.66806 17.2402C4.20342 18.935 7.45634 20 10.6485 20C13.8406 20 17.0206 19.3723 19.0847 17.2402C20.6128 15.6618 19.9778 14.9581 18.9898 13.8632C18.6432 13.4791 18.2532 13.0469 17.8979 12.5119C17.104 11.3164 15.9187 10.2745 14.3422 9.3863C13.9812 9.1829 13.583 9.05704 13.1729 9.01537C13.5441 8.59226 13.7948 8.05785 13.8679 7.46266L13.9826 6.52807C14.0223 6.20413 13.9902 5.8754 13.8886 5.56526C13.8168 5.34608 13.7141 5.14564 13.587 4.96718C13.6293 4.91397 13.665 4.85409 13.6924 4.78822L14.9411 1.78822C15.1003 1.40581 14.9193 0.966774 14.5369 0.8076Z" fill="currentColor"/>
 </g>
@@ -3777,7 +3779,7 @@ const Dress = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Duplicate = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Duplicate = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M15 9H17C17.5523 9 18 9.44772 18 10V17C18 17.5523 17.5523 18 17 18H10C9.44772 18 9 17.5523 9 17V15H7C6.44772 15 6 14.5523 6 14V7C6 6.44772 6.44772 6 7 6H14C14.5523 6 15 6.44772 15 7V9Z" fill="currentColor"/>
 </g>
@@ -3786,7 +3788,7 @@ const Duplicate = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Electricity = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Electricity = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1482)">
 <g opacity="0.8">
 <path d="M12.1868 10H16C16.4644 10 16.6779 10.578 16.325 10.8799L11.3667 15.1213L6.34323 19.8636C5.95334 20.2317 5.33617 19.8112 5.53603 19.3136L8.47391 12H6C5.64104 12 5.39903 11.633 5.54043 11.303L8.54043 4.30304C8.61922 4.1192 8.79999 4 9 4H14C14.359 4 14.601 4.36703 14.4596 4.69696L12.1868 10Z" fill="currentColor"/>
@@ -3797,7 +3799,7 @@ const Electricity = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Enter = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Enter = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <rect x="8.25" y="4" width="10" height="15" rx="1" fill="currentColor"/>
 </g>
@@ -3812,7 +3814,7 @@ const Enter = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Exclamation = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Exclamation = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 3C12.1046 3 13 3.89543 13 5V12C13 13.1046 12.1046 14 11 14C9.89543 14 9 13.1046 9 12V5C9 3.89543 9.89543 3 11 3Z" fill="currentColor"/>
 <path d="M13 17C13 18.1046 12.1046 19 11 19C9.89543 19 9 18.1046 9 17C9 15.8954 9.89543 15 11 15C12.1046 15 13 15.8954 13 17Z" fill="currentColor"/>
@@ -3822,7 +3824,7 @@ const Exclamation = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const ExclamationCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ExclamationCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle opacity="0.8" cx="12" cy="11" r="7" fill="currentColor"/>
 <path d="M9.5 6.5C9.5 6.22386 9.72386 6 10 6C10.2761 6 10.5 6.22386 10.5 6.5V11.5C10.5 11.7761 10.2761 12 10 12C9.72386 12 9.5 11.7761 9.5 11.5V6.5Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 10C3 13.866 6.13401 17 10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10ZM16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10Z" fill="black"/>
@@ -3830,7 +3832,7 @@ const ExclamationCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill=
 </svg>
 `;
 
-const Expand = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Expand = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M13 5H17C17.5523 5 18 5.44772 18 6V10C18 10.5523 17.5523 11 17 11H13C12.4477 11 12 10.5523 12 10V6C12 5.44772 12.4477 5 13 5Z" fill="currentColor"/>
 <path d="M7 11H11C11.5523 11 12 11.4477 12 12V16C12 16.5523 11.5523 17 11 17H7C6.44772 17 6 16.5523 6 16V12C6 11.4477 6.44772 11 7 11Z" fill="currentColor"/>
@@ -3844,7 +3846,7 @@ const Expand = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Eye = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Eye = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_3729)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4.5C10 3.94772 10.4477 3.5 11 3.5C11.5523 3.5 12 3.94772 12 4.5V6.53241C12.5606 6.56898 13.107 6.63604 13.634 6.73128L14.0194 4.80388C14.1278 4.26232 14.6546 3.91111 15.1961 4.01942C15.7377 4.12773 16.0889 4.65456 15.9806 5.19612L15.5722 7.23826C16.0866 7.41912 16.569 7.63048 17.0123 7.86926L18.1425 5.9855C18.4267 5.51192 19.0409 5.35836 19.5145 5.64251C19.9881 5.92666 20.1417 6.54092 19.8575 7.0145L18.6414 9.04137C19.5003 9.87952 20 10.8859 20 12C20 15.1922 15.8972 17.5 11 17.5C6.10285 17.5 2.00003 15.1922 2.00003 12C2.00003 10.8859 2.49979 9.87952 3.35866 9.04137L2.14254 7.0145C1.85839 6.54092 2.01195 5.92666 2.48553 5.64251C2.95911 5.35836 3.57337 5.51192 3.85752 5.9855L4.98777 7.86926C5.43107 7.63048 5.91349 7.41912 6.42788 7.23826L6.01945 5.19612C5.91114 4.65456 6.26235 4.12773 6.80391 4.01942C7.34547 3.91111 7.8723 4.26232 7.98061 4.80388L8.36609 6.73128C8.89305 6.63604 9.43949 6.56898 10 6.53241V4.5ZM7.99948 8.85479C5.61088 9.44952 4.00003 10.7098 4.00003 12C4.00003 13.7784 7.06065 15.5 11 15.5C14.9394 15.5 18 13.7784 18 12C18 10.7098 16.3892 9.44952 14.0006 8.85479C14.6226 9.55985 15 10.4859 15 11.5C15 13.7091 13.2092 15.5 11 15.5C8.79089 15.5 7.00003 13.7091 7.00003 11.5C7.00003 10.4859 7.37745 9.55985 7.99948 8.85479Z" fill="currentColor"/>
@@ -3861,7 +3863,7 @@ const Eye = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="
 </svg>
 `;
 
-const EyeClosed = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const EyeClosed = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_3659)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.91662 8.91032C2.46807 9.23254 2.36566 9.85737 2.68788 10.3059C2.88621 10.582 3.11912 10.8444 3.38335 11.0914L2.25999 12.3274C1.88853 12.7361 1.91872 13.3685 2.32742 13.74C2.73612 14.1115 3.36857 14.0813 3.74002 13.6726L5.04237 12.2397C5.49676 12.4749 5.9873 12.6798 6.50619 12.8521L6.02986 14.7574C5.89592 15.2932 6.22168 15.8362 6.75747 15.9701C7.29327 16.1041 7.8362 15.7783 7.97015 15.2425L8.45007 13.3228C8.95377 13.4037 9.47216 13.4577 10 13.4831V15.5C10 16.0523 10.4477 16.5 11 16.5C11.5523 16.5 12 16.0523 12 15.5V13.4424C12.5215 13.3956 13.0314 13.3207 13.5246 13.2193L13.5301 13.2425L14.0301 15.2425C14.1641 15.7783 14.707 16.1041 15.2428 15.9701C15.7786 15.8362 16.1043 15.2932 15.9704 14.7574L15.4704 12.7574C15.4619 12.7234 15.4517 12.6902 15.44 12.6579C15.8733 12.4883 16.283 12.2945 16.664 12.0782L18.2929 13.7071C18.6834 14.0976 19.3166 14.0976 19.7071 13.7071C20.0976 13.3166 20.0976 12.6834 19.7071 12.2929L18.2666 10.8523C18.4334 10.6769 18.5851 10.4946 18.7207 10.3059C19.0429 9.85737 18.9405 9.23254 18.492 8.91032C18.0434 8.5881 17.4186 8.69052 17.0964 9.13906C16.7925 9.56205 16.3238 9.96553 15.7168 10.3159C14.4234 11.0625 12.6315 11.5 10.7043 11.5C8.7771 11.5 6.98518 11.0625 5.6918 10.3159C5.08478 9.96553 4.61607 9.56205 4.31221 9.13906C3.99 8.69052 3.36517 8.5881 2.91662 8.91032Z" fill="currentColor"/>
@@ -3877,7 +3879,7 @@ const EyeClosed = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const EyeFrame = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const EyeFrame = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2106)">
 <g opacity="0.8">
 <path d="M11.6983 8.8125C14.3677 8.8125 16.5317 10.0297 16.5317 11.5312C16.5317 13.0328 14.3677 14.25 11.6983 14.25C9.02895 14.25 6.86499 13.0328 6.86499 11.5312C6.86499 10.0297 9.02895 8.8125 11.6983 8.8125Z" fill="currentColor"/>
@@ -3897,7 +3899,7 @@ const EyeFrame = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const EyeOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const EyeOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_3689)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 4.5C10 3.94772 10.4477 3.5 11 3.5C11.5523 3.5 12 3.94772 12 4.5V6.53241C12.5605 6.56898 13.107 6.63604 13.6339 6.73128L14.0194 4.80388C14.1277 4.26232 14.6546 3.91111 15.1961 4.01942C15.7377 4.12773 16.0889 4.65456 15.9806 5.19612L15.5722 7.23826C16.0865 7.41912 16.569 7.63048 17.0123 7.86926L18.1425 5.9855C18.4267 5.51192 19.0409 5.35836 19.5145 5.64251C19.9881 5.92666 20.1416 6.54092 19.8575 7.0145L18.6414 9.04137C19.5002 9.87952 20 10.8859 20 12C20 15.1922 15.8972 17.5 11 17.5C6.10282 17.5 2 15.1922 2 12C2 10.8859 2.49976 9.87952 3.35863 9.04137L2.14251 7.0145C1.85836 6.54092 2.01192 5.92666 2.4855 5.64251C2.95908 5.35836 3.57334 5.51192 3.85749 5.9855L4.98774 7.86926C5.43104 7.63048 5.91346 7.41912 6.42785 7.23826L6.01942 5.19612C5.91111 4.65456 6.26232 4.12773 6.80388 4.01942C7.34544 3.91111 7.87227 4.26232 7.98058 4.80388L8.36606 6.73128C8.89302 6.63604 9.43946 6.56898 10 6.53241V4.5ZM7.99945 8.85479C5.61085 9.44952 4 10.7098 4 12C4 13.7784 7.06062 15.5 11 15.5C14.9394 15.5 18 13.7784 18 12C18 10.7098 16.3891 9.44952 14.0005 8.85479C14.6226 9.55985 15 10.4859 15 11.5C15 13.7091 13.2091 15.5 11 15.5C8.79086 15.5 7 13.7091 7 11.5C7 10.4859 7.37742 9.55985 7.99945 8.85479Z" fill="currentColor"/>
@@ -3915,7 +3917,7 @@ const EyeOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const FastForward = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FastForward = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M11.8071 9.31684C12.1657 9.70105 12.1657 10.2973 11.8071 10.6815L5.63107 17.2986C5.01179 17.9621 3.90002 17.5239 3.90002 16.6163V3.38202C3.90002 2.4744 5.01179 2.03618 5.63107 2.6997L11.8071 9.31684Z" fill="currentColor"/>
 <path d="M18.9632 9.31684C19.3218 9.70105 19.3218 10.2973 18.9632 10.6815L12.7872 17.2986C12.1679 17.9621 11.0561 17.5239 11.0561 16.6163V3.38202C11.0561 2.4744 12.1679 2.03618 12.7872 2.6997L18.9632 9.31684Z" fill="currentColor"/>
@@ -3925,7 +3927,7 @@ const FastForward = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const File = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const File = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6.5 2L13.1854 2C13.6056 2 14.0065 2.17624 14.2906 2.48582L18.6052 7.18761C18.8591 7.46433 19 7.82623 19 8.20179V18.5C19 19.3284 18.3284 20 17.5 20H6.5C5.67157 20 5 19.3284 5 18.5V3.5C5 2.67157 5.67157 2 6.5 2Z" fill="currentColor"/>
 </g>
@@ -3936,7 +3938,7 @@ const File = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const FileLoop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FileLoop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2010)">
 <g opacity="0.8">
 <path d="M12.1431 4H8.59314C8.04086 4 7.59314 4.44772 7.59314 5V7L8.04067 15.0555C8.07011 15.5854 8.50839 16 9.03913 16H16.5931C17.1454 16 17.5931 15.5523 17.5931 15V10.5V8.21073C17.5931 8.07598 17.5388 7.94694 17.4423 7.85284L13.6388 4.14211C13.5454 4.051 13.4201 4 13.2896 4H12.1431Z" fill="currentColor"/>
@@ -3951,13 +3953,13 @@ const FileLoop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const FilmFrame = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FilmFrame = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" d="M2 6.5C2 5.94772 2.44772 5.5 3 5.5H19C19.5523 5.5 20 5.94772 20 6.5V18.5C20 19.0523 19.5523 19.5 19 19.5H3C2.44772 19.5 2 19.0523 2 18.5V6.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 3C1.44772 3 1 3.44772 1 4V16C1 16.5523 1.44772 17 2 17H18C18.5523 17 19 16.5523 19 16V4C19 3.44772 18.5523 3 18 3H2ZM15.5 4.5H16.5C16.7761 4.5 17 4.72386 17 5V6C17 6.27614 16.7761 6.5 16.5 6.5H15.5C15.2239 6.5 15 6.27614 15 6V5C15 4.72386 15.2239 4.5 15.5 4.5ZM16.5 7.5H15.5C15.2239 7.5 15 7.72386 15 8V9C15 9.27614 15.2239 9.5 15.5 9.5H16.5C16.7761 9.5 17 9.27614 17 9V8C17 7.72386 16.7761 7.5 16.5 7.5ZM15.5 10.5H16.5C16.7761 10.5 17 10.7239 17 11V12C17 12.2761 16.7761 12.5 16.5 12.5H15.5C15.2239 12.5 15 12.2761 15 12V11C15 10.7239 15.2239 10.5 15.5 10.5ZM16.5 13.5H15.5C15.2239 13.5 15 13.7239 15 14V15C15 15.2761 15.2239 15.5 15.5 15.5H16.5C16.7761 15.5 17 15.2761 17 15V14C17 13.7239 16.7761 13.5 16.5 13.5ZM3.5 4.5H4.5C4.77614 4.5 5 4.72386 5 5V6C5 6.27614 4.77614 6.5 4.5 6.5H3.5C3.22386 6.5 3 6.27614 3 6V5C3 4.72386 3.22386 4.5 3.5 4.5ZM4.5 7.5H3.5C3.22386 7.5 3 7.72386 3 8V9C3 9.27614 3.22386 9.5 3.5 9.5H4.5C4.77614 9.5 5 9.27614 5 9V8C5 7.72386 4.77614 7.5 4.5 7.5ZM3.5 10.5H4.5C4.77614 10.5 5 10.7239 5 11V12C5 12.2761 4.77614 12.5 4.5 12.5H3.5C3.22386 12.5 3 12.2761 3 12V11C3 10.7239 3.22386 10.5 3.5 10.5ZM4.5 13.5H3.5C3.22386 13.5 3 13.7239 3 14V15C3 15.2761 3.22386 15.5 3.5 15.5H4.5C4.77614 15.5 5 15.2761 5 15V14C5 13.7239 4.77614 13.5 4.5 13.5ZM6.5 16V4H13.5V16H6.5Z" fill="black"/>
 </svg>
 `;
 
-const Fire = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Fire = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M11.4983 18.5682C15.1259 18.5682 18 15.6275 18 11.9999C18 11.9999 18 8.58436 15.5899 5.60936C15.5466 5.55587 15.463 5.56162 15.4276 5.62065L14.1104 7.81588C14.0667 7.88874 13.9573 7.87759 13.9289 7.79753C13.768 7.34554 13.3622 6.2361 13 5.49992C12.5886 4.66393 11.5112 3.52205 11.1333 3.13474C11.0771 3.07709 10.9804 3.10661 10.9651 3.18569C10.8538 3.76019 10.4859 5.52807 10 6.49992C9.5233 7.45332 8.8291 8.5106 8.58709 8.87131C8.54654 8.93174 8.45745 8.92901 8.42001 8.86661L7.07652 6.62745C7.03998 6.56655 6.95334 6.56224 6.91172 6.61979C5.48032 8.59873 5 11.0198 5 11.9999C5 15.6275 7.87072 18.5682 11.4983 18.5682Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.4742 3.0906C10.5652 2.62114 11.1491 2.43493 11.4912 2.78558C11.6848 2.98397 12.058 3.37607 12.4371 3.82761C12.8094 4.27117 13.2148 4.80401 13.4486 5.27919C13.677 5.74335 13.9193 6.34339 14.1104 6.8442L14.9988 5.36342C15.2134 5.00572 15.7173 4.97233 15.9784 5.29464C17.2421 6.85452 17.8708 8.52547 18.1843 9.80095C18.3413 10.4396 18.4201 10.9827 18.4597 11.3687C18.4796 11.5618 18.4896 11.716 18.4947 11.8237C18.4973 11.8775 18.4986 11.9197 18.4993 11.9494L18.4999 11.9844L18.5 11.9947L18.5 11.9979L18.5 11.9991C18.5 11.9993 18.5 11.9999 18 11.9999L18.5 11.9991C18.5 15.8961 15.4086 19.0682 11.4983 19.0682C7.58761 19.0682 4.5 15.8966 4.5 11.9999C4.5 10.9258 5.00727 8.39961 6.50659 6.32677C6.76183 5.97389 7.28706 6.00654 7.50526 6.37022L8.51965 8.06086C8.82795 7.57793 9.24023 6.90145 9.55279 6.27633C10.0026 5.37675 10.3601 3.67949 10.4742 3.0906Z" fill="currentColor"/>
@@ -3967,7 +3969,7 @@ const Fire = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Flag = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Flag = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M7.99957 4.97042L8.95446 4.57383C9.89482 4.22847 10.9329 4.24798 11.8622 4.63236L13.3435 5.24505C14.199 5.59892 15.1508 5.64505 16.0366 5.37556L16.9296 5.10387C17.7769 4.84609 18.6728 5.32399 18.9306 6.1713C18.9766 6.32261 19 6.4799 19 6.63806V10.6997C19 11.8707 18.3646 12.9495 17.3405 13.5173L16.6064 13.9244C15.3998 14.5935 13.9335 14.5935 12.7269 13.9244L12.2731 13.6728C11.0665 13.0037 9.60021 13.0037 8.39359 13.6728L8.16667 13.7986C8.1121 13.8288 8.05644 13.8552 8 13.8778V19C8 19.5523 7.55228 20 7 20C6.44772 20 6 19.5523 6 19V5C6 4.44772 6.44772 4 7 4C7.81074 4 7.99957 4.97042 7.99957 4.97042Z" fill="currentColor"/>
 </g>
@@ -3976,7 +3978,7 @@ const Flag = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const FlagStraight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FlagStraight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M4 4.5C4 3.94772 4.44772 3.5 5 3.5H18.0793C18.8884 3.5 19.3625 4.41068 18.8986 5.07346L16.6004 8.35663C16.5401 8.44271 16.5401 8.55729 16.6004 8.64337L18.8986 11.9265C19.3625 12.5893 18.8884 13.5 18.0793 13.5H5C4.44772 13.5 4 13.0523 4 12.5V4.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 4.5C5.55228 4.5 6 4.94772 6 5.5L6 18.5C6 19.0523 5.55228 19.5 5 19.5C4.44772 19.5 4 19.0523 4 18.5L4 5.5C4 4.94772 4.44772 4.5 5 4.5Z" fill="currentColor"/>
@@ -3986,7 +3988,7 @@ const FlagStraight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const Flower = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Flower = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1505)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9577 3.70271L14.8853 3.78196C14.5511 4.14683 14.3446 4.35528 14.1748 4.49015C13.9784 4.23554 13.6887 3.84808 13.6936 3.8544C13.4051 3.48043 13.165 3.20924 12.9195 3.00194C12.619 2.74817 12.3212 2.60174 12 2.60174C11.8313 2.60174 11.6672 2.64406 11.5086 2.72103C11.122 2.90864 10.798 3.26211 10.3638 3.86885C10.3094 3.94496 10.1721 4.14131 10.0899 4.25879L10.0269 4.34878C9.98779 4.40411 9.95266 4.45293 9.92077 4.4962L9.90489 4.48417C9.72623 4.3472 9.51116 4.13846 9.15613 3.76687L9.08747 3.69487C8.55371 3.13443 8.40866 2.98816 8.18558 2.80638C8.00393 2.65837 7.84702 2.56272 7.67667 2.52097C7.34592 2.43991 7.0295 2.60022 6.90938 2.93114C6.64016 3.67283 6.5 4.46989 6.5 5.28809C6.5 8.66894 8.19597 11.074 11.1655 11.4489C11.0609 11.6069 11 11.7963 11 12V15.7721C10.6014 15.2998 10.1289 14.8326 9.61094 14.398C7.92618 12.9843 5.83957 12.594 4.90256 13.7107C3.96555 14.8274 4.71224 16.8145 6.397 18.2282C8.00906 19.5809 10.6602 20.2761 11.7674 19.4728C11.8328 19.4884 11.9007 19.4975 11.9704 19.4996C13.0994 20.2603 15.7087 19.5655 17.3025 18.2282C18.9873 16.8145 19.734 14.8274 18.797 13.7107C17.8599 12.594 15.7733 12.9843 14.0886 14.398C13.6953 14.7279 13.3284 15.0766 13 15.4321V12C13 11.7963 12.9391 11.6069 12.8346 11.4489C15.804 11.074 17.5 8.66894 17.5 5.28809C17.5 4.46989 17.3599 3.67283 17.0906 2.93114C16.9711 2.60183 16.6556 2.43776 16.3239 2.52196C16.1538 2.56515 16.0002 2.66253 15.8231 2.8129C15.6085 2.99518 15.4743 3.13653 14.9577 3.70271Z" fill="currentColor"/>
@@ -4000,7 +4002,7 @@ const Flower = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const FlowerBud = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FlowerBud = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1559 7.80414C18.7548 7.97683 20 9.34178 20 11C20 12.6582 18.7548 14.0232 17.1559 14.1959C17.2775 14.5362 17.3438 14.9031 17.3438 15.2857C17.3438 17.0609 15.9167 18.5 14.1562 18.5C13.0475 18.5 12.0711 17.9292 11.5 17.0631C10.9289 17.9292 9.95245 18.5 8.84375 18.5C7.08334 18.5 5.65625 17.0609 5.65625 15.2857C5.65625 14.9031 5.72253 14.5362 5.84415 14.1959C4.24521 14.0232 3 12.6582 3 11C3 9.34178 4.24521 7.97683 5.84415 7.80414C5.72253 7.46383 5.65625 7.09686 5.65625 6.71429C5.65625 4.93909 7.08334 3.5 8.84375 3.5C9.95245 3.5 10.9289 4.07081 11.5 4.9369C12.0711 4.07081 13.0475 3.5 14.1563 3.5C15.9167 3.5 17.3438 4.93909 17.3438 6.71429C17.3438 7.09686 17.2775 7.46383 17.1559 7.80414Z" fill="currentColor"/>
 </g>
@@ -4009,7 +4011,7 @@ const FlowerBud = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Folder = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Folder = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M12.2187 7.5H17.5C18.8807 7.5 20 8.61929 20 10V17C20 18.3807 18.8807 19.5 17.5 19.5H6.5C5.11929 19.5 4 18.3807 4 17L4 7.5C4 6.11929 5.11929 5 6.5 5H9.33935C10.2365 5 11.0649 5.48072 11.51 6.25965L12.2187 7.5Z" fill="currentColor"/>
 </g>
@@ -4017,7 +4019,7 @@ const Folder = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const FoldingStool = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const FoldingStool = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1210_784)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.25 11.5C5.25 10.6716 5.92157 10 6.75 10H16.75C17.5784 10 18.25 10.6716 18.25 11.5C18.25 12.3284 17.5784 13 16.75 13H6.75C5.92157 13 5.25 12.3284 5.25 11.5Z" fill="currentColor"/>
@@ -4050,7 +4052,7 @@ const FoldingStool = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const Gear = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Gear = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5576 3.25C11.8545 3.25 12.1234 3.42509 12.2435 3.69656L12.6859 4.69656C12.7302 4.79661 12.7507 4.89918 12.7509 4.99917C13.1879 5.12648 13.6083 5.30097 14.0053 5.5189C14.0663 5.45819 14.1394 5.40664 14.224 5.36799L15.1948 4.92456C15.4796 4.79445 15.8153 4.85501 16.0367 5.07643L16.8744 5.91414C17.0843 6.12405 17.1507 6.43801 17.0436 6.71489L16.6494 7.73483C16.6099 7.83694 16.5519 7.92404 16.4812 7.99487C16.6991 8.39186 16.8736 8.81226 17.0009 9.24925C17.0869 9.24944 17.175 9.2647 17.2622 9.29718L18.2622 9.67007C18.5556 9.77948 18.7501 10.0597 18.7501 10.3728V11.5575C18.7501 11.8544 18.575 12.1233 18.3036 12.2434L17.3036 12.6858C17.2035 12.7301 17.1009 12.7506 17.0009 12.7508C16.8736 13.1877 16.6991 13.6081 16.4812 14.0051C16.5419 14.0661 16.5935 14.1392 16.6321 14.2239L17.0756 15.1946C17.2057 15.4795 17.1451 15.8152 16.9237 16.0366L16.086 16.8743C15.8761 17.0842 15.5621 17.1505 15.2852 17.0435L14.2653 16.6492C14.1632 16.6098 14.0761 16.5517 14.0053 16.4811C13.6083 16.699 13.1879 16.8735 12.7509 17.0008C12.7507 17.0868 12.7354 17.1749 12.7029 17.262L12.33 18.262C12.2206 18.5554 11.9405 18.75 11.6273 18.75H10.4426C10.1458 18.75 9.87684 18.5749 9.75674 18.3034L9.31433 17.3034C9.27007 17.2034 9.24952 17.1009 9.24937 17.0009C8.81235 16.8736 8.39192 16.6991 7.99491 16.4812C7.93394 16.5418 7.86084 16.5934 7.77626 16.632L6.80548 17.0754C6.52065 17.2055 6.18496 17.145 5.96354 16.9236L5.12583 16.0859C4.91592 15.876 4.84957 15.562 4.95661 15.2851L5.35088 14.2652C5.39033 14.1631 5.44833 14.0761 5.51894 14.0052C5.30099 13.6082 5.1265 13.1878 4.99918 12.7508C4.91321 12.7505 4.82514 12.7353 4.73808 12.7028L3.73808 12.3299C3.44467 12.2205 3.25012 11.9403 3.25012 11.6272V10.4425C3.25012 10.1456 3.42521 9.87672 3.69668 9.75662L4.69668 9.31421C4.7967 9.26996 4.89922 9.24941 4.99918 9.24924C5.1265 8.81222 5.30099 8.39178 5.51894 7.99476C5.45826 7.9338 5.40674 7.8607 5.36812 7.77614L4.92468 6.80536C4.79458 6.52053 4.85513 6.18484 5.07655 5.96341L5.91426 5.12571C6.12417 4.9158 6.43813 4.84945 6.71501 4.95649L7.73495 5.35076C7.83702 5.39022 7.92409 5.44822 7.99491 5.51884C8.39192 5.30091 8.81235 5.12642 9.24937 4.99912C9.24957 4.91313 9.26483 4.82504 9.29731 4.73796L9.6702 3.73796C9.7796 3.44455 10.0598 3.25 10.3729 3.25H11.5576Z" fill="currentColor"/>
 </g>
@@ -4059,7 +4061,7 @@ const Gear = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Gift = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Gift = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1928)">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M20 8C20 7.44772 19.5523 7 19 7H5C4.44771 7 4 7.44772 4 8V9.58065V19C4 19.5523 4.44771 20 5 20H19C19.5523 20 20 19.5523 20 19V8Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 5H17C17.5523 5 18 5.44772 18 6V17C18 17.5523 17.5523 18 17 18H3C2.44771 18 2 17.5523 2 17V6C2 5.44772 2.44771 5 3 5ZM17 17V6H3V17H17Z" fill="black"/>
@@ -4072,7 +4074,7 @@ const Gift = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Grab = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Grab = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M3.5 8C2.94772 8 2.5 7.55228 2.5 7C2.5 6.44772 2.94772 6 3.5 6H17.9231C18.4754 6 18.9231 6.44772 18.9231 7C18.9231 7.55228 18.4754 8 17.9231 8H3.5Z" fill="currentColor"/>
 <path d="M3.5 11.75C2.94772 11.75 2.5 11.3023 2.5 10.75C2.5 10.1977 2.94772 9.75 3.5 9.75H17.9231C18.4754 9.75 18.9231 10.1977 18.9231 10.75C18.9231 11.3023 18.4754 11.75 17.9231 11.75H3.5Z" fill="currentColor"/>
@@ -4084,7 +4086,7 @@ const Grab = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Grid = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Grid = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M5 5.5C5 5.22386 5.22386 5 5.5 5H17.5C17.7761 5 18 5.22386 18 5.5V17.5C18 17.7761 17.7761 18 17.5 18H5.5C5.22386 18 5 17.7761 5 17.5V5.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 6.5V16.5H16.5V6.5H6.5ZM5.5 5C5.22386 5 5 5.22386 5 5.5V17.5C5 17.7761 5.22386 18 5.5 18H17.5C17.7761 18 18 17.7761 18 17.5V5.5C18 5.22386 17.7761 5 17.5 5H5.5Z" fill="currentColor"/>
@@ -4096,7 +4098,7 @@ const Grid = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Hamburger = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Hamburger = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_531)">
 <g opacity="0.8">
 <path d="M19 7.61295C19 8.82615 18.3152 9.53685 17.0629 9.82065C16.1919 10.018 15.4053 10.0307 13.0284 9.96263C12.1035 9.93615 11.59 9.92566 11 9.92566C10.4101 9.92566 9.89655 9.93615 8.97167 9.96263C6.59468 10.0307 5.80815 10.018 4.93716 9.82065C3.68479 9.53685 3.00002 8.82615 3.00002 7.61295C3.00002 4.86393 6.5032 3.00001 11 3.00001C15.4968 3.00001 19 4.86393 19 7.61295Z" fill="currentColor"/>
@@ -4118,7 +4120,7 @@ const Hamburger = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const HandGrab = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const HandGrab = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.45551 13.2674C4.17944 12.8528 3.83317 12.2961 3.47683 11.7083C2.34539 9.84202 3.71629 7.5031 5.87384 7.5V5.375C5.87384 4.33947 6.71331 3.5 7.74884 3.5C8.06743 3.5 8.36745 3.57946 8.63019 3.71963C8.70917 2.75679 9.51563 2 10.4988 2C11.3236 2 12.024 2.53251 12.2749 3.27246C12.5588 3.09958 12.8922 3 13.2488 3C14.2844 3 15.1238 3.83947 15.1238 4.875V5.08535C15.2802 5.03008 15.4485 5 15.6238 5H15.9988C17.0344 5 17.8738 5.83947 17.8738 6.875V11.4342C17.8767 11.4557 17.8781 11.4777 17.8781 11.5C17.8781 13.6357 17.0723 15.2742 15.8353 16.3737C14.6076 17.4651 12.9847 18 11.3781 18C8.11453 18 5.98476 15.8126 4.45551 13.2674ZM7.74884 4.5C8.23209 4.5 8.62384 4.89175 8.62384 5.375V7.5C8.62384 7.77614 8.8477 8 9.12384 8C9.39999 8 9.62384 7.77614 9.62384 7.5V3.875C9.62384 3.39175 10.0156 3 10.4988 3C10.9821 3 11.3738 3.39175 11.3738 3.875V7C11.3738 7.27614 11.5977 7.5 11.8738 7.5C12.15 7.5 12.3738 7.27614 12.3738 7V4.875C12.3738 4.39175 12.7656 4 13.2488 4C13.7321 4 14.1238 4.39175 14.1238 4.875V7.5C14.1238 7.77614 14.3477 8 14.6238 8C14.9 8 15.1238 7.77614 15.1238 7.5V6.5C15.1238 6.22386 15.3477 6 15.6238 6H15.9988C16.4821 6 16.8738 6.39175 16.8738 6.875V11.5C16.8738 11.5216 16.8752 11.5428 16.8779 11.5637C16.8622 13.3954 16.1724 14.7361 15.171 15.6263C14.1487 16.5349 12.7716 17 11.3781 17C8.64722 17 6.77874 15.1948 5.3087 12.7458C5.30609 12.7414 5.30341 12.737 5.30064 12.7326C5.29787 12.7282 5.29503 12.7239 5.29214 12.7196C5.02751 12.3225 4.68831 11.7777 4.33196 11.1899C3.61689 10.0104 4.47174 8.50308 5.87384 8.5V10C5.87384 10.2761 6.0977 10.5 6.37384 10.5C6.64999 10.5 6.87384 10.2761 6.87384 10V5.375C6.87384 4.89175 7.26559 4.5 7.74884 4.5Z" fill="currentColor"/>
 <path d="M17.3179 11.75C17.3179 14.7875 13.8032 17.2164 11.3179 17.2164C8.83259 17.2164 3.81787 13.7875 3.81787 10.75C3.81787 8.8145 4.05081 8.77036 6.31787 8.25002C6.78845 8.14201 6.52625 4.47509 7.31787 4.25005C8.81787 3.8236 10.1993 2.92416 10.8179 2.75C11.8179 3.25 13.0219 3.8092 13.3179 3.75C14.9828 3.41703 14.3179 6.25 16.3179 5.75C17.7368 6.62761 17.3179 9.83627 17.3179 11.75Z" fill="currentColor"/>
@@ -4127,13 +4129,13 @@ const HandGrab = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const HandOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const HandOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M9.90006 2.2164C10.1451 1.51541 10.7933 1 11.5791 1C12.2196 1 12.7688 1.34254 13.0826 1.8489C13.3774 1.62214 13.7443 1.48649 14.1474 1.48649C15.1519 1.48649 15.9316 2.3288 15.9316 3.32432V4.59114C16.1668 4.47248 16.4324 4.40541 16.7158 4.40541C17.7203 4.40541 18.5 5.24772 18.5 6.24324V12.2027C18.5 14.0039 18.1407 15.9252 17.2634 17.4149C16.3725 18.9277 14.938 20 12.8632 20C10.4562 20 9.02301 19.4964 7.96086 18.4591C7.44517 17.9554 7.03872 17.3466 6.65071 16.6703C6.43266 16.2902 6.20719 15.864 5.96913 15.414C5.79368 15.0823 5.61139 14.7377 5.42019 14.3891L5.41367 14.3772L3.68193 10.769C3.23617 9.84028 3.63797 8.69449 4.59576 8.29537C5.45714 7.93642 6.42362 8.33255 6.82497 9.16879L7.22649 10.0054L7.22649 3.81081C7.22649 2.81528 8.00621 1.97297 9.01068 1.97297C9.33726 1.97297 9.64007 2.06201 9.90006 2.2164Z" fill="currentColor"/>
 <path d="M15.6081 3.55758C15.2178 3.55758 14.8498 3.69099 14.5599 3.91334V2.25684C14.5599 1.28962 13.7682 0.511402 12.8092 0.511402C12.3408 0.511402 11.9059 0.700399 11.5937 1.00057C11.3149 0.411345 10.7127 0 10.0102 0C9.16272 0 8.46019 0.600342 8.29292 1.4008C7.99184 1.16733 7.6127 1.0228 7.20011 1.0228C6.22995 1.0228 5.44937 1.81214 5.44937 2.76824V10.0613L4.63533 8.43814C4.3454 7.84892 3.75439 7.49316 3.09646 7.49316C2.87344 7.49316 2.66157 7.53763 2.46085 7.61545C2.0148 7.79333 1.65796 8.14909 1.49069 8.59379C1.32342 9.03848 1.34573 9.53877 1.5576 9.97235L3.431 13.7078V13.73L3.46445 13.7523C3.68748 14.1414 3.8882 14.4971 4.06662 14.8307C4.3231 15.2976 4.55727 15.709 4.79145 16.1092C5.2821 16.9319 5.717 17.4989 6.1965 17.9436C7.36737 19.0331 8.91739 19.5 11.4041 19.5C13.389 19.5 14.9836 18.5995 16.043 16.8874C16.9016 15.4977 17.37 13.5966 17.37 11.5177V5.30302C17.37 4.3358 16.5783 3.55758 15.6193 3.55758H15.6081ZM16.2437 11.5288C16.2437 13.2631 15.8757 15.0197 15.084 16.3093C14.3146 17.5656 13.1437 18.3883 11.4041 18.3883C8.962 18.3883 7.77997 17.8991 6.95478 17.132C6.51988 16.7318 6.15189 16.2092 5.75045 15.5422C5.51628 15.1531 5.29325 14.7529 5.04792 14.3082C4.85835 13.9635 4.65763 13.6078 4.42346 13.1964L2.55006 9.46095C2.39394 9.14966 2.5389 8.76055 2.86229 8.63826C2.94035 8.6049 3.00726 8.59379 3.08531 8.59379C3.30834 8.59379 3.52021 8.71608 3.62057 8.92731L5.09253 11.8623C5.15944 11.9957 5.2598 12.118 5.39361 12.1958C5.47167 12.2403 5.57203 12.2737 5.67239 12.2959C5.70585 12.2959 5.75045 12.2959 5.7839 12.2959C5.85081 12.2959 5.91772 12.2959 5.98463 12.2737C6.1742 12.2181 6.34146 12.0958 6.44182 11.929C6.49758 11.8401 6.53103 11.74 6.54219 11.64C6.54219 11.6066 6.54219 11.5621 6.54219 11.5288V2.76824C6.54219 2.41249 6.83212 2.13455 7.1778 2.13455C7.52349 2.13455 7.81342 2.4236 7.81342 2.76824V9.50542C7.81342 9.92788 8.15911 10.2725 8.58285 10.2725C9.0066 10.2725 9.35229 9.92788 9.35229 9.50542V1.74544C9.35229 1.38968 9.64222 1.11174 9.98791 1.11174C10.3336 1.11174 10.6235 1.4008 10.6235 1.74544V8.99401C10.6235 9.41648 10.9692 9.76112 11.393 9.76112C11.8167 9.76112 12.1624 9.41648 12.1624 8.99401V2.25684C12.1624 1.90108 12.4523 1.62315 12.798 1.62315C13.1437 1.62315 13.4336 1.9122 13.4336 2.25684V9.73888C13.4336 10.1613 13.7793 10.506 14.2031 10.506C14.6268 10.506 14.9725 10.1613 14.9725 9.73888V5.30302C14.9725 4.94726 15.2624 4.66933 15.6081 4.66933C15.9538 4.66933 16.2437 4.95838 16.2437 5.30302V11.5288V11.5288Z" fill="black"/>
 </svg>
 `;
 
-const HandPoint = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const HandPoint = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6.65084 11.85V9.84998M12.1466 8.94998V6.72498C12.1466 5.96558 11.5309 5.34998 10.7716 5.34998C10.0122 5.34998 9.39655 5.96558 9.39655 6.72498M9.39655 9.34998V6.72498M9.39655 6.72498L9.40084 6.34998V2.22498C9.40084 1.46558 8.78523 0.849976 8.02584 0.849976C7.26645 0.849976 6.65084 1.46558 6.65084 2.22498V9.84998M12.1508 8.34998L12.1495 7.72645C12.1479 6.96672 12.7633 6.34998 13.523 6.34998C14.2816 6.34998 14.8966 6.96492 14.8966 7.7235V9.84998M17.6466 13.35V9.72498C17.6466 8.96558 17.0309 8.34998 16.2716 8.34998H15.8966C15.3443 8.34998 14.8966 8.79769 14.8966 9.34998M17.6508 13.35C17.6508 17.35 14.6508 18.85 11.6508 18.85C8.65084 18.85 6.65084 17.35 5.15084 14.85C4.87981 14.4434 4.53532 13.89 4.1771 13.2991C3.2531 11.775 4.3685 9.84998 6.15084 9.84998H6.65084" stroke="currentColor" stroke-linecap="round"/>
 <path d="M6.65084 1.84998L8.15084 0.849976L9.15084 1.84998V5.59998H10.6508L11.6508 5.84998L12.6508 6.84998H14.1508L14.6508 8.34998H16.6508L17.1508 8.84998L17.6508 12.35L16.6508 16.85L11.6508 19.35L6.65084 16.85L3.65084 11.85L5.15084 10.35L6.65084 9.34998V5.59998V1.84998Z" fill="currentColor"/>
@@ -4142,7 +4144,7 @@ const HandPoint = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const HandPointOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const HandPointOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.52395 2.375C6.52395 1.33947 7.36341 0.5 8.39895 0.5C9.43448 0.5 10.2739 1.33947 10.2739 2.375V6.5C10.2739 6.77614 10.0501 7 9.77395 7C9.49781 7 9.27395 6.77614 9.27395 6.5V2.375C9.27395 1.89175 8.8822 1.5 8.39895 1.5C7.9157 1.5 7.52395 1.89175 7.52395 2.375V12C7.52395 12.2761 7.30009 12.5 7.02395 12.5C6.74781 12.5 6.52395 12.2761 6.52395 12V2.375Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.44461 9.75896C4.16593 9.43383 3.68274 9.38079 3.34015 9.63771C2.98942 9.90075 2.91059 10.3946 3.16199 10.7537L5.93357 14.7132C6.09193 14.9394 6.0369 15.2512 5.81068 15.4096C5.58445 15.5679 5.27269 15.5129 5.11433 15.2867L2.34275 11.3272C1.78195 10.526 1.95781 9.42445 2.74017 8.8377C3.50437 8.26457 4.58221 8.3829 5.20387 9.10817L7.40358 11.6745C7.58329 11.8842 7.55901 12.1998 7.34935 12.3795C7.13969 12.5592 6.82404 12.535 6.64432 12.3253L4.44461 9.75896Z" fill="currentColor"/>
@@ -4161,7 +4163,7 @@ const HandPointOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const Handshake = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Handshake = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2579)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.16519 4.11513C3.66162 3.88833 3.06954 4.11269 2.84274 4.61626L0.760672 9.23902C0.533868 9.74259 0.75823 10.3347 1.2618 10.5615L2.66139 11.1918C3.16496 11.4186 3.75704 11.1943 3.98384 10.6907L6.06591 6.06795C6.29271 5.56439 6.06835 4.9723 5.56479 4.7455L4.16519 4.11513ZM2.41525 9.86925C2.74902 10.0196 3.14146 9.87087 3.29179 9.5371C3.44212 9.20333 3.29341 8.81089 2.95964 8.66056C2.62587 8.51024 2.23343 8.65895 2.0831 8.99272C1.93277 9.32649 2.08148 9.71893 2.41525 9.86925Z" fill="currentColor"/>
@@ -4184,7 +4186,7 @@ const Handshake = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Hash = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Hash = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <line x1="5.5" y1="8.75" x2="16.5" y2="8.75" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
 <line x1="5.5" y1="14.25" x2="16.5" y2="14.25" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
@@ -4198,7 +4200,7 @@ const Hash = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Headphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Headphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.8801 17.0685C18.7061 17.5927 18.1402 17.8766 17.616 17.7027C17.5878 17.6933 17.5602 17.6828 17.5334 17.6712C16.9918 18.4839 16.0621 19.014 15.0129 18.9998L14.9967 18.9995C14.4466 18.989 14.0083 18.5362 14.0158 17.9861L14.0699 13.9865C14.0774 13.4321 14.5345 12.9897 15.0888 13.0002C16.0593 13.0186 16.9138 13.4961 17.4485 14.222C17.4827 13.8743 17.5 13.5218 17.5 13.166C17.5 8.71008 14.7442 5.75354 11 5.75354C7.25581 5.75354 4.5 8.71008 4.5 13.166C4.5 13.5555 4.52075 13.941 4.56163 14.3208C5.10693 13.5321 6.02251 13.0206 7.05335 13.0345L7.06957 13.0348C7.61963 13.0452 8.05794 13.498 8.0505 14.0481L7.99636 18.0478C7.98886 18.6021 7.53178 19.0446 6.97747 19.0341C5.93738 19.0143 5.03048 18.4673 4.50772 17.6523C4.46816 17.6716 4.42688 17.6884 4.38399 17.7027C3.85981 17.8766 3.29387 17.5927 3.11994 17.0685C2.71209 15.8394 2.5 14.5199 2.5 13.166C2.5 7.63571 6.11859 3.75354 11 3.75354C15.8814 3.75354 19.5 7.63571 19.5 13.166C19.5 14.5199 19.2879 15.8394 18.8801 17.0685Z" fill="currentColor"/>
 </g>
@@ -4208,13 +4210,13 @@ const Headphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Heart = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Heart = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M11 6.72187C12.6893 3.69854 18.5 4.75425 18.5 9.12206C18.5 12.0398 16 14.7042 11 17.1154C6 14.7042 3.5 12.0398 3.5 9.12206C3.5 4.75425 9.31066 3.69854 11 6.72187Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.74215 4.63427C4.25621 5.02007 3 6.2071 3 8.12209C3 10.6822 5.16835 13.1872 10 15.5594C14.8317 13.1872 17 10.6822 17 8.12209C17 6.2071 15.7438 5.02007 14.2579 4.63427C12.741 4.24045 11.1372 4.71177 10.4365 5.96579C10.3481 6.12392 10.1811 6.22189 10 6.22189C9.81886 6.22189 9.65188 6.12392 9.56352 5.96579C8.86281 4.71177 7.25895 4.24045 5.74215 4.63427ZM10 4.85624C8.9005 3.59296 7.06844 3.25676 5.49084 3.66636C3.64912 4.14453 2 5.66926 2 8.12209C2 11.3594 4.76672 14.1469 9.78282 16.5658C9.92005 16.632 10.08 16.632 10.2172 16.5658C15.2333 14.1469 18 11.3594 18 8.12209C18 5.66926 16.3509 4.14453 14.5092 3.66636C12.9316 3.25676 11.0995 3.59296 10 4.85624Z" fill="black"/>
 </svg>
 `;
 
-const Hourglass = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Hourglass = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M7.25 2.5H16.25C16.25 2.5 16.1707 5.72979 15.35 7.5C14.4395 9.46387 11.75 11.5 11.75 11.5C11.75 11.5 9.06052 9.46387 8.15 7.5C7.32927 5.72979 7.25 2.5 7.25 2.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25 2.5C7.25 2.5 7.26563 3.13687 7.35487 4C7.46661 5.08061 7.69372 6.51586 8.15 7.5C9.06052 9.46387 11.75 11.5 11.75 11.5C11.75 11.5 14.4395 9.46387 15.35 7.5C15.8063 6.51586 16.0334 5.08061 16.1451 4C16.2344 3.13687 16.25 2.5 16.25 2.5H7.25ZM8.86345 4C8.86925 4.05229 8.87534 4.1053 8.88172 4.15894C9.00157 5.16622 9.20697 6.21362 9.51085 6.86906C9.84273 7.58487 10.5702 8.4249 11.3301 9.15422C11.4755 9.29376 11.6169 9.42439 11.75 9.54402C11.8831 9.42439 12.0245 9.29376 12.1699 9.15422C12.9298 8.4249 13.6573 7.58487 13.9891 6.86906C14.293 6.21362 14.4984 5.16622 14.6183 4.15894C14.6247 4.1053 14.6307 4.05229 14.6365 4H8.86345Z" fill="currentColor"/>
@@ -4230,7 +4232,7 @@ const Hourglass = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const House = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const House = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1317)">
 <g opacity="0.8">
 <path d="M3.88889 11H2.5C2.03934 11 1.82377 10.4299 2.16919 10.1251L10.6692 2.62508C10.8582 2.45831 11.1418 2.45831 11.3308 2.62508L19.8308 10.1251C20.1762 10.4299 19.9607 11 19.5 11H18.1111V18C18.1111 18.2761 17.8873 18.5 17.6111 18.5H4.38889C4.11274 18.5 3.88889 18.2761 3.88889 18V11Z" fill="currentColor"/>
@@ -4242,7 +4244,7 @@ const House = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Identification = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Identification = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M3 7.5C3 6.11929 4.11929 5 5.5 5H17.5C18.8807 5 20 6.11929 20 7.5V14.5C20 15.8807 18.8807 17 17.5 17H5.5C4.11929 17 3 15.8807 3 14.5V7.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4 4C3.17157 4 2.5 4.67157 2.5 5.5V12.5C2.5 13.3284 3.17157 14 4 14H16C16.8284 14 17.5 13.3284 17.5 12.5V5.5C17.5 4.67157 16.8284 4 16 4H4ZM1.5 5.5C1.5 4.11929 2.61929 3 4 3H16C17.3807 3 18.5 4.11929 18.5 5.5V12.5C18.5 13.8807 17.3807 15 16 15H4C2.61929 15 1.5 13.8807 1.5 12.5V5.5Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.18182 6.81818C9.18182 6.54203 9.40568 6.31818 9.68182 6.31818H12.4091C12.6852 6.31818 12.9091 6.54203 12.9091 6.81818C12.9091 7.09432 12.6852 7.31818 12.4091 7.31818H9.68182C9.40568 7.31818 9.18182 7.09432 9.18182 6.81818Z" fill="black"/>
@@ -4253,7 +4255,7 @@ const Identification = `<svg width="20" height="20" viewBox="0 0 20 20" fill="no
 </svg>
 `;
 
-const Info = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Info = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11 8C12.1046 8 13 8.89543 13 10V17C13 18.1046 12.1046 19 11 19C9.89543 19 9 18.1046 9 17V10C9 8.89543 9.89543 8 11 8Z" fill="currentColor"/>
 <path d="M13 5C13 6.10457 12.1046 7 11 7C9.89543 7 9 6.10457 9 5C9 3.89543 9.89543 3 11 3C12.1046 3 13 3.89543 13 5Z" fill="currentColor"/>
@@ -4263,7 +4265,7 @@ const Info = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const InfoCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const InfoCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle opacity="0.8" cx="12" cy="11" r="7" fill="currentColor"/>
 <path d="M9.5 9C9.5 8.72386 9.72386 8.5 10 8.5C10.2761 8.5 10.5 8.72386 10.5 9V14C10.5 14.2761 10.2761 14.5 10 14.5C9.72386 14.5 9.5 14.2761 9.5 14V9Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 10C3 13.866 6.13401 17 10 17C13.866 17 17 13.866 17 10C17 6.13401 13.866 3 10 3C6.13401 3 3 6.13401 3 10ZM16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 6.68629 6.68629 4 10 4C13.3137 4 16 6.68629 16 10Z" fill="black"/>
@@ -4271,7 +4273,7 @@ const InfoCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Internet = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Internet = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M11.5 20C6.80558 20 3 16.1944 3 11.5C3 6.80558 6.80558 3 11.5 3C16.1944 3 20 6.80558 20 11.5C20 16.1944 16.1944 20 11.5 20Z" fill="currentColor"/>
 </g>
@@ -4283,7 +4285,7 @@ const Internet = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Key = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Key = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M14.5 9V11.6111C14.5 11.7409 14.4495 11.8656 14.3592 11.9589L13.3562 12.9949L14.3541 13.9958C14.4475 14.0895 14.5 14.2164 14.5 14.3488V15.124C14.5 15.3033 14.404 15.4689 14.2483 15.558L13.5323 15.9677L14.3177 16.6139C14.4331 16.7089 14.5 16.8505 14.5 17C14.5 18.3807 13.3807 19.5 12 19.5C10.6193 19.5 9.5 18.3807 9.5 17V9C9.5 8.91628 9.50413 8.83304 9.51233 8.75051C8.27138 7.92679 7.5 6.53091 7.5 5C7.5 2.51472 9.51472 0.5 12 0.5C14.4853 0.5 16.5 2.51472 16.5 5C16.5 6.53091 15.7286 7.92679 14.4877 8.75051C14.4959 8.83304 14.5 8.91628 14.5 9Z" fill="currentColor"/>
 </g>
@@ -4292,7 +4294,7 @@ const Key = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="
 </svg>
 `;
 
-const KniveFork = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const KniveFork = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.9048 0.834176C13.6721 1.99181 12.5 3.63951 12.5 5.71735C12.5 7.67355 13.5465 9.03178 15.5 9.69569V11.2007C15.0516 11.46 14.75 11.9448 14.75 12.5V17.5C14.75 18.3284 15.4216 19 16.25 19C17.0784 19 17.75 18.3284 17.75 17.5V12.5C17.75 11.9448 17.4484 11.46 17 11.2007V9.15088C17.0002 9.13999 17.0002 9.12912 17 9.11828V1.5C17 0.93764 16.404 0.575323 15.9048 0.834176ZM5.78272 2.46257C5.80339 2.04888 6.15551 1.73026 6.56921 1.75093C6.98291 1.7716 7.30152 2.12373 7.28085 2.53742C7.19904 4.17489 7.28398 5.28369 7.49964 5.80358C7.59363 6.03015 7.74212 6.16691 8 6.22214V2.5C8 2.08579 8.33579 1.75 8.75 1.75C9.16421 1.75 9.5 2.08579 9.5 2.5V6.22209C9.75773 6.16682 9.90616 6.03008 10.0001 5.80358C10.2158 5.28369 10.3007 4.17489 10.2189 2.53742C10.1982 2.12373 10.5169 1.7716 10.9306 1.75093C11.3442 1.73026 11.6964 2.04888 11.717 2.46257C11.8093 4.30918 11.7108 5.59435 11.3856 6.37832C11.0497 7.1881 10.3862 7.64523 9.5 7.73386V11.2007C9.94835 11.46 10.25 11.9448 10.25 12.5V17.5C10.25 18.3284 9.57843 19 8.75 19C7.92157 19 7.25 18.3284 7.25 17.5V12.5C7.25 11.9448 7.55165 11.46 8 11.2007V7.73389C7.11368 7.64531 6.45006 7.18817 6.11412 6.37832C5.78892 5.59435 5.69046 4.30918 5.78272 2.46257Z" fill="currentColor"/>
 </g>
@@ -4305,7 +4307,7 @@ const KniveFork = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Label = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Label = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_5009)">
 <g opacity="0.8">
 <path d="M4.48526 2.48682C4.48534 2.48593 4.48542 2.48505 4.4855 2.48416C4.48639 2.48407 4.48728 2.48399 4.48817 2.48391C4.94496 2.44168 5.58179 2.39754 6.30365 2.36885C7.76299 2.31087 9.49683 2.31927 10.7832 2.51105C10.8417 2.51977 10.9175 2.55227 10.9937 2.6284L18.747 10.3818C18.9423 10.577 18.9423 10.8936 18.747 11.0889L13.0902 16.7457C12.8949 16.941 12.5783 16.941 12.3831 16.7457L4.62972 8.99236C4.55358 8.91623 4.52108 8.84041 4.51237 8.78192C4.32059 7.49552 4.3122 5.76167 4.3702 4.30232C4.39888 3.58045 4.44303 2.94362 4.48526 2.48682Z" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -4317,7 +4319,7 @@ const Label = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Leave = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Leave = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <rect x="6" y="4" width="10" height="15" rx="1" fill="currentColor"/>
 </g>
@@ -4332,14 +4334,14 @@ const Leave = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Letter = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Letter = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect opacity="0.8" x="4.5" y="5.5" width="15" height="12" rx="1.5" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17 4H3C2.72386 4 2.5 4.22386 2.5 4.5V15.5C2.5 15.7761 2.72386 16 3 16H17C17.2761 16 17.5 15.7761 17.5 15.5V4.5C17.5 4.22386 17.2761 4 17 4ZM3.5 15V5H16.5V15H3.5Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.3242 4.88066L10.2792 10.8807C10.0914 11.0406 9.81512 11.0397 9.62838 10.8786L2.6734 4.87859C2.32251 4.57588 2.53659 4 3 4H17C17.465 4 17.6782 4.57917 17.3242 4.88066ZM15.6418 5H4.34504L9.95708 9.84146L15.6418 5Z" fill="black"/>
 </svg>
 `;
 
-const LetterOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const LetterOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.9453 3.16795C11.2812 2.94402 11.7188 2.94402 12.0547 3.16795L16.3028 6H18C18.5523 6 19 6.44772 19 7V9C19.5523 9 20 9.44772 20 10V19C20 19.5523 19.5523 20 19 20H4C3.44772 20 3 19.5523 3 19V10C3 9.44772 3.44772 9 4 9V7C4 6.44772 4.44772 6 5 6H6.69722L10.9453 3.16795Z" fill="currentColor"/>
 </g>
@@ -4353,7 +4355,7 @@ const LetterOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const List = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const List = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <circle cx="6" cy="7.25" r="1.5" fill="currentColor"/>
 <circle cx="6" cy="11.25" r="1.5" fill="currentColor"/>
@@ -4371,7 +4373,7 @@ const List = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const LockClosed = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const LockClosed = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8 9.64494V6.5C8 4.567 9.567 3 11.5 3C13.433 3 15 4.567 15 6.5V9.64494C16.4457 10.0752 17.5 11.4145 17.5 13V16C17.5 17.933 15.933 19.5 14 19.5H9C7.067 19.5 5.5 17.933 5.5 16V13C5.5 11.4145 6.55426 10.0752 8 9.64494ZM9.5 9.5V6.5C9.5 5.39543 10.3954 4.5 11.5 4.5C12.6046 4.5 13.5 5.39543 13.5 6.5V9.5H9.5Z" fill="currentColor"/>
 </g>
@@ -4381,7 +4383,7 @@ const LockClosed = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const LockOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const LockOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.5 9.5H14C15.933 9.5 17.5 11.067 17.5 13V16C17.5 17.933 15.933 19.5 14 19.5H9C7.067 19.5 5.5 17.933 5.5 16V13C5.5 11.4145 6.55426 10.0752 8 9.64494V6.75C8 4.6928 9.55173 3 11.5 3C13.4483 3 15 4.6928 15 6.75V7C15 7.41421 14.6642 7.75 14.25 7.75C13.8358 7.75 13.5 7.41421 13.5 7V6.75C13.5 5.49349 12.5893 4.5 11.5 4.5C10.4107 4.5 9.5 5.49349 9.5 6.75V9.5Z" fill="currentColor"/>
 </g>
@@ -4391,7 +4393,7 @@ const LockOpen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Loop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Loop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 9.5C5.5 12.5376 7.96243 15 11 15C11.9892 15 12.9174 14.7389 13.7194 14.2818C13.7801 14.381 13.8534 14.4748 13.9393 14.5607L16.9393 17.5607C17.5251 18.1464 18.4749 18.1464 19.0607 17.5607C19.6464 16.9749 19.6464 16.0251 19.0607 15.4393L16.0607 12.4393C15.9748 12.3534 15.881 12.2801 15.7818 12.2194C16.2389 11.4174 16.5 10.4892 16.5 9.5C16.5 6.46243 14.0376 4 11 4C7.96243 4 5.5 6.46243 5.5 9.5Z" fill="currentColor"/>
 </g>
@@ -4400,7 +4402,7 @@ const Loop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const LoopMinus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const LoopMinus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.82843 5.8284C4.48529 8.17155 4.48529 11.9705 6.82843 14.3137C8.68524 16.1705 11.4563 16.5559 13.6926 15.4699C13.7507 15.5614 13.8196 15.648 13.8995 15.7279L17.435 19.2634C18.0208 19.8492 18.9706 19.8492 19.5564 19.2634C20.1421 18.6776 20.1421 17.7279 19.5564 17.1421L16.0208 13.6066C16.0012 13.587 15.9812 13.568 15.9608 13.5498C17.6322 11.2064 17.4165 7.93118 15.3137 5.8284C12.9706 3.48526 9.17158 3.48526 6.82843 5.8284Z" fill="currentColor"/>
 </g>
@@ -4410,7 +4412,7 @@ const LoopMinus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const LoopPlus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const LoopPlus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.82847 5.8284C4.48532 8.17155 4.48532 11.9705 6.82847 14.3137C8.68527 16.1705 11.4563 16.5559 13.6926 15.4699C13.7507 15.5614 13.8197 15.648 13.8995 15.7279L17.4351 19.2634C18.0209 19.8492 18.9706 19.8492 19.5564 19.2634C20.1422 18.6776 20.1422 17.7279 19.5564 17.1421L16.0209 13.6066C16.0013 13.587 15.9813 13.568 15.9609 13.5498C17.6322 11.2064 17.4165 7.93118 15.3137 5.8284C12.9706 3.48526 9.17161 3.48526 6.82847 5.8284Z" fill="currentColor"/>
 </g>
@@ -4421,7 +4423,7 @@ const LoopPlus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Magnet = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Magnet = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_8_3)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.13174 4.64646C8.327 4.4512 8.64358 4.4512 8.83884 4.64646L11.8693 7.67692C12.0646 7.87218 12.0646 8.18876 11.8693 8.38403L7.62666 12.6267C7.15245 13.1009 7.15245 13.8697 7.62666 14.3439C8.10087 14.8181 8.86971 14.8181 9.34392 14.3439L13.5866 10.1013C13.7818 9.90602 14.0984 9.90602 14.2937 10.1013L17.3241 13.1317C17.5194 13.327 17.5194 13.6436 17.3241 13.8388L13.0815 18.0815C10.5431 20.6199 6.42751 20.6199 3.8891 18.0815C1.35069 15.5431 1.35069 11.4275 3.8891 8.8891L8.13174 4.64646Z" fill="currentColor"/>
@@ -4436,7 +4438,7 @@ const Magnet = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Map = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Map = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M15.6891 9.53422C16.5519 9.83406 17.252 10.5354 17.5489 11.4595L18.8501 15.5097C19.3619 17.1027 18.5207 18.8206 16.9712 19.3467C16.6722 19.4483 16.3594 19.5 16.0445 19.5H7.95468C6.32285 19.5 5 18.14 5 16.4624C5 16.1387 5.05033 15.8171 5.14907 15.5097L6.45027 11.4595C6.74724 10.5352 7.44769 9.83367 8.31081 9.53397C8.11499 8.90123 8 8.29712 8 7.78555C8 5.41871 9.79086 3.5 12 3.5C14.2091 3.5 16 5.41871 16 7.78555C16 8.29719 15.885 8.90139 15.6891 9.53422Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10 8.5C11.1046 8.5 12 7.60457 12 6.5C12 5.39543 11.1046 4.5 10 4.5C8.89543 4.5 8 5.39543 8 6.5C8 7.60457 8.89543 8.5 10 8.5ZM10 5.5C10.5523 5.5 11 5.94772 11 6.5C11 7.05228 10.5523 7.5 10 7.5C9.44772 7.5 9 7.05228 9 6.5C9 5.94772 9.44772 5.5 10 5.5Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 6.28555C5.5 8.95892 8.15253 13.5 10 13.5C11.8475 13.5 14.5 8.95892 14.5 6.28555C14.5 3.64998 12.4933 1.5 10 1.5C7.50672 1.5 5.5 3.64998 5.5 6.28555ZM13.5 6.28555C13.5 8.47937 11.1515 12.5 10 12.5C8.84852 12.5 6.5 8.47937 6.5 6.28555C6.5 4.18744 8.075 2.5 10 2.5C11.925 2.5 13.5 4.18744 13.5 6.28555Z" fill="black"/>
@@ -4444,7 +4446,7 @@ const Map = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="
 </svg>
 `;
 
-const Megaphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Megaphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6.13685 11.7828C5.70178 11.6641 5.39996 11.269 5.39996 10.818L5.39996 6.38197C5.39996 5.93102 5.70178 5.53586 6.13685 5.41721L13.7369 3.34447C14.373 3.17098 15 3.64987 15 4.30924V12.8908C15 13.5501 14.373 14.029 13.7369 13.8555L6.13685 11.7828Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.39996 10.0542L13 11.5815V5.61849L7.39996 7.14577V10.0542ZM5.39996 10.818C5.39996 11.269 5.70178 11.6641 6.13685 11.7828L13.7369 13.8555C14.373 14.029 15 13.5501 15 12.8908V4.30924C15 3.64987 14.373 3.17098 13.7369 3.34447L6.13685 5.41721C5.70178 5.53586 5.39996 5.93102 5.39996 6.38197L5.39996 10.818Z" fill="currentColor"/>
@@ -4465,7 +4467,7 @@ const Megaphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Menu = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Menu = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 9.19995C2.5 8.64767 2.94772 8.19995 3.5 8.19995H13.8077C14.36 8.19995 14.8077 8.64767 14.8077 9.19995C14.8077 9.75224 14.36 10.2 13.8077 10.2H3.5C2.94772 10.2 2.5 9.75224 2.5 9.19995Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2.5 5.19995C2.5 4.64767 2.94772 4.19995 3.5 4.19995H17.5C18.0523 4.19995 18.5 4.64767 18.5 5.19995C18.5 5.75224 18.0523 6.19995 17.5 6.19995H3.5C2.94772 6.19995 2.5 5.75224 2.5 5.19995Z" fill="currentColor"/>
@@ -4479,7 +4481,7 @@ const Menu = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Microphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Microphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 2.5C10.1193 2.5 9 3.61929 9 5V9C9 10.3807 10.1193 11.5 11.5 11.5C12.8807 11.5 14 10.3807 14 9V5C14 3.61929 12.8807 2.5 11.5 2.5ZM7 18C7 18.7917 8.66602 19 11.5 19C14.334 19 16 18.7917 16 18C16 17.3102 14.7355 17.0633 12.5357 17.0112V15.4228C15.3326 15.0011 17.5 12.9009 17.5 10.3V8.5C17.5 7.94772 17.0523 7.5 16.5 7.5C15.9477 7.5 15.5 7.94772 15.5 8.5V10.3C15.5 12.0249 13.744 13.5 11.5 13.5C9.25601 13.5 7.5 12.0249 7.5 10.3V8.5C7.5 7.94772 7.05228 7.5 6.5 7.5C5.94772 7.5 5.5 7.94772 5.5 8.5V10.3C5.5 12.923 7.70437 15.0368 10.5357 15.4332V17.0095C8.29194 17.058 7 17.3028 7 18Z" fill="currentColor"/>
 </g>
@@ -4490,7 +4492,7 @@ const Microphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Microphone2 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Microphone2 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1232_1629)">
 <circle cx="11.502" cy="5.58168" r="3" transform="rotate(38.27 11.502 5.58168)" fill="currentColor" stroke="currentColor" stroke-width="2"/>
 <path d="M8.38333 6.30569L3.82094 12.8962" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
@@ -4509,7 +4511,7 @@ const Microphone2 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Minus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Minus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6.5 12.5C5.67157 12.5 5 11.8284 5 11C5 10.1716 5.67157 9.5 6.5 9.5H16.5C17.3284 9.5 18 10.1716 18 11C18 11.8284 17.3284 12.5 16.5 12.5H6.5Z" fill="currentColor"/>
 </g>
@@ -4517,7 +4519,7 @@ const Minus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Monitor = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Monitor = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M8.5315 18.75C8.51094 18.6701 8.5 18.5863 8.5 18.5V16H3.5C2.67157 16 2 15.3284 2 14.5V4.5C2 3.67157 2.67157 3 3.5 3H18.5C19.3284 3 20 3.67157 20 4.5V14.5C20 15.3284 19.3284 16 18.5 16H13.5V18.5C13.5 18.5863 13.4891 18.6701 13.4685 18.75H15.5C15.7761 18.75 16 18.9739 16 19.25C16 19.5261 15.7761 19.75 15.5 19.75H6.5C6.22386 19.75 6 19.5261 6 19.25C6 18.9739 6.22386 18.75 6.5 18.75H8.5315Z" fill="currentColor"/>
 </g>
@@ -4528,7 +4530,7 @@ const Monitor = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const MonitorEye = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MonitorEye = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2201)">
 <g opacity="0.8">
 <path d="M18.2816 3.75H8.5C7.67157 3.75 7 4.42157 7 5.25V12.4811C7 13.3096 7.67157 13.9811 8.5 13.9811H13.3908H18.2816C19.11 13.9811 19.7816 13.3096 19.7816 12.4811V5.25C19.7816 4.42157 19.11 3.75 18.2816 3.75Z" fill="currentColor"/>
@@ -4559,7 +4561,7 @@ const MonitorEye = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const MonitorLoop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MonitorLoop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_2228)">
 <g opacity="0.8">
 <path d="M17.2479 3.75H5.5C4.67157 3.75 4 4.42157 4 5.25V9.07565V12.9013C4 13.7297 4.67157 14.4013 5.5 14.4013H11.374H17.2479C18.0764 14.4013 18.7479 13.7297 18.7479 12.9013V5.25C18.7479 4.42157 18.0764 3.75 17.2479 3.75Z" fill="currentColor"/>
@@ -4576,7 +4578,7 @@ const MonitorLoop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Monitor2 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Monitor2 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 4.5C2 3.67157 2.67157 3 3.5 3H18.5C19.3284 3 20 3.67157 20 4.5V14.5C20 15.3284 19.3284 16 18.5 16H13.5V18.5C13.5 18.5863 13.4891 18.6701 13.4685 18.75H15.5C15.7761 18.75 16 18.9739 16 19.25C16 19.5261 15.7761 19.75 15.5 19.75H6.5C6.22386 19.75 6 19.5261 6 19.25C6 18.9739 6.22386 18.75 6.5 18.75H8.5315C8.51094 18.6701 8.5 18.5863 8.5 18.5V16H3.5C2.67157 16 2 15.3284 2 14.5V4.5Z" fill="currentColor"/>
 </g>
@@ -4588,7 +4590,7 @@ const Monitor2 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Moon = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Moon = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M12.6123 3.47407C11.1462 4.11939 10.0652 5.42476 9.7254 7.02351C9.15001 9.73052 10.8735 12.3901 13.5744 12.9642C15.7487 13.4263 17.9491 12.3945 19.0014 10.4699C19.2458 10.0229 19.9239 10.185 19.9398 10.6941C19.9612 11.3759 19.9002 12.0618 19.7559 12.7406C18.7782 17.3406 14.2633 20.2788 9.67123 19.3027C5.07918 18.3266 2.14968 13.8061 3.12743 9.20615C4.047 4.87987 8.11731 1.98618 12.4718 2.52015C12.9761 2.582 13.0774 3.26938 12.6123 3.47407Z" fill="currentColor"/>
 </g>
@@ -4596,7 +4598,7 @@ const Moon = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Motorcycle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Motorcycle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.3215 7.38391C14.8993 8.08318 16 9.66305 16 11.5V14C16 15.1046 15.1046 16 14 16H13.4146C13.4699 16.1564 13.5 16.3247 13.5 16.5V18.5C13.5 19.3284 12.8284 20 12 20H11C10.1716 20 9.5 19.3284 9.5 18.5V16.5C9.5 16.3247 9.53008 16.1564 9.58535 16H9C7.89543 16 7 15.1046 7 14L7 11.5C7 9.66305 8.10067 8.08318 9.67849 7.38391C8.96207 6.83567 8.5 5.9718 8.5 5C8.5 3.34315 9.84315 2 11.5 2C13.1569 2 14.5 3.34315 14.5 5C14.5 5.9718 14.0379 6.83567 13.3215 7.38391Z" fill="currentColor"/>
 </g>
@@ -4612,7 +4614,7 @@ const Motorcycle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const MoveX = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MoveX = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_5004)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7064 6.34775C15.3428 5.81741 16.2886 5.90339 16.819 6.53981L20.1523 10.5398C20.6827 11.1762 20.5967 12.1221 19.9603 12.6524C19.3239 13.1828 18.378 13.0968 17.8477 12.4604L14.5143 8.46036C13.984 7.82395 14.07 6.8781 14.7064 6.34775Z" fill="currentColor"/>
@@ -4633,7 +4635,7 @@ const MoveX = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const MoveY = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MoveY = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.34767 8.29361C5.81732 7.6572 5.90331 6.71135 6.53972 6.181L10.5397 2.84767C11.1761 2.31733 12.122 2.40331 12.6523 3.03973C13.1827 3.67614 13.0967 4.62199 12.4603 5.15234L8.46028 8.48567C7.82386 9.01601 6.87801 8.93003 6.34767 8.29361Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6523 8.29361C16.122 8.93003 15.1761 9.01601 14.5397 8.48567L10.5397 5.15234C9.90331 4.62199 9.81732 3.67614 10.3477 3.03973C10.878 2.40331 11.8239 2.31733 12.4603 2.84767L16.4603 6.181C17.0967 6.71135 17.1827 7.6572 16.6523 8.29361Z" fill="currentColor"/>
@@ -4651,7 +4653,7 @@ const MoveY = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const MusicNoteDouble = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MusicNoteDouble = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.25 3.80991C8.25 3.29388 8.64265 2.86259 9.15642 2.8143L18.1564 1.96834C18.7431 1.9132 19.25 2.3747 19.25 2.96395V4.00002V5.14521V16C19.25 17.3807 17.9069 18.5 16.25 18.5C14.5931 18.5 13.25 17.3807 13.25 16C13.25 14.6193 14.5931 13.5 16.25 13.5C16.6006 13.5 16.9372 13.5501 17.25 13.6423V6.24933L10.25 6.94384V17C10.25 18.3807 8.90685 19.5 7.25 19.5C5.59315 19.5 4.25 18.3807 4.25 17C4.25 15.6193 5.59315 14.5 7.25 14.5C7.60064 14.5 7.93722 14.5501 8.25 14.6423V6.03814V5.00002V3.80991Z" fill="currentColor"/>
 </g>
@@ -4663,7 +4665,7 @@ const MusicNoteDouble = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 </svg>
 `;
 
-const MusicNoteSingle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const MusicNoteSingle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.531 2.33645C15.8538 5.27397 18 7.40061 18 8.94299C18 10.4353 17.1791 11.6422 15.6041 12.5261C15.168 12.7708 14.6824 12.2944 14.9188 11.8537C15.3256 11.0953 15.1916 10.2468 14.4579 9.23688C14.0063 8.6153 13.438 8.09236 12.75 7.66769V15.6389C12.75 15.6558 12.7496 15.6726 12.7487 15.6893C12.7496 15.7141 12.75 15.7389 12.75 15.7639C12.75 17.2459 11.2709 18.3889 9.5 18.3889C7.72914 18.3889 6.25 17.2459 6.25 15.7639C6.25 14.2818 7.72914 13.1389 9.5 13.1389C9.94085 13.1389 10.3636 13.2097 10.75 13.339V6.43384V5.63886V2.75C10.75 2.34864 11.1991 2.11086 11.531 2.33645Z" fill="currentColor"/>
 </g>
@@ -4673,7 +4675,7 @@ const MusicNoteSingle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 </svg>
 `;
 
-const NextTrack = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const NextTrack = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M11.0387 10.0548C11.4137 10.4425 11.4137 11.0576 11.0387 11.4452L5.20884 17.4729C4.58386 18.1191 3.49004 17.6767 3.49004 16.7777L3.49004 4.72235C3.49004 3.82338 4.58386 3.38095 5.20884 4.02713L11.0387 10.0548Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.92874 10.75L5.49004 7.19467L5.49004 14.3054L8.92874 10.75ZM11.0387 11.4452C11.4137 11.0576 11.4137 10.4425 11.0387 10.0548L5.20884 4.02713C4.58386 3.38095 3.49004 3.82338 3.49004 4.72235L3.49004 16.7777C3.49004 17.6767 4.58386 18.1191 5.20884 17.4729L11.0387 11.4452Z" fill="currentColor"/>
@@ -4687,7 +4689,7 @@ const NextTrack = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const NoEntry = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const NoEntry = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 11.5C5 7.35786 8.35786 4 12.5 4C16.6421 4 20 7.35786 20 11.5C20 15.6421 16.6421 19 12.5 19C8.35786 19 5 15.6421 5 11.5Z" fill="currentColor"/>
 </g>
@@ -4696,7 +4698,7 @@ const NoEntry = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Open = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Open = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect opacity="0.8" x="7" y="6" width="11" height="11" rx="1" fill="currentColor"/>
 <path d="M14.5 14.5V11.25C14.5 10.9739 14.7239 10.75 15 10.75C15.2761 10.75 15.5 10.9739 15.5 11.25V15C15.5 15.2761 15.2761 15.5 15 15.5H5C4.72386 15.5 4.5 15.2761 4.5 15V5C4.5 4.72386 4.72386 4.5 5 4.5H8.75C9.02614 4.5 9.25 4.72386 9.25 5C9.25 5.27614 9.02614 5.5 8.75 5.5H5.5V14.5H14.5Z" fill="black"/>
 <path d="M10.3536 10.3536C10.1583 10.5488 9.84171 10.5488 9.64645 10.3536C9.45118 10.1583 9.45118 9.84171 9.64645 9.64645L14.6464 4.64645C14.8417 4.45118 15.1583 4.45118 15.3536 4.64645C15.5488 4.84171 15.5488 5.15829 15.3536 5.35355L10.3536 10.3536Z" fill="black"/>
@@ -4705,7 +4707,7 @@ const Open = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const PaintPallet = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PaintPallet = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1139)">
 <g opacity="0.8">
 <path d="M10.5896 5.93864C14.3891 6.95671 16.6954 10.711 15.7246 14.3342C14.6313 18.4146 9.42662 21.6777 6.84274 18.8947C6.01967 18.0082 5.80843 17.0333 5.95296 15.7336C5.97792 15.5091 5.99947 15.3622 6.06577 14.9399C6.22776 13.9081 6.22599 13.5002 6.01192 13.1518C5.80534 12.8155 5.43446 12.7294 4.33401 12.7156C4.28019 12.7149 4.28019 12.7149 4.22591 12.7142C2.67773 12.6922 1.92684 12.4348 1.54351 11.3506C0.274887 7.76224 6.32303 4.79543 10.5896 5.93864Z" fill="currentColor"/>
@@ -4723,7 +4725,7 @@ const PaintPallet = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Pause = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Pause = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M5.5 6C5.5 4.89543 6.39543 4 7.5 4H8.20588C9.31045 4 10.2059 4.89543 10.2059 6V16C10.2059 17.1046 9.31045 18 8.20588 18H7.5C6.39543 18 5.5 17.1046 5.5 16V6Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M8.20588 6H7.5V16H8.20588V6ZM7.5 4C6.39543 4 5.5 4.89543 5.5 6V16C5.5 17.1046 6.39543 18 7.5 18H8.20588C9.31045 18 10.2059 17.1046 10.2059 16V6C10.2059 4.89543 9.31045 4 8.20588 4H7.5Z" fill="currentColor"/>
@@ -4735,7 +4737,7 @@ const Pause = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Pen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Pen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M4.79643 11.7244L14.8744 1.64643C15.0696 1.45117 15.3862 1.45117 15.5815 1.64643L19.4706 5.53552C19.6658 5.73078 19.6658 6.04736 19.4706 6.24262L9.39263 16.3206C9.31739 16.3958 9.22012 16.4451 9.11495 16.4612L4.52042 17.1667C4.18664 17.2179 3.89908 16.9304 3.95033 16.5966L4.65578 12.002C4.67193 11.8969 4.7212 11.7996 4.79643 11.7244Z" fill="currentColor"/>
 </g>
@@ -4744,7 +4746,7 @@ const Pen = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="
 </svg>
 `;
 
-const People = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const People = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M9.75 7.75C9.75 9.40685 8.40685 10.75 6.75 10.75C5.09315 10.75 3.75 9.40685 3.75 7.75C3.75 6.09315 5.09315 4.75 6.75 4.75C8.40685 4.75 9.75 6.09315 9.75 7.75Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75 8.75C7.30228 8.75 7.75 8.30228 7.75 7.75C7.75 7.19772 7.30228 6.75 6.75 6.75C6.19772 6.75 5.75 7.19772 5.75 7.75C5.75 8.30228 6.19772 8.75 6.75 8.75ZM6.75 10.75C8.40685 10.75 9.75 9.40685 9.75 7.75C9.75 6.09315 8.40685 4.75 6.75 4.75C5.09315 4.75 3.75 6.09315 3.75 7.75C3.75 9.40685 5.09315 10.75 6.75 10.75Z" fill="currentColor"/>
@@ -4768,7 +4770,7 @@ const People = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Person = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Person = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.75 6.6C7.75 4.6491 9.2804 3 11.25 3C13.2196 3 14.75 4.6491 14.75 6.6C14.75 8.5509 13.2196 10.2 11.25 10.2C9.2804 10.2 7.75 8.5509 7.75 6.6Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.2635 9.06665C8.03924 9.06665 5.25 11.538 5.25 14.8333L5.2517 17.0008C5.25214 17.5522 5.69886 17.9991 6.25 18L16.25 18C16.8023 18 17.25 17.5523 17.25 17V14.8333C17.25 11.5447 14.4949 9.06665 11.2635 9.06665Z" fill="currentColor"/>
@@ -4778,7 +4780,7 @@ const Person = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const PersonCheckmark = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PersonCheckmark = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4954)">
 <g opacity="0.8">
 <path d="M11 6.6C11 8.03594 9.88071 9.2 8.5 9.2C7.11929 9.2 6 8.03594 6 6.6C6 5.16406 7.11929 4 8.5 4C9.88071 4 11 5.16406 11 6.6Z" fill="currentColor"/>
@@ -4798,7 +4800,7 @@ const PersonCheckmark = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 </svg>
 `;
 
-const PersonPlus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PersonPlus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4955)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12.95 7.75C12.95 7.19772 13.3977 6.75 13.95 6.75H19.2C19.7523 6.75 20.2 7.19772 20.2 7.75C20.2 8.30228 19.7523 8.75 19.2 8.75H13.95C13.3977 8.75 12.95 8.30228 12.95 7.75Z" fill="currentColor"/>
@@ -4818,7 +4820,7 @@ const PersonPlus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Persons = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Persons = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4956)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.12268 10.8047C5.58014 11.6185 5.29063 12.5747 5.29063 13.5528L5.29063 14.25C5.29063 14.8022 4.84292 15.25 4.29063 15.25C3.73835 15.25 3.29063 14.8022 3.29063 14.25L3.29063 13.5528C3.29063 12.1799 3.69701 10.8377 4.45858 9.69531L6.12268 10.8047Z" fill="currentColor"/>
@@ -4853,7 +4855,7 @@ const Persons = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Phone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Phone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M12.4389 11.7743L13.0208 11.1924C14.1924 10.0208 16.0919 10.0208 17.2635 11.1924L18.6777 12.6066C19.8492 13.7782 19.8492 15.6777 18.6777 16.8492L15.872 19.6549C15.5932 19.9337 15.1766 20.0227 14.8082 19.882C8.31798 17.4042 3.87438 12.9301 1.50011 6.5696C1.36317 6.20273 1.45296 5.78968 1.72986 5.51278L4.53554 2.70711C5.70711 1.53554 7.6066 1.53554 8.77818 2.70711L10.1924 4.12132C11.364 5.2929 11.364 7.19239 10.1924 8.36396L9.61168 8.94467C10.4943 9.94935 11.4366 10.8925 12.4389 11.7743Z" fill="currentColor"/>
 </g>
@@ -4861,7 +4863,7 @@ const Phone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Photo = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Photo = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 3C3.67157 3 3 3.67157 3 4.5V18.5C3 19.3284 3.67157 20 4.5 20H18.5C19.3284 20 20 19.3284 20 18.5V4.5C20 3.67157 19.3284 3 18.5 3H4.5ZM9 9C10.1046 9 11 8.10457 11 7C11 5.89543 10.1046 5 9 5C7.89543 5 7 5.89543 7 7C7 8.10457 7.89543 9 9 9ZM13.0059 10.1229C12.6071 9.66241 11.8928 9.66241 11.4941 10.1229L9.93098 11.9278L9.30294 11.0817C8.90313 10.5431 8.09685 10.5431 7.69703 11.0817L5.78763 13.654C5.29782 14.3138 5.76881 15.25 6.59058 15.25H9.24274H10.4094H15.2572C16.114 15.25 16.574 14.243 16.0132 13.5953L13.0059 10.1229Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 5V7V11.3595L6.09112 9.88962C6.11131 9.86243 6.13183 9.8357 6.1527 9.80943C5.43994 9.08712 5 8.09494 5 7C5 6.27143 5.19479 5.58835 5.53513 5H5ZM4.5 3C3.67157 3 3 3.67157 3 4.5V18.5C3 19.3284 3.67157 20 4.5 20H18.5C19.3284 20 20 19.3284 20 18.5V4.5C20 3.67157 19.3284 3 18.5 3H4.5ZM12.4649 5H18V13.0213C17.8832 12.7655 17.726 12.5181 17.525 12.286L14.5178 8.81357C14.0782 8.30595 13.5107 7.98487 12.9094 7.85032C12.9688 7.57629 13 7.29179 13 7C13 6.27143 12.8052 5.58835 12.4649 5ZM11.7322 9.9215C12.136 9.67686 12.6778 9.74399 13.0059 10.1229L16.0132 13.5953C16.574 14.243 16.114 15.25 15.2572 15.25H6.59058C5.76881 15.25 5.29782 14.3138 5.78763 13.654L7.69703 11.0817C7.76442 10.9909 7.84335 10.9154 7.92994 10.8553C8.09672 10.7394 8.2919 10.6802 8.48767 10.6778C8.66484 10.6757 8.84249 10.72 9 10.8108C9.08313 10.8588 9.16065 10.9197 9.22953 10.9935C9.25526 11.0211 9.27978 11.0505 9.30294 11.0817L9.93098 11.9278L11.4941 10.1229C11.5647 10.0413 11.6453 9.97417 11.7322 9.9215ZM10.1439 8.64082C10.2562 8.56237 10.3601 8.47269 10.4539 8.3734C10.7924 8.01514 11 7.53181 11 7C11 5.89543 10.1046 5 9 5C7.89543 5 7 5.89543 7 7C7 7.73303 7.39435 8.37395 7.98248 8.72218C8.28058 8.89869 8.62846 9 9 9C9.22116 9 9.43394 8.9641 9.63282 8.89781C9.81646 8.83661 9.98825 8.7495 10.1439 8.64082ZM18 15.4654C17.5505 16.479 16.5557 17.25 15.2572 17.25H6.59058C5.98881 17.25 5.44975 17.0827 5 16.8009V18H18V15.4654Z" fill="currentColor"/>
@@ -4873,7 +4875,7 @@ const Photo = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const PhotoCamera = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PhotoCamera = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M7.76225 7.5L8.17154 6.23204C8.50479 5.19965 9.46583 4.5 10.5507 4.5L13.4489 4.5C14.5337 4.5 15.4947 5.19965 15.828 6.23204L16.2373 7.5H17.5C18.8807 7.5 20 8.61929 20 10V16C20 17.3807 18.8807 18.5 17.5 18.5H6.5C5.11929 18.5 4 17.3807 4 16L4 10C4 8.61929 5.11929 7.5 6.5 7.5H7.76225Z" fill="currentColor"/>
 </g>
@@ -4882,7 +4884,7 @@ const PhotoCamera = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const PhotoStudio = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PhotoStudio = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1210_639)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M20.5 17.45C20.5 17.0358 20.1642 16.7 19.75 16.7H16.25C15.8358 16.7 15.5 17.0358 15.5 17.45C15.5 17.8642 15.8358 18.2 16.25 18.2H19.75C20.1642 18.2 20.5 17.8642 20.5 17.45Z" fill="currentColor"/>
@@ -4906,7 +4908,7 @@ const PhotoStudio = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Pill = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Pill = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_858)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.06498 4.42894C7.66633 2.8276 10.2626 2.8276 11.864 4.42894L17.663 10.2279C19.2643 11.8293 19.2643 14.4256 17.663 16.0269C16.0616 17.6283 13.4653 17.6283 11.864 16.0269L6.06498 10.2279C4.46364 8.62659 4.46364 6.03029 6.06498 4.42894Z" fill="currentColor"/>
@@ -4918,7 +4920,7 @@ const Pill = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Pin = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Pin = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1210_842)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9956 4.85207C11.5371 4.54419 10.9159 4.66631 10.608 5.12482L8.09943 8.86075L6.43902 7.74584L8.94757 4.00991C9.87119 2.63438 11.735 2.26803 13.1106 3.19165L16.4314 5.42147C17.8069 6.3451 18.1733 8.20893 17.2496 9.58446L14.7411 13.3204L13.0807 12.2055L15.5892 8.46955C15.8971 8.01104 15.775 7.38976 15.3165 7.08189L11.9956 4.85207Z" fill="currentColor"/>
@@ -4938,7 +4940,7 @@ const Pin = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="
 </svg>
 `;
 
-const Pinpoint = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Pinpoint = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M12.5 19.5C9.72259 19.5 5.5 12.6249 5.5 8.62313C5.5 4.69121 8.63188 1.5 12.5 1.5C16.3681 1.5 19.5 4.69121 19.5 8.62313C19.5 12.6249 15.2774 19.5 12.5 19.5Z" fill="currentColor"/>
 </g>
@@ -4947,7 +4949,7 @@ const Pinpoint = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const PinpointOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PinpointOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M12.5 19.5C9.72259 19.5 5.5 12.6249 5.5 8.62313C5.5 4.69121 8.63188 1.5 12.5 1.5C16.3681 1.5 19.5 4.69121 19.5 8.62313C19.5 12.6249 15.2774 19.5 12.5 19.5Z" fill="currentColor"/>
 </g>
@@ -4957,7 +4959,7 @@ const PinpointOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const Play = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Play = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M19.4897 10.1901C20.1542 10.5936 20.1244 11.5679 19.4364 11.9299L7.46565 18.2288C6.79975 18.5792 5.99999 18.0963 5.99999 17.3438L5.99999 10.5V3.77701C5.99999 2.99738 6.85255 2.51761 7.51897 2.92222L19.4897 10.1901Z" fill="currentColor"/>
 </g>
@@ -4965,7 +4967,7 @@ const Play = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Plus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Plus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 4.5C10.6716 4.5 10 5.17157 10 6V9.5H6.5C5.67157 9.5 5 10.1716 5 11C5 11.8284 5.67157 12.5 6.5 12.5H10V16C10 16.8284 10.6716 17.5 11.5 17.5C12.3284 17.5 13 16.8284 13 16V12.5H16.5C17.3284 12.5 18 11.8284 18 11C18 10.1716 17.3284 9.5 16.5 9.5H13V6C13 5.17157 12.3284 4.5 11.5 4.5Z" fill="currentColor"/>
 </g>
@@ -4974,7 +4976,7 @@ const Plus = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Power = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Power = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_3909)">
 <g opacity="0.8">
 <path d="M11.5 20C7.63401 20 4.5 16.866 4.5 13C4.5 9.13401 7.63401 6 11.5 6C15.366 6 18.5 9.13401 18.5 13C18.5 16.866 15.366 20 11.5 20Z" fill="currentColor"/>
@@ -4986,7 +4988,7 @@ const Power = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const PreviousTrack = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const PreviousTrack = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M10.9513 10.3048C10.5764 10.6925 10.5764 11.3076 10.9513 11.6952L16.7812 17.7229C17.4062 18.3691 18.5 17.9267 18.5 17.0277V4.97235C18.5 4.07338 17.4062 3.63095 16.7812 4.27713L10.9513 10.3048Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0613 11L16.5 7.44467V14.5554L13.0613 11ZM10.9513 11.6952C10.5764 11.3076 10.5764 10.6925 10.9513 10.3048L16.7812 4.27713C17.4062 3.63095 18.5 4.07338 18.5 4.97235V17.0277C18.5 17.9267 17.4062 18.3691 16.7812 17.7229L10.9513 11.6952Z" fill="currentColor"/>
@@ -5000,7 +5002,7 @@ const PreviousTrack = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const Printer = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Printer = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect opacity="0.8" x="2" y="7.5" width="18" height="11" rx="3" fill="currentColor"/>
 <path d="M4.5 2C4.5 1.44772 4.94772 1 5.5 1H14.5C15.0523 1 15.5 1.44772 15.5 2V6.5H4.5V2Z" fill="white"/>
 <path d="M5 6.5H4V2.1C4 1.23445 4.61204 0.5 5.41667 0.5H14.5833C15.388 0.5 16 1.23445 16 2.1V6.5H15V2.1C15 1.75052 14.7912 1.5 14.5833 1.5H5.41667C5.20877 1.5 5 1.75052 5 2.1V6.5Z" fill="black"/>
@@ -5012,7 +5014,7 @@ const Printer = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const QrCode = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const QrCode = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M5 5.5C5 5.22386 5.22386 5 5.5 5H18C18.2761 5 18.5 5.22386 18.5 5.5V18C18.5 18.2761 18.2761 18.5 18 18.5H5.5C5.22386 18.5 5 18.2761 5 18V5.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 6.5V17H17V6.5H6.5ZM5.5 5C5.22386 5 5 5.22386 5 5.5V18C5 18.2761 5.22386 18.5 5.5 18.5H18C18.2761 18.5 18.5 18.2761 18.5 18V5.5C18.5 5.22386 18.2761 5 18 5H5.5Z" fill="currentColor"/>
@@ -5033,7 +5035,7 @@ const QrCode = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Question = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Question = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M12.7387 17.2133C12.7387 18.3178 11.8432 19.2133 10.7387 19.2133C9.63411 19.2133 8.73868 18.3178 8.73868 17.2133C8.73868 16.1087 9.63411 15.2133 10.7387 15.2133C11.8432 15.2133 12.7387 16.1087 12.7387 17.2133Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.7098 5.76475C10.0395 5.76475 9.46488 5.96522 9.06038 6.25085C8.66959 6.52678 8.47719 6.84837 8.42132 7.1251C8.26284 7.91007 7.49802 8.41795 6.71305 8.25947C5.92807 8.101 5.42019 7.33618 5.57867 6.5512C5.80607 5.42486 6.5038 4.50597 7.38766 3.88188C8.30812 3.23194 9.47392 2.86475 10.7098 2.86475C13.2675 2.86475 15.9179 4.57476 15.9179 7.32121C15.9179 8.91038 14.9731 10.1972 13.7492 10.9466C13.0662 11.3648 12.1736 11.1502 11.7554 10.4672C11.3372 9.7843 11.5518 8.89165 12.2348 8.47345C12.8053 8.12405 13.0179 7.67955 13.0179 7.32121C13.0179 6.74681 12.3032 5.76475 10.7098 5.76475Z" fill="currentColor"/>
@@ -5047,7 +5049,7 @@ const Question = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const QuestionCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const QuestionCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M5 11C5 7.13401 8.13401 4 12 4C15.866 4 19 7.13401 19 11C19 14.866 15.866 18 12 18C8.13401 18 5 14.866 5 11Z" fill="currentColor"/>
 </g>
@@ -5059,7 +5061,7 @@ const QuestionCircle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="no
 </svg>
 `;
 
-const Radio = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Radio = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M4 10C4 8.34315 5.34315 7 7 7H17C18.6569 7 20 8.34315 20 10V16C20 17.6569 18.6569 19 17 19H7C5.34315 19 4 17.6569 4 16V10Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M16.6708 2.66457C16.8561 3.03505 16.7059 3.48556 16.3354 3.6708L6.33541 8.67083C5.96492 8.85607 5.51442 8.7059 5.32917 8.33542C5.14393 7.96493 5.2941 7.51443 5.66458 7.32919L15.6646 2.32916C16.0351 2.14392 16.4856 2.29408 16.6708 2.66457Z" fill="currentColor"/>
@@ -5073,7 +5075,7 @@ const Radio = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Refresh = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Refresh = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle opacity="0.8" cx="12" cy="10.5" r="6.5" fill="currentColor"/>
 <path d="M5.25381 14.5962C5.05855 14.4009 5.05855 14.0843 5.25381 13.8891C5.44907 13.6938 5.76565 13.6938 5.96091 13.8891C6.98603 14.9142 8.37101 15.5 9.85 15.5C12.8876 15.5 15.35 13.0376 15.35 10C15.35 9.72386 15.5739 9.5 15.85 9.5C16.1261 9.5 16.35 9.72386 16.35 10C16.35 13.5899 13.4399 16.5 9.85 16.5C8.10306 16.5 6.4646 15.807 5.25381 14.5962Z" fill="black"/>
 <path d="M13.1311 12.416C12.9014 12.5691 12.5909 12.507 12.4378 12.2772C12.2846 12.0475 12.3467 11.737 12.5765 11.5839L15.5769 9.58388C15.8066 9.43072 16.1171 9.49282 16.2702 9.72259C16.4234 9.95237 16.3613 10.2628 16.1315 10.416L13.1311 12.416Z" fill="black"/>
@@ -5084,7 +5086,7 @@ const Refresh = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Reload = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Reload = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <circle opacity="0.8" cx="12" cy="11.5" r="6.5" fill="currentColor"/>
 <path d="M13.3745 5.0382C13.6027 5.19368 13.6616 5.50473 13.5062 5.73294C13.3507 5.96115 13.0396 6.02011 12.8114 5.86463C11.9888 5.30418 11.0178 5 10 5C7.23858 5 5 7.23858 5 10C5 12.7614 7.23858 15 10 15C12.7614 15 15 12.7614 15 10C15 9.72386 15.2239 9.5 15.5 9.5C15.7761 9.5 16 9.72386 16 10C16 13.3137 13.3137 16 10 16C6.68629 16 4 13.3137 4 10C4 6.68629 6.68629 4 10 4C11.2202 4 12.3871 4.36553 13.3745 5.0382Z" fill="black"/>
 <path d="M12.769 11.5851C12.5364 11.7339 12.2272 11.6659 12.0784 11.4333C11.9296 11.2006 11.9976 10.8914 12.2302 10.7426L15.712 8.51555C15.9447 8.36676 16.2539 8.43472 16.4026 8.66734C16.5514 8.89997 16.4835 9.20917 16.2509 9.35796L12.769 11.5851Z" fill="black"/>
@@ -5092,7 +5094,7 @@ const Reload = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Repeat = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Repeat = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.5137 3.7487C15.8402 3.49393 16.3115 3.55217 16.5663 3.87876L18.1128 5.86132C18.3676 6.18792 18.3094 6.65921 17.9828 6.91398C17.6562 7.16874 17.1849 7.11051 16.9301 6.78392L15.3836 4.80136C15.1288 4.47476 15.1871 4.00347 15.5137 3.7487Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9777 5.72744C17.649 5.47544 17.1782 5.53765 16.9262 5.86638L15.3797 7.88384C15.1277 8.21258 15.1899 8.68336 15.5187 8.93536C15.8474 9.18736 16.3182 9.12515 16.5702 8.79641L18.1167 6.77896C18.3687 6.45022 18.3065 5.97944 17.9777 5.72744Z" fill="currentColor"/>
@@ -5110,7 +5112,7 @@ const Repeat = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Rewind = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Rewind = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M11.5929 9.97187C11.2343 10.3561 11.2343 10.9523 11.5929 11.3365L17.7689 17.9537C18.3882 18.6172 19.5 18.179 19.5 17.2713V4.03705C19.5 3.12942 18.3882 2.69121 17.7689 3.35473L11.5929 9.97187Z" fill="currentColor"/>
 <path d="M4.43685 9.97187C4.07826 10.3561 4.07826 10.9523 4.43685 11.3365L10.6129 17.9537C11.2321 18.6172 12.3439 18.179 12.3439 17.2713V4.03705C12.3439 3.12942 11.2321 2.69121 10.6129 3.35473L4.43685 9.97187Z" fill="currentColor"/>
@@ -5120,7 +5122,7 @@ const Rewind = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const RewindTime = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const RewindTime = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1213_1907)">
 <g opacity="0.8">
 <path d="M18.5 11C18.5 14.866 15.366 18 11.5 18C7.63401 18 4.5 14.866 4.5 11C4.5 7.13401 7.63401 4 11.5 4C15.366 4 18.5 7.13401 18.5 11Z" fill="currentColor"/>
@@ -5136,7 +5138,7 @@ const RewindTime = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Scissors = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Scissors = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.5 19.5C8.15685 19.5 9.5 18.1569 9.5 16.5C9.5 15.8457 9.29051 15.2403 8.93495 14.7472C9.14795 14.7656 9.36732 14.6933 9.53033 14.5303L11.25 12.8107L16.9697 18.5303C17.2626 18.8232 17.7374 18.8232 18.0303 18.5303C18.3232 18.2374 18.3232 17.7626 18.0303 17.4697L12.3107 11.75L18.0303 6.03033C18.3232 5.73744 18.3232 5.26256 18.0303 4.96967C17.7374 4.67678 17.2626 4.67678 16.9697 4.96967L11.25 10.6893L9.53033 8.96967C9.43881 8.87815 9.32953 8.81523 9.21358 8.7809C9.39727 8.39245 9.5 7.95822 9.5 7.5C9.5 5.84315 8.15685 4.5 6.5 4.5C4.84315 4.5 3.5 5.84315 3.5 7.5C3.5 9.15685 4.84315 10.5 6.5 10.5C7.19572 10.5 7.83613 10.2632 8.34501 9.86575C8.37798 9.92472 8.41953 9.98019 8.46967 10.0303L10.1893 11.75L8.46967 13.4697C8.30666 13.6327 8.23438 13.8521 8.25281 14.065C7.75974 13.7095 7.15434 13.5 6.5 13.5C4.84315 13.5 3.5 14.8431 3.5 16.5C3.5 18.1569 4.84315 19.5 6.5 19.5Z" fill="currentColor"/>
 </g>
@@ -5147,7 +5149,7 @@ const Scissors = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Send = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Send = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_1996)">
 <g opacity="0.8">
 <path d="M1.87428 9.45439C1.40175 9.33081 1.36853 8.67265 1.82621 8.50212L17.5413 2.6468C17.9274 2.50295 18.3121 2.86161 18.1955 3.2568L13.4507 19.3421C13.3137 19.8065 12.6626 19.8245 12.5001 19.3684L9.69715 11.5002L1.87428 9.45439Z" fill="currentColor"/>
@@ -5159,7 +5161,7 @@ const Send = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const ShareAndroid = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ShareAndroid = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.17451 14.2075C6.82435 14.3942 6.42453 14.5 6 14.5C4.61929 14.5 3.5 13.3807 3.5 12C3.5 10.6193 4.61929 9.5 6 9.5C6.52196 9.5 7.00656 9.65996 7.40745 9.93353L12.5011 6.92362C12.5415 5.57825 13.6448 4.5 15 4.5C16.3807 4.5 17.5 5.61929 17.5 7C17.5 8.38071 16.3807 9.5 15 9.5C14.1422 9.5 13.3853 9.06794 12.935 8.40957L8.34206 11.1236C8.44417 11.3963 8.5 11.6916 8.5 12C8.5 12.3894 8.41096 12.7581 8.25213 13.0866L12.9102 15.6274C13.3571 14.9483 14.1262 14.5 15 14.5C16.3807 14.5 17.5 15.6193 17.5 17C17.5 18.3807 16.3807 19.5 15 19.5C13.6574 19.5 12.562 18.4416 12.5025 17.1137L7.17451 14.2075Z" fill="currentColor"/>
 </g>
@@ -5171,7 +5173,7 @@ const ShareAndroid = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const ShareIos = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ShareIos = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_2042)">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M15.5 9H16.5C17.6046 9 18.5 9.75767 18.5 10.6923V18.3077C18.5 19.2423 17.6046 20 16.5 20H8.5C7.39543 20 6.5 19.2423 6.5 18.3077L6.5 10.6923C6.5 9.75767 7.39543 9 8.5 9H9.5" fill="currentColor"/>
 <path d="M9.99834 2.50008C9.99829 2.22394 10.2221 2.00004 10.4983 2C10.7744 1.99996 10.9983 2.22378 10.9983 2.49992L11 12.9999C11 13.2761 10.7762 13.5 10.5001 13.5C10.2239 13.5 10 13.2762 10 13.0001L9.99834 2.50008Z" fill="black"/>
@@ -5183,7 +5185,7 @@ const ShareIos = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Shuffle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Shuffle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2094 4.97167C17.882 4.71794 17.4109 4.77766 17.1571 5.10507L15.6571 7.04062C15.4034 7.36802 15.4631 7.83912 15.7905 8.09285C16.1179 8.34658 16.5891 8.28686 16.8428 7.95945L18.3428 6.02391C18.5965 5.6965 18.5368 5.2254 18.2094 4.97167Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M18.2094 17.0929C17.882 17.3466 17.4109 17.2869 17.1571 16.9595L15.6571 15.024C15.4034 14.6966 15.4631 14.2255 15.7905 13.9717C16.1179 13.718 16.5891 13.7777 16.8428 14.1051L18.3428 16.0407C18.5965 16.3681 18.5368 16.8392 18.2094 17.0929Z" fill="currentColor"/>
@@ -5201,7 +5203,7 @@ const Shuffle = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Sliders = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Sliders = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 6.25C3 5.69772 3.44772 5.25 4 5.25H10.5C11.0523 5.25 11.5 5.69772 11.5 6.25C11.5 6.80228 11.0523 7.25 10.5 7.25H4C3.44772 7.25 3 6.80228 3 6.25ZM14.375 6.25C14.375 5.69772 14.8227 5.25 15.375 5.25H17C17.5523 5.25 18 5.69772 18 6.25C18 6.80228 17.5523 7.25 17 7.25H15.375C14.8227 7.25 14.375 6.80228 14.375 6.25Z" fill="currentColor"/>
 <path d="M16 6.5C16 8.01878 14.7688 9.25 13.25 9.25C11.7312 9.25 10.5 8.01878 10.5 6.5C10.5 4.98122 11.7312 3.75 13.25 3.75C14.7688 3.75 16 4.98122 16 6.5Z" fill="currentColor"/>
@@ -5222,7 +5224,7 @@ const Sliders = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const Smartphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Smartphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6 2.58333C6 1.70888 6.67157 1 7.5 1H16.5C17.3284 1 18 1.70888 18 2.58333V18.4167C18 19.2911 17.3284 20 16.5 20H7.5C6.67157 20 6 19.2911 6 18.4167V2.58333Z" fill="currentColor"/>
 </g>
@@ -5232,14 +5234,14 @@ const Smartphone = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const SmartphoneCutout = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SmartphoneCutout = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M6 2.5C6 1.67157 6.67157 1 7.5 1H15.5C16.3284 1 17 1.67157 17 2.5V18.5C17 19.3284 16.3284 20 15.5 20H7.5C6.67157 20 6 19.3284 6 18.5V2.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M4 2C4 1.17157 4.67157 0.5 5.5 0.5H14.5C15.3284 0.5 16 1.17157 16 2V18C16 18.8284 15.3284 19.5 14.5 19.5H5.5C4.67157 19.5 4 18.8284 4 18V2ZM5.5 1.5C5.22386 1.5 5 1.72386 5 2V18C5 18.2761 5.22386 18.5 5.5 18.5H14.5C14.7761 18.5 15 18.2761 15 18V2C15 1.72386 14.7761 1.5 14.5 1.5H5.5Z" fill="black"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.5 3C7.5 2.44772 7.94772 2 8.5 2H11.5C12.0523 2 12.5 2.44772 12.5 3C12.5 3.55228 12.0523 4 11.5 4H8.5C7.94772 4 7.5 3.55228 7.5 3Z" fill="black"/>
 </svg>
 `;
 
-const SmartphoneNotch = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SmartphoneNotch = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M6 2.5C6 1.67157 6.67157 1 7.5 1H16.5C17.3284 1 18 1.67157 18 2.5V18.5C18 19.3284 17.3284 20 16.5 20H7.5C6.67157 20 6 19.3284 6 18.5V2.5Z" fill="currentColor"/>
 </g>
@@ -5247,14 +5249,14 @@ const SmartphoneNotch = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 </svg>
 `;
 
-const Smartphone2 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Smartphone2 = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" d="M7.63636 1H16.3636C17.2674 1 18 1.67157 18 2.5V18.5C18 19.3284 17.2674 20 16.3636 20H7.63636C6.73262 20 6 19.3284 6 18.5V2.5C6 1.67157 6.73262 1 7.63636 1Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.5 0.5H5.5C4.67157 0.5 4 1.17157 4 2V18C4 18.8284 4.67157 19.5 5.5 19.5H14.5C15.3284 19.5 16 18.8284 16 18V2C16 1.17157 15.3284 0.5 14.5 0.5ZM5 2C5 1.72386 5.22386 1.5 5.5 1.5H14.5C14.7761 1.5 15 1.72386 15 2V18C15 18.2761 14.7761 18.5 14.5 18.5H5.5C5.22386 18.5 5 18.2761 5 18V2Z" fill="black"/>
 <path d="M10 18C9.44772 18 9 17.5523 9 17C9 16.4477 9.44772 16 10 16C10.5523 16 11 16.4477 11 17C11 17.5523 10.5523 18 10 18Z" fill="black"/>
 </svg>
 `;
 
-const SoftDrink = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SoftDrink = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M8.58933 4.5L15.411 4.5C16.5155 4.5 17.411 5.39543 17.411 6.5C17.411 6.58078 17.4061 6.66148 17.3963 6.74167L16.179 16.7417C16.0569 17.7454 15.2048 18.5 14.1937 18.5H9.80944C8.79855 18.5 7.9466 17.7457 7.82417 16.7422L6.60405 6.74223C6.47027 5.64579 7.25066 4.6485 8.3471 4.51472C8.42747 4.50492 8.50836 4.5 8.58933 4.5Z" fill="currentColor"/>
 </g>
@@ -5265,7 +5267,7 @@ const SoftDrink = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Sort = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Sort = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4393 9.56066C10.8536 8.97487 10.8536 8.02513 11.4393 7.43934L14.4393 4.43934C15.0251 3.85355 15.9749 3.85355 16.5607 4.43934C17.1464 5.02513 17.1464 5.97487 16.5607 6.56066L13.5607 9.56066C12.9749 10.1464 12.0251 10.1464 11.4393 9.56066Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M19.5607 9.56066C18.9749 10.1464 18.0251 10.1464 17.4393 9.56066L14.4393 6.56066C13.8536 5.97487 13.8536 5.02513 14.4393 4.43934C15.0251 3.85355 15.9749 3.85355 16.5607 4.43934L19.5607 7.43934C20.1464 8.02513 20.1464 8.97487 19.5607 9.56066Z" fill="currentColor"/>
@@ -5283,7 +5285,7 @@ const Sort = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const SpeakerHigh = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SpeakerHigh = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29521 13.5409H3C2.72386 13.5409 2.5 13.317 2.5 13.0409V7.84091C2.5 7.56476 2.72386 7.34091 3 7.34091H6.39936L10.6718 3.62282C10.9953 3.34123 11.5 3.57105 11.5 3.99999V17C11.5 17.4298 10.9936 17.6593 10.6704 17.376L6.29521 13.5409Z" fill="currentColor"/>
 <path d="M13.6518 13.7584C13.2329 14.1184 12.6016 14.0707 12.2416 13.6518C11.8816 13.2329 11.9294 12.6016 12.3482 12.2416C12.3761 12.2176 12.4039 12.1914 12.4312 12.1631C12.5494 12.0405 12.6575 11.8815 12.747 11.6934C12.9093 11.3524 13 10.9391 13 10.5C13 9.80772 12.7732 9.19154 12.4312 8.83698C12.4039 8.80862 12.3761 8.78242 12.3482 8.75842C11.9294 8.39845 11.8816 7.76709 12.2416 7.34823C12.6016 6.92938 13.2329 6.88164 13.6518 7.24161C13.7274 7.30658 13.8004 7.37561 13.8707 7.44846C14.5888 8.19298 15 9.31015 15 10.5C15 11.2325 14.8448 11.9396 14.553 12.5528C14.3731 12.9309 14.143 13.2692 13.8707 13.5516C13.8004 13.6244 13.7274 13.6935 13.6518 13.7584Z" fill="currentColor"/>
@@ -5295,7 +5297,7 @@ const SpeakerHigh = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const SpeakerLow = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SpeakerLow = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29521 13.5409H3C2.72386 13.5409 2.5 13.317 2.5 13.0409V7.84091C2.5 7.56476 2.72386 7.34091 3 7.34091H6.39936L10.6718 3.62282C10.9953 3.34123 11.5 3.57105 11.5 3.99999V17C11.5 17.4298 10.9936 17.6593 10.6704 17.376L6.29521 13.5409Z" fill="currentColor"/>
 <path d="M13.6518 13.7584C13.2329 14.1184 12.6016 14.0707 12.2416 13.6518C11.8816 13.2329 11.9293 12.6016 12.3482 12.2416C12.3761 12.2176 12.4038 12.1914 12.4312 12.1631C12.5494 12.0405 12.6575 11.8815 12.747 11.6934C12.9092 11.3524 13 10.9391 13 10.5C13 9.80772 12.7732 9.19154 12.4312 8.83698C12.4038 8.80862 12.3761 8.78242 12.3482 8.75842C11.9293 8.39845 11.8816 7.76709 12.2416 7.34823C12.6016 6.92938 13.2329 6.88164 13.6518 7.24161C13.7274 7.30658 13.8004 7.37561 13.8706 7.44846C14.5888 8.19298 15 9.31015 15 10.5C15 11.2325 14.8447 11.9396 14.553 12.5528C14.373 12.9309 14.143 13.2692 13.8706 13.5516C13.8004 13.6244 13.7274 13.6935 13.6518 13.7584Z" fill="currentColor"/>
@@ -5305,7 +5307,7 @@ const SpeakerLow = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const SpeakerOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const SpeakerOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.29521 13.5409H3C2.72386 13.5409 2.5 13.317 2.5 13.0409V7.84091C2.5 7.56476 2.72386 7.34091 3 7.34091H6.39936L10.6718 3.62282C10.9953 3.34123 11.5 3.57105 11.5 3.99999V17C11.5 17.4298 10.9936 17.6593 10.6704 17.376L6.29521 13.5409Z" fill="currentColor"/>
 <path d="M13.6518 13.7584C13.2329 14.1184 12.6016 14.0707 12.2416 13.6518C11.8816 13.2329 11.9293 12.6016 12.3482 12.2416C12.3761 12.2176 12.4038 12.1914 12.4312 12.1631C12.5494 12.0405 12.6575 11.8815 12.747 11.6934C12.9092 11.3524 13 10.9391 13 10.5C13 9.80772 12.7732 9.19154 12.4312 8.83698C12.4038 8.80862 12.3761 8.78242 12.3482 8.75842C11.9293 8.39845 11.8816 7.76709 12.2416 7.34823C12.6016 6.92938 13.2329 6.88164 13.6518 7.24161C13.7274 7.30658 13.8004 7.37561 13.8706 7.44846C14.5888 8.19298 15 9.31015 15 10.5C15 11.2325 14.8447 11.9396 14.553 12.5528C14.373 12.9309 14.143 13.2692 13.8706 13.5516C13.8004 13.6244 13.7274 13.6935 13.6518 13.7584Z" fill="currentColor"/>
@@ -5318,7 +5320,7 @@ const SpeakerOff = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Square = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Square = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M8 7H16C16.2761 7 16.5 7.22386 16.5 7.5V15.5C16.5 15.7761 16.2761 16 16 16H8C7.72386 16 7.5 15.7761 7.5 15.5V7.5C7.5 7.22386 7.72386 7 8 7Z" fill="currentColor"/>
 </g>
@@ -5326,7 +5328,7 @@ const Square = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Star = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Star = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.5 15.8995L6.86475 18L7.39781 12.8702L4 9.03851L8.96471 7.96859L11.5 3.5L14.0353 7.96859L19 9.03851L15.6022 12.8702L16.1353 18L11.5 15.8995Z" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
 </g>
@@ -5334,7 +5336,7 @@ const Star = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Stars = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Stars = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1838_626)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5003 1C10.7203 1.00001 10.9145 1.14385 10.9786 1.35433L12.9073 7.68709L18.6716 9.79398C18.8665 9.86518 18.9971 10.0493 19 10.2567C19.0028 10.4641 18.8773 10.6517 18.6846 10.7283L12.9578 13.0028L10.9795 19.6428C10.9163 19.8547 10.7215 20 10.5003 20C10.2792 20 10.0843 19.8547 10.0211 19.6428L8.04237 13.0032L2.31541 10.7283C2.12265 10.6517 1.99718 10.4641 2.00005 10.2567C2.00292 10.0493 2.13353 9.86519 2.32834 9.79398L8.09289 7.68682L10.022 1.35429C10.0861 1.14382 10.2803 0.999993 10.5003 1Z" fill="currentColor"/>
@@ -5347,7 +5349,7 @@ const Stars = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Stopwatch = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Stopwatch = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M18.5 11.5C18.5 15.0899 15.5899 18 12 18C8.41015 18 5.5 15.0899 5.5 11.5C5.5 7.91015 8.41015 5 12 5C15.5899 5 18.5 7.91015 18.5 11.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 16C14.4853 16 16.5 13.9853 16.5 11.5C16.5 9.01472 14.4853 7 12 7C9.51472 7 7.5 9.01472 7.5 11.5C7.5 13.9853 9.51472 16 12 16ZM12 18C15.5899 18 18.5 15.0899 18.5 11.5C18.5 7.91015 15.5899 5 12 5C8.41015 5 5.5 7.91015 5.5 11.5C5.5 15.0899 8.41015 18 12 18Z" fill="currentColor"/>
@@ -5361,7 +5363,7 @@ const Stopwatch = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const StudioBackdrop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const StudioBackdrop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M5.25 3.5C5.25 3.22386 5.47386 3 5.75 3H16.75C17.0261 3 17.25 3.22386 17.25 3.5V10.5C17.25 10.7761 17.0261 11 16.75 11H5.75C5.47386 11 5.25 10.7761 5.25 10.5V3.5Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25 5V9H15.25V5H7.25ZM5.75 3C5.47386 3 5.25 3.22386 5.25 3.5V10.5C5.25 10.7761 5.47386 11 5.75 11H16.75C17.0261 11 17.25 10.7761 17.25 10.5V3.5C17.25 3.22386 17.0261 3 16.75 3H5.75Z" fill="currentColor"/>
@@ -5376,7 +5378,7 @@ const StudioBackdrop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="no
 </svg>
 `;
 
-const StudioLightFront = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const StudioLightFront = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.3 8C11.8523 8 12.3 7.55228 12.3 7C12.3 6.44772 11.8523 6 11.3 6C10.7477 6 10.3 6.44772 10.3 7C10.3 7.55228 10.7477 8 11.3 8ZM11.3 10C12.9568 10 14.3 8.65685 14.3 7C14.3 5.34315 12.9568 4 11.3 4C9.64313 4 8.29999 5.34315 8.29999 7C8.29999 8.65685 9.64313 10 11.3 10Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M7.31348 3.50774C6.53571 2.17443 7.49746 0.5 9.04104 0.5H13.559C15.1025 0.5 16.0643 2.17443 15.2865 3.50774L13.5388 6.50387L11.8112 5.49613L13.559 2.5H9.04104L10.7888 5.49613L9.06122 6.50387L7.31348 3.50774Z" fill="currentColor"/>
@@ -5396,7 +5398,7 @@ const StudioLightFront = `<svg width="20" height="20" viewBox="0 0 20 20" fill="
 </svg>
 `;
 
-const StudioLightSide = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const StudioLightSide = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1210_544)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.8158 5.86381C16.1367 4.89339 18 5.83656 18 7.47557V9.52443C18 11.1634 16.1367 12.1066 14.8158 11.1362L12.9079 9.73446L13.8149 8.5L12.9079 7.26555L14.8158 5.86381ZM14.6056 8.5L16 9.52443V7.47557L14.6056 8.5Z" fill="currentColor"/>
@@ -5417,7 +5419,7 @@ const StudioLightSide = `<svg width="20" height="20" viewBox="0 0 20 20" fill="n
 </svg>
 `;
 
-const Sun = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Sun = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M14 10.5C14 12.433 12.433 14 10.5 14C8.567 14 7 12.433 7 10.5C7 8.567 8.567 7 10.5 7C12.433 7 14 8.567 14 10.5Z" fill="currentColor"/>
 <path d="M1 10.5C1 9.94772 1.44772 9.5 2 9.5H4C4.55228 9.5 5 9.94772 5 10.5C5 11.0523 4.55228 11.5 4 11.5H2C1.44772 11.5 1 11.0523 1 10.5Z" fill="currentColor"/>
@@ -5441,7 +5443,7 @@ const Sun = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="
 </svg>
 `;
 
-const Syringe = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Syringe = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_899)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9.55475 18.4941C9.84765 18.787 9.84765 19.2619 9.55475 19.5547C9.26186 19.8476 8.78699 19.8476 8.49409 19.5547L6.01777 17.0784L5.32844 17.7678L6.16943 18.6088C6.46232 18.9016 6.46232 19.3765 6.16943 19.6694C5.87653 19.9623 5.40166 19.9623 5.10877 19.6694L2.28034 16.841C1.98745 16.5481 1.98745 16.0732 2.28034 15.7803C2.57323 15.4874 3.04811 15.4874 3.341 15.7803L4.26778 16.7071L4.95711 16.0178L2.53034 13.591C2.23745 13.2981 2.23745 12.8232 2.53034 12.5303C2.82323 12.2374 3.29811 12.2374 3.591 12.5303L4.65892 13.5983C4.73279 13.2219 4.91552 12.8627 5.20712 12.5711L12.1858 5.59241C12.5661 5.21212 13.0835 5.00102 13.6213 5.00673L14.9961 5.02136C15.2664 5.02423 15.524 5.08071 15.7586 5.18073L18.4697 2.46967C18.7626 2.17678 19.2374 2.17678 19.5303 2.46967C19.8232 2.76256 19.8232 3.23744 19.5303 3.53033L16.8177 6.24297C16.9132 6.46896 16.9684 6.71627 16.9743 6.97596L17.0062 8.38307C17.0185 8.92907 16.8071 9.45638 16.4209 9.84256L9.44976 16.8137C9.15816 17.1053 8.79893 17.288 8.42257 17.3619L9.55475 18.4941Z" fill="currentColor"/>
@@ -5458,7 +5460,7 @@ const Syringe = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xml
 </svg>
 `;
 
-const TShirt = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TShirt = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M4.83164 10.4263L3.66594 11.0085C3.37505 11.1538 3.02504 10.9872 2.95445 10.6697L2.01194 6.43208C1.97476 6.26493 2.02571 6.09038 2.14696 5.96947L4.39316 3.7297C4.86179 3.26241 5.49659 3 6.15839 3L8.16531 3C8.40867 3 8.61669 3.17521 8.65804 3.41503C8.94393 5.07298 9.69694 5.82353 10.9981 5.82353C12.2993 5.82353 13.053 5.0728 13.34 3.41473C13.3815 3.17505 13.5894 3 13.8327 3H15.84C16.5015 3 17.136 3.26216 17.6046 3.72907L19.8529 5.96934C19.9743 6.09033 20.0253 6.26507 19.988 6.43237L19.0435 10.6677C18.9728 10.9847 18.6232 11.1512 18.3325 11.0064L17.1663 10.4254V17.5C17.1663 18.8807 16.047 20 14.6663 20H7.33164C5.95093 20 4.83164 18.8807 4.83164 17.5V10.4263Z" fill="currentColor"/>
 </g>
@@ -5467,7 +5469,7 @@ const TShirt = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Taxi = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Taxi = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13 3.5C13 2.67157 12.3284 2 11.5 2C10.6716 2 10 2.67157 10 3.5C10 3.67532 10.0301 3.84361 10.0854 4H7.67116C6.75343 4 5.95346 4.62459 5.73088 5.51493L4.59959 10.0401C3.6869 10.2256 3 11.0326 3 12V15C3 15.8061 3.4769 16.5008 4.16396 16.8174C4.05913 17.0222 4 17.2542 4 17.5V18.5C4 19.3284 4.67157 20 5.5 20C6.32843 20 7 19.3284 7 18.5V17.5C7 17.3247 6.96992 17.1564 6.91465 17H16.0854C16.0301 17.1564 16 17.3247 16 17.5V18.5C16 19.3284 16.6716 20 17.5 20C18.3284 20 19 19.3284 19 18.5V17.5C19 17.2542 18.9409 17.0222 18.836 16.8174C19.5231 16.5008 20 15.8061 20 15V12C20 11.0326 19.3131 10.2256 18.4004 10.0401L17.2691 5.51493C17.0465 4.62459 16.2466 4 15.3288 4H12.9146C12.9699 3.84361 13 3.67532 13 3.5Z" fill="currentColor"/>
 </g>
@@ -5481,7 +5483,7 @@ const Taxi = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Television = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Television = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M12 5.42442L13.9143 3.03148C14.539 2.25061 15.7103 3.18765 15.0857 3.96852L13.4605 6H16C17.6569 6 19 7.34315 19 9V14C19 15.6569 17.6569 17 16 17H8.5C6.84315 17 5.5 15.6569 5.5 14V9C5.5 7.34315 6.84315 6 8.5 6H10.5395L8.91435 3.96852C8.28965 3.18765 9.46096 2.25061 10.0857 3.03148L12 5.42442Z" fill="currentColor"/>
 </g>
@@ -5491,7 +5493,7 @@ const Television = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const TextBubble = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TextBubble = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M4 8C4 6.89543 4.89543 6 6 6H18C19.1046 6 20 6.89543 20 8V14.1024C20 15.207 19.1046 16.1024 18 16.1024H10.4508C10.4508 16.1024 8.36316 18 7.70388 18C7.04461 18 6.64753 16.1024 6.64753 16.1024H6C4.89543 16.1024 4 15.207 4 14.1024V8Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M2 6C2 4.89543 2.89543 4 4 4H16C17.1046 4 18 4.89543 18 6V12.1024C18 13.207 17.1046 14.1024 16 14.1024H8.45078C8.45078 14.1024 6.36316 16 5.70388 16C5.04461 16 4.64753 14.1024 4.64753 14.1024H4C2.89543 14.1024 2 13.207 2 12.1024V6Z" stroke="black" stroke-linecap="round"/>
 <circle cx="7" cy="9" r="1" fill="black"/>
@@ -5505,7 +5507,7 @@ const TextBubble = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const TextBubbles = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TextBubbles = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M17.67 10.17H15.67V7.17C15.67 5.98 14.7 5 13.5 5H5.17C3.98 5 3 5.97 3 7.17V11.42C3 12.61 3.96 13.59 5.16 13.59H5.31C5.51 14.31 5.89 15.17 6.59 15.17C7.19 15.17 8.35 14.23 9.07 13.59H10V15.41C10 16.42 10.82 17.24 11.83 17.24H14.5C15.18 17.85 16.04 18.51 16.52 18.51C17.11 18.51 17.44 17.83 17.62 17.24H17.66C18.67 17.24 19.49 16.42 19.49 15.41V12.01C19.49 11 18.67 10.18 17.66 10.18L17.67 10.17Z" fill="currentColor"/>
 </g>
@@ -5517,7 +5519,7 @@ const TextBubbles = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none"
 </svg>
 `;
 
-const ThumbsDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ThumbsDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M19.31 12.11C19.31 12.6623 18.8623 13.11 18.31 13.11H15.81C15.2577 13.11 14.81 12.6623 14.81 12.11V6.60999C14.81 6.0577 15.2577 5.60999 15.81 5.60999H18.31C18.8623 5.60999 19.31 6.0577 19.31 6.60999V10.11V12.11Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.81 12.11H18.31L18.31 6.60999H15.81V12.11ZM18.31 13.11C18.8623 13.11 19.31 12.6623 19.31 12.11V6.60999C19.31 6.0577 18.8623 5.60999 18.31 5.60999H15.81C15.2577 5.60999 14.81 6.0577 14.81 6.60999V12.11C14.81 12.6623 15.2577 13.11 15.81 13.11H18.31Z" fill="currentColor"/>
@@ -5546,7 +5548,7 @@ const ThumbsDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const ThumbsUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const ThumbsUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_303_4958)">
 <g opacity="0.8">
 <path d="M3.75 9.75C3.75 9.19772 4.19772 8.75 4.75 8.75H7.25C7.80228 8.75 8.25 9.19772 8.25 9.75V15.25C8.25 15.8023 7.80228 16.25 7.25 16.25H4.75C4.19772 16.25 3.75 15.8023 3.75 15.25V11.75V9.75Z" fill="currentColor"/>
@@ -5578,7 +5580,7 @@ const ThumbsUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Times = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Times = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M6.13197 6.47653C5.56672 7.08215 5.59945 8.03134 6.20507 8.59659L8.78016 11L6.20507 13.4034C5.59945 13.9687 5.56672 14.9179 6.13197 15.5235C6.69722 16.1291 7.6464 16.1618 8.25203 15.5966L10.9786 13.0518L13.7051 15.5966C14.3107 16.1618 15.2599 16.1291 15.8251 15.5235C16.3904 14.9179 16.3577 13.9687 15.752 13.4034L13.1769 11L15.752 8.59659C16.3577 8.03134 16.3904 7.08215 15.8251 6.47653C15.2599 5.8709 14.3107 5.83817 13.7051 6.40342L10.9786 8.94818L8.25203 6.40342C7.6464 5.83817 6.69722 5.8709 6.13197 6.47653Z" fill="currentColor"/>
 </g>
@@ -5587,7 +5589,7 @@ const Times = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Tool = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Tool = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M13.3008 7.83234L18.6031 14.1514C19.4906 15.209 19.3527 16.7859 18.295 17.6734C17.2373 18.5609 15.6604 18.423 14.7729 17.3653L9.47063 11.0463C9.34739 10.8994 9.23881 10.7414 9.14614 10.5746C7.79242 10.6159 6.43645 10.0062 5.50123 8.89166C4.31866 7.48233 4.05794 5.56096 4.81266 4.02998C4.97231 3.70613 5.41207 3.65308 5.64415 3.92966L7.38562 6.00506C7.56312 6.2166 7.8785 6.24419 8.09004 6.06669L8.67131 5.57895C8.88284 5.40145 8.91044 5.08607 8.73293 4.87453L6.99147 2.79913C6.75938 2.52254 6.88799 2.09868 7.23464 1.99769C8.87343 1.52029 10.7203 2.11069 11.9029 3.52002C12.8501 4.64882 13.2119 6.1123 12.9169 7.45073C13.0558 7.56585 13.1844 7.69351 13.3008 7.83234Z" fill="currentColor"/>
 </g>
@@ -5595,7 +5597,7 @@ const Tool = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-const Train = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Train = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_0_2923)">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M19 5.00002C19 3.06702 17.433 1.50002 15.5 1.50002L8.5 1.50002C6.567 1.50002 5 3.06703 5 5.00002V11.9553C5 13.1404 5.59619 14.2188 6.54298 14.8573L5.56608 18.7649C5.43214 19.3007 5.7579 19.8436 6.29369 19.9776C6.82949 20.1115 7.37242 19.7858 7.50637 19.25L7.68667 18.5288H16.3858L16.5661 19.25C16.7 19.7858 17.243 20.1115 17.7788 19.9776C18.3146 19.8436 18.6403 19.3007 18.5064 18.7649L17.5188 14.8147C18.4297 14.1714 19 13.1144 19 11.9553L19 5.00002ZM15.8858 16.5288L15.6406 15.5482C14.4282 15.8493 13.2144 16 12 16C10.8084 16 9.61734 15.8549 8.42762 15.565L8.18667 16.5288H15.8858Z" fill="currentColor"/>
@@ -5612,7 +5614,7 @@ const Train = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Trash = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Trash = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <rect x="7" y="7" width="10" height="11.5" rx="1" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M10.0156 4.25C10.1393 3.2647 10.982 2.5 11.9998 2.5C13.0176 2.5 13.8603 3.2647 13.984 4.25H17C17.4142 4.25 17.75 4.58579 17.75 5C17.75 5.41421 17.4142 5.75 17 5.75H7C6.58579 5.75 6.25 5.41421 6.25 5C6.25 4.58579 6.58579 4.25 7 4.25H10.0156Z" fill="currentColor"/>
@@ -5626,7 +5628,7 @@ const Trash = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const TriangleDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M12.076 16.265L7.07599 8.265C6.86785 7.93198 7.10728 7.5 7.49999 7.5L17.5 7.5C17.8927 7.5 18.1321 7.93198 17.924 8.265L12.924 16.265C12.7282 16.5783 12.2718 16.5783 12.076 16.265Z" fill="currentColor"/>
 </g>
@@ -5634,7 +5636,7 @@ const TriangleDown = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const TriangleLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M7.735 10.576L15.735 5.57599C16.068 5.36785 16.5 5.60728 16.5 5.99999V16C16.5 16.3927 16.068 16.6321 15.735 16.424L7.735 11.424C7.42167 11.2282 7.42167 10.7718 7.735 10.576Z" fill="currentColor"/>
 </g>
@@ -5642,7 +5644,7 @@ const TriangleLeft = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none
 </svg>
 `;
 
-const TriangleRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M17.265 11.424L9.265 16.424C8.93198 16.6321 8.5 16.3927 8.5 16L8.5 6.00001C8.5 5.60729 8.93198 5.36787 9.265 5.57601L17.265 10.576C17.5783 10.7718 17.5783 11.2282 17.265 11.424Z" fill="currentColor"/>
 </g>
@@ -5650,7 +5652,7 @@ const TriangleRight = `<svg width="20" height="20" viewBox="0 0 20 20" fill="non
 </svg>
 `;
 
-const TriangleUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const TriangleUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M12.924 6.735L17.924 14.735C18.1321 15.068 17.8927 15.5 17.5 15.5H7.50001C7.10729 15.5 6.86787 15.068 7.07601 14.735L12.076 6.735C12.2718 6.42167 12.7282 6.42167 12.924 6.735Z" fill="currentColor"/>
 </g>
@@ -5658,7 +5660,7 @@ const TriangleUp = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" 
 </svg>
 `;
 
-const Trophy = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Trophy = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M5.32676 5.78333C5.15431 4.57831 6.08929 3.5 7.30659 3.5H14.6934C15.9107 3.5 16.8457 4.57831 16.6732 5.78333L16.0363 10.234C16.0122 10.4023 15.9643 10.5662 15.8941 10.7209C13.9854 14.9247 8.01457 14.9247 6.10591 10.7209C6.03566 10.5662 5.98777 10.4023 5.9637 10.234L5.32676 5.78333Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6934 5.5L7.30659 5.5L7.93925 9.92081C9.14668 12.5247 12.8533 12.5247 14.0607 9.9208L14.6934 5.5ZM7.30659 3.5C6.08929 3.5 5.15431 4.57831 5.32676 5.78333L5.9637 10.234C5.98777 10.4023 6.03566 10.5662 6.10591 10.7209C8.01457 14.9247 13.9854 14.9247 15.8941 10.7209C15.9643 10.5662 16.0122 10.4023 16.0363 10.234L16.6732 5.78333C16.8457 4.57831 15.9107 3.5 14.6934 3.5H7.30659Z" fill="currentColor"/>
@@ -5677,7 +5679,7 @@ const Trophy = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmln
 </svg>
 `;
 
-const Truck = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Truck = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M9 6H18C19.1046 6 20 6.89543 20 8V15C20 15.7009 19.6395 16.3175 19.0938 16.6747C19.1946 16.9302 19.25 17.2086 19.25 17.5C19.25 18.7426 18.2426 19.75 17 19.75C15.7574 19.75 14.75 18.7426 14.75 17.5C14.75 17.3282 14.7693 17.1608 14.8058 17H10.1942C10.2307 17.1608 10.25 17.3282 10.25 17.5C10.25 18.7426 9.24264 19.75 8 19.75C6.75736 19.75 5.75 18.7426 5.75 17.5C5.75 17.3282 5.76927 17.1608 5.80575 17H3C1.89543 17 1 16.1046 1 15V13L1.79907 10.4103C2.05777 9.5719 2.83274 9 3.71016 9H7V8C7 6.89543 7.89543 6 9 6Z" fill="currentColor"/>
 </g>
@@ -5692,7 +5694,7 @@ const Truck = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const Umbrella = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Umbrella = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M17.9981 12.5153C18.9261 12.5188 19.5 11.9301 19.5 11.0154C19.5 7.0875 16.7194 3.97003 12.9593 3.56093C12.9858 3.4711 13 3.37602 13 3.27761V1.75319C13 1.2009 12.5523 0.753185 12 0.753185C11.4477 0.753185 11 1.2009 11 1.75319V3.27761C11 3.38558 11.0171 3.48955 11.0488 3.58695C7.33672 4.09084 4.50003 7.19551 4.50003 11.0154C4.50003 11.9278 5.08439 12.4886 5.98532 12.5151C6.31258 12.5248 6.55493 12.3522 6.82207 12.0417C6.90381 11.9466 6.98714 11.8388 7.09085 11.6965C7.12065 11.6556 7.19647 11.5498 7.25954 11.4618C7.30106 11.4039 7.33705 11.3537 7.35074 11.3348C7.70851 10.8408 7.94601 10.6044 8.10482 10.5703C8.14153 10.5625 8.28045 10.6412 8.65736 10.9395C9.26019 11.4167 9.58816 11.5908 10.0821 11.5086C10.3878 11.4577 10.6512 11.3234 11 11.0815V17.5154L11.007 17.6336C11.1723 19.0224 12.0411 19.8735 13.3863 19.8735C14.8907 19.8735 15.6111 18.6746 15.6111 16.8352C15.6111 16.283 15.1634 15.8352 14.6111 15.8352C14.0588 15.8352 13.6111 16.283 13.6111 16.8352C13.6111 17.7136 13.515 17.8735 13.3863 17.8735C13.1119 17.8735 13.0488 17.8241 13 17.4533V11.0846C13.3651 11.3385 13.6132 11.4623 13.9249 11.5097C14.4159 11.5843 14.7331 11.4038 15.342 10.899C15.7196 10.5861 15.8664 10.4984 15.8998 10.5052C16.041 10.5341 16.2788 10.7801 16.6432 11.2976C16.6485 11.305 16.6662 11.3304 16.6903 11.3649C16.7545 11.4567 16.8637 11.6131 16.9034 11.6687C17.0064 11.8132 17.0903 11.9244 17.1723 12.022C17.4371 12.3372 17.6752 12.514 17.9981 12.5153Z" fill="currentColor"/>
 </g>
@@ -5702,7 +5704,7 @@ const Umbrella = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xm
 </svg>
 `;
 
-const Watch = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Watch = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M16.1 11.25C16.1 13.7353 14.0853 15.75 11.6 15.75C9.11472 15.75 7.10001 13.7353 7.10001 11.25C7.10001 8.76472 9.11472 6.75 11.6 6.75C14.0853 6.75 16.1 8.76472 16.1 11.25Z" fill="currentColor"/>
 <path fill-rule="evenodd" clip-rule="evenodd" d="M11.6 9C12.0142 9 12.35 9.33579 12.35 9.75V11.25C12.35 11.6642 12.0142 12 11.6 12C11.1858 12 10.85 11.6642 10.85 11.25V9.75C10.85 9.33579 11.1858 9 11.6 9Z" fill="currentColor"/>
@@ -5728,7 +5730,7 @@ const Watch = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns
 </svg>
 `;
 
-const WaterDrop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const WaterDrop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g clip-path="url(#clip0_1210_1003)">
 <g opacity="0.8">
 <path d="M18.4478 14.9829C16.6406 18.4836 12.3377 19.8564 8.83702 18.0491C5.33635 16.2419 3.96354 11.939 5.77076 8.43833C6.87748 6.29458 10.0822 3.17505 15.185 2.61125C16.3189 3.1782 14.0246 4.67157 15.3816 5.37208C18.8822 7.1793 20.255 11.4822 18.4478 14.9829Z" fill="currentColor"/>
@@ -5741,7 +5743,7 @@ const WaterDrop = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" x
 </svg>
 `;
 
-const Wifi = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+  const Wifi = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g opacity="0.8">
 <path d="M14.6961 12.2821C15.0926 12.6665 15.1024 13.2996 14.7179 13.6961C14.3335 14.0926 13.7004 14.1024 13.3039 13.7179C13.273 13.688 13.2391 13.6581 13.2022 13.6285C13.0406 13.4986 12.8292 13.3788 12.5791 13.2796C12.1265 13.1001 11.5793 13 11 13C10.086 13 9.26716 13.2511 8.79777 13.6285C8.76089 13.6581 8.72699 13.688 8.69613 13.7179C8.29964 14.1024 7.66655 14.0926 7.28209 13.6961C6.89762 13.2996 6.90738 12.6665 7.30387 12.2821C7.37977 12.2085 7.46015 12.1377 7.54472 12.0697C8.39422 11.3868 9.65538 11 11 11C11.8267 11 12.6239 11.1459 13.3163 11.4204C13.7456 11.5907 14.131 11.809 14.4553 12.0697C14.5399 12.1377 14.6202 12.2085 14.6961 12.2821Z" fill="currentColor"/>
 <path d="M17.2128 9.68869C17.6002 10.0824 17.595 10.7155 17.2013 11.1029C16.8076 11.4902 16.1745 11.485 15.7872 11.0913C15.6908 10.9934 15.5866 10.898 15.4751 10.8056C15.362 10.712 15.2416 10.6216 15.1142 10.5349C14.9855 10.4473 14.8498 10.3636 14.7078 10.2842C14.5647 10.2042 14.4152 10.1287 14.2601 10.058C14.104 9.9869 13.9424 9.92084 13.7758 9.86013C13.6085 9.79914 13.4364 9.74364 13.2601 9.6939C13.0833 9.64404 12.9026 9.60002 12.7185 9.56207C12.5345 9.52413 12.3472 9.49229 12.1573 9.46673C11.968 9.44124 11.7762 9.42202 11.5824 9.40919C11.3899 9.39644 11.1956 9.39001 11 9.39001C10.8044 9.39001 10.6101 9.39644 10.4176 9.40919C10.2238 9.42202 10.032 9.44124 9.84266 9.46673C9.65277 9.49229 9.46552 9.52413 9.28146 9.56207C9.09736 9.60002 8.91666 9.64404 8.73993 9.6939C8.56364 9.74364 8.39152 9.79914 8.22416 9.86013C8.0576 9.92084 7.89597 9.9869 7.73987 10.058C7.58477 10.1287 7.43534 10.2042 7.29217 10.2842C7.15018 10.3636 7.01455 10.4473 6.88581 10.5349C6.75842 10.6216 6.63797 10.712 6.52494 10.8056C6.41338 10.898 6.30922 10.9934 6.21284 11.0913C5.82551 11.485 5.19237 11.4902 4.79868 11.1029C4.40498 10.7155 4.39983 10.0824 4.78716 9.68869C4.93166 9.54182 5.0859 9.40053 5.24924 9.26525C5.41113 9.13118 5.58183 9.0031 5.76069 8.8814C5.93819 8.76061 6.12361 8.6462 6.31623 8.53851C6.50766 8.4315 6.70608 8.3312 6.91079 8.23795C7.11446 8.14517 7.32421 8.05944 7.53934 7.98104C7.75355 7.90297 7.97295 7.83222 8.19683 7.76905C8.41971 7.70617 8.64688 7.65083 8.87767 7.60326C9.10719 7.55594 9.34013 7.51634 9.57585 7.48461C9.80999 7.45309 10.0467 7.42936 10.2855 7.41356C10.522 7.39789 10.7604 7.39001 11 7.39001C11.2396 7.39001 11.478 7.39789 11.7145 7.41356C11.9533 7.42936 12.19 7.45309 12.4241 7.48461C12.6599 7.51634 12.8928 7.55594 13.1223 7.60326C13.3531 7.65083 13.5803 7.70617 13.8032 7.76905C14.0271 7.83222 14.2464 7.90297 14.4607 7.98104C14.6758 8.05944 14.8855 8.14517 15.0892 8.23795C15.2939 8.3312 15.4923 8.4315 15.6838 8.53851C15.8764 8.6462 16.0618 8.76061 16.2393 8.8814C16.4182 9.0031 16.5889 9.13118 16.7508 9.26525C16.9141 9.40053 17.0683 9.54182 17.2128 9.68869Z" fill="currentColor"/>
@@ -5755,983 +5757,987 @@ const Wifi = `<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns=
 </svg>
 `;
 
-/** Do not edit! This file is auto-generated. */
-// ======= //
-/* EXPORTS */
-// ======= //
-const printAirplane = Airplane;
-const printAlarm = Alarm;
-const printAngleDown = AngleDown;
-const printAngleLeft = AngleLeft;
-const printAngleRight = AngleRight;
-const printAngleUp = AngleUp;
-const printArrowDown = ArrowDown;
-const printArrowDownLeft = ArrowDownLeft;
-const printArrowDownRight = ArrowDownRight;
-const printArrowLeft = ArrowLeft;
-const printArrowRight = ArrowRight;
-const printArrowUp = ArrowUp;
-const printArrowUpLeft = ArrowUpLeft;
-const printArrowUpRight = ArrowUpRight;
-const printBank = Bank;
-const printBattery = Battery;
-const printBell = Bell;
-const printBellOff = BellOff;
-const printBicycle = Bicycle;
-const printBluetooth = Bluetooth;
-const printBook = Book;
-const printBookmark = Bookmark;
-const printBriefcase = Briefcase;
-const printBuilding = Building;
-const printCalculator = Calculator;
-const printCalendar = Calendar;
-const printCamera = Camera;
-const printCan = Can;
-const printCar = Car;
-const printCart = Cart;
-const printCellphoneEye = CellphoneEye;
-const printCellphoneLoop = CellphoneLoop;
-const printChain = Chain;
-const printCheckmark = Checkmark;
-const printCircle = Circle;
-const printClapperboard = Clapperboard;
-const printClipboard = Clipboard;
-const printClipboardCheck = ClipboardCheck;
-const printClipboardCheckCircle = ClipboardCheckCircle;
-const printClock = Clock;
-const printCloud = Cloud;
-const printCloudDown = CloudDown;
-const printCloudUp = CloudUp;
-const printCoctail = Coctail;
-const printCode = Code;
-const printColorPicker = ColorPicker;
-const printContract = Contract;
-const printController = Controller;
-const printCountdown = Countdown;
-const printCreditCard = CreditCard;
-const printCrown = Crown;
-const printCup = Cup;
-const printCv = Cv;
-const printDivision = Division;
-const printDotsX = DotsX;
-const printDotsY = DotsY;
-const printDress = Dress;
-const printDuplicate = Duplicate;
-const printElectricity = Electricity;
-const printEnter = Enter;
-const printExclamation = Exclamation;
-const printExclamationCircle = ExclamationCircle;
-const printExpand = Expand;
-const printEye = Eye;
-const printEyeClosed = EyeClosed;
-const printEyeFrame = EyeFrame;
-const printEyeOff = EyeOff;
-const printFastForward = FastForward;
-const printFile = File;
-const printFileLoop = FileLoop;
-const printFilmFrame = FilmFrame;
-const printFire = Fire;
-const printFlag = Flag;
-const printFlagStraight = FlagStraight;
-const printFlower = Flower;
-const printFlowerBud = FlowerBud;
-const printFolder = Folder;
-const printFoldingStool = FoldingStool;
-const printGear = Gear;
-const printGift = Gift;
-const printGrab = Grab;
-const printGrid = Grid;
-const printHamburger = Hamburger;
-const printHandGrab = HandGrab;
-const printHandOpen = HandOpen;
-const printHandPoint = HandPoint;
-const printHandPointOpen = HandPointOpen;
-const printHandshake = Handshake;
-const printHash = Hash;
-const printHeadphone = Headphone;
-const printHeart = Heart;
-const printHourglass = Hourglass;
-const printHouse = House;
-const printIdentification = Identification;
-const printInfo = Info;
-const printInfoCircle = InfoCircle;
-const printInternet = Internet;
-const printKey = Key;
-const printKniveFork = KniveFork;
-const printLabel = Label;
-const printLeave = Leave;
-const printLetter = Letter;
-const printLetterOpen = LetterOpen;
-const printList = List;
-const printLockClosed = LockClosed;
-const printLockOpen = LockOpen;
-const printLoop = Loop;
-const printLoopMinus = LoopMinus;
-const printLoopPlus = LoopPlus;
-const printMagnet = Magnet;
-const printMap = Map;
-const printMegaphone = Megaphone;
-const printMenu = Menu;
-const printMicrophone = Microphone;
-const printMicrophone2 = Microphone2;
-const printMinus = Minus;
-const printMonitor = Monitor;
-const printMonitorEye = MonitorEye;
-const printMonitorLoop = MonitorLoop;
-const printMonitor2 = Monitor2;
-const printMoon = Moon;
-const printMotorcycle = Motorcycle;
-const printMoveX = MoveX;
-const printMoveY = MoveY;
-const printMusicNoteDouble = MusicNoteDouble;
-const printMusicNoteSingle = MusicNoteSingle;
-const printNextTrack = NextTrack;
-const printNoEntry = NoEntry;
-const printOpen = Open;
-const printPaintPallet = PaintPallet;
-const printPause = Pause;
-const printPen = Pen;
-const printPeople = People;
-const printPerson = Person;
-const printPersonCheckmark = PersonCheckmark;
-const printPersonPlus = PersonPlus;
-const printPersons = Persons;
-const printPhone = Phone;
-const printPhoto = Photo;
-const printPhotoCamera = PhotoCamera;
-const printPhotoStudio = PhotoStudio;
-const printPill = Pill;
-const printPin = Pin;
-const printPinpoint = Pinpoint;
-const printPinpointOff = PinpointOff;
-const printPlay = Play;
-const printPlus = Plus;
-const printPower = Power;
-const printPreviousTrack = PreviousTrack;
-const printPrinter = Printer;
-const printQrCode = QrCode;
-const printQuestion = Question;
-const printQuestionCircle = QuestionCircle;
-const printRadio = Radio;
-const printRefresh = Refresh;
-const printReload = Reload;
-const printRepeat = Repeat;
-const printRewind = Rewind;
-const printRewindTime = RewindTime;
-const printScissors = Scissors;
-const printSend = Send;
-const printShareAndroid = ShareAndroid;
-const printShareIos = ShareIos;
-const printShuffle = Shuffle;
-const printSliders = Sliders;
-const printSmartphone = Smartphone;
-const printSmartphoneCutout = SmartphoneCutout;
-const printSmartphoneNotch = SmartphoneNotch;
-const printSmartphone2 = Smartphone2;
-const printSoftDrink = SoftDrink;
-const printSort = Sort;
-const printSpeakerHigh = SpeakerHigh;
-const printSpeakerLow = SpeakerLow;
-const printSpeakerOff = SpeakerOff;
-const printSquare = Square;
-const printStar = Star;
-const printStars = Stars;
-const printStopwatch = Stopwatch;
-const printStudioBackdrop = StudioBackdrop;
-const printStudioLightFront = StudioLightFront;
-const printStudioLightSide = StudioLightSide;
-const printSun = Sun;
-const printSyringe = Syringe;
-const printTShirt = TShirt;
-const printTaxi = Taxi;
-const printTelevision = Television;
-const printTextBubble = TextBubble;
-const printTextBubbles = TextBubbles;
-const printThumbsDown = ThumbsDown;
-const printThumbsUp = ThumbsUp;
-const printTimes = Times;
-const printTool = Tool;
-const printTrain = Train;
-const printTrash = Trash;
-const printTriangleDown = TriangleDown;
-const printTriangleLeft = TriangleLeft;
-const printTriangleRight = TriangleRight;
-const printTriangleUp = TriangleUp;
-const printTrophy = Trophy;
-const printTruck = Truck;
-const printUmbrella = Umbrella;
-const printWatch = Watch;
-const printWaterDrop = WaterDrop;
-const printWifi = Wifi;
-const print = {
-    'airplane': Airplane,
-    'alarm': Alarm,
-    'angle-down': AngleDown,
-    'angle-left': AngleLeft,
-    'angle-right': AngleRight,
-    'angle-up': AngleUp,
-    'arrow-down': ArrowDown,
-    'arrow-down-left': ArrowDownLeft,
-    'arrow-down-right': ArrowDownRight,
-    'arrow-left': ArrowLeft,
-    'arrow-right': ArrowRight,
-    'arrow-up': ArrowUp,
-    'arrow-up-left': ArrowUpLeft,
-    'arrow-up-right': ArrowUpRight,
-    'bank': Bank,
-    'battery': Battery,
-    'bell': Bell,
-    'bell-off': BellOff,
-    'bicycle': Bicycle,
-    'bluetooth': Bluetooth,
-    'book': Book,
-    'bookmark': Bookmark,
-    'briefcase': Briefcase,
-    'building': Building,
-    'calculator': Calculator,
-    'calendar': Calendar,
-    'camera': Camera,
-    'can': Can,
-    'car': Car,
-    'cart': Cart,
-    'cellphone-eye': CellphoneEye,
-    'cellphone-loop': CellphoneLoop,
-    'chain': Chain,
-    'checkmark': Checkmark,
-    'circle': Circle,
-    'clapperboard': Clapperboard,
-    'clipboard': Clipboard,
-    'clipboard-check': ClipboardCheck,
-    'clipboard-check-circle': ClipboardCheckCircle,
-    'clock': Clock,
-    'cloud': Cloud,
-    'cloud-down': CloudDown,
-    'cloud-up': CloudUp,
-    'coctail': Coctail,
-    'code': Code,
-    'color-picker': ColorPicker,
-    'contract': Contract,
-    'controller': Controller,
-    'countdown': Countdown,
-    'credit-card': CreditCard,
-    'crown': Crown,
-    'cup': Cup,
-    'cv': Cv,
-    'division': Division,
-    'dots-x': DotsX,
-    'dots-y': DotsY,
-    'dress': Dress,
-    'duplicate': Duplicate,
-    'electricity': Electricity,
-    'enter': Enter,
-    'exclamation': Exclamation,
-    'exclamation-circle': ExclamationCircle,
-    'expand': Expand,
-    'eye': Eye,
-    'eye-closed': EyeClosed,
-    'eye-frame': EyeFrame,
-    'eye-off': EyeOff,
-    'fast-forward': FastForward,
-    'file': File,
-    'file-loop': FileLoop,
-    'film-frame': FilmFrame,
-    'fire': Fire,
-    'flag': Flag,
-    'flag-straight': FlagStraight,
-    'flower': Flower,
-    'flower-bud': FlowerBud,
-    'folder': Folder,
-    'folding-stool': FoldingStool,
-    'gear': Gear,
-    'gift': Gift,
-    'grab': Grab,
-    'grid': Grid,
-    'hamburger': Hamburger,
-    'hand-grab': HandGrab,
-    'hand-open': HandOpen,
-    'hand-point': HandPoint,
-    'hand-point-open': HandPointOpen,
-    'handshake': Handshake,
-    'hash': Hash,
-    'headphone': Headphone,
-    'heart': Heart,
-    'hourglass': Hourglass,
-    'house': House,
-    'identification': Identification,
-    'info': Info,
-    'info-circle': InfoCircle,
-    'internet': Internet,
-    'key': Key,
-    'knive-fork': KniveFork,
-    'label': Label,
-    'leave': Leave,
-    'letter': Letter,
-    'letter-open': LetterOpen,
-    'list': List,
-    'lock-closed': LockClosed,
-    'lock-open': LockOpen,
-    'loop': Loop,
-    'loop-minus': LoopMinus,
-    'loop-plus': LoopPlus,
-    'magnet': Magnet,
-    'map': Map,
-    'megaphone': Megaphone,
-    'menu': Menu,
-    'microphone': Microphone,
-    'microphone2': Microphone2,
-    'minus': Minus,
-    'monitor': Monitor,
-    'monitor-eye': MonitorEye,
-    'monitor-loop': MonitorLoop,
-    'monitor2': Monitor2,
-    'moon': Moon,
-    'motorcycle': Motorcycle,
-    'move-x': MoveX,
-    'move-y': MoveY,
-    'music-note-double': MusicNoteDouble,
-    'music-note-single': MusicNoteSingle,
-    'next-track': NextTrack,
-    'no-entry': NoEntry,
-    'open': Open,
-    'paint-pallet': PaintPallet,
-    'pause': Pause,
-    'pen': Pen,
-    'people': People,
-    'person': Person,
-    'person-checkmark': PersonCheckmark,
-    'person-plus': PersonPlus,
-    'persons': Persons,
-    'phone': Phone,
-    'photo': Photo,
-    'photo-camera': PhotoCamera,
-    'photo-studio': PhotoStudio,
-    'pill': Pill,
-    'pin': Pin,
-    'pinpoint': Pinpoint,
-    'pinpoint-off': PinpointOff,
-    'play': Play,
-    'plus': Plus,
-    'power': Power,
-    'previous-track': PreviousTrack,
-    'printer': Printer,
-    'qr-code': QrCode,
-    'question': Question,
-    'question-circle': QuestionCircle,
-    'radio': Radio,
-    'refresh': Refresh,
-    'reload': Reload,
-    'repeat': Repeat,
-    'rewind': Rewind,
-    'rewind-time': RewindTime,
-    'scissors': Scissors,
-    'send': Send,
-    'share-android': ShareAndroid,
-    'share-ios': ShareIos,
-    'shuffle': Shuffle,
-    'sliders': Sliders,
-    'smartphone': Smartphone,
-    'smartphone-cutout': SmartphoneCutout,
-    'smartphone-notch': SmartphoneNotch,
-    'smartphone2': Smartphone2,
-    'soft-drink': SoftDrink,
-    'sort': Sort,
-    'speaker-high': SpeakerHigh,
-    'speaker-low': SpeakerLow,
-    'speaker-off': SpeakerOff,
-    'square': Square,
-    'star': Star,
-    'stars': Stars,
-    'stopwatch': Stopwatch,
-    'studio-backdrop': StudioBackdrop,
-    'studio-light-front': StudioLightFront,
-    'studio-light-side': StudioLightSide,
-    'sun': Sun,
-    'syringe': Syringe,
-    't-shirt': TShirt,
-    'taxi': Taxi,
-    'television': Television,
-    'text-bubble': TextBubble,
-    'text-bubbles': TextBubbles,
-    'thumbs-down': ThumbsDown,
-    'thumbs-up': ThumbsUp,
-    'times': Times,
-    'tool': Tool,
-    'train': Train,
-    'trash': Trash,
-    'triangle-down': TriangleDown,
-    'triangle-left': TriangleLeft,
-    'triangle-right': TriangleRight,
-    'triangle-up': TriangleUp,
-    'trophy': Trophy,
-    'truck': Truck,
-    'umbrella': Umbrella,
-    'watch': Watch,
-    'water-drop': WaterDrop,
-    'wifi': Wifi,
-};
+  /** Do not edit! This file is auto-generated. */
+  // ======= //
+  /* EXPORTS */
+  // ======= //
+  const printAirplane = Airplane;
+  const printAlarm = Alarm;
+  const printAngleDown = AngleDown;
+  const printAngleLeft = AngleLeft;
+  const printAngleRight = AngleRight;
+  const printAngleUp = AngleUp;
+  const printArrowDown = ArrowDown;
+  const printArrowDownLeft = ArrowDownLeft;
+  const printArrowDownRight = ArrowDownRight;
+  const printArrowLeft = ArrowLeft;
+  const printArrowRight = ArrowRight;
+  const printArrowUp = ArrowUp;
+  const printArrowUpLeft = ArrowUpLeft;
+  const printArrowUpRight = ArrowUpRight;
+  const printBank = Bank;
+  const printBattery = Battery;
+  const printBell = Bell;
+  const printBellOff = BellOff;
+  const printBicycle = Bicycle;
+  const printBluetooth = Bluetooth;
+  const printBook = Book;
+  const printBookmark = Bookmark;
+  const printBriefcase = Briefcase;
+  const printBuilding = Building;
+  const printCalculator = Calculator;
+  const printCalendar = Calendar;
+  const printCamera = Camera;
+  const printCan = Can;
+  const printCar = Car;
+  const printCart = Cart;
+  const printCellphoneEye = CellphoneEye;
+  const printCellphoneLoop = CellphoneLoop;
+  const printChain = Chain;
+  const printCheckmark = Checkmark;
+  const printCircle = Circle;
+  const printClapperboard = Clapperboard;
+  const printClipboard = Clipboard;
+  const printClipboardCheck = ClipboardCheck;
+  const printClipboardCheckCircle = ClipboardCheckCircle;
+  const printClock = Clock;
+  const printCloud = Cloud;
+  const printCloudDown = CloudDown;
+  const printCloudUp = CloudUp;
+  const printCoctail = Coctail;
+  const printCode = Code;
+  const printColorPicker = ColorPicker;
+  const printContract = Contract;
+  const printController = Controller;
+  const printCountdown = Countdown;
+  const printCreditCard = CreditCard;
+  const printCrown = Crown;
+  const printCup = Cup;
+  const printCv = Cv;
+  const printDivision = Division;
+  const printDotsX = DotsX;
+  const printDotsY = DotsY;
+  const printDress = Dress;
+  const printDuplicate = Duplicate;
+  const printElectricity = Electricity;
+  const printEnter = Enter;
+  const printExclamation = Exclamation;
+  const printExclamationCircle = ExclamationCircle;
+  const printExpand = Expand;
+  const printEye = Eye;
+  const printEyeClosed = EyeClosed;
+  const printEyeFrame = EyeFrame;
+  const printEyeOff = EyeOff;
+  const printFastForward = FastForward;
+  const printFile = File;
+  const printFileLoop = FileLoop;
+  const printFilmFrame = FilmFrame;
+  const printFire = Fire;
+  const printFlag = Flag;
+  const printFlagStraight = FlagStraight;
+  const printFlower = Flower;
+  const printFlowerBud = FlowerBud;
+  const printFolder = Folder;
+  const printFoldingStool = FoldingStool;
+  const printGear = Gear;
+  const printGift = Gift;
+  const printGrab = Grab;
+  const printGrid = Grid;
+  const printHamburger = Hamburger;
+  const printHandGrab = HandGrab;
+  const printHandOpen = HandOpen;
+  const printHandPoint = HandPoint;
+  const printHandPointOpen = HandPointOpen;
+  const printHandshake = Handshake;
+  const printHash = Hash;
+  const printHeadphone = Headphone;
+  const printHeart = Heart;
+  const printHourglass = Hourglass;
+  const printHouse = House;
+  const printIdentification = Identification;
+  const printInfo = Info;
+  const printInfoCircle = InfoCircle;
+  const printInternet = Internet;
+  const printKey = Key;
+  const printKniveFork = KniveFork;
+  const printLabel = Label;
+  const printLeave = Leave;
+  const printLetter = Letter;
+  const printLetterOpen = LetterOpen;
+  const printList = List;
+  const printLockClosed = LockClosed;
+  const printLockOpen = LockOpen;
+  const printLoop = Loop;
+  const printLoopMinus = LoopMinus;
+  const printLoopPlus = LoopPlus;
+  const printMagnet = Magnet;
+  const printMap = Map;
+  const printMegaphone = Megaphone;
+  const printMenu = Menu;
+  const printMicrophone = Microphone;
+  const printMicrophone2 = Microphone2;
+  const printMinus = Minus;
+  const printMonitor = Monitor;
+  const printMonitorEye = MonitorEye;
+  const printMonitorLoop = MonitorLoop;
+  const printMonitor2 = Monitor2;
+  const printMoon = Moon;
+  const printMotorcycle = Motorcycle;
+  const printMoveX = MoveX;
+  const printMoveY = MoveY;
+  const printMusicNoteDouble = MusicNoteDouble;
+  const printMusicNoteSingle = MusicNoteSingle;
+  const printNextTrack = NextTrack;
+  const printNoEntry = NoEntry;
+  const printOpen = Open;
+  const printPaintPallet = PaintPallet;
+  const printPause = Pause;
+  const printPen = Pen;
+  const printPeople = People;
+  const printPerson = Person;
+  const printPersonCheckmark = PersonCheckmark;
+  const printPersonPlus = PersonPlus;
+  const printPersons = Persons;
+  const printPhone = Phone;
+  const printPhoto = Photo;
+  const printPhotoCamera = PhotoCamera;
+  const printPhotoStudio = PhotoStudio;
+  const printPill = Pill;
+  const printPin = Pin;
+  const printPinpoint = Pinpoint;
+  const printPinpointOff = PinpointOff;
+  const printPlay = Play;
+  const printPlus = Plus;
+  const printPower = Power;
+  const printPreviousTrack = PreviousTrack;
+  const printPrinter = Printer;
+  const printQrCode = QrCode;
+  const printQuestion = Question;
+  const printQuestionCircle = QuestionCircle;
+  const printRadio = Radio;
+  const printRefresh = Refresh;
+  const printReload = Reload;
+  const printRepeat = Repeat;
+  const printRewind = Rewind;
+  const printRewindTime = RewindTime;
+  const printScissors = Scissors;
+  const printSend = Send;
+  const printShareAndroid = ShareAndroid;
+  const printShareIos = ShareIos;
+  const printShuffle = Shuffle;
+  const printSliders = Sliders;
+  const printSmartphone = Smartphone;
+  const printSmartphoneCutout = SmartphoneCutout;
+  const printSmartphoneNotch = SmartphoneNotch;
+  const printSmartphone2 = Smartphone2;
+  const printSoftDrink = SoftDrink;
+  const printSort = Sort;
+  const printSpeakerHigh = SpeakerHigh;
+  const printSpeakerLow = SpeakerLow;
+  const printSpeakerOff = SpeakerOff;
+  const printSquare = Square;
+  const printStar = Star;
+  const printStars = Stars;
+  const printStopwatch = Stopwatch;
+  const printStudioBackdrop = StudioBackdrop;
+  const printStudioLightFront = StudioLightFront;
+  const printStudioLightSide = StudioLightSide;
+  const printSun = Sun;
+  const printSyringe = Syringe;
+  const printTShirt = TShirt;
+  const printTaxi = Taxi;
+  const printTelevision = Television;
+  const printTextBubble = TextBubble;
+  const printTextBubbles = TextBubbles;
+  const printThumbsDown = ThumbsDown;
+  const printThumbsUp = ThumbsUp;
+  const printTimes = Times;
+  const printTool = Tool;
+  const printTrain = Train;
+  const printTrash = Trash;
+  const printTriangleDown = TriangleDown;
+  const printTriangleLeft = TriangleLeft;
+  const printTriangleRight = TriangleRight;
+  const printTriangleUp = TriangleUp;
+  const printTrophy = Trophy;
+  const printTruck = Truck;
+  const printUmbrella = Umbrella;
+  const printWatch = Watch;
+  const printWaterDrop = WaterDrop;
+  const printWifi = Wifi;
+  const print = {
+      'airplane': Airplane,
+      'alarm': Alarm,
+      'angle-down': AngleDown,
+      'angle-left': AngleLeft,
+      'angle-right': AngleRight,
+      'angle-up': AngleUp,
+      'arrow-down': ArrowDown,
+      'arrow-down-left': ArrowDownLeft,
+      'arrow-down-right': ArrowDownRight,
+      'arrow-left': ArrowLeft,
+      'arrow-right': ArrowRight,
+      'arrow-up': ArrowUp,
+      'arrow-up-left': ArrowUpLeft,
+      'arrow-up-right': ArrowUpRight,
+      'bank': Bank,
+      'battery': Battery,
+      'bell': Bell,
+      'bell-off': BellOff,
+      'bicycle': Bicycle,
+      'bluetooth': Bluetooth,
+      'book': Book,
+      'bookmark': Bookmark,
+      'briefcase': Briefcase,
+      'building': Building,
+      'calculator': Calculator,
+      'calendar': Calendar,
+      'camera': Camera,
+      'can': Can,
+      'car': Car,
+      'cart': Cart,
+      'cellphone-eye': CellphoneEye,
+      'cellphone-loop': CellphoneLoop,
+      'chain': Chain,
+      'checkmark': Checkmark,
+      'circle': Circle,
+      'clapperboard': Clapperboard,
+      'clipboard': Clipboard,
+      'clipboard-check': ClipboardCheck,
+      'clipboard-check-circle': ClipboardCheckCircle,
+      'clock': Clock,
+      'cloud': Cloud,
+      'cloud-down': CloudDown,
+      'cloud-up': CloudUp,
+      'coctail': Coctail,
+      'code': Code,
+      'color-picker': ColorPicker,
+      'contract': Contract,
+      'controller': Controller,
+      'countdown': Countdown,
+      'credit-card': CreditCard,
+      'crown': Crown,
+      'cup': Cup,
+      'cv': Cv,
+      'division': Division,
+      'dots-x': DotsX,
+      'dots-y': DotsY,
+      'dress': Dress,
+      'duplicate': Duplicate,
+      'electricity': Electricity,
+      'enter': Enter,
+      'exclamation': Exclamation,
+      'exclamation-circle': ExclamationCircle,
+      'expand': Expand,
+      'eye': Eye,
+      'eye-closed': EyeClosed,
+      'eye-frame': EyeFrame,
+      'eye-off': EyeOff,
+      'fast-forward': FastForward,
+      'file': File,
+      'file-loop': FileLoop,
+      'film-frame': FilmFrame,
+      'fire': Fire,
+      'flag': Flag,
+      'flag-straight': FlagStraight,
+      'flower': Flower,
+      'flower-bud': FlowerBud,
+      'folder': Folder,
+      'folding-stool': FoldingStool,
+      'gear': Gear,
+      'gift': Gift,
+      'grab': Grab,
+      'grid': Grid,
+      'hamburger': Hamburger,
+      'hand-grab': HandGrab,
+      'hand-open': HandOpen,
+      'hand-point': HandPoint,
+      'hand-point-open': HandPointOpen,
+      'handshake': Handshake,
+      'hash': Hash,
+      'headphone': Headphone,
+      'heart': Heart,
+      'hourglass': Hourglass,
+      'house': House,
+      'identification': Identification,
+      'info': Info,
+      'info-circle': InfoCircle,
+      'internet': Internet,
+      'key': Key,
+      'knive-fork': KniveFork,
+      'label': Label,
+      'leave': Leave,
+      'letter': Letter,
+      'letter-open': LetterOpen,
+      'list': List,
+      'lock-closed': LockClosed,
+      'lock-open': LockOpen,
+      'loop': Loop,
+      'loop-minus': LoopMinus,
+      'loop-plus': LoopPlus,
+      'magnet': Magnet,
+      'map': Map,
+      'megaphone': Megaphone,
+      'menu': Menu,
+      'microphone': Microphone,
+      'microphone2': Microphone2,
+      'minus': Minus,
+      'monitor': Monitor,
+      'monitor-eye': MonitorEye,
+      'monitor-loop': MonitorLoop,
+      'monitor2': Monitor2,
+      'moon': Moon,
+      'motorcycle': Motorcycle,
+      'move-x': MoveX,
+      'move-y': MoveY,
+      'music-note-double': MusicNoteDouble,
+      'music-note-single': MusicNoteSingle,
+      'next-track': NextTrack,
+      'no-entry': NoEntry,
+      'open': Open,
+      'paint-pallet': PaintPallet,
+      'pause': Pause,
+      'pen': Pen,
+      'people': People,
+      'person': Person,
+      'person-checkmark': PersonCheckmark,
+      'person-plus': PersonPlus,
+      'persons': Persons,
+      'phone': Phone,
+      'photo': Photo,
+      'photo-camera': PhotoCamera,
+      'photo-studio': PhotoStudio,
+      'pill': Pill,
+      'pin': Pin,
+      'pinpoint': Pinpoint,
+      'pinpoint-off': PinpointOff,
+      'play': Play,
+      'plus': Plus,
+      'power': Power,
+      'previous-track': PreviousTrack,
+      'printer': Printer,
+      'qr-code': QrCode,
+      'question': Question,
+      'question-circle': QuestionCircle,
+      'radio': Radio,
+      'refresh': Refresh,
+      'reload': Reload,
+      'repeat': Repeat,
+      'rewind': Rewind,
+      'rewind-time': RewindTime,
+      'scissors': Scissors,
+      'send': Send,
+      'share-android': ShareAndroid,
+      'share-ios': ShareIos,
+      'shuffle': Shuffle,
+      'sliders': Sliders,
+      'smartphone': Smartphone,
+      'smartphone-cutout': SmartphoneCutout,
+      'smartphone-notch': SmartphoneNotch,
+      'smartphone2': Smartphone2,
+      'soft-drink': SoftDrink,
+      'sort': Sort,
+      'speaker-high': SpeakerHigh,
+      'speaker-low': SpeakerLow,
+      'speaker-off': SpeakerOff,
+      'square': Square,
+      'star': Star,
+      'stars': Stars,
+      'stopwatch': Stopwatch,
+      'studio-backdrop': StudioBackdrop,
+      'studio-light-front': StudioLightFront,
+      'studio-light-side': StudioLightSide,
+      'sun': Sun,
+      'syringe': Syringe,
+      't-shirt': TShirt,
+      'taxi': Taxi,
+      'television': Television,
+      'text-bubble': TextBubble,
+      'text-bubbles': TextBubbles,
+      'thumbs-down': ThumbsDown,
+      'thumbs-up': ThumbsUp,
+      'times': Times,
+      'tool': Tool,
+      'train': Train,
+      'trash': Trash,
+      'triangle-down': TriangleDown,
+      'triangle-left': TriangleLeft,
+      'triangle-right': TriangleRight,
+      'triangle-up': TriangleUp,
+      'trophy': Trophy,
+      'truck': Truck,
+      'umbrella': Umbrella,
+      'watch': Watch,
+      'water-drop': WaterDrop,
+      'wifi': Wifi,
+  };
 
-/**
- * @returns {{ r: number, g: number, b: number, a?: number }} { r: [0-255], g: [0-255], b: [0-255}<, a: [0-100]>}
- */
-function hexToRgba(hex) {
-    if (typeof hex !== 'string') {
-        throw new TypeError('Expected a string');
-    }
-    hex = hex.replace(/^#/, '');
-    if (hex.length === 3) {
-        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
-    }
-    else if (hex.length === 4) {
-        hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2] + hex[3] + hex[3];
-    }
-    const num = parseInt(hex, 16);
-    return hex.length > 6
-        ? {
-            r: (num >> 24) & 255,
-            g: (num >> 16) & 255,
-            b: (num >> 8) & 255,
-            a: Math.round((num & 255) / 2.55),
-        }
-        : { r: num >> 16, g: (num >> 8) & 255, b: num & 255 };
-}
-const reRGBA = /^\s*rgb(a)?\s*\((\s*(\d+)\s*,\s*?){2}(\d+)\s*,?\s*([01]?\.?\d*?)?\s*\)\s*$/;
-/**
- * @returns {{ r: number, g: number, b: number, a?: number }} { r: [0-255], g: [0-255], b: [0-255}<, a: [0-100]>}
- */
-function textToRgba(color) {
-    if (typeof color !== 'string') {
-        throw new TypeError('Expected a string');
-    }
-    const m = reRGBA.exec(color);
-    if (m) {
-        const rgb = {
-            r: Math.max(255, parseInt(m[2], 10)),
-            g: Math.max(255, parseInt(m[3], 10)),
-            b: Math.max(255, parseInt(m[4], 10)),
-        };
-        if (m[1]) {
-            rgb.a = Math.max(1, parseFloat(m[5]));
-        }
-        return rgb;
-    }
-    return hexToRgba(color);
-}
+  /**
+   * @returns {{ r: number, g: number, b: number, a?: number }} { r: [0-255], g: [0-255], b: [0-255}<, a: [0-100]>}
+   */
+  function hexToRgba(hex) {
+      if (typeof hex !== 'string') {
+          throw new TypeError('Expected a string');
+      }
+      hex = hex.replace(/^#/, '');
+      if (hex.length === 3) {
+          hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+      }
+      else if (hex.length === 4) {
+          hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2] + hex[3] + hex[3];
+      }
+      const num = parseInt(hex, 16);
+      return hex.length > 6
+          ? {
+              r: (num >> 24) & 255,
+              g: (num >> 16) & 255,
+              b: (num >> 8) & 255,
+              a: Math.round((num & 255) / 2.55),
+          }
+          : { r: num >> 16, g: (num >> 8) & 255, b: num & 255 };
+  }
+  const reRGBA = /^\s*rgb(a)?\s*\((\s*(\d+)\s*,\s*?){2}(\d+)\s*,?\s*([01]?\.?\d*?)?\s*\)\s*$/;
+  /**
+   * @returns {{ r: number, g: number, b: number, a?: number }} { r: [0-255], g: [0-255], b: [0-255}<, a: [0-100]>}
+   */
+  function textToRgba(color) {
+      if (typeof color !== 'string') {
+          throw new TypeError('Expected a string');
+      }
+      const m = reRGBA.exec(color);
+      if (m) {
+          const rgb = {
+              r: Math.max(255, parseInt(m[2], 10)),
+              g: Math.max(255, parseInt(m[3], 10)),
+              b: Math.max(255, parseInt(m[4], 10)),
+          };
+          if (m[1]) {
+              rgb.a = Math.max(1, parseFloat(m[5]));
+          }
+          return rgb;
+      }
+      return hexToRgba(color);
+  }
 
-/**
- * Returns a Pepicon SVG as a string so you can inject it into your HTML.
- *
- * The icon name as per the reference at https://pepicons.com
- * @returns The SVG content as string
- */
-function getPepicon(payload) {
-    const { name, type = 'pop' } = payload || {};
-    const svgString = type === 'pop' ? pop[name] : print[name];
-    if (!svgString) {
-        console.warn(`Pepicon ${name} of type ${type} not found! (returned an empty string instead)`);
-        return '';
-    }
-    return svgString;
-}
-/**
- * Returns a Pepicon SVG as a string so you can inject it into your HTML.
- *
- * The icon name as per the reference at https://pepicons.com
- * @returns The SVG content as string
- */
-function morphPepicon(payload) {
-    let svg = payload.svg;
-    const { type = 'pop', color, opacity, size, stroke } = payload || {};
-    if (!/style="/.test(svg)) {
-        svg = svg.replace('<svg ', '<svg style="" ');
-    }
-    if (stroke) {
-        svg = svg.replace(/#000000|#000|black/g, stroke);
-    }
-    const rgbOrHexColor = color?.startsWith('rgb') || color?.startsWith('#');
-    if (color && !rgbOrHexColor) {
-        svg = svg.replace(/style="/, `style="color:${color};`);
-    }
-    let _opacity = opacity;
-    if (color && rgbOrHexColor) {
-        const { r, g, b, a } = textToRgba(color);
-        const _color = `rgb(${r},${g},${b})`;
-        svg = svg.replace(/style="/, `style="color:${_color};`);
-        if (opacity === undefined) {
-            _opacity = a === undefined ? 1 : a / 100;
-        }
-    }
-    if (_opacity !== undefined && _opacity < 1) {
-        if (type === 'pop') {
-            svg = svg.replace(/style="/, `style="opacity:${_opacity};`);
-        }
-        else {
-            svg = svg.replace(/opacity="\.8"/g, `opacity="${_opacity}"`);
-        }
-    }
-    if (size || size === 0) {
-        const _size = size === 'sm'
-            ? '20px'
-            : size === 'md'
-                ? '24px'
-                : size === 'lg'
-                    ? '30px'
-                    : size === 'xl'
-                        ? '36px'
-                        : typeof size === 'number'
-                            ? `${size}px`
-                            : size;
-        svg = svg
-            .replace(/style="/, `style="width:${_size};height:${_size};`)
-            .replace(/width="[0-9]+" height="[0-9]+"/, `width="${_size}" height="${_size}"`);
-    }
-    return svg;
-}
-/**
- * Returns a Pepicon SVG as a string so you can inject it into your HTML.
- *
- * The icon name as per the reference at https://pepicons.com
- * @returns The SVG content as string
- */
-function pepiconSvgString(payload) {
-    const svg = getPepicon(payload);
-    return morphPepicon({ ...payload, svg });
-}
+  /**
+   * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+   *
+   * The icon name as per the reference at https://pepicons.com
+   * @returns The SVG content as string
+   */
+  function getPepicon(payload) {
+      const { name, type = 'pop' } = payload || {};
+      const svgString = type === 'pop' ? pop[name] : print[name];
+      if (!svgString) {
+          console.warn(`Pepicon ${name} of type ${type} not found! (returned an empty string instead)`);
+          return '';
+      }
+      return svgString;
+  }
+  /**
+   * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+   *
+   * The icon name as per the reference at https://pepicons.com
+   * @returns The SVG content as string
+   */
+  function morphPepicon(payload) {
+      let svg = payload.svg;
+      const { type = 'pop', color, opacity, size, stroke } = payload || {};
+      if (!/style="/.test(svg)) {
+          svg = svg.replace('<svg ', '<svg style="" ');
+      }
+      if (stroke) {
+          svg = svg.replace(/#000000|#000|black/g, stroke);
+      }
+      const rgbOrHexColor = color?.startsWith('rgb') || color?.startsWith('#');
+      if (color && !rgbOrHexColor) {
+          svg = svg.replace(/style="/, `style="color:${color};`);
+      }
+      let _opacity = opacity;
+      if (color && rgbOrHexColor) {
+          const { r, g, b, a } = textToRgba(color);
+          const _color = `rgb(${r},${g},${b})`;
+          svg = svg.replace(/style="/, `style="color:${_color};`);
+          if (opacity === undefined) {
+              _opacity = a === undefined ? 1 : a / 100;
+          }
+      }
+      if (_opacity !== undefined && _opacity < 1) {
+          if (type === 'pop') {
+              svg = svg.replace(/style="/, `style="opacity:${_opacity};`);
+          }
+          else {
+              svg = svg.replace(/opacity="\.8"/g, `opacity="${_opacity}"`);
+          }
+      }
+      if (size || size === 0) {
+          const _size = size === 'sm'
+              ? '20px'
+              : size === 'md'
+                  ? '24px'
+                  : size === 'lg'
+                      ? '30px'
+                      : size === 'xl'
+                          ? '36px'
+                          : typeof size === 'number'
+                              ? `${size}px`
+                              : size;
+          svg = svg
+              .replace(/style="/, `style="width:${_size};height:${_size};`)
+              .replace(/width="[0-9]+" height="[0-9]+"/, `width="${_size}" height="${_size}"`);
+      }
+      return svg;
+  }
+  /**
+   * Returns a Pepicon SVG as a string so you can inject it into your HTML.
+   *
+   * The icon name as per the reference at https://pepicons.com
+   * @returns The SVG content as string
+   */
+  function pepiconSvgString(payload) {
+      const svg = getPepicon(payload);
+      return morphPepicon({ ...payload, svg });
+  }
 
-exports.categories = categories;
-exports.getPepicon = getPepicon;
-exports.morphPepicon = morphPepicon;
-exports.pepiconArray = pepiconArray;
-exports.pepiconCategoryDic = pepiconCategoryDic;
-exports.pepiconSvgString = pepiconSvgString;
-exports.pop = pop;
-exports.popAirplane = popAirplane;
-exports.popAlarm = popAlarm;
-exports.popAngleDown = popAngleDown;
-exports.popAngleLeft = popAngleLeft;
-exports.popAngleRight = popAngleRight;
-exports.popAngleUp = popAngleUp;
-exports.popArrowDown = popArrowDown;
-exports.popArrowDownLeft = popArrowDownLeft;
-exports.popArrowDownRight = popArrowDownRight;
-exports.popArrowLeft = popArrowLeft;
-exports.popArrowRight = popArrowRight;
-exports.popArrowUp = popArrowUp;
-exports.popArrowUpLeft = popArrowUpLeft;
-exports.popArrowUpRight = popArrowUpRight;
-exports.popBank = popBank;
-exports.popBattery = popBattery;
-exports.popBell = popBell;
-exports.popBellOff = popBellOff;
-exports.popBicycle = popBicycle;
-exports.popBluetooth = popBluetooth;
-exports.popBook = popBook;
-exports.popBookmark = popBookmark;
-exports.popBookmarkFilled = popBookmarkFilled;
-exports.popBriefcase = popBriefcase;
-exports.popBuilding = popBuilding;
-exports.popCalculator = popCalculator;
-exports.popCalendar = popCalendar;
-exports.popCamera = popCamera;
-exports.popCan = popCan;
-exports.popCar = popCar;
-exports.popCart = popCart;
-exports.popCellphoneEye = popCellphoneEye;
-exports.popCellphoneLoop = popCellphoneLoop;
-exports.popChain = popChain;
-exports.popCheckmark = popCheckmark;
-exports.popCircle = popCircle;
-exports.popCircleFilled = popCircleFilled;
-exports.popClapperboard = popClapperboard;
-exports.popClipboard = popClipboard;
-exports.popClipboardCheck = popClipboardCheck;
-exports.popClipboardCheckCircle = popClipboardCheckCircle;
-exports.popClock = popClock;
-exports.popCloud = popCloud;
-exports.popCloudDown = popCloudDown;
-exports.popCloudDownFilled = popCloudDownFilled;
-exports.popCloudFilled = popCloudFilled;
-exports.popCloudUp = popCloudUp;
-exports.popCloudUpFilled = popCloudUpFilled;
-exports.popCoctail = popCoctail;
-exports.popCode = popCode;
-exports.popColorPicker = popColorPicker;
-exports.popContract = popContract;
-exports.popController = popController;
-exports.popCountdown = popCountdown;
-exports.popCreditCard = popCreditCard;
-exports.popCrown = popCrown;
-exports.popCup = popCup;
-exports.popCv = popCv;
-exports.popDivision = popDivision;
-exports.popDotsX = popDotsX;
-exports.popDotsY = popDotsY;
-exports.popDress = popDress;
-exports.popDuplicate = popDuplicate;
-exports.popElectricity = popElectricity;
-exports.popEnter = popEnter;
-exports.popExclamation = popExclamation;
-exports.popExclamationCircle = popExclamationCircle;
-exports.popExclamationFilled = popExclamationFilled;
-exports.popExpand = popExpand;
-exports.popEye = popEye;
-exports.popEyeClosed = popEyeClosed;
-exports.popEyeFrame = popEyeFrame;
-exports.popEyeOff = popEyeOff;
-exports.popFastForward = popFastForward;
-exports.popFile = popFile;
-exports.popFileLoop = popFileLoop;
-exports.popFilmFrame = popFilmFrame;
-exports.popFire = popFire;
-exports.popFlag = popFlag;
-exports.popFlagStraight = popFlagStraight;
-exports.popFlower = popFlower;
-exports.popFlowerBud = popFlowerBud;
-exports.popFolder = popFolder;
-exports.popFoldingStool = popFoldingStool;
-exports.popGear = popGear;
-exports.popGearFilled = popGearFilled;
-exports.popGift = popGift;
-exports.popGrab = popGrab;
-exports.popGrid = popGrid;
-exports.popHamburger = popHamburger;
-exports.popHandGrab = popHandGrab;
-exports.popHandOpen = popHandOpen;
-exports.popHandPoint = popHandPoint;
-exports.popHandPointOpen = popHandPointOpen;
-exports.popHandshake = popHandshake;
-exports.popHash = popHash;
-exports.popHeadphone = popHeadphone;
-exports.popHeart = popHeart;
-exports.popHourglass = popHourglass;
-exports.popHouse = popHouse;
-exports.popIdentification = popIdentification;
-exports.popInfo = popInfo;
-exports.popInfoCircle = popInfoCircle;
-exports.popInfoFilled = popInfoFilled;
-exports.popInternet = popInternet;
-exports.popKey = popKey;
-exports.popKniveFork = popKniveFork;
-exports.popLabel = popLabel;
-exports.popLeave = popLeave;
-exports.popLetter = popLetter;
-exports.popLetterOpen = popLetterOpen;
-exports.popList = popList;
-exports.popLockClosed = popLockClosed;
-exports.popLockOpen = popLockOpen;
-exports.popLoop = popLoop;
-exports.popLoopMinus = popLoopMinus;
-exports.popLoopPlus = popLoopPlus;
-exports.popMagnet = popMagnet;
-exports.popMap = popMap;
-exports.popMegaphone = popMegaphone;
-exports.popMenu = popMenu;
-exports.popMicrophone = popMicrophone;
-exports.popMicrophone2 = popMicrophone2;
-exports.popMinus = popMinus;
-exports.popMonitor = popMonitor;
-exports.popMonitor2 = popMonitor2;
-exports.popMonitorEye = popMonitorEye;
-exports.popMonitorLoop = popMonitorLoop;
-exports.popMoon = popMoon;
-exports.popMoonFilled = popMoonFilled;
-exports.popMotorcycle = popMotorcycle;
-exports.popMoveX = popMoveX;
-exports.popMoveY = popMoveY;
-exports.popMusicNoteDouble = popMusicNoteDouble;
-exports.popMusicNoteSingle = popMusicNoteSingle;
-exports.popNextTrack = popNextTrack;
-exports.popNoEntry = popNoEntry;
-exports.popOpen = popOpen;
-exports.popPaintPallet = popPaintPallet;
-exports.popPause = popPause;
-exports.popPen = popPen;
-exports.popPeople = popPeople;
-exports.popPerson = popPerson;
-exports.popPersonCheckmark = popPersonCheckmark;
-exports.popPersonFilled = popPersonFilled;
-exports.popPersonPlus = popPersonPlus;
-exports.popPersons = popPersons;
-exports.popPhone = popPhone;
-exports.popPhoto = popPhoto;
-exports.popPhotoCamera = popPhotoCamera;
-exports.popPhotoStudio = popPhotoStudio;
-exports.popPill = popPill;
-exports.popPin = popPin;
-exports.popPinpoint = popPinpoint;
-exports.popPinpointFilled = popPinpointFilled;
-exports.popPinpointOff = popPinpointOff;
-exports.popPinpointOffFilled = popPinpointOffFilled;
-exports.popPlay = popPlay;
-exports.popPlus = popPlus;
-exports.popPower = popPower;
-exports.popPreviousTrack = popPreviousTrack;
-exports.popPrinter = popPrinter;
-exports.popQrCode = popQrCode;
-exports.popQuestion = popQuestion;
-exports.popQuestionCircle = popQuestionCircle;
-exports.popQuestionFilled = popQuestionFilled;
-exports.popRadio = popRadio;
-exports.popRefresh = popRefresh;
-exports.popReload = popReload;
-exports.popRepeat = popRepeat;
-exports.popRewind = popRewind;
-exports.popRewindTime = popRewindTime;
-exports.popScissors = popScissors;
-exports.popSend = popSend;
-exports.popShareAndroid = popShareAndroid;
-exports.popShareIos = popShareIos;
-exports.popShuffle = popShuffle;
-exports.popSliders = popSliders;
-exports.popSmartphone = popSmartphone;
-exports.popSmartphone2 = popSmartphone2;
-exports.popSmartphoneCutout = popSmartphoneCutout;
-exports.popSmartphoneNotch = popSmartphoneNotch;
-exports.popSoftDrink = popSoftDrink;
-exports.popSort = popSort;
-exports.popSpeakerHigh = popSpeakerHigh;
-exports.popSpeakerLow = popSpeakerLow;
-exports.popSpeakerOff = popSpeakerOff;
-exports.popSquare = popSquare;
-exports.popSquareFilled = popSquareFilled;
-exports.popStar = popStar;
-exports.popStarFilled = popStarFilled;
-exports.popStars = popStars;
-exports.popStopwatch = popStopwatch;
-exports.popStudioBackdrop = popStudioBackdrop;
-exports.popStudioLightFront = popStudioLightFront;
-exports.popStudioLightSide = popStudioLightSide;
-exports.popSun = popSun;
-exports.popSunFilled = popSunFilled;
-exports.popSyringe = popSyringe;
-exports.popTShirt = popTShirt;
-exports.popTaxi = popTaxi;
-exports.popTelevision = popTelevision;
-exports.popTextBubble = popTextBubble;
-exports.popTextBubbles = popTextBubbles;
-exports.popThumbsDown = popThumbsDown;
-exports.popThumbsUp = popThumbsUp;
-exports.popTimes = popTimes;
-exports.popTool = popTool;
-exports.popTrain = popTrain;
-exports.popTrash = popTrash;
-exports.popTriangleDown = popTriangleDown;
-exports.popTriangleDownFilled = popTriangleDownFilled;
-exports.popTriangleLeft = popTriangleLeft;
-exports.popTriangleLeftFilled = popTriangleLeftFilled;
-exports.popTriangleRight = popTriangleRight;
-exports.popTriangleRightFilled = popTriangleRightFilled;
-exports.popTriangleUp = popTriangleUp;
-exports.popTriangleUpFilled = popTriangleUpFilled;
-exports.popTrophy = popTrophy;
-exports.popTruck = popTruck;
-exports.popUmbrella = popUmbrella;
-exports.popWatch = popWatch;
-exports.popWaterDrop = popWaterDrop;
-exports.popWifi = popWifi;
-exports.print = print;
-exports.printAirplane = printAirplane;
-exports.printAlarm = printAlarm;
-exports.printAngleDown = printAngleDown;
-exports.printAngleLeft = printAngleLeft;
-exports.printAngleRight = printAngleRight;
-exports.printAngleUp = printAngleUp;
-exports.printArrowDown = printArrowDown;
-exports.printArrowDownLeft = printArrowDownLeft;
-exports.printArrowDownRight = printArrowDownRight;
-exports.printArrowLeft = printArrowLeft;
-exports.printArrowRight = printArrowRight;
-exports.printArrowUp = printArrowUp;
-exports.printArrowUpLeft = printArrowUpLeft;
-exports.printArrowUpRight = printArrowUpRight;
-exports.printBank = printBank;
-exports.printBattery = printBattery;
-exports.printBell = printBell;
-exports.printBellOff = printBellOff;
-exports.printBicycle = printBicycle;
-exports.printBluetooth = printBluetooth;
-exports.printBook = printBook;
-exports.printBookmark = printBookmark;
-exports.printBriefcase = printBriefcase;
-exports.printBuilding = printBuilding;
-exports.printCalculator = printCalculator;
-exports.printCalendar = printCalendar;
-exports.printCamera = printCamera;
-exports.printCan = printCan;
-exports.printCar = printCar;
-exports.printCart = printCart;
-exports.printCellphoneEye = printCellphoneEye;
-exports.printCellphoneLoop = printCellphoneLoop;
-exports.printChain = printChain;
-exports.printCheckmark = printCheckmark;
-exports.printCircle = printCircle;
-exports.printClapperboard = printClapperboard;
-exports.printClipboard = printClipboard;
-exports.printClipboardCheck = printClipboardCheck;
-exports.printClipboardCheckCircle = printClipboardCheckCircle;
-exports.printClock = printClock;
-exports.printCloud = printCloud;
-exports.printCloudDown = printCloudDown;
-exports.printCloudUp = printCloudUp;
-exports.printCoctail = printCoctail;
-exports.printCode = printCode;
-exports.printColorPicker = printColorPicker;
-exports.printContract = printContract;
-exports.printController = printController;
-exports.printCountdown = printCountdown;
-exports.printCreditCard = printCreditCard;
-exports.printCrown = printCrown;
-exports.printCup = printCup;
-exports.printCv = printCv;
-exports.printDivision = printDivision;
-exports.printDotsX = printDotsX;
-exports.printDotsY = printDotsY;
-exports.printDress = printDress;
-exports.printDuplicate = printDuplicate;
-exports.printElectricity = printElectricity;
-exports.printEnter = printEnter;
-exports.printExclamation = printExclamation;
-exports.printExclamationCircle = printExclamationCircle;
-exports.printExpand = printExpand;
-exports.printEye = printEye;
-exports.printEyeClosed = printEyeClosed;
-exports.printEyeFrame = printEyeFrame;
-exports.printEyeOff = printEyeOff;
-exports.printFastForward = printFastForward;
-exports.printFile = printFile;
-exports.printFileLoop = printFileLoop;
-exports.printFilmFrame = printFilmFrame;
-exports.printFire = printFire;
-exports.printFlag = printFlag;
-exports.printFlagStraight = printFlagStraight;
-exports.printFlower = printFlower;
-exports.printFlowerBud = printFlowerBud;
-exports.printFolder = printFolder;
-exports.printFoldingStool = printFoldingStool;
-exports.printGear = printGear;
-exports.printGift = printGift;
-exports.printGrab = printGrab;
-exports.printGrid = printGrid;
-exports.printHamburger = printHamburger;
-exports.printHandGrab = printHandGrab;
-exports.printHandOpen = printHandOpen;
-exports.printHandPoint = printHandPoint;
-exports.printHandPointOpen = printHandPointOpen;
-exports.printHandshake = printHandshake;
-exports.printHash = printHash;
-exports.printHeadphone = printHeadphone;
-exports.printHeart = printHeart;
-exports.printHourglass = printHourglass;
-exports.printHouse = printHouse;
-exports.printIdentification = printIdentification;
-exports.printInfo = printInfo;
-exports.printInfoCircle = printInfoCircle;
-exports.printInternet = printInternet;
-exports.printKey = printKey;
-exports.printKniveFork = printKniveFork;
-exports.printLabel = printLabel;
-exports.printLeave = printLeave;
-exports.printLetter = printLetter;
-exports.printLetterOpen = printLetterOpen;
-exports.printList = printList;
-exports.printLockClosed = printLockClosed;
-exports.printLockOpen = printLockOpen;
-exports.printLoop = printLoop;
-exports.printLoopMinus = printLoopMinus;
-exports.printLoopPlus = printLoopPlus;
-exports.printMagnet = printMagnet;
-exports.printMap = printMap;
-exports.printMegaphone = printMegaphone;
-exports.printMenu = printMenu;
-exports.printMicrophone = printMicrophone;
-exports.printMicrophone2 = printMicrophone2;
-exports.printMinus = printMinus;
-exports.printMonitor = printMonitor;
-exports.printMonitor2 = printMonitor2;
-exports.printMonitorEye = printMonitorEye;
-exports.printMonitorLoop = printMonitorLoop;
-exports.printMoon = printMoon;
-exports.printMotorcycle = printMotorcycle;
-exports.printMoveX = printMoveX;
-exports.printMoveY = printMoveY;
-exports.printMusicNoteDouble = printMusicNoteDouble;
-exports.printMusicNoteSingle = printMusicNoteSingle;
-exports.printNextTrack = printNextTrack;
-exports.printNoEntry = printNoEntry;
-exports.printOpen = printOpen;
-exports.printPaintPallet = printPaintPallet;
-exports.printPause = printPause;
-exports.printPen = printPen;
-exports.printPeople = printPeople;
-exports.printPerson = printPerson;
-exports.printPersonCheckmark = printPersonCheckmark;
-exports.printPersonPlus = printPersonPlus;
-exports.printPersons = printPersons;
-exports.printPhone = printPhone;
-exports.printPhoto = printPhoto;
-exports.printPhotoCamera = printPhotoCamera;
-exports.printPhotoStudio = printPhotoStudio;
-exports.printPill = printPill;
-exports.printPin = printPin;
-exports.printPinpoint = printPinpoint;
-exports.printPinpointOff = printPinpointOff;
-exports.printPlay = printPlay;
-exports.printPlus = printPlus;
-exports.printPower = printPower;
-exports.printPreviousTrack = printPreviousTrack;
-exports.printPrinter = printPrinter;
-exports.printQrCode = printQrCode;
-exports.printQuestion = printQuestion;
-exports.printQuestionCircle = printQuestionCircle;
-exports.printRadio = printRadio;
-exports.printRefresh = printRefresh;
-exports.printReload = printReload;
-exports.printRepeat = printRepeat;
-exports.printRewind = printRewind;
-exports.printRewindTime = printRewindTime;
-exports.printScissors = printScissors;
-exports.printSend = printSend;
-exports.printShareAndroid = printShareAndroid;
-exports.printShareIos = printShareIos;
-exports.printShuffle = printShuffle;
-exports.printSliders = printSliders;
-exports.printSmartphone = printSmartphone;
-exports.printSmartphone2 = printSmartphone2;
-exports.printSmartphoneCutout = printSmartphoneCutout;
-exports.printSmartphoneNotch = printSmartphoneNotch;
-exports.printSoftDrink = printSoftDrink;
-exports.printSort = printSort;
-exports.printSpeakerHigh = printSpeakerHigh;
-exports.printSpeakerLow = printSpeakerLow;
-exports.printSpeakerOff = printSpeakerOff;
-exports.printSquare = printSquare;
-exports.printStar = printStar;
-exports.printStars = printStars;
-exports.printStopwatch = printStopwatch;
-exports.printStudioBackdrop = printStudioBackdrop;
-exports.printStudioLightFront = printStudioLightFront;
-exports.printStudioLightSide = printStudioLightSide;
-exports.printSun = printSun;
-exports.printSyringe = printSyringe;
-exports.printTShirt = printTShirt;
-exports.printTaxi = printTaxi;
-exports.printTelevision = printTelevision;
-exports.printTextBubble = printTextBubble;
-exports.printTextBubbles = printTextBubbles;
-exports.printThumbsDown = printThumbsDown;
-exports.printThumbsUp = printThumbsUp;
-exports.printTimes = printTimes;
-exports.printTool = printTool;
-exports.printTrain = printTrain;
-exports.printTrash = printTrash;
-exports.printTriangleDown = printTriangleDown;
-exports.printTriangleLeft = printTriangleLeft;
-exports.printTriangleRight = printTriangleRight;
-exports.printTriangleUp = printTriangleUp;
-exports.printTrophy = printTrophy;
-exports.printTruck = printTruck;
-exports.printUmbrella = printUmbrella;
-exports.printWatch = printWatch;
-exports.printWaterDrop = printWaterDrop;
-exports.printWifi = printWifi;
-exports.synonyms = synonyms$1;
-exports.synonymsJa = synonyms;
+  exports.categories = categories;
+  exports.getPepicon = getPepicon;
+  exports.morphPepicon = morphPepicon;
+  exports.pepiconArray = pepiconArray;
+  exports.pepiconCategoryDic = pepiconCategoryDic;
+  exports.pepiconSvgString = pepiconSvgString;
+  exports.pop = pop;
+  exports.popAirplane = popAirplane;
+  exports.popAlarm = popAlarm;
+  exports.popAngleDown = popAngleDown;
+  exports.popAngleLeft = popAngleLeft;
+  exports.popAngleRight = popAngleRight;
+  exports.popAngleUp = popAngleUp;
+  exports.popArrowDown = popArrowDown;
+  exports.popArrowDownLeft = popArrowDownLeft;
+  exports.popArrowDownRight = popArrowDownRight;
+  exports.popArrowLeft = popArrowLeft;
+  exports.popArrowRight = popArrowRight;
+  exports.popArrowUp = popArrowUp;
+  exports.popArrowUpLeft = popArrowUpLeft;
+  exports.popArrowUpRight = popArrowUpRight;
+  exports.popBank = popBank;
+  exports.popBattery = popBattery;
+  exports.popBell = popBell;
+  exports.popBellOff = popBellOff;
+  exports.popBicycle = popBicycle;
+  exports.popBluetooth = popBluetooth;
+  exports.popBook = popBook;
+  exports.popBookmark = popBookmark;
+  exports.popBookmarkFilled = popBookmarkFilled;
+  exports.popBriefcase = popBriefcase;
+  exports.popBuilding = popBuilding;
+  exports.popCalculator = popCalculator;
+  exports.popCalendar = popCalendar;
+  exports.popCamera = popCamera;
+  exports.popCan = popCan;
+  exports.popCar = popCar;
+  exports.popCart = popCart;
+  exports.popCellphoneEye = popCellphoneEye;
+  exports.popCellphoneLoop = popCellphoneLoop;
+  exports.popChain = popChain;
+  exports.popCheckmark = popCheckmark;
+  exports.popCircle = popCircle;
+  exports.popCircleFilled = popCircleFilled;
+  exports.popClapperboard = popClapperboard;
+  exports.popClipboard = popClipboard;
+  exports.popClipboardCheck = popClipboardCheck;
+  exports.popClipboardCheckCircle = popClipboardCheckCircle;
+  exports.popClock = popClock;
+  exports.popCloud = popCloud;
+  exports.popCloudDown = popCloudDown;
+  exports.popCloudDownFilled = popCloudDownFilled;
+  exports.popCloudFilled = popCloudFilled;
+  exports.popCloudUp = popCloudUp;
+  exports.popCloudUpFilled = popCloudUpFilled;
+  exports.popCoctail = popCoctail;
+  exports.popCode = popCode;
+  exports.popColorPicker = popColorPicker;
+  exports.popContract = popContract;
+  exports.popController = popController;
+  exports.popCountdown = popCountdown;
+  exports.popCreditCard = popCreditCard;
+  exports.popCrown = popCrown;
+  exports.popCup = popCup;
+  exports.popCv = popCv;
+  exports.popDivision = popDivision;
+  exports.popDotsX = popDotsX;
+  exports.popDotsY = popDotsY;
+  exports.popDress = popDress;
+  exports.popDuplicate = popDuplicate;
+  exports.popElectricity = popElectricity;
+  exports.popEnter = popEnter;
+  exports.popExclamation = popExclamation;
+  exports.popExclamationCircle = popExclamationCircle;
+  exports.popExclamationFilled = popExclamationFilled;
+  exports.popExpand = popExpand;
+  exports.popEye = popEye;
+  exports.popEyeClosed = popEyeClosed;
+  exports.popEyeFrame = popEyeFrame;
+  exports.popEyeOff = popEyeOff;
+  exports.popFastForward = popFastForward;
+  exports.popFile = popFile;
+  exports.popFileLoop = popFileLoop;
+  exports.popFilmFrame = popFilmFrame;
+  exports.popFire = popFire;
+  exports.popFlag = popFlag;
+  exports.popFlagStraight = popFlagStraight;
+  exports.popFlower = popFlower;
+  exports.popFlowerBud = popFlowerBud;
+  exports.popFolder = popFolder;
+  exports.popFoldingStool = popFoldingStool;
+  exports.popGear = popGear;
+  exports.popGearFilled = popGearFilled;
+  exports.popGift = popGift;
+  exports.popGrab = popGrab;
+  exports.popGrid = popGrid;
+  exports.popHamburger = popHamburger;
+  exports.popHandGrab = popHandGrab;
+  exports.popHandOpen = popHandOpen;
+  exports.popHandPoint = popHandPoint;
+  exports.popHandPointOpen = popHandPointOpen;
+  exports.popHandshake = popHandshake;
+  exports.popHash = popHash;
+  exports.popHeadphone = popHeadphone;
+  exports.popHeart = popHeart;
+  exports.popHourglass = popHourglass;
+  exports.popHouse = popHouse;
+  exports.popIdentification = popIdentification;
+  exports.popInfo = popInfo;
+  exports.popInfoCircle = popInfoCircle;
+  exports.popInfoFilled = popInfoFilled;
+  exports.popInternet = popInternet;
+  exports.popKey = popKey;
+  exports.popKniveFork = popKniveFork;
+  exports.popLabel = popLabel;
+  exports.popLeave = popLeave;
+  exports.popLetter = popLetter;
+  exports.popLetterOpen = popLetterOpen;
+  exports.popList = popList;
+  exports.popLockClosed = popLockClosed;
+  exports.popLockOpen = popLockOpen;
+  exports.popLoop = popLoop;
+  exports.popLoopMinus = popLoopMinus;
+  exports.popLoopPlus = popLoopPlus;
+  exports.popMagnet = popMagnet;
+  exports.popMap = popMap;
+  exports.popMegaphone = popMegaphone;
+  exports.popMenu = popMenu;
+  exports.popMicrophone = popMicrophone;
+  exports.popMicrophone2 = popMicrophone2;
+  exports.popMinus = popMinus;
+  exports.popMonitor = popMonitor;
+  exports.popMonitor2 = popMonitor2;
+  exports.popMonitorEye = popMonitorEye;
+  exports.popMonitorLoop = popMonitorLoop;
+  exports.popMoon = popMoon;
+  exports.popMoonFilled = popMoonFilled;
+  exports.popMotorcycle = popMotorcycle;
+  exports.popMoveX = popMoveX;
+  exports.popMoveY = popMoveY;
+  exports.popMusicNoteDouble = popMusicNoteDouble;
+  exports.popMusicNoteSingle = popMusicNoteSingle;
+  exports.popNextTrack = popNextTrack;
+  exports.popNoEntry = popNoEntry;
+  exports.popOpen = popOpen;
+  exports.popPaintPallet = popPaintPallet;
+  exports.popPause = popPause;
+  exports.popPen = popPen;
+  exports.popPeople = popPeople;
+  exports.popPerson = popPerson;
+  exports.popPersonCheckmark = popPersonCheckmark;
+  exports.popPersonFilled = popPersonFilled;
+  exports.popPersonPlus = popPersonPlus;
+  exports.popPersons = popPersons;
+  exports.popPhone = popPhone;
+  exports.popPhoto = popPhoto;
+  exports.popPhotoCamera = popPhotoCamera;
+  exports.popPhotoStudio = popPhotoStudio;
+  exports.popPill = popPill;
+  exports.popPin = popPin;
+  exports.popPinpoint = popPinpoint;
+  exports.popPinpointFilled = popPinpointFilled;
+  exports.popPinpointOff = popPinpointOff;
+  exports.popPinpointOffFilled = popPinpointOffFilled;
+  exports.popPlay = popPlay;
+  exports.popPlus = popPlus;
+  exports.popPower = popPower;
+  exports.popPreviousTrack = popPreviousTrack;
+  exports.popPrinter = popPrinter;
+  exports.popQrCode = popQrCode;
+  exports.popQuestion = popQuestion;
+  exports.popQuestionCircle = popQuestionCircle;
+  exports.popQuestionFilled = popQuestionFilled;
+  exports.popRadio = popRadio;
+  exports.popRefresh = popRefresh;
+  exports.popReload = popReload;
+  exports.popRepeat = popRepeat;
+  exports.popRewind = popRewind;
+  exports.popRewindTime = popRewindTime;
+  exports.popScissors = popScissors;
+  exports.popSend = popSend;
+  exports.popShareAndroid = popShareAndroid;
+  exports.popShareIos = popShareIos;
+  exports.popShuffle = popShuffle;
+  exports.popSliders = popSliders;
+  exports.popSmartphone = popSmartphone;
+  exports.popSmartphone2 = popSmartphone2;
+  exports.popSmartphoneCutout = popSmartphoneCutout;
+  exports.popSmartphoneNotch = popSmartphoneNotch;
+  exports.popSoftDrink = popSoftDrink;
+  exports.popSort = popSort;
+  exports.popSpeakerHigh = popSpeakerHigh;
+  exports.popSpeakerLow = popSpeakerLow;
+  exports.popSpeakerOff = popSpeakerOff;
+  exports.popSquare = popSquare;
+  exports.popSquareFilled = popSquareFilled;
+  exports.popStar = popStar;
+  exports.popStarFilled = popStarFilled;
+  exports.popStars = popStars;
+  exports.popStopwatch = popStopwatch;
+  exports.popStudioBackdrop = popStudioBackdrop;
+  exports.popStudioLightFront = popStudioLightFront;
+  exports.popStudioLightSide = popStudioLightSide;
+  exports.popSun = popSun;
+  exports.popSunFilled = popSunFilled;
+  exports.popSyringe = popSyringe;
+  exports.popTShirt = popTShirt;
+  exports.popTaxi = popTaxi;
+  exports.popTelevision = popTelevision;
+  exports.popTextBubble = popTextBubble;
+  exports.popTextBubbles = popTextBubbles;
+  exports.popThumbsDown = popThumbsDown;
+  exports.popThumbsUp = popThumbsUp;
+  exports.popTimes = popTimes;
+  exports.popTool = popTool;
+  exports.popTrain = popTrain;
+  exports.popTrash = popTrash;
+  exports.popTriangleDown = popTriangleDown;
+  exports.popTriangleDownFilled = popTriangleDownFilled;
+  exports.popTriangleLeft = popTriangleLeft;
+  exports.popTriangleLeftFilled = popTriangleLeftFilled;
+  exports.popTriangleRight = popTriangleRight;
+  exports.popTriangleRightFilled = popTriangleRightFilled;
+  exports.popTriangleUp = popTriangleUp;
+  exports.popTriangleUpFilled = popTriangleUpFilled;
+  exports.popTrophy = popTrophy;
+  exports.popTruck = popTruck;
+  exports.popUmbrella = popUmbrella;
+  exports.popWatch = popWatch;
+  exports.popWaterDrop = popWaterDrop;
+  exports.popWifi = popWifi;
+  exports.print = print;
+  exports.printAirplane = printAirplane;
+  exports.printAlarm = printAlarm;
+  exports.printAngleDown = printAngleDown;
+  exports.printAngleLeft = printAngleLeft;
+  exports.printAngleRight = printAngleRight;
+  exports.printAngleUp = printAngleUp;
+  exports.printArrowDown = printArrowDown;
+  exports.printArrowDownLeft = printArrowDownLeft;
+  exports.printArrowDownRight = printArrowDownRight;
+  exports.printArrowLeft = printArrowLeft;
+  exports.printArrowRight = printArrowRight;
+  exports.printArrowUp = printArrowUp;
+  exports.printArrowUpLeft = printArrowUpLeft;
+  exports.printArrowUpRight = printArrowUpRight;
+  exports.printBank = printBank;
+  exports.printBattery = printBattery;
+  exports.printBell = printBell;
+  exports.printBellOff = printBellOff;
+  exports.printBicycle = printBicycle;
+  exports.printBluetooth = printBluetooth;
+  exports.printBook = printBook;
+  exports.printBookmark = printBookmark;
+  exports.printBriefcase = printBriefcase;
+  exports.printBuilding = printBuilding;
+  exports.printCalculator = printCalculator;
+  exports.printCalendar = printCalendar;
+  exports.printCamera = printCamera;
+  exports.printCan = printCan;
+  exports.printCar = printCar;
+  exports.printCart = printCart;
+  exports.printCellphoneEye = printCellphoneEye;
+  exports.printCellphoneLoop = printCellphoneLoop;
+  exports.printChain = printChain;
+  exports.printCheckmark = printCheckmark;
+  exports.printCircle = printCircle;
+  exports.printClapperboard = printClapperboard;
+  exports.printClipboard = printClipboard;
+  exports.printClipboardCheck = printClipboardCheck;
+  exports.printClipboardCheckCircle = printClipboardCheckCircle;
+  exports.printClock = printClock;
+  exports.printCloud = printCloud;
+  exports.printCloudDown = printCloudDown;
+  exports.printCloudUp = printCloudUp;
+  exports.printCoctail = printCoctail;
+  exports.printCode = printCode;
+  exports.printColorPicker = printColorPicker;
+  exports.printContract = printContract;
+  exports.printController = printController;
+  exports.printCountdown = printCountdown;
+  exports.printCreditCard = printCreditCard;
+  exports.printCrown = printCrown;
+  exports.printCup = printCup;
+  exports.printCv = printCv;
+  exports.printDivision = printDivision;
+  exports.printDotsX = printDotsX;
+  exports.printDotsY = printDotsY;
+  exports.printDress = printDress;
+  exports.printDuplicate = printDuplicate;
+  exports.printElectricity = printElectricity;
+  exports.printEnter = printEnter;
+  exports.printExclamation = printExclamation;
+  exports.printExclamationCircle = printExclamationCircle;
+  exports.printExpand = printExpand;
+  exports.printEye = printEye;
+  exports.printEyeClosed = printEyeClosed;
+  exports.printEyeFrame = printEyeFrame;
+  exports.printEyeOff = printEyeOff;
+  exports.printFastForward = printFastForward;
+  exports.printFile = printFile;
+  exports.printFileLoop = printFileLoop;
+  exports.printFilmFrame = printFilmFrame;
+  exports.printFire = printFire;
+  exports.printFlag = printFlag;
+  exports.printFlagStraight = printFlagStraight;
+  exports.printFlower = printFlower;
+  exports.printFlowerBud = printFlowerBud;
+  exports.printFolder = printFolder;
+  exports.printFoldingStool = printFoldingStool;
+  exports.printGear = printGear;
+  exports.printGift = printGift;
+  exports.printGrab = printGrab;
+  exports.printGrid = printGrid;
+  exports.printHamburger = printHamburger;
+  exports.printHandGrab = printHandGrab;
+  exports.printHandOpen = printHandOpen;
+  exports.printHandPoint = printHandPoint;
+  exports.printHandPointOpen = printHandPointOpen;
+  exports.printHandshake = printHandshake;
+  exports.printHash = printHash;
+  exports.printHeadphone = printHeadphone;
+  exports.printHeart = printHeart;
+  exports.printHourglass = printHourglass;
+  exports.printHouse = printHouse;
+  exports.printIdentification = printIdentification;
+  exports.printInfo = printInfo;
+  exports.printInfoCircle = printInfoCircle;
+  exports.printInternet = printInternet;
+  exports.printKey = printKey;
+  exports.printKniveFork = printKniveFork;
+  exports.printLabel = printLabel;
+  exports.printLeave = printLeave;
+  exports.printLetter = printLetter;
+  exports.printLetterOpen = printLetterOpen;
+  exports.printList = printList;
+  exports.printLockClosed = printLockClosed;
+  exports.printLockOpen = printLockOpen;
+  exports.printLoop = printLoop;
+  exports.printLoopMinus = printLoopMinus;
+  exports.printLoopPlus = printLoopPlus;
+  exports.printMagnet = printMagnet;
+  exports.printMap = printMap;
+  exports.printMegaphone = printMegaphone;
+  exports.printMenu = printMenu;
+  exports.printMicrophone = printMicrophone;
+  exports.printMicrophone2 = printMicrophone2;
+  exports.printMinus = printMinus;
+  exports.printMonitor = printMonitor;
+  exports.printMonitor2 = printMonitor2;
+  exports.printMonitorEye = printMonitorEye;
+  exports.printMonitorLoop = printMonitorLoop;
+  exports.printMoon = printMoon;
+  exports.printMotorcycle = printMotorcycle;
+  exports.printMoveX = printMoveX;
+  exports.printMoveY = printMoveY;
+  exports.printMusicNoteDouble = printMusicNoteDouble;
+  exports.printMusicNoteSingle = printMusicNoteSingle;
+  exports.printNextTrack = printNextTrack;
+  exports.printNoEntry = printNoEntry;
+  exports.printOpen = printOpen;
+  exports.printPaintPallet = printPaintPallet;
+  exports.printPause = printPause;
+  exports.printPen = printPen;
+  exports.printPeople = printPeople;
+  exports.printPerson = printPerson;
+  exports.printPersonCheckmark = printPersonCheckmark;
+  exports.printPersonPlus = printPersonPlus;
+  exports.printPersons = printPersons;
+  exports.printPhone = printPhone;
+  exports.printPhoto = printPhoto;
+  exports.printPhotoCamera = printPhotoCamera;
+  exports.printPhotoStudio = printPhotoStudio;
+  exports.printPill = printPill;
+  exports.printPin = printPin;
+  exports.printPinpoint = printPinpoint;
+  exports.printPinpointOff = printPinpointOff;
+  exports.printPlay = printPlay;
+  exports.printPlus = printPlus;
+  exports.printPower = printPower;
+  exports.printPreviousTrack = printPreviousTrack;
+  exports.printPrinter = printPrinter;
+  exports.printQrCode = printQrCode;
+  exports.printQuestion = printQuestion;
+  exports.printQuestionCircle = printQuestionCircle;
+  exports.printRadio = printRadio;
+  exports.printRefresh = printRefresh;
+  exports.printReload = printReload;
+  exports.printRepeat = printRepeat;
+  exports.printRewind = printRewind;
+  exports.printRewindTime = printRewindTime;
+  exports.printScissors = printScissors;
+  exports.printSend = printSend;
+  exports.printShareAndroid = printShareAndroid;
+  exports.printShareIos = printShareIos;
+  exports.printShuffle = printShuffle;
+  exports.printSliders = printSliders;
+  exports.printSmartphone = printSmartphone;
+  exports.printSmartphone2 = printSmartphone2;
+  exports.printSmartphoneCutout = printSmartphoneCutout;
+  exports.printSmartphoneNotch = printSmartphoneNotch;
+  exports.printSoftDrink = printSoftDrink;
+  exports.printSort = printSort;
+  exports.printSpeakerHigh = printSpeakerHigh;
+  exports.printSpeakerLow = printSpeakerLow;
+  exports.printSpeakerOff = printSpeakerOff;
+  exports.printSquare = printSquare;
+  exports.printStar = printStar;
+  exports.printStars = printStars;
+  exports.printStopwatch = printStopwatch;
+  exports.printStudioBackdrop = printStudioBackdrop;
+  exports.printStudioLightFront = printStudioLightFront;
+  exports.printStudioLightSide = printStudioLightSide;
+  exports.printSun = printSun;
+  exports.printSyringe = printSyringe;
+  exports.printTShirt = printTShirt;
+  exports.printTaxi = printTaxi;
+  exports.printTelevision = printTelevision;
+  exports.printTextBubble = printTextBubble;
+  exports.printTextBubbles = printTextBubbles;
+  exports.printThumbsDown = printThumbsDown;
+  exports.printThumbsUp = printThumbsUp;
+  exports.printTimes = printTimes;
+  exports.printTool = printTool;
+  exports.printTrain = printTrain;
+  exports.printTrash = printTrash;
+  exports.printTriangleDown = printTriangleDown;
+  exports.printTriangleLeft = printTriangleLeft;
+  exports.printTriangleRight = printTriangleRight;
+  exports.printTriangleUp = printTriangleUp;
+  exports.printTrophy = printTrophy;
+  exports.printTruck = printTruck;
+  exports.printUmbrella = printUmbrella;
+  exports.printWatch = printWatch;
+  exports.printWaterDrop = printWaterDrop;
+  exports.printWifi = printWifi;
+  exports.synonyms = synonyms$1;
+  exports.synonymsJa = synonyms;
+
+  Object.defineProperty(exports, '__esModule', { value: true });
+
+}));
