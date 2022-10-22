@@ -2,6 +2,7 @@
 import { Pepicon } from '@pepicons/vue'
 import { PropType, computed, ref, watch } from 'vue'
 import { defaultsIconConfig, IconConfig } from '../types'
+import { onKeyStroke } from '@vueuse/core'
 
 const props = defineProps({
   modelValue: { type: String, default: '' },
@@ -21,6 +22,25 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue'])
 const valueInner = ref<any>(props.modelValue)
 const debounceInner = ref<number>(props.debounce)
+const inputRef = ref<any>(null)
+onKeyStroke(
+  '/',
+  (e) => {
+    function elementFocusable(e: any): boolean {
+      const querySelector = `
+      a[href]:not([tabindex='-1']),
+      input:not([disabled]):not([tabindex='-1']),
+      select:not([disabled]):not([tabindex='-1']),
+      textarea:not([disabled]):not([tabindex='-1']),
+      button:not([disabled]):not([tabindex='-1'])
+    `
+      return !!e?.matches(querySelector)
+    }
+    if (elementFocusable(document.activeElement)) return
+    inputRef.value.focus()
+  },
+  { eventName: 'keyup' },
+)
 let timeout: any = null
 watch(valueInner, (newVal, oldVal) => {
   const debounceMs = debounceInner.value
@@ -39,7 +59,7 @@ function emitInput(newVal: any) {
 
 <template>
   <div class="_wrapper">
-    <input v-model="valueInner" class="pep-input" v-bind="$attrs" />
+    <input ref="inputRef" v-model="valueInner" class="pep-input" v-bind="$attrs" />
     <Pepicon class="icon" v-bind="iconConfig" />
   </div>
 </template>
