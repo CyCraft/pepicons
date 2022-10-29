@@ -9,6 +9,7 @@ export type IconConfig = {
   type: 'pop' | 'print'
   color: string
   stroke: string
+  randomColor?: boolean
 }
 
 export function defaultsIconConfig<T extends Record<string, any>>(payload?: T): IconConfig & T {

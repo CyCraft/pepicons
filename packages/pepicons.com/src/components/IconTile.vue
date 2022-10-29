@@ -1,9 +1,10 @@
 <script lang="ts" setup>
-import { computed, PropType } from 'vue'
+import { computed, PropType, watch, ref } from 'vue'
 import { Pepicon as PepiconType, synonyms } from 'pepicons'
 import { Pepicon } from '@pepicons/vue'
 import { cleanupForSearch } from '../helpers/search'
 import { defaultsIconConfig, IconConfig } from '../types'
+import { getRandomColor } from '../helpers/colorHelpers'
 
 const props = defineProps({
   /**
@@ -15,6 +16,13 @@ const props = defineProps({
   },
   searchInput: { type: String, default: '' },
 })
+const randomColor = ref<string>('')
+watch(
+  () => props.config.randomColor,
+  (newVal) => {
+    randomColor.value = getRandomColor()
+  },
+)
 const searchInputSynonymHit = computed(() => {
   const searchText = cleanupForSearch(props.searchInput)
   if (!searchText) return undefined
@@ -32,7 +40,12 @@ const synonymHtml = computed(() => {
 </script>
 <template>
   <div class="icon-tile">
-    <Pepicon class="_svg" v-bind="(config as any)" size="26px" />
+    <Pepicon
+      class="_svg"
+      v-bind="(config as any)"
+      :color="config.randomColor ? randomColor : config.color"
+      size="26px"
+    />
     <div class="_name">
       <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
         {{ config.name }}

@@ -33,7 +33,10 @@ const props = defineProps({
   },
 })
 const emit = defineEmits(['update:modelValue'])
-function set(prop: 'type' | 'color' | 'stroke' | 'isDarkMode', value: string | boolean) {
+function set(
+  prop: 'type' | 'color' | 'stroke' | 'isDarkMode' | 'randomColor',
+  value: string | boolean,
+) {
   emit('update:modelValue', { ...props.modelValue, [prop]: value })
 }
 
@@ -41,6 +44,7 @@ function setRandomColor() {
   console.log('setRandomColor called')
   const randomColor = getRandomColor()
   set('color', randomColor)
+  set('randomColor', true)
 }
 
 const nightfall = cssVar('nightfall')
