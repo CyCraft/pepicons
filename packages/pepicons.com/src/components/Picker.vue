@@ -37,7 +37,9 @@ function set(
   prop: 'type' | 'color' | 'stroke' | 'isDarkMode' | 'randomColor',
   value: string | boolean,
 ) {
+  console.log(`[prop]: value → `, prop, value)
   emit('update:modelValue', { ...props.modelValue, [prop]: value })
+  console.log(`{ ...props.modelValue, [prop]: value } → `, { ...props.modelValue })
 }
 
 function setRandomColor() {
@@ -45,6 +47,11 @@ function setRandomColor() {
   const randomColor = getRandomColor()
   set('color', randomColor)
   set('randomColor', true)
+}
+function setColor(c: string) {
+  console.log('setColor called', c)
+  set('color', c)
+  set('randomColor', false)
 }
 
 const nightfall = cssVar('nightfall')
@@ -110,8 +117,8 @@ export default defineComponent({
       :key="c"
       :iconConfig="{ color: modelValue.color }"
       :backgroundColor="c"
-      :isActive="modelValue.color === c"
-      @click="set('color', c)"
+      :isActive="modelValue.color === c && modelValue.randomColor === false"
+      @click="setColor(c)"
     />
     <IconButton
       :iconConfig="{ ...configComputed, name: 'color-picker' }"
@@ -123,6 +130,7 @@ export default defineComponent({
       :iconConfig="{ ...configComputed, name: 'refresh' }"
       :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
       :colorRing="true"
+      :isActive="modelValue.randomColor"
       @click="setRandomColor"
     />
   </Stack>
