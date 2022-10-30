@@ -28,7 +28,7 @@ const emit = defineEmits(['set-is-dark-mode', 'set-config'])
 const hash = getQueryFromUrl()
 
 const searchInput = ref(hash || '')
-const config = ref(defaultsIconConfig({ isDarkMode: false }))
+const config = ref(defaultsIconConfig({ isDarkMode: false, randomColor: false }))
 
 const configComputed = computed(() => {
   const { type, color: _color, stroke: _stroke, isDarkMode, randomColor } = config.value
