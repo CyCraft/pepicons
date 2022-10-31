@@ -30,19 +30,10 @@ const hash = getQueryFromUrl()
 const searchInput = ref(hash || '')
 const config = ref(defaultsIconConfig({ isDarkMode: false, randomColor: false }))
 
-const configComputed = computed(() => {
-  console.log(`config.value → `, config.value)
-  const { type, color: _color, stroke: _stroke, isDarkMode, randomColor } = config.value
-  const useColorAsStroke = type === 'print' && isDarkMode
-  // const color = useColorAsStroke && !randomColor ? 'black' : _color
-  const color =
-    useColorAsStroke && !randomColor ? 'black' : useColorAsStroke && randomColor ? 'black' : _color
-  const stroke = useColorAsStroke ? _color : _stroke
-  console.log(
-    `type: ${type}, color: ${color}, stroke: ${stroke}, randomColor: ${randomColor}, isDarkMode: ${isDarkMode} `,
-  )
-  return { type, color, stroke, randomColor, isDarkMode }
-})
+// const configComputed = computed(() => {
+//   const { type, color, stroke, isDarkMode, randomColor } = config.value
+//   return { type, color, stroke, randomColor, isDarkMode }
+// })
 
 // watch config for side effects
 watch(
@@ -137,7 +128,7 @@ const scrollPageTo = (navEl) => {
           :config="config"
         />!
       </div>
-      <Pickers v-model="config" :configComputed="configComputed" class="mb-md" />
+      <Pickers v-model="config" :configComputed="config" class="mb-md" />
       <PepInput
         id="top"
         v-model="searchInput"
@@ -145,7 +136,7 @@ const scrollPageTo = (navEl) => {
         :color="config.color"
         :debounce="200"
         :isDarkMode="config.isDarkMode"
-        :iconConfig="{ ...configComputed, name: 'loop' }"
+        :iconConfig="{ ...config, name: 'loop' }"
         @blur="() => setUrlQuery(searchInput)"
         @keydown.meta="() => setUrlQuery(searchInput)"
       />
@@ -154,7 +145,7 @@ const scrollPageTo = (navEl) => {
           <div class="text-section-title">{{ category }}</div>
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
-            :config="configComputed"
+            :config="config"
             :searchInput="searchInput"
             @clickTile="openIconModal"
           />
@@ -223,7 +214,7 @@ const scrollPageTo = (navEl) => {
     </div>
   </div>
   <DialogWrapper :isVisible="iconInfoIsVisible" @close="iconInfoIsVisible = false">
-    <IconInfo :config="{ ...configComputed, name: iconInfoName }" :configOptionButtons="config" />
+    <IconInfo :config="{ ...config, name: iconInfoName }" :configOptionButtons="config" />
   </DialogWrapper>
 </template>
 

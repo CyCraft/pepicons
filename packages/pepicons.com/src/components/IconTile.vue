@@ -44,9 +44,31 @@ const synonymHtml = computed(() => {
     <Pepicon
       class="_svg"
       v-bind="(config as any)"
-      :color="config.randomColor ? randomColor : config.color"
+      :color="
+        !config.randomColor && !config.isDarkMode
+          ? config.color
+          : !config.randomColor && config.isDarkMode
+          ? 'black'
+          : config.randomColor && !config.isDarkMode
+          ? randomColor
+          : config.randomColor && config.isDarkMode
+          ? 'black'
+          : config.color
+      "
+      :stroke="
+        !config.randomColor && !config.isDarkMode
+          ? 'black'
+          : config.randomColor && !config.isDarkMode
+          ? 'black'
+          : config.randomColor && config.isDarkMode
+          ? randomColor
+          : !config.randomColor && config.isDarkMode
+          ? config.color
+          : 'red'
+      "
       size="26px"
     />
+    <!-- :stroke="config.isDarkMode ? config.color : 'black'" -->
     <div class="_name">
       <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
         {{ config.name }}

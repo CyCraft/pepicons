@@ -23,7 +23,6 @@ function clickTile(icon: string): void {
 <template>
   <transition-group class="icon-grid" name="anim-grid" tag="div">
     <div v-for="name in iconNames" :key="name" class="anim-grid-item">
-      {{ config.isDarkMode }}
       <IconTile
         :searchInput="searchInput"
         :config="{ ...config, name }"

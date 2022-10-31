@@ -46,11 +46,6 @@ function click() {
 }
 </script>
 <template>
-  <!-- <button
-    :class="[
-      iconConfig.randomColor && iconConfig.name === 'refresh' ? '_random-color-active' : '',
-      'icon-button reset-button',
-    ]" -->
   <button
     :class="`icon-button reset-button`"
     :style="`background: ${backgroundColor}; ${activeStyle}`"
