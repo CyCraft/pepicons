@@ -31,11 +31,17 @@ const searchInput = ref(hash || '')
 const config = ref(defaultsIconConfig({ isDarkMode: false, randomColor: false }))
 
 const configComputed = computed(() => {
+  console.log(`config.value → `, config.value)
   const { type, color: _color, stroke: _stroke, isDarkMode, randomColor } = config.value
   const useColorAsStroke = type === 'print' && isDarkMode
-  const color = useColorAsStroke ? 'black' : _color
+  // const color = useColorAsStroke && !randomColor ? 'black' : _color
+  const color =
+    useColorAsStroke && !randomColor ? 'black' : useColorAsStroke && randomColor ? 'black' : _color
   const stroke = useColorAsStroke ? _color : _stroke
-  return { type, color, stroke, randomColor }
+  console.log(
+    `type: ${type}, color: ${color}, stroke: ${stroke}, randomColor: ${randomColor}, isDarkMode: ${isDarkMode} `,
+  )
+  return { type, color, stroke, randomColor, isDarkMode }
 })
 
 // watch config for side effects

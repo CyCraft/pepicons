@@ -10,6 +10,7 @@ export type IconConfig = {
   color: string
   stroke: string
   randomColor?: boolean
+  isDarkMode: boolean
 }
 
 export function defaultsIconConfig<T extends Record<string, any>>(payload?: T): IconConfig & T {
@@ -20,6 +21,7 @@ export function defaultsIconConfig<T extends Record<string, any>>(payload?: T): 
     color: cssVar('primary'),
     stroke: 'black',
     randomColor: false,
+    isDarkMode: false,
     ..._payload,
   } as any
 }

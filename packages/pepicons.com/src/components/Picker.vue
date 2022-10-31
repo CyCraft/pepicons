@@ -18,14 +18,14 @@ const props = defineProps({
     required: true,
   },
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string} & { isDarkMode: boolean }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean}
    */
   modelValue: {
-    type: Object as PropType<Partial<IconConfig> & { isDarkMode: boolean }>,
+    type: Object as PropType<IconConfig>,
     default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
   },
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
    */
   configComputed: {
     type: Object as PropType<Partial<IconConfig>>,
@@ -40,8 +40,8 @@ function set(
     value: string | boolean
   }[],
 ) {
-  for (let i = 0; i < payloadArray.length; i++) {
-    const payloadObject = payloadArray[i]
+  for (const element of payloadArray) {
+    const payloadObject = element
     modelValueInner.value[payloadObject.prop.toString()] = payloadObject.value
   }
   return emit('update:modelValue', modelValueInner.value)
@@ -64,13 +64,8 @@ function setColor(c: string) {
 const nightfall = cssVar('nightfall')
 const moonlight = cssVar('moonlight')
 
-function openColorPicker() {
-  colorPickerIsVisible.value = true
-}
 let colorPickerIsVisible = ref(false)
-function changeColor(color) {
-  // const a = color.rgba.a
-  // const alpha = a ? (Math.round((255 * a) / 100) | (1 << 8)).toString(16).slice(1) : ''
+function changeColor(color: any) {
   const alpha = ''
   const newValue = color.hex + alpha
   set([{ prop: 'color', value: newValue }])

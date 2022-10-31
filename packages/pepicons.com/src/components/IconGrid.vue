@@ -8,7 +8,7 @@ const emit = defineEmits(['click-tile'])
 const props = defineProps({
   iconNames: { type: Array as PropType<PepiconName[]> },
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
    */
   config: {
     type: Object as PropType<Partial<IconConfig>>,
@@ -23,7 +23,7 @@ function clickTile(icon: string): void {
 <template>
   <transition-group class="icon-grid" name="anim-grid" tag="div">
     <div v-for="name in iconNames" :key="name" class="anim-grid-item">
-      {{ config.randomColor }}
+      {{ config.isDarkMode }}
       <IconTile
         :searchInput="searchInput"
         :config="{ ...config, name }"

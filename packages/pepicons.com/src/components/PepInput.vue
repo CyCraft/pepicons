@@ -7,7 +7,7 @@ const props = defineProps({
   modelValue: { type: String, default: '' },
   color: { type: String, required: true },
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
    */
   iconConfig: {
     type: Object as PropType<IconConfig>,

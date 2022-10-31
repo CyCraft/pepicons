@@ -11,7 +11,7 @@ const props = defineProps({
   icon: { type: String as PropType<PepiconName | 'github' | undefined> },
   retroUnderline: { type: Boolean },
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
    */
   config: {
     type: Object as PropType<Partial<IconConfig>>,

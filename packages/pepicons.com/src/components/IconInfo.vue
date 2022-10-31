@@ -33,14 +33,14 @@ export default {
 
 const props = defineProps({
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
    */
   config: {
     type: Object as PropType<IconConfig>,
     default: () => ({ ...defaultsIconConfig() }),
   },
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
    */
   configOptionButtons: {
     type: Object as PropType<IconConfig>,

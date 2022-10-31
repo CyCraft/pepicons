@@ -8,7 +8,7 @@ import { getRandomColor } from '../helpers/colorHelpers'
 
 const props = defineProps({
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
    */
   config: {
     type: Object as PropType<Partial<IconConfig>>,
@@ -21,6 +21,7 @@ watch(
   () => props.config.randomColor,
   (newVal) => {
     randomColor.value = getRandomColor()
+    console.log(`props.config → `, props.config)
   },
 )
 const searchInputSynonymHit = computed(() => {

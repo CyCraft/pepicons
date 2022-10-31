@@ -9,7 +9,7 @@ const emit = defineEmits(['click'])
 const props = defineProps({
   backgroundColor: { type: String, default: 'white' },
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
    */
   iconConfig: {
     type: Object as PropType<Partial<IconConfig>>,

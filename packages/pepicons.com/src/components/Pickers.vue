@@ -5,14 +5,14 @@ import Stack from './Stack.vue'
 import { defaultsIconConfig, IconConfig } from '../types'
 const props = defineProps({
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string } & { isDarkMode: boolean }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean}
    */
   modelValue: {
-    type: Object as PropType<Partial<IconConfig> & { isDarkMode: boolean }>,
+    type: Object as PropType<IconConfig>,
     default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
   },
   /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
+   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
    */
   configComputed: {
     type: Object as PropType<Partial<IconConfig>>,
