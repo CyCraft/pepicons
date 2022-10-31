@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { PropType, ref, defineComponent } from 'vue'
+import { PropType, ref, defineComponent, computed } from 'vue'
 import DialogWrapper from '../components/DialogWrapper.vue'
 import IconButton from './IconButton.vue'
 import Stack from './Stack.vue'
@@ -14,7 +14,7 @@ const props = defineProps({
    * @example 'type'
    */
   kind: {
-    type: String as PropType<'type' | 'color' | 'stroke' | 'modelValueisDarkMode' | 'background'>,
+    type: String as PropType<'type' | 'color' | 'stroke' | 'isDarkMode' | 'background'>,
     required: true,
   },
   /**
@@ -33,25 +33,32 @@ const props = defineProps({
   },
 })
 const emit = defineEmits(['update:modelValue'])
+const modelValueInner = ref(props.modelValue)
 function set(
-  prop: 'type' | 'color' | 'stroke' | 'isDarkMode' | 'randomColor',
-  value: string | boolean,
+  payloadArray: {
+    prop: 'type' | 'color' | 'stroke' | 'isDarkMode' | 'randomColor'
+    value: string | boolean
+  }[],
 ) {
-  console.log(`[prop]: value → `, prop, value)
-  emit('update:modelValue', { ...props.modelValue, [prop]: value })
-  console.log(`{ ...props.modelValue, [prop]: value } → `, { ...props.modelValue })
+  for (let i = 0; i < payloadArray.length; i++) {
+    const payloadObject = payloadArray[i]
+    modelValueInner.value[payloadObject.prop.toString()] = payloadObject.value
+  }
+  return emit('update:modelValue', modelValueInner.value)
 }
 
 function setRandomColor() {
-  console.log('setRandomColor called')
   const randomColor = getRandomColor()
-  set('color', randomColor)
-  set('randomColor', true)
+  set([
+    { prop: 'color', value: randomColor },
+    { prop: 'randomColor', value: true },
+  ])
 }
 function setColor(c: string) {
-  console.log('setColor called', c)
-  set('color', c)
-  set('randomColor', false)
+  set([
+    { prop: 'color', value: c },
+    { prop: 'randomColor', value: false },
+  ])
 }
 
 const nightfall = cssVar('nightfall')
@@ -66,7 +73,7 @@ function changeColor(color) {
   // const alpha = a ? (Math.round((255 * a) / 100) | (1 << 8)).toString(16).slice(1) : ''
   const alpha = ''
   const newValue = color.hex + alpha
-  set('color', newValue)
+  set([{ prop: 'color', value: newValue }])
 }
 
 const colorSelection = [
@@ -98,7 +105,7 @@ export default defineComponent({
         :isActive="modelValue.type === 'print'"
         :activeColor="modelValue.color"
         animationClass="anime-shake"
-        @click="set('type', 'print')"
+        @click="set([{ prop: 'type', value: 'print' }])"
       />
     </Tooltip>
     <Tooltip text="Pop!">
@@ -107,7 +114,7 @@ export default defineComponent({
         :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
         :isActive="modelValue.type === 'pop'"
         animationClass="anime-shake"
-        @click="set('type', 'pop')"
+        @click="set([{ prop: 'type', value: 'pop' }])"
       />
     </Tooltip>
   </Stack>
@@ -139,17 +146,17 @@ export default defineComponent({
       backgroundColor="white"
       class="_background-picker thin-border--dark"
       :iconConfig="{ name: 'sun-filled', type: 'pop', color: 'black' }"
-      @click="set('isDarkMode', false)"
+      @click="set([{ prop: 'isDarkMode', value: false }])"
     />
     <IconButton
       :backgroundColor="nightfall"
       class="_background-picker thin-border--light"
       :iconConfig="{ name: 'moon-filled', type: 'pop', color: 'white' }"
-      @click="set('isDarkMode', true)"
+      @click="set([{ prop: 'isDarkMode', value: true }])"
     />
   </Stack>
   <Stack v-if="kind === 'stroke'" v-bind="$attrs" class="picker" classes="justify-center">
-    <input type="color" @change="() => set('color', '#e2e2e2')" />
+    <input type="color" @change="() => set([{ prop: 'color', value: '#e2e2e2' }])" />
   </Stack>
   <DialogWrapper :isVisible="colorPickerIsVisible" @close="colorPickerIsVisible = false">
     <ColorPicker

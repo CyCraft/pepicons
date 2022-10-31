@@ -19,6 +19,7 @@ export function defaultsIconConfig<T extends Record<string, any>>(payload?: T): 
     type: 'print',
     color: cssVar('primary'),
     stroke: 'black',
+    randomColor: false,
     ..._payload,
   } as any
 }
