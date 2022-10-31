@@ -64,7 +64,7 @@ const synonymHtml = computed(() => {
           ? randomColor
           : !config.randomColor && config.isDarkMode
           ? config.color
-          : 'red'
+          : 'black'
       "
       size="26px"
     />

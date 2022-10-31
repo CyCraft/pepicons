@@ -29,12 +29,6 @@ const hash = getQueryFromUrl()
 
 const searchInput = ref(hash || '')
 const config = ref(defaultsIconConfig({ isDarkMode: false, randomColor: false }))
-
-// const configComputed = computed(() => {
-//   const { type, color, stroke, isDarkMode, randomColor } = config.value
-//   return { type, color, stroke, randomColor, isDarkMode }
-// })
-
 // watch config for side effects
 watch(
   config,
@@ -136,7 +130,12 @@ const scrollPageTo = (navEl) => {
         :color="config.color"
         :debounce="200"
         :isDarkMode="config.isDarkMode"
-        :iconConfig="{ ...config, name: 'loop' }"
+        :iconConfig="{
+          ...config,
+          name: 'loop',
+          color: config.isDarkMode ? 'black' : config.color,
+          stroke: config.isDarkMode ? config.color : 'black',
+        }"
         @blur="() => setUrlQuery(searchInput)"
         @keydown.meta="() => setUrlQuery(searchInput)"
       />

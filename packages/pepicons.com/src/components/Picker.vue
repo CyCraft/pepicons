@@ -47,8 +47,8 @@ function set(
   return emit('update:modelValue', modelValueInner.value)
 }
 
+const randomColor = getRandomColor()
 function setRandomColor() {
-  const randomColor = getRandomColor()
   set([
     { prop: 'color', value: randomColor },
     { prop: 'randomColor', value: true },
@@ -89,6 +89,7 @@ export default defineComponent({
 <template>
   <Stack v-if="kind === 'type'" v-bind="$attrs" class="picker" classes="justify-center">
     <Tooltip text="Print ❏">
+      <!-- {{ modelValue }} -->
       <IconButton
         :iconConfig="{
           name: 'can',
@@ -123,13 +124,23 @@ export default defineComponent({
       @click="setColor(c)"
     />
     <IconButton
-      :iconConfig="{ ...configComputed, name: 'color-picker' }"
+      :iconConfig="{
+        ...configComputed,
+        name: 'color-picker',
+        color: modelValue.isDarkMode ? 'black' : modelValue.color,
+        stroke: modelValue.isDarkMode ? modelValue.color : 'black',
+      }"
       :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
       :colorRing="true"
       @click="colorPickerIsVisible = true"
     />
     <IconButton
-      :iconConfig="{ ...configComputed, name: 'refresh' }"
+      :iconConfig="{
+        ...configComputed,
+        name: 'refresh',
+        color: modelValue.isDarkMode ? 'black' : modelValue.color,
+        stroke: modelValue.isDarkMode ? modelValue.color : 'black',
+      }"
       :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
       :colorRing="true"
       :isActive="modelValue.randomColor"
