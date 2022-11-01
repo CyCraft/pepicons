@@ -133,8 +133,8 @@ const scrollPageTo = (navEl) => {
         :iconConfig="{
           ...config,
           name: 'loop',
-          color: config.isDarkMode ? 'black' : config.color,
-          stroke: config.isDarkMode ? config.color : 'black',
+          color: config.isDarkMode && config.type === 'print' ? 'black' : config.color,
+          stroke: config.isDarkMode && config.type === 'print' ? config.color : 'black',
         }"
         @blur="() => setUrlQuery(searchInput)"
         @keydown.meta="() => setUrlQuery(searchInput)"

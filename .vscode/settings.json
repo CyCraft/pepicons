@@ -35,5 +35,6 @@
   "sass.format.setPropertySpace": true,
   // gitlens
   "gitlens.defaultTimeFormat": "HH:mm",
-  "gitlens.codeLens.enabled": false
+  "gitlens.codeLens.enabled": false,
+  "cSpell.words": ["Pepicon", "pepicons"]
 }
