@@ -127,8 +127,8 @@ export default defineComponent({
       :iconConfig="{
         ...configComputed,
         name: 'color-picker',
-        color: modelValue.isDarkMode ? 'black' : modelValue.color,
-        stroke: modelValue.isDarkMode ? modelValue.color : 'black',
+        color: modelValue.isDarkMode && modelValue.type === 'print' ? 'black' : modelValue.color,
+        stroke: modelValue.isDarkMode && modelValue.type === 'print' ? modelValue.color : 'black',
       }"
       :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
       :colorRing="true"
@@ -138,8 +138,8 @@ export default defineComponent({
       :iconConfig="{
         ...configComputed,
         name: 'refresh',
-        color: modelValue.isDarkMode ? 'black' : modelValue.color,
-        stroke: modelValue.isDarkMode ? modelValue.color : 'black',
+        color: modelValue.isDarkMode && modelValue.type === 'print' ? 'black' : modelValue.color,
+        stroke: modelValue.isDarkMode && modelValue.type === 'print' ? modelValue.color : 'black',
       }"
       :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
       :colorRing="true"
