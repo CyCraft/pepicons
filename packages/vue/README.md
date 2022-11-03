@@ -1,6 +1,9 @@
 ![hero](https://github.com/CyCraft/pepicons/raw/dev/media/pepicons-hero.png?raw=true)
 
-# @pepicons/vue (Vue 3)
+# 🥤 @pepicons/vue (Vue 3)
+
+<a href="https://www.npmjs.com/package/@pepicons/vue"><img src="https://img.shields.io/npm/v/@pepicons/vue.svg" alt="Total Downloads"></a>
+<a href="https://www.npmjs.com/package/@pepicons/vue"><img src="https://img.shields.io/npm/dw/@pepicons/vue.svg" alt="Latest Stable Version"></a>
 
 Pepicons is an icon-set of over one hundred retro icons inspired by the 80's.
 Every icon available in 2 variants: Pop! and Print ❏
