@@ -1,7 +1,7 @@
 {
   "name": "@pepicons/vue",
   "type": "module",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
