@@ -37,10 +37,5 @@
   "scripts": {
     "build": "rimraf dist && rollup -c ./build.js"
   },
-  "devDependencies": {
-    "rimraf": "^3.0.2",
-    "rollup": "^2.79.0",
-    "rollup-plugin-typescript2": "^0.33.0"
-  },
   "gitHead": "b9d99854c5f1a88b1bd6b50ed81b249feea5fcd9"
 }
