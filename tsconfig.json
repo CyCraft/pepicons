@@ -15,5 +15,6 @@
     "target": "ESNext",
     "useDefineForClassFields": true
   },
+  "include": ["scripts/**/*.ts"],
   "exclude": ["/dist", "node_modules"]
 }

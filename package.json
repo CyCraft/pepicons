@@ -2,7 +2,6 @@
   "name": "@pepicons/monorepo",
   "private": true,
   "version": "1.2.3",
-  "type": "module",
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
@@ -13,7 +12,7 @@
     "dev:docs": "npm run _warn && npm run dev -w=pepicons.com",
     "dev:vue": "npm run _warn && npm run dev -w=@pepicons/vue",
     "deploy:pepicons.com": "firebase deploy --only hosting && git add -A && git commit -m \"chore: deploy\" && git push",
-    "bump": "bumpp package.json packages/*/package.json",
+    "bump": "node -r esbuild-register scripts/bump.ts",
     "build": "npm run _prepare-pepicons && npm run build -w=pepicons && npm run build -w=@pepicons/vue && npm run build -w=pepicons.com",
     "release": "npm run bump && npm publish --workspaces --access public",
     "dep:update-all:soft": "ncu --workspaces --root --target minor -u",
@@ -25,14 +24,15 @@
     "_warn": "echo \"BE SURE TO RUN npm run build ONCE! otherwise the dev server might not launch\""
   },
   "engines": {
-    "node": ">= 14.0.0",
-    "npm": ">= 7.8.0"
+    "node": ">= 16.0.0",
+    "npm": ">= 8.0.0"
   },
   "bugs": {
     "url": "https://github.com/cycraft/pepicons/issues"
   },
   "homepage": "https://github.com/cycraft/pepicons#readme",
   "devDependencies": {
+    "@jsdevtools/version-bump-prompt": "^6.1.0",
     "@types/fs-extra": "^9.0.13",
     "@types/node": "^18.7.16",
     "@types/webpack-env": "^1.18.0",
@@ -43,15 +43,19 @@
     "@viteplay/vue": "^0.2.4",
     "archiver": "^5.3.1",
     "babel-eslint": "^10.1.0",
-    "bumpp": "^8.2.1",
     "case-anything": "^2.1.10",
     "copyfiles": "^2.4.1",
+    "esbuild": "^0.15.12",
+    "esbuild-register": "^3.3.3",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-vue": "^9.4.0",
+    "exec-sh": "^0.4.0",
     "fast-sort": "^3.2.0",
     "fs-extra": "^10.1.0",
+    "inquirer": "^9.1.4",
     "lerna": "^5.5.1",
+    "mri": "^1.2.0",
     "npm-check-updates": "^16.1.2",
     "prettier": "^2.7.1",
     "prettier-plugin-organize-imports": "^3.1.1",
@@ -63,6 +67,7 @@
     "rollup-plugin-typescript2": "^0.33.0",
     "sass": "^1.55.0",
     "svgo": "^2.8.0",
+    "tiny-replace-files": "^1.0.2",
     "typescript": "^4.8.3",
     "vite": "^3.2.2",
     "vue": "^3.2.41",
