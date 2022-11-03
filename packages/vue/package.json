@@ -1,7 +1,7 @@
 {
   "name": "@pepicons/vue",
   "type": "module",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
@@ -31,7 +31,7 @@
     "vue": "^3.2.39"
   },
   "dependencies": {
-    "pepicons": "1.2.5"
+    "pepicons": "^1.2.6"
   },
   "homepage": "https://github.com/cycraft/pepicons",
   "repository": {
