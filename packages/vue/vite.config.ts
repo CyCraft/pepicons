@@ -1,7 +1,6 @@
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
-import viteplay from '@viteplay/plugin'
 import path from 'path'
+import { defineConfig } from 'vite'
 import pkg from './package.json'
 
 const nameCamel = pkg.name
@@ -10,18 +9,7 @@ const dependencies = Object.keys(pkg.dependencies || [])
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    viteplay({
-      pages: [
-        {
-          component: './src/components/Pepicon.vue',
-          examples: './examples/*.vue',
-        },
-      ],
-      base: '/',
-    }),
-  ],
+  plugins: [vue()],
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
