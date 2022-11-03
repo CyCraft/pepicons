@@ -8,7 +8,9 @@
   "funding": "https://github.com/sponsors/mesqueeb",
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "files": [
-    "dist"
+    "dist",
+    "svg",
+    "src/icons"
   ],
   "main": "./dist/index.umd.js",
   "module": "./dist/index.esm.js",
@@ -18,6 +20,18 @@
       "import": "./dist/index.esm.js",
       "require": "./dist/index.umd.js",
       "types": "./dist/types/index.d.ts"
+    },
+    "./svg/*": {
+      "import": "./svg/*",
+      "require": "./svg/*"
+    },
+    "./pop": {
+      "import": "./src/icons/pop.ts",
+      "require": "./src/icons/pop.ts"
+    },
+    "./print": {
+      "import": "./src/icons/print.ts",
+      "require": "./src/icons/print.ts"
     }
   },
   "scripts": {
