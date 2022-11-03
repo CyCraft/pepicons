@@ -25,6 +25,11 @@ const removeClutter = async () => {
     from: /<g clip-path="url\(\#(.+?)\)">/gi,
     to: '<g>',
   })
+  await replace({
+    files: path,
+    from: /[\n\r]/gi,
+    to: '',
+  })
 }
 
 // const svgoIcons = () =>
