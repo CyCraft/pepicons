@@ -15,7 +15,7 @@
     "deploy:pepicons.com": "firebase deploy --only hosting && git add -A && git commit -m \"chore: deploy\" && git push",
     "bump": "bumpp package.json packages/*/package.json",
     "build": "npm run _prepare-pepicons && npm run build -w=pepicons && npm run build -w=@pepicons/vue && npm run build -w=pepicons.com",
-    "release": "npm run build && npm run bump && npm publish --workspaces --access public",
+    "release": "npm run bump && npm publish --workspaces --access public",
     "dep:update-all:soft": "ncu --workspaces --root --target minor -u",
     "dep:update-all": "ncu --workspaces --root --target minor -u && npm i",
     "dep:check-for-updates": "ncu --workspaces --root",
