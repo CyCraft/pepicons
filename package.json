@@ -24,9 +24,6 @@
     "dep:update-all": "ncu --target minor -u && lerna exec 'ncu --target minor -u' && npm i",
     "dep:check-for-updates": "ncu --target minor && lerna exec 'ncu --target minor'",
     "dep:reinstall-all:soft": "npm exec --workspaces -- npx rimraf node_modules && npx rimraf node_modules && npm i",
-    "gha:before-deploy": "",
-    "gha:before-deploy-bu": "npm i --legacy-bundling && npm run r && npm run _prepare-pepicons && build:favicon && cd packages/pepicons.com && npm run build",
-    "r": "node ./scripts/gha.js",
     "_prepare-pepicons": "node ./scripts/preparePepicons.js",
     "_gen-svg-str": "node ./scripts/_genSvgStr.js",
     "_publish-pre": "npm run build && git add -A && git commit -m \"chore: build\""
