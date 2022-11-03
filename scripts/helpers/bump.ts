@@ -17,7 +17,7 @@ async function bumpDependencies(newVersion: string) {
   await replaceInFiles({
     files: [PACKAGES + '/pepicons.com/package.json', PACKAGES + '/vue/package.json'],
     from: /"(pepicons|@pepicons\/vue)": "(.+)"/g,
-    to: `"$1": "${newVersion}"`,
+    to: `"$1": "^${newVersion}"`,
   })
 }
 
