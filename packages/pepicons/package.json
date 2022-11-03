@@ -9,8 +9,7 @@
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "files": [
     "dist",
-    "svg",
-    "src/icons"
+    "svg"
   ],
   "main": "./dist/index.umd.js",
   "module": "./dist/index.esm.js",
@@ -21,17 +20,23 @@
       "require": "./dist/index.umd.js",
       "types": "./dist/types/index.d.ts"
     },
+    "./dist/*": {
+      "import": "./dist/*",
+      "require": "./dist/*"
+    },
     "./svg/*": {
       "import": "./svg/*",
       "require": "./svg/*"
     },
     "./pop": {
-      "import": "./src/icons/pop.ts",
-      "require": "./src/icons/pop.ts"
+      "import": "./dist/pop.esm.js",
+      "require": "./dist/pop.umd.js",
+      "types": "./dist/types/src/icons/popIndex.d.ts"
     },
     "./print": {
-      "import": "./src/icons/print.ts",
-      "require": "./src/icons/print.ts"
+      "import": "./dist/print.esm.js",
+      "require": "./dist/print.umd.js",
+      "types": "./dist/types/src/icons/printIndex.d.ts"
     }
   },
   "scripts": {

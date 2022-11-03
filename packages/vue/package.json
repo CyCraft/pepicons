@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "rimraf dist && npm run build:vite && npm run gen:types:ts && npm run gen:types:vetur",
-    "dev": "vite --force",
+    "dev": "vite --force --config vite.config.dev.ts",
     "build:vite": "vite build",
     "gen:types:vetur": "vue-int -i src/components/Pepicon.vue -o dist/vetur",
     "gen:types:ts": "vue-tsc --declaration --emitDeclarationOnly"
@@ -31,7 +31,7 @@
     "vue": "^3.2.39"
   },
   "dependencies": {
-    "pepicons": "^1.2.1"
+    "pepicons": "*"
   },
   "homepage": "https://github.com/cycraft/pepicons",
   "repository": {
