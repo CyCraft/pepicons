@@ -7,6 +7,7 @@ import {
   categories,
   pepiconCategoryDic,
   PepiconName,
+  pepiconArray,
 } from 'pepicons'
 import Stack from '../components/Stack.vue'
 import IconGrid from '../components/IconGrid.vue'
@@ -14,7 +15,7 @@ import PepInput from '../components/PepInput.vue'
 import Pickers from '../components/Pickers.vue'
 import PepLink from '../components/PepLink.vue'
 import ProfileCard from '../components/ProfileCard.vue'
-import { setPrimaryColor } from '../helpers/colorHelpers'
+import { getRandomColor, setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
 import { defaultsIconConfig } from '../types'
@@ -84,11 +85,64 @@ const scrollPageTo = (navEl) => {
 
   element?.scrollIntoView({ block: 'center', behavior: 'smooth' })
 }
+
+const choices = ref<{ color: '#AB92F0' | '...other stack colors'; mode: 'light' | 'dark' }>({
+  color: '#AB92F0',
+  mode: 'light',
+})
+const generatedConfig = computed<{ color: string }>(() => {
+  return { color: 'black' }
+})
+const pepiconRandomColorDic = ref<{ [key in PepiconName]?: string }>({})
+
+// you can pass this pepiconRandomColorDic
+
+// you need to be able to easily set and reset every color in the `pepiconRandomColorDic`
+function setRandomColors() {
+  pepiconArray.forEach((iconName) => {
+    pepiconRandomColorDic.value[iconName] = getRandomColor()
+  })
+}
+setRandomColors()
+
+// choices represents the buttons the user can click
+// we want to have a 1-1 binding between the choices ref
+// and the color pickers / light/dark pickers etc.
+// we want to avoid any ternaries or conditional stuff for this
+
+// wherever we are showing icons based on the choices, we
+// pass down the `generatedConfig` and have pretty much all
+// conditional logic contained inside there
+// the only exemption being if the color is randomized
+
+// we ALSO pass down `pepiconRandomColorDic` everywhere we
+// pass the `generatedConfig` to make sure we can have a single
+// SIMPLE ternary between the random color and the color from
+// generatedConfig.
+// ```js
+// :color="generatedConfig.color === 'random' ? pepiconRandomColorDic[iconName] : generatedConfig.color"
+// ```
+
+// finally we wanna make sure that the `choices` ref is
+// properly mutated when the user clicks buttons
+// and as a SIDE EFFECT we wanna call `setRandomColors`
+// every time the randomize button is clicked
+
+// refactor strategy:
+// delete any code related to iconConfig
+// this starts usually with deleting props
+// then you change everything that relied on those props
+// with hard-coded strings
+// once you got rid of all iconConfig old logic and wording
+// you add your new props to the prop definitions
+// you pass the new props from the parent
+// you replace your hard-coded strings with the new props
 </script>
 
 <template>
   <div v-bind="$attrs" style="padding: 24px" class="page-index">
-    <div class="_page-content">
+    <div @click="setRandomColors()">{{ pepiconRandomColorDic }}</div>
+    <!-- <div class="_page-content">
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
           <Stack class="ml-auto" classes="items-center">
@@ -144,7 +198,11 @@ const scrollPageTo = (navEl) => {
           <div class="text-section-title">{{ category }}</div>
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
-            :config="config"
+            :config="{
+              ...config,
+              color: config.isDarkMode && config.type === 'print' ? 'black' : config.color,
+              stroke: config.isDarkMode && config.type === 'print' ? config.color : 'black',
+            }"
             :searchInput="searchInput"
             @clickTile="openIconModal"
           />
@@ -210,7 +268,7 @@ const scrollPageTo = (navEl) => {
           />
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
   <DialogWrapper :isVisible="iconInfoIsVisible" @close="iconInfoIsVisible = false">
     <IconInfo :config="{ ...config, name: iconInfoName }" :configOptionButtons="config" />

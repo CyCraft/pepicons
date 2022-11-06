@@ -24,6 +24,12 @@ watch(
     console.log(`props.config → `, props.config)
   },
 )
+watch(
+  () => props.config,
+  (newVal) => {
+    console.log(`newVal → `, newVal)
+  },
+)
 const searchInputSynonymHit = computed(() => {
   const searchText = cleanupForSearch(props.searchInput)
   if (!searchText) return undefined
@@ -41,6 +47,8 @@ const synonymHtml = computed(() => {
 </script>
 <template>
   <div class="icon-tile">
+    <pre>C{{ config.color }}</pre>
+    <pre>S{{ config.stroke }}</pre>
     <Pepicon
       class="_svg"
       v-bind="(config as any)"
@@ -68,7 +76,10 @@ const synonymHtml = computed(() => {
       "
       size="26px"
     />
-    <!-- :stroke="config.isDarkMode ? config.color : 'black'" -->
+    <!-- figure out the proper conditions for this section right here -->
+    <!-- print is color='black' && stroke="config.color" OR "randomColor" -->
+    <!-- pop is color=randomColor && stroke="config.color" OR "black" -->
+    <!-- for some reason I cannot get the darkmode working anymore. It shows when I interpolate, but it doesnt change. -->
     <div class="_name">
       <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
         {{ config.name }}
