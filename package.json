@@ -1,6 +1,7 @@
 {
   "name": "@pepicons/monorepo",
   "private": true,
+  "type": "module",
   "version": "1.2.7",
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
@@ -45,6 +46,8 @@
     "babel-eslint": "^10.1.0",
     "case-anything": "^2.1.10",
     "copyfiles": "^2.4.1",
+    "del": "^7.0.0",
+    "del-cli": "^5.0.0",
     "esbuild": "^0.15.12",
     "esbuild-register": "^3.3.3",
     "eslint": "^8.23.0",
