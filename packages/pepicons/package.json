@@ -1,6 +1,7 @@
 {
   "name": "pepicons",
   "version": "1.2.7",
+  "type": "module",
   "sideEffects": false,
   "description": "Retro icon set",
   "productName": "Pepicons",

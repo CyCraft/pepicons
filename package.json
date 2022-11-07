@@ -20,7 +20,7 @@
     "dep:check-for-updates": "ncu --workspaces --root",
     "dep:reinstall-all:soft": "npm exec --workspaces -- npx rimraf node_modules && npx rimraf node_modules && npm i",
     "dep:reinstall-all:hard": "npx rimraf package-lock.json && npm run dep:reinstall-all:soft",
-    "_prepare-pepicons": "node ./scripts/preparePepicons.js",
+    "_prepare-pepicons": "node -r esbuild-register scripts/preparePepicons.ts",
     "_warn": "echo \"BE SURE TO RUN npm run build ONCE! otherwise the dev server might not launch\""
   },
   "engines": {

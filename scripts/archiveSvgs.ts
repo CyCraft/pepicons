@@ -1,15 +1,12 @@
 // require modules
-import * as fs from 'fs'
 import archiver from 'archiver'
 import copyfiles from 'copyfiles'
+import * as fs from 'fs'
 
 const PATH_TO_ARCHIVE = 'packages/pepicons/svg'
 const ZIP_NAME = 'PepiconSvgs.zip'
 
-/**
- * @returns {void}
- */
-export function archiveSvgs() {
+export function archiveSvgs(): void {
   /**
    * All instructions belowe are directly copied and tweaked based on the archiver Readme:
    * https://github.com/archiverjs/node-archiver
