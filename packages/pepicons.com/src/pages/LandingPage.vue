@@ -1,26 +1,25 @@
 <script lang="ts" setup>
-import { computed, watch, ref } from 'vue'
 import {
-  Pepicon,
-  synonyms,
-  synonymsJa,
   categories,
+  Pepicon,
+  pepiconArray,
   pepiconCategoryDic,
   PepiconName,
-  pepiconArray,
+  synonyms,
+  synonymsJa,
 } from 'pepicons'
-import Stack from '../components/Stack.vue'
+import { computed, ref, watch } from 'vue'
+import DialogWrapper from '../components/DialogWrapper.vue'
 import IconGrid from '../components/IconGrid.vue'
+import IconInfo from '../components/IconInfo.vue'
 import PepInput from '../components/PepInput.vue'
-import Pickers from '../components/Pickers.vue'
 import PepLink from '../components/PepLink.vue'
+import Pickers from '../components/Pickers.vue'
 import ProfileCard from '../components/ProfileCard.vue'
+import Stack from '../components/Stack.vue'
 import { getRandomColor, setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
-import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
-import { defaultsIconConfig } from '../types'
-import DialogWrapper from '../components/DialogWrapper.vue'
-import IconInfo from '../components/IconInfo.vue'
+import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
 
 document.body.classList.add('light-mode')
 
@@ -29,23 +28,23 @@ const emit = defineEmits(['set-is-dark-mode', 'set-config'])
 const hash = getQueryFromUrl()
 
 const searchInput = ref(hash || '')
-const config = ref(defaultsIconConfig({ isDarkMode: false, randomColor: false }))
+const config = ref({})
+
 // watch config for side effects
 watch(
   config,
   (conf) => {
     emit('set-config', conf)
-    const { type, color, isDarkMode } = conf
 
     // color
-    setPrimaryColor(color)
+    setPrimaryColor('mediumslateblue')
 
     // type
-    document.body.className = document.body.className.replace(/(print|pop)-mode/g, `${type}-mode`)
+    document.body.className = document.body.className.replace(/(print|pop)-mode/g, `${'pop'}-mode`)
 
     // dark mode
-    emit('set-is-dark-mode', isDarkMode)
-    const mode = isDarkMode ? 'dark-mode' : 'light-mode'
+    emit('set-is-dark-mode', true)
+    const mode = 'dark-mode'
     document.body.className = document.body.className.replace(/(dark|light)-mode/g, mode)
   },
   { deep: true, immediate: true },
@@ -54,7 +53,8 @@ watch(
 const categoryIconNamesDic = computed(() =>
   Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
     if (!(iconCategory in dic)) dic[iconCategory] = []
-    const iconNonExistent = config.value.type === 'print' && iconName.endsWith('-filled')
+    const iconNonExistent = false
+    // const iconNonExistent = config.value.type === 'print' && iconName.endsWith('-filled')
     if (iconNonExistent) return dic
     const searchText = cleanupForSearch(searchInput.value)
     if (searchText) {
@@ -129,33 +129,28 @@ setRandomColors()
 // every time the randomize button is clicked
 
 // refactor strategy:
-// delete any code related to iconConfig
-// this starts usually with deleting props
-// then you change everything that relied on those props
-// with hard-coded strings
-// once you got rid of all iconConfig old logic and wording
-// you add your new props to the prop definitions
-// you pass the new props from the parent
-// you replace your hard-coded strings with the new props
+// - [x] delete any code related to iconConfig
+// - [ ] this starts usually with deleting props
+// - [ ] then you change everything that relied on those props
+// - [ ] with hard-coded strings
+// - [ ] once you got rid of all iconConfig old logic and wording
+// - [ ] you add your new props to the prop definitions
+// - [ ] you pass the new props from the parent
+// - [ ] you replace your hard-coded strings with the new props
 </script>
 
 <template>
   <div v-bind="$attrs" style="padding: 24px" class="page-index">
-    <div @click="setRandomColors()">{{ pepiconRandomColorDic }}</div>
-    <!-- <div class="_page-content">
+    <!-- <div @click="setRandomColors()">{{ pepiconRandomColorDic }}</div> -->
+    <div class="_page-content">
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
           <Stack class="ml-auto" classes="items-center">
+            <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
             <PepLink
-              href="https://github.com/CyCraft/pepicons"
-              content="GitHub"
-              icon="github"
-              :config="config"
-            />
-            <PepLink
+              href="#"
               content="About Us"
               icon="info-filled"
-              :config="config"
               class="cursor-arrow-down"
               @click.stop.prevent="scrollPageTo('about-us')"
             />
@@ -174,23 +169,15 @@ setRandomColors()
           href="https://github.com/sponsors/mesqueeb"
           content="sponsoring us on GitHub"
           retroUnderline
-          :config="config"
         />!
       </div>
-      <Pickers v-model="config" :configComputed="config" class="mb-md" />
+      <Pickers class="mb-md" />
       <PepInput
         id="top"
         v-model="searchInput"
+        color="mediumslateblue"
         class="mb-xxl"
-        :color="config.color"
         :debounce="200"
-        :isDarkMode="config.isDarkMode"
-        :iconConfig="{
-          ...config,
-          name: 'loop',
-          color: config.isDarkMode && config.type === 'print' ? 'black' : config.color,
-          stroke: config.isDarkMode && config.type === 'print' ? config.color : 'black',
-        }"
         @blur="() => setUrlQuery(searchInput)"
         @keydown.meta="() => setUrlQuery(searchInput)"
       />
@@ -199,11 +186,6 @@ setRandomColors()
           <div class="text-section-title">{{ category }}</div>
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
-            :config="{
-              ...config,
-              color: config.isDarkMode && config.type === 'print' ? 'black' : config.color,
-              stroke: config.isDarkMode && config.type === 'print' ? config.color : 'black',
-            }"
             :searchInput="searchInput"
             @clickTile="openIconModal"
           />
@@ -217,7 +199,6 @@ setRandomColors()
             href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
             retroUnderline
             content="request"
-            :config="config"
           />
           a new icon on GitHub. 　🙃
         </div>
@@ -230,7 +211,6 @@ setRandomColors()
             href="https://medium.com/@lucaban/pepicons-retro-icon-set-now-available-for-designers-and-coders-40db866a7460"
             retroUnderline
             content="announcement blog post"
-            :config="config"
           />
           to read about our motivation for creating Pepicons!<br /><br />Pepicons was made by these
           peeps:
@@ -255,9 +235,9 @@ setRandomColors()
       </div>
       <div class="mt-xxxl flex-center">
         <PepLink
+          href="#"
           class="cursor-arrow-up px-md py-sm"
           content="Go to top"
-          :config="config"
           @click.stop.prevent="scrollPageTo('top')"
         />
         <div class="mt-xxl">
@@ -265,14 +245,13 @@ setRandomColors()
             href="https://github.com/sponsors/mesqueeb"
             retroUnderline
             content="Sponsor development"
-            :config="config"
           />
         </div>
       </div>
-    </div> -->
+    </div>
   </div>
   <DialogWrapper :isVisible="iconInfoIsVisible" @close="iconInfoIsVisible = false">
-    <IconInfo :config="{ ...config, name: iconInfoName }" :configOptionButtons="config" />
+    <IconInfo />
   </DialogWrapper>
 </template>
 

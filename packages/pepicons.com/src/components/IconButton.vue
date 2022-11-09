@@ -1,47 +1,44 @@
 <script lang="ts" setup>
 import { Pepicon } from '@pepicons/vue'
-import ColorRingSvg from './ColorRingSvg.vue'
-import { PropType, computed, ref } from 'vue'
-import { defaultsIconConfig, IconConfig } from '../types'
+import { computed, ref } from 'vue'
 import { changeAlpha } from '../helpers/colorHelpers'
 
+const props = withDefaults(
+  defineProps<{
+    backgroundColor?: string
+    isActive?: boolean
+    /**
+     * The active color is always shown as 50% opaque.
+     * The color applied will be `activeColor` ||  `backgroundColor`
+     */
+    activeColor?: string
+
+    /**
+     * The animation class to be applied on click.
+     */
+    animationClass?: string
+    /**
+     * The duration of the animation on click - needs 'animationClass' set as well to work.
+     */
+    animationDurationMs?: number
+  }>(),
+  { backgroundColor: 'mediumslateblue' },
+)
+
 const emit = defineEmits(['click'])
-const props = defineProps({
-  backgroundColor: { type: String, default: 'white' },
-  /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
-   */
-  iconConfig: {
-    type: Object as PropType<Partial<IconConfig>>,
-    default: () => ({ ...defaultsIconConfig() }),
-  },
-  isActive: { type: Boolean },
-  /**
-   * The active color is always shown as 50% opaque.
-   * The color applied will be `activeColor` || `iconConfig.color` || `backgroundColor`
-   */
-  activeColor: { type: String },
-  hasColorRing: { type: Boolean, default: false },
-  /**
-   * The animation class to be applied on click.
-   */
-  animationClass: { type: String },
-  /**
-   * The duration of the animation on click - needs 'animationClass' set as well to work.
-   */
-  animationDurationMs: { type: Number, default: 500 },
-})
+
 const activeStyle = computed(() => {
   if (!props.isActive) return ''
-  const activeColor = props.activeColor || props.iconConfig?.color || props.backgroundColor
+  const activeColor = props.activeColor || 'mediumslateblue' || props.backgroundColor
 
   return `box-shadow: 0 0 0 3px ${changeAlpha(activeColor, 0.5)}`
 })
 
 const isAnimating = ref(false)
+
 function click() {
   isAnimating.value = true
-  setTimeout(() => (isAnimating.value = false), props.animationDurationMs)
+  setTimeout(() => (isAnimating.value = false), props.animationDurationMs || 500)
   emit('click')
 }
 </script>
@@ -51,15 +48,13 @@ function click() {
     :style="`background: ${backgroundColor}; ${activeStyle}`"
     @click="click"
   >
-    <ColorRingSvg v-if="hasColorRing" class="_inner" />
     <div class="_inner flex flex-center">
       <Pepicon
-        v-if="iconConfig && iconConfig.name"
         :class="`_icon ${isAnimating ? animationClass : ''}`"
-        :name="iconConfig.name"
-        :type="iconConfig.type"
-        :color="iconConfig.color"
-        :stroke="iconConfig.stroke"
+        :name="'airplane'"
+        :type="'pop'"
+        :color="'mediumslateblue'"
+        :stroke="'black'"
         size="md"
       />
     </div>
@@ -85,5 +80,4 @@ function click() {
     transform: scale(0.9)
 ._random-color-active
   outline: 2px solid red
-  // outline: 2px solid v-bind(iconConfig.color)
 </style>

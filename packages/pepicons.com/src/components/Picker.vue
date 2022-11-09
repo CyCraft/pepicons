@@ -1,39 +1,23 @@
 <script lang="ts" setup>
-import { PropType, ref, defineComponent, computed } from 'vue'
-import DialogWrapper from '../components/DialogWrapper.vue'
-import IconButton from './IconButton.vue'
-import Stack from './Stack.vue'
-import { getRandomColor, cssVar } from '../helpers/colorHelpers'
-import { defaultsIconConfig, IconConfig } from '../types'
-import Tooltip from './Tooltip.vue'
+import { defineComponent, ref } from 'vue'
 import { ColorPicker } from 'vue-color-kit'
 import 'vue-color-kit/dist/vue-color-kit.css'
+import DialogWrapper from '../components/DialogWrapper.vue'
+import { cssVar, getRandomColor } from '../helpers/colorHelpers'
+import IconButton from './IconButton.vue'
+import Stack from './Stack.vue'
+import Tooltip from './Tooltip.vue'
 
-const props = defineProps({
+const props = defineProps<{
   /**
    * @example 'type'
    */
-  kind: {
-    type: String as PropType<'type' | 'color' | 'stroke' | 'isDarkMode' | 'background'>,
-    required: true,
-  },
-  /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean}
-   */
-  modelValue: {
-    type: Object as PropType<IconConfig>,
-    default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
-  },
-  /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
-   */
-  configComputed: {
-    type: Object as PropType<Partial<IconConfig>>,
-    default: () => ({ ...defaultsIconConfig() }),
-  },
-})
+  kind: 'type' | 'color' | 'stroke' | 'isDarkMode' | 'background'
+}>()
+
 const emit = defineEmits(['update:modelValue'])
-const modelValueInner = ref(props.modelValue)
+const modelValueInner = ref('')
+
 function set(
   payloadArray: {
     prop: 'type' | 'color' | 'stroke' | 'isDarkMode' | 'randomColor'
@@ -89,26 +73,18 @@ export default defineComponent({
 <template>
   <Stack v-if="kind === 'type'" v-bind="$attrs" class="picker" classes="justify-center">
     <Tooltip text="Print ❏">
-      <!-- {{ modelValue }} -->
       <IconButton
-        :iconConfig="{
-          name: 'can',
-          type: 'print',
-          color: modelValue.isDarkMode ? 'black' : modelValue.color,
-          stroke: modelValue.isDarkMode ? modelValue.color : 'black',
-        }"
-        :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
-        :isActive="modelValue.type === 'print'"
-        :activeColor="modelValue.color"
+        :backgroundColor="'white'"
+        :isActive="true"
+        :activeColor="'mediumslateblue'"
         animationClass="anime-shake"
         @click="set([{ prop: 'type', value: 'print' }])"
       />
     </Tooltip>
     <Tooltip text="Pop!">
       <IconButton
-        :iconConfig="{ ...modelValue, name: 'can', type: 'pop' }"
-        :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
-        :isActive="modelValue.type === 'pop'"
+        :backgroundColor="'white'"
+        :isActive="false"
         animationClass="anime-shake"
         @click="set([{ prop: 'type', value: 'pop' }])"
       />
@@ -118,46 +94,22 @@ export default defineComponent({
     <IconButton
       v-for="c in colorSelection"
       :key="c"
-      :iconConfig="{ color: modelValue.color }"
       :backgroundColor="c"
-      :isActive="modelValue.color === c && modelValue.randomColor === false"
+      :isActive="true"
       @click="setColor(c)"
     />
-    <IconButton
-      :iconConfig="{
-        ...configComputed,
-        name: 'color-picker',
-        color: modelValue.isDarkMode && modelValue.type === 'print' ? 'black' : modelValue.color,
-        stroke: modelValue.isDarkMode && modelValue.type === 'print' ? modelValue.color : 'black',
-      }"
-      :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
-      :colorRing="true"
-      @click="colorPickerIsVisible = true"
-    />
-    <IconButton
-      :iconConfig="{
-        ...configComputed,
-        name: 'refresh',
-        color: modelValue.isDarkMode && modelValue.type === 'print' ? 'black' : modelValue.color,
-        stroke: modelValue.isDarkMode && modelValue.type === 'print' ? modelValue.color : 'black',
-      }"
-      :backgroundColor="modelValue.isDarkMode ? moonlight : 'white'"
-      :colorRing="true"
-      :isActive="modelValue.randomColor"
-      @click="setRandomColor"
-    />
+    <IconButton :backgroundColor="'white'" @click="colorPickerIsVisible = true" />
+    <IconButton :backgroundColor="'white'" :isActive="true" @click="setRandomColor" />
   </Stack>
   <Stack v-if="kind === 'background'" v-bind="$attrs" class="picker" classes="justify-center">
     <IconButton
       backgroundColor="white"
       class="_background-picker thin-border--dark"
-      :iconConfig="{ name: 'sun-filled', type: 'pop', color: 'black' }"
       @click="set([{ prop: 'isDarkMode', value: false }])"
     />
     <IconButton
       :backgroundColor="nightfall"
       class="_background-picker thin-border--light"
-      :iconConfig="{ name: 'moon-filled', type: 'pop', color: 'white' }"
       @click="set([{ prop: 'isDarkMode', value: true }])"
     />
   </Stack>
@@ -166,8 +118,8 @@ export default defineComponent({
   </Stack>
   <DialogWrapper :isVisible="colorPickerIsVisible" @close="colorPickerIsVisible = false">
     <ColorPicker
-      :theme="modelValue.isDarkMode === true ? 'dark' : 'light'"
-      :color="modelValue.color"
+      :theme="'dark'"
+      :color="'mediumslateblue'"
       @changeColor="(val) => changeColor(val)"
     />
   </DialogWrapper>

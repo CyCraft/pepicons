@@ -1,27 +1,18 @@
 <script lang="ts" setup>
 import { Pepicon } from '@pepicons/vue'
-import { PropType, computed, ref, watch } from 'vue'
-import { defaultsIconConfig, IconConfig } from '../types'
+import { ref, watch } from 'vue'
 
-const props = defineProps({
-  modelValue: { type: String, default: '' },
-  color: { type: String, required: true },
-  /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
-   */
-  iconConfig: {
-    type: Object as PropType<IconConfig>,
-    default: () => ({ ...defaultsIconConfig() }),
-  },
-  debounce: {
-    type: Number,
-    default: 0,
-  },
-})
+const props = defineProps<{
+  modelValue: string
+  color: string
+  debounce: number
+}>()
+
 const emit = defineEmits(['update:modelValue'])
 const valueInner = ref<any>(props.modelValue)
 const debounceInner = ref<number>(props.debounce)
 let timeout: any = null
+
 watch(valueInner, (newVal, oldVal) => {
   const debounceMs = debounceInner.value
   if (debounceMs > 0) {
@@ -31,6 +22,7 @@ watch(valueInner, (newVal, oldVal) => {
     emitInput(newVal)
   }
 })
+
 function emitInput(newVal: any) {
   let payload = newVal
   emit('update:modelValue', payload)
@@ -40,7 +32,13 @@ function emitInput(newVal: any) {
 <template>
   <div class="_wrapper">
     <input v-model="valueInner" class="pep-input" v-bind="$attrs" />
-    <Pepicon class="icon" v-bind="iconConfig" />
+    <Pepicon
+      class="icon"
+      :name="'loop'"
+      :type="'pop'"
+      :color="'mediumslateblue'"
+      :stroke="'black'"
+    />
   </div>
 </template>
 

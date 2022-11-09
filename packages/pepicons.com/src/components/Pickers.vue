@@ -1,48 +1,21 @@
 <script lang="ts" setup>
-import { PropType } from 'vue'
 import Picker from './Picker.vue'
 import Stack from './Stack.vue'
-import { defaultsIconConfig, IconConfig } from '../types'
-const props = defineProps({
-  /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean}
-   */
-  modelValue: {
-    type: Object as PropType<IconConfig>,
-    default: () => ({ ...defaultsIconConfig({ isDarkMode: false }) }),
-  },
-  /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
-   */
-  configComputed: {
-    type: Object as PropType<Partial<IconConfig>>,
-    default: () => ({ ...defaultsIconConfig() }),
-  },
-})
+
+// const props = defineProps<{}>()
+
 const emit = defineEmits(['update:modelValue'])
 </script>
 
 <template>
   <Stack class="pickers pa-xs" classes="justify-center">
-    <Picker
-      kind="type"
-      :modelValue="modelValue"
-      :configComputed="configComputed"
-      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
-    />
+    <Picker kind="type" @update:modelValue="(newVal) => $emit('update:modelValue', newVal)" />
     <Picker
       class="_middle-section"
       kind="color"
-      :modelValue="modelValue"
-      :configComputed="configComputed"
       @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
     />
-    <Picker
-      kind="background"
-      :modelValue="modelValue"
-      :configComputed="configComputed"
-      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
-    />
+    <Picker kind="background" @update:modelValue="(newVal) => $emit('update:modelValue', newVal)" />
   </Stack>
 </template>
 

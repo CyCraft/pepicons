@@ -1,29 +1,22 @@
 <script lang="ts" setup>
-import { PropType, computed } from 'vue'
-import { pepiconSvgString } from 'pepicons'
 import { Pepicon, PepiconName } from '@pepicons/vue'
+import { pepiconSvgString } from 'pepicons'
+import { computed } from 'vue'
 import CompanyLogo from './CompanyLogo.vue'
-import { defaultsIconConfig, IconConfig } from '../types'
 
-const props = defineProps({
-  href: { type: String },
-  content: { type: String },
-  icon: { type: String as PropType<PepiconName | 'github' | undefined> },
-  retroUnderline: { type: Boolean },
-  /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
-   */
-  config: {
-    type: Object as PropType<Partial<IconConfig>>,
-    default: () => ({ ...defaultsIconConfig() }),
-  },
-})
+const props = defineProps<{
+  href: string
+  content: string
+  icon?: PepiconName | 'github' | undefined
+  retroUnderline?: boolean
+}>()
+
 const svgString = computed<string>(() =>
   pepiconSvgString({
     name: 'hand-point',
-    color: props.config.color,
-    type: props.config.type,
-    stroke: props.config.stroke,
+    color: 'mediumslateblue',
+    type: 'pop',
+    stroke: 'black',
   }).replace(/\n/g, ''),
 )
 const customCursor = computed(() => {

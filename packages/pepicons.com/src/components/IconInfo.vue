@@ -1,24 +1,28 @@
 <script lang="ts" setup>
-import copyToClipboard from 'copy-text-to-clipboard'
-import { PropType, ref } from 'vue'
-import { pepiconSvgString } from 'pepicons'
 import { Pepicon } from '@pepicons/vue'
-import CodeBlock from './CodeBlock.vue'
-import IconButton from './IconButton.vue'
-import HtmlButton from './HtmlButton.vue'
+import copyToClipboard from 'copy-text-to-clipboard'
+import { PepiconName, pepiconSvgString } from 'pepicons'
+import { ref } from 'vue'
+import { base64ToBlob, svgToBase64Png } from '../helpers/conversion'
 import { downloadBase64AsFile, downloadFile } from '../helpers/download'
-import { svgToBase64Png, base64ToBlob } from '../helpers/conversion'
-import { defaultsIconConfig, IconConfig } from '../types'
+import CodeBlock from './CodeBlock.vue'
+import HtmlButton from './HtmlButton.vue'
+import IconButton from './IconButton.vue'
 import Tabs from './Tabs.vue'
 
-function generateVueCode(iconName: string, config: IconConfig): string {
+function generateVueCode(payload: {
+  name: PepiconName
+  type: 'pop' | 'print'
+  color: string
+  stroke: string
+}): string {
   const _stroke =
-    config.stroke && config.stroke !== 'black' ? `\n    stroke="${config.stroke}"` : ''
+    payload.stroke && payload.stroke !== 'black' ? `\n    stroke="${payload.stroke}"` : ''
   return `<template>
   <Pepicon
-    name="${iconName}"
-    type="${config.type}"
-    color="${config.color}"${_stroke}
+    name="${payload.name}"
+    type="${payload.type}"
+    color="${payload.color}"${_stroke}
   />
 </template>
 
@@ -31,22 +35,8 @@ export default {
 <\/script>`
 }
 
-const props = defineProps({
-  /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
-   */
-  config: {
-    type: Object as PropType<IconConfig>,
-    default: () => ({ ...defaultsIconConfig() }),
-  },
-  /**
-   * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string, randomColor: boolean, isDarkMode: boolean }}
-   */
-  configOptionButtons: {
-    type: Object as PropType<IconConfig>,
-    default: () => ({ ...defaultsIconConfig() }),
-  },
-})
+// const props = defineProps<{}>()
+
 const selectedTab = ref<'Vue' | 'SVG'>('Vue')
 const codeShown = ref(false)
 const downloadSvgDone = ref(false)
@@ -54,11 +44,21 @@ const copySvgDone = ref(false)
 const downloadPngDone = ref(false)
 const copyPngDone = ref(false)
 
-const codeSvg = pepiconSvgString(props.config as any)
-const codeVue = generateVueCode(props.config.name || '', props.config)
+const codeSvg = pepiconSvgString({
+  name: 'airplane',
+  type: 'pop',
+  color: 'mediumslateblue',
+  stroke: 'black',
+})
+const codeVue = generateVueCode({
+  name: 'airplane',
+  type: 'pop',
+  color: 'mediumslateblue',
+  stroke: 'black',
+})
 
 function downloadSvg(): void {
-  downloadFile(codeSvg, `${props.config.name}.svg`)
+  downloadFile(codeSvg, `airplane.svg`)
   downloadSvgDone.value = true
 }
 
@@ -68,14 +68,26 @@ function copySvg(): void {
 }
 
 async function downloadPng(): Promise<void> {
-  const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
+  const _codeSvg = pepiconSvgString({
+    name: 'airplane',
+    type: 'pop',
+    color: 'mediumslateblue',
+    stroke: 'black',
+    size: '48px',
+  } as any)
   const pngString = await svgToBase64Png(_codeSvg)
-  downloadBase64AsFile(pngString, `${props.config.name}.png`)
+  downloadBase64AsFile(pngString, `airplane.png`)
   downloadPngDone.value = true
 }
 
 async function copyPng(): Promise<void> {
-  const _codeSvg = pepiconSvgString({ ...props.config, size: '48px' } as any)
+  const _codeSvg = pepiconSvgString({
+    name: 'airplane',
+    type: 'pop',
+    color: 'mediumslateblue',
+    stroke: 'black',
+    size: '48px',
+  } as any)
   const pngString = await svgToBase64Png(_codeSvg)
   const item = new window.ClipboardItem({
     'image/png': base64ToBlob(pngString),
@@ -90,14 +102,20 @@ async function copyPng(): Promise<void> {
 
 <template>
   <div class="icon-info">
-    <HtmlButton v-model="codeShown" class="_toggle-code-button" v-bind="config" />
+    <HtmlButton
+      v-model="codeShown"
+      class="_toggle-code-button"
+      type="pop"
+      color="mediumslateblue"
+      stroke="black"
+    />
     <div class="_code-section">
       <div>
         <Tabs
           v-model:selectedTab="selectedTab"
           class="_tab-panels"
           :tabs="['Vue', 'SVG']"
-          :color="config.color"
+          :color="'mediumslateblue'"
         >
           <template v-if="selectedTab === 'Vue'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
@@ -115,55 +133,31 @@ async function copyPng(): Promise<void> {
 
     <div class="_top-door" :class="{ '_top-door-transform': codeShown }">
       <Pepicon
-        :name="config.name"
-        :type="config.type"
-        :color="config.color"
-        :stroke="config.stroke"
+        :name="'airplane'"
+        :type="'pop'"
+        :color="'mediumslateblue'"
+        :stroke="'black'"
         size="80px"
       />
-      <div class="text-h5 mt-xl">{{ config.name }}</div>
+      <div class="text-h5 mt-xl">{{ 'airplane' }}</div>
     </div>
     <div class="_bottom-door text-h6 px-xl" :class="{ '_bottom-door-transform': codeShown }">
       <div class="flex-center relative">
         <div>SVG</div>
         <div class="flex gutter-x-sm mt-xs">
-          <IconButton
-            :iconConfig="{
-              ...configOptionButtons,
-              name: 'cloud-down',
-            }"
-            :isActive="downloadSvgDone"
-            @click="downloadSvg"
-          />
-          <IconButton
-            :iconConfig="{
-              ...configOptionButtons,
-              name: 'clipboard',
-            }"
-            :isActive="copySvgDone"
-            @click="copySvg"
-          />
+          <!-- name: 'cloud-down', -->
+          <IconButton :isActive="downloadSvgDone" @click="downloadSvg" />
+          <!-- name: 'clipboard', -->
+          <IconButton :isActive="copySvgDone" @click="copySvg" />
         </div>
       </div>
       <div class="flex-center">
         <div>PNG</div>
         <div class="flex gutter-x-sm mt-xs">
-          <IconButton
-            :iconConfig="{
-              ...configOptionButtons,
-              name: 'cloud-down',
-            }"
-            :isActive="downloadPngDone"
-            @click="downloadPng"
-          />
-          <IconButton
-            :iconConfig="{
-              ...configOptionButtons,
-              name: 'clipboard',
-            }"
-            :isActive="copyPngDone"
-            @click="copyPng"
-          />
+          <!-- name: 'cloud-down', -->
+          <IconButton :isActive="downloadPngDone" @click="downloadPng" />
+          <!-- name: 'clipboard', -->
+          <IconButton :isActive="copyPngDone" @click="copyPng" />
         </div>
       </div>
     </div>
