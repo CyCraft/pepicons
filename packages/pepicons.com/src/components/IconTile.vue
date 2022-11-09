@@ -5,14 +5,15 @@ import { computed } from 'vue'
 import { cleanupForSearch } from '../helpers/search'
 
 const props = defineProps<{
-  // name: PepiconName,
+  name: PepiconName
+  // type: 'pop' | 'print'
   searchInput?: string
 }>()
 
 const searchInputSynonymHit = computed(() => {
   const searchText = cleanupForSearch(props.searchInput || '')
   if (!searchText) return undefined
-  const _synonyms = synonyms['airplane' as PepiconName] || []
+  const _synonyms = synonyms[props.name] || []
   return _synonyms.find((s) => cleanupForSearch(s).includes(searchText))
 })
 
@@ -25,19 +26,20 @@ const synonymHtml = computed(() => {
   return `<div class="c-washed-cloth" style="opacity: 0.8">${text}</div>`
 })
 </script>
+
 <template>
   <div class="icon-tile">
     <Pepicon
       class="_svg"
       type="pop"
-      name="airplane"
+      :name="name"
       :color="'mediumslateblue'"
       :stroke="'black'"
       size="26px"
     />
     <div class="_name">
       <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
-        {{ 'airplane' }}
+        {{ name }}
       </div>
       <div v-if="synonymHtml" v-html="synonymHtml" />
     </div>

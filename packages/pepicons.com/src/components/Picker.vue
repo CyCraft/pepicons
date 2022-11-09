@@ -6,7 +6,6 @@ import DialogWrapper from '../components/DialogWrapper.vue'
 import { cssVar, getRandomColor } from '../helpers/colorHelpers'
 import IconButton from './IconButton.vue'
 import Stack from './Stack.vue'
-import Tooltip from './Tooltip.vue'
 
 const props = defineProps<{
   /**
@@ -71,25 +70,6 @@ export default defineComponent({
 </script>
 
 <template>
-  <Stack v-if="kind === 'type'" v-bind="$attrs" class="picker" classes="justify-center">
-    <Tooltip text="Print ❏">
-      <IconButton
-        :backgroundColor="'white'"
-        :isActive="true"
-        :activeColor="'mediumslateblue'"
-        animationClass="anime-shake"
-        @click="set([{ prop: 'type', value: 'print' }])"
-      />
-    </Tooltip>
-    <Tooltip text="Pop!">
-      <IconButton
-        :backgroundColor="'white'"
-        :isActive="false"
-        animationClass="anime-shake"
-        @click="set([{ prop: 'type', value: 'pop' }])"
-      />
-    </Tooltip>
-  </Stack>
   <Stack v-if="kind === 'color'" v-bind="$attrs" class="picker" classes="justify-center">
     <IconButton
       v-for="c in colorSelection"
@@ -101,18 +81,7 @@ export default defineComponent({
     <IconButton :backgroundColor="'white'" @click="colorPickerIsVisible = true" />
     <IconButton :backgroundColor="'white'" :isActive="true" @click="setRandomColor" />
   </Stack>
-  <Stack v-if="kind === 'background'" v-bind="$attrs" class="picker" classes="justify-center">
-    <IconButton
-      backgroundColor="white"
-      class="_background-picker thin-border--dark"
-      @click="set([{ prop: 'isDarkMode', value: false }])"
-    />
-    <IconButton
-      :backgroundColor="nightfall"
-      class="_background-picker thin-border--light"
-      @click="set([{ prop: 'isDarkMode', value: true }])"
-    />
-  </Stack>
+
   <Stack v-if="kind === 'stroke'" v-bind="$attrs" class="picker" classes="justify-center">
     <input type="color" @change="() => set([{ prop: 'color', value: '#e2e2e2' }])" />
   </Stack>

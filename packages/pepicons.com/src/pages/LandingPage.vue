@@ -20,10 +20,15 @@ import Stack from '../components/Stack.vue'
 import { getRandomColor, setPrimaryColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
+import { Choices } from '../types'
 
-document.body.classList.add('light-mode')
+const props = defineProps<{
+  choices: Choices
+}>()
 
-const emit = defineEmits(['set-is-dark-mode', 'set-config'])
+const emit = defineEmits<{
+  (e: 'update:choices', payload: Choices): void
+}>()
 
 const hash = getQueryFromUrl()
 
@@ -34,18 +39,8 @@ const config = ref({})
 watch(
   config,
   (conf) => {
-    emit('set-config', conf)
-
     // color
     setPrimaryColor('mediumslateblue')
-
-    // type
-    document.body.className = document.body.className.replace(/(print|pop)-mode/g, `${'pop'}-mode`)
-
-    // dark mode
-    emit('set-is-dark-mode', true)
-    const mode = 'dark-mode'
-    document.body.className = document.body.className.replace(/(dark|light)-mode/g, mode)
   },
   { deep: true, immediate: true },
 )
@@ -86,10 +81,6 @@ const scrollPageTo = (navEl) => {
   element?.scrollIntoView({ block: 'center', behavior: 'smooth' })
 }
 
-const choices = ref<{ color: '#AB92F0' | '...other stack colors'; mode: 'light' | 'dark' }>({
-  color: '#AB92F0',
-  mode: 'light',
-})
 const generatedConfig = computed<{ color: string }>(() => {
   return { color: 'black' }
 })
@@ -130,10 +121,9 @@ setRandomColors()
 
 // refactor strategy:
 // - [x] delete any code related to iconConfig
-// - [ ] this starts usually with deleting props
-// - [ ] then you change everything that relied on those props
-// - [ ] with hard-coded strings
-// - [ ] once you got rid of all iconConfig old logic and wording
+// - [x] this starts usually with deleting props
+// - [x] then you change everything that relied on those props with hard-coded strings
+// once you got rid of all iconConfig old logic and wording
 // - [ ] you add your new props to the prop definitions
 // - [ ] you pass the new props from the parent
 // - [ ] you replace your hard-coded strings with the new props
@@ -141,7 +131,6 @@ setRandomColors()
 
 <template>
   <div v-bind="$attrs" style="padding: 24px" class="page-index">
-    <!-- <div @click="setRandomColors()">{{ pepiconRandomColorDic }}</div> -->
     <div class="_page-content">
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
@@ -171,7 +160,11 @@ setRandomColors()
           retroUnderline
         />!
       </div>
-      <Pickers class="mb-md" />
+      <Pickers
+        class="mb-md"
+        :choices="choices"
+        @update:choices="(payload) => emit('update:choices', payload)"
+      />
       <PepInput
         id="top"
         v-model="searchInput"

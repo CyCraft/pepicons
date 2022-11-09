@@ -16,7 +16,7 @@ function clickTile(icon: string): void {
 <template>
   <transition-group class="icon-grid" name="anim-grid" tag="div">
     <div v-for="name in iconNames" :key="name" class="anim-grid-item">
-      <IconTile :searchInput="searchInput" @click="() => clickTile(name)" />
+      <IconTile :name="name" :searchInput="searchInput" @click="() => clickTile(name)" />
     </div>
   </transition-group>
 </template>

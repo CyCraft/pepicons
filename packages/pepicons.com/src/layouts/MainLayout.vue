@@ -1,11 +1,21 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
-import PepHero from '../components/PepHero.vue'
+import { Choices } from 'src/types'
+import { ref, watch } from 'vue'
 import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue'
+import PepHero from '../components/PepHero.vue'
 import PepLink from '../components/PepLink.vue'
 
 const isDarkMode = ref(false)
-const config = ref<any>({})
+const choices = ref<Choices>({ type: 'pop', mode: 'light' })
+
+document.body.classList.add(`${choices.value.mode}-mode`)
+
+watch(
+  () => choices.value.mode,
+  (mode) => {
+    document.body.className = document.body.className.replace(/(dark|light)-mode/g, `${mode}-mode`)
+  },
+)
 </script>
 
 <template>
@@ -15,15 +25,16 @@ const config = ref<any>({})
         <PepHeaderDecorationLight :isDarkMode="isDarkMode" />
       </PepHero>
     </header>
-    <router-view
-      @setConfig="(newVal) => (config = newVal)"
-      @setIsDarkMode="(newVal) => (isDarkMode = newVal)"
-    />
+
+    {{ choices }}
+
+    <router-view v-model:choices="choices" />
+
     <div class="pb-xxxl"></div>
     <div class="footer">
       <div class="mb-md">
         Pepicons was made with 💜 by
-        <PepLink :config="config" href="https://cycraft.co" content="cycraft.co" retroUnderline />
+        <PepLink href="https://cycraft.co" content="cycraft.co" retroUnderline />
       </div>
       <div>© Copyright CyCraft, {{ new Date().getFullYear() }}</div>
     </div>

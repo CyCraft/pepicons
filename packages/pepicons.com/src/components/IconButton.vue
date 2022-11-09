@@ -1,10 +1,14 @@
 <script lang="ts" setup>
 import { Pepicon } from '@pepicons/vue'
+import { PepiconName } from 'pepicons'
 import { computed, ref } from 'vue'
 import { changeAlpha } from '../helpers/colorHelpers'
 
 const props = withDefaults(
   defineProps<{
+    icon?: PepiconName
+    type?: 'pop' | 'print'
+    color?: string
     backgroundColor?: string
     isActive?: boolean
     /**
@@ -50,10 +54,11 @@ function click() {
   >
     <div class="_inner flex flex-center">
       <Pepicon
+        v-if="icon"
         :class="`_icon ${isAnimating ? animationClass : ''}`"
-        :name="'airplane'"
-        :type="'pop'"
-        :color="'mediumslateblue'"
+        :name="icon"
+        :type="type || 'print'"
+        :color="color"
         :stroke="'black'"
         size="md"
       />
