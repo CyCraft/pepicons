@@ -1,7 +1,7 @@
 {
   "name": "@pepicons/vue",
   "type": "module",
-  "version": "1.2.1",
+  "version": "1.2.7",
   "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
@@ -21,8 +21,8 @@
     }
   },
   "scripts": {
-    "build": "rimraf dist && npm run build:vite && npm run gen:types:ts && npm run gen:types:vetur",
-    "dev": "vite --force",
+    "build": "del dist && npm run build:vite && npm run gen:types:ts && npm run gen:types:vetur",
+    "dev": "vite --force --config vite.config.dev.ts",
     "build:vite": "vite build",
     "gen:types:vetur": "vue-int -i src/components/Pepicon.vue -o dist/vetur",
     "gen:types:ts": "vue-tsc --declaration --emitDeclarationOnly"
@@ -31,18 +31,7 @@
     "vue": "^3.2.39"
   },
   "dependencies": {
-    "pepicons": "^1.2.1"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^3.1.0",
-    "@viteplay/plugin": "^0.2.1",
-    "@viteplay/vue": "^0.2.1",
-    "rimraf": "^3.0.2",
-    "typescript": "^4.8.3",
-    "vite": "^3.1.0",
-    "vue": "^3.2.39",
-    "vue-intellisense": "^1.0.1",
-    "vue-tsc": "^0.40.13"
+    "pepicons": "*"
   },
   "homepage": "https://github.com/cycraft/pepicons",
   "repository": {

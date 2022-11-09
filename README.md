@@ -1,8 +1,11 @@
 ![hero](https://github.com/CyCraft/pepicons/raw/dev/media/pepicons-hero.png?raw=true)
 
-# Pepicons
+# 🥤 Pepicons
 
-Pepicons is an icon-set of over one hundred retro icons inspired by the 80's.
+<a href="https://www.npmjs.com/package/pepicons"><img src="https://img.shields.io/npm/v/pepicons.svg" alt="Total Downloads"></a>
+<a href="https://www.npmjs.com/package/pepicons"><img src="https://img.shields.io/npm/dw/pepicons.svg" alt="Latest Stable Version"></a>
+
+Pepicons is an icon-set of around five hundred (and counting) retro icons inspired by the 80's.
 Every icon available in 2 variants: Pop! and Print ❏
 
 ## Website & icons

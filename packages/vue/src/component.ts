@@ -1,5 +1,5 @@
+import { morphPepicon, Pepicon, pepiconArray } from 'pepicons'
 import { computed, h, PropType } from 'vue'
-import { Pepicon, pepiconArray, morphPepicon } from 'pepicons'
 
 export const baseProps = {
   /**

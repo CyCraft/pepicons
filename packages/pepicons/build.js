@@ -58,4 +58,18 @@ export default [
       { file: 'dist/index.esm.js', format: 'esm' },
     ],
   }),
+  defaults({
+    input: 'src/icons/popIndex.ts',
+    output: [
+      { file: 'dist/pop.umd.js', format: 'umd' },
+      { file: 'dist/pop.esm.js', format: 'esm' },
+    ],
+  }),
+  defaults({
+    input: 'src/icons/printIndex.ts',
+    output: [
+      { file: 'dist/print.umd.js', format: 'umd' },
+      { file: 'dist/print.esm.js', format: 'esm' },
+    ],
+  }),
 ]
