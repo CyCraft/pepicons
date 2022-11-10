@@ -1,12 +1,22 @@
 <script lang="ts" setup>
 import { Choices } from 'src/types'
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue'
 import PepHero from '../components/PepHero.vue'
 import PepLink from '../components/PepLink.vue'
 
 const isDarkMode = ref(false)
-const choices = ref<Choices>({ type: 'pop', mode: 'light' })
+const choices = ref<Choices>({ type: 'pop', mode: 'light', color: '#AB92F0' })
+
+const generatedConfig = computed<Choices>(() => {
+  const { mode, type, color } = choices.value
+  return {
+    mode,
+    type,
+    color: mode === 'light' ? color : 'black',
+    stroke: mode === 'light' ? 'black' : color,
+  }
+})
 
 document.body.classList.add(`${choices.value.mode}-mode`)
 

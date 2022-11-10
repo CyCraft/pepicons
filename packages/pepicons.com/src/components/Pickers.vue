@@ -1,8 +1,10 @@
 <script lang="ts" setup>
+import { ref } from 'vue'
+import { ColorPicker } from 'vue-color-kit'
 import { cssVar } from '../helpers/colorHelpers'
 import { Choices } from '../types'
+import DialogWrapper from './DialogWrapper.vue'
 import IconButton from './IconButton.vue'
-import Picker from './Picker.vue'
 import Stack from './Stack.vue'
 import Tooltip from './Tooltip.vue'
 
@@ -16,6 +18,26 @@ const emit = defineEmits<{
 
 const nightfall = cssVar('nightfall')
 const moonlight = cssVar('moonlight')
+
+const colorSelection = [
+  cssVar('sig-purple'),
+  cssVar('sig-green'),
+  cssVar('sig-yellow'),
+  cssVar('sig-blue'),
+  cssVar('sig-pink'),
+]
+
+const colorPickerIsVisible = ref(false)
+
+function changeColor(color: any) {
+  const alpha = ''
+  const newValue = color.hex + alpha
+  emit('update:choices', { ...props.choices, color: newValue })
+}
+
+function setRandomColor() {
+  console.log(`TODO  ~!!!! `)
+}
 </script>
 
 <template>
@@ -25,10 +47,10 @@ const moonlight = cssVar('moonlight')
         <IconButton
           icon="can"
           type="print"
-          :color="'mediumslateblue'"
+          :color="choices.color"
           backgroundColor="white"
-          :isActive="true"
-          :activeColor="'mediumslateblue'"
+          :isActive="choices.type === 'print'"
+          :activeColor="choices.color"
           animationClass="anime-shake"
           @click="() => emit('update:choices', { ...choices, type: 'print' })"
         />
@@ -37,21 +59,29 @@ const moonlight = cssVar('moonlight')
         <IconButton
           icon="can"
           type="pop"
-          :color="'mediumslateblue'"
+          :color="choices.color"
           backgroundColor="white"
-          :isActive="false"
-          :activeColor="'mediumslateblue'"
+          :isActive="choices.type === 'pop'"
+          :activeColor="choices.color"
           animationClass="anime-shake"
           @click="() => emit('update:choices', { ...choices, type: 'pop' })"
         />
       </Tooltip>
     </Stack>
 
-    <Picker
-      class="_middle-section"
-      kind="color"
-      @update:modelValue="(newVal) => $emit('update:modelValue', newVal)"
-    />
+    <Stack class="picker" classes="justify-center">
+      <IconButton
+        v-for="c in colorSelection"
+        :key="c"
+        :backgroundColor="c"
+        :isActive="true"
+        @click="() => emit('update:choices', { ...choices, color: c })"
+      />
+
+      <IconButton :backgroundColor="'white'" @click="() => (colorPickerIsVisible = true)" />
+
+      <IconButton :backgroundColor="'white'" :isActive="true" @click="() => setRandomColor()" />
+    </Stack>
 
     <Stack class="picker" classes="justify-center">
       <IconButton
@@ -71,6 +101,14 @@ const moonlight = cssVar('moonlight')
         @click="() => emit('update:choices', { ...choices, mode: 'dark' })"
       />
     </Stack>
+
+    <DialogWrapper :isVisible="colorPickerIsVisible" @close="colorPickerIsVisible = false">
+      <ColorPicker
+        :theme="'dark'"
+        :color="'mediumslateblue'"
+        @changeColor="(val) => changeColor(val)"
+      />
+    </DialogWrapper>
   </Stack>
 </template>
 

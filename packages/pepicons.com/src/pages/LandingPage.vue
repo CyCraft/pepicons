@@ -71,8 +71,9 @@ const categoryIconNamesDic = computed(() =>
 const iconInfoIsVisible = ref(false)
 const iconInfoName = ref<PepiconName>('airplane')
 function openIconModal(icon: PepiconName): void {
-  iconInfoIsVisible.value = true
-  iconInfoName.value = icon
+  console.log(`icon → `, icon)
+  // iconInfoIsVisible.value = true
+  // iconInfoName.value = icon
 }
 const scrollPageTo = (navEl) => {
   console.log(`#${navEl}`)
@@ -81,9 +82,6 @@ const scrollPageTo = (navEl) => {
   element?.scrollIntoView({ block: 'center', behavior: 'smooth' })
 }
 
-const generatedConfig = computed<{ color: string }>(() => {
-  return { color: 'black' }
-})
 const pepiconRandomColorDic = ref<{ [key in PepiconName]?: string }>({})
 
 // you can pass this pepiconRandomColorDic
@@ -180,6 +178,7 @@ setRandomColors()
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
             :searchInput="searchInput"
+            :choices="choices"
             @clickTile="openIconModal"
           />
         </div>

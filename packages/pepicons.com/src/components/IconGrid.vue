@@ -1,10 +1,12 @@
 <script lang="ts" setup>
 import { PepiconName } from 'pepicons'
+import { Choices } from '../types'
 import IconTile from './IconTile.vue'
 
 const props = defineProps<{
   iconNames: PepiconName[]
   searchInput: string
+  choices: Choices
 }>()
 const emit = defineEmits(['click-tile'])
 
@@ -15,8 +17,14 @@ function clickTile(icon: string): void {
 
 <template>
   <transition-group class="icon-grid" name="anim-grid" tag="div">
-    <div v-for="name in iconNames" :key="name" class="anim-grid-item">
-      <IconTile :name="name" :searchInput="searchInput" @click="() => clickTile(name)" />
+    <div v-for="name in iconNames.slice(0, 1)" :key="name" class="anim-grid-item">
+      <IconTile
+        :type="choices.type"
+        :color="choices.color"
+        :name="name"
+        :searchInput="searchInput"
+        @click="() => clickTile(name)"
+      />
     </div>
   </transition-group>
 </template>
