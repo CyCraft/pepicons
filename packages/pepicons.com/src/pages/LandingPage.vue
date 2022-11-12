@@ -17,7 +17,7 @@ import PepLink from '../components/PepLink.vue'
 import Pickers from '../components/Pickers.vue'
 import ProfileCard from '../components/ProfileCard.vue'
 import Stack from '../components/Stack.vue'
-import { getRandomColor, setPrimaryColor } from '../helpers/colorHelpers'
+import { getRandomColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
 import { Choices } from '../types'
@@ -33,16 +33,15 @@ const emit = defineEmits<{
 const hash = getQueryFromUrl()
 
 const searchInput = ref(hash || '')
-const config = ref({})
 
-// watch config for side effects
+const randomColorInner = ref<string>('')
 watch(
-  config,
-  (conf) => {
-    // color
-    setPrimaryColor('mediumslateblue')
+  () => props.choices.color,
+  (newVal) => {
+    if (props.choices.randomColor) {
+      randomColorInner.value = getRandomColor()
+    }
   },
-  { deep: true, immediate: true },
 )
 
 const categoryIconNamesDic = computed(() =>
@@ -85,7 +84,6 @@ const scrollPageTo = (navEl) => {
 const pepiconRandomColorDic = ref<{ [key in PepiconName]?: string }>({})
 
 // you can pass this pepiconRandomColorDic
-
 // you need to be able to easily set and reset every color in the `pepiconRandomColorDic`
 function setRandomColors() {
   pepiconArray.forEach((iconName) => {
@@ -168,7 +166,13 @@ setRandomColors()
         v-model="searchInput"
         :type="choices.type"
         :color="choices.mode === 'light' ? choices.color : 'black'"
-        :stroke="choices.mode === 'light' ? 'black' : choices.color"
+        :stroke="
+          choices.mode === 'light'
+            ? 'black'
+            : choices.mode === 'dark' && choices.randomColor
+            ? randomColorInner
+            : choices.color
+        "
         class="mb-xxl"
         :debounce="200"
         @blur="() => setUrlQuery(searchInput)"

@@ -7,7 +7,7 @@ import PepLink from '../components/PepLink.vue'
 
 const isDarkMode = ref(false)
 const choices = ref<Choices>({
-  type: 'pop',
+  type: 'print',
   mode: 'light',
   color: '#AB92F0',
   randomColor: false,

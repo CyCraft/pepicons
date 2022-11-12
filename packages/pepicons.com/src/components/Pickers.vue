@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { ColorPicker } from 'vue-color-kit'
 import { cssVar, getRandomColor } from '../helpers/colorHelpers'
 import { Choices } from '../types'
@@ -39,6 +39,16 @@ function changeColor(color: any) {
   })
 }
 
+const randomColorInner = ref<string>('')
+watch(
+  () => props.choices.color,
+  (newVal) => {
+    if (props.choices.randomColor) {
+      randomColorInner.value = getRandomColor()
+    }
+  },
+)
+
 function setRandomColor() {
   const randomColor = getRandomColor()
   emit('update:choices', {
@@ -57,11 +67,17 @@ function setRandomColor() {
         <IconButton
           icon="can"
           type="print"
-          :color="choices.mode === 'dark' ? 'black' : choices.color"
-          :stroke="choices.mode === 'dark' ? choices.color : 'black'"
+          :color="choices.mode === 'light' ? choices.color : 'black'"
+          :stroke="
+            choices.mode === 'light'
+              ? 'black'
+              : choices.mode === 'dark' && choices.randomColor
+              ? randomColorInner
+              : choices.color
+          "
           :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'print'"
-          :activeColor="choices.color"
+          :activeColor="choices.randomColor ? randomColorInner : choices.color"
           animationClass="anime-shake"
           @click="() => emit('update:choices', { ...choices, type: 'print' })"
         />
@@ -70,7 +86,7 @@ function setRandomColor() {
         <IconButton
           icon="can"
           type="pop"
-          :color="choices.color"
+          :color="choices.randomColor ? randomColorInner : choices.color"
           :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'pop'"
           :activeColor="choices.color"
@@ -87,7 +103,10 @@ function setRandomColor() {
         :backgroundColor="c"
         :isActive="choices.color === c"
         :activeColor="c"
-        @click="() => emit('update:choices', { ...choices, color: c, colorPicker: false })"
+        @click="
+          () =>
+            emit('update:choices', { ...choices, color: c, colorPicker: false, randomColor: false })
+        "
       />
 
       <IconButton
