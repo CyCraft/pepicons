@@ -41,7 +41,7 @@ function setRandomColor() {
 </script>
 
 <template>
-  <Stack class="pickers pa-xs" classes="justify-center">
+  <Stack class="pickers pa-xs" classes="justify-around">
     <Stack class="picker" classes="justify-center">
       <Tooltip text="Print ❏">
         <IconButton
@@ -74,7 +74,8 @@ function setRandomColor() {
         v-for="c in colorSelection"
         :key="c"
         :backgroundColor="c"
-        :isActive="true"
+        :isActive="choices.color === c"
+        :activeColor="c"
         @click="() => emit('update:choices', { ...choices, color: c })"
       />
 
