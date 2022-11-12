@@ -9,6 +9,7 @@ const props = defineProps<{
   type: 'pop' | 'print'
   color: string
   searchInput?: string
+  stroke?: string
 }>()
 
 const searchInputSynonymHit = computed(() => {
@@ -30,7 +31,7 @@ const synonymHtml = computed(() => {
 
 <template>
   <div class="icon-tile">
-    <Pepicon class="_svg" :type="type" :color="color" :name="name" :stroke="'black'" size="26px" />
+    <Pepicon class="_svg" :type="type" :color="color" :name="name" :stroke="stroke" size="26px" />
     <div class="_name">
       <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
         {{ name }}

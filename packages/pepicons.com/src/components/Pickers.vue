@@ -83,7 +83,7 @@ function setRandomColor() {
       <IconButton
         icon="color-picker"
         :type="choices.type"
-        :color="choices.mode === 'dark' ? 'black' : choices.color"
+        :color="choices.mode === 'dark' && choices.type === 'print' ? 'black' : choices.color"
         :stroke="choices.mode === 'dark' ? choices.color : 'black'"
         :activeColor="choices.color"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
@@ -93,7 +93,7 @@ function setRandomColor() {
       <IconButton
         icon="refresh"
         :type="choices.type"
-        :color="choices.mode === 'dark' ? 'black' : choices.color"
+        :color="choices.mode === 'dark' && choices.type === 'print' ? 'black' : choices.color"
         :stroke="choices.mode === 'dark' ? choices.color : 'black'"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
         :isActive="true"

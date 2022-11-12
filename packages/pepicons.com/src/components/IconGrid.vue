@@ -20,7 +20,8 @@ function clickTile(icon: string): void {
     <div v-for="name in iconNames.slice(0, 1)" :key="name" class="anim-grid-item">
       <IconTile
         :type="choices.type"
-        :color="choices.color"
+        :color="choices.mode === 'dark' && choices.type === 'print' ? 'black' : choices.color"
+        :stroke="choices.mode === 'dark' ? choices.color : 'black'"
         :name="name"
         :searchInput="searchInput"
         @click="() => clickTile(name)"
