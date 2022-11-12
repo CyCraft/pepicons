@@ -9,6 +9,7 @@ const props = withDefaults(
     icon?: PepiconName
     type?: 'pop' | 'print'
     color?: string
+    stroke?: string
     backgroundColor?: string
     isActive?: boolean
     /**
@@ -59,7 +60,7 @@ function click() {
         :name="icon"
         :type="type || 'print'"
         :color="color"
-        :stroke="'black'"
+        :stroke="stroke"
         size="md"
       />
     </div>

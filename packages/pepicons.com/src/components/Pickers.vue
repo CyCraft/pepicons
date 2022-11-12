@@ -47,7 +47,8 @@ function setRandomColor() {
         <IconButton
           icon="can"
           type="print"
-          :color="choices.color"
+          :color="choices.mode === 'dark' ? 'black' : choices.color"
+          :stroke="choices.mode === 'dark' ? choices.color : 'black'"
           :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'print'"
           :activeColor="choices.color"
@@ -82,7 +83,8 @@ function setRandomColor() {
       <IconButton
         icon="color-picker"
         :type="choices.type"
-        :color="choices.color"
+        :color="choices.mode === 'dark' ? 'black' : choices.color"
+        :stroke="choices.mode === 'dark' ? choices.color : 'black'"
         :activeColor="choices.color"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
         @click="() => (colorPickerIsVisible = true)"
@@ -91,7 +93,8 @@ function setRandomColor() {
       <IconButton
         icon="refresh"
         :type="choices.type"
-        :color="choices.color"
+        :color="choices.mode === 'dark' ? 'black' : choices.color"
+        :stroke="choices.mode === 'dark' ? choices.color : 'black'"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
         :isActive="true"
         :activeColor="choices.color"
@@ -120,8 +123,8 @@ function setRandomColor() {
 
     <DialogWrapper :isVisible="colorPickerIsVisible" @close="colorPickerIsVisible = false">
       <ColorPicker
-        :theme="'dark'"
-        :color="'mediumslateblue'"
+        :theme="choices.mode === 'dark' ? 'dark' : 'light'"
+        :color="choices.color"
         @changeColor="(val) => changeColor(val)"
       />
     </DialogWrapper>

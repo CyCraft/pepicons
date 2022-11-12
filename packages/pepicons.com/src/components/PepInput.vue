@@ -7,6 +7,7 @@ const props = defineProps<{
   debounce: number
   color: string
   type: 'print' | 'pop'
+  stroke: string
 }>()
 const emit = defineEmits(['update:modelValue'])
 const valueInner = ref<any>(props.modelValue)
@@ -32,7 +33,7 @@ function emitInput(newVal: any) {
 <template>
   <div class="_wrapper">
     <input v-model="valueInner" class="pep-input" v-bind="$attrs" />
-    <Pepicon class="icon" :name="'loop'" :type="type" :color="color" :stroke="'black'" />
+    <Pepicon class="icon" :name="'loop'" :type="type" :color="color" :stroke="stroke" />
   </div>
 </template>
 
