@@ -166,7 +166,8 @@ setRandomColors()
       <PepInput
         id="top"
         v-model="searchInput"
-        color="mediumslateblue"
+        :color="choices.color"
+        :type="choices.type"
         class="mb-xxl"
         :debounce="200"
         @blur="() => setUrlQuery(searchInput)"

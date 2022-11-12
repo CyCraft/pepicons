@@ -4,10 +4,10 @@ import { ref, watch } from 'vue'
 
 const props = defineProps<{
   modelValue: string
-  color: string
   debounce: number
+  color: string
+  type: 'print' | 'pop'
 }>()
-
 const emit = defineEmits(['update:modelValue'])
 const valueInner = ref<any>(props.modelValue)
 const debounceInner = ref<number>(props.debounce)
@@ -32,13 +32,7 @@ function emitInput(newVal: any) {
 <template>
   <div class="_wrapper">
     <input v-model="valueInner" class="pep-input" v-bind="$attrs" />
-    <Pepicon
-      class="icon"
-      :name="'loop'"
-      :type="'pop'"
-      :color="'mediumslateblue'"
-      :stroke="'black'"
-    />
+    <Pepicon class="icon" :name="'loop'" :type="type" :color="color" :stroke="'black'" />
   </div>
 </template>
 
