@@ -80,13 +80,21 @@ function setRandomColor() {
       />
 
       <IconButton
+        icon="color-picker"
+        :type="choices.type"
+        :color="choices.color"
+        :activeColor="choices.color"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
         @click="() => (colorPickerIsVisible = true)"
       />
 
       <IconButton
+        icon="refresh"
+        :type="choices.type"
+        :color="choices.color"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
         :isActive="true"
+        :activeColor="choices.color"
         @click="() => setRandomColor()"
       />
     </Stack>
