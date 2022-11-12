@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { ColorPicker } from 'vue-color-kit'
-import { cssVar } from '../helpers/colorHelpers'
+import { cssVar, getRandomColor } from '../helpers/colorHelpers'
 import { Choices } from '../types'
 import DialogWrapper from './DialogWrapper.vue'
 import IconButton from './IconButton.vue'
@@ -28,15 +28,25 @@ const colorSelection = [
 ]
 
 const colorPickerIsVisible = ref(false)
-
 function changeColor(color: any) {
   const alpha = ''
   const newValue = color.hex + alpha
-  emit('update:choices', { ...props.choices, color: newValue })
+  emit('update:choices', {
+    ...props.choices,
+    color: newValue,
+    randomColor: false,
+    colorPicker: true,
+  })
 }
 
 function setRandomColor() {
-  console.log(`TODO  ~!!!! `)
+  const randomColor = getRandomColor()
+  emit('update:choices', {
+    ...props.choices,
+    color: randomColor,
+    randomColor: true,
+    colorPicker: false,
+  })
 }
 </script>
 
@@ -77,7 +87,7 @@ function setRandomColor() {
         :backgroundColor="c"
         :isActive="choices.color === c"
         :activeColor="c"
-        @click="() => emit('update:choices', { ...choices, color: c })"
+        @click="() => emit('update:choices', { ...choices, color: c, colorPicker: false })"
       />
 
       <IconButton
@@ -85,6 +95,7 @@ function setRandomColor() {
         :type="choices.type"
         :color="choices.mode === 'dark' && choices.type === 'print' ? 'black' : choices.color"
         :stroke="choices.mode === 'dark' ? choices.color : 'black'"
+        :isActive="choices.colorPicker"
         :activeColor="choices.color"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
         @click="() => (colorPickerIsVisible = true)"
@@ -96,7 +107,7 @@ function setRandomColor() {
         :color="choices.mode === 'dark' && choices.type === 'print' ? 'black' : choices.color"
         :stroke="choices.mode === 'dark' ? choices.color : 'black'"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
-        :isActive="true"
+        :isActive="choices.randomColor"
         :activeColor="choices.color"
         @click="() => setRandomColor()"
       />

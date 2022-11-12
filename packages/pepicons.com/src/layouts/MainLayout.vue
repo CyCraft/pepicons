@@ -6,15 +6,23 @@ import PepHero from '../components/PepHero.vue'
 import PepLink from '../components/PepLink.vue'
 
 const isDarkMode = ref(false)
-const choices = ref<Choices>({ type: 'pop', mode: 'light', color: '#AB92F0' })
+const choices = ref<Choices>({
+  type: 'pop',
+  mode: 'light',
+  color: '#AB92F0',
+  randomColor: false,
+  colorPicker: false,
+})
 
 const generatedConfig = computed<Choices>(() => {
-  const { mode, type, color } = choices.value
+  const { mode, type, color, randomColor, colorPicker } = choices.value
   return {
     mode,
     type,
     color: mode === 'light' ? color : 'black',
     stroke: mode === 'light' ? 'black' : color,
+    randomColor,
+    colorPicker,
   }
 })
 
