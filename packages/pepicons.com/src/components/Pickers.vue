@@ -48,7 +48,7 @@ function setRandomColor() {
           icon="can"
           type="print"
           :color="choices.color"
-          backgroundColor="white"
+          :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'print'"
           :activeColor="choices.color"
           animationClass="anime-shake"
@@ -60,7 +60,7 @@ function setRandomColor() {
           icon="can"
           type="pop"
           :color="choices.color"
-          backgroundColor="white"
+          :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'pop'"
           :activeColor="choices.color"
           animationClass="anime-shake"
@@ -79,9 +79,16 @@ function setRandomColor() {
         @click="() => emit('update:choices', { ...choices, color: c })"
       />
 
-      <IconButton :backgroundColor="'white'" @click="() => (colorPickerIsVisible = true)" />
+      <IconButton
+        :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
+        @click="() => (colorPickerIsVisible = true)"
+      />
 
-      <IconButton :backgroundColor="'white'" :isActive="true" @click="() => setRandomColor()" />
+      <IconButton
+        :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
+        :isActive="true"
+        @click="() => setRandomColor()"
+      />
     </Stack>
 
     <Stack class="picker" classes="justify-center">
