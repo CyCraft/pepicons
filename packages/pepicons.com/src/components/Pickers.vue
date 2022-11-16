@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
 import { ColorPicker } from 'vue-color-kit'
 import { cssVar, getRandomColor } from '../helpers/colorHelpers'
-import { Choices } from '../types'
+import { Choices, GeneratedConfig } from '../types'
 import DialogWrapper from './DialogWrapper.vue'
 import IconButton from './IconButton.vue'
 import Stack from './Stack.vue'
@@ -10,6 +10,7 @@ import Tooltip from './Tooltip.vue'
 
 const props = defineProps<{
   choices: Choices
+  generatedConfig: GeneratedConfig
 }>()
 
 const emit = defineEmits<{
@@ -34,27 +35,17 @@ function changeColor(color: any) {
   emit('update:choices', {
     ...props.choices,
     color: newValue,
-    randomColor: false,
+    randomColor: null,
     colorPicker: true,
   })
 }
-
-const randomColorInner = ref<string>('')
-watch(
-  () => props.choices.color,
-  (newVal) => {
-    if (props.choices.randomColor) {
-      randomColorInner.value = getRandomColor()
-    }
-  },
-)
 
 function setRandomColor() {
   const randomColor = getRandomColor()
   emit('update:choices', {
     ...props.choices,
     color: randomColor,
-    randomColor: true,
+    randomColor: randomColor,
     colorPicker: false,
   })
 }
@@ -67,17 +58,11 @@ function setRandomColor() {
         <IconButton
           icon="can"
           type="print"
-          :color="choices.mode === 'light' ? choices.color : 'black'"
-          :stroke="
-            choices.mode === 'light'
-              ? 'black'
-              : choices.mode === 'dark' && choices.randomColor
-              ? randomColorInner
-              : choices.color
-          "
+          :color="choices.mode === 'dark' ? 'black' : choices.color"
+          :stroke="choices.mode === 'dark' ? choices.color : 'black'"
           :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'print'"
-          :activeColor="choices.randomColor ? randomColorInner : choices.color"
+          :activeColor="choices.color"
           animationClass="anime-shake"
           @click="() => emit('update:choices', { ...choices, type: 'print' })"
         />
@@ -86,7 +71,7 @@ function setRandomColor() {
         <IconButton
           icon="can"
           type="pop"
-          :color="choices.randomColor ? randomColorInner : choices.color"
+          :color="choices.color"
           :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'pop'"
           :activeColor="choices.color"
@@ -105,15 +90,15 @@ function setRandomColor() {
         :activeColor="c"
         @click="
           () =>
-            emit('update:choices', { ...choices, color: c, colorPicker: false, randomColor: false })
+            emit('update:choices', { ...choices, color: c, colorPicker: false, randomColor: null })
         "
       />
 
       <IconButton
         icon="color-picker"
         :type="choices.type"
-        :color="choices.mode === 'dark' && choices.type === 'print' ? 'black' : choices.color"
-        :stroke="choices.mode === 'dark' ? choices.color : 'black'"
+        :color="generatedConfig.color"
+        :stroke="generatedConfig.stroke"
         :isActive="choices.colorPicker"
         :activeColor="choices.color"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
@@ -123,10 +108,10 @@ function setRandomColor() {
       <IconButton
         icon="refresh"
         :type="choices.type"
-        :color="choices.mode === 'dark' && choices.type === 'print' ? 'black' : choices.color"
-        :stroke="choices.mode === 'dark' ? choices.color : 'black'"
+        :color="generatedConfig.color"
+        :stroke="generatedConfig.stroke"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
-        :isActive="choices.randomColor"
+        :isActive="!!choices.randomColor"
         :activeColor="choices.color"
         @click="() => setRandomColor()"
       />
@@ -153,7 +138,7 @@ function setRandomColor() {
 
     <DialogWrapper :isVisible="colorPickerIsVisible" @close="colorPickerIsVisible = false">
       <ColorPicker
-        :theme="choices.mode === 'dark' ? 'dark' : 'light'"
+        :theme="choices.mode"
         :color="choices.color"
         @changeColor="(val) => changeColor(val)"
       />

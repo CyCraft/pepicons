@@ -1,28 +1,17 @@
 <script lang="ts" setup>
 import { Pepicon } from '@pepicons/vue'
 import { PepiconName, synonyms } from 'pepicons'
-import { computed, ref, watch } from 'vue'
-import { getRandomColor } from '../helpers/colorHelpers'
+import { computed } from 'vue'
 import { cleanupForSearch } from '../helpers/search'
 
 const props = defineProps<{
   name: PepiconName
   type: 'pop' | 'print'
   color: string
+  stroke: string
   searchInput?: string
   mode: string
-  randomColor: boolean
 }>()
-
-const randomColorInner = ref<string>('')
-watch(
-  () => props.color,
-  (newVal) => {
-    if (props.randomColor) {
-      randomColorInner.value = getRandomColor()
-    }
-  },
-)
 
 const searchInputSynonymHit = computed(() => {
   const searchText = cleanupForSearch(props.searchInput || '')
@@ -43,32 +32,7 @@ const synonymHtml = computed(() => {
 
 <template>
   <div class="icon-tile">
-    <Pepicon
-      class="_svg"
-      :type="type"
-      :color="
-        mode === 'dark' && type === 'print' && randomColor === false
-          ? 'black'
-          : mode === 'dark' && type === 'print' && randomColor === true
-          ? 'black'
-          : mode === 'dark' && type === 'pop' && randomColor === true
-          ? randomColorInner
-          : mode === 'light' && type === 'pop' && randomColor === true
-          ? randomColorInner
-          : mode === 'light' && type === 'print' && randomColor === true
-          ? randomColorInner
-          : color
-      "
-      :stroke="
-        mode === 'dark' && type === 'print' && randomColor === false
-          ? color
-          : mode === 'dark' && type === 'print' && randomColor === true
-          ? randomColorInner
-          : 'black'
-      "
-      :name="name"
-      size="26px"
-    />
+    <Pepicon class="_svg" :type="type" :color="color" :stroke="stroke" :name="name" size="26px" />
     <div class="_name">
       <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
         {{ name }}

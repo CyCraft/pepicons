@@ -1,28 +1,57 @@
 <script lang="ts" setup>
-import { Choices } from 'src/types'
+import { pepiconArray, PepiconName } from 'pepicons'
 import { computed, ref, watch } from 'vue'
 import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue'
 import PepHero from '../components/PepHero.vue'
 import PepLink from '../components/PepLink.vue'
+import { getRandomColor } from '../helpers/colorHelpers'
+import { Choices, GeneratedConfig } from '../types'
 
-const isDarkMode = ref(false)
 const choices = ref<Choices>({
   type: 'print',
   mode: 'light',
   color: '#AB92F0',
-  randomColor: false,
+  randomColor: null,
   colorPicker: false,
 })
 
-const generatedConfig = computed<Choices>(() => {
+const pepiconRandomColorDic = ref<{ [key in PepiconName]?: string }>({})
+// you can pass this pepiconRandomColorDic
+// you need to be able to easily set and reset every color in the `pepiconRandomColorDic`
+function setRandomColors() {
+  pepiconArray.forEach((iconName) => {
+    pepiconRandomColorDic.value[iconName] = getRandomColor()
+  })
+}
+watch(
+  () => choices.value.randomColor,
+  () => setRandomColors(),
+)
+
+const generatedConfig = computed<GeneratedConfig>(() => {
   const { mode, type, color, randomColor, colorPicker } = choices.value
+
+  const isDarkPrint = mode === 'dark' && type === 'print'
+
+  const randDic = Object.entries(pepiconRandomColorDic.value).reduce((result, keyVal) => {
+    const icon = keyVal[0]
+    const randCol = keyVal[1]
+
+    result[icon] = {
+      color: isDarkPrint ? 'black' : randCol,
+      stroke: isDarkPrint ? randCol : 'black',
+    }
+    return result
+  }, {})
+
   return {
     mode,
     type,
-    color: mode === 'light' ? color : 'black',
-    stroke: mode === 'light' ? 'black' : color,
+    color: isDarkPrint ? 'black' : color,
+    stroke: isDarkPrint ? color : 'black',
     randomColor,
     colorPicker,
+    randDic,
   }
 })
 
@@ -40,13 +69,13 @@ watch(
   <div style="overflow-x: hidden" class="wrapper">
     <header>
       <PepHero style="width: 100vw" class="full-width mb-md">
-        <PepHeaderDecorationLight :isDarkMode="isDarkMode" />
+        <PepHeaderDecorationLight :isDarkMode="choices.mode === 'dark'" />
       </PepHero>
     </header>
 
     {{ choices }}
 
-    <router-view v-model:choices="choices" />
+    <router-view v-model:choices="choices" :generatedConfig="generatedConfig" />
 
     <div class="pb-xxxl"></div>
     <div class="footer">

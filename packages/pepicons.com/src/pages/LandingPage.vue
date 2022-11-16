@@ -2,7 +2,6 @@
 import {
   categories,
   Pepicon,
-  pepiconArray,
   pepiconCategoryDic,
   PepiconName,
   synonyms,
@@ -20,10 +19,11 @@ import Stack from '../components/Stack.vue'
 import { getRandomColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
-import { Choices } from '../types'
+import { Choices, GeneratedConfig } from '../types'
 
 const props = defineProps<{
   choices: Choices
+  generatedConfig: GeneratedConfig
 }>()
 
 const emit = defineEmits<{
@@ -80,17 +80,6 @@ const scrollPageTo = (navEl) => {
 
   element?.scrollIntoView({ block: 'center', behavior: 'smooth' })
 }
-
-const pepiconRandomColorDic = ref<{ [key in PepiconName]?: string }>({})
-
-// you can pass this pepiconRandomColorDic
-// you need to be able to easily set and reset every color in the `pepiconRandomColorDic`
-function setRandomColors() {
-  pepiconArray.forEach((iconName) => {
-    pepiconRandomColorDic.value[iconName] = getRandomColor()
-  })
-}
-setRandomColors()
 
 // choices represents the buttons the user can click
 // we want to have a 1-1 binding between the choices ref
@@ -158,21 +147,16 @@ setRandomColors()
       </div>
       <Pickers
         class="mb-md"
+        :generatedConfig="generatedConfig"
         :choices="choices"
         @update:choices="(payload) => emit('update:choices', payload)"
       />
       <PepInput
         id="top"
         v-model="searchInput"
-        :type="choices.type"
-        :color="choices.mode === 'light' ? choices.color : 'black'"
-        :stroke="
-          choices.mode === 'light'
-            ? 'black'
-            : choices.mode === 'dark' && choices.randomColor
-            ? randomColorInner
-            : choices.color
-        "
+        :type="generatedConfig.type"
+        :color="generatedConfig.color"
+        :stroke="generatedConfig.stroke"
         class="mb-xxl"
         :debounce="200"
         @blur="() => setUrlQuery(searchInput)"
@@ -184,7 +168,7 @@ setRandomColors()
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
             :searchInput="searchInput"
-            :choices="choices"
+            :generatedConfig="generatedConfig"
             @clickTile="openIconModal"
           />
         </div>
