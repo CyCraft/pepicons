@@ -72,16 +72,18 @@ watch(
         <PepHeaderDecorationLight :isDarkMode="choices.mode === 'dark'" />
       </PepHero>
     </header>
-
-    {{ choices }}
-
     <router-view v-model:choices="choices" :generatedConfig="generatedConfig" />
 
     <div class="pb-xxxl"></div>
     <div class="footer">
       <div class="mb-md">
         Pepicons was made with 💜 by
-        <PepLink href="https://cycraft.co" content="cycraft.co" retroUnderline />
+        <PepLink
+          href="https://cycraft.co"
+          content="cycraft.co"
+          retroUnderline
+          :lineColor="choices.color"
+        />
       </div>
       <div>© Copyright CyCraft, {{ new Date().getFullYear() }}</div>
     </div>

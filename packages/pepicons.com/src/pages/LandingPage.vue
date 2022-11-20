@@ -80,38 +80,6 @@ const scrollPageTo = (navEl) => {
 
   element?.scrollIntoView({ block: 'center', behavior: 'smooth' })
 }
-
-// choices represents the buttons the user can click
-// we want to have a 1-1 binding between the choices ref
-// and the color pickers / light/dark pickers etc.
-// we want to avoid any ternaries or conditional stuff for this
-
-// wherever we are showing icons based on the choices, we
-// pass down the `generatedConfig` and have pretty much all
-// conditional logic contained inside there
-// the only exemption being if the color is randomized
-
-// we ALSO pass down `pepiconRandomColorDic` everywhere we
-// pass the `generatedConfig` to make sure we can have a single
-// SIMPLE ternary between the random color and the color from
-// generatedConfig.
-// ```js
-// :color="generatedConfig.color === 'random' ? pepiconRandomColorDic[iconName] : generatedConfig.color"
-// ```
-
-// finally we wanna make sure that the `choices` ref is
-// properly mutated when the user clicks buttons
-// and as a SIDE EFFECT we wanna call `setRandomColors`
-// every time the randomize button is clicked
-
-// refactor strategy:
-// - [x] delete any code related to iconConfig
-// - [x] this starts usually with deleting props
-// - [x] then you change everything that relied on those props with hard-coded strings
-// once you got rid of all iconConfig old logic and wording
-// - [ ] you add your new props to the prop definitions
-// - [ ] you pass the new props from the parent
-// - [ ] you replace your hard-coded strings with the new props
 </script>
 
 <template>
@@ -143,6 +111,7 @@ const scrollPageTo = (navEl) => {
           href="https://github.com/sponsors/mesqueeb"
           content="sponsoring us on GitHub"
           retroUnderline
+          :lineColor="generatedConfig.color"
         />!
       </div>
       <Pickers
