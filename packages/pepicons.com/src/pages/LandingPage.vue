@@ -111,7 +111,7 @@ const scrollPageTo = (navEl) => {
           href="https://github.com/sponsors/mesqueeb"
           content="sponsoring us on GitHub"
           retroUnderline
-          :lineColor="generatedConfig.color"
+          :lineColor="choices.color"
         />!
       </div>
       <Pickers

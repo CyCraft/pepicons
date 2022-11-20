@@ -15,7 +15,7 @@ const props = defineProps<{
 const svgString = computed<string>(() =>
   pepiconSvgString({
     name: 'hand-point',
-    color: 'mediumslateblue',
+    color: props.lineColor,
     type: 'pop',
     stroke: 'black',
   }).replace(/\n/g, ''),
