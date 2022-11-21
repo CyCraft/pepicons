@@ -53,7 +53,7 @@ export default defineConfig({
           examples: ({ name }) => `./${name}.example.vue`,
         },
         {
-          component: './src/components/IconInfo.vue',
+          component: './src/components/IconDetails.vue',
           examples: ({ name }) => `./${name}.example.vue`,
         },
         {

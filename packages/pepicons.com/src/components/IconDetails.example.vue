@@ -1,12 +1,12 @@
 <script lang="ts" setup>
-import IconInfo from './IconInfo.vue'
+import IconDetails from './IconDetails.vue'
 import { choices, generatedColors, randomColorDic } from './mocks'
 </script>
 
 <docs darkExample></docs>
 
 <template>
-  <IconInfo
+  <IconDetails
     icon="airplane"
     :choices="choices"
     :generatedColors="generatedColors"

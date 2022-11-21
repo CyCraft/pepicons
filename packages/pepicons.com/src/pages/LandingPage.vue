@@ -9,8 +9,8 @@ import {
 } from 'pepicons'
 import { computed, ref } from 'vue'
 import DialogWrapper from '../components/DialogWrapper.vue'
+import IconDetails from '../components/IconDetails.vue'
 import IconGrid from '../components/IconGrid.vue'
-import IconInfo from '../components/IconInfo.vue'
 import PepInput from '../components/PepInput.vue'
 import PepLink from '../components/PepLink.vue'
 import Pickers from '../components/Pickers.vue'
@@ -192,7 +192,7 @@ const scrollPageTo = (navEl) => {
     </div>
   </div>
   <DialogWrapper :isVisible="iconInfoIsVisible" @close="iconInfoIsVisible = false">
-    <IconInfo
+    <IconDetails
       :icon="iconInfoName"
       :choices="choices"
       :generatedColors="generatedColors"
