@@ -23,8 +23,8 @@ const c = computed(() => props.generatedConfig)
     <div v-for="name in iconNames.slice(0, 1)" :key="name" class="anim-grid-item">
       <IconTile
         :type="c.type"
-        :color="c.randomColor ? c.randDic[name]?.color || '' : c.color"
-        :stroke="c.randomColor ? c.randDic[name]?.stroke || '' : c.stroke"
+        :color="c.randomColor ? c.randomColorDic[name]?.color || '' : c.color"
+        :stroke="c.randomColor ? c.randomColorDic[name]?.stroke || '' : c.stroke"
         :mode="c.mode"
         :name="name"
         :searchInput="searchInput"

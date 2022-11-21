@@ -33,13 +33,12 @@ const generatedConfig = computed<GeneratedConfig>(() => {
 
   const isDarkPrint = mode === 'dark' && type === 'print'
 
-  const randDic = Object.entries(pepiconRandomColorDic.value).reduce((result, keyVal) => {
-    const icon = keyVal[0]
-    const randCol = keyVal[1]
+  const randomColorDic = Object.entries(pepiconRandomColorDic.value).reduce((result, keyVal) => {
+    const [icon, randomColor] = keyVal
 
     result[icon] = {
-      color: isDarkPrint ? 'black' : randCol,
-      stroke: isDarkPrint ? randCol : 'black',
+      color: isDarkPrint ? 'black' : randomColor,
+      stroke: isDarkPrint ? randomColor : 'black',
     }
     return result
   }, {})
@@ -51,7 +50,7 @@ const generatedConfig = computed<GeneratedConfig>(() => {
     stroke: isDarkPrint ? color : 'black',
     randomColor,
     colorPicker,
-    randDic,
+    randomColorDic,
   }
 })
 

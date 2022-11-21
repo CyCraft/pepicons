@@ -16,5 +16,5 @@ export type GeneratedConfig = {
   randomColor: string | null
   colorPicker: boolean
   stroke: string
-  randDic: { [key in PepiconName]?: { color: string; stroke: string } }
+  randomColorDic: { [key in PepiconName]?: { color: string; stroke: string } }
 }
