@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { PepiconName } from 'pepicons'
-import { computed } from 'vue'
 import IconGrid from './IconGrid.vue'
+import { generatedConfig } from './mocks'
 
 const icons: PepiconName[] = [
   'bluetooth',
@@ -36,15 +36,7 @@ const icons: PepiconName[] = [
   'trash',
   'wifi',
 ]
-
-const configComputed = computed(() => {
-  const type = 'print' as const
-  const color = '#ab92f0'
-  const stroke = '#01fa'
-
-  return { type, color, stroke }
-})
 </script>
 <template>
-  <IconGrid :iconNames="icons" :config="configComputed" />
+  <IconGrid :iconNames="icons" searchInput="" :generatedConfig="generatedConfig" />
 </template>
