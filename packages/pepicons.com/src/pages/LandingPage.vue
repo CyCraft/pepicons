@@ -47,8 +47,7 @@ watch(
 const categoryIconNamesDic = computed(() =>
   Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
     if (!(iconCategory in dic)) dic[iconCategory] = []
-    const iconNonExistent = false
-    // const iconNonExistent = config.value.type === 'print' && iconName.endsWith('-filled')
+    const iconNonExistent = props.choices.type === 'print' && iconName.endsWith('-filled')
     if (iconNonExistent) return dic
     const searchText = cleanupForSearch(searchInput.value)
     if (searchText) {

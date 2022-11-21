@@ -10,7 +10,6 @@ const props = defineProps<{
   color: string
   stroke: string
   searchInput?: string
-  mode: string
 }>()
 
 const searchInputSynonymHit = computed(() => {
