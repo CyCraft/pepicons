@@ -23,8 +23,8 @@ function setRandomColors() {
   })
 }
 watch(
-  () => choices.value.colorOrigin,
-  (origin) => {
+  () => [choices.value.colorOrigin, choices.value.color],
+  ([origin]) => {
     if (origin === 'randomizer') setRandomColors()
   },
 )
