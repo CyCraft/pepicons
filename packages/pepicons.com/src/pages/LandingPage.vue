@@ -7,7 +7,7 @@ import {
   synonyms,
   synonymsJa,
 } from 'pepicons'
-import { computed, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 import DialogWrapper from '../components/DialogWrapper.vue'
 import IconGrid from '../components/IconGrid.vue'
 import IconInfo from '../components/IconInfo.vue'
@@ -16,14 +16,14 @@ import PepLink from '../components/PepLink.vue'
 import Pickers from '../components/Pickers.vue'
 import ProfileCard from '../components/ProfileCard.vue'
 import Stack from '../components/Stack.vue'
-import { getRandomColor } from '../helpers/colorHelpers'
 import { cleanupForSearch } from '../helpers/search'
 import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
-import { Choices, GeneratedConfig } from '../types'
+import { Choices, GeneratedConfig, RandomColorDic } from '../types'
 
 const props = defineProps<{
   choices: Choices
   generatedConfig: GeneratedConfig
+  randomColorDic: RandomColorDic
 }>()
 
 const emit = defineEmits<{
@@ -33,16 +33,6 @@ const emit = defineEmits<{
 const hash = getQueryFromUrl()
 
 const searchInput = ref(hash || '')
-
-const randomColorInner = ref<string>('')
-watch(
-  () => props.choices.color,
-  (newVal) => {
-    if (props.choices.randomColor) {
-      randomColorInner.value = getRandomColor()
-    }
-  },
-)
 
 const categoryIconNamesDic = computed(() =>
   Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
@@ -69,9 +59,8 @@ const categoryIconNamesDic = computed(() =>
 const iconInfoIsVisible = ref(false)
 const iconInfoName = ref<PepiconName>('airplane')
 function openIconModal(icon: PepiconName): void {
-  console.log(`icon → `, icon)
-  // iconInfoIsVisible.value = true
-  // iconInfoName.value = icon
+  iconInfoName.value = icon
+  iconInfoIsVisible.value = true
 }
 const scrollPageTo = (navEl) => {
   console.log(`#${navEl}`)
@@ -135,8 +124,10 @@ const scrollPageTo = (navEl) => {
           <div class="text-section-title">{{ category }}</div>
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
-            :searchInput="searchInput"
+            :choices="choices"
             :generatedConfig="generatedConfig"
+            :randomColorDic="randomColorDic"
+            :searchInput="searchInput"
             @clickTile="openIconModal"
           />
         </div>
@@ -201,7 +192,12 @@ const scrollPageTo = (navEl) => {
     </div>
   </div>
   <DialogWrapper :isVisible="iconInfoIsVisible" @close="iconInfoIsVisible = false">
-    <IconInfo />
+    <IconInfo
+      :icon="iconInfoName"
+      :choices="choices"
+      :generatedConfig="generatedConfig"
+      :randomColorDic="randomColorDic"
+    />
   </DialogWrapper>
 </template>
 

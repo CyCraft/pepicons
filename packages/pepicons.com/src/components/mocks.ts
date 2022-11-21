@@ -1,19 +1,17 @@
-import { Choices, GeneratedConfig } from 'src/types'
+import { Choices, GeneratedConfig, RandomColorDic } from '../types'
 
 export const choices: Choices = {
   type: 'pop',
   mode: 'light',
   color: 'mediumslateblue',
-  randomColor: null,
-  colorPicker: false,
+  colorOrigin: 'preset',
 }
 
 export const generatedConfig: GeneratedConfig = {
   type: 'pop',
   mode: 'light',
   color: 'mediumslateblue',
-  randomColor: null,
-  colorPicker: false,
   stroke: 'black',
-  randomColorDic: { airplane: { color: 'goldenrod', stroke: 'black' } },
 }
+
+export const randomColorDic: RandomColorDic = { airplane: { color: 'goldenrod', stroke: 'black' } }

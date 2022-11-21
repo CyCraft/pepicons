@@ -29,14 +29,13 @@ const colorSelection = [
 ]
 
 const colorPickerIsVisible = ref(false)
-function changeColor(color: any) {
+function pickColor(color: any) {
   const alpha = ''
   const newValue = color.hex + alpha
   emit('update:choices', {
     ...props.choices,
     color: newValue,
-    randomColor: null,
-    colorPicker: true,
+    colorOrigin: 'picker',
   })
 }
 
@@ -45,8 +44,7 @@ function setRandomColor() {
   emit('update:choices', {
     ...props.choices,
     color: randomColor,
-    randomColor: randomColor,
-    colorPicker: false,
+    colorOrigin: 'randomizer',
   })
 }
 </script>
@@ -85,11 +83,8 @@ function setRandomColor() {
         v-for="c in colorSelection"
         :key="c"
         :backgroundColor="c"
-        :isActive="choices.color === c"
-        @click="
-          () =>
-            emit('update:choices', { ...choices, color: c, colorPicker: false, randomColor: null })
-        "
+        :isActive="choices.color === c && choices.colorOrigin === 'preset'"
+        @click="() => emit('update:choices', { ...choices, color: c, colorOrigin: 'preset' })"
       />
 
       <IconButton
@@ -97,7 +92,7 @@ function setRandomColor() {
         :type="choices.type"
         :color="generatedConfig.color"
         :stroke="generatedConfig.stroke"
-        :isActive="choices.colorPicker"
+        :isActive="choices.colorOrigin === 'picker'"
         :activeColor="choices.color"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
         @click="() => (colorPickerIsVisible = true)"
@@ -109,7 +104,7 @@ function setRandomColor() {
         :color="generatedConfig.color"
         :stroke="generatedConfig.stroke"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
-        :isActive="!!choices.randomColor"
+        :isActive="choices.colorOrigin === 'randomizer'"
         :activeColor="choices.color"
         @click="() => setRandomColor()"
       />
@@ -138,7 +133,7 @@ function setRandomColor() {
       <ColorPicker
         :theme="choices.mode"
         :color="choices.color"
-        @changeColor="(val) => changeColor(val)"
+        @changeColor="(val) => pickColor(val)"
       />
     </DialogWrapper>
   </Stack>

@@ -2,7 +2,9 @@
 import { Pepicon } from '@pepicons/vue'
 import copyToClipboard from 'copy-text-to-clipboard'
 import { PepiconName, pepiconSvgString } from 'pepicons'
-import { ref } from 'vue'
+import { Choices, GeneratedConfig, RandomColorDic } from 'src/types'
+import { computed, ref } from 'vue'
+import { generateVueCode } from '../helpers/codeExampleHelpers'
 import { base64ToBlob, svgToBase64Png } from '../helpers/conversion'
 import { downloadBase64AsFile, downloadFile } from '../helpers/download'
 import CodeBlock from './CodeBlock.vue'
@@ -10,32 +12,12 @@ import HtmlButton from './HtmlButton.vue'
 import IconButton from './IconButton.vue'
 import Tabs from './Tabs.vue'
 
-function generateVueCode(payload: {
-  name: PepiconName
-  type: 'pop' | 'print'
-  color: string
-  stroke: string
-}): string {
-  const _stroke =
-    payload.stroke && payload.stroke !== 'black' ? `\n    stroke="${payload.stroke}"` : ''
-  return `<template>
-  <Pepicon
-    name="${payload.name}"
-    type="${payload.type}"
-    color="${payload.color}"${_stroke}
-  />
-</template>
-
-<script lang="js">
-import { Pepicon } from '@pepicons/vue'
-
-export default {
-  components: { Pepicon }
-}
-<\/script>`
-}
-
-// const props = defineProps<{}>()
+const props = defineProps<{
+  icon: PepiconName
+  choices: Choices
+  generatedConfig: GeneratedConfig
+  randomColorDic: RandomColorDic
+}>()
 
 const selectedTab = ref<'Vue' | 'SVG'>('Vue')
 const codeShown = ref(false)
@@ -44,57 +26,78 @@ const copySvgDone = ref(false)
 const downloadPngDone = ref(false)
 const copyPngDone = ref(false)
 
-const codeSvg = pepiconSvgString({
-  name: 'airplane',
-  type: 'pop',
-  color: 'mediumslateblue',
-  stroke: 'black',
+const activeColorGenerated = computed(() => {
+  const { icon, choices, randomColorDic } = props
+  return choices.colorOrigin === 'randomizer'
+    ? choices.mode === 'dark' && choices.type === 'print'
+      ? randomColorDic[icon]?.stroke || ''
+      : randomColorDic[icon]?.color || ''
+    : choices.color
 })
-const codeVue = generateVueCode({
-  name: 'airplane',
-  type: 'pop',
-  color: 'mediumslateblue',
-  stroke: 'black',
+const colorGenerated = computed(() => {
+  const { icon, choices, randomColorDic, generatedConfig } = props
+  return choices.colorOrigin === 'randomizer'
+    ? randomColorDic[icon]?.color || ''
+    : generatedConfig.color
+})
+const strokeGenerated = computed(() => {
+  const { icon, choices, randomColorDic, generatedConfig } = props
+  return choices.colorOrigin === 'randomizer'
+    ? randomColorDic[icon]?.stroke || ''
+    : generatedConfig.stroke
 })
 
+const codeSvg = computed(() =>
+  pepiconSvgString({
+    name: props.icon,
+    type: props.choices.type,
+    color: colorGenerated.value,
+    stroke: strokeGenerated.value,
+  }),
+)
+
+const codeSvgLg = computed(() =>
+  pepiconSvgString({
+    name: props.icon,
+    type: props.choices.type,
+    color: colorGenerated.value,
+    stroke: strokeGenerated.value,
+    size: '48px',
+  }),
+)
+
+const codeVue = computed(() =>
+  generateVueCode({
+    name: props.icon,
+    type: props.choices.type,
+    color: colorGenerated.value,
+    stroke: strokeGenerated.value,
+  }),
+)
+
 function downloadSvg(): void {
-  downloadFile(codeSvg, `airplane.svg`)
+  downloadFile(codeSvg.value, `${props.icon}.svg`)
   downloadSvgDone.value = true
 }
 
 function copySvg(): void {
-  const copied = copyToClipboard(codeSvg)
+  const copied = copyToClipboard(codeSvg.value)
   copySvgDone.value = copied
 }
 
 async function downloadPng(): Promise<void> {
-  const _codeSvg = pepiconSvgString({
-    name: 'airplane',
-    type: 'pop',
-    color: 'mediumslateblue',
-    stroke: 'black',
-    size: '48px',
-  } as any)
-  const pngString = await svgToBase64Png(_codeSvg)
-  downloadBase64AsFile(pngString, `airplane.png`)
+  const pngString = await svgToBase64Png(codeSvgLg.value)
+  downloadBase64AsFile(pngString, `${props.icon}.png`)
   downloadPngDone.value = true
 }
 
 async function copyPng(): Promise<void> {
-  const _codeSvg = pepiconSvgString({
-    name: 'airplane',
-    type: 'pop',
-    color: 'mediumslateblue',
-    stroke: 'black',
-    size: '48px',
-  } as any)
-  const pngString = await svgToBase64Png(_codeSvg)
+  const pngString = await svgToBase64Png(codeSvgLg.value)
   const item = new window.ClipboardItem({
     'image/png': base64ToBlob(pngString),
   })
-  // @ts-ignore
+
   if (window.navigator?.clipboard?.write) {
-    // @ts-ignore
     window.navigator.clipboard.write([item]).then(() => (copyPngDone.value = true))
   }
 }
@@ -105,17 +108,18 @@ async function copyPng(): Promise<void> {
     <HtmlButton
       v-model="codeShown"
       class="_toggle-code-button"
-      type="pop"
-      color="mediumslateblue"
-      stroke="black"
+      :type="choices.type"
+      :color="colorGenerated"
+      :stroke="strokeGenerated"
     />
+
     <div class="_code-section">
       <div>
         <Tabs
           v-model:selectedTab="selectedTab"
           class="_tab-panels"
           :tabs="['Vue', 'SVG']"
-          :color="'mediumslateblue'"
+          :activeColor="activeColorGenerated"
         >
           <template v-if="selectedTab === 'Vue'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
@@ -133,31 +137,68 @@ async function copyPng(): Promise<void> {
 
     <div class="_top-door" :class="{ '_top-door-transform': codeShown }">
       <Pepicon
-        :name="'airplane'"
-        :type="'pop'"
-        :color="'mediumslateblue'"
-        :stroke="'black'"
+        :name="icon"
+        :type="choices.type"
+        :color="colorGenerated"
+        :stroke="strokeGenerated"
         size="80px"
       />
-      <div class="text-h5 mt-xl">{{ 'airplane' }}</div>
+
+      <div class="text-h5 mt-xl">{{ icon }}</div>
     </div>
     <div class="_bottom-door text-h6 px-xl" :class="{ '_bottom-door-transform': codeShown }">
       <div class="flex-center relative">
         <div>SVG</div>
+
         <div class="flex gutter-x-sm mt-xs">
-          <!-- name: 'cloud-down', -->
-          <IconButton :isActive="downloadSvgDone" @click="downloadSvg" />
-          <!-- name: 'clipboard', -->
-          <IconButton :isActive="copySvgDone" @click="copySvg" />
+          <IconButton
+            :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+            icon="cloud-down"
+            :type="choices.type"
+            :color="colorGenerated"
+            :stroke="strokeGenerated"
+            :activeColor="activeColorGenerated"
+            :isActive="downloadSvgDone"
+            @click="() => downloadSvg()"
+          />
+
+          <IconButton
+            :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+            icon="clipboard"
+            :type="choices.type"
+            :color="colorGenerated"
+            :stroke="strokeGenerated"
+            :activeColor="activeColorGenerated"
+            :isActive="copySvgDone"
+            @click="() => copySvg()"
+          />
         </div>
       </div>
       <div class="flex-center">
         <div>PNG</div>
+
         <div class="flex gutter-x-sm mt-xs">
-          <!-- name: 'cloud-down', -->
-          <IconButton :isActive="downloadPngDone" @click="downloadPng" />
-          <!-- name: 'clipboard', -->
-          <IconButton :isActive="copyPngDone" @click="copyPng" />
+          <IconButton
+            :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+            icon="cloud-down"
+            :type="choices.type"
+            :color="colorGenerated"
+            :stroke="strokeGenerated"
+            :activeColor="activeColorGenerated"
+            :isActive="downloadPngDone"
+            @click="() => downloadPng()"
+          />
+
+          <IconButton
+            :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+            icon="clipboard"
+            :type="choices.type"
+            :color="colorGenerated"
+            :stroke="strokeGenerated"
+            :activeColor="activeColorGenerated"
+            :isActive="copyPngDone"
+            @click="() => copyPng()"
+          />
         </div>
       </div>
     </div>

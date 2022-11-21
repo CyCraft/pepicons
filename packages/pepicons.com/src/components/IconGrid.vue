@@ -1,30 +1,37 @@
 <script lang="ts" setup>
 import { PepiconName } from 'pepicons'
-import { computed } from 'vue'
-import { GeneratedConfig } from '../types'
+import { Choices, GeneratedConfig, RandomColorDic } from '../types'
 import IconTile from './IconTile.vue'
 
 const props = defineProps<{
   iconNames: PepiconName[]
   searchInput: string
+  choices: Choices
   generatedConfig: GeneratedConfig
+  randomColorDic: RandomColorDic
 }>()
 const emit = defineEmits(['click-tile'])
 
 function clickTile(icon: string): void {
   emit('click-tile', icon)
 }
-
-const c = computed(() => props.generatedConfig)
 </script>
 
 <template>
   <transition-group class="icon-grid" name="anim-grid" tag="div">
     <div v-for="name in iconNames" :key="name" class="anim-grid-item">
       <IconTile
-        :type="c.type"
-        :color="c.randomColor ? c.randomColorDic[name]?.color || '' : c.color"
-        :stroke="c.randomColor ? c.randomColorDic[name]?.stroke || '' : c.stroke"
+        :type="choices.type"
+        :color="
+          choices.colorOrigin === 'randomizer'
+            ? randomColorDic[name]?.color || ''
+            : generatedConfig.color
+        "
+        :stroke="
+          choices.colorOrigin === 'randomizer'
+            ? randomColorDic[name]?.stroke || ''
+            : generatedConfig.stroke
+        "
         :name="name"
         :searchInput="searchInput"
         @click="() => clickTile(name)"

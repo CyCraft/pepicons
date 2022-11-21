@@ -5,14 +5,13 @@ import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue
 import PepHero from '../components/PepHero.vue'
 import PepLink from '../components/PepLink.vue'
 import { getRandomColor } from '../helpers/colorHelpers'
-import { Choices, GeneratedConfig } from '../types'
+import { Choices, GeneratedConfig, RandomColorDic } from '../types'
 
 const choices = ref<Choices>({
   type: 'print',
   mode: 'light',
   color: '#AB92F0',
-  randomColor: null,
-  colorPicker: false,
+  colorOrigin: 'preset',
 })
 
 const pepiconRandomColorDic = ref<{ [key in PepiconName]?: string }>({})
@@ -24,35 +23,40 @@ function setRandomColors() {
   })
 }
 watch(
-  () => choices.value.randomColor,
-  () => setRandomColors(),
+  () => choices.value.colorOrigin,
+  (origin) => {
+    if (origin === 'randomizer') setRandomColors()
+  },
 )
 
+const isDarkPrint = computed<boolean>(() => {
+  const { mode, type } = choices.value
+  return mode === 'dark' && type === 'print'
+})
+
 const generatedConfig = computed<GeneratedConfig>(() => {
-  const { mode, type, color, randomColor, colorPicker } = choices.value
-
-  const isDarkPrint = mode === 'dark' && type === 'print'
-
-  const randomColorDic = Object.entries(pepiconRandomColorDic.value).reduce((result, keyVal) => {
-    const [icon, randomColor] = keyVal
-
-    result[icon] = {
-      color: isDarkPrint ? 'black' : randomColor,
-      stroke: isDarkPrint ? randomColor : 'black',
-    }
-    return result
-  }, {})
+  const { mode, type, color, colorOrigin } = choices.value
 
   return {
     mode,
     type,
-    color: isDarkPrint ? 'black' : color,
-    stroke: isDarkPrint ? color : 'black',
-    randomColor,
-    colorPicker,
+    color: isDarkPrint.value ? 'black' : color,
+    stroke: isDarkPrint.value ? color : 'black',
     randomColorDic,
   }
 })
+
+const randomColorDic = computed<RandomColorDic>(() =>
+  Object.entries(pepiconRandomColorDic.value).reduce((result, keyVal) => {
+    const [icon, randomColor] = keyVal
+
+    result[icon] = {
+      color: isDarkPrint.value ? 'black' : randomColor,
+      stroke: isDarkPrint.value ? randomColor : 'black',
+    }
+    return result
+  }, {}),
+)
 
 document.body.classList.add(`${choices.value.mode}-mode`)
 
@@ -71,7 +75,11 @@ watch(
         <PepHeaderDecorationLight :isDarkMode="choices.mode === 'dark'" />
       </PepHero>
     </header>
-    <router-view v-model:choices="choices" :generatedConfig="generatedConfig" />
+    <router-view
+      v-model:choices="choices"
+      :generatedConfig="generatedConfig"
+      :randomColorDic="randomColorDic"
+    />
 
     <div class="pb-xxxl"></div>
     <div class="footer">
