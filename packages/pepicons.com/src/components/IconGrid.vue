@@ -1,13 +1,13 @@
 <script lang="ts" setup>
 import { PepiconName } from 'pepicons'
-import { Choices, GeneratedConfig, RandomColorDic } from '../types'
+import { Choices, GeneratedColors, RandomColorDic } from '../types'
 import IconTile from './IconTile.vue'
 
 const props = defineProps<{
   iconNames: PepiconName[]
   searchInput: string
   choices: Choices
-  generatedConfig: GeneratedConfig
+  generatedColors: GeneratedColors
   randomColorDic: RandomColorDic
 }>()
 const emit = defineEmits(['click-tile'])
@@ -25,12 +25,12 @@ function clickTile(icon: string): void {
         :color="
           choices.colorOrigin === 'randomizer'
             ? randomColorDic[name]?.color || ''
-            : generatedConfig.color
+            : generatedColors.color
         "
         :stroke="
           choices.colorOrigin === 'randomizer'
             ? randomColorDic[name]?.stroke || ''
-            : generatedConfig.stroke
+            : generatedColors.stroke
         "
         :name="name"
         :searchInput="searchInput"

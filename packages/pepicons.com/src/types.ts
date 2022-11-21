@@ -6,7 +6,7 @@ export type Choices = {
   color: string
   colorOrigin: 'preset' | 'picker' | 'randomizer'
 }
-export type GeneratedConfig = {
+export type GeneratedColors = {
   color: string
   stroke: string
 }

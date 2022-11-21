@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import IconInfo from './IconInfo.vue'
-import { choices, generatedConfig, randomColorDic } from './mocks'
+import { choices, generatedColors, randomColorDic } from './mocks'
 </script>
 
 <docs darkExample></docs>
@@ -9,7 +9,7 @@ import { choices, generatedConfig, randomColorDic } from './mocks'
   <IconInfo
     icon="airplane"
     :choices="choices"
-    :generatedConfig="generatedConfig"
+    :generatedColors="generatedColors"
     :randomColorDic="randomColorDic"
   />
 </template>

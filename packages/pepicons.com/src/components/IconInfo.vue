@@ -2,7 +2,7 @@
 import { Pepicon } from '@pepicons/vue'
 import copyToClipboard from 'copy-text-to-clipboard'
 import { PepiconName, pepiconSvgString } from 'pepicons'
-import { Choices, GeneratedConfig, RandomColorDic } from 'src/types'
+import { Choices, GeneratedColors, RandomColorDic } from 'src/types'
 import { computed, ref } from 'vue'
 import { generateVueCode } from '../helpers/codeExampleHelpers'
 import { base64ToBlob, svgToBase64Png } from '../helpers/conversion'
@@ -15,7 +15,7 @@ import Tabs from './Tabs.vue'
 const props = defineProps<{
   icon: PepiconName
   choices: Choices
-  generatedConfig: GeneratedConfig
+  generatedColors: GeneratedColors
   randomColorDic: RandomColorDic
 }>()
 
@@ -35,16 +35,16 @@ const activeColorGenerated = computed(() => {
     : choices.color
 })
 const colorGenerated = computed(() => {
-  const { icon, choices, randomColorDic, generatedConfig } = props
+  const { icon, choices, randomColorDic, generatedColors } = props
   return choices.colorOrigin === 'randomizer'
     ? randomColorDic[icon]?.color || ''
-    : generatedConfig.color
+    : generatedColors.color
 })
 const strokeGenerated = computed(() => {
-  const { icon, choices, randomColorDic, generatedConfig } = props
+  const { icon, choices, randomColorDic, generatedColors } = props
   return choices.colorOrigin === 'randomizer'
     ? randomColorDic[icon]?.stroke || ''
-    : generatedConfig.stroke
+    : generatedColors.stroke
 })
 
 const codeSvg = computed(() =>

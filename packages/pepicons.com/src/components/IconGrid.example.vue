@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { PepiconName } from 'pepicons'
 import IconGrid from './IconGrid.vue'
-import { choices, generatedConfig, randomColorDic } from './mocks'
+import { choices, generatedColors, randomColorDic } from './mocks'
 
 const icons: PepiconName[] = [
   'bluetooth',
@@ -42,7 +42,7 @@ const icons: PepiconName[] = [
     :iconNames="icons"
     searchInput=""
     :choices="choices"
-    :generatedConfig="generatedConfig"
+    :generatedColors="generatedColors"
     :randomColorDic="randomColorDic"
   />
 </template>

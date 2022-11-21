@@ -18,11 +18,11 @@ import ProfileCard from '../components/ProfileCard.vue'
 import Stack from '../components/Stack.vue'
 import { cleanupForSearch } from '../helpers/search'
 import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
-import { Choices, GeneratedConfig, RandomColorDic } from '../types'
+import { Choices, GeneratedColors, RandomColorDic } from '../types'
 
 const props = defineProps<{
   choices: Choices
-  generatedConfig: GeneratedConfig
+  generatedColors: GeneratedColors
   randomColorDic: RandomColorDic
 }>()
 
@@ -104,7 +104,7 @@ const scrollPageTo = (navEl) => {
       </div>
       <Pickers
         class="mb-md"
-        :generatedConfig="generatedConfig"
+        :generatedColors="generatedColors"
         :choices="choices"
         @update:choices="(payload) => emit('update:choices', payload)"
       />
@@ -112,8 +112,8 @@ const scrollPageTo = (navEl) => {
         id="top"
         v-model="searchInput"
         :type="choices.type"
-        :color="generatedConfig.color"
-        :stroke="generatedConfig.stroke"
+        :color="generatedColors.color"
+        :stroke="generatedColors.stroke"
         class="mb-xxl"
         :debounce="200"
         @blur="() => setUrlQuery(searchInput)"
@@ -125,7 +125,7 @@ const scrollPageTo = (navEl) => {
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
             :choices="choices"
-            :generatedConfig="generatedConfig"
+            :generatedColors="generatedColors"
             :randomColorDic="randomColorDic"
             :searchInput="searchInput"
             @clickTile="openIconModal"
@@ -195,7 +195,7 @@ const scrollPageTo = (navEl) => {
     <IconInfo
       :icon="iconInfoName"
       :choices="choices"
-      :generatedConfig="generatedConfig"
+      :generatedColors="generatedColors"
       :randomColorDic="randomColorDic"
     />
   </DialogWrapper>

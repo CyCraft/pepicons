@@ -2,7 +2,7 @@
 import { ref } from 'vue'
 import { ColorPicker } from 'vue-color-kit'
 import { cssVar, getRandomColor } from '../helpers/colorHelpers'
-import { Choices, GeneratedConfig } from '../types'
+import { Choices, GeneratedColors } from '../types'
 import DialogWrapper from './DialogWrapper.vue'
 import IconButton from './IconButton.vue'
 import Stack from './Stack.vue'
@@ -10,7 +10,7 @@ import Tooltip from './Tooltip.vue'
 
 const props = defineProps<{
   choices: Choices
-  generatedConfig: GeneratedConfig
+  generatedColors: GeneratedColors
 }>()
 
 const emit = defineEmits<{
@@ -90,8 +90,8 @@ function setRandomColor() {
       <IconButton
         icon="color-picker"
         :type="choices.type"
-        :color="generatedConfig.color"
-        :stroke="generatedConfig.stroke"
+        :color="generatedColors.color"
+        :stroke="generatedColors.stroke"
         :isActive="choices.colorOrigin === 'picker'"
         :activeColor="choices.color"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
@@ -101,8 +101,8 @@ function setRandomColor() {
       <IconButton
         icon="refresh"
         :type="choices.type"
-        :color="generatedConfig.color"
-        :stroke="generatedConfig.stroke"
+        :color="generatedColors.color"
+        :stroke="generatedColors.stroke"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
         :isActive="choices.colorOrigin === 'randomizer'"
         :activeColor="choices.color"

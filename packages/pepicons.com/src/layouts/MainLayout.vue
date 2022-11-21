@@ -5,7 +5,7 @@ import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue
 import PepHero from '../components/PepHero.vue'
 import PepLink from '../components/PepLink.vue'
 import { getRandomColor } from '../helpers/colorHelpers'
-import { Choices, GeneratedConfig, RandomColorDic } from '../types'
+import { Choices, GeneratedColors, RandomColorDic } from '../types'
 
 const choices = ref<Choices>({
   type: 'print',
@@ -34,7 +34,7 @@ const isDarkPrint = computed<boolean>(() => {
   return mode === 'dark' && type === 'print'
 })
 
-const generatedConfig = computed<GeneratedConfig>(() => ({
+const generatedColors = computed<GeneratedColors>(() => ({
   color: isDarkPrint.value ? 'black' : choices.value.color,
   stroke: isDarkPrint.value ? choices.value.color : 'black',
 }))
@@ -70,7 +70,7 @@ watch(
     </header>
     <router-view
       v-model:choices="choices"
-      :generatedConfig="generatedConfig"
+      :generatedColors="generatedColors"
       :randomColorDic="randomColorDic"
     />
 
