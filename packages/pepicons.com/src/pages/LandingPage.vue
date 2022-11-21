@@ -111,7 +111,7 @@ const scrollPageTo = (navEl) => {
       <PepInput
         id="top"
         v-model="searchInput"
-        :type="generatedConfig.type"
+        :type="choices.type"
         :color="generatedConfig.color"
         :stroke="generatedConfig.stroke"
         class="mb-xxl"

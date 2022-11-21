@@ -34,17 +34,10 @@ const isDarkPrint = computed<boolean>(() => {
   return mode === 'dark' && type === 'print'
 })
 
-const generatedConfig = computed<GeneratedConfig>(() => {
-  const { mode, type, color, colorOrigin } = choices.value
-
-  return {
-    mode,
-    type,
-    color: isDarkPrint.value ? 'black' : color,
-    stroke: isDarkPrint.value ? color : 'black',
-    randomColorDic,
-  }
-})
+const generatedConfig = computed<GeneratedConfig>(() => ({
+  color: isDarkPrint.value ? 'black' : choices.value.color,
+  stroke: isDarkPrint.value ? choices.value.color : 'black',
+}))
 
 const randomColorDic = computed<RandomColorDic>(() =>
   Object.entries(pepiconRandomColorDic.value).reduce((result, keyVal) => {

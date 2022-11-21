@@ -7,8 +7,6 @@ export type Choices = {
   colorOrigin: 'preset' | 'picker' | 'randomizer'
 }
 export type GeneratedConfig = {
-  type: 'pop' | 'print'
-  mode: 'dark' | 'light'
   color: string
   stroke: string
 }

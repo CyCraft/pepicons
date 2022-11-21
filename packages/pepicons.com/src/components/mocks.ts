@@ -8,8 +8,6 @@ export const choices: Choices = {
 }
 
 export const generatedConfig: GeneratedConfig = {
-  type: 'pop',
-  mode: 'light',
   color: 'mediumslateblue',
   stroke: 'black',
 }
