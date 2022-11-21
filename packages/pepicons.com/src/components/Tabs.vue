@@ -1,14 +1,15 @@
 <script lang="ts" setup>
-import { PropType } from 'vue'
+const props = defineProps<{
+  tabs: string[]
+  selectedTab: string
+  activeColor: string
+}>()
 
-const props = defineProps({
-  tabs: { type: Array as PropType<string[]>, required: true },
-  selectedTab: { type: String, required: true },
-  color: { type: String, required: true },
-})
-const emit = defineEmits(['selected', 'update:selectedTab'])
+const emit = defineEmits<{
+  (e: 'update:selectedTab', payload: string): void
+}>()
+
 function setTab(tab) {
-  emit('selected', tab)
   emit('update:selectedTab', tab)
 }
 </script>
@@ -46,10 +47,9 @@ ul
     cursor: pointer
     border-bottom: 2px solid transparent
     &:hover
-      background: RGBA(25,25,25,.05)
-      // background: grey
+      background: rgba(25, 25, 25, .05)
     &._selected-tab
-      border-bottom: 2px solid v-bind(color)
+      border-bottom: 2px solid v-bind(activeColor)
       transition: all .2s ease-in
 ._tab-indicator
   position: absolute
@@ -62,7 +62,7 @@ ul
   height: 3px
   padding: 0
   margin: 0 auto
-  background: v-bind(color)
+  background: v-bind(activeColor)
   animation: tab-indicator-reveal 0.6s ease-in-out
 @keyframes tab-indicator-reveal
     0%
