@@ -63,7 +63,7 @@ function setRandomColor() {
           :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'print'"
           :activeColor="choices.color"
-          animationClass="anime-shake"
+          :animation="{ class: 'anime-shake', duration: 500 }"
           @click="() => emit('update:choices', { ...choices, type: 'print' })"
         />
       </Tooltip>
@@ -74,8 +74,7 @@ function setRandomColor() {
           :color="choices.color"
           :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'pop'"
-          :activeColor="choices.color"
-          animationClass="anime-shake"
+          :animation="{ class: 'anime-shake', duration: 500 }"
           @click="() => emit('update:choices', { ...choices, type: 'pop' })"
         />
       </Tooltip>
@@ -87,7 +86,6 @@ function setRandomColor() {
         :key="c"
         :backgroundColor="c"
         :isActive="choices.color === c"
-        :activeColor="c"
         @click="
           () =>
             emit('update:choices', { ...choices, color: c, colorPicker: false, randomColor: null })

@@ -9,8 +9,6 @@ import IconButton from './IconButton.vue'
     stroke="black"
     backgroundColor="white"
     :isActive="true"
-    activeColor="red"
-    animationClass="anime-shake"
-    :animationDurationMs="3000"
+    :animation="{ class: 'anime-shake', duration: 3000 }"
   />
 </template>
