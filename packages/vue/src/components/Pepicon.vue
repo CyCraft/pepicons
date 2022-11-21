@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import { baseProps, pepiconProps } from '../component'
 import { computed, defineAsyncComponent } from 'vue'
-import { printIcons, popIcons } from '../icons'
+import { baseProps, pepiconProps } from '../component'
+import { popIcons, printIcons } from '../icons'
 
 const props = defineProps(Object.assign({}, baseProps, pepiconProps))
 
 const IconComponent = computed(() => {
   const icons: Record<string, any> = props.type === 'pop' ? popIcons : printIcons
-  const icon = icons[props.name!]
+  const icon = icons[props.name || '']
+  if (!icon) {
+    throw new Error(`inexistent Pepicon "${props.name}" for props: ${JSON.stringify(props)}`)
+  }
   return defineAsyncComponent(icon)
 })
 
