@@ -4,7 +4,7 @@
 
     <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
 
-    <router-link to="/" class="_button">Go Home</router-link>
+    <router-link to="/" class="_button cursor-pointer">Go Home</router-link>
   </div>
 </template>
 
@@ -27,7 +27,6 @@
     padding: 8px 12px
     border-radius: 4px
     margin-top: 48px
-    cursor: pointer
     font-family: Montserrat, sans-serif, sans
     font-size: 14px
     font-weight: 300

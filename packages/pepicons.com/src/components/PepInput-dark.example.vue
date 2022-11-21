@@ -1,32 +1,25 @@
 <script lang="ts" setup>
-import { PepiconName } from 'pepicons'
-import { ref, computed, reactive } from 'vue'
+import { ref } from 'vue'
 import PepInput from './PepInput.vue'
 
-const v = ref('')
+const value = ref('')
 function log() {
   console.log('blurred')
-}
-
-const iconConfig = {
-  name: 'loop' as PepiconName,
-  type: 'print' as const,
-  color: 'goldenrod',
-  stroke: 'black',
 }
 </script>
 
 <docs darkExample></docs>
 
 <template>
-  v-model: {{ v }}
+  v-model: {{ value }}
   <div class="dark-mode">
     <PepInput
-      @blur="log"
-      :color="iconConfig.color"
-      v-model="v"
+      v-model="value"
+      type="print"
+      color="black"
+      stroke="mediumslateblue"
       :debounce="2"
-      :iconConfig="iconConfig"
+      @blur="log"
     />
   </div>
 </template>

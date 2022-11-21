@@ -4,29 +4,33 @@ import replace from 'replace-in-file'
 
 const PATH_PEPICONS = './packages/pepicons'
 
-const renameColor = () =>
-  new Promise((resolve, reject) => {
-    const path = PATH_PEPICONS + '/svg/**/*.svg'
-    replace({
-      files: path,
-      from: /#AB92F0/gi,
-      to: 'currentColor',
-    })
-      .then(resolve)
-      .catch(reject)
+const renameColor = async () => {
+  const path = PATH_PEPICONS + '/svg/**/*.svg'
+  await replace({
+    files: path,
+    from: /#AB92F0/gi,
+    to: 'currentColor',
   })
+}
 
-const removeClutter = () =>
-  new Promise((resolve, reject) => {
-    const path = PATH_PEPICONS + '/svg/**/*.svg'
-    replace({
-      files: path,
-      from: /<defs>\n<clipPath id="(.+?)">\n<rect width="20" height="20" fill="white"\/>\n<\/clipPath>\n<\/defs>/gi,
-      to: '',
-    })
-      .then(resolve)
-      .catch(reject)
+const removeClutter = async () => {
+  const path = PATH_PEPICONS + '/svg/**/*.svg'
+  await replace({
+    files: path,
+    from: /<defs>\n<clipPath id="(.+?)">\n<rect width="20" height="20" fill="white"\/>\n<\/clipPath>\n<\/defs>/gi,
+    to: '',
   })
+  await replace({
+    files: path,
+    from: /<g clip-path="url\(\#(.+?)\)">/gi,
+    to: '<g>',
+  })
+  await replace({
+    files: path,
+    from: /[\n\r]/gi,
+    to: '',
+  })
+}
 
 // const svgoIcons = () =>
 //   new Promise((resolve, reject) => {

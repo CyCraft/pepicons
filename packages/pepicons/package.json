@@ -1,6 +1,6 @@
 {
   "name": "pepicons",
-  "version": "1.2.1",
+  "version": "1.2.7",
   "sideEffects": false,
   "description": "Retro icon set",
   "productName": "Pepicons",
@@ -8,7 +8,8 @@
   "funding": "https://github.com/sponsors/mesqueeb",
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "files": [
-    "dist"
+    "dist",
+    "svg"
   ],
   "main": "./dist/index.umd.js",
   "module": "./dist/index.esm.js",
@@ -18,15 +19,28 @@
       "import": "./dist/index.esm.js",
       "require": "./dist/index.umd.js",
       "types": "./dist/types/index.d.ts"
+    },
+    "./dist/*": {
+      "import": "./dist/*",
+      "require": "./dist/*"
+    },
+    "./svg/*": {
+      "import": "./svg/*",
+      "require": "./svg/*"
+    },
+    "./pop": {
+      "import": "./dist/pop.esm.js",
+      "require": "./dist/pop.umd.js",
+      "types": "./dist/types/src/icons/popIndex.d.ts"
+    },
+    "./print": {
+      "import": "./dist/print.esm.js",
+      "require": "./dist/print.umd.js",
+      "types": "./dist/types/src/icons/printIndex.d.ts"
     }
   },
   "scripts": {
     "build": "rimraf dist && rollup -c ./build.js"
-  },
-  "devDependencies": {
-    "rimraf": "^3.0.2",
-    "rollup": "^2.79.0",
-    "rollup-plugin-typescript2": "^0.33.0"
   },
   "gitHead": "b9d99854c5f1a88b1bd6b50ed81b249feea5fcd9"
 }

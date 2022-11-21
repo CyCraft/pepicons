@@ -1,6 +1,6 @@
-import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import viteplay from '@viteplay/plugin'
+import { defineConfig } from 'vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -53,15 +53,11 @@ export default defineConfig({
           examples: ({ name }) => `./${name}.example.vue`,
         },
         {
-          component: './src/components/IconInfo.vue',
+          component: './src/components/IconDetails.vue',
           examples: ({ name }) => `./${name}.example.vue`,
         },
         {
           component: './src/components/CodeBlock.vue',
-          examples: ({ name }) => `./${name}.example.vue`,
-        },
-        {
-          component: './src/components/Picker.vue',
           examples: ({ name }) => `./${name}.example.vue`,
         },
         {

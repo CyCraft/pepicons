@@ -1,23 +1,13 @@
-import { cssVar } from './helpers/colorHelpers'
+import { PepiconName } from 'pepicons'
 
-import { PepiconName } from '@pepicons/vue'
-
-export type IsDarkMode = boolean
-
-export type IconConfig = {
-  name: PepiconName
+export type Choices = {
   type: 'pop' | 'print'
+  mode: 'dark' | 'light'
+  color: string
+  colorOrigin: 'preset' | 'picker' | 'randomizer'
+}
+export type GeneratedColors = {
   color: string
   stroke: string
 }
-
-export function defaultsIconConfig<T extends Record<string, any>>(payload?: T): IconConfig & T {
-  const _payload = payload || ({} as T)
-  return {
-    name: '',
-    type: 'print',
-    color: cssVar('primary'),
-    stroke: 'black',
-    ..._payload,
-  } as any
-}
+export type RandomColorDic = { [key in PepiconName]?: { color: string; stroke: string } }

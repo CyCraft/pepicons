@@ -1,8 +1,7 @@
 <script lang="ts" setup>
 import IconTile from './IconTile.vue'
-import { config } from './mocks'
 </script>
 
 <template>
-  <IconTile :config="config" />
+  <IconTile name="airplane" type="pop" color="mediumslateblue" stroke="black" searchInput="plain" />
 </template>
