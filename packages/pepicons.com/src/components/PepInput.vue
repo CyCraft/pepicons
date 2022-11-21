@@ -1,17 +1,20 @@
 <script lang="ts" setup>
 import { Pepicon } from '@pepicons/vue'
-import { PropType, computed, ref, watch } from 'vue'
-import { defaultsIconConfig, IconConfig } from '../types'
 import { onKeyStroke } from '@vueuse/core'
+import { ref, watch } from 'vue'
+import { Choices, GeneratedColors } from '../types'
 
 const props = defineProps<{
   modelValue: string
   debounce: number
-  color: string
-  type: 'print' | 'pop'
-  stroke: string
+  choices: Choices
+  generatedColors: GeneratedColors
 }>()
-const emit = defineEmits(['update:modelValue'])
+
+const emit = defineEmits<{
+  (e: 'update:modelValue', payload: string): void
+}>()
+
 const valueInner = ref<any>(props.modelValue)
 const debounceInner = ref<number>(props.debounce)
 const inputRef = ref<any>(null)
@@ -54,7 +57,13 @@ function emitInput(newVal: any) {
 <template>
   <div class="_wrapper">
     <input ref="inputRef" v-model="valueInner" class="pep-input" v-bind="$attrs" />
-    <Pepicon class="icon" :name="'loop'" :type="type" :color="color" :stroke="stroke" />
+    <Pepicon
+      class="icon"
+      :name="'loop'"
+      :type="choices.type"
+      :color="generatedColors.color"
+      :stroke="generatedColors.stroke"
+    />
   </div>
 </template>
 
@@ -80,7 +89,7 @@ function emitInput(newVal: any) {
   width: 100%
   transition: all 200ms ease-in-out
   &:focus
-    box-shadow: 0 0 0 2px v-bind(color)
+    box-shadow: 0 0 0 2px v-bind('choices.color')
 
 .dark-mode .pep-input
   background-color:#202020

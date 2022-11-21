@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
+import { choices, generatedColors } from './mocks'
 import PepInput from './PepInput.vue'
 
 const value = ref('')
@@ -15,9 +16,8 @@ function log() {
   <div class="light-mode">
     <PepInput
       v-model="value"
-      type="print"
-      color="mediumslateblue"
-      stroke="black"
+      :choices="choices"
+      :generatedColors="generatedColors"
       :debounce="2"
       @blur="log"
     />

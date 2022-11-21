@@ -105,16 +105,15 @@ const scrollPageTo = (navEl) => {
       </div>
       <Pickers
         class="mb-md"
-        :generatedColors="generatedColors"
         :choices="choices"
+        :generatedColors="generatedColors"
         @update:choices="(payload) => emit('update:choices', payload)"
       />
       <PepInput
         id="top"
         v-model="searchInput"
-        :type="choices.type"
-        :color="generatedColors.color"
-        :stroke="generatedColors.stroke"
+        :choices="choices"
+        :generatedColors="generatedColors"
         class="mb-xxl"
         :debounce="200"
         @blur="() => setUrlQuery(searchInput)"
