@@ -1,68 +1,43 @@
 <script lang="ts" setup>
-import { computed, watch, ref } from 'vue'
 import {
-  Pepicon,
-  synonyms,
-  synonymsJa,
   categories,
+  Pepicon,
   pepiconCategoryDic,
   PepiconName,
+  synonyms,
+  synonymsJa,
 } from 'pepicons'
-import Stack from '../components/Stack.vue'
+import { computed, ref } from 'vue'
+import DialogWrapper from '../components/DialogWrapper.vue'
+import IconDetails from '../components/IconDetails.vue'
 import IconGrid from '../components/IconGrid.vue'
 import PepInput from '../components/PepInput.vue'
-import Pickers from '../components/Pickers.vue'
 import PepLink from '../components/PepLink.vue'
+import Pickers from '../components/Pickers.vue'
 import ProfileCard from '../components/ProfileCard.vue'
-import { setPrimaryColor } from '../helpers/colorHelpers'
+import Stack from '../components/Stack.vue'
 import { cleanupForSearch } from '../helpers/search'
-import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
-import { defaultsIconConfig } from '../types'
-import DialogWrapper from '../components/DialogWrapper.vue'
-import IconInfo from '../components/IconInfo.vue'
+import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
+import { Choices, GeneratedColors, RandomColorDic } from '../types'
 
-document.body.classList.add('light-mode')
+const props = defineProps<{
+  choices: Choices
+  generatedColors: GeneratedColors
+  randomColorDic: RandomColorDic
+}>()
 
-const emit = defineEmits(['set-is-dark-mode', 'set-config'])
+const emit = defineEmits<{
+  (e: 'update:choices', payload: Choices): void
+}>()
 
 const hash = getQueryFromUrl()
 
 const searchInput = ref(hash || '')
-const config = ref(defaultsIconConfig({ isDarkMode: false }))
-
-const configComputed = computed(() => {
-  const { type, color: _color, stroke: _stroke, isDarkMode } = config.value
-  const useColorAsStroke = type === 'print' && isDarkMode
-  const color = useColorAsStroke ? 'black' : _color
-  const stroke = useColorAsStroke ? _color : _stroke
-  return { type, color, stroke }
-})
-
-// watch config for side effects
-watch(
-  config,
-  (conf) => {
-    emit('set-config', conf)
-    const { type, color, isDarkMode } = conf
-
-    // color
-    setPrimaryColor(color)
-
-    // type
-    document.body.className = document.body.className.replace(/(print|pop)-mode/g, `${type}-mode`)
-
-    // dark mode
-    emit('set-is-dark-mode', isDarkMode)
-    const mode = isDarkMode ? 'dark-mode' : 'light-mode'
-    document.body.className = document.body.className.replace(/(dark|light)-mode/g, mode)
-  },
-  { deep: true, immediate: true },
-)
 
 const categoryIconNamesDic = computed(() =>
   Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
     if (!(iconCategory in dic)) dic[iconCategory] = []
-    const iconNonExistent = config.value.type === 'print' && iconName.endsWith('-filled')
+    const iconNonExistent = props.choices.type === 'print' && iconName.endsWith('-filled')
     if (iconNonExistent) return dic
     const searchText = cleanupForSearch(searchInput.value)
     if (searchText) {
@@ -84,8 +59,8 @@ const categoryIconNamesDic = computed(() =>
 const iconInfoIsVisible = ref(false)
 const iconInfoName = ref<PepiconName>('airplane')
 function openIconModal(icon: PepiconName): void {
-  iconInfoIsVisible.value = true
   iconInfoName.value = icon
+  iconInfoIsVisible.value = true
 }
 const scrollPageTo = (navEl) => {
   console.log(`#${navEl}`)
@@ -101,21 +76,18 @@ const scrollPageTo = (navEl) => {
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
           <Stack class="ml-auto" classes="items-center">
+            <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
             <PepLink
-              href="https://github.com/CyCraft/pepicons"
-              content="GitHub"
-              icon="github"
-              :config="config"
-            />
-            <PepLink
+              href="#"
               content="About Us"
               icon="info-filled"
-              :config="config"
               class="cursor-arrow-down"
               @click.stop.prevent="scrollPageTo('about-us')"
             />
           </Stack>
-          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button">Download</a>
+          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button cursor-pointer"
+            >Download</a
+          >
         </Stack>
       </div>
       <div class="mb-md text-center">
@@ -128,19 +100,23 @@ const scrollPageTo = (navEl) => {
         <PepLink
           href="https://github.com/sponsors/mesqueeb"
           content="sponsoring us on GitHub"
-          retroUnderline
-          :config="config"
+          class="retro-underline"
         />!
       </div>
-      <Pickers v-model="config" :configComputed="configComputed" class="mb-md" />
+      <Pickers
+        class="mb-md"
+        :generatedColors="generatedColors"
+        :choices="choices"
+        @update:choices="(payload) => emit('update:choices', payload)"
+      />
       <PepInput
         id="top"
         v-model="searchInput"
+        :type="choices.type"
+        :color="generatedColors.color"
+        :stroke="generatedColors.stroke"
         class="mb-xxl"
-        :color="config.color"
         :debounce="200"
-        :isDarkMode="config.isDarkMode"
-        :iconConfig="{ ...configComputed, name: 'loop' }"
         @blur="() => setUrlQuery(searchInput)"
         @keydown.meta="() => setUrlQuery(searchInput)"
       />
@@ -149,7 +125,9 @@ const scrollPageTo = (navEl) => {
           <div class="text-section-title">{{ category }}</div>
           <IconGrid
             :iconNames="categoryIconNamesDic[category]"
-            :config="configComputed"
+            :choices="choices"
+            :generatedColors="generatedColors"
+            :randomColorDic="randomColorDic"
             :searchInput="searchInput"
             @clickTile="openIconModal"
           />
@@ -161,9 +139,8 @@ const scrollPageTo = (navEl) => {
           Feel free to
           <PepLink
             href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
-            retroUnderline
             content="request"
-            :config="config"
+            class="retro-underline"
           />
           a new icon on GitHub. 　🙃
         </div>
@@ -174,9 +151,8 @@ const scrollPageTo = (navEl) => {
           Read the
           <PepLink
             href="https://medium.com/@lucaban/pepicons-retro-icon-set-now-available-for-designers-and-coders-40db866a7460"
-            retroUnderline
             content="announcement blog post"
-            :config="config"
+            class="retro-underline"
           />
           to read about our motivation for creating Pepicons!<br /><br />Pepicons was made by these
           peeps:
@@ -201,24 +177,28 @@ const scrollPageTo = (navEl) => {
       </div>
       <div class="mt-xxxl flex-center">
         <PepLink
+          href="#"
           class="cursor-arrow-up px-md py-sm"
           content="Go to top"
-          :config="config"
           @click.stop.prevent="scrollPageTo('top')"
         />
         <div class="mt-xxl">
           <PepLink
             href="https://github.com/sponsors/mesqueeb"
-            retroUnderline
             content="Sponsor development"
-            :config="config"
+            class="retro-underline"
           />
         </div>
       </div>
     </div>
   </div>
   <DialogWrapper :isVisible="iconInfoIsVisible" @close="iconInfoIsVisible = false">
-    <IconInfo :config="{ ...configComputed, name: iconInfoName }" :configOptionButtons="config" />
+    <IconDetails
+      :icon="iconInfoName"
+      :choices="choices"
+      :generatedColors="generatedColors"
+      :randomColorDic="randomColorDic"
+    />
   </DialogWrapper>
 </template>
 

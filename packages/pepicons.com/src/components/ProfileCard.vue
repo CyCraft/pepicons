@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { PropType, computed, ref, toRef, Ref } from 'vue'
+import { PropType } from 'vue'
 import CompanyLogo from './CompanyLogo.vue'
 import Stack from './Stack.vue'
 
@@ -115,7 +115,7 @@ const props = defineProps({
     </div>
 
     <Stack v-if="links.length">
-      <a v-for="link in links" :key="link" class="_link" :href="link">
+      <a v-for="link in links" :key="link" class="_link cursor-pointer" :href="link">
         <CompanyLogo :name="(link.split('https://')[1].split('.')[0] as any)" />
       </a>
     </Stack>
@@ -178,7 +178,6 @@ const props = defineProps({
     text-align: left
     line-height: 40px
   ._link
-    cursor: pointer
     > *
       +C(color, washed-cloth)
 </style>

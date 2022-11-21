@@ -4,7 +4,7 @@
 </script>
 
 <template>
-  <div class="my-component">something</div>
+  <div class="my-component"></div>
 </template>
 
 <style lang="sass">
