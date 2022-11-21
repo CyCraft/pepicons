@@ -85,7 +85,9 @@ const scrollPageTo = (navEl) => {
               @click.stop.prevent="scrollPageTo('about-us')"
             />
           </Stack>
-          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button">Download</a>
+          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button cursor-pointer"
+            >Download</a
+          >
         </Stack>
       </div>
       <div class="mb-md text-center">
@@ -98,8 +100,7 @@ const scrollPageTo = (navEl) => {
         <PepLink
           href="https://github.com/sponsors/mesqueeb"
           content="sponsoring us on GitHub"
-          retroUnderline
-          :lineColor="choices.color"
+          class="retro-underline"
         />!
       </div>
       <Pickers
@@ -138,8 +139,8 @@ const scrollPageTo = (navEl) => {
           Feel free to
           <PepLink
             href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
-            retroUnderline
             content="request"
+            class="retro-underline"
           />
           a new icon on GitHub. 　🙃
         </div>
@@ -150,8 +151,8 @@ const scrollPageTo = (navEl) => {
           Read the
           <PepLink
             href="https://medium.com/@lucaban/pepicons-retro-icon-set-now-available-for-designers-and-coders-40db866a7460"
-            retroUnderline
             content="announcement blog post"
+            class="retro-underline"
           />
           to read about our motivation for creating Pepicons!<br /><br />Pepicons was made by these
           peeps:
@@ -184,8 +185,8 @@ const scrollPageTo = (navEl) => {
         <div class="mt-xxl">
           <PepLink
             href="https://github.com/sponsors/mesqueeb"
-            retroUnderline
             content="Sponsor development"
+            class="retro-underline"
           />
         </div>
       </div>

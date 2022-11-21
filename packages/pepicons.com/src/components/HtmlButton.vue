@@ -18,7 +18,10 @@ function toggle() {
 </script>
 
 <template>
-  <button :class="`html-button ${modelValue ? '_expanded' : ''}`" @click="() => toggle()">
+  <button
+    :class="`html-button cursor-pointer ${modelValue ? '_expanded' : ''}`"
+    @click="() => toggle()"
+  >
     <Pepicon class="_icon" name="angle-left" :type="type" :color="color" :stroke="stroke" />
     <Pepicon class="_icon" name="angle-right" :type="type" :color="color" :stroke="stroke" />
   </button>

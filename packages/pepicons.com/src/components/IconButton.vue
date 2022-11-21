@@ -45,7 +45,7 @@ function click() {
 </script>
 <template>
   <button
-    :class="`icon-button reset-button`"
+    :class="`icon-button reset-button cursor-pointer`"
     :style="`background: ${backgroundColor}; ${activeStyle}`"
     @click="click"
   >

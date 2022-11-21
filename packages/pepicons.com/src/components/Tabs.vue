@@ -19,7 +19,7 @@ function setTab(tab) {
       <li
         v-for="tab in tabs"
         :key="tab"
-        :class="[tab === selectedTab ? '_selected-tab' : '', '_tab']"
+        :class="`_tab cursor-pointer ${tab === selectedTab ? '_selected-tab' : ''}`"
         @click="setTab(tab)"
       >
         {{ tab }}
@@ -44,7 +44,6 @@ ul
     padding: 16px
     font-size: 20px
     font-weight: 500
-    cursor: pointer
     border-bottom: 2px solid transparent
     &:hover
       background: rgba(25, 25, 25, .05)

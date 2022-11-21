@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { pepiconArray, PepiconName } from 'pepicons'
+import { pepiconArray, PepiconName, pepiconSvgString } from 'pepicons'
 import { computed, ref, watch } from 'vue'
 import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue'
 import PepHero from '../components/PepHero.vue'
@@ -59,6 +59,33 @@ watch(
     document.body.className = document.body.className.replace(/(dark|light)-mode/g, `${mode}-mode`)
   },
 )
+
+function getCursor(
+  icon: PepiconName,
+  fallback: 'pointer' | 'zoom-in' | 'n-resize' | 's-resize',
+): string {
+  let svgString = pepiconSvgString({
+    name: icon,
+    type: 'pop',
+    color: choices.value.mode === 'dark' ? '#FAFAFA' : '#1D1D1D',
+    stroke: 'none',
+    size: '26px',
+  }).replace(/\n/g, '')
+  if (icon === 'color-picker') {
+    svgString = svgString.replace(/style="/, 'style="transform:rotate(90deg);')
+  }
+  return `url("data:image/svg+xml,${encodeURI(svgString)}"), ${fallback}`
+}
+
+const cursorPointer = computed(() => getCursor('hand-point', 'pointer'))
+const cursorZoomIn = computed(() => getCursor('loop-plus', 'zoom-in'))
+const cursorArrowUp = computed(() => getCursor('arrow-up', 'n-resize'))
+const cursorArrowDown = computed(() => getCursor('arrow-down', 's-resize'))
+const cursorColorPicker = computed(() => getCursor('color-picker', 'pointer'))
+
+const retroUnderlineStroke = computed(() =>
+  choices.value.type === 'pop' ? 'none' : generatedColors.value.stroke,
+)
 </script>
 
 <template>
@@ -68,6 +95,7 @@ watch(
         <PepHeaderDecorationLight :isDarkMode="choices.mode === 'dark'" />
       </PepHero>
     </header>
+
     <router-view
       v-model:choices="choices"
       :generatedColors="generatedColors"
@@ -78,12 +106,7 @@ watch(
     <div class="footer">
       <div class="mb-md">
         Pepicons was made with 💜 by
-        <PepLink
-          href="https://cycraft.co"
-          content="cycraft.co"
-          retroUnderline
-          :lineColor="choices.color"
-        />
+        <PepLink href="https://cycraft.co" content="cycraft.co" class="retro-underline" />
       </div>
       <div>© Copyright CyCraft, {{ new Date().getFullYear() }}</div>
     </div>
@@ -92,6 +115,38 @@ watch(
 
 <style lang="sass">
 @import '../css/variables.sass'
+.cursor-pointer
+  cursor: v-bind(cursorPointer) !important
+.cursor-zoom-in
+  cursor: v-bind(cursorZoomIn) !important
+.cursor-arrow-up
+  cursor: v-bind(cursorArrowUp) !important
+.cursor-arrow-down
+  cursor: v-bind(cursorArrowDown) !important
+.cursor-color-picker
+  cursor: v-bind(cursorColorPicker) !important
+
+.retro-underline
+  position: relative
+  display: inline-block
+  &::after, &::before
+    content: ''
+    position: absolute
+    border-radius: 50px
+    transform: rotate(181deg) translateY(-2px)
+    transition: border-color 250ms
+    width: 105%
+  &::after
+    bottom: 0
+    left: -2px
+    border-top: v-bind('retroUnderlineStroke') 2px solid
+  &::before
+    justify-content: bottom
+    transform-origin: bottom
+    bottom: 1px
+    left: -2px
+    border-bottom: v-bind('generatedColors.color') 6px solid
+
 .wrapper
   display: flex
   flex-direction: column

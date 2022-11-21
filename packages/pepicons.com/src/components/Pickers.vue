@@ -82,12 +82,14 @@ function setRandomColor() {
       <IconButton
         v-for="c in colorSelection"
         :key="c"
+        class="cursor-color-picker"
         :backgroundColor="c"
         :isActive="choices.color === c && choices.colorOrigin === 'preset'"
         @click="() => emit('update:choices', { ...choices, color: c, colorOrigin: 'preset' })"
       />
 
       <IconButton
+        class="cursor-color-picker"
         icon="color-picker"
         :type="choices.type"
         :color="generatedColors.color"
@@ -99,6 +101,7 @@ function setRandomColor() {
       />
 
       <IconButton
+        class="cursor-color-picker"
         icon="refresh"
         :type="choices.type"
         :color="generatedColors.color"
