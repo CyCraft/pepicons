@@ -80,6 +80,47 @@ function setRandomColor() {
 
     <Stack class="picker" classes="justify-center">
       <IconButton
+        :color="choices.mode === 'dark' ? 'black' : choices.color"
+        :stroke="choices.mode === 'dark' ? choices.color : 'black'"
+        :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
+        :isActive="choices.type === 'print'"
+        :activeColor="choices.color"
+        :animation="{ class: 'anime-shake', duration: 500 }"
+        @click="() => emit('update:choices', { ...choices, type: 'print' })"
+      />
+      <IconButton
+        icon="circle"
+        type="pop"
+        :color="choices.mode === 'dark' ? 'black' : choices.color"
+        :stroke="choices.mode === 'dark' ? choices.color : 'black'"
+        :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
+        :isActive="choices.type === 'print'"
+        :activeColor="choices.color"
+        :animation="{ class: 'anime-shake', duration: 500 }"
+        @click="() => emit('update:choices', { ...choices, type: 'print' })"
+      />
+      <IconButton
+        icon="circle-filled"
+        type="pop"
+        :color="choices.color"
+        :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
+        :isActive="choices.type === 'pop'"
+        :animation="{ class: 'anime-shake', duration: 500 }"
+        @click="() => emit('update:choices', { ...choices, type: 'pop' })"
+      />
+      <IconButton
+        icon="no-entry"
+        type="pop"
+        :color="choices.color"
+        :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
+        :isActive="choices.type === 'pop'"
+        :animation="{ class: 'anime-shake', duration: 500 }"
+        @click="() => emit('update:choices', { ...choices, type: 'pop' })"
+      />
+    </Stack>
+
+    <Stack class="picker" classes="justify-center">
+      <IconButton
         v-for="c in colorSelection"
         :key="c"
         class="cursor-color-picker"
