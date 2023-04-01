@@ -37,7 +37,9 @@ const searchInput = ref(hash || '')
 const categoryIconNamesDic = computed(() =>
   Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
     if (!(iconCategory in dic)) dic[iconCategory] = []
-    const iconNonExistent = props.choices.type === 'print' && iconName.endsWith('-filled')
+    const iconNonExistent =
+      (props.choices.type === 'print' || props.choices.type === 'pencil') &&
+      iconName.endsWith('-filled')
     if (iconNonExistent) return dic
     const searchText = cleanupForSearch(searchInput.value)
     if (searchText) {

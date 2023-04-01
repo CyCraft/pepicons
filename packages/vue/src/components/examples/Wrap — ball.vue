@@ -19,6 +19,14 @@ import Pepicon from '../Pepicon.vue'
     <Pepicon type="print" name="camera" color="mediumslateblue" wrap="ball" />
     <Pepicon type="print" name="car" color="mediumslateblue" wrap="ball" />
   </div>
+  <div class="example">
+    <Pepicon type="pencil" name="airplane" color="mediumslateblue" wrap="ball" />
+    <Pepicon type="pencil" name="battery" color="mediumslateblue" wrap="ball" />
+    <Pepicon type="pencil" name="bicycle" color="mediumslateblue" wrap="ball" />
+    <Pepicon type="pencil" name="book" color="mediumslateblue" wrap="ball" />
+    <Pepicon type="pencil" name="camera" color="mediumslateblue" wrap="ball" />
+    <Pepicon type="pencil" name="car" color="mediumslateblue" wrap="ball" />
+  </div>
 </template>
 
 <style scoped>

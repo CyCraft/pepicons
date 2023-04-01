@@ -49,7 +49,7 @@ export const pepiconProps = {
    * Either 'pop' or 'print'
    * @default 'pop'
    */
-  type: { type: String as PropType<'pop' | 'print'>, default: 'pop' },
+  type: { type: String as PropType<'pop' | 'print' | 'pencil'>, default: 'pop' },
   /**
    * The icon name as per the reference at https://pepicons.com
    * @example 'airplane'
@@ -61,7 +61,7 @@ export const pepiconProps = {
   },
 }
 
-export const createSetup = (svg: string, type: 'pop' | 'print') => {
+export const createSetup = (svg: string, type: 'pop' | 'print' | 'pencil') => {
   return (props: any) => {
     const svgString = computed(() => morphPepicon({ ...props, type, svg }))
     return () =>

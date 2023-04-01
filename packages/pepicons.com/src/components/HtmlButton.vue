@@ -3,7 +3,7 @@ import { Pepicon } from '@pepicons/vue'
 
 const props = defineProps<{
   modelValue: boolean
-  type: 'pop' | 'print'
+  type: 'pop' | 'print' | 'pencil'
   color: string
   stroke: string
 }>()

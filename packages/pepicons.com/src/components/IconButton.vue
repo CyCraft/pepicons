@@ -10,7 +10,7 @@ const props = defineProps<{
   /** (optional) will show an icon in the button */
   icon?: PepiconName
   /** (optional) the icon type of the icon in the button */
-  type?: 'pop' | 'print'
+  type?: 'pop' | 'print' | 'pencil'
   /** (optional) the color of the icon in the button */
   color?: string
   /** (optional) the stroke of the icon in the button */

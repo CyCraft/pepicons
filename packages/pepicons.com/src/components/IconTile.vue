@@ -6,7 +6,7 @@ import { cleanupForSearch } from '../helpers/search'
 
 const props = defineProps<{
   name: PepiconName
-  type: 'pop' | 'print'
+  type: 'pop' | 'print' | 'pencil'
   color: string
   stroke: string
   searchInput?: string

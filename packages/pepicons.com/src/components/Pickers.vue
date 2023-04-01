@@ -76,6 +76,18 @@ function setRandomColor() {
           @click="() => emit('update:choices', { ...choices, type: 'pop' })"
         />
       </Tooltip>
+      <Tooltip text="Pencil_">
+        <IconButton
+          icon="can"
+          type="pencil"
+          :color="choices.color"
+          :activeColor="choices.color"
+          :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
+          :isActive="choices.type === 'pencil'"
+          :animation="{ class: 'anime-shake', duration: 500 }"
+          @click="() => emit('update:choices', { ...choices, type: 'pencil' })"
+        />
+      </Tooltip>
     </Stack>
 
     <Stack class="picker" classes="justify-center">

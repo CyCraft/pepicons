@@ -11,7 +11,7 @@ export type GetPepiconPayload = {
    * Either 'pop' or 'print'
    * @default 'pop'
    */
-  type?: 'pop' | 'print'
+  type?: 'pop' | 'print' | 'pencil'
 }
 
 export type MorphPepiconPayload = {
@@ -23,7 +23,7 @@ export type MorphPepiconPayload = {
    * Either 'pop' or 'print'
    * @default 'pop'
    */
-  type?: 'pop' | 'print'
+  type?: 'pop' | 'print' | 'pencil'
   /**
    * A hex(a) or rgb(a) color
    * - "pop" type icons: this is the icon color
@@ -82,10 +82,14 @@ export function morphPepicon(payload: MorphPepiconPayload): string {
   let svg = payload.svg
   const { type = 'pop', color, opacity, size, stroke, wrap } = payload || {}
 
+  if (type === 'pencil') {
+    svg = svg.replace(/currentColor/g, 'rgba(0,0,0,0)')
+    svg = svg.replace(/#000000|#000|black/g, 'currentColor')
+  }
   if (!/style="/.test(svg)) {
     svg = svg.replace('<svg ', '<svg style="" ')
   }
-  if (stroke) {
+  if (type !== 'pencil' && stroke) {
     svg = svg.replace(/#000000|#000|black/g, stroke)
   }
   const rgbOrHexColor = color?.startsWith('rgb') || color?.startsWith('#')
@@ -136,7 +140,6 @@ export function morphPepicon(payload: MorphPepiconPayload): string {
       /svg">([.\n\r\t\S\s]+)<\/svg>/,
       'svg"><g transform="translate(3, 3)">$1</g></svg>',
     )
-    // @ts-ignore
     if (type === 'pop' || type === 'pencil') {
       svg = svg.replaceAll('currentColor', 'black')
       svg = svg.replace(
@@ -181,11 +184,10 @@ export function morphPepicon(payload: MorphPepiconPayload): string {
         `<path fill-rule="evenodd" clip-rule="evenodd" d="M13 24.5C19.3513 24.5 24.5 19.3513 24.5 13C24.5 6.64873 19.3513 1.5 13 1.5C6.64873 1.5 1.5 6.64873 1.5 13C1.5 19.3513 6.64873 24.5 13 24.5ZM13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="${stroke}"/></svg>`,
       )
     }
-    // @ts-ignore
     if (type === 'pencil') {
       svg = svg.replace(
         '</svg>',
-        `<path fill-rule="evenodd" clip-rule="evenodd" d="M13 24.5C19.3513 24.5 24.5 19.3513 24.5 13C24.5 6.64873 19.3513 1.5 13 1.5C6.64873 1.5 1.5 6.64873 1.5 13C1.5 19.3513 6.64873 24.5 13 24.5ZM13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="${stroke}"/></svg>`,
+        '<path fill-rule="evenodd" clip-rule="evenodd" d="M13 24.5C19.3513 24.5 24.5 19.3513 24.5 13C24.5 6.64873 19.3513 1.5 13 1.5C6.64873 1.5 1.5 6.64873 1.5 13C1.5 19.3513 6.64873 24.5 13 24.5ZM13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="currentColor"/></svg>',
       )
     }
   }
@@ -202,11 +204,10 @@ export function morphPepicon(payload: MorphPepiconPayload): string {
         `<path d="M1.15063 1.87794C0.94979 1.6771 0.94979 1.35147 1.15063 1.15063C1.35147 0.949789 1.6771 0.949789 1.87794 1.15063L18.8494 18.1221C19.0502 18.3229 19.0502 18.6485 18.8494 18.8494C18.6485 19.0502 18.3229 19.0502 18.1221 18.8494L1.15063 1.87794Z" fill="${stroke}"/></svg>`,
       )
     }
-    // @ts-ignore
     if (type === 'pencil') {
       svg = svg.replace(
         '</svg>',
-        `<path d="M1.15063 1.87794C0.94979 1.6771 0.94979 1.35147 1.15063 1.15063C1.35147 0.949789 1.6771 0.949789 1.87794 1.15063L18.8494 18.1221C19.0502 18.3229 19.0502 18.6485 18.8494 18.8494C18.6485 19.0502 18.3229 19.0502 18.1221 18.8494L1.15063 1.87794Z" fill="${stroke}"/></svg>`,
+        '<path d="M1.15063 1.87794C0.94979 1.6771 0.94979 1.35147 1.15063 1.15063C1.35147 0.949789 1.6771 0.949789 1.87794 1.15063L18.8494 18.1221C19.0502 18.3229 19.0502 18.6485 18.8494 18.8494C18.6485 19.0502 18.3229 19.0502 18.1221 18.8494L1.15063 1.87794Z" fill="currentColor"/></svg>',
       )
     }
   }

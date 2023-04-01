@@ -1,7 +1,7 @@
 import { PepiconName } from 'pepicons'
 
 export type Choices = {
-  type: 'pop' | 'print'
+  type: 'pop' | 'print' | 'pencil'
   mode: 'dark' | 'light'
   color: string
   colorOrigin: 'preset' | 'picker' | 'randomizer'

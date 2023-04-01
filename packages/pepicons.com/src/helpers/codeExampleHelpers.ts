@@ -2,7 +2,7 @@ import { PepiconName } from 'pepicons'
 
 export function generateVueCode(payload: {
   name: PepiconName
-  type: 'pop' | 'print'
+  type: 'pop' | 'print' | 'pencil'
   color: string
   stroke: string
   wrap: 'none' | 'circle' | 'ball' | 'off'

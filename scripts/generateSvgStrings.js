@@ -51,7 +51,7 @@ const formatToExportSvgString = async () => {
 }
 
 /**
- * @param {'pop' | 'print' | 'popIndex' | 'printIndex' | 'synonyms' | 'categories' | 'types'} kind
+ * @param {'pop' | 'print' | 'pencil' | 'popIndex' | 'printIndex' | 'synonyms' | 'categories' | 'types'} kind
  */
 const filesArrayToExportFileContents = (kind = 'pop', iconNameFilePathEntries = []) => {
   const importTypePepicon =
@@ -163,7 +163,7 @@ ${pepiconCategoryDic}
 }
 
 /**
- * @param {'pop' | 'print' | 'popIndex' | 'printIndex' | 'synonyms' | 'categories' | 'types'} kind
+ * @param {'pop' | 'print' | 'pencil' | 'popIndex' | 'printIndex' | 'synonyms' | 'categories' | 'types'} kind
  */
 const generateExportsFile = async (kind = 'pop', iconNameFilePathEntries = []) => {
   const content = filesArrayToExportFileContents(kind, iconNameFilePathEntries)
@@ -179,7 +179,7 @@ const generateExportsFile = async (kind = 'pop', iconNameFilePathEntries = []) =
 }
 
 /**
- * @param {'pop' | 'print'} kind
+ * @param {'pop' | 'print' | 'pencil'} kind
  */
 const getIconNameFilePathEntries = async (kind = 'pop') => {
   const regex = new RegExp(`.+${kind}\/.+\.svg`, 'gi')

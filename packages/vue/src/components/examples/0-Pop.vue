@@ -17,6 +17,7 @@ import Pepicon from '../Pepicon.vue'
 .example {
   display: flex;
   flex-wrap: wrap;
+  color: mediumslateblue;
 }
 .example > * {
   margin: 1rem;
