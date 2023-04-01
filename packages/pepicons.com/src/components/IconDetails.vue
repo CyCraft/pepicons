@@ -19,6 +19,7 @@ const props = defineProps<{
   randomColorDic: RandomColorDic
 }>()
 
+const wrap = ref<'none' | 'circle' | 'ball' | 'off'>('none')
 const selectedTab = ref<'Vue' | 'SVG'>('Vue')
 const codeShown = ref(false)
 const downloadSvgDone = ref(false)
@@ -47,24 +48,28 @@ const strokeGenerated = computed(() => {
     : generatedColors.stroke
 })
 
-const codeSvg = computed(() =>
-  pepiconSvgString({
+const codeSvg = computed(() => {
+  console.log(`wrap.value → `, wrap.value)
+  return pepiconSvgString({
     name: props.icon,
     type: props.choices.type,
     color: colorGenerated.value,
     stroke: strokeGenerated.value,
-  }),
-)
+    wrap: wrap.value,
+  })
+})
 
-const codeSvgLg = computed(() =>
-  pepiconSvgString({
+const codeSvgLg = computed(() => {
+  console.log(`wrap.value → `, wrap.value)
+  return pepiconSvgString({
     name: props.icon,
     type: props.choices.type,
     color: colorGenerated.value,
     stroke: strokeGenerated.value,
+    wrap: wrap.value,
     size: '48px',
-  }),
-)
+  })
+})
 
 const codeVue = computed(() =>
   generateVueCode({
@@ -72,6 +77,7 @@ const codeVue = computed(() =>
     type: props.choices.type,
     color: colorGenerated.value,
     stroke: strokeGenerated.value,
+    wrap: wrap.value,
   }),
 )
 
@@ -123,12 +129,12 @@ async function copyPng(): Promise<void> {
         >
           <template v-if="selectedTab === 'Vue'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
-              <CodeBlock lang="html" :content="codeVue" class="_code-block" />
+              <CodeBlock :ref="codeVue" lang="html" :content="codeVue" class="_code-block" />
             </div>
           </template>
           <template v-if="selectedTab === 'SVG'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
-              <CodeBlock lang="html" :content="codeSvg" class="_code-block" />
+              <CodeBlock :ref="codeSvg" lang="html" :content="codeSvg" class="_code-block" />
             </div>
           </template>
         </Tabs>
@@ -141,64 +147,115 @@ async function copyPng(): Promise<void> {
         :type="choices.type"
         :color="colorGenerated"
         :stroke="strokeGenerated"
+        :wrap="wrap"
         size="80px"
       />
 
       <div class="text-h5 mt-xl">{{ icon }}</div>
     </div>
-    <div class="_bottom-door text-h6 px-xl" :class="{ '_bottom-door-transform': codeShown }">
+    <div
+      class="_bottom-door column justify-center gap-md text-h6 px-xl"
+      :class="{ '_bottom-door-transform': codeShown }"
+    >
       <div class="flex-center relative">
-        <div>SVG</div>
+        <div>WRAP</div>
 
         <div class="flex gutter-x-sm mt-xs">
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            icon="cloud-down"
             :type="choices.type"
             :color="colorGenerated"
             :stroke="strokeGenerated"
             :activeColor="activeColorGenerated"
-            :isActive="downloadSvgDone"
-            @click="() => downloadSvg()"
+            :isActive="wrap === 'none'"
+            @click="() => (wrap = 'none')"
           />
-
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            icon="clipboard"
+            icon="circle"
             :type="choices.type"
             :color="colorGenerated"
             :stroke="strokeGenerated"
             :activeColor="activeColorGenerated"
-            :isActive="copySvgDone"
-            @click="() => copySvg()"
+            :isActive="wrap === 'circle'"
+            @click="() => (wrap = 'circle')"
+          />
+          <IconButton
+            :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+            icon="circle-filled"
+            type="pop"
+            :color="choices.color"
+            :activeColor="activeColorGenerated"
+            :isActive="wrap === 'ball'"
+            @click="() => (wrap = 'ball')"
+          />
+          <IconButton
+            :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+            icon="no-entry"
+            :type="choices.type"
+            :color="colorGenerated"
+            :stroke="strokeGenerated"
+            :activeColor="activeColorGenerated"
+            :isActive="wrap === 'off'"
+            @click="() => (wrap = 'off')"
           />
         </div>
       </div>
-      <div class="flex-center">
-        <div>PNG</div>
 
-        <div class="flex gutter-x-sm mt-xs">
-          <IconButton
-            :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            icon="cloud-down"
-            :type="choices.type"
-            :color="colorGenerated"
-            :stroke="strokeGenerated"
-            :activeColor="activeColorGenerated"
-            :isActive="downloadPngDone"
-            @click="() => downloadPng()"
-          />
+      <div class="flex justify-evenly">
+        <div class="flex-center relative">
+          <div>SVG</div>
 
-          <IconButton
-            :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            icon="clipboard"
-            :type="choices.type"
-            :color="colorGenerated"
-            :stroke="strokeGenerated"
-            :activeColor="activeColorGenerated"
-            :isActive="copyPngDone"
-            @click="() => copyPng()"
-          />
+          <div class="flex gutter-x-sm mt-xs">
+            <IconButton
+              :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+              icon="cloud-down"
+              :type="choices.type"
+              :color="colorGenerated"
+              :stroke="strokeGenerated"
+              :activeColor="activeColorGenerated"
+              :isActive="downloadSvgDone"
+              @click="() => downloadSvg()"
+            />
+
+            <IconButton
+              :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+              icon="clipboard"
+              :type="choices.type"
+              :color="colorGenerated"
+              :stroke="strokeGenerated"
+              :activeColor="activeColorGenerated"
+              :isActive="copySvgDone"
+              @click="() => copySvg()"
+            />
+          </div>
+        </div>
+        <div class="flex-center">
+          <div>PNG</div>
+
+          <div class="flex gutter-x-sm mt-xs">
+            <IconButton
+              :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+              icon="cloud-down"
+              :type="choices.type"
+              :color="colorGenerated"
+              :stroke="strokeGenerated"
+              :activeColor="activeColorGenerated"
+              :isActive="downloadPngDone"
+              @click="() => downloadPng()"
+            />
+
+            <IconButton
+              :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+              icon="clipboard"
+              :type="choices.type"
+              :color="colorGenerated"
+              :stroke="strokeGenerated"
+              :activeColor="activeColorGenerated"
+              :isActive="copyPngDone"
+              @click="() => copyPng()"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -211,7 +268,7 @@ async function copyPng(): Promise<void> {
   +C(background-color, white)
   min-width: 280px
   width: 400px
-  max-width: inherit
+  max-width: 90vw
   position: relative
   overflow: hidden
   border-radius: 1rem
@@ -236,9 +293,6 @@ async function copyPng(): Promise<void> {
   +media-xs(height, 320px)
   +flex-center
 ._bottom-door
-  display: flex
-  justify-content: space-around
-  align-items: center
   height: 162px
   +media-xs(height, 180px)
   &::before

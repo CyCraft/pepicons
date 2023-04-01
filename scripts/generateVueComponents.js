@@ -35,7 +35,7 @@ import { baseProps, createSetup } from '../../component'
 export default defineComponent({
   name: '${componentName}',
   props: {...baseProps},
-  setup: createSetup(${camelCase(name)})
+  setup: createSetup(${camelCase(name)}, '${type}')
 })
 `.trim()
       const componentPath = path.join(PATH_VUE, 'src/icons', type, filename)

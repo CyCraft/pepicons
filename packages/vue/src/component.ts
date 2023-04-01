@@ -31,6 +31,17 @@ export const baseProps = {
     type: [String, Number] as PropType<'sm' | 'md' | 'lg' | 'xl' | number | string>,
     default: 'md',
   },
+  /**
+   * - none (default) — applies no wrapping around the icon
+   * - circle — applies a circle around the icon
+   * - ball — shows the icon inside a ball
+   * - off — shows an cross line diagonally on top of the icon
+   * @type { 'none' | 'circle' | 'ball' | 'off' }
+   */
+  wrap: {
+    type: String as PropType<'none' | 'circle' | 'ball' | 'off'>,
+    default: 'none',
+  },
 }
 
 export const pepiconProps = {
@@ -50,9 +61,9 @@ export const pepiconProps = {
   },
 }
 
-export const createSetup = (svg: string) => {
+export const createSetup = (svg: string, type: 'pop' | 'print') => {
   return (props: any) => {
-    const svgString = computed(() => morphPepicon({ ...props, svg }))
+    const svgString = computed(() => morphPepicon({ ...props, type, svg }))
     return () =>
       h('div', {
         style: `display:flex;align-items:center;justify-content:center;`,
