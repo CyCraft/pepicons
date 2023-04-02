@@ -8,6 +8,4 @@ import '@viteplay/vue/dist/style.css'
 
 <style lang="sass">
 @import './css/app.sass'
-*
-  margin: 0
 </style>

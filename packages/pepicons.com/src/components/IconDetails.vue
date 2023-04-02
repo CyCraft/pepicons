@@ -157,7 +157,7 @@ async function copyPng(): Promise<void> {
       class="_bottom-door column justify-center gap-md text-h6 px-xl"
       :class="{ '_bottom-door-transform': codeShown }"
     >
-      <div class="flex-center relative">
+      <div class="column flex-center relative">
         <div>WRAP</div>
 
         <div class="flex gutter-x-sm mt-xs">
@@ -203,7 +203,7 @@ async function copyPng(): Promise<void> {
       </div>
 
       <div class="flex justify-evenly">
-        <div class="flex-center relative">
+        <div class="column flex-center relative">
           <div>SVG</div>
 
           <div class="flex gutter-x-sm mt-xs">
@@ -230,7 +230,7 @@ async function copyPng(): Promise<void> {
             />
           </div>
         </div>
-        <div class="flex-center">
+        <div class="column flex-center">
           <div>PNG</div>
 
           <div class="flex gutter-x-sm mt-xs">
@@ -291,7 +291,11 @@ async function copyPng(): Promise<void> {
 ._top-door
   height: 288px
   +media-xs(height, 320px)
-  +flex-center
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  flex-wrap: nowrap
 ._bottom-door
   height: 162px
   +media-xs(height, 180px)

@@ -73,7 +73,7 @@ const scrollPageTo = (navEl) => {
 </script>
 
 <template>
-  <div v-bind="$attrs" style="padding: 24px" class="page-index">
+  <div v-bind="$attrs" class="page-index">
     <div class="_page-content">
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
@@ -176,7 +176,7 @@ const scrollPageTo = (navEl) => {
           />
         </Stack>
       </div>
-      <div class="mt-xxxl flex-center">
+      <div class="mt-xxxl column flex-center">
         <PepLink
           href="#"
           class="cursor-arrow-up px-md py-sm"
@@ -207,6 +207,9 @@ const scrollPageTo = (navEl) => {
 @import '../css/variables'
 .page-index
   transition: background-color 500ms
+  padding: 12px
+  +media-xs(padding, $md)
+  +media-sm(padding, $lg)
   ._page-content
     +mx(auto)
     max-width: 980px

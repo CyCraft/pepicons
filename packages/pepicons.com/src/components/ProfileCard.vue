@@ -132,7 +132,11 @@ const props = defineProps({
     +C(background, moonlight)
 .profile-card
   width: 310px
-  +flex-center()
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  flex-wrap: nowrap
   border-radius: $md
   position: relative
   > *

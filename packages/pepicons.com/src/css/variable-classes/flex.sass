@@ -1,73 +1,84 @@
-@import '../variables/flex'
-
-.flex-center
-  +flex-center()
-
 .flex-1
   flex: 1
 
-.row, .column, .flex
+.flex
   display: flex
-  flex-wrap: wrap
 
 .column
+  display: flex
   flex-direction: column
-
-.no-wrap
-  flex-wrap: nowrap
-
-.justify-
-  &start
-    justify-content: flex-start
-  &end
-    justify-content: flex-end
-  &center
-    justify-content: center
-  &between
-    justify-content: space-between
-  &around
-    justify-content: space-around
-  &evenly
-    justify-content: space-evenly
-
-.items-
-  &start
-    align-items: flex-start
-  &end
-    align-items: flex-end
-  &center
-    align-items: center
-  &baseline
-    align-items: baseline
-  &stretch
-    align-items: stretch
-
-.content-
-  &start
-    align-content: flex-start
-  &end
-    align-content: flex-end
-  &center
-    align-content: center
-  &stretch
-    align-content: stretch
-  &between
-    align-content: space-between
-  &around
-    align-content: space-around
-
-.self-
-  &start
-    align-self: flex-start
-  &end
-    align-self: flex-end
-  &center
-    align-self: center
-  &baseline
-    align-self: baseline
-  &stretch
-    align-self: stretch
 
 .flex-center
   align-items: center
   justify-content: center
+
+.wrap
+  flex-wrap: wrap
+
+.shrink-0
+  flex-shrink: 0
+
+.gap-xs
+  gap: 0.25rem
+.gap-sm
+  gap: 0.5rem
+.gap-md
+  gap: 1rem
+.gap-lg
+  gap: 1.5rem
+.gap-xl
+  gap: 2rem
+.gap-xxl
+  gap: 3rem
+.gap-xxxl
+  gap: 5rem
+
+.justify-start
+  justify-content: flex-start
+.justify-end
+  justify-content: flex-end
+.justify-center
+  justify-content: center
+.justify-between
+  justify-content: space-between
+.justify-around
+  justify-content: space-around
+.justify-evenly
+  justify-content: space-evenly
+.justify-stretch
+  justify-content: stretch
+
+.items-start
+  align-items: flex-start
+.items-end
+  align-items: flex-end
+.items-center
+  align-items: center
+.items-baseline
+  align-items: baseline
+.items-stretch
+  align-items: stretch
+
+.content-start
+  align-content: flex-start
+.content-end
+  align-content: flex-end
+.content-center
+  align-content: center
+.content-stretch
+  align-content: stretch
+.content-between
+  align-content: space-between
+.content-around
+  align-content: space-around
+
+.self-start
+  align-self: flex-start
+.self-end
+  align-self: flex-end
+.self-center
+  align-self: center
+.self-baseline
+  align-self: baseline
+.self-stretch
+  align-self: stretch

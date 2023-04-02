@@ -153,7 +153,11 @@ const retroUnderlineStroke = computed(() =>
 .footer
   +pa($xl)
   +t-body2()
-  +flex-center()
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  flex-wrap: nowrap
   +C(color, letters)
   opacity: 0.9
   +C(background-color, white)

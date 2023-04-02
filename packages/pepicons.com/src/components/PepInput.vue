@@ -77,8 +77,8 @@ function emitInput(newVal: any) {
     left: 20px
     transform: translate(-50%, -50%)
 .pep-input
-  position: absolute
   all: unset
+  box-sizing: border-box
   outline: 2px solid transparent
   display: flex
   padding: 12px

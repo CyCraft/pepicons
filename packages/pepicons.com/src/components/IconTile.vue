@@ -62,5 +62,9 @@ const synonymHtml = computed(() => {
     line-height: 1.4em
     width: 100%
     text-align: center
-    +flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    flex-wrap: nowrap
 </style>

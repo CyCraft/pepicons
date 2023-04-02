@@ -1,6 +1,6 @@
 <template>
   <div class="pep-hero">
-    <div class="absolute-overlay flex-center"><slot /></div>
+    <div class="absolute-overlay column flex-center"><slot /></div>
     <h1 class="_title"><span>Pep</span><span>icons</span></h1>
   </div>
 </template>
@@ -34,7 +34,11 @@ $h-lg: 25px
 // other
 .pep-hero
   position: relative
-  +flex-center()
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  flex-wrap: nowrap
   ._title
     // typography
     +val()

@@ -46,9 +46,14 @@ function clickTile(icon: string): void {
   display: grid
   min-width: 300px
   justify-content: center
-  grid-template-columns: repeat(auto-fit, 100px)
+  justify-items: center
+  grid-template-columns: auto auto auto
+  @media screen and (min-width: 400px)
+    grid-template-columns: repeat(auto-fit, 100px)
   grid-auto-rows: 100px
-  grid-gap: $lg
+  grid-gap: $md
+  +media-xs(grid-gap, calc($md + $xs))
+  +media-sm(grid-gap, $lg)
 .anim-grid-item
   width: 100px
   height: 100px
