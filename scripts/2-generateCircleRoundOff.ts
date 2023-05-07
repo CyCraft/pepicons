@@ -5,33 +5,30 @@ import { wrapWithCircle, wrapWithOff, wrapWithRound } from './helpers/wrapHelper
 
 const PATH_PEPICONS = './packages/pepicons'
 
+const types = ['print', 'pop', 'pencil'] as const
+const wraps = ['circle-off', 'circle', 'round', 'off'] as const
+
 async function copyFiles() {
-  const fromPrint = PATH_PEPICONS + '/svg/print/*.svg'
-  const fromPop = PATH_PEPICONS + '/svg/pop/*.svg'
-  const fromPencil = PATH_PEPICONS + '/svg/pencil/*.svg'
-  await Promise.all([
-    cpy(fromPrint, PATH_PEPICONS + '/svg/print/circle'),
-    cpy(fromPop, PATH_PEPICONS + '/svg/pop/circle'),
-    cpy(fromPencil, PATH_PEPICONS + '/svg/pencil/circle'),
-    cpy(fromPrint, PATH_PEPICONS + '/svg/print/round'),
-    cpy(fromPop, PATH_PEPICONS + '/svg/pop/round'),
-    cpy(fromPencil, PATH_PEPICONS + '/svg/pencil/round'),
-    cpy(fromPrint, PATH_PEPICONS + '/svg/print/off'),
-    cpy(fromPop, PATH_PEPICONS + '/svg/pop/off'),
-    cpy(fromPencil, PATH_PEPICONS + '/svg/pencil/off'),
-    cpy(fromPrint, PATH_PEPICONS + '/svg/print/circle-off'),
-    cpy(fromPop, PATH_PEPICONS + '/svg/pop/circle-off'),
-    cpy(fromPencil, PATH_PEPICONS + '/svg/pencil/circle-off'),
-  ])
+  await Promise.all(
+    types
+      .map((type) =>
+        wraps.map((wrap) => {
+          const from = PATH_PEPICONS + `/svg/${type}/*.svg`
+          const to = PATH_PEPICONS + `/svg/${type}`
+          return cpy(from, to, { rename: (name) => name.replace('.svg', `-${wrap}.svg`) })
+        }),
+      )
+      .flat(),
+  )
 }
 
 async function mutate(
   type: 'print' | 'pop' | 'pencil',
   wrap: 'circle' | 'round' | 'off' | 'circle-off',
 ) {
-  const path = PATH_PEPICONS + `/svg/${type}/${wrap}/*.svg`
+  const path = PATH_PEPICONS + `/svg/${type}/*-${wrap}.svg`
 
-  if (wrap === 'circle') {
+  if (wrap === 'circle' || wrap === 'circle-off') {
     await replace({
       files: path,
       from: /([.\n\r\t\S\s]+)/gi,
@@ -60,30 +57,15 @@ async function mutate(
       to: (match) => wrapWithOff(match, type),
     })
   }
-
-  if (wrap === 'circle-off') {
-    await replace({
-      files: path,
-      from: /([.\n\r\t\S\s]+)/gi,
-      to: (match) => wrapWithCircle(wrapWithOff(match, type), type),
-    })
-  }
 }
 
 export async function generateCircleRoundOff() {
   await copyFiles()
-  await Promise.all([
-    mutate('print', 'circle'),
-    mutate('pop', 'circle'),
-    mutate('pencil', 'circle'),
-    mutate('print', 'round'),
-    mutate('pop', 'round'),
-    mutate('pencil', 'round'),
-    mutate('print', 'off'),
-    mutate('pop', 'off'),
-    mutate('pencil', 'off'),
-    mutate('print', 'circle-off'),
-    mutate('pop', 'circle-off'),
-    mutate('pencil', 'circle-off'),
-  ])
+  // we need to execute 'off' first, in order to correctly handle 'circle-off'
+  await Promise.all(types.map((type) => mutate(type, 'off')))
+  await Promise.all(
+    types.map((type) =>
+      (['circle', 'round', 'circle-off'] as const).map((wrap) => mutate(type, wrap)),
+    ),
+  )
 }
