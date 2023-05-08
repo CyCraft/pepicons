@@ -5,20 +5,31 @@ import { pencilIcons, popIcons, printIcons } from '../icons'
 
 const props = defineProps(Object.assign({}, baseProps, pepiconProps))
 
+/**
+ * TODO: Is it possible to not have to import these big dictionaries:
+ * `pencilIcons, popIcons, printIcons`
+ * But instead async import directly in this computed function?
+ * For this we'll need to use `computedAsync` from `@vueuse/core` though!
+ */
 const IconComponent = computed(() => {
-  const icons: Record<string, any> =
-    props.type === 'pop' ? popIcons : props.type === 'pencil' ? pencilIcons : printIcons
-  const icon = icons[props.name || '']
-  if (!icon) {
-    throw new Error(`inexistent Pepicon "${props.name}" for props: ${JSON.stringify(props)}`)
+  const icons: Record<string, any> = {
+    print: printIcons,
+    pop: popIcons,
+    pencil: pencilIcons,
+  }[props.type]
+  const name = props.wrap ? `${props.name}-${props.wrap}` : props.name
+  const iconImportFn = icons[name || '']
+  if (!iconImportFn) {
+    throw new Error(`inexistent Pepicon "${name}" for props: ${JSON.stringify(props)}`)
   }
-  return defineAsyncComponent(icon)
+  return defineAsyncComponent(iconImportFn)
 })
 
 const iconProps = computed(() => {
   const p: Record<string, any> = { ...props }
   p.type = undefined
   p.name = undefined
+  p.wrap = undefined
   return p
 })
 </script>

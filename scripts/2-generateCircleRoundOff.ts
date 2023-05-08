@@ -1,6 +1,5 @@
 import cpy from 'cpy'
 import replace from 'tiny-replace-files'
-import { optimize } from 'svgo'
 import { wrapWithCircle, wrapWithOff, wrapWithRound } from './helpers/wrapHelpers'
 
 const PATH_PEPICONS = './packages/pepicons'
@@ -40,13 +39,7 @@ async function mutate(
     await replace({
       files: path,
       from: /([.\n\r\t\S\s]+)/gi,
-      to: (match, path) => {
-        const svg = wrapWithRound(match, type)
-        if (type === 'print') {
-          return optimize(svg, { path, plugins: ['removeHiddenElems'] }).data
-        }
-        return svg
-      },
+      to: (match) => wrapWithRound(match, type),
     })
   }
 

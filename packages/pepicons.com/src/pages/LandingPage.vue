@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { mapObject } from 'map-anything'
 import {
   categories,
   Pepicon,
@@ -34,29 +35,41 @@ const hash = getQueryFromUrl()
 
 const searchInput = ref(hash || '')
 
-const categoryIconNamesDic = computed(() =>
+const categoryIconNamesDic = computed<{
+  [category: string]: Pepicon[]
+}>(() =>
   Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
     if (!(iconCategory in dic)) dic[iconCategory] = []
-    const iconNonExistent =
-      (props.choices.type === 'print' || props.choices.type === 'pencil') &&
-      iconName.endsWith('-filled')
-    if (iconNonExistent) return dic
-    const searchText = cleanupForSearch(searchInput.value)
-    if (searchText) {
-      const _synonyms: string[] = [
-        ...synonyms[iconName as Pepicon],
-        ...synonymsJa[iconName as Pepicon],
-        iconCategory,
-      ]
-      const searchHit =
-        cleanupForSearch(iconName).includes(searchText) ||
-        _synonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
-      if (!searchHit) return dic
+    if (
+      iconName.endsWith('-circle-off') ||
+      iconName.endsWith('-circle') ||
+      iconName.endsWith('-round') ||
+      iconName.endsWith('-off')
+    ) {
+      return dic
     }
     dic[iconCategory].push(iconName as any)
     return dic
   }, {} as { [category: string]: PepiconName[] }),
 )
+
+const categoryIconNamesFiltered = computed<{
+  [category: string]: Pepicon[]
+}>(() => {
+  const searchText = cleanupForSearch(searchInput.value)
+  if (!searchText) return categoryIconNamesDic.value
+
+  return mapObject(categoryIconNamesDic.value, (icons, category) => {
+    if (cleanupForSearch(category as string).includes(searchText)) return icons
+    return icons.filter((iconName) => {
+      const iconSynonyms = [...synonyms[iconName], ...synonymsJa[iconName]]
+      const searchHit =
+        cleanupForSearch(iconName).includes(searchText) ||
+        iconSynonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
+      return searchHit
+    })
+  })
+})
 
 const iconInfoIsVisible = ref(false)
 const iconInfoName = ref<PepiconName>('airplane')
@@ -82,7 +95,7 @@ const scrollPageTo = (navEl) => {
             <PepLink
               href="#"
               content="About Us"
-              icon="info-filled"
+              icon="info-circle"
               class="cursor-arrow-down"
               @click.stop.prevent="scrollPageTo('about-us')"
             />
@@ -122,10 +135,10 @@ const scrollPageTo = (navEl) => {
         @keydown.meta="() => setUrlQuery(searchInput)"
       />
       <template v-for="category in categories">
-        <div v-if="categoryIconNamesDic[category].length" :key="category" class="mb-xxl">
+        <div v-if="categoryIconNamesFiltered[category].length" :key="category" class="mb-xxl">
           <div class="text-section-title">{{ category }}</div>
           <IconGrid
-            :iconNames="categoryIconNamesDic[category]"
+            :iconNames="categoryIconNamesFiltered[category]"
             :choices="choices"
             :generatedColors="generatedColors"
             :randomColorDic="randomColorDic"
@@ -181,6 +194,7 @@ const scrollPageTo = (navEl) => {
           href="#"
           class="cursor-arrow-up px-md py-sm"
           content="Go to top"
+          icon="arrow-up"
           @click.stop.prevent="scrollPageTo('top')"
         />
         <div class="mt-xxl">

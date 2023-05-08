@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
-
 const props = defineProps({
   text: { type: String, default: 'Pop!' },
   backgroundColor: { type: String, default: '#000' },
@@ -14,7 +12,6 @@ const props = defineProps({
 </template>
 
 <style lang="sass">
-
 
 [data-tooltip]
   position: relative

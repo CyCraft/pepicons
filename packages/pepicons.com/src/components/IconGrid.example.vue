@@ -17,7 +17,6 @@ const icons: PepiconName[] = [
   'enter',
   'eye',
   'eye-closed',
-  'eye-off',
   'file',
   'folder',
   'gear',

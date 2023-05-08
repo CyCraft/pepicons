@@ -12,13 +12,14 @@
     "@pepicons/vue": "*",
     "@viteplay/plugin": "^0.2.4",
     "@viteplay/vue": "^0.2.4",
-    "copy-text-to-clipboard": "^3.0.1",
-    "is-what": "^4.1.7",
+    "copy-text-to-clipboard": "^3.1.0",
+    "is-what": "^4.1.8",
+    "map-anything": "^2.1.1",
     "pepicons": "*",
     "prismjs": "^1.29.0",
+    "vue": "^3.2.47",
     "vue-color-kit": "^1.0.5",
     "vue-prism-editor": "^2.0.0-alpha.2",
-    "vue-router": "^4.1.5",
-    "vue": "^3.2.39"
+    "vue-router": "^4.1.6"
   }
 }

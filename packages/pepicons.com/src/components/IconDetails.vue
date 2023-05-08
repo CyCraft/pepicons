@@ -2,11 +2,11 @@
 import { Pepicon } from '@pepicons/vue'
 import copyToClipboard from 'copy-text-to-clipboard'
 import { PepiconName, pepiconSvgString } from 'pepicons'
-import { Choices, GeneratedColors, RandomColorDic } from 'src/types'
 import { computed, ref } from 'vue'
 import { generateVueCode } from '../helpers/codeExampleHelpers'
 import { base64ToBlob, svgToBase64Png } from '../helpers/conversion'
 import { downloadBase64AsFile, downloadFile } from '../helpers/download'
+import { Choices, GeneratedColors, RandomColorDic } from '../types'
 import CodeBlock from './CodeBlock.vue'
 import HtmlButton from './HtmlButton.vue'
 import IconButton from './IconButton.vue'
@@ -19,7 +19,10 @@ const props = defineProps<{
   randomColorDic: RandomColorDic
 }>()
 
-const wrap = ref<'none' | 'circle' | 'ball' | 'off'>('none')
+const wrap = ref<undefined | 'circle' | 'round' | 'off' | 'circle-off'>(undefined)
+const iconNameWrapped = computed(
+  () => (wrap.value ? `${props.icon}-${wrap.value}` : props.icon) as PepiconName,
+)
 const selectedTab = ref<'Vue' | 'SVG'>('Vue')
 const codeShown = ref(false)
 const downloadSvgDone = ref(false)
@@ -49,35 +52,30 @@ const strokeGenerated = computed(() => {
 })
 
 const codeSvg = computed(() => {
-  console.log(`wrap.value → `, wrap.value)
   return pepiconSvgString({
-    name: props.icon,
+    name: iconNameWrapped.value,
     type: props.choices.type,
     color: colorGenerated.value,
     stroke: strokeGenerated.value,
-    wrap: wrap.value,
   })
 })
 
 const codeSvgLg = computed(() => {
-  console.log(`wrap.value → `, wrap.value)
   return pepiconSvgString({
-    name: props.icon,
+    name: iconNameWrapped.value,
     type: props.choices.type,
     color: colorGenerated.value,
     stroke: strokeGenerated.value,
-    wrap: wrap.value,
     size: '48px',
   })
 })
 
 const codeVue = computed(() =>
   generateVueCode({
-    name: props.icon,
+    name: iconNameWrapped.value,
     type: props.choices.type,
     color: colorGenerated.value,
     stroke: strokeGenerated.value,
-    wrap: wrap.value,
   }),
 )
 
@@ -143,15 +141,14 @@ async function copyPng(): Promise<void> {
 
     <div class="_top-door" :class="{ '_top-door-transform': codeShown }">
       <Pepicon
-        :name="icon"
+        :name="iconNameWrapped"
         :type="choices.type"
         :color="colorGenerated"
         :stroke="strokeGenerated"
-        :wrap="wrap"
         size="80px"
       />
 
-      <div class="text-h5 mt-xl">{{ icon }}</div>
+      <div class="text-h5 mt-xl">{{ iconNameWrapped }}</div>
     </div>
     <div
       class="_bottom-door column justify-center gap-md text-h6 px-xl"
@@ -163,16 +160,19 @@ async function copyPng(): Promise<void> {
         <div class="flex gutter-x-sm mt-xs">
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+            :icon="icon"
+            :wrap="undefined"
             :type="choices.type"
             :color="colorGenerated"
             :stroke="strokeGenerated"
             :activeColor="activeColorGenerated"
-            :isActive="wrap === 'none'"
-            @click="() => (wrap = 'none')"
+            :isActive="!wrap"
+            @click="() => (wrap = undefined)"
           />
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            icon="circle"
+            :icon="icon"
+            :wrap="'circle'"
             :type="choices.type"
             :color="colorGenerated"
             :stroke="strokeGenerated"
@@ -182,22 +182,36 @@ async function copyPng(): Promise<void> {
           />
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            icon="circle-filled"
-            type="pop"
-            :color="choices.color"
+            :icon="icon"
+            :wrap="'round'"
+            :type="choices.type"
+            :color="colorGenerated"
+            :stroke="strokeGenerated"
             :activeColor="activeColorGenerated"
-            :isActive="wrap === 'ball'"
-            @click="() => (wrap = 'ball')"
+            :isActive="wrap === 'round'"
+            @click="() => (wrap = 'round')"
           />
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            icon="no-entry"
+            :icon="icon"
+            :wrap="'off'"
             :type="choices.type"
             :color="colorGenerated"
             :stroke="strokeGenerated"
             :activeColor="activeColorGenerated"
             :isActive="wrap === 'off'"
             @click="() => (wrap = 'off')"
+          />
+          <IconButton
+            :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
+            :icon="icon"
+            :wrap="'circle-off'"
+            :type="choices.type"
+            :color="colorGenerated"
+            :stroke="strokeGenerated"
+            :activeColor="activeColorGenerated"
+            :isActive="wrap === 'circle-off'"
+            @click="() => (wrap = 'circle-off')"
           />
         </div>
       </div>

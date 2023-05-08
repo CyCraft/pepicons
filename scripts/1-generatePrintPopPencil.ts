@@ -1,7 +1,7 @@
 import cpy from 'cpy'
 import { deleteAsync } from 'del'
-import replace from 'tiny-replace-files'
 import { optimize } from 'svgo'
+import replace from 'tiny-replace-files'
 
 const PATH_PEPICONS = './packages/pepicons'
 
@@ -21,12 +21,18 @@ async function copySvgs() {
       flat: true,
       rename: cleanupFilename,
     }),
-    // copy print to pencil folder as well
+    // copy print icons to the pencil folder to mutate them later
+    // because we only keep the black line from the print icons to create the pencil icons
     cpy(PATH_PEPICONS + '/export/*print/*.svg', PATH_PEPICONS + '/svg/pencil/', {
       flat: true,
       rename: cleanupFilename,
     }),
   ])
+  // copy the `-filled` icons from the pop folder to the pencil folder
+  // because we keep the entire pop icon for `-filled` to create the pencil icons
+  await cpy(PATH_PEPICONS + '/svg/pop/*-filled.svg', PATH_PEPICONS + '/svg/pencil/', {
+    rename: cleanupFilename,
+  })
 }
 
 async function cleanupAll() {

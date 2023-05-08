@@ -9,6 +9,8 @@ const props = defineProps<{
   backgroundColor: string
   /** (optional) will show an icon in the button */
   icon?: PepiconName
+  /** (optional) will wrap the icon */
+  wrap?: 'circle' | 'round' | 'off' | 'circle-off'
   /** (optional) the icon type of the icon in the button */
   type?: 'pop' | 'print' | 'pencil'
   /** (optional) the color of the icon in the button */
@@ -43,6 +45,7 @@ function click() {
   emit('click')
 }
 </script>
+
 <template>
   <button
     :class="`icon-button reset-button cursor-pointer`"
@@ -54,6 +57,7 @@ function click() {
         v-if="icon"
         :class="`_icon ${isAnimating ? animation?.class : ''}`"
         :name="icon"
+        :wrap="wrap"
         :type="type || 'print'"
         :color="color"
         :stroke="stroke"

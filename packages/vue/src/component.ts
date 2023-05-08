@@ -1,4 +1,4 @@
-import { morphPepicon, Pepicon, pepiconArray } from 'pepicons'
+import { morphPepicon, Pepicon } from 'pepicons'
 import { computed, h, PropType } from 'vue'
 
 export const baseProps = {
@@ -32,15 +32,16 @@ export const baseProps = {
     default: 'md',
   },
   /**
-   * - none (default) — applies no wrapping around the icon
-   * - circle — applies a circle around the icon
-   * - ball — shows the icon inside a ball
-   * - off — shows an cross line diagonally on top of the icon
-   * @type { 'none' | 'circle' | 'ball' | 'off' }
+   * The wrap can also be set via the icon name
+   * - `undefined` (default) — applies no wrapping around the icon
+   * - 'circle' — wraps the icon in a circle
+   * - 'round' — shows the icon inside a round
+   * - 'off' — shows an cross line diagonally on top of the icon
+   * - 'circle-off' — wraps the icon in a circle and shows a cross line diagonally on top of the icon
+   * @default undefined
    */
   wrap: {
-    type: String as PropType<'none' | 'circle' | 'ball' | 'off'>,
-    default: 'none',
+    type: String as PropType<undefined | 'circle' | 'round' | 'off' | 'circle-off'>,
   },
 }
 
@@ -52,12 +53,14 @@ export const pepiconProps = {
   type: { type: String as PropType<'pop' | 'print' | 'pencil'>, default: 'pop' },
   /**
    * The icon name as per the reference at https://pepicons.com
-   * @example 'airplane'
+   * @example 'pen'
+   * @example 'pen-circle'
+   * @example 'pen-round'
+   * @example 'pen-off'
    */
   name: {
-    type: String as PropType<Pepicon>,
+    type: String as PropType<Pepicon | `${Pepicon}-circle` | `${Pepicon}-round` | `${Pepicon}-off`>,
     required: true,
-    validator: (val: Pepicon) => pepiconArray.includes(val),
   },
 }
 

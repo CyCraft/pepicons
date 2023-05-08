@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
 import { pages } from '@viteplay/vue/client'
+import { createRouter, createWebHistory } from 'vue-router'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -7,7 +7,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'MainLayout',
-      component: () => import('../layouts/MainLayout.vue'),
+      component: () => import('../pages/MainLayout.vue'),
       children: [
         { path: '', name: 'home', component: () => import('../pages/LandingPage.vue') },
         { path: 'dev', component: () => import('../pages/Dev.vue') },

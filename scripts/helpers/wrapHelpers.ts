@@ -1,3 +1,5 @@
+import { optimize } from 'svgo'
+
 export function wrapWithCircle(svg: string, type: 'print' | 'pop' | 'pencil'): string {
   svg = svg.replace(/viewBox="0 0 2[01] 2[01]"/, `viewBox="0 0 26 26"`)
   svg = svg.replace(
@@ -62,6 +64,7 @@ export function wrapWithRound(svg: string, type: 'print' | 'pop' | 'pencil'): st
       '</svg>',
       `<path fill-rule="evenodd" clip-rule="evenodd" d="M13 24.5C19.3513 24.5 24.5 19.3513 24.5 13C24.5 6.64873 19.3513 1.5 13 1.5C6.64873 1.5 1.5 6.64873 1.5 13C1.5 19.3513 6.64873 24.5 13 24.5ZM13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="black"/></svg>`,
     )
+    svg = optimize(svg, { plugins: ['removeHiddenElems'] }).data
   }
   return svg
 }
