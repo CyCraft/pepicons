@@ -14,7 +14,7 @@ function setTab(tab) {
 }
 </script>
 <template>
-  <div class="flex">
+  <div>
     <ul class="_tabs">
       <li
         v-for="tab in tabs"

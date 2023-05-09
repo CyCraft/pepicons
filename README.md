@@ -27,6 +27,23 @@ Check out this blog post to understand our motivation for creating Pepicons:
 - English: [Pepicons: Retro Icon Set now available for Designers and Coders](https://lucaban.medium.com/pepicons-retro-icon-set-now-available-for-designers-and-coders-40db866a7460)
 - Japanese: [Pepicons: 80 年代好きにはたまらないアイコンセットが登場](https://lucaban.medium.com/pepicons-80年代好きにはたまらないアイコンセットが登場-6e417dcf4a7f)
 
+## Contribution
+
+In order to do anything you'll need to build the repo once:
+
+```
+npm i
+npm run build
+```
+
+Then you can run the dev server:
+
+```
+npm run dev
+```
+
+Check Package.json for more scripts.
+
 ## License
 
 For commercial use please purchase a License at: https://github.com/sponsors/mesqueeb?frequency=one-time

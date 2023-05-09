@@ -27,6 +27,14 @@ import Pepicon from '../Pepicon.vue'
     <Pepicon type="pencil" name="camera" color="mediumslateblue" wrap="circle" />
     <Pepicon type="pencil" name="car" color="mediumslateblue" wrap="circle" />
   </div>
+  <div class="example">
+    <Pepicon type="pencil" name="airplane-circle" color="mediumslateblue" />
+    <Pepicon type="pencil" name="battery-circle" color="mediumslateblue" />
+    <Pepicon type="pencil" name="bicycle-circle" color="mediumslateblue" />
+    <Pepicon type="pencil" name="book-circle" color="mediumslateblue" />
+    <Pepicon type="pencil" name="camera-circle" color="mediumslateblue" />
+    <Pepicon type="pencil" name="car-circle" color="mediumslateblue" />
+  </div>
 </template>
 
 <style scoped>

@@ -114,7 +114,7 @@ function setRandomColor() {
 
       <IconButton
         class="cursor-color-picker"
-        icon="refresh"
+        icon="arrows-spin"
         :type="choices.type"
         :color="generatedColors.color"
         :stroke="generatedColors.stroke"
@@ -128,7 +128,7 @@ function setRandomColor() {
     <Stack class="picker" classes="justify-center">
       <IconButton
         backgroundColor="white"
-        icon="sun-filled"
+        icon="sun"
         type="pop"
         color="black"
         class="_background-picker thin-border--dark"
@@ -136,7 +136,7 @@ function setRandomColor() {
       />
       <IconButton
         :backgroundColor="nightfall"
-        icon="moon-filled"
+        icon="moon"
         type="pop"
         color="white"
         class="_background-picker thin-border--light"
