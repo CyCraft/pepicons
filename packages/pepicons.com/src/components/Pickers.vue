@@ -114,7 +114,7 @@ function setRandomColor() {
 
       <IconButton
         class="cursor-color-picker"
-        icon="refresh"
+        icon="arrows-spin"
         :type="choices.type"
         :color="generatedColors.color"
         :stroke="generatedColors.stroke"

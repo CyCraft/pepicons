@@ -20,7 +20,7 @@ const icons: PepiconName[] = [
   'file',
   'folder',
   'gear',
-  'grab',
+  'grab-handle',
   'hash',
   'label',
   'leave',
@@ -31,7 +31,7 @@ const icons: PepiconName[] = [
   'open',
   'power',
   'qr-code',
-  'tool',
+  'wrench',
   'trash',
   'wifi',
 ]
