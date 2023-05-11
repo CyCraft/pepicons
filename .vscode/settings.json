@@ -6,8 +6,11 @@
   "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[sass]": { "editor.defaultFormatter": "syler.sass-indented" },
   // volar
-  "volar.completion.preferredTagNameCase": "pascal",
-  "volar.completion.preferredAttrNameCase": "camel",
+  "vue.autoInsert.parentheses": true,
+  "vue.complete.casing.props": "camel",
+  "vue.complete.casing.tags": "pascal",
+  "vue.complete.normalizeComponentImportName": true,
+  "vue.doctor.status": true,
   // monorepo / workspace related
   "eslint.workingDirectories": [{ "pattern": "./packages/*/" }],
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
