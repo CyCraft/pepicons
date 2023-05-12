@@ -10,12 +10,12 @@
   "files": [
     "dist"
   ],
-  "types": "./dist/vue/src/index.d.ts",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.es.js",
   "exports": {
     ".": {
-      "types": "./dist/vue/src/index.d.ts",
+      "types": "./dist/index.d.ts",
       "import": "./dist/index.es.js",
       "require": "./dist/index.umd.js"
     }
