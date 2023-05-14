@@ -77,7 +77,7 @@ function openIconModal(icon: PepiconName): void {
   iconInfoName.value = icon
   iconInfoIsVisible.value = true
 }
-const scrollPageTo = (navEl) => {
+const scrollPageTo = (navEl: string) => {
   console.log(`#${navEl}`)
   const element = document.querySelector(`#${navEl}`)
 

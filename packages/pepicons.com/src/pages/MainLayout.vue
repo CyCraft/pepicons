@@ -5,6 +5,7 @@ import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue
 import PepHero from '../components/PepHero.vue'
 import PepLink from '../components/PepLink.vue'
 import { getRandomColor } from '../helpers/colorHelpers'
+import { objectEntries } from '../helpers/objectEntries'
 import { Choices, GeneratedColors, RandomColorDic } from '../types'
 
 const choices = ref<Choices>({
@@ -39,9 +40,10 @@ const generatedColors = computed<GeneratedColors>(() => {
 })
 
 const randomColorDic = computed<RandomColorDic>(() =>
-  Object.entries(pepiconRandomColorDic.value).reduce((result, keyVal) => {
+  objectEntries(pepiconRandomColorDic.value).reduce<RandomColorDic>((result, entry) => {
     const { mode, type } = choices.value
-    const [icon, randomColor] = keyVal
+    if (!entry) return result
+    const [icon, randomColor = ''] = entry
 
     result[icon] = {
       color: mode === 'dark' && type === 'print' ? 'black' : randomColor,

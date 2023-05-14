@@ -1,14 +1,14 @@
+import { camelCase } from 'case-anything'
 import { textToRgba } from './helpers/color'
+import * as dicPencil from './icons/pencil/index'
+import * as dicPop from './icons/pop/index'
+import * as dicPrint from './icons/print/index'
 import { PepiconName } from './types'
 
 export * from './categories'
 export * from './synonyms/en'
 export { synonyms as synonymsJa } from './synonyms/ja'
 export * from './types'
-
-import * as dicPencil from './icons/pencil/index'
-import * as dicPop from './icons/pop/index'
-import * as dicPrint from './icons/print/index'
 
 const svgDic: {
   [key in 'pop' | 'print' | 'pencil']: {
@@ -86,7 +86,7 @@ export type MorphPepiconPayload = {
 export function getPepicon(payload: GetPepiconPayload): string {
   const { type = 'pop', wrap, name } = payload || {}
   const nameWithWrap = wrap ? `${name}-${wrap}` : name
-  const svgString = svgDic[payload.type || 'pop'][nameWithWrap]
+  const svgString = svgDic[type][camelCase(nameWithWrap)]
   if (!svgString) {
     console.warn(
       `Pepicon ${nameWithWrap} of type ${type} not found! (returned an empty string instead)`,
@@ -111,7 +111,7 @@ export function morphPepicon(payload: MorphPepiconPayload): string {
   }
 
   if (type === 'print' && stroke) {
-    svg = svg.replace(/#000000|#000|black/g, stroke)
+    svg = svg.replace(/dimgray/g, stroke)
   }
 
   const rgbOrHexColor = color?.startsWith('rgb') || color?.startsWith('#')
