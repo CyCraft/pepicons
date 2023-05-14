@@ -3,15 +3,7 @@
 // const { lighten, brightness, getBrand, setBrand } = colors
 // these direct functions are because the line above doesnt work
 
-function lighten(color, percent) {
-  if (typeof color !== 'string') {
-    throw new Error('Expected a string as color')
-  }
-
-  if (typeof percent !== 'number') {
-    throw new Error('Expected a numeric percent')
-  }
-
+function lighten(color: string, percent: number) {
   const rgb = textToRgb(color),
     t = percent < 0 ? 0 : 255,
     p = Math.abs(percent) / 100,
@@ -144,10 +136,6 @@ export const rgbToHex = function ({ r, g, b, a }) {
 }
 
 export const hexToRgb = function (hex: string) {
-  if (typeof hex !== 'string') {
-    throw new Error('Expected a string')
-  }
-
   hex = hex.replace(/^#/, '')
 
   if (hex.length === 3) {
