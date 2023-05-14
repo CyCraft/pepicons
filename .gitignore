@@ -28,3 +28,11 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Nuxt
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
