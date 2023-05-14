@@ -1,3 +1,10 @@
+import { dirname, resolve } from 'path'
+import { fileURLToPath } from 'url'
+
+const thisFolder = dirname(fileURLToPath(import.meta.url))
+export const PATH_PEPICONS = resolve(thisFolder, '..', '..', 'packages', 'pepicons')
+export const PATH_VUE = resolve(thisFolder, '..', '..', 'packages', 'vue')
+
 /**
  * @example
  * filenameToIconName('[food]pop/bread|loaf|crum.svg') // 'bread'

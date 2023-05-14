@@ -1,8 +1,7 @@
-import { deleteAsync } from 'del'
 import cpy from 'cpy'
+import { deleteAsync } from 'del'
 import replace from 'tiny-replace-files'
-
-const PATH_PEPICONS = './packages/pepicons'
+import { PATH_PEPICONS } from './helpers/filePathHelpers'
 
 async function deleteIconsFolder() {
   await deleteAsync(PATH_PEPICONS + '/src/icons')

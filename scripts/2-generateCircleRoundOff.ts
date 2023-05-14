@@ -1,8 +1,7 @@
 import cpy from 'cpy'
 import replace from 'tiny-replace-files'
+import { PATH_PEPICONS } from './helpers/filePathHelpers'
 import { wrapWithCircle, wrapWithOff, wrapWithRound } from './helpers/wrapHelpers'
-
-const PATH_PEPICONS = './packages/pepicons'
 
 const types = ['print', 'pop', 'pencil'] as const
 const wraps = ['circle-off', 'circle', 'round', 'off'] as const

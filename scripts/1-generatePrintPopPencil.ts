@@ -2,8 +2,7 @@ import cpy from 'cpy'
 import { deleteAsync } from 'del'
 import { optimize } from 'svgo'
 import replace from 'tiny-replace-files'
-
-const PATH_PEPICONS = './packages/pepicons'
+import { PATH_PEPICONS } from './helpers/filePathHelpers'
 
 const deleteSvgFolder = () => deleteAsync(PATH_PEPICONS + '/svg')
 
