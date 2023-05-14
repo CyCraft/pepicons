@@ -1,0 +1,249 @@
+// app global css in Sass form
+@import 'variables'
+@import 'variable-classes/colors'
+@import 'variable-classes/flex'
+@import 'variable-classes/margin-padding'
+@import 'variable-classes/reset-elements'
+@import 'variable-classes/text'
+@import 'variable-classes/typography'
+
+*, *:before, *:after
+  box-sizing: border-box
+html, body
+  margin: 0
+  box-sizing: border-box
+
+body
+  transition: background-color 250ms
+  &.light-mode
+    +C(background-color, ivory)
+  &.dark-mode
+    +C(background-color, nightfall)
+
+.thin-border--dark
+  border: thin solid $c-old-tucan !important
+.thin-border--light
+  border: thin solid $c-washed-cloth !important
+
+.q-color-picker__header
+  height: 36px
+.q-color-picker__header-content > .q-tabs
+  display: none
+
+.absolute-overlay
+  +absolute-overlay()
+
+.anime-shake
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 500ms
+  /* When the animation is finished, start again */
+  animation-iteration-count: 2
+  will-change: transform
+
+@keyframes shake
+  0%
+    transform: rotate(0deg) translate(1px, 1px)
+  10%
+    transform: rotate(-10deg) translate(-1px, -2px)
+  20%
+    transform: rotate(10deg) translate(-3px, 0px)
+  30%
+    transform: rotate(0deg) translate(3px, 2px)
+  40%
+    transform: rotate(10deg) translate(1px, -1px)
+  50%
+    transform: rotate(-10deg) translate(-1px, 1px)
+  60%
+    transform: rotate(0deg) translate(-3px, -1px)
+  70%
+    transform: rotate(-5deg) translate(3px, -2px)
+  80%
+    transform: rotate(5deg) translate(-1px, -1px)
+  90%
+    transform: rotate(0deg) translate(1px, 2px)
+  100%
+    transform: rotate(-10deg) translate(1px, -2px)
+
+.anime-float
+  will-change: transform
+  animation-duration: 300s
+  animation-timing-function: ease
+  animation-delay: 0s
+  animation-iteration-count: infinite
+
+.anime-float-0
+  animation-name: float-0
+.anime-float-1
+  animation-name: float-1
+.anime-float-2
+  animation-name: float-2
+.anime-float-3
+  animation-name: float-3
+.anime-float-4
+  animation-name: float-4
+.anime-float-5
+  animation-name: float-5
+.anime-float-6
+  animation-name: float-6
+.anime-float-7
+  animation-name: float-7
+.anime-float-8
+  animation-name: float-8
+.anime-float-9
+  animation-name: float-9
+.anime-float-10
+  animation-name: float-10
+.anime-float-11
+  animation-name: float-11
+.anime-float-12
+  animation-name: float-12
+.anime-float-13
+  animation-name: float-13
+.anime-float-14
+  animation-name: float-14
+.anime-float-15
+  animation-name: float-15
+.anime-float-16
+  animation-name: float-16
+.anime-float-17
+  animation-name: float-17
+.anime-float-18
+  animation-name: float-18
+.anime-float-19
+  animation-name: float-19
+.anime-float-20
+  animation-name: float-20
+.anime-float-21
+  animation-name: float-21
+.anime-float-22
+  animation-name: float-22
+.anime-float-23
+  animation-name: float-23
+.anime-float-24
+  animation-name: float-24
+
+@keyframes float-0
+  from
+    transform: translate(72%, 60%)
+  to
+    transform: translate(-71%, -2%)
+@keyframes float-1
+  from
+    transform: translate(20%, 1%)
+  to
+    transform: translate(-80%, -82%)
+@keyframes float-2
+  from
+    transform: translate(98%, 66%)
+  to
+    transform: translate(-26%, -70%)
+@keyframes float-3
+  from
+    transform: translate(40%, 44%)
+  to
+    transform: translate(-83%, -69%)
+@keyframes float-4
+  from
+    transform: translate(23%, 12%)
+  to
+    transform: translate(-17%, -75%)
+@keyframes float-5
+  from
+    transform: translate(55%, 95%)
+  to
+    transform: translate(-51%, -73%)
+@keyframes float-6
+  from
+    transform: translate(41%, 7%)
+  to
+    transform: translate(-29%, -97%)
+@keyframes float-7
+  from
+    transform: translate(86%, 6%)
+  to
+    transform: translate(-10%, -46%)
+@keyframes float-8
+  from
+    transform: translate(50%, 64%)
+  to
+    transform: translate(50%, -1000%)
+@keyframes float-9
+  from
+    transform: translate(24%, 5%)
+  to
+    transform: translate(-21%, -67%)
+@keyframes float-10
+  from
+    transform: translate(49%, 31%)
+  to
+    transform: translate(-81%, -22%)
+@keyframes float-11
+  from
+    transform: translate(90%, 88%)
+  to
+    transform: translate(-3%, -62%)
+@keyframes float-12
+  from
+    transform: translate(87%, 89%)
+  to
+    transform: translate(-39%, -91%)
+@keyframes float-13
+  from
+    transform: translate(-79%, -34%)
+  to
+    transform: translate(78%, 96%)
+@keyframes float-14
+  from
+    transform: translate(-47%, -85%)
+  to
+    transform: translate(42%, 92%)
+@keyframes float-15
+  from
+    transform: translate(-61%, -43%)
+  to
+    transform: translate(13%, 15%)
+@keyframes float-16
+  from
+    transform: translate(0%, 100%)
+  to
+    transform: translate(94%, -52%)
+@keyframes float-17
+  from
+    transform: translate(-100%, -56%)
+  to
+    transform: translate(84%, 57%)
+@keyframes float-18
+  from
+    transform: translate(-48%, -76%)
+  to
+    transform: translate(53%, 19%)
+@keyframes float-19
+  from
+    transform: translate(-63%, -37%)
+  to
+    transform: translate(38%, 74%)
+@keyframes float-20
+  from
+    transform: translate(-32%, -93%)
+  to
+    transform: translate(45%, 99%)
+@keyframes float-21
+  from
+    transform: translate(-33%, -8%)
+  to
+    transform: translate(16%, 18%)
+@keyframes float-22
+  from
+    transform: translate(-65%, -36%)
+  to
+    transform: translate(9%, 11%)
+@keyframes float-23
+  from
+    transform: translate(-35%, -4%)
+  to
+    transform: translate(50%, 68%)
+@keyframes float-24
+  from
+    transform: translate(-14%, -27%)
+  to
+    transform: translate(59%, 25%)

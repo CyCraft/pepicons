@@ -12,7 +12,7 @@
   "vue.complete.normalizeComponentImportName": true,
   "vue.doctor.status": true,
   // monorepo / workspace related
-  "eslint.workingDirectories": [{ "pattern": "./packages/*/" }],
+  "eslint.workingDirectories": [{ "pattern": "./packages/*/" }, { "pattern": "./projects/*/" }],
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
   // disable conflicting formatting
   "javascript.validate.enable": false,
