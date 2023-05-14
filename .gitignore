@@ -2,7 +2,8 @@
 packages/pepicons/src/icons
 packages/pepicons/svg
 packages/vue/src/icons
-pepicons.com (t)
+
+*.zip
 
 # Logs
 logs
