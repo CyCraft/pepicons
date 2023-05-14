@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import '@viteplay/vue/dist/style.css'
+</script>
 
 <template>
   <router-view />
@@ -6,6 +8,4 @@
 
 <style lang="sass">
 @import './css/app.sass'
-*
-  margin: 0
 </style>

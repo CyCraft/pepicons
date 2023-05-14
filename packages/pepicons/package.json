@@ -1,32 +1,51 @@
 {
   "name": "pepicons",
-  "version": "1.1.2",
+  "version": "2.0.3",
   "sideEffects": false,
   "description": "Retro icon set",
   "productName": "Pepicons",
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
+  "scripts": {
+    "build": "del-cli dist && rollup --bundleConfigAsCjs -c ./build.js"
+  },
   "files": [
-    "dist"
+    "dist",
+    "svg"
   ],
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.esm.js",
   "types": "./dist/types/index.d.ts",
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.esm.js",
   "exports": {
     ".": {
+      "types": "./dist/types/index.d.ts",
       "import": "./dist/index.esm.js",
-      "require": "./dist/index.cjs.js",
-      "types": "./dist/types/index.d.ts"
+      "require": "./dist/index.umd.js"
+    },
+    "./svg/*": {
+      "import": "./svg/*",
+      "require": "./svg/*"
+    },
+    "./print": {
+      "types": "./dist/types/icons/print/index.d.ts",
+      "import": "./dist/print.esm.js",
+      "require": "./dist/print.umd.js"
+    },
+    "./pop": {
+      "types": "./dist/types/icons/pop/index.d.ts",
+      "import": "./dist/pop.esm.js",
+      "require": "./dist/pop.umd.js"
+    },
+    "./pencil": {
+      "types": "./dist/types/icons/pencil/index.d.ts",
+      "import": "./dist/pencil.esm.js",
+      "require": "./dist/pencil.umd.js"
+    },
+    "./dist/*": {
+      "import": "./dist/*",
+      "require": "./dist/*"
     }
-  },
-  "scripts": {
-    "build": "rimraf dist && rollup -c ./build.js"
-  },
-  "devDependencies": {
-    "rimraf": "^3.0.2",
-    "rollup": "^2.75.7",
-    "rollup-plugin-typescript2": "^0.32.1"
   },
   "gitHead": "b9d99854c5f1a88b1bd6b50ed81b249feea5fcd9"
 }

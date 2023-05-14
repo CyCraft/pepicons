@@ -1,12 +1,8 @@
-<script lang="ts">
-import { defineComponent, ref, computed } from 'vue'
-
-export default defineComponent({
-  props: {
-    text: { type: String, default: 'Pop!' },
-    backgroundColor: { type: String, default: '#000' },
-    textColor: { type: String, default: '#fff' },
-  },
+<script lang="ts" setup>
+const props = defineProps({
+  text: { type: String, default: 'Pop!' },
+  backgroundColor: { type: String, default: '#000' },
+  textColor: { type: String, default: '#fff' },
 })
 </script>
 <template>
@@ -16,7 +12,6 @@ export default defineComponent({
 </template>
 
 <style lang="sass">
-
 
 [data-tooltip]
   position: relative

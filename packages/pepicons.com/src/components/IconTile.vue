@@ -1,49 +1,40 @@
-<script lang="ts">
-import { computed, defineComponent, PropType } from 'vue'
-import { Pepicon as PepiconType, synonyms } from 'pepicons'
+<script lang="ts" setup>
 import { Pepicon } from '@pepicons/vue'
+import { PepiconName, synonyms } from 'pepicons'
+import { computed } from 'vue'
 import { cleanupForSearch } from '../helpers/search'
-import { defaultsIconConfig, IconConfig } from '../types'
 
-export default defineComponent({
-  name: 'IconTile',
-  components: { Pepicon },
-  props: {
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    config: {
-      type: Object as PropType<Partial<IconConfig>>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
-    searchInput: { type: String, default: '' },
-  },
-  setup(props) {
-    const searchInputSynonymHit = computed(() => {
-      const searchText = cleanupForSearch(props.searchInput)
-      if (!searchText) return undefined
-      const _synonyms = synonyms[props.config.name as PepiconType] || []
-      return _synonyms.find((s) => cleanupForSearch(s).includes(searchText))
-    })
-    const synonymHtml = computed(() => {
-      if (!searchInputSynonymHit.value) return ''
-      const text = searchInputSynonymHit.value.replace(
-        props.searchInput,
-        `<span class="c-old-tucan">${props.searchInput}</span>`,
-      )
-      return `<div class="c-washed-cloth" style="opacity: 0.8">${text}</div>`
-    })
+const props = defineProps<{
+  name: PepiconName
+  type: 'pop' | 'print' | 'pencil'
+  color: string
+  stroke: string
+  searchInput?: string
+}>()
 
-    return { synonymHtml }
-  },
+const searchInputSynonymHit = computed(() => {
+  const searchText = cleanupForSearch(props.searchInput || '')
+  if (!searchText) return undefined
+  const _synonyms = synonyms[props.name] || []
+  return _synonyms.find((s) => cleanupForSearch(s).includes(searchText))
+})
+
+const synonymHtml = computed(() => {
+  if (!searchInputSynonymHit.value) return ''
+  const text = searchInputSynonymHit.value.replace(
+    props.searchInput || '',
+    `<span class="c-old-tucan">${props.searchInput}</span>`,
+  )
+  return `<div class="c-washed-cloth" style="opacity: 0.8">${text}</div>`
 })
 </script>
+
 <template>
-  <div class="icon-tile">
-    <Pepicon class="_svg" v-bind="(config as any)" size="26px" />
+  <div class="icon-tile cursor-zoom-in">
+    <Pepicon class="_svg" :type="type" :color="color" :stroke="stroke" :name="name" size="26px" />
     <div class="_name">
       <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
-        {{ config.name }}
+        {{ name }}
       </div>
       <div v-if="synonymHtml" v-html="synonymHtml" />
     </div>
@@ -63,7 +54,6 @@ export default defineComponent({
   display: flex
   flex-direction: column
   align-items: center
-  cursor: zoom-in
   ._svg
     flex: 1
   ._name
@@ -72,5 +62,9 @@ export default defineComponent({
     line-height: 1.4em
     width: 100%
     text-align: center
-    +flex-center
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    flex-wrap: nowrap
 </style>

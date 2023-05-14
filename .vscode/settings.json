@@ -5,6 +5,12 @@
   "[typescript]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[vue]": { "editor.defaultFormatter": "esbenp.prettier-vscode" },
   "[sass]": { "editor.defaultFormatter": "syler.sass-indented" },
+  // volar
+  "vue.autoInsert.parentheses": true,
+  "vue.complete.casing.props": "camel",
+  "vue.complete.casing.tags": "pascal",
+  "vue.complete.normalizeComponentImportName": true,
+  "vue.doctor.status": true,
   // monorepo / workspace related
   "eslint.workingDirectories": [{ "pattern": "./packages/*/" }],
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "vue"],
@@ -29,5 +35,9 @@
   "sass.format.deleteEmptyRows": true,
   "sass.format.deleteWhitespace": true,
   "sass.format.convert": true,
-  "sass.format.setPropertySpace": true
+  "sass.format.setPropertySpace": true,
+  // gitlens
+  "gitlens.defaultTimeFormat": "HH:mm",
+  "gitlens.codeLens.enabled": false,
+  "cSpell.words": ["cycraft", "Pepicon", "pepicons"]
 }

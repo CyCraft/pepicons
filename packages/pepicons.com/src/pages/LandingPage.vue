@@ -1,154 +1,113 @@
-<script lang="ts">
-import { defineComponent, reactive, computed, watch, ref } from 'vue'
+<script lang="ts" setup>
+import { mapObject } from 'map-anything'
 import {
-  pop,
-  print,
-  Pepicon,
-  PepiconPrint,
-  synonyms,
-  synonymsJa,
   categories,
+  Pepicon,
   pepiconCategoryDic,
   PepiconName,
+  synonyms,
+  synonymsJa,
 } from 'pepicons'
-import Stack from '../components/Stack.vue'
+import { computed, ref } from 'vue'
+import DialogWrapper from '../components/DialogWrapper.vue'
+import IconDetails from '../components/IconDetails.vue'
 import IconGrid from '../components/IconGrid.vue'
 import PepInput from '../components/PepInput.vue'
-import Pickers from '../components/Pickers.vue'
 import PepLink from '../components/PepLink.vue'
+import Pickers from '../components/Pickers.vue'
 import ProfileCard from '../components/ProfileCard.vue'
-import { cssVar, setPrimaryColor } from '../helpers/colorHelpers'
+import Stack from '../components/Stack.vue'
 import { cleanupForSearch } from '../helpers/search'
-import { setUrlQuery, getQueryFromUrl } from '../helpers/urlHelpers'
-import { defaultsIconConfig, IconConfig } from '../types'
-import DialogWrapper from '../components/DialogWrapper.vue'
-import IconInfo from '../components/IconInfo.vue'
+import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
+import { Choices, GeneratedColors, RandomColorDic } from '../types'
 
-export default defineComponent({
-  name: 'LandingPage',
-  components: { Stack, PepLink, Pickers, PepInput, ProfileCard, IconGrid, DialogWrapper, IconInfo },
-  emits: ['set-is-dark-mode'],
-  created() {
-    document.body.classList.add('light-mode')
-    document.body.classList.add(`${defaultsIconConfig().type}-mode`)
-  },
-  setup(props, { emit }) {
-    const hash = getQueryFromUrl()
+const props = defineProps<{
+  choices: Choices
+  generatedColors: GeneratedColors
+  randomColorDic: RandomColorDic
+}>()
 
-    const _ = reactive({
-      searchInput: hash || '',
-      config: defaultsIconConfig({ isDarkMode: false }),
+const emit = defineEmits<{
+  (e: 'update:choices', payload: Choices): void
+}>()
+
+const hash = getQueryFromUrl()
+
+const searchInput = ref(hash || '')
+
+const categoryIconNamesDic = computed<{
+  [category: string]: Pepicon[]
+}>(() =>
+  Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
+    if (!(iconCategory in dic)) dic[iconCategory] = []
+    if (
+      iconName.endsWith('-circle-off') ||
+      iconName.endsWith('-circle') ||
+      iconName.endsWith('-round') ||
+      iconName.endsWith('-off')
+    ) {
+      return dic
+    }
+    dic[iconCategory].push(iconName as any)
+    return dic
+  }, {} as { [category: string]: PepiconName[] }),
+)
+
+const categoryIconNamesFiltered = computed<{
+  [category: string]: Pepicon[]
+}>(() => {
+  const searchText = cleanupForSearch(searchInput.value)
+  if (!searchText) return categoryIconNamesDic.value
+
+  return mapObject(categoryIconNamesDic.value, (icons, category) => {
+    if (cleanupForSearch(category as string).includes(searchText)) return icons
+    return icons.filter((iconName) => {
+      const iconSynonyms = [...synonyms[iconName], ...synonymsJa[iconName]]
+      const searchHit =
+        cleanupForSearch(iconName).includes(searchText) ||
+        iconSynonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
+      return searchHit
     })
-
-    const configComputed = computed(() => {
-      const { type, color: _color, stroke: _stroke, isDarkMode } = _.config
-      const useColorAsStroke = type === 'print' && isDarkMode
-      const color = useColorAsStroke ? 'black' : _color
-      const stroke = useColorAsStroke ? _color : _stroke
-      return { type, color, stroke }
-    })
-
-    watch(
-      () => _.config.type,
-      (newVal) => {
-        document.body.className = document.body.className.replace(
-          /(print|pop)-mode/g,
-          `${newVal}-mode`,
-        )
-      },
-    )
-    watch(
-      () => _.config.color,
-      (newVal) => {
-        setPrimaryColor(newVal)
-      },
-    )
-    watch(
-      () => _.config.isDarkMode,
-      (isDarkMode) => {
-        if (isDarkMode === false) {
-          document.body.className = document.body.className.replace(/dark-mode/g, 'light-mode')
-          emit('set-is-dark-mode', false)
-        }
-        if (isDarkMode === true) {
-          document.body.className = document.body.className.replace(/light-mode/g, 'dark-mode')
-          emit('set-is-dark-mode', true)
-        }
-      },
-    )
-
-    const categoryIconNamesDic = computed(() =>
-      Object.entries(pepiconCategoryDic).reduce((dic, [iconName, iconCategory]) => {
-        if (!(iconCategory in dic)) dic[iconCategory] = []
-        const iconNonExistent = _.config.type === 'print' && iconName.endsWith('-filled')
-        if (iconNonExistent) return dic
-        const searchText = cleanupForSearch(_.searchInput)
-        if (searchText) {
-          const _synonyms: string[] = [
-            ...synonyms[iconName as Pepicon],
-            ...synonymsJa[iconName as Pepicon],
-            iconCategory,
-          ]
-          const searchHit =
-            cleanupForSearch(iconName).includes(searchText) ||
-            _synonyms?.some((syn) => cleanupForSearch(syn).includes(searchText))
-          if (!searchHit) return dic
-        }
-        dic[iconCategory].push(iconName as any)
-        return dic
-      }, {} as { [category: string]: PepiconName[] }),
-    )
-
-    const iconInfoIsVisible = ref(false)
-    const iconInfoName = ref<PepiconName>('airplane')
-    function openIconModal(icon: PepiconName): void {
-      iconInfoIsVisible.value = true
-      iconInfoName.value = icon
-    }
-    const scrollPageTo = (navEl) => {
-      console.log(`#${navEl}`)
-      let element = document.querySelector(`#${navEl}`)
-      console.log(element)
-      element?.scrollIntoView({
-        block: 'center',
-        behavior: 'smooth',
-      })
-    }
-
-    return {
-      _,
-      setUrlQuery,
-      configComputed,
-      categories,
-      categoryIconNamesDic,
-      scrollPageTo,
-      iconInfoIsVisible,
-      openIconModal,
-      iconInfoName,
-    }
-  },
+  })
 })
+
+const iconInfoIsVisible = ref(false)
+const iconInfoName = ref<PepiconName>('airplane')
+function openIconModal(icon: PepiconName): void {
+  iconInfoName.value = icon
+  iconInfoIsVisible.value = true
+}
+const scrollPageTo = (navEl) => {
+  console.log(`#${navEl}`)
+  const element = document.querySelector(`#${navEl}`)
+
+  element?.scrollIntoView({ block: 'center', behavior: 'smooth' })
+}
 </script>
 
 <template>
-  <div v-bind="$attrs" style="padding: 24px" class="page-index">
+  <div v-bind="$attrs" class="page-index">
     <div class="_page-content">
       <div class="flex mb-xxl">
         <Stack class="ml-auto" classes="justify-end items-center">
           <Stack class="ml-auto" classes="items-center">
             <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
             <PepLink
+              href="#"
               content="About Us"
-              icon="info-filled"
+              icon="info-circle"
               class="cursor-arrow-down"
               @click.stop.prevent="scrollPageTo('about-us')"
             />
           </Stack>
-          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button">Download</a>
+          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button cursor-pointer"
+            >Download</a
+          >
         </Stack>
       </div>
       <div class="mb-md text-center">
-        Pepicons is an icon-set of over one hundred retro icons inspired by the 80's.
+        Pepicons is an icon-set of around five hundred (and counting) retro icons inspired by the
+        80's.
         <br />Every icon available in 2 variants: <strong>Pop!</strong> and <strong>Print ❏</strong>
       </div>
       <div class="mb-xxl text-center">
@@ -156,28 +115,34 @@ export default defineComponent({
         <PepLink
           href="https://github.com/sponsors/mesqueeb"
           content="sponsoring us on GitHub"
-          retroUnderline
+          class="retro-underline"
         />!
       </div>
-      <Pickers v-model="_.config" :configComputed="configComputed" class="mb-md" />
+      <Pickers
+        class="mb-md"
+        :choices="choices"
+        :generatedColors="generatedColors"
+        @update:choices="(payload) => emit('update:choices', payload)"
+      />
       <PepInput
         id="top"
-        v-model="_.searchInput"
+        v-model="searchInput"
+        :choices="choices"
+        :generatedColors="generatedColors"
         class="mb-xxl"
-        :color="_.config.color"
         :debounce="200"
-        :isDarkMode="_.config.isDarkMode"
-        :iconConfig="{ ...configComputed, name: 'loop' }"
-        @blur="() => setUrlQuery(_.searchInput)"
-        @keydown.meta="() => setUrlQuery(_.searchInput)"
+        @blur="() => setUrlQuery(searchInput)"
+        @keydown.meta="() => setUrlQuery(searchInput)"
       />
       <template v-for="category in categories">
-        <div v-if="categoryIconNamesDic[category].length" :key="category" class="mb-xxl">
+        <div v-if="categoryIconNamesFiltered[category].length" :key="category" class="mb-xxl">
           <div class="text-section-title">{{ category }}</div>
           <IconGrid
-            :iconNames="categoryIconNamesDic[category]"
-            :config="configComputed"
-            :searchInput="_.searchInput"
+            :iconNames="categoryIconNamesFiltered[category]"
+            :choices="choices"
+            :generatedColors="generatedColors"
+            :randomColorDic="randomColorDic"
+            :searchInput="searchInput"
             @clickTile="openIconModal"
           />
         </div>
@@ -188,8 +153,8 @@ export default defineComponent({
           Feel free to
           <PepLink
             href="https://github.com/CyCraft/pepicons/issues/new?labels=icon+request&template=icon-request.md"
-            retroUnderline
             content="request"
+            class="retro-underline"
           />
           a new icon on GitHub. 　🙃
         </div>
@@ -200,8 +165,8 @@ export default defineComponent({
           Read the
           <PepLink
             href="https://medium.com/@lucaban/pepicons-retro-icon-set-now-available-for-designers-and-coders-40db866a7460"
-            retroUnderline
             content="announcement blog post"
+            class="retro-underline"
           />
           to read about our motivation for creating Pepicons!<br /><br />Pepicons was made by these
           peeps:
@@ -224,24 +189,31 @@ export default defineComponent({
           />
         </Stack>
       </div>
-      <div class="mt-xxxl flex-center">
+      <div class="mt-xxxl column flex-center">
         <PepLink
+          href="#"
           class="cursor-arrow-up px-md py-sm"
           content="Go to top"
+          icon="arrow-up"
           @click.stop.prevent="scrollPageTo('top')"
         />
         <div class="mt-xxl">
           <PepLink
             href="https://github.com/sponsors/mesqueeb"
-            retroUnderline
             content="Sponsor development"
+            class="retro-underline"
           />
         </div>
       </div>
     </div>
   </div>
   <DialogWrapper :isVisible="iconInfoIsVisible" @close="iconInfoIsVisible = false">
-    <IconInfo :config="{ ...configComputed, name: iconInfoName }" :configOptionButtons="_.config" />
+    <IconDetails
+      :icon="iconInfoName"
+      :choices="choices"
+      :generatedColors="generatedColors"
+      :randomColorDic="randomColorDic"
+    />
   </DialogWrapper>
 </template>
 
@@ -249,6 +221,9 @@ export default defineComponent({
 @import '../css/variables'
 .page-index
   transition: background-color 500ms
+  padding: 12px
+  +media-xs(padding, $md)
+  +media-sm(padding, $lg)
   ._page-content
     +mx(auto)
     max-width: 980px

@@ -1,57 +1,69 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { Pepicon } from '@pepicons/vue'
-import { defineComponent, PropType, computed, ref, watch } from 'vue'
-import { defaultsIconConfig, IconConfig } from '../types'
+import { onKeyStroke } from '@vueuse/core'
+import { ref, watch } from 'vue'
+import { Choices, GeneratedColors } from '../types'
 
-export default defineComponent({
-  name: 'PepInput',
-  components: { Pepicon },
-  props: {
-    modelValue: { type: String, default: '' },
-    color: { type: String, required: true },
-    /**
-     * @type {{ name?: string, type: 'pop' | 'print', color: string, stroke: string }}
-     */
-    iconConfig: {
-      type: Object as PropType<IconConfig>,
-      default: () => ({ ...defaultsIconConfig() }),
-    },
-    debounce: {
-      type: Number,
-      default: 0,
-    },
-  },
-  emits: ['update:modelValue'],
-  setup(props, { attrs, emit }) {
-    const valueInner = ref<any>(props.modelValue)
-    let debounceInner: number = 0
-    if (typeof props.debounce === 'number') {
-      debounceInner = props.debounce
-    }
-    let timeout: any = null
-    watch(valueInner, (newVal, oldVal) => {
-      const debounceMs = debounceInner
-      if (debounceMs > 0) {
-        clearTimeout(timeout)
-        timeout = setTimeout(() => emitInput(newVal), debounceMs)
-      } else {
-        emitInput(newVal)
-      }
-    })
-    function emitInput(newVal: any) {
-      let payload = newVal
-      emit('update:modelValue', payload)
-    }
+const props = defineProps<{
+  modelValue: string
+  debounce: number
+  choices: Choices
+  generatedColors: GeneratedColors
+}>()
 
-    return { valueInner }
+const emit = defineEmits<{
+  (e: 'update:modelValue', payload: string): void
+}>()
+
+const valueInner = ref<any>(props.modelValue)
+const debounceInner = ref<number>(props.debounce)
+const inputRef = ref<any>(null)
+onKeyStroke(
+  '/',
+  (e) => {
+    function elementFocusable(e: any): boolean {
+      const querySelector = `
+      a[href]:not([tabindex='-1']),
+      input:not([disabled]):not([tabindex='-1']),
+      select:not([disabled]):not([tabindex='-1']),
+      textarea:not([disabled]):not([tabindex='-1']),
+      button:not([disabled]):not([tabindex='-1'])
+    `
+      return !!e?.matches(querySelector)
+    }
+    if (elementFocusable(document.activeElement)) return
+    inputRef.value.focus()
   },
+  { eventName: 'keyup' },
+)
+let timeout: any = null
+
+watch(valueInner, (newVal, oldVal) => {
+  const debounceMs = debounceInner.value
+  if (debounceMs > 0) {
+    clearTimeout(timeout)
+    timeout = setTimeout(() => emitInput(newVal), debounceMs)
+  } else {
+    emitInput(newVal)
+  }
 })
+
+function emitInput(newVal: any) {
+  let payload = newVal
+  emit('update:modelValue', payload)
+}
 </script>
 
 <template>
   <div class="_wrapper">
-    <input class="pep-input" v-bind="$attrs" v-model="valueInner" />
-    <Pepicon class="icon" v-bind="iconConfig" />
+    <input ref="inputRef" v-model="valueInner" class="pep-input" v-bind="$attrs" />
+    <Pepicon
+      class="icon"
+      :name="'loop'"
+      :type="choices.type"
+      :color="generatedColors.color"
+      :stroke="generatedColors.stroke"
+    />
   </div>
 </template>
 
@@ -65,8 +77,8 @@ export default defineComponent({
     left: 20px
     transform: translate(-50%, -50%)
 .pep-input
-  position: absolute
   all: unset
+  box-sizing: border-box
   outline: 2px solid transparent
   display: flex
   padding: 12px
@@ -77,7 +89,7 @@ export default defineComponent({
   width: 100%
   transition: all 200ms ease-in-out
   &:focus
-    outline: 2px solid v-bind(color)
+    box-shadow: 0 0 0 2px v-bind('choices.color')
 
 .dark-mode .pep-input
   background-color:#202020

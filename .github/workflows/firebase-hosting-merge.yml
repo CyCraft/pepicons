@@ -10,13 +10,11 @@ jobs:
   build_and_deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - run: 'npm run gha:before-deploy'
+      - uses: actions/checkout@v3
+      - run: npm ci && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_PEP_ICONS }}'
           channelId: live
           projectId: pep-icons
-        env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels

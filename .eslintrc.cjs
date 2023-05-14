@@ -38,7 +38,7 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/ban-ts-comment': 'warn',
-    'vue/no-v-html: off',
+    'vue/no-v-html': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off', // temporary during transition phase
     '@typescript-eslint/triple-slash-reference': 'off',
     'no-irregular-whitespace': 'off',

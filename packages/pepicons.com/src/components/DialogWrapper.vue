@@ -1,14 +1,8 @@
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  name: 'ModalWrapper',
-  props: {
-    isVisible: Boolean,
-  },
-  emits: ['close'],
-  setup() {},
+<script lang="ts" setup>
+const props = defineProps({
+  isVisible: Boolean,
 })
+const emit = defineEmits(['close'])
 </script>
 
 <template>

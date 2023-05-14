@@ -1,17 +1,11 @@
-<script lang="ts">
-import { defineComponent, PropType } from 'vue'
+<script lang="ts" setup>
+import { PropType } from 'vue'
 
-export default defineComponent({
-  name: 'CompanyLogo',
-  props: {
-    name: { type: String as PropType<'github' | 'twitter'>, required: true },
-    size: { type: String as PropType<'sm' | 'md'>, default: 'md' },
-  },
-  setup(props) {
-    const logoSize = props.size === 'md' ? 24 : 16
-    return { logoSize }
-  },
+const props = defineProps({
+  name: { type: String as PropType<'github' | 'twitter'>, required: true },
+  size: { type: String as PropType<'sm' | 'md'>, default: 'md' },
 })
+const logoSize = props.size === 'md' ? 24 : 16
 </script>
 
 <template>

@@ -1,22 +1,15 @@
-<script lang="ts">
-import { defineComponent, PropType, computed, ref, toRef, Ref } from 'vue'
+<script lang="ts" setup>
+import { PropType } from 'vue'
 import CompanyLogo from './CompanyLogo.vue'
 import Stack from './Stack.vue'
 
-export default defineComponent({
-  name: 'ProfileCard',
-  components: { CompanyLogo, Stack },
-  props: {
-    name: { type: String, required: true },
-    description: { type: String, required: true },
-    profileUrl: { type: String, required: true },
-    profileImgStyle: { type: String, default: '' },
-    color: { type: String, required: true },
-    links: { type: Array as PropType<string[]>, default: () => [] },
-  },
-  setup(props) {
-    return {}
-  },
+const props = defineProps({
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  profileUrl: { type: String, required: true },
+  profileImgStyle: { type: String, default: '' },
+  color: { type: String, required: true },
+  links: { type: Array as PropType<string[]>, default: () => [] },
 })
 </script>
 
@@ -122,7 +115,7 @@ export default defineComponent({
     </div>
 
     <Stack v-if="links.length">
-      <a v-for="link in links" :key="link" class="_link" :href="link">
+      <a v-for="link in links" :key="link" class="_link cursor-pointer" :href="link">
         <CompanyLogo :name="(link.split('https://')[1].split('.')[0] as any)" />
       </a>
     </Stack>
@@ -139,7 +132,11 @@ export default defineComponent({
     +C(background, moonlight)
 .profile-card
   width: 310px
-  +flex-center()
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  flex-wrap: nowrap
   border-radius: $md
   position: relative
   > *
@@ -185,7 +182,6 @@ export default defineComponent({
     text-align: left
     line-height: 40px
   ._link
-    cursor: pointer
     > *
       +C(color, washed-cloth)
 </style>

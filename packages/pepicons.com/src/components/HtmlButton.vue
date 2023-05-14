@@ -1,27 +1,27 @@
-<script lang="ts">
+<script lang="ts" setup>
 import { Pepicon } from '@pepicons/vue'
-import { defineComponent, PropType } from 'vue'
-export default defineComponent({
-  name: 'HtmlButton',
-  components: { Pepicon },
-  emits: ['update:modelValue'],
-  props: {
-    modelValue: { type: Boolean, default: false },
-    type: { type: String as PropType<'pop' | 'print' | undefined> },
-    color: { type: String },
-    stroke: { type: String },
-  },
-  setup(props, { emit }) {
-    function toggle() {
-      emit('update:modelValue', !props.modelValue)
-    }
-    return { toggle }
-  },
-})
+
+const props = defineProps<{
+  modelValue: boolean
+  type: 'pop' | 'print' | 'pencil'
+  color: string
+  stroke: string
+}>()
+
+const emit = defineEmits<{
+  (e: 'update:modelValue', payload: boolean): void
+}>()
+
+function toggle() {
+  emit('update:modelValue', !props.modelValue)
+}
 </script>
 
 <template>
-  <button :class="`html-button ${modelValue ? '_expanded' : ''}`" @click="toggle">
+  <button
+    :class="`html-button cursor-pointer ${modelValue ? '_expanded' : ''}`"
+    @click="() => toggle()"
+  >
     <Pepicon class="_icon" name="angle-left" :type="type" :color="color" :stroke="stroke" />
     <Pepicon class="_icon" name="angle-right" :type="type" :color="color" :stroke="stroke" />
   </button>

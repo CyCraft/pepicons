@@ -1,7 +1,14 @@
 <script lang="ts" setup>
 import IconButton from './IconButton.vue'
-import { config } from './mocks'
 </script>
 <template>
-  <IconButton :iconConfig="config" />
+  <IconButton
+    icon="can"
+    type="pop"
+    color="red"
+    stroke="black"
+    backgroundColor="white"
+    :isActive="true"
+    :animation="{ class: 'anime-shake', duration: 3000 }"
+  />
 </template>

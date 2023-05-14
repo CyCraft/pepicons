@@ -52,10 +52,31 @@ function defaults(config) {
 
 export default [
   defaults({
-    input: 'index.ts',
+    input: 'src/index.ts',
     output: [
-      { file: 'dist/index.cjs.js', format: 'cjs' },
+      { file: 'dist/index.umd.js', format: 'umd' },
       { file: 'dist/index.esm.js', format: 'esm' },
+    ],
+  }),
+  defaults({
+    input: 'src/icons/print/index.ts',
+    output: [
+      { file: 'dist/print.umd.js', format: 'umd' },
+      { file: 'dist/print.esm.js', format: 'esm' },
+    ],
+  }),
+  defaults({
+    input: 'src/icons/pop/index.ts',
+    output: [
+      { file: 'dist/pop.umd.js', format: 'umd' },
+      { file: 'dist/pop.esm.js', format: 'esm' },
+    ],
+  }),
+  defaults({
+    input: 'src/icons/pencil/index.ts',
+    output: [
+      { file: 'dist/pencil.umd.js', format: 'umd' },
+      { file: 'dist/pencil.esm.js', format: 'esm' },
     ],
   }),
 ]
