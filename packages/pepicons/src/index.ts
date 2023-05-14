@@ -111,7 +111,7 @@ export function morphPepicon(payload: MorphPepiconPayload): string {
   }
 
   if (type === 'print' && stroke) {
-    svg = svg.replace(/#000000|#000|black/g, stroke)
+    svg = svg.replace(/dimgray/g, stroke)
   }
 
   const rgbOrHexColor = color?.startsWith('rgb') || color?.startsWith('#')
