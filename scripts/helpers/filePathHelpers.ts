@@ -2,8 +2,9 @@ import { dirname, resolve } from 'path'
 import { fileURLToPath } from 'url'
 
 const thisFolder = dirname(fileURLToPath(import.meta.url))
-export const PATH_PEPICONS = resolve(thisFolder, '..', '..', 'packages', 'pepicons')
-export const PATH_VUE = resolve(thisFolder, '..', '..', 'packages', 'vue')
+export const PATH_ROOT = resolve(thisFolder, '..', '..')
+export const PATH_PEPICONS = resolve(PATH_ROOT, 'packages', 'pepicons')
+export const PATH_VUE = resolve(PATH_ROOT, 'packages', 'vue')
 
 /**
  * @example

@@ -3,6 +3,7 @@ import { generateCircleRoundOff } from './2-generateCircleRoundOff'
 import { generateSvgStrings } from './3-generateSvgStrings'
 import { generateIndexFiles } from './4-generateIndexFiles'
 import { generateVueComponents } from './5-generateVueComponents'
+import { archiveSvgs } from './6-archiveSvgs'
 
 async function preparePepicons() {
   await generatePrintPopPencil()
@@ -10,7 +11,7 @@ async function preparePepicons() {
   await generateSvgStrings()
   await generateIndexFiles()
   await generateVueComponents()
-  // archiveSvgs()
+  await archiveSvgs()
 }
 
 preparePepicons()

@@ -1,15 +1,13 @@
 // require modules
-import * as fs from 'fs'
 import archiver from 'archiver'
-import copyfiles from 'copyfiles'
+import cpy from 'cpy'
+import * as fs from 'fs'
+import { PATH_PEPICONS, PATH_ROOT } from './helpers/filePathHelpers'
 
-const PATH_TO_ARCHIVE = 'packages/pepicons/svg'
+const PATH_TO_ARCHIVE = PATH_PEPICONS + '/svg'
 const ZIP_NAME = 'PepiconSvgs.zip'
 
-/**
- * @returns {void}
- */
-export function archiveSvgs() {
+export async function archiveSvgs() {
   /**
    * All instructions belowe are directly copied and tweaked based on the archiver Readme:
    * https://github.com/archiverjs/node-archiver
@@ -61,9 +59,10 @@ export function archiveSvgs() {
 
   // finalize the archive (ie we are done appending files but streams have to finish yet)
   // 'close', 'end' or 'finish' may be fired right after calling this method so register to them beforehand
-  archive.finalize().then(() => {
-    const from = `./media/${ZIP_NAME}`
-    const to = './packages/pepicons.com/public'
-    copyfiles([from, to], { up: 1 }, () => console.log(`✔ done`))
-  })
+  await archive.finalize()
+
+  const from = `./media/${ZIP_NAME}`
+  const to = PATH_ROOT + '/packages/pepicons.com/public'
+  await cpy(from, to)
+  console.log(`✔ done`)
 }
