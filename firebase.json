@@ -1,5 +1,5 @@
 {
-  "functions": { "source": ".output/server" },
+  "functions": { "source": "projects/pepicons.com/.output/server" },
   "hosting": [
     {
       "site": "pep-icons",
