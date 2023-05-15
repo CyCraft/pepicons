@@ -14,7 +14,7 @@
     "dev:@pepicons/pepicons.com": "npm run _warn && npm run dev -w=@pepicons/pepicons.com",
     "dev:pepicons.com": "npm run _warn && npm run dev -w=pepicons.com",
     "dev:vue": "npm run _warn && npm run dev -w=@pepicons/vue",
-    "deploy:pepicons.com": "firebase deploy --only hosting && git add -A && git commit -m \"chore: deploy\" && git push",
+    "deploy:pepicons.com": "firebase deploy && git add -A && git commit -m \"chore: deploy\" && git push",
     "bump": "node --loader esbuild-register/loader -r esbuild-register scripts/bump.ts",
     "build": "npm run _prepare-pepicons && npm run build -w=pepicons && npm run build -w=@pepicons/vue && npm run build:@pepicons/pepicons.com",
     "build:pepicons.com": "npm run build -w=@pepicons/pepicons.com",
