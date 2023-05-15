@@ -16,7 +16,7 @@ const props = defineProps({
   content: { type: String, default: 'something' },
 })
 const contentCopy = ref(props.content)
-function highlighter(contentCopy) {
+function highlighter(contentCopy: string) {
   return highlight(contentCopy, languages.js) // languages.<insert language> to return html with markup
 }
 </script>

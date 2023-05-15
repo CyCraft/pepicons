@@ -127,12 +127,16 @@ async function copyPng(): Promise<void> {
         >
           <template v-if="selectedTab === 'Vue'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
-              <CodeBlock :ref="codeVue" lang="html" :content="codeVue" class="_code-block" />
+              <ClientOnly>
+                <CodeBlock :ref="codeVue" lang="html" :content="codeVue" class="_code-block" />
+              </ClientOnly>
             </div>
           </template>
           <template v-if="selectedTab === 'SVG'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
-              <CodeBlock :ref="codeSvg" lang="html" :content="codeSvg" class="_code-block" />
+              <ClientOnly>
+                <CodeBlock :ref="codeSvg" lang="html" :content="codeSvg" class="_code-block" />
+              </ClientOnly>
             </div>
           </template>
         </Tabs>
