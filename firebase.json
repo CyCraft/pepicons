@@ -1,16 +1,11 @@
 {
-  "hosting": {
-    "public": "packages/pepicons.com/dist",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ],
-    "rewrites": [
-      {
-        "source": "**",
-        "destination": "/index.html"
-      }
-    ]
-  }
+  "functions": { "source": ".output/server" },
+  "hosting": [
+    {
+      "site": "pep-icons",
+      "public": "projects/pepicons.com/.output/public",
+      "cleanUrls": true,
+      "rewrites": [{ "source": "**", "function": "server" }]
+    }
+  ]
 }
