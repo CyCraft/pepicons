@@ -7,7 +7,6 @@ import { generateVueCode } from '../helpers/codeExampleHelpers'
 import { base64ToBlob, svgToBase64Png } from '../helpers/conversion'
 import { downloadBase64AsFile, downloadFile } from '../helpers/download'
 import { Choices, GeneratedColors, RandomColorDic } from '../types'
-import CodeBlock from './CodeBlock.vue'
 import HtmlButton from './HtmlButton.vue'
 import IconButton from './IconButton.vue'
 import Tabs from './Tabs.vue'
@@ -127,16 +126,18 @@ async function copyPng(): Promise<void> {
         >
           <template v-if="selectedTab === 'Vue'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
-              <ClientOnly>
+              <pre><code>{{ codeVue }}</code></pre>
+              <!-- <ClientOnly>
                 <CodeBlock :ref="codeVue" lang="html" :content="codeVue" class="_code-block" />
-              </ClientOnly>
+              </ClientOnly> -->
             </div>
           </template>
           <template v-if="selectedTab === 'SVG'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
-              <ClientOnly>
+              <pre><code>{{ codeSvg }}</code></pre>
+              <!-- <ClientOnly>
                 <CodeBlock :ref="codeSvg" lang="html" :content="codeSvg" class="_code-block" />
-              </ClientOnly>
+              </ClientOnly> -->
             </div>
           </template>
         </Tabs>
