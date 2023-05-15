@@ -1,6 +1,7 @@
 <script lang="ts" setup>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { ColorPicker } from 'vue-color-kit'
+import 'vue-color-kit/dist/vue-color-kit.css'
 import { cssVar, getRandomColor } from '../helpers/colorHelpers'
 import { Choices, GeneratedColors } from '../types'
 import DialogWrapper from './DialogWrapper.vue'
@@ -17,16 +18,22 @@ const emit = defineEmits<{
   (e: 'update:choices', payload: Choices): void
 }>()
 
-const nightfall = cssVar('nightfall')
-const moonlight = cssVar('moonlight')
+const nightfall = ref('#1D1D1D')
+onMounted(() => (nightfall.value = cssVar('nightfall')))
+const moonlight = ref('#202020')
+onMounted(() => (moonlight.value = cssVar('moonlight')))
 
-const colorSelection = [
-  cssVar('sig-purple'),
-  cssVar('sig-green'),
-  cssVar('sig-yellow'),
-  cssVar('sig-blue'),
-  cssVar('sig-pink'),
-]
+const colorSelection = ref(['#AB92F0', '#55BBC5', '#F7D570', '#5FA8EE', '#F092AD'])
+
+onMounted(() => {
+  colorSelection.value = [
+    cssVar('sig-purple'),
+    cssVar('sig-green'),
+    cssVar('sig-yellow'),
+    cssVar('sig-blue'),
+    cssVar('sig-pink'),
+  ]
+})
 
 const colorPickerIsVisible = ref(false)
 function pickColor(color: any) {

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed, onMounted } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { cssVar } from '../helpers/colorHelpers'
 
 const randomAnimeFloatPerIcon = [
@@ -40,7 +40,24 @@ const randomAnimeFloatPerIcon = [
 const props = defineProps({
   isDarkMode: { type: Boolean, default: false },
 })
+
+const shadowColor = computed(() => (props.isDarkMode ? 'black' : 'currentColor'))
+const strokeColor = computed(() => (props.isDarkMode ? 'currentColor' : 'black'))
+
+const colors = ref({
+  green: '#55BBC5',
+  yellow: '#F7D570',
+  blue: '#5FA8EE',
+  pink: '#F092AD',
+})
+
 onMounted(() => {
+  colors.value = {
+    green: cssVar('sig-green'),
+    yellow: cssVar('sig-yellow'),
+    blue: cssVar('sig-blue'),
+    pink: cssVar('sig-pink'),
+  }
   const shapes = document.querySelectorAll('.pep-header-decoration-light svg > g')
   // const shapes = this.$el.querySelectorAll('svg > g')
   shapes.forEach((g: any, index: number) => {
@@ -48,14 +65,6 @@ onMounted(() => {
     g.classList.add(`anime-float-${randomAnimeFloatPerIcon[index]}`)
   })
 })
-const shadowColor = computed(() => (props.isDarkMode ? 'black' : 'currentColor'))
-const strokeColor = computed(() => (props.isDarkMode ? 'currentColor' : 'black'))
-const colors = {
-  green: cssVar('sig-green'),
-  yellow: cssVar('sig-yellow'),
-  blue: cssVar('sig-blue'),
-  pink: cssVar('sig-pink'),
-}
 </script>
 
 <template>

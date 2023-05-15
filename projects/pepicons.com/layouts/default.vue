@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import PepHeaderDecorationLight from '../components/PepHeaderDecorationLight.vue'
 import PepHero from '../components/PepHero.vue'
 import PepLink from '../components/PepLink.vue'
 import { Choices } from '../types'

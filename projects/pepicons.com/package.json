@@ -12,13 +12,13 @@
     "nuxt": "^3.4.3"
   },
   "dependencies": {
-    "@pepicons/vue": "^2.0.3",
+    "@pepicons/vue": "*",
     "@viteplay/plugin": "^0.2.5",
     "@viteplay/vue": "^0.2.5",
     "copy-text-to-clipboard": "^3.1.0",
     "is-what": "^4.1.9",
     "map-anything": "^2.1.1",
-    "pepicons": "^2.0.3",
+    "pepicons": "*",
     "prismjs": "^1.29.0",
     "vue-color-kit": "^1.0.5",
     "vue-prism-editor": "^2.0.0-alpha.2",

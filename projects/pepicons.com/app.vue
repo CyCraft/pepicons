@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { pepiconArray, PepiconName, pepiconSvgString } from 'pepicons'
-import { computed, ref, watch } from 'vue'
+import { computed, onBeforeMount, ref, watch } from 'vue'
 import { getRandomColor } from './helpers/colorHelpers'
 import { objectEntries } from './helpers/objectEntries'
 import { Choices, GeneratedColors, RandomColorDic } from './types'
@@ -29,7 +29,6 @@ watch(
 )
 
 const generatedColors = computed<GeneratedColors>(() => {
-  console.log(`choices.value → `, choices.value)
   const { mode, type, color } = choices.value
   return {
     color: mode === 'dark' && type === 'print' ? 'black' : color,
@@ -53,7 +52,9 @@ const randomColorDic = computed<RandomColorDic>(() =>
   }, {}),
 )
 
-// document.body.classList.add(`${choices.value.mode}-mode`)
+onBeforeMount(() => {
+  document.body.classList.add(`${choices.value.mode}-mode`)
+})
 
 watch(
   () => choices.value.mode,
@@ -86,7 +87,7 @@ const cursorArrowDown = computed(() => getCursor('arrow-down', 's-resize'))
 const cursorColorPicker = computed(() => getCursor('color-picker', 'pointer'))
 
 const retroUnderlineStroke = computed(() =>
-  choices.value.type === 'pop' ? 'none' : generatedColors.value.stroke,
+  choices.value.type === 'pop' ? 'none' : generatedColors.value?.stroke || 'black',
 )
 </script>
 

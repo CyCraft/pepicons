@@ -1,15 +1,33 @@
+<script lang="ts" setup>
+const props = defineProps<{
+  error: {
+    url: string
+    statusCode: string
+    statusMessage: string
+    message: string
+    description: string
+    data: any
+  }
+}>()
+
+function goBack() {
+  // eslint-disable-next-line no-undef
+  clearError({ redirect: '/' })
+}
+</script>
+
 <template>
   <div class="_error-page text-white text-center">
     <div style="font-size: 30vh">404</div>
 
     <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
 
-    <router-link to="/" class="_button cursor-pointer">Go Home</router-link>
+    <button class="_button cursor-pointer" @click="() => goBack()">Go Home</button>
   </div>
 </template>
 
 <style lang="sass">
-@import '../css/variables'
+@import './css/variables'
 
 ._error-page
   display: flex
@@ -22,6 +40,7 @@
   user-select: none
   ._button
     all: unset
+    cursor: pointer
     color: rgb(33, 150, 243)
     background-color: white
     padding: 8px 12px

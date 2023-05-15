@@ -9,10 +9,15 @@ import {
   synonymsJa,
 } from 'pepicons'
 import { computed, ref } from 'vue'
-// import DialogWrapper from '../components/DialogWrapper.vue'
+import DialogWrapper from '../components/DialogWrapper.vue'
+import IconDetails from '../components/IconDetails.vue'
+import PepInput from '../components/PepInput.vue'
 import PepLink from '../components/PepLink.vue'
+import Pickers from '../components/Pickers.vue'
+import ProfileCard from '../components/ProfileCard.vue'
+import Stack from '../components/Stack.vue'
 import { cleanupForSearch } from '../helpers/search'
-import { getQueryFromUrl } from '../helpers/urlHelpers'
+import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
 import { Choices, GeneratedColors, RandomColorDic } from '../types'
 
 const props = defineProps<{
@@ -83,7 +88,7 @@ const scrollPageTo = (navEl: string) => {
   <div v-bind="$attrs" class="page-index">
     <div class="_page-content">
       <div class="flex mb-xxl">
-        <!-- <Stack class="ml-auto" classes="justify-end items-center">
+        <Stack class="ml-auto" classes="justify-end items-center">
           <Stack class="ml-auto" classes="items-center">
             <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
             <PepLink
@@ -94,10 +99,8 @@ const scrollPageTo = (navEl: string) => {
               @click.stop.prevent="scrollPageTo('about-us')"
             />
           </Stack>
-          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button cursor-pointer"
-            >Download</a
-          >
-        </Stack> -->
+          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button">Download</a>
+        </Stack>
       </div>
       <div class="mb-md text-center">
         Pepicons is an icon-set of around five hundred (and counting) retro icons inspired by the
@@ -112,13 +115,13 @@ const scrollPageTo = (navEl: string) => {
           class="retro-underline"
         />!
       </div>
-      <!-- <Pickers
+      <Pickers
         class="mb-md"
         :choices="choices"
         :generatedColors="generatedColors"
         @update:choices="(payload) => emit('update:choices', payload)"
-      /> -->
-      <!-- <PepInput
+      />
+      <PepInput
         id="top"
         v-model="searchInput"
         :choices="choices"
@@ -127,18 +130,18 @@ const scrollPageTo = (navEl: string) => {
         :debounce="200"
         @blur="() => setUrlQuery(searchInput)"
         @keydown.meta="() => setUrlQuery(searchInput)"
-      /> -->
+      />
       <template v-for="category in categories">
         <div v-if="categoryIconNamesFiltered[category].length" :key="category" class="mb-xxl">
           <div class="text-section-title">{{ category }}</div>
-          <!-- <IconGrid
+          <IconGrid
             :iconNames="categoryIconNamesFiltered[category]"
             :choices="choices"
             :generatedColors="generatedColors"
             :randomColorDic="randomColorDic"
             :searchInput="searchInput"
             @clickTile="openIconModal"
-          /> -->
+          />
         </div>
       </template>
       <div class="_section">
@@ -165,7 +168,7 @@ const scrollPageTo = (navEl: string) => {
           to read about our motivation for creating Pepicons!<br /><br />Pepicons was made by these
           peeps:
         </div>
-        <!-- <Stack classes="justify-center" gap="lg">
+        <Stack classes="justify-center" gap="lg">
           <ProfileCard
             name="Luca Ban"
             :description="`Likes… jokes, minecraft\nWorks as… coder\nPassionate about… design`"
@@ -181,7 +184,7 @@ const scrollPageTo = (navEl: string) => {
             color="#F092AD"
             :links="['https://twitter.com/asukit']"
           />
-        </Stack> -->
+        </Stack>
       </div>
       <div class="mt-xxxl column flex-center">
         <PepLink
@@ -201,14 +204,14 @@ const scrollPageTo = (navEl: string) => {
       </div>
     </div>
   </div>
-  <!-- <DialogWrapper :isVisible="iconInfoIsVisible" @close="iconInfoIsVisible = false">
+  <DialogWrapper :isVisible="iconInfoIsVisible" @close="() => (iconInfoIsVisible = false)">
     <IconDetails
       :icon="iconInfoName"
       :choices="choices"
       :generatedColors="generatedColors"
       :randomColorDic="randomColorDic"
     />
-  </DialogWrapper> -->
+  </DialogWrapper>
 </template>
 
 <style lang="sass">

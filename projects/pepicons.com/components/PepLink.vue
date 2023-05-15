@@ -13,9 +13,7 @@ const props = defineProps<{
   <a :href="href" :class="`pep-link cursor-pointer ${icon ? '_has-icon' : ''}`">
     <template v-if="icon">
       <CompanyLogo v-if="icon === 'github'" name="github" size="sm" class="_icon" />
-      <ClientOnly v-else-if="icon">
-        <Pepicon :name="icon" size="sm" class="_icon" type="pop" />
-      </ClientOnly>
+      <Pepicon v-else-if="icon" :name="icon" size="sm" class="_icon" type="pop" />
       <div class="mr-sm" />
     </template>
     <div>{{ content }}</div>
@@ -32,7 +30,7 @@ const props = defineProps<{
     outline: 0
     box-shadow: none
   // alignment
-  display: flex
+  display: inline-flex
   align-items: center
   // typography
   &._has-icon
