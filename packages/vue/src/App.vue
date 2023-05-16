@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import "@viteplay/vue/dist/style.css"
+import '@viteplay/vue/dist/style.css'
 </script>
 
 <template>
