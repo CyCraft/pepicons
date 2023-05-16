@@ -22,6 +22,7 @@
     "dep:check-for-updates": "ncu --workspaces --root",
     "dep:reinstall-all:soft": "npm exec --workspaces -- npx del-cli node_modules && npx del-cli node_modules && npm i",
     "dep:reinstall-all:hard": "npx del-cli package-lock.json && npm run dep:reinstall-all:soft",
+    "prettier:fix-all": "prettier --write \"{packages,projects}/*/src/**/*.{vue,ts}\"",
     "_prepare-pepicons": "node --loader esbuild-register/loader -r esbuild-register ./scripts/preparePepicons.ts",
     "_warn": "echo \"BE SURE TO RUN npm run build ONCE! otherwise the dev server might not launch\""
   },

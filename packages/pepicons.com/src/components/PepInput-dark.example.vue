@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { choices, generatedColors } from './mocks'
 import PepInput from './PepInput.vue'
+import { choices, generatedColors } from './mocks'
 
 const value = ref('')
 function log() {
