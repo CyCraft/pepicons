@@ -2,5 +2,6 @@
 export default defineNuxtConfig({
   nitro: {
     preset: 'firebase',
+    prerender: { crawlLinks: true },
   },
 })
