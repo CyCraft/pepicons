@@ -134,14 +134,16 @@ const scrollPageTo = (navEl: string) => {
       <template v-for="category in categories">
         <div v-if="categoryIconNamesFiltered[category].length" :key="category" class="mb-xxl">
           <div class="text-section-title">{{ category }}</div>
-          <IconGrid
-            :iconNames="categoryIconNamesFiltered[category]"
-            :choices="choices"
-            :generatedColors="generatedColors"
-            :randomColorDic="randomColorDic"
-            :searchInput="searchInput"
-            @clickTile="openIconModal"
-          />
+          <ClientOnly>
+            <IconGrid
+              :iconNames="categoryIconNamesFiltered[category]"
+              :choices="choices"
+              :generatedColors="generatedColors"
+              :randomColorDic="randomColorDic"
+              :searchInput="searchInput"
+              @clickTile="openIconModal"
+            />
+          </ClientOnly>
         </div>
       </template>
       <div class="_section">
@@ -204,14 +206,16 @@ const scrollPageTo = (navEl: string) => {
       </div>
     </div>
   </div>
-  <DialogWrapper :isVisible="iconInfoIsVisible" @close="() => (iconInfoIsVisible = false)">
-    <IconDetails
-      :icon="iconInfoName"
-      :choices="choices"
-      :generatedColors="generatedColors"
-      :randomColorDic="randomColorDic"
-    />
-  </DialogWrapper>
+  <ClientOnly>
+    <DialogWrapper :isVisible="iconInfoIsVisible" @close="() => (iconInfoIsVisible = false)">
+      <IconDetails
+        :icon="iconInfoName"
+        :choices="choices"
+        :generatedColors="generatedColors"
+        :randomColorDic="randomColorDic"
+      />
+    </DialogWrapper>
+  </ClientOnly>
 </template>
 
 <style lang="sass">
