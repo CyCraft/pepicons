@@ -31,7 +31,7 @@
     },
     "./print": {
       "import": {
-        "types": "./dist/index.d.ts",
+        "types": "./dist/print.d.ts",
         "default": "./dist/print.js"
       },
       "require": {
@@ -41,7 +41,7 @@
     },
     "./pop": {
       "import": {
-        "types": "./dist/index.d.ts",
+        "types": "./dist/pop.d.ts",
         "default": "./dist/pop.js"
       },
       "require": {
