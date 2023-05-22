@@ -6,7 +6,7 @@
     "jsx": "preserve",
     "lib": ["ESNext", "DOM", "scripthost"],
     "module": "ESNext",
-    "moduleResolution": "Node",
+    "moduleResolution": "node",
     "noImplicitAny": false,
     "resolveJsonModule": true,
     "skipLibCheck": true,

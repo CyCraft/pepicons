@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-// npm i -D rollup rollup-plugin-typescript2 typescript
+// npm i -D rollup typescript rollup-plugin-dts rollup-plugin-esbuild
 import dts from 'rollup-plugin-dts'
 import esbuild from 'rollup-plugin-esbuild'
 import pkg from './package.json' assert { type: 'json' }
