@@ -22,6 +22,7 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   extends: [
+    '@nuxt/eslint-config',
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',
@@ -31,6 +32,7 @@ module.exports = {
   ],
   // add your custom rules here
   rules: {
+    'vue/no-multiple-template-root': 'off',
     'vue/script-setup-uses-vars': 'error', // required for `<script setup>`
     // other rules
     '@typescript-eslint/no-unused-vars': 'off',
