@@ -1,6 +1,6 @@
 {
   "name": "@pepicons/vue",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "type": "module",
   "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
@@ -33,7 +33,7 @@
     "vue": "^3.2.39"
   },
   "dependencies": {
-    "pepicons": "^2.0.7"
+    "pepicons": "^2.0.8"
   },
   "homepage": "https://github.com/cycraft/pepicons",
   "repository": {

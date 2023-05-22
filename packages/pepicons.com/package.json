@@ -2,20 +2,20 @@
   "name": "pepicons.com",
   "type": "module",
   "private": true,
-  "version": "2.0.7",
+  "version": "2.0.8",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "@pepicons/vue": "^2.0.7",
+    "@pepicons/vue": "^2.0.8",
     "@viteplay/plugin": "^0.2.5",
     "@viteplay/vue": "^0.2.5",
     "copy-text-to-clipboard": "^3.1.0",
     "is-what": "^4.1.9",
     "map-anything": "^2.1.1",
-    "pepicons": "^2.0.7",
+    "pepicons": "^2.0.8",
     "prismjs": "^1.29.0",
     "vue": "^3.3.1",
     "vue-color-kit": "^1.0.5",
