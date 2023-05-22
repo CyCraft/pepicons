@@ -81,6 +81,6 @@ export default defineNuxtConfig({
   // },
   nitro: {
     preset: 'firebase',
-    prerender: { crawlLinks: true, exclude: ['/play'] },
+    prerender: { crawlLinks: true, ignore: ['/play'] },
   },
 })
