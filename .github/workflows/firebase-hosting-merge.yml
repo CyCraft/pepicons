@@ -8,7 +8,7 @@ name: Deploy to Firebase Hosting on merge
       - production
 jobs:
   build_and_deploy:
-    runs-on: macos-latest-xl
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - run: npm ci && npm run build
