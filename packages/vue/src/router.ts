@@ -1,5 +1,5 @@
-import { createRouter, createWebHistory } from 'vue-router'
 import { pages as pagesVitePlay } from '@viteplay/vue/client'
+import { createRouter, createWebHistory } from 'vue-router'
 
 console.log(`%c 🛣`, 'font-size: 2rem', `VitePlay generated routes → `, pagesVitePlay)
 

@@ -1,6 +1,7 @@
 {
   "name": "pepicons",
-  "version": "2.0.5",
+  "version": "2.0.6",
+  "type": "module",
   "sideEffects": false,
   "description": "Retro icon set",
   "productName": "Pepicons",
@@ -8,44 +9,67 @@
   "funding": "https://github.com/sponsors/mesqueeb",
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
   "scripts": {
-    "build": "del-cli dist && rollup --bundleConfigAsCjs -c ./build.js"
+    "build": "del-cli dist && rollup -c ./rollup.config.js"
   },
-  "files": [
-    "dist",
-    "svg"
-  ],
-  "types": "./dist/types/index.d.ts",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "exports": {
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "import": "./dist/index.esm.js",
-      "require": "./dist/index.umd.js"
-    },
     "./svg/*": {
       "import": "./svg/*",
       "require": "./svg/*"
     },
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
+    },
     "./print": {
-      "types": "./dist/types/icons/print/index.d.ts",
-      "import": "./dist/print.esm.js",
-      "require": "./dist/print.umd.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/print.js"
+      },
+      "require": {
+        "types": "./dist/cjs/print.d.cts",
+        "default": "./dist/cjs/print.cjs"
+      }
     },
     "./pop": {
-      "types": "./dist/types/icons/pop/index.d.ts",
-      "import": "./dist/pop.esm.js",
-      "require": "./dist/pop.umd.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/pop.js"
+      },
+      "require": {
+        "types": "./dist/cjs/pop.d.cts",
+        "default": "./dist/cjs/pop.cjs"
+      }
     },
     "./pencil": {
-      "types": "./dist/types/icons/pencil/index.d.ts",
-      "import": "./dist/pencil.esm.js",
-      "require": "./dist/pencil.umd.js"
+      "import": {
+        "types": "./dist/pencil.d.ts",
+        "default": "./dist/pencil.js"
+      },
+      "require": {
+        "types": "./dist/cjs/pencil.d.cts",
+        "default": "./dist/cjs/pencil.cjs"
+      }
     },
     "./dist/*": {
       "import": "./dist/*",
       "require": "./dist/*"
     }
+  },
+  "files": [
+    "dist",
+    "svg"
+  ],
+  "dependencies": {
+    "case-anything": "^2.1.11"
   },
   "gitHead": "b9d99854c5f1a88b1bd6b50ed81b249feea5fcd9"
 }

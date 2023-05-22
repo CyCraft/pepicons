@@ -30,7 +30,7 @@ const props = defineProps<{
     outline: 0
     box-shadow: none
   // alignment
-  display: flex
+  display: inline-flex
   align-items: center
   // typography
   &._has-icon

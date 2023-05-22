@@ -36,3 +36,4 @@ dist-ssr
 .cache
 .output
 .env
+projects/pepicons.com/firebase.json

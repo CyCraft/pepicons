@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="33.329" height="32.508" viewBox="0 0 33.329 32.508">
+  <g id="グリーン四角" transform="translate(-118.204 -5.84)">
+    <rect id="グリーン四角-2" data-name="グリーン四角" width="25.081" height="25.081" transform="translate(123.204 13.511) rotate(-8)" fill="#55bbc5"/>
+    <g id="グリーン四角線" transform="translate(118.204 9.331) rotate(-8)" fill="none" stroke="#020000" stroke-width="1.5">
+      <rect width="25.081" height="25.081" stroke="none"/>
+      <rect x="0.75" y="0.75" width="23.581" height="23.581" fill="none"/>
+    </g>
+  </g>
+</svg>

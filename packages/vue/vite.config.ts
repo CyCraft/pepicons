@@ -1,7 +1,7 @@
 import vue from '@vitejs/plugin-vue'
 import path from 'path'
 import { defineConfig } from 'vite'
-import pkg from './package.json'
+import pkg from './package.json' assert { type: 'json' }
 
 const nameCamel = pkg.name
 const namePascal = nameCamel.replace(/(^\w|-\w)/g, (c) => c.replace('-', '').toUpperCase())

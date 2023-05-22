@@ -1,7 +1,7 @@
 {
   "name": "@pepicons/vue",
   "type": "module",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
@@ -21,6 +21,7 @@
     }
   },
   "scripts": {
+    "build:src": "npm run build:vite",
     "build": "del-cli dist && npm run build:vite && npm run gen:types:ts && npm run gen:types:vetur",
     "dev": "vite --force --config vite.config.dev.ts",
     "build:vite": "vite build",
@@ -31,7 +32,7 @@
     "vue": "^3.2.39"
   },
   "dependencies": {
-    "pepicons": "^2.0.5"
+    "pepicons": "^2.0.6"
   },
   "homepage": "https://github.com/cycraft/pepicons",
   "repository": {

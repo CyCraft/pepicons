@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.991" height="17" viewBox="0 0 17.991 17">
+  <g id="ピンク丸" transform="translate(-184.391 -72.267)">
+    <circle id="ピンク丸-2" data-name="ピンク丸" cx="7.5" cy="7.5" r="7.5" transform="translate(184.391 72.267)" fill="#f092ad"/>
+    <g id="ピンク丸線" transform="translate(187.382 74.267)" fill="none" stroke="#020000" stroke-width="1.5">
+      <circle cx="7.5" cy="7.5" r="7.5" stroke="none"/>
+      <circle cx="7.5" cy="7.5" r="6.75" fill="none"/>
+    </g>
+  </g>
+</svg>
