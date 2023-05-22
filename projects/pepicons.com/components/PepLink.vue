@@ -13,7 +13,7 @@ const props = defineProps<{
   <a :href="href" :class="`pep-link cursor-pointer ${icon ? '_has-icon' : ''}`">
     <template v-if="icon">
       <CompanyLogo v-if="icon === 'github'" name="github" size="sm" class="_icon" />
-      <Pepicon v-else :name="icon" size="sm" class="_icon" type="pop" />
+      <Pepicon v-else-if="icon" :name="icon" size="sm" class="_icon" type="pop" />
       <div class="mr-sm" />
     </template>
     <div>{{ content }}</div>
