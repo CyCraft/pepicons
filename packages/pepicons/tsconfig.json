@@ -2,8 +2,7 @@
   "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "declaration": true,
-    "declarationDir": "./dist/types/"
+    "declaration": true
   },
   "include": ["./index.ts", "./src/**/*.ts", "./src/*.ts"],
   "exclude": ["node_modules", "dist", "svg", "export"]
