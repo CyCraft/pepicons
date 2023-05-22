@@ -1,7 +1,7 @@
 {
   "name": "@pepicons/vue",
+  "version": "2.0.7",
   "type": "module",
-  "version": "2.0.6",
   "sideEffects": false,
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
@@ -11,28 +11,29 @@
     "dist"
   ],
   "types": "./dist/index.d.ts",
-  "main": "./dist/index.umd.js",
-  "module": "./dist/index.es.js",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.es.js",
-      "require": "./dist/index.umd.js"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/cjs/index.d.cts",
+        "default": "./dist/cjs/index.cjs"
+      }
     }
   },
   "scripts": {
-    "build:src": "npm run build:vite",
-    "build": "del-cli dist && npm run build:vite && npm run gen:types:ts && npm run gen:types:vetur",
-    "dev": "vite --force --config vite.config.dev.ts",
-    "build:vite": "vite build",
-    "gen:types:vetur": "vue-int -i src/components/Pepicon.vue -o dist/vetur",
-    "gen:types:ts": "vue-tsc --declaration --emitDeclarationOnly"
+    "build": "vite build",
+    "dev": "vite --force --config vite.config.dev.ts"
   },
   "peerDependencies": {
     "vue": "^3.2.39"
   },
   "dependencies": {
-    "pepicons": "^2.0.6"
+    "pepicons": "^2.0.7"
   },
   "homepage": "https://github.com/cycraft/pepicons",
   "repository": {
@@ -40,9 +41,5 @@
     "url": "https://github.com/cycraft/pepicons"
   },
   "bugs": "https://github.com/cycraft/pepicons/issues",
-  "vetur": {
-    "tags": "dist/vetur/tags.json",
-    "attributes": "dist/vetur/attributes.json"
-  },
   "gitHead": "b9d99854c5f1a88b1bd6b50ed81b249feea5fcd9"
 }

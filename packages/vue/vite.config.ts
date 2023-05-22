@@ -1,21 +1,50 @@
 import vue from '@vitejs/plugin-vue'
+import ExecSh from 'exec-sh'
+import fs from 'fs'
 import path from 'path'
-import { defineConfig } from 'vite'
+import { Plugin, defineConfig } from 'vite'
 import pkg from './package.json' assert { type: 'json' }
+
+const { promise: ExecShPromise } = ExecSh
+function execSh(command: string) {
+  return ExecShPromise(command, { cwd: path.resolve('./') })
+}
 
 const nameCamel = pkg.name
 const namePascal = nameCamel.replace(/(^\w|-\w)/g, (c) => c.replace('-', '').toUpperCase())
 const dependencies = Object.keys(pkg.dependencies || [])
 
+export function pluginDts(): Plugin {
+  return {
+    name: 'vue-tsc',
+    writeBundle: {
+      sequential: true,
+      order: 'post',
+      async handler({ format }) {
+        if (format === 'cjs') {
+          await execSh('vue-tsc --declarationDir ./dist/cjs --declaration --emitDeclarationOnly')
+          fs.rename(
+            path.resolve(__dirname, 'dist/cjs/index.d.ts'),
+            path.resolve(__dirname, 'dist/cjs/index.d.cts'),
+            console.error,
+          )
+        } else {
+          await execSh('vue-tsc --declarationDir ./dist --declaration --emitDeclarationOnly')
+        }
+      },
+    },
+  }
+}
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), pluginDts()],
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
       name: namePascal,
-      formats: ['umd', 'es'],
-      fileName: (format) => `index.${format}.js`,
+      formats: ['cjs', 'es'],
+      fileName: (format) => (format === 'cjs' ? 'cjs/index.cjs' : 'index.js'),
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
