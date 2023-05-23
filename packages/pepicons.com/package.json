@@ -15,7 +15,7 @@
     "copy-text-to-clipboard": "^3.1.0",
     "is-what": "^4.1.9",
     "map-anything": "^2.1.1",
-    "pepicons": "^2.0.8",
+    "pepicons": "*",
     "prismjs": "^1.29.0",
     "vue": "^3.3.1",
     "vue-color-kit": "^1.0.5",

@@ -33,7 +33,7 @@
     "vue": "^3.2.39"
   },
   "dependencies": {
-    "pepicons": "^2.0.8"
+    "pepicons": "*"
   },
   "homepage": "https://github.com/cycraft/pepicons",
   "repository": {
