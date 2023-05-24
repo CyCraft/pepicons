@@ -1,8 +1,8 @@
 import cpy from 'cpy'
 import { deleteAsync } from 'del'
 import { optimize } from 'svgo'
-import replace from 'tiny-replace-files'
 import { PATH_PEPICONS, PATH_ROOT } from './helpers/filePathHelpers'
+import { globReplace } from './helpers/globReplace'
 
 const deleteSvgFolder = () => deleteAsync(PATH_PEPICONS + '/svg')
 
@@ -38,30 +38,30 @@ async function cleanupAll() {
   const path = PATH_PEPICONS + '/svg/**/*.svg'
 
   // set color to `currentColor`
-  await replace({
+  await globReplace({
     files: path,
     from: /#AB92F0/gi,
     to: 'currentColor',
   })
   // set 'black' to 'dimgray'
-  await replace({
+  await globReplace({
     files: path,
     from: /black/gi,
     to: 'dimgray',
   })
   // remove clutter
-  await replace({
+  await globReplace({
     files: path,
     from: /<defs>\n<clipPath id="(.+?)">\n<rect width="20" height="20" fill="white"\/>\n<\/clipPath>\n<\/defs>/gi,
     to: '',
   })
-  await replace({
+  await globReplace({
     files: path,
     from: /<g clip-path="url\(\#(.+?)\)">/gi,
     to: '<g>',
   })
   // remove newlines
-  await replace({
+  await globReplace({
     files: path,
     from: /[\n\r]/gi,
     to: '',
@@ -75,7 +75,7 @@ async function cleanupAll() {
  */
 async function cleanupPencil() {
   const path = PATH_PEPICONS + '/svg/pencil/*.svg'
-  await replace({
+  await globReplace({
     files: path,
     from: /([.\n\r\t\S\s]*)/gi,
     to: (match, path) => {

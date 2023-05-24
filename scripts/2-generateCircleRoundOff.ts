@@ -1,6 +1,6 @@
 import cpy from 'cpy'
-import replace from 'tiny-replace-files'
 import { PATH_PEPICONS } from './helpers/filePathHelpers'
+import { globReplace } from './helpers/globReplace'
 import { wrapWithCircle, wrapWithOff, wrapWithRound } from './helpers/wrapHelpers'
 
 const types = ['print', 'pop', 'pencil'] as const
@@ -27,7 +27,7 @@ async function mutate(
   const path = PATH_PEPICONS + `/svg/${type}/*-${wrap}.svg`
 
   if (wrap === 'circle' || wrap === 'circle-off') {
-    await replace({
+    await globReplace({
       files: path,
       from: /([.\n\r\t\S\s]+)/gi,
       to: (match) => wrapWithCircle(match, type),
@@ -35,15 +35,15 @@ async function mutate(
   }
 
   if (wrap === 'round') {
-    await replace({
+    await globReplace({
       files: path,
       from: /([.\n\r\t\S\s]+)/gi,
-      to: (match) => wrapWithRound(match, type),
+      to: (match, file) => wrapWithRound(file, match, type),
     })
   }
 
   if (wrap === 'off') {
-    await replace({
+    await globReplace({
       files: path,
       from: /([.\n\r\t\S\s]+)/gi,
       to: (match) => wrapWithOff(match, type),

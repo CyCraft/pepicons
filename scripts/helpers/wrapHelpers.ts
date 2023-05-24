@@ -31,8 +31,13 @@ export function wrapWithCircle(svg: string, type: 'print' | 'pop' | 'pencil'): s
   return svg
 }
 
-export function wrapWithRound(svg: string, type: 'print' | 'pop' | 'pencil'): string {
-  const randomId = Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2)
+export function wrapWithRound(
+  filename: string,
+  svg: string,
+  type: 'print' | 'pop' | 'pencil',
+): string {
+  const name = filename.split('/').pop()?.replace('.svg', '')
+  const maskId = `mask-${type}-${name}`
   svg = svg.replace(/viewBox="0 0 2[01] 2[01]"/, `viewBox="0 0 26 26"`)
   svg = svg.replace(
     /svg">([.\n\r\t\S\s]+)<\/svg>/,
@@ -42,11 +47,11 @@ export function wrapWithRound(svg: string, type: 'print' | 'pop' | 'pencil'): st
     svg = svg.replaceAll('currentColor', 'black')
     svg = svg.replace(
       'svg">',
-      `svg"><defs><mask id="${randomId}"><rect width="26" height="26" fill="white"/>`,
+      `svg"><defs><mask id="${maskId}"><rect width="26" height="26" fill="white"/>`,
     )
     svg = svg.replace(
       '</svg>',
-      `</mask></defs><circle r="13" cx="13" cy="13" mask="url(#${randomId})" fill="currentColor"/></svg>`,
+      `</mask></defs><circle r="13" cx="13" cy="13" mask="url(#${maskId})" fill="currentColor"/></svg>`,
     )
   }
   if (type === 'print') {
