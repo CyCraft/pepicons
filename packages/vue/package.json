@@ -23,6 +23,10 @@
         "types": "./dist/cjs/index.d.cts",
         "default": "./dist/cjs/index.cjs"
       }
+    },
+    "./dist/*": {
+      "import": "./dist/*",
+      "require": "./dist/*"
     }
   },
   "scripts": {
