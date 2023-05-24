@@ -4,7 +4,7 @@ import { globReplace } from './helpers/globReplace'
 import { wrapWithCircle, wrapWithOff, wrapWithRound } from './helpers/wrapHelpers'
 
 const types = ['print', 'pop', 'pencil'] as const
-const wraps = ['circle-off', 'circle', 'round', 'off'] as const
+const wraps = ['circle-off', 'circle', 'circle-filled', 'off'] as const
 
 async function copyFiles() {
   await Promise.all(
@@ -22,7 +22,7 @@ async function copyFiles() {
 
 async function mutate(
   type: 'print' | 'pop' | 'pencil',
-  wrap: 'circle' | 'round' | 'off' | 'circle-off',
+  wrap: 'circle' | 'circle-filled' | 'off' | 'circle-off',
 ) {
   const path = PATH_PEPICONS + `/svg/${type}/*-${wrap}.svg`
 
@@ -34,7 +34,7 @@ async function mutate(
     })
   }
 
-  if (wrap === 'round') {
+  if (wrap === 'circle-filled') {
     await globReplace({
       files: path,
       from: /([.\n\r\t\S\s]+)/gi,
@@ -57,7 +57,7 @@ export async function generateCircleRoundOff() {
   await Promise.all(types.map((type) => mutate(type, 'off')))
   await Promise.all(
     types.map((type) =>
-      (['circle', 'round', 'circle-off'] as const).map((wrap) => mutate(type, wrap)),
+      (['circle', 'circle-filled', 'circle-off'] as const).map((wrap) => mutate(type, wrap)),
     ),
   )
 }

@@ -43,11 +43,13 @@ export const pepiconProps = {
    * The icon name as per the reference at https://pepicons.com
    * @example 'pen'
    * @example 'pen-circle'
-   * @example 'pen-round'
+   * @example 'pen-circle-filled'
    * @example 'pen-off'
    */
   name: {
-    type: String as PropType<Pepicon | `${Pepicon}-circle` | `${Pepicon}-round` | `${Pepicon}-off`>,
+    type: String as PropType<
+      Pepicon | `${Pepicon}-circle` | `${Pepicon}-circle-filled` | `${Pepicon}-off`
+    >,
     required: true as const,
   },
 }

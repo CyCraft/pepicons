@@ -40,7 +40,7 @@ const categoryIconNamesDic = computed<{
     if (
       iconName.endsWith('-circle-off') ||
       iconName.endsWith('-circle') ||
-      iconName.endsWith('-round') ||
+      iconName.endsWith('-circle-filled') ||
       iconName.endsWith('-off')
     ) {
       return dic

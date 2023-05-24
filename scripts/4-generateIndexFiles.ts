@@ -84,7 +84,13 @@ export async function generateIndexFiles() {
   const popFilenames = popFilePaths.map<string>((folder) => folder.split('/').slice(-2).join('/'))
   const iconNames = popFilenames
     .map(filenameToIconName)
-    .map((name) => [name, `${name}-circle-off`, `${name}-circle`, `${name}-round`, `${name}-off`])
+    .map((name) => [
+      name,
+      `${name}-circle-off`,
+      `${name}-circle`,
+      `${name}-circle-filled`,
+      `${name}-off`,
+    ])
     .flat()
   const iconSynonyms = popFilenames
     .map(filenameToIconSynonyms)

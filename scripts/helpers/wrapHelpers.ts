@@ -56,7 +56,7 @@ export function wrapWithRound(
   }
   if (type === 'print') {
     // We want to hide any existing print shadow,
-    // because we only want to retain the one that will be added from the round wrap
+    // because we only want to retain the one that will be added from the circle-filled wrap
     if (type === 'print') {
       svg = svg.replace('opacity="0.2"', `opacity="0"`)
     }
