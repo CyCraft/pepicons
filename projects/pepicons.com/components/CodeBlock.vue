@@ -1,34 +1,36 @@
 <script lang="ts" setup>
 // import Prism Editor
-import { PrismEditor } from 'vue-prism-editor'
-import 'vue-prism-editor/dist/prismeditor.min.css' // import the styles somewhere
+// import { PrismEditor } from 'vue-prism-editor'
+// import 'vue-prism-editor/dist/prismeditor.min.css' // import the styles somewhere
 
 // import highlighting library (you can use any library you want just return html string)
-import 'prismjs/components/prism-clike'
-import prismCore from 'prismjs/components/prism-core'
-import 'prismjs/components/prism-javascript'
-import 'prismjs/themes/prism-tomorrow.css' // import syntax highlighting styles
-import { ref } from 'vue'
+// import 'prismjs/components/prism-clike'
+// import prismCore from 'prismjs/components/prism-core'
+// import 'prismjs/components/prism-javascript'
+// import 'prismjs/themes/prism-tomorrow.css' // import syntax highlighting styles
 
-const { highlight, languages } = prismCore
+// const { highlight, languages } = prismCore
 
-const props = defineProps({
-  content: { type: String, default: 'something' },
-})
-const contentCopy = ref(props.content)
+const props = defineProps<{
+  content: string
+}>()
+
+// const contentCopy = ref(props.content)
 function highlighter(contentCopy: string) {
-  return highlight(contentCopy, languages.js) // languages.<insert language> to return html with markup
+  return contentCopy
+  // return highlight(contentCopy, languages.js) // languages.<insert language> to return html with markup
 }
 </script>
 
 <template>
-  <prism-editor
+  <pre><code>{{ content }}</code></pre>
+  <!-- <prism-editor
     v-model="contentCopy"
     class="my-editor"
     :highlight="highlighter"
     lineNumbers
     readonly
-  />
+  /> -->
 </template>
 
 <style>

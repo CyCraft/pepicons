@@ -31,16 +31,6 @@ export type GetPepiconPayload = {
    * @see https://pepicons.com to browse all icon types
    */
   type: 'pop' | 'print' | 'pencil'
-  /**
-   * The wrap can also be set via the icon name
-   * - `undefined` (default) — applies no wrapping around the icon
-   * - 'circle' — wraps the icon in a circle
-   * - 'round' — shows the icon inside a round
-   * - 'off' — shows an cross line diagonally on top of the icon
-   * - 'circle-off' — wraps the icon in a circle and shows a cross line diagonally on top of the icon
-   * @default undefined
-   */
-  wrap?: 'circle' | 'round' | 'off' | 'circle-off'
 }
 
 export type MorphPepiconPayload = {
@@ -83,13 +73,10 @@ export type MorphPepiconPayload = {
  * @returns The SVG content as string
  */
 export function getPepicon(payload: GetPepiconPayload): string {
-  const { type = 'pop', wrap, name } = payload || {}
-  const nameWithWrap = wrap ? `${name}-${wrap}` : name
-  const svgString = svgDic[type][camelCase(nameWithWrap)]
+  const { type = 'pop', name } = payload || {}
+  const svgString = svgDic[type][camelCase(name)]
   if (!svgString) {
-    console.warn(
-      `Pepicon ${nameWithWrap} of type ${type} not found! (returned an empty string instead)`,
-    )
+    console.warn(`Pepicon ${name} of type ${type} not found! (returned an empty string instead)`)
     return ''
   }
   return svgString

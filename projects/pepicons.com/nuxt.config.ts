@@ -14,10 +14,6 @@ export default defineNuxtConfig({
   //     viteplay({
   //       pages: [
   //         {
-  //           component: './components/ColorRingSvg.vue',
-  //           examples: ({ name }) => `./${name}.example.vue`,
-  //         },
-  //         {
   //           component: './components/PepHero.vue',
   //           examples: ({ name }) => `./${name}.example.vue`,
   //         },

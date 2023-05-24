@@ -31,18 +31,6 @@ export const baseProps = {
     type: [String, Number] as PropType<'sm' | 'md' | 'lg' | 'xl' | number | string>,
     default: 'md',
   },
-  /**
-   * The wrap can also be set via the icon name
-   * - `undefined` (default) — applies no wrapping around the icon
-   * - 'circle' — wraps the icon in a circle
-   * - 'round' — shows the icon inside a round
-   * - 'off' — shows an cross line diagonally on top of the icon
-   * - 'circle-off' — wraps the icon in a circle and shows a cross line diagonally on top of the icon
-   * @default undefined
-   */
-  wrap: {
-    type: String as PropType<undefined | 'circle' | 'round' | 'off' | 'circle-off'>,
-  },
 }
 
 export const pepiconProps = {

@@ -1,16 +1,14 @@
 <script lang="ts" setup>
-import { PropType } from 'vue'
 import CompanyLogo from './CompanyLogo.vue'
-import Stack from './Stack.vue'
 
-const props = defineProps({
-  name: { type: String, required: true },
-  description: { type: String, required: true },
-  profileUrl: { type: String, required: true },
-  profileImgStyle: { type: String, default: '' },
-  color: { type: String, required: true },
-  links: { type: Array as PropType<string[]>, default: () => [] },
-})
+const props = defineProps<{
+  name: string
+  description: string
+  color: string
+  profileUrl: string
+  profileImgStyle?: string
+  links?: string[]
+}>()
 </script>
 
 <template>
@@ -114,11 +112,11 @@ const props = defineProps({
       <div class="_description text-wrap-all">{{ description }}</div>
     </div>
 
-    <Stack v-if="links.length">
+    <div v-if="links?.length" class="flex wrap justify-center gap-md">
       <a v-for="link in links" :key="link" class="_link cursor-pointer" :href="link">
         <CompanyLogo :name="(link.split('https://')[1].split('.')[0] as any)" />
       </a>
-    </Stack>
+    </div>
   </div>
 </template>
 

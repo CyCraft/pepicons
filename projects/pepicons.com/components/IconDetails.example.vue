@@ -1,15 +1,10 @@
 <script lang="ts" setup>
 import IconDetails from './IconDetails.vue'
-import { choices, generatedColors, randomColorDic } from './mocks'
+import { choices, randomColorDic } from './mocks'
 </script>
 
 <docs darkPreview></docs>
 
 <template>
-  <IconDetails
-    icon="airplane"
-    :choices="choices"
-    :generatedColors="generatedColors"
-    :randomColorDic="randomColorDic"
-  />
+  <IconDetails icon="airplane" :choices="choices" :randomColorDic="randomColorDic" />
 </template>

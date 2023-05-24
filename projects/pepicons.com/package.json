@@ -1,12 +1,13 @@
 {
-  "name": "@pepicons/pepicons.com",
+  "name": "pepicons.com",
   "private": true,
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "typecheck": "vue-tsc --noEmit"
   },
   "devDependencies": {
     "nuxt": "^3.5.1"

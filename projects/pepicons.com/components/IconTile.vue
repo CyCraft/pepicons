@@ -8,7 +8,8 @@ const props = defineProps<{
   name: PepiconName
   type: 'pop' | 'print' | 'pencil'
   color: string
-  stroke: string
+  shadow?: string
+  opacity?: number
   searchInput?: string
 }>()
 
@@ -31,7 +32,15 @@ const synonymHtml = computed(() => {
 
 <template>
   <div class="icon-tile cursor-zoom-in">
-    <Pepicon class="_svg" :type="type" :color="color" :stroke="stroke" :name="name" size="26px" />
+    <Pepicon
+      class="_svg"
+      :type="type"
+      :color="color"
+      :shadow="shadow"
+      :opacity="opacity"
+      :name="name"
+      size="26px"
+    />
     <div class="_name">
       <div :class="`c-letters ${synonymHtml ? 'ellipsis' : ''}`" style="max-width: 90%">
         {{ name }}

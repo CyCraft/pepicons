@@ -2,5 +2,5 @@
 import CodeBlock from './CodeBlock.vue'
 </script>
 <template>
-  <CodeBlock />
+  <CodeBlock content="const a = 1" />
 </template>
