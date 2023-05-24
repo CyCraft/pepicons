@@ -1,10 +1,11 @@
 import { camelCase } from 'case-anything'
-import { textToRgba } from './helpers/color'
+import { isNumber } from 'is-what'
 import * as dicPencil from './icons/pencil/index'
 import * as dicPop from './icons/pop/index'
 import * as dicPrint from './icons/print/index'
 import { PepiconName } from './types'
 
+// exports
 export * from './categories'
 export * from './synonyms/en'
 export { synonyms as synonymsJa } from './synonyms/ja'
@@ -26,20 +27,10 @@ export type GetPepiconPayload = {
    */
   name: PepiconName
   /**
-   * Either 'pop' or 'print'
-   * @default 'pop'
+   * The icon type.
+   * @see https://pepicons.com to browse all icon types
    */
   type: 'pop' | 'print' | 'pencil'
-  /**
-   * The wrap can also be set via the icon name
-   * - `undefined` (default) — applies no wrapping around the icon
-   * - 'circle' — wraps the icon in a circle
-   * - 'round' — shows the icon inside a round
-   * - 'off' — shows an cross line diagonally on top of the icon
-   * - 'circle-off' — wraps the icon in a circle and shows a cross line diagonally on top of the icon
-   * @default undefined
-   */
-  wrap?: 'circle' | 'round' | 'off' | 'circle-off'
 }
 
 export type MorphPepiconPayload = {
@@ -53,14 +44,12 @@ export type MorphPepiconPayload = {
    */
   type: 'pop' | 'print' | 'pencil'
   /**
-   * A hex(a) or rgb(a) color
-   * - "pop" type icons: this is the icon color
-   * - "print" type icons: this is the shadow color (you can use "stroke" to set a stroke color)
+   * The icon color in hex(a) or rgb(a) color
    */
   color?: string
   /**
    * A number between 0 and 1; where 0 is transparent
-   * - "pop" type icons: opacity will be set to the entire icon
+   * - "pop"/"pencil" type icons: opacity will be set to the entire icon
    * - "print" type icons: opacity will be set to the colored drop shadow
    */
   opacity?: number
@@ -72,9 +61,9 @@ export type MorphPepiconPayload = {
    */
   size?: 'sm' | 'md' | 'lg' | 'xl' | number | string
   /**
-   * The stroke color is only applied on 'print' type icons and is black by default
+   * The shadow color is only applied on 'print' type icons and is the same color as the icon color by default
    */
-  stroke?: string
+  shadow?: string
 }
 
 /**
@@ -84,13 +73,10 @@ export type MorphPepiconPayload = {
  * @returns The SVG content as string
  */
 export function getPepicon(payload: GetPepiconPayload): string {
-  const { type = 'pop', wrap, name } = payload || {}
-  const nameWithWrap = wrap ? `${name}-${wrap}` : name
-  const svgString = svgDic[type][camelCase(nameWithWrap)]
+  const { type = 'pop', name } = payload || {}
+  const svgString = svgDic[type][camelCase(name)]
   if (!svgString) {
-    console.warn(
-      `Pepicon ${nameWithWrap} of type ${type} not found! (returned an empty string instead)`,
-    )
+    console.warn(`Pepicon ${name} of type ${type} not found! (returned an empty string instead)`)
     return ''
   }
   return svgString
@@ -104,35 +90,26 @@ export function getPepicon(payload: GetPepiconPayload): string {
  */
 export function morphPepicon(payload: MorphPepiconPayload): string {
   let svg = payload.svg
-  const { type, color, opacity, size, stroke } = payload || {}
+  const { type, color, opacity, size, shadow } = payload || {}
 
   if (!/style="/.test(svg)) {
     svg = svg.replace('<svg ', '<svg style="" ')
   }
 
-  if (type === 'print' && stroke) {
-    svg = svg.replace(/dimgray/g, stroke)
+  if (shadow && type === 'print') {
+    svg = svg.replace(/opacity="0?\.2"/g, `opacity="0.2" style="color:${shadow};"`)
   }
 
-  const rgbOrHexColor = color?.startsWith('rgb') || color?.startsWith('#')
-  if (color && !rgbOrHexColor) {
+  if (color) {
     svg = svg.replace(/style="/, `style="color:${color};`)
   }
 
-  let _opacity = opacity
-  if (color && rgbOrHexColor) {
-    const { r, g, b, a } = textToRgba(color)
-    const _color = `rgb(${r},${g},${b})`
-    svg = svg.replace(/style="/, `style="color:${_color};`)
-    if (opacity === undefined) {
-      _opacity = a === undefined ? 1 : a / 100
-    }
-  }
-  if (_opacity !== undefined && _opacity < 1) {
+  if (isNumber(opacity) && opacity <= 1 && opacity >= 0) {
     if (type === 'print') {
-      svg = svg.replace(/opacity="\.8"/g, `opacity="${_opacity}"`)
+      svg = svg.replace(/opacity="0?\.2"/g, `opacity="${opacity}"`)
     } else {
-      svg = svg.replace(/style="/, `style="opacity:${_opacity};`)
+      // no g, so this will only replace the top style tag
+      svg = svg.replace(/style="/, `style="opacity:${opacity};`)
     }
   }
   if (size || size === 0) {

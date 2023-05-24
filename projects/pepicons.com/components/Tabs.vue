@@ -9,7 +9,7 @@ const emit = defineEmits<{
   (e: 'update:selectedTab', payload: string): void
 }>()
 
-function setTab(tab) {
+function setTab(tab: string) {
   emit('update:selectedTab', tab)
 }
 </script>

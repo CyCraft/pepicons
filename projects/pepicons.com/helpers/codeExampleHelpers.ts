@@ -4,12 +4,11 @@ export function generateVueCode(payload: {
   name: PepiconName
   type: 'pop' | 'print' | 'pencil'
   color: string
-  stroke: string
-  wrap?: 'circle' | 'round' | 'off' | 'circle-off'
+  shadow?: string
+  opacity?: number
 }): string {
-  const strokeProp =
-    payload.stroke && payload.stroke !== 'black' ? `\n    stroke="${payload.stroke}"` : ''
-  const suffix = payload.wrap ? `-${payload.wrap}` : ''
+  const shadowProp = payload.shadow ? `\n    shadow="${payload.shadow}"` : ''
+  const opacityProp = payload.opacity ? `\n    :opacity="${payload.opacity}"` : ''
 
   return `<script setup>
 import { Pepicon } from '@pepicons\/vue'
@@ -17,9 +16,9 @@ import { Pepicon } from '@pepicons\/vue'
 
 <template>
   <Pepicon
-    name="${payload.name}${suffix}"
+    name="${payload.name}"
     type="${payload.type}"
-    color="${payload.color}"${strokeProp}
+    color="${payload.color}"${shadowProp}${opacityProp}
   />
 <\/template>`
 }

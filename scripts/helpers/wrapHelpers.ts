@@ -15,11 +15,11 @@ export function wrapWithCircle(svg: string, type: 'print' | 'pop' | 'pencil'): s
   if (type === 'print') {
     svg = svg.replace(
       'svg">',
-      `svg"><path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M13.5 26C20.4036 26 26 20.4036 26 13.5C26 6.59644 20.4036 1 13.5 1C6.59644 1 1 6.59644 1 13.5C1 20.4036 6.59644 26 13.5 26ZM13.5 24C19.299 24 24 19.299 24 13.5C24 7.70101 19.299 3 13.5 3C7.70101 3 3 7.70101 3 13.5C3 19.299 7.70101 24 13.5 24Z" fill="currentColor"/>`,
+      `svg"><path opacity="0.2" fill-rule="evenodd" clip-rule="evenodd" d="M13.5 26C20.4036 26 26 20.4036 26 13.5C26 6.59644 20.4036 1 13.5 1C6.59644 1 1 6.59644 1 13.5C1 20.4036 6.59644 26 13.5 26ZM13.5 24C19.299 24 24 19.299 24 13.5C24 7.70101 19.299 3 13.5 3C7.70101 3 3 7.70101 3 13.5C3 19.299 7.70101 24 13.5 24Z" fill="currentColor"/>`,
     )
     svg = svg.replace(
       '</svg>',
-      `<path fill-rule="evenodd" clip-rule="evenodd" d="M13 24.5C19.3513 24.5 24.5 19.3513 24.5 13C24.5 6.64873 19.3513 1.5 13 1.5C6.64873 1.5 1.5 6.64873 1.5 13C1.5 19.3513 6.64873 24.5 13 24.5ZM13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="dimgray"/></svg>`,
+      `<path fill-rule="evenodd" clip-rule="evenodd" d="M13 24.5C19.3513 24.5 24.5 19.3513 24.5 13C24.5 6.64873 19.3513 1.5 13 1.5C6.64873 1.5 1.5 6.64873 1.5 13C1.5 19.3513 6.64873 24.5 13 24.5ZM13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="currentColor"/></svg>`,
     )
   }
   if (type === 'pencil') {
@@ -31,8 +31,13 @@ export function wrapWithCircle(svg: string, type: 'print' | 'pop' | 'pencil'): s
   return svg
 }
 
-export function wrapWithRound(svg: string, type: 'print' | 'pop' | 'pencil'): string {
-  const randomId = Math.random().toString(36).slice(2) + Math.random().toString(36).slice(2)
+export function wrapWithRound(
+  filename: string,
+  svg: string,
+  type: 'print' | 'pop' | 'pencil',
+): string {
+  const name = filename.split('/').pop()?.replace('.svg', '')
+  const maskId = `mask-${type}-${name}`
   svg = svg.replace(/viewBox="0 0 2[01] 2[01]"/, `viewBox="0 0 26 26"`)
   svg = svg.replace(
     /svg">([.\n\r\t\S\s]+)<\/svg>/,
@@ -42,26 +47,26 @@ export function wrapWithRound(svg: string, type: 'print' | 'pop' | 'pencil'): st
     svg = svg.replaceAll('currentColor', 'black')
     svg = svg.replace(
       'svg">',
-      `svg"><defs><mask id="${randomId}"><rect width="26" height="26" fill="white"/>`,
+      `svg"><defs><mask id="${maskId}"><rect width="26" height="26" fill="white"/>`,
     )
     svg = svg.replace(
       '</svg>',
-      `</mask></defs><circle r="13" cx="13" cy="13" mask="url(#${randomId})" fill="currentColor"/></svg>`,
+      `</mask></defs><circle r="13" cx="13" cy="13" mask="url(#${maskId})" fill="currentColor"/></svg>`,
     )
   }
   if (type === 'print') {
     // We want to hide any existing print shadow,
     // because we only want to retain the one that will be added from the round wrap
     if (type === 'print') {
-      svg = svg.replace('opacity="0.8"', `opacity="0"`)
+      svg = svg.replace('opacity="0.2"', `opacity="0"`)
     }
     svg = svg.replace(
       'svg">',
-      `svg"><path opacity="0.8" d="M26 14C26 20.6274 20.6274 26 14 26C7.37258 26 2 20.6274 2 14C2 7.37258 7.37258 2 14 2C20.6274 2 26 7.37258 26 14Z" fill="currentColor"/>`,
+      `svg"><path opacity="0.2" d="M26 14C26 20.6274 20.6274 26 14 26C7.37258 26 2 20.6274 2 14C2 7.37258 7.37258 2 14 2C20.6274 2 26 7.37258 26 14Z" fill="currentColor"/>`,
     )
     svg = svg.replace(
       '</svg>',
-      `<path fill-rule="evenodd" clip-rule="evenodd" d="M13 24.5C19.3513 24.5 24.5 19.3513 24.5 13C24.5 6.64873 19.3513 1.5 13 1.5C6.64873 1.5 1.5 6.64873 1.5 13C1.5 19.3513 6.64873 24.5 13 24.5ZM13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="dimgray"/></svg>`,
+      `<path fill-rule="evenodd" clip-rule="evenodd" d="M13 24.5C19.3513 24.5 24.5 19.3513 24.5 13C24.5 6.64873 19.3513 1.5 13 1.5C6.64873 1.5 1.5 6.64873 1.5 13C1.5 19.3513 6.64873 24.5 13 24.5ZM13 25.5C19.9036 25.5 25.5 19.9036 25.5 13C25.5 6.09644 19.9036 0.5 13 0.5C6.09644 0.5 0.5 6.09644 0.5 13C0.5 19.9036 6.09644 25.5 13 25.5Z" fill="currentColor"/></svg>`,
     )
     // remove opacity="0" layer
     svg = optimize(svg, { plugins: ['removeHiddenElems'] }).data
@@ -79,7 +84,7 @@ export function wrapWithOff(svg: string, type: 'print' | 'pop' | 'pencil'): stri
   if (type === 'print') {
     svg = svg.replace(
       '</svg>',
-      `<path d="M1.15063 1.87794C0.94979 1.6771 0.94979 1.35147 1.15063 1.15063C1.35147 0.949789 1.6771 0.949789 1.87794 1.15063L18.8494 18.1221C19.0502 18.3229 19.0502 18.6485 18.8494 18.8494C18.6485 19.0502 18.3229 19.0502 18.1221 18.8494L1.15063 1.87794Z" fill="dimgray"/></svg>`,
+      `<path d="M1.15063 1.87794C0.94979 1.6771 0.94979 1.35147 1.15063 1.15063C1.35147 0.949789 1.6771 0.949789 1.87794 1.15063L18.8494 18.1221C19.0502 18.3229 19.0502 18.6485 18.8494 18.8494C18.6485 19.0502 18.3229 19.0502 18.1221 18.8494L1.15063 1.87794Z" fill="currentColor"/></svg>`,
     )
   }
   if (type === 'pencil') {

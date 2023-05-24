@@ -2,19 +2,17 @@
 import { pepiconArray, PepiconName, pepiconSvgString } from 'pepicons'
 import { computed, onBeforeMount, ref, watch } from 'vue'
 import { getRandomColor } from './helpers/colorHelpers'
-import { objectEntries } from './helpers/objectEntries'
-import { Choices, GeneratedColors, RandomColorDic } from './types'
+import { Choices, RandomColorDic } from './types'
 
 const choices = ref<Choices>({
-  type: 'print',
+  type: 'pop',
   mode: 'light',
   color: '#AB92F0',
   colorOrigin: 'preset',
 })
 
-const pepiconRandomColorDic = ref<{ [key in PepiconName]?: string }>({})
-// you can pass this pepiconRandomColorDic
-// you need to be able to easily set and reset every color in the `pepiconRandomColorDic`
+const pepiconRandomColorDic = ref<RandomColorDic>({})
+
 function setRandomColors() {
   pepiconArray.forEach((iconName) => {
     pepiconRandomColorDic.value[iconName] = getRandomColor()
@@ -26,30 +24,6 @@ watch(
   ([origin]) => {
     if (origin === 'randomizer') setRandomColors()
   },
-)
-
-const generatedColors = computed<GeneratedColors>(() => {
-  const { mode, type, color } = choices.value
-  return {
-    color: mode === 'dark' && type === 'print' ? 'black' : color,
-    stroke: mode === 'dark' && type === 'print' ? color : 'black',
-  }
-})
-
-const generatedColor = computed(() => generatedColors.value.color || 'black')
-
-const randomColorDic = computed<RandomColorDic>(() =>
-  objectEntries(pepiconRandomColorDic.value).reduce<RandomColorDic>((result, entry) => {
-    const { mode, type } = choices.value
-    if (!entry) return result
-    const [icon, randomColor = ''] = entry
-
-    result[icon] = {
-      color: mode === 'dark' && type === 'print' ? 'black' : randomColor,
-      stroke: mode === 'dark' && type === 'print' ? randomColor : 'black',
-    }
-    return result
-  }, {}),
 )
 
 onBeforeMount(() => {
@@ -71,7 +45,6 @@ function getCursor(
     name: icon,
     type: 'pop',
     color: choices.value.mode === 'dark' ? '#FAFAFA' : '#1D1D1D',
-    stroke: 'none',
     size: '26px',
   }).replace(/\n/g, '')
   if (icon === 'color-picker') {
@@ -86,18 +59,12 @@ const cursorArrowUp = computed(() => getCursor('arrow-up', 'n-resize'))
 const cursorArrowDown = computed(() => getCursor('arrow-down', 's-resize'))
 const cursorColorPicker = computed(() => getCursor('color-picker', 'pointer'))
 
-const retroUnderlineStroke = computed(() =>
-  choices.value.type === 'pop' ? 'none' : generatedColors.value?.stroke || 'black',
-)
+const retroUnderlineStroke = computed(() => (choices.value.type === 'pop' ? 'none' : 'black'))
 </script>
 
 <template>
   <NuxtLayout :choices="choices">
-    <NuxtPage
-      v-model:choices="choices"
-      :generatedColors="generatedColors"
-      :randomColorDic="randomColorDic"
-    />
+    <NuxtPage v-model:choices="choices" :randomColorDic="pepiconRandomColorDic" />
   </NuxtLayout>
 </template>
 
@@ -134,5 +101,5 @@ const retroUnderlineStroke = computed(() =>
     transform-origin: bottom
     bottom: 1px
     left: -2px
-    border-bottom: v-bind('generatedColor') 6px solid
+    border-bottom: v-bind('choices.color') 6px solid
 </style>

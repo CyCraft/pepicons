@@ -10,7 +10,7 @@ export default defineComponent({
   components: { Tabs },
 })
 </script>
-<docs darkExample></docs>
+<docs darkPreview></docs>
 <template>
   <Tabs v-model:selectedTab="selectedTab" activeColor="goldenrod" :tabs="['vue', 'svg']">
     <template v-if="selectedTab === 'vue'"> vue </template>

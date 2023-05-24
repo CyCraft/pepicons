@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="33.344" height="32.508" viewBox="0 0 33.344 32.508">
-  <g id="ブルー四角" transform="translate(0 -66.707)">
-    <rect id="ブルー四角-2" data-name="ブルー四角" width="25.081" height="25.081" transform="translate(5.016 70.198) rotate(-8)" fill="#5ea7ec"/>
-    <g id="ブルー四角線" transform="translate(0 74.378) rotate(-8)" fill="none" stroke="#020000" stroke-width="1.5">
-      <rect width="25.081" height="25.081" stroke="none"/>
-      <rect x="0.75" y="0.75" width="23.581" height="23.581" fill="none"/>
-    </g>
-  </g>
-</svg>

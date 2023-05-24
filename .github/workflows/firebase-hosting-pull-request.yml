@@ -6,7 +6,7 @@ name: Deploy to Firebase Hosting on PR
 jobs:
   build_and_preview:
     if: '${{ github.event.pull_request.head.repo.full_name == github.repository }}'
-    runs-on: macos-latest-xl
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
       - run: npm ci

@@ -2,13 +2,12 @@
 import { Pepicon } from '@pepicons/vue'
 import { onKeyStroke } from '@vueuse/core'
 import { ref, watch } from 'vue'
-import { Choices, GeneratedColors } from '../types'
+import { Choices } from '../types'
 
 const props = defineProps<{
   modelValue: string
   debounce: number
   choices: Choices
-  generatedColors: GeneratedColors
 }>()
 
 const emit = defineEmits<{
@@ -23,12 +22,11 @@ onKeyStroke(
   (e) => {
     function elementFocusable(e: any): boolean {
       const querySelector = `
-      a[href]:not([tabindex='-1']),
-      input:not([disabled]):not([tabindex='-1']),
-      select:not([disabled]):not([tabindex='-1']),
-      textarea:not([disabled]):not([tabindex='-1']),
-      button:not([disabled]):not([tabindex='-1'])
-    `
+a[href]:not([tabindex='-1']),
+input:not([disabled]):not([tabindex='-1']),
+select:not([disabled]):not([tabindex='-1']),
+textarea:not([disabled]):not([tabindex='-1']),
+button:not([disabled]):not([tabindex='-1'])`
       return !!e?.matches(querySelector)
     }
     if (elementFocusable(document.activeElement)) return
@@ -49,8 +47,7 @@ watch(valueInner, (newVal, oldVal) => {
 })
 
 function emitInput(newVal: any) {
-  let payload = newVal
-  emit('update:modelValue', payload)
+  emit('update:modelValue', newVal)
 }
 </script>
 
@@ -61,8 +58,8 @@ function emitInput(newVal: any) {
       class="icon"
       :name="'loop'"
       :type="choices.type"
-      :color="generatedColors.color"
-      :stroke="generatedColors.stroke"
+      :shadow="choices.shadow"
+      :opacity="choices.opacity"
     />
   </div>
 </template>

@@ -3,15 +3,13 @@ import { onMounted, ref } from 'vue'
 import { ColorPicker } from 'vue-color-kit'
 import 'vue-color-kit/dist/vue-color-kit.css'
 import { cssVar, getRandomColor } from '../helpers/colorHelpers'
-import { Choices, GeneratedColors } from '../types'
+import { Choices } from '../types'
 import DialogWrapper from './DialogWrapper.vue'
 import IconButton from './IconButton.vue'
-import Stack from './Stack.vue'
 import Tooltip from './Tooltip.vue'
 
 const props = defineProps<{
   choices: Choices
-  generatedColors: GeneratedColors
 }>()
 
 const emit = defineEmits<{
@@ -57,37 +55,28 @@ function setRandomColor() {
 </script>
 
 <template>
-  <Stack class="pickers pa-xs" classes="justify-around">
-    <Stack class="picker" classes="justify-center">
-      <Tooltip text="Print ❏">
-        <IconButton
-          icon="can"
-          type="print"
-          :color="choices.mode === 'dark' ? 'black' : choices.color"
-          :stroke="choices.mode === 'dark' ? choices.color : 'black'"
-          :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
-          :isActive="choices.type === 'print'"
-          :activeColor="choices.color"
-          :animation="{ class: 'anime-shake', duration: 500 }"
-          @click="() => emit('update:choices', { ...choices, type: 'print' })"
-        />
-      </Tooltip>
-      <Tooltip text="Pop!">
+  <div class="pickers pa-xs flex wrap justify-around gap-md">
+    <div class="picker flex wrap justify-center gap-md">
+      <Tooltip text="Pop!" backgroundColor="black" textColor="white">
         <IconButton
           icon="can"
           type="pop"
           :color="choices.color"
+          :shadow="choices.shadow"
+          :opacity="choices.opacity"
           :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'pop'"
           :animation="{ class: 'anime-shake', duration: 500 }"
           @click="() => emit('update:choices', { ...choices, type: 'pop' })"
         />
       </Tooltip>
-      <Tooltip text="Pencil_">
+      <Tooltip text="Pencil_" backgroundColor="black" textColor="white">
         <IconButton
           icon="can"
           type="pencil"
           :color="choices.color"
+          :shadow="choices.shadow"
+          :opacity="choices.opacity"
           :activeColor="choices.color"
           :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
           :isActive="choices.type === 'pencil'"
@@ -95,9 +84,23 @@ function setRandomColor() {
           @click="() => emit('update:choices', { ...choices, type: 'pencil' })"
         />
       </Tooltip>
-    </Stack>
+      <Tooltip text="Print ❏" backgroundColor="black" textColor="white">
+        <IconButton
+          icon="can"
+          type="print"
+          :color="choices.color"
+          :shadow="choices.shadow"
+          :opacity="choices.opacity"
+          :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
+          :isActive="choices.type === 'print'"
+          :activeColor="choices.color"
+          :animation="{ class: 'anime-shake', duration: 500 }"
+          @click="() => emit('update:choices', { ...choices, type: 'print' })"
+        />
+      </Tooltip>
+    </div>
 
-    <Stack class="picker" classes="justify-center">
+    <div class="picker flex wrap justify-center gap-md">
       <IconButton
         v-for="c in colorSelection"
         :key="c"
@@ -111,8 +114,9 @@ function setRandomColor() {
         class="cursor-color-picker"
         icon="color-picker"
         :type="choices.type"
-        :color="generatedColors.color"
-        :stroke="generatedColors.stroke"
+        :color="choices.color"
+        :shadow="choices.shadow"
+        :opacity="choices.opacity"
         :isActive="choices.colorOrigin === 'picker'"
         :activeColor="choices.color"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
@@ -123,16 +127,17 @@ function setRandomColor() {
         class="cursor-color-picker"
         icon="arrows-spin"
         :type="choices.type"
-        :color="generatedColors.color"
-        :stroke="generatedColors.stroke"
+        :color="choices.color"
+        :shadow="choices.shadow"
+        :opacity="choices.opacity"
         :backgroundColor="choices.mode === 'light' ? 'white' : moonlight"
         :isActive="choices.colorOrigin === 'randomizer'"
         :activeColor="choices.color"
         @click="() => setRandomColor()"
       />
-    </Stack>
+    </div>
 
-    <Stack class="picker" classes="justify-center">
+    <div class="picker flex wrap justify-center gap-md">
       <IconButton
         backgroundColor="white"
         icon="sun"
@@ -149,7 +154,7 @@ function setRandomColor() {
         class="_background-picker thin-border--light"
         @click="() => emit('update:choices', { ...choices, mode: 'dark' })"
       />
-    </Stack>
+    </div>
 
     <DialogWrapper :isVisible="colorPickerIsVisible" @close="colorPickerIsVisible = false">
       <ColorPicker
@@ -158,7 +163,7 @@ function setRandomColor() {
         @changeColor="(val) => pickColor(val)"
       />
     </DialogWrapper>
-  </Stack>
+  </div>
 </template>
 
 <style lang="sass">

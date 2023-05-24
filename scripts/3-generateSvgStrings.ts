@@ -1,7 +1,7 @@
 import cpy from 'cpy'
 import { deleteAsync } from 'del'
-import replace from 'tiny-replace-files'
 import { PATH_PEPICONS } from './helpers/filePathHelpers'
+import { globReplace } from './helpers/globReplace'
 
 async function deleteIconsFolder() {
   await deleteAsync(PATH_PEPICONS + '/src/icons')
@@ -20,10 +20,10 @@ async function copySvgsToIconsFolder() {
   ])
 
   const path = PATH_PEPICONS + '/src/icons/**/*.ts'
-  await replace({
+  await globReplace({
     files: path,
     from: /([.\n\r\t\S\s]+)\n*/gi,
-    to: (...args) => `export default \`${args[1]}\` as string\n`,
+    to: (match) => `export default \`${match}\` as string\n`,
   })
 }
 
