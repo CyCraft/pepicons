@@ -36,4 +36,4 @@ $colors: ("black": $c-black, "white": $c-white, "none": $c-none, "ivory": $c-ivo
  */
 =C($attr, $color-name, $extra-stuff: "")
   #{$attr}: map-get($colors, $color-name) #{$extra-stuff}
-  #{$attr}: var(--q-color-#{$color-name}, map-get($colors, $color-name)) #{$extra-stuff}
+  #{$attr}: var(--c-#{$color-name}, map-get($colors, $color-name)) #{$extra-stuff}

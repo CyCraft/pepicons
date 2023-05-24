@@ -1,9 +1,9 @@
 <script lang="ts" setup>
-const props = defineProps({
-  text: { type: String, default: 'Pop!' },
-  backgroundColor: { type: String, default: '#000' },
-  textColor: { type: String, default: '#fff' },
-})
+const props = defineProps<{
+  text: string
+  backgroundColor: string
+  textColor: string
+}>()
 </script>
 <template>
   <span :data-tooltip="text">

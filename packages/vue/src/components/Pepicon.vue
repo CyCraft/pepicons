@@ -17,10 +17,9 @@ const IconComponent = computed(() => {
     pop: popIcons,
     pencil: pencilIcons,
   }[props.type]
-  const name = props.wrap ? `${props.name}-${props.wrap}` : props.name
-  const iconImportFn = icons[name || '']
+  const iconImportFn = icons[props.name]
   if (!iconImportFn) {
-    throw new Error(`inexistent Pepicon "${name}" for props: ${JSON.stringify(props)}`)
+    throw new Error(`inexistent Pepicon "${props.name}" for props: ${JSON.stringify(props)}`)
   }
   return defineAsyncComponent(iconImportFn)
 })
@@ -29,7 +28,6 @@ const iconProps = computed(() => {
   const p: Record<string, any> = { ...props }
   p.type = undefined
   p.name = undefined
-  p.wrap = undefined
   return p
 })
 </script>

@@ -6,7 +6,7 @@ import { computed, ref } from 'vue'
 import { generateVueCode } from '../helpers/codeExampleHelpers'
 import { base64ToBlob, svgToBase64Png } from '../helpers/conversion'
 import { downloadBase64AsFile, downloadFile } from '../helpers/download'
-import { Choices, GeneratedColors, RandomColorDic } from '../types'
+import { Choices, RandomColorDic } from '../types'
 import HtmlButton from './HtmlButton.vue'
 import IconButton from './IconButton.vue'
 import Tabs from './Tabs.vue'
@@ -14,7 +14,6 @@ import Tabs from './Tabs.vue'
 const props = defineProps<{
   icon: PepiconName
   choices: Choices
-  generatedColors: GeneratedColors
   randomColorDic: RandomColorDic
 }>()
 
@@ -29,54 +28,44 @@ const copySvgDone = ref(false)
 const downloadPngDone = ref(false)
 const copyPngDone = ref(false)
 
-const activeColorGenerated = computed(() => {
-  const { icon, choices, randomColorDic } = props
-  return choices.colorOrigin === 'randomizer'
-    ? choices.mode === 'dark' && choices.type === 'print'
-      ? randomColorDic[icon]?.stroke || ''
-      : randomColorDic[icon]?.color || ''
-    : choices.color
-})
 const colorGenerated = computed(() => {
-  const { icon, choices, randomColorDic, generatedColors } = props
-  return choices.colorOrigin === 'randomizer'
-    ? randomColorDic[icon]?.color || ''
-    : generatedColors.color
-})
-const strokeGenerated = computed(() => {
-  const { icon, choices, randomColorDic, generatedColors } = props
-  return choices.colorOrigin === 'randomizer'
-    ? randomColorDic[icon]?.stroke || ''
-    : generatedColors.stroke
+  const { icon, choices, randomColorDic } = props
+  return choices.colorOrigin === 'randomizer' ? randomColorDic[icon] || '' : choices.color
 })
 
 const codeSvg = computed(() => {
+  const { type, shadow, opacity } = props.choices
   return pepiconSvgString({
+    type,
+    shadow,
+    opacity,
     name: iconNameWrapped.value,
-    type: props.choices.type,
     color: colorGenerated.value,
-    stroke: strokeGenerated.value,
   })
 })
 
 const codeSvgLg = computed(() => {
+  const { type, shadow, opacity } = props.choices
   return pepiconSvgString({
+    type,
+    shadow,
+    opacity,
     name: iconNameWrapped.value,
-    type: props.choices.type,
     color: colorGenerated.value,
-    stroke: strokeGenerated.value,
     size: '48px',
   })
 })
 
-const codeVue = computed(() =>
-  generateVueCode({
+const codeVue = computed(() => {
+  const { type, shadow, opacity } = props.choices
+  return generateVueCode({
+    type,
+    shadow,
+    opacity,
     name: iconNameWrapped.value,
-    type: props.choices.type,
     color: colorGenerated.value,
-    stroke: strokeGenerated.value,
-  }),
-)
+  })
+})
 
 function downloadSvg(): void {
   downloadFile(codeSvg.value, `${props.icon}.svg`)
@@ -113,7 +102,8 @@ async function copyPng(): Promise<void> {
       class="_toggle-code-button"
       :type="choices.type"
       :color="colorGenerated"
-      :stroke="strokeGenerated"
+      :shadow="choices.shadow"
+      :opacity="choices.opacity"
     />
 
     <div class="_code-section">
@@ -122,22 +112,16 @@ async function copyPng(): Promise<void> {
           v-model:selectedTab="selectedTab"
           class="_tab-panels"
           :tabs="['Vue', 'SVG']"
-          :activeColor="activeColorGenerated"
+          :activeColor="colorGenerated"
         >
           <template v-if="selectedTab === 'Vue'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
-              <pre><code>{{ codeVue }}</code></pre>
-              <!-- <ClientOnly>
-                <CodeBlock :ref="codeVue" lang="html" :content="codeVue" class="_code-block" />
-              </ClientOnly> -->
+              <CodeBlock :content="codeVue" class="_code-block" />
             </div>
           </template>
           <template v-if="selectedTab === 'SVG'">
             <div style="max-height: 400px; overflow: scroll" class="_tab-panel">
-              <pre><code>{{ codeSvg }}</code></pre>
-              <!-- <ClientOnly>
-                <CodeBlock :ref="codeSvg" lang="html" :content="codeSvg" class="_code-block" />
-              </ClientOnly> -->
+              <CodeBlock :content="codeSvg" class="_code-block" />
             </div>
           </template>
         </Tabs>
@@ -149,7 +133,8 @@ async function copyPng(): Promise<void> {
         :name="iconNameWrapped"
         :type="choices.type"
         :color="colorGenerated"
-        :stroke="strokeGenerated"
+        :shadow="choices.shadow"
+        :opacity="choices.opacity"
         size="80px"
       />
 
@@ -166,55 +151,55 @@ async function copyPng(): Promise<void> {
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
             :icon="icon"
-            :wrap="undefined"
             :type="choices.type"
             :color="colorGenerated"
-            :stroke="strokeGenerated"
-            :activeColor="activeColorGenerated"
+            :shadow="choices.shadow"
+            :opacity="choices.opacity"
+            :activeColor="colorGenerated"
             :isActive="!wrap"
             @click="() => (wrap = undefined)"
           />
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            :icon="icon"
-            :wrap="'circle'"
+            :icon="(`${icon}-circle` as PepiconName)"
             :type="choices.type"
             :color="colorGenerated"
-            :stroke="strokeGenerated"
-            :activeColor="activeColorGenerated"
+            :shadow="choices.shadow"
+            :opacity="choices.opacity"
+            :activeColor="colorGenerated"
             :isActive="wrap === 'circle'"
             @click="() => (wrap = 'circle')"
           />
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            :icon="icon"
-            :wrap="'round'"
+            :icon="(`${icon}-round` as PepiconName)"
             :type="choices.type"
             :color="colorGenerated"
-            :stroke="strokeGenerated"
-            :activeColor="activeColorGenerated"
+            :shadow="choices.shadow"
+            :opacity="choices.opacity"
+            :activeColor="colorGenerated"
             :isActive="wrap === 'round'"
             @click="() => (wrap = 'round')"
           />
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            :icon="icon"
-            :wrap="'off'"
+            :icon="(`${icon}-off` as PepiconName)"
             :type="choices.type"
             :color="colorGenerated"
-            :stroke="strokeGenerated"
-            :activeColor="activeColorGenerated"
+            :shadow="choices.shadow"
+            :opacity="choices.opacity"
+            :activeColor="colorGenerated"
             :isActive="wrap === 'off'"
             @click="() => (wrap = 'off')"
           />
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            :icon="icon"
-            :wrap="'circle-off'"
+            :icon="(`${icon}-circle-off` as PepiconName)"
             :type="choices.type"
             :color="colorGenerated"
-            :stroke="strokeGenerated"
-            :activeColor="activeColorGenerated"
+            :shadow="choices.shadow"
+            :opacity="choices.opacity"
+            :activeColor="colorGenerated"
             :isActive="wrap === 'circle-off'"
             @click="() => (wrap = 'circle-off')"
           />
@@ -231,8 +216,9 @@ async function copyPng(): Promise<void> {
               icon="cloud-down"
               :type="choices.type"
               :color="colorGenerated"
-              :stroke="strokeGenerated"
-              :activeColor="activeColorGenerated"
+              :shadow="choices.shadow"
+              :opacity="choices.opacity"
+              :activeColor="colorGenerated"
               :isActive="downloadSvgDone"
               @click="() => downloadSvg()"
             />
@@ -242,8 +228,9 @@ async function copyPng(): Promise<void> {
               icon="clipboard"
               :type="choices.type"
               :color="colorGenerated"
-              :stroke="strokeGenerated"
-              :activeColor="activeColorGenerated"
+              :shadow="choices.shadow"
+              :opacity="choices.opacity"
+              :activeColor="colorGenerated"
               :isActive="copySvgDone"
               @click="() => copySvg()"
             />
@@ -258,8 +245,9 @@ async function copyPng(): Promise<void> {
               icon="cloud-down"
               :type="choices.type"
               :color="colorGenerated"
-              :stroke="strokeGenerated"
-              :activeColor="activeColorGenerated"
+              :shadow="choices.shadow"
+              :opacity="choices.opacity"
+              :activeColor="colorGenerated"
               :isActive="downloadPngDone"
               @click="() => downloadPng()"
             />
@@ -269,8 +257,9 @@ async function copyPng(): Promise<void> {
               icon="clipboard"
               :type="choices.type"
               :color="colorGenerated"
-              :stroke="strokeGenerated"
-              :activeColor="activeColorGenerated"
+              :shadow="choices.shadow"
+              :opacity="choices.opacity"
+              :activeColor="colorGenerated"
               :isActive="copyPngDone"
               @click="() => copyPng()"
             />

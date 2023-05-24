@@ -1,7 +1,63 @@
-// import { colors } from 'quasar'
-// import { colors } from '../helpers/colors'
-// const { lighten, brightness, getBrand, setBrand } = colors
-// these direct functions are because the line above doesnt work
+import { isNumber } from 'is-what'
+
+const rgbaRegex = /^rgb(a)?\((\d{1,3}),(\d{1,3}),(\d{1,3}),?([01]?\.?\d*?)?\)$/
+
+function normaliseHexLength(hex: string): string {
+  hex = hex.replace(/^#/, '')
+  if (hex.length === 3) {
+    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2]
+  } else if (hex.length === 4) {
+    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2] + hex[3] + hex[3]
+  }
+  return `#${hex}`
+}
+
+function hexToRgba(hex: string): {
+  r: number
+  g: number
+  b: number
+  a: number
+} {
+  hex = normaliseHexLength(hex).replace(/^#/, '')
+
+  const num = parseInt(hex, 16)
+  return hex.length > 6
+    ? {
+        r: (num >> 24) & 255,
+        g: (num >> 16) & 255,
+        b: (num >> 8) & 255,
+        a: Math.round((num & 255) / 2.55) / 100,
+      }
+    : {
+        r: num >> 16,
+        g: (num >> 8) & 255,
+        b: num & 255,
+        a: 1,
+      }
+}
+
+function textToRgb(str: string): { r: number; g: number; b: number; a: number } {
+  const color = str.replace(/ /g, '')
+  const m = rgbaRegex.exec(color)
+
+  if (m === null) {
+    return hexToRgba(color)
+  }
+
+  const rgba: { r: number; g: number; b: number; a: number } = {
+    r: Math.min(255, parseInt(m[2], 10)),
+    g: Math.min(255, parseInt(m[3], 10)),
+    b: Math.min(255, parseInt(m[4], 10)),
+    a: 1,
+  }
+
+  if (m[1]) {
+    const alpha = parseFloat(m[5])
+    rgba.a = Math.min(1, isNaN(alpha) === true ? 1 : alpha)
+  }
+
+  return rgba
+}
 
 function lighten(color: string, percent: number) {
   const rgb = textToRgb(color),
@@ -23,12 +79,8 @@ function lighten(color: string, percent: number) {
   )
 }
 
-function brightness(color) {
-  if (typeof color !== 'string' && (!color || color.r === void 0)) {
-    throw new Error('Expected a string or a {r, g, b} object as color')
-  }
-
-  const rgb = typeof color === 'string' ? textToRgb(color) : color
+function brightness(color: string) {
+  const rgb = textToRgb(color)
   return (rgb.r * 299 + rgb.g * 587 + rgb.b * 114) / 1000
 }
 
@@ -38,123 +90,34 @@ export function getRandomColor(): string {
   return isDark ? lighten(color, 50) : color
 }
 
-function getBrand(color, element = document.body) {
-  if (typeof color !== 'string') {
-    throw new Error('Expected a string as color')
-  }
-
-  if (!(element instanceof Element)) {
-    throw new Error('Expected a DOM element')
-  }
-
-  return getComputedStyle(element).getPropertyValue(`--q-color-${color}`).trim() || null
+export function cssVar(colorName: string): string {
+  return getComputedStyle(document.body).getPropertyValue(`--c-${colorName}`).trim() || ''
 }
 
-function setBrand(color, value, element = document.body) {
-  if (typeof color !== 'string') {
-    throw new Error('Expected a string as color')
+function rgbaToHex({ r, g, b, a }: { r: number; g: number; b: number; a: number }) {
+  r = Math.round(r)
+  g = Math.round(g)
+  b = Math.round(b)
+
+  if (r > 255 || g > 255 || b > 255 || (isNumber(a) && (a < 0 || a > 1))) {
+    throw new Error('Expected `rgb` numbers below 256 and `a` number between 0 and 1')
   }
 
-  if (typeof value !== 'string') {
-    throw new Error('Expected a string as value')
-  }
-
-  if (!(element instanceof Element)) {
-    throw new Error('Expected a DOM element')
-  }
-
-  element.style.setProperty(`--q-color-${color}`, value)
-}
-//
-
-export function cssVar(varName: string): string {
-  return getBrand(varName) || ''
+  const alphaHex = (Math.round(a * 255) | (1 << 8)).toString(16).slice(1)
+  return '#' + (b | (g << 8) | (r << 16) | (1 << 24)).toString(16).slice(1) + alphaHex
 }
 
-export function setPrimaryColor(color: string): void {
-  setBrand('primary', color)
-}
-
-export const changeAlpha = function (color: string, offset: number) {
-  if (typeof color !== 'string') {
-    throw new Error('Expected a string as color')
-  }
-
+export function changeAlpha(color: string, offset: number) {
   if (offset === void 0 || offset < -1 || offset > 1) {
     throw new Error('Expected offset to be between -1 and 1')
   }
 
   const { r, g, b, a } = textToRgb(color)
-  const alpha = a !== void 0 ? a / 100 : 0
-  return rgbToHex({
+  const alpha = a !== void 0 ? a : 0
+  return rgbaToHex({
     r,
     g,
     b,
-    a: Math.round(Math.min(1, Math.max(0, alpha + offset)) * 100),
+    a: Math.round(Math.min(1, Math.max(0, alpha + offset))),
   })
-}
-export const reRGBA = /^rgb(a)?\((\d{1,3}),(\d{1,3}),(\d{1,3}),?([01]?\.?\d*?)?\)$/
-
-export const textToRgb = function (str: string): { r: number; g: number; b: number; a?: number } {
-  if (typeof str !== 'string') {
-    throw new Error('Expected a string')
-  }
-
-  const color = str.replace(/ /g, '')
-  const m = reRGBA.exec(color)
-
-  if (m === null) {
-    return hexToRgb(color)
-  }
-
-  const rgb: { r: number; g: number; b: number; a?: number } = {
-    r: Math.min(255, parseInt(m[2], 10)),
-    g: Math.min(255, parseInt(m[3], 10)),
-    b: Math.min(255, parseInt(m[4], 10)),
-  }
-
-  if (m[1]) {
-    const alpha = parseFloat(m[5])
-    rgb.a = Math.min(1, isNaN(alpha) === true ? 1 : alpha) * 100
-  }
-
-  return rgb
-}
-
-export const rgbToHex = function ({ r, g, b, a }) {
-  const alpha = a !== void 0
-  r = Math.round(r)
-  g = Math.round(g)
-  b = Math.round(b)
-
-  if (r > 255 || g > 255 || b > 255 || (alpha && a > 100)) {
-    throw new Error('Expected 3 numbers below 256 (and optionally one below 100)')
-  }
-
-  a = alpha ? (Math.round((255 * a) / 100) | (1 << 8)).toString(16).slice(1) : ''
-  return '#' + (b | (g << 8) | (r << 16) | (1 << 24)).toString(16).slice(1) + a
-}
-
-export const hexToRgb = function (hex: string) {
-  hex = hex.replace(/^#/, '')
-
-  if (hex.length === 3) {
-    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2]
-  } else if (hex.length === 4) {
-    hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2] + hex[3] + hex[3]
-  }
-
-  const num = parseInt(hex, 16)
-  return hex.length > 6
-    ? {
-        r: (num >> 24) & 255,
-        g: (num >> 16) & 255,
-        b: (num >> 8) & 255,
-        a: Math.round((num & 255) / 2.55),
-      }
-    : {
-        r: num >> 16,
-        g: (num >> 8) & 255,
-        b: num & 255,
-      }
 }

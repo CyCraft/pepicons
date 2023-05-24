@@ -9,14 +9,14 @@ const props = defineProps<{
   backgroundColor: string
   /** (optional) will show an icon in the button */
   icon?: PepiconName
-  /** (optional) will wrap the icon */
-  wrap?: 'circle' | 'round' | 'off' | 'circle-off'
   /** (optional) the icon type of the icon in the button */
   type?: 'pop' | 'print' | 'pencil'
   /** (optional) the color of the icon in the button */
   color?: string
-  /** (optional) the stroke of the icon in the button */
-  stroke?: string
+  /** (optional) the shadow of the icon in the button */
+  shadow?: string
+  /** (optional) the opacity of the icon in the button */
+  opacity?: number
   /** (optional) if the button is currently active, it has an active outline */
   isActive?: boolean
   /**
@@ -57,10 +57,10 @@ function click() {
         v-if="icon"
         :class="`_icon ${isAnimating ? animation?.class : ''}`"
         :name="icon"
-        :wrap="wrap"
         :type="type || 'print'"
         :color="color"
-        :stroke="stroke"
+        :shadow="shadow"
+        :opacity="opacity"
         size="md"
       />
     </div>

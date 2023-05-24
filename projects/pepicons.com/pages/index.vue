@@ -15,14 +15,12 @@ import PepInput from '../components/PepInput.vue'
 import PepLink from '../components/PepLink.vue'
 import Pickers from '../components/Pickers.vue'
 import ProfileCard from '../components/ProfileCard.vue'
-import Stack from '../components/Stack.vue'
 import { cleanupForSearch } from '../helpers/search'
 import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
-import { Choices, GeneratedColors, RandomColorDic } from '../types'
+import { Choices, RandomColorDic } from '../types'
 
 const props = defineProps<{
   choices: Choices
-  generatedColors: GeneratedColors
   randomColorDic: RandomColorDic
 }>()
 
@@ -88,8 +86,8 @@ const scrollPageTo = (navEl: string) => {
   <div v-bind="$attrs" class="page-index">
     <div class="_page-content">
       <div class="flex mb-xxl">
-        <Stack class="ml-auto" classes="justify-end items-center">
-          <Stack class="ml-auto" classes="items-center">
+        <div class="ml-auto flex wrap justify-end items-center gap-md">
+          <div class="ml-auto flex wrap items-center gap-md">
             <PepLink href="https://github.com/CyCraft/pepicons" content="GitHub" icon="github" />
             <PepLink
               href="#"
@@ -98,9 +96,9 @@ const scrollPageTo = (navEl: string) => {
               class="cursor-arrow-down"
               @click.stop.prevent="scrollPageTo('about-us')"
             />
-          </Stack>
+          </div>
           <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button">Download</a>
-        </Stack>
+        </div>
       </div>
       <div class="mb-md text-center">
         Pepicons is an icon-set of around five hundred (and counting) retro icons inspired by the
@@ -118,14 +116,12 @@ const scrollPageTo = (navEl: string) => {
       <Pickers
         class="mb-md"
         :choices="choices"
-        :generatedColors="generatedColors"
         @update:choices="(payload) => emit('update:choices', payload)"
       />
       <PepInput
         id="top"
         v-model="searchInput"
         :choices="choices"
-        :generatedColors="generatedColors"
         class="mb-xxl"
         :debounce="200"
         @blur="() => setUrlQuery(searchInput)"
@@ -138,7 +134,6 @@ const scrollPageTo = (navEl: string) => {
             <IconGrid
               :iconNames="categoryIconNamesFiltered[category]"
               :choices="choices"
-              :generatedColors="generatedColors"
               :randomColorDic="randomColorDic"
               :searchInput="searchInput"
               @clickTile="openIconModal"
@@ -170,7 +165,7 @@ const scrollPageTo = (navEl: string) => {
           to read about our motivation for creating Pepicons!<br /><br />Pepicons was made by these
           peeps:
         </div>
-        <Stack classes="justify-center" gap="lg">
+        <div class="flex wrap justify-center gap-lg">
           <ProfileCard
             name="Luca Ban"
             :description="`Likes… jokes, minecraft\nWorks as… coder\nPassionate about… design`"
@@ -186,7 +181,7 @@ const scrollPageTo = (navEl: string) => {
             color="#F092AD"
             :links="['https://twitter.com/asukit']"
           />
-        </Stack>
+        </div>
       </div>
       <div class="mt-xxxl column flex-center">
         <PepLink
@@ -208,12 +203,7 @@ const scrollPageTo = (navEl: string) => {
   </div>
   <ClientOnly>
     <DialogWrapper :isVisible="iconInfoIsVisible" @close="() => (iconInfoIsVisible = false)">
-      <IconDetails
-        :icon="iconInfoName"
-        :choices="choices"
-        :generatedColors="generatedColors"
-        :randomColorDic="randomColorDic"
-      />
+      <IconDetails :icon="iconInfoName" :choices="choices" :randomColorDic="randomColorDic" />
     </DialogWrapper>
   </ClientOnly>
 </template>

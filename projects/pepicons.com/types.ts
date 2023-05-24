@@ -5,9 +5,7 @@ export type Choices = {
   mode: 'dark' | 'light'
   color: string
   colorOrigin: 'preset' | 'picker' | 'randomizer'
+  shadow?: string
+  opacity?: number
 }
-export type GeneratedColors = {
-  color: string
-  stroke: string
-}
-export type RandomColorDic = { [key in PepiconName]?: { color: string; stroke: string } }
+export type RandomColorDic = { [key in PepiconName]?: string }
