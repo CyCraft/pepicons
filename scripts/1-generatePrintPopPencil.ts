@@ -43,11 +43,17 @@ async function cleanupAll() {
     from: /#AB92F0/gi,
     to: 'currentColor',
   })
-  // set 'black' to 'dimgray'
+  // set 'black' to 'currentColor' (for "print")
   await globReplace({
     files: path,
     from: /black/gi,
-    to: 'dimgray',
+    to: 'currentColor',
+  })
+  // set opacity="0.8" to opacity="0.2" (for "print")
+  await globReplace({
+    files: path,
+    from: /opacity="0?\.8"/gi,
+    to: 'opacity="0.2"',
   })
   // remove clutter
   await globReplace({
@@ -69,7 +75,6 @@ async function cleanupAll() {
 }
 
 /**
- * - replaces `dimgray` with `currentColor`
  * - removes the shadow inherited from print icons
  * @see https://github.com/svg/svgo#built-in-plugins (svgo config)
  */
@@ -79,9 +84,7 @@ async function cleanupPencil() {
     files: path,
     from: /([.\n\r\t\S\s]*)/gi,
     to: (match, path) => {
-      const svg = match
-        .replaceAll(`dimgray`, `currentColor`)
-        .replaceAll(`opacity="0.8"`, `opacity="0"`)
+      const svg = match.replaceAll(`opacity="0.2"`, `opacity="0"`)
       return optimize(svg, { path, plugins: ['removeHiddenElems'] }).data
     },
   })

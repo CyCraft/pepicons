@@ -10,12 +10,12 @@ export const baseProps = {
   color: { type: String },
   /**
    * A number between 0 and 1; where 0 is transparent
-   * - in "pop" style: opacity will be set to the entire icon
+   * - in "pop"/"pencil" style: opacity will be set to the entire icon
    * - in "print" style: opacity will be set to the colored drop shadow
    */
   opacity: { type: Number },
   /**
-   * The stroke color is only applied on 'print' type icons and is black by default
+   * The stroke color is only applied on 'print' type icons and is the same color as the icon color by default
    */
   stroke: { type: String, default: 'black' },
   /**
