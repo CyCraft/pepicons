@@ -69,7 +69,7 @@
     "svg"
   ],
   "dependencies": {
-    "case-anything": "^2.1.11"
+    "case-anything": "^2.1.12"
   },
   "gitHead": "b9d99854c5f1a88b1bd6b50ed81b249feea5fcd9"
 }

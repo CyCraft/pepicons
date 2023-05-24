@@ -9,19 +9,19 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "nuxt": "^3.4.3"
+    "nuxt": "^3.5.1"
   },
   "dependencies": {
     "@pepicons/vue": "*",
-    "@viteplay/plugin": "^0.2.5",
-    "@viteplay/vue": "^0.2.5",
+    "@viteplay/plugin": "^0.2.6",
+    "@viteplay/vue": "^0.2.6",
     "copy-text-to-clipboard": "^3.1.0",
-    "is-what": "^4.1.9",
-    "map-anything": "^2.1.1",
+    "is-what": "^4.1.11",
+    "map-anything": "^2.1.2",
     "pepicons": "*",
     "prismjs": "^1.29.0",
     "vue-color-kit": "^1.0.5",
     "vue-prism-editor": "^2.0.0-alpha.2",
-    "vue-router": "^4.2.0"
+    "vue-router": "^4.2.1"
   }
 }
