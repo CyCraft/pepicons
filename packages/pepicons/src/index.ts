@@ -71,9 +71,9 @@ export type MorphPepiconPayload = {
    */
   size?: 'sm' | 'md' | 'lg' | 'xl' | number | string
   /**
-   * The stroke color is only applied on 'print' type icons and is the same color as the icon color by default
+   * The shadow color is only applied on 'print' type icons and is the same color as the icon color by default
    */
-  stroke?: string
+  shadow?: string
 }
 
 /**
@@ -103,14 +103,14 @@ export function getPepicon(payload: GetPepiconPayload): string {
  */
 export function morphPepicon(payload: MorphPepiconPayload): string {
   let svg = payload.svg
-  const { type, color, opacity, size, stroke } = payload || {}
+  const { type, color, opacity, size, shadow } = payload || {}
 
   if (!/style="/.test(svg)) {
     svg = svg.replace('<svg ', '<svg style="" ')
   }
 
-  if (stroke && type === 'print') {
-    svg = svg.replace(/opacity="0?\.2"/g, `opacity="0.2" style="color:${stroke};`)
+  if (shadow && type === 'print') {
+    svg = svg.replace(/opacity="0?\.2"/g, `opacity="0.2" style="color:${shadow};"`)
   }
 
   if (color) {
