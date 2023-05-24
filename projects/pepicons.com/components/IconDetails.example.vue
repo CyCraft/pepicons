@@ -3,7 +3,7 @@ import IconDetails from './IconDetails.vue'
 import { choices, generatedColors, randomColorDic } from './mocks'
 </script>
 
-<docs darkExample></docs>
+<docs darkPreview></docs>
 
 <template>
   <IconDetails

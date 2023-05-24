@@ -5,7 +5,7 @@ const props = defineProps<{
   modelValue: boolean
   type: 'pop' | 'print' | 'pencil'
   color: string
-  shadow: string
+  stroke: string
 }>()
 
 const emit = defineEmits<{
@@ -22,8 +22,8 @@ function toggle() {
     :class="`html-button cursor-pointer ${modelValue ? '_expanded' : ''}`"
     @click="() => toggle()"
   >
-    <Pepicon class="_icon" name="angle-left" :type="type" :color="color" :shadow="shadow" />
-    <Pepicon class="_icon" name="angle-right" :type="type" :color="color" :shadow="shadow" />
+    <Pepicon class="_icon" name="angle-left" :type="type" :color="color" :stroke="stroke" />
+    <Pepicon class="_icon" name="angle-right" :type="type" :color="color" :stroke="stroke" />
   </button>
 </template>
 
