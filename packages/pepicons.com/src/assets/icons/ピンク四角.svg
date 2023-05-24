@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="35.84" height="39.184" viewBox="0 0 35.84 39.184">
-  <g id="ピンク四角" transform="translate(-308.165 -57.173)">
-    <rect id="ピンク四角-2" data-name="ピンク四角" width="25.081" height="25.081" transform="translate(318.765 57.173) rotate(25)" fill="#f092ad"/>
-    <g id="ピンク四角線" transform="translate(321.273 63.026) rotate(25)" fill="none" stroke="#020000" stroke-width="1.5">
-      <rect width="25.081" height="25.081" stroke="none"/>
-      <rect x="0.75" y="0.75" width="23.581" height="23.581" fill="none"/>
-    </g>
-  </g>
-</svg>
