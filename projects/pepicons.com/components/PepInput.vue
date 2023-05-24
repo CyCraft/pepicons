@@ -53,13 +53,16 @@ function emitInput(newVal: any) {
 
 <template>
   <div class="_wrapper">
-    <input ref="inputRef" v-model="valueInner" class="pep-input" v-bind="$attrs" />
+    <input ref="inputRef" v-model="valueInner" class="_native-input" v-bind="$attrs" />
+
     <Pepicon
       class="icon"
       :name="'loop'"
       :type="choices.type"
+      :color="choices.color"
       :shadow="choices.shadow"
       :opacity="choices.opacity"
+      @click="() => inputRef?.focus()"
     />
   </div>
 </template>
@@ -73,7 +76,7 @@ function emitInput(newVal: any) {
     top: 50%
     left: 20px
     transform: translate(-50%, -50%)
-.pep-input
+._native-input
   all: unset
   box-sizing: border-box
   outline: 2px solid transparent
@@ -88,11 +91,11 @@ function emitInput(newVal: any) {
   &:focus
     box-shadow: 0 0 0 2px v-bind('choices.color')
 
-.dark-mode .pep-input
+.dark-mode ._native-input
   background-color:#202020
   color: white
 
-.pep-input
+._native-input
   .q-field__control
     transition: background-color 500ms
     border-radius: 16px
@@ -105,7 +108,7 @@ function emitInput(newVal: any) {
   &.q-field--focused
     .q-field__control
       +C(background-color, white)
-.dark-mode .pep-input
+.dark-mode ._native-input
   .q-field__control
     +C(background-color, moonlight)
   .q-field__control:hover

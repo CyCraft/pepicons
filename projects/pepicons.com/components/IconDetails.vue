@@ -17,7 +17,7 @@ const props = defineProps<{
   randomColorDic: RandomColorDic
 }>()
 
-const wrap = ref<undefined | 'circle' | 'round' | 'off' | 'circle-off'>(undefined)
+const wrap = ref<undefined | 'circle' | 'circle-filled' | 'off' | 'circle-off'>(undefined)
 const iconNameWrapped = computed(
   () => (wrap.value ? `${props.icon}-${wrap.value}` : props.icon) as PepiconName,
 )
@@ -172,14 +172,14 @@ async function copyPng(): Promise<void> {
           />
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
-            :icon="(`${icon}-round` as PepiconName)"
+            :icon="(`${icon}-circle-filled` as PepiconName)"
             :type="choices.type"
             :color="colorGenerated"
             :shadow="choices.shadow"
             :opacity="choices.opacity"
             :activeColor="colorGenerated"
-            :isActive="wrap === 'round'"
-            @click="() => (wrap = 'round')"
+            :isActive="wrap === 'circle-filled'"
+            @click="() => (wrap = 'circle-filled')"
           />
           <IconButton
             :backgroundColor="choices.mode === 'light' ? 'white' : 'black'"
