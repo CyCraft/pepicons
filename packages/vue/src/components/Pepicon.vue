@@ -18,7 +18,7 @@ const IconComponent = computed(() => {
     pencil: pencilIcons,
   }[props.type]
   const name = props.wrap ? `${props.name}-${props.wrap}` : props.name
-  const iconImportFn = icons[name || '']
+  const iconImportFn = icons[name]
   if (!iconImportFn) {
     throw new Error(`inexistent Pepicon "${name}" for props: ${JSON.stringify(props)}`)
   }

@@ -4,12 +4,12 @@ import Pepicon from '../Pepicon.vue'
 
 <template>
   <div class="example">
-    <Pepicon name="airplane" class="xs" />
-    <Pepicon name="battery" class="sm" />
-    <Pepicon name="bicycle" class="md" />
-    <Pepicon name="book" class="lg" />
-    <Pepicon name="camera" class="xl" />
-    <Pepicon name="car" class="xxl" />
+    <Pepicon type="pop" name="airplane" class="xs" />
+    <Pepicon type="pop" name="battery" class="sm" />
+    <Pepicon type="pop" name="bicycle" class="md" />
+    <Pepicon type="pop" name="book" class="lg" />
+    <Pepicon type="pop" name="camera" class="xl" />
+    <Pepicon type="pop" name="car" class="xxl" />
   </div>
 </template>
 

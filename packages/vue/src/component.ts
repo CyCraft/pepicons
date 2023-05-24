@@ -15,9 +15,9 @@ export const baseProps = {
    */
   opacity: { type: Number },
   /**
-   * The stroke color is only applied on 'print' type icons and is the same color as the icon color by default
+   * The shadow color is only applied on 'print' type icons and is the same color as the icon color by default
    */
-  stroke: { type: String, default: 'black' },
+  shadow: { type: String },
   /**
    * When you pass a size, it's applied via the style attribute.
    * - 'sm' / 'md' / 'lg' / 'xl' which becomes 20 / 24 / 30 / 36 px
@@ -50,7 +50,7 @@ export const pepiconProps = {
    * Either 'pop' or 'print'
    * @default 'pop'
    */
-  type: { type: String as PropType<'pop' | 'print' | 'pencil'>, default: 'pop' },
+  type: { type: String as PropType<'pop' | 'print' | 'pencil'>, required: true as const },
   /**
    * The icon name as per the reference at https://pepicons.com
    * @example 'pen'
@@ -60,7 +60,7 @@ export const pepiconProps = {
    */
   name: {
     type: String as PropType<Pepicon | `${Pepicon}-circle` | `${Pepicon}-round` | `${Pepicon}-off`>,
-    required: true,
+    required: true as const,
   },
 }
 
