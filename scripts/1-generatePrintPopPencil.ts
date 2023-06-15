@@ -1,10 +1,11 @@
 import cpy from 'cpy'
 import { deleteAsync } from 'del'
+import { resolve as pathResolve } from 'path'
 import { optimize } from 'svgo'
 import { PATH_PEPICONS, PATH_ROOT } from './helpers/filePathHelpers'
 import { globReplace } from './helpers/globReplace'
 
-const deleteSvgFolder = () => deleteAsync(PATH_PEPICONS + '/svg')
+const deleteSvgFolder = () => deleteAsync(pathResolve(PATH_PEPICONS, './svg'))
 
 function cleanupFilename(filename: string): string {
   return filename.replace(/^(.+?)(_.*)*\.svg$/, '$1.svg')
@@ -12,30 +13,48 @@ function cleanupFilename(filename: string): string {
 
 async function copySvgs() {
   await Promise.all([
-    cpy(PATH_ROOT + '/scripts/export/*pop/*.svg', PATH_PEPICONS + '/svg/pop/', {
-      flat: true,
-      rename: cleanupFilename,
-    }),
-    cpy(PATH_ROOT + '/scripts/export/*print/*.svg', PATH_PEPICONS + '/svg/print/', {
-      flat: true,
-      rename: cleanupFilename,
-    }),
+    cpy(
+      pathResolve(PATH_ROOT, './scripts/export/*pop/*.svg'),
+      pathResolve(PATH_PEPICONS, './svg/pop/'),
+      {
+        flat: true,
+        rename: cleanupFilename,
+      },
+    ),
+    cpy(
+      pathResolve(PATH_ROOT, './scripts/export/*print/*.svg'),
+      pathResolve(PATH_PEPICONS, './svg/print/'),
+      {
+        flat: true,
+        rename: cleanupFilename,
+      },
+    ),
     // copy print icons to the pencil folder to mutate them later
     // because we only keep the black line from the print icons to create the pencil icons
-    cpy(PATH_ROOT + '/scripts/export/*print/*.svg', PATH_PEPICONS + '/svg/pencil/', {
-      flat: true,
-      rename: cleanupFilename,
-    }),
+    cpy(
+      pathResolve(PATH_ROOT, './scripts/export/*print/*.svg'),
+      pathResolve(PATH_PEPICONS, './svg/pencil/'),
+      {
+        flat: true,
+        rename: cleanupFilename,
+      },
+    ),
   ])
   // copy the `-filled` icons from the pop folder to the pencil folder
   // because we keep the entire pop icon for `-filled` to create the pencil icons
-  await cpy(PATH_PEPICONS + '/svg/pop/*-filled.svg', PATH_PEPICONS + '/svg/pencil/', {
-    rename: cleanupFilename,
-  })
+  await cpy(
+    pathResolve(PATH_PEPICONS, './svg/pop/*-filled.svg'),
+    pathResolve(PATH_PEPICONS, './svg/pencil/'),
+    {
+      rename: cleanupFilename,
+    },
+  )
 }
 
 async function cleanupAll() {
-  const path = PATH_PEPICONS + '/svg/**/*.svg'
+  // Due to usage of perhaps an old version of fastglob
+  // we have to flip the slashes in this case for it to correctly grab the files
+  const path = pathResolve(PATH_PEPICONS, './svg/**/*.svg').replace(/\\/g, '/')
 
   // set color to `currentColor`
   await globReplace({
@@ -79,7 +98,9 @@ async function cleanupAll() {
  * @see https://github.com/svg/svgo#built-in-plugins (svgo config)
  */
 async function cleanupPencil() {
-  const path = PATH_PEPICONS + '/svg/pencil/*.svg'
+  // Due to usage of perhaps an old version of fastglob
+  // we have to flip the slashes in this case for it to correctly grab the files
+  const path = pathResolve(PATH_PEPICONS, './svg/pencil/*.svg').replace(/\\/g, '/')
   await globReplace({
     files: path,
     from: /([.\n\r\t\S\s]*)/gi,

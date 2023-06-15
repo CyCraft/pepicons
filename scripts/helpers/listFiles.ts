@@ -1,5 +1,5 @@
-import { resolve } from 'path'
 import { readdir } from 'fs/promises'
+import { resolve } from 'path'
 
 export async function listFiles(dir: string, regexFilter?: RegExp): Promise<string[]> {
   const dirents = await readdir(dir, { withFileTypes: true })
