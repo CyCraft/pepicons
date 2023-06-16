@@ -2,7 +2,7 @@
 // npm i -D @jsdevtools/version-bump-prompt exec-sh
 import ExecSh from 'exec-sh'
 import path from 'path'
-import replaceInFiles from 'tiny-replace-files'
+import { globReplace } from './globReplace'
 
 const ROOT = path.resolve('./')
 const PACKAGES = ROOT + '/packages'
@@ -14,7 +14,7 @@ function execSh(command: string) {
 }
 
 async function bumpDependencies(newVersion: string) {
-  await replaceInFiles({
+  await globReplace({
     files: [
       path.resolve(PACKAGES, './pepicons.com/package.json'),
       path.resolve(PACKAGES, './vue/package.json'),
