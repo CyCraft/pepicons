@@ -6,7 +6,7 @@
     "jsx": "preserve",
     "lib": ["ESNext", "DOM", "scripthost"],
     "module": "ESNext",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Bundler",
     "noImplicitAny": false,
     "resolveJsonModule": true,
     "allowImportingTsExtensions": true,

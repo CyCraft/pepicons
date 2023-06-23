@@ -15,63 +15,63 @@
   "module": "./dist/index.js",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/es/index.js"
-      },
       "require": {
         "types": "./dist/cjs/index.d.cts",
         "default": "./dist/cjs/index.js"
+      },
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/es/index.js"
       }
     },
     "./icons": {
-      "import": {
-        "types": "./dist/icons.d.ts",
-        "default": "./dist/es/icons.js"
-      },
       "require": {
         "types": "./dist/cjs/icons.d.ts",
         "default": "./dist/cjs/icons.js"
+      },
+      "import": {
+        "types": "./dist/icons.d.ts",
+        "default": "./dist/es/icons.js"
       }
     },
     "./component": {
-      "import": {
-        "types": "./dist/components/Pepicon.vue.d.ts",
-        "default": "./dist/es/components/Pepicon.js"
-      },
       "require": {
         "types": "./dist/cjs/components/Pepicon.vue.d.ts",
         "default": "./dist/cjs/components/Pepicon.js"
+      },
+      "import": {
+        "types": "./dist/components/Pepicon.vue.d.ts",
+        "default": "./dist/es/components/Pepicon.js"
       }
     },
     "./pencil/*": {
-      "import": {
-        "types": "./dist/icons/pencil/*.d.ts",
-        "default": "./dist/es/icons/pencil/*.js"
-      },
       "require": {
         "types": "./dist/cjs/icons/pencil/*.d.ts",
         "default": "./dist/cjs/icons/pencil/*.js"
+      },
+      "import": {
+        "types": "./dist/icons/pencil/*.d.ts",
+        "default": "./dist/es/icons/pencil/*.js"
       }
     },
     "./print/*": {
-      "import": {
-        "types": "./dist/icons/print/*.d.ts",
-        "default": "./dist/es/icons/print/*.js"
-      },
       "require": {
         "types": "./dist/cjs/icons/print/*.d.ts",
         "default": "./dist/cjs/icons/print/*.js"
+      },
+      "import": {
+        "types": "./dist/icons/print/*.d.ts",
+        "default": "./dist/es/icons/print/*.js"
       }
     },
     "./pop/*": {
-      "import": {
-        "types": "./dist/icons/pop/*.d.ts",
-        "default": "./dist/es/icons/pop/*.js"
-      },
       "require": {
         "types": "./dist/cjs/icons/pop/*.d.ts",
         "default": "./dist/cjs/icons/pop/*.js"
+      },
+      "import": {
+        "types": "./dist/icons/pop/*.d.ts",
+        "default": "./dist/es/icons/pop/*.js"
       }
     }
   },
