@@ -1,23 +1,8 @@
-<script lang="ts">
-import {defineAsyncComponent} from 'vue'
-
-const Pepicon = defineAsyncComponent(async () => {
-  const { Pepicon } = await import('@pepicons/vue')
-  return Pepicon
-})
-
-export default {
-  components: {
-    Pepicon
-  }
-}
-</script>
-
 <script lang="ts" setup>
+import { Pepicon } from '@pepicons/vue'
 import { PepiconName, synonyms } from 'pepicons'
 import { computed } from 'vue'
 import { cleanupForSearch } from '../helpers/search'
-
 const props = defineProps<{
   name: PepiconName
   type: 'pop' | 'print' | 'pencil'
@@ -42,8 +27,6 @@ const synonymHtml = computed(() => {
   )
   return `<div class="c-washed-cloth" style="opacity: 0.8">${text}</div>`
 })
-
-
 </script>
 
 <template>

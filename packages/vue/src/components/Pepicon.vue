@@ -1,27 +1,13 @@
 <script setup lang="ts">
 import { computed, defineAsyncComponent } from 'vue'
-import { baseProps, pepiconProps } from '../component'
-import { pencilIcons, popIcons, printIcons } from '../icons'
-
+import { baseProps, pepiconProps } from '../component.ts'
 const props = defineProps(Object.assign({}, baseProps, pepiconProps))
 
-/**
- * TODO: Is it possible to not have to import these big dictionaries:
- * `pencilIcons, popIcons, printIcons`
- * But instead async import directly in this computed function?
- * For this we'll need to use `computedAsync` from `@vueuse/core` though!
- */
 const IconComponent = computed(() => {
-  const icons: Record<string, any> = {
-    print: printIcons,
-    pop: popIcons,
-    pencil: pencilIcons,
-  }[props.type]
-  const iconImportFn = icons[props.name]
-  if (!iconImportFn) {
-    throw new Error(`inexistent Pepicon "${props.name}" for props: ${JSON.stringify(props)}`)
+  if (props.type == null || props.name == null) {
+    return null
   }
-  return defineAsyncComponent(iconImportFn)
+  return defineAsyncComponent(() => import(`../icons/${props.type}/${props.name}.ts`))
 })
 
 const iconProps = computed(() => {

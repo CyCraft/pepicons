@@ -20,6 +20,8 @@ You must import the Pepicon component locally wherever you want to use them, as 
 
 ```js
 // import what you need
+import Pepicon from '@pepicons/vue/component'
+// alternatively
 import { Pepicon } from '@pepicons/vue'
 
 // add to local components where you use it:
@@ -35,7 +37,13 @@ Using `Pepicon` component will use the `async` version of the icons, which means
 If you want a sync version of the icon components, you can also import them individually, as per the example below:
 
 ```js
-import { PopAirplane, PrintArrowDown } from '@pepicons/vue'
+import PopAirplane from '@pepicons/vue/pop/airplane'
+import PrintArrowDown from '@pepicons/vue/print/arrow-down'
+// alternatively you can import from a variant
+import { PopAirplane } from '@pepicons/vue/pop'
+import { PrintArrowDown } from '@pepicons/vue/print'
+// another alternative
+import { PopAirplane, PrintArrowDown } from '@pepicons/vue/icons'
 ```
 
 ## pepicons (TypeScript & SVGs)
