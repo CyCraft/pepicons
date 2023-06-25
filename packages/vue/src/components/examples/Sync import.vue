@@ -12,7 +12,7 @@ import {
   PrintBook,
   PrintCamera,
   PrintCar,
-} from '../../index'
+} from '../../icons.ts'
 </script>
 
 <template>

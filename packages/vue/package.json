@@ -15,18 +15,64 @@
   "module": "./dist/index.js",
   "exports": {
     ".": {
-      "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
-      },
       "require": {
         "types": "./dist/cjs/index.d.cts",
-        "default": "./dist/cjs/index.cjs"
+        "default": "./dist/cjs/index.js"
+      },
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/es/index.js"
       }
     },
-    "./dist/*": {
-      "import": "./dist/*",
-      "require": "./dist/*"
+    "./icons": {
+      "require": {
+        "types": "./dist/cjs/icons.d.ts",
+        "default": "./dist/cjs/icons.js"
+      },
+      "import": {
+        "types": "./dist/icons.d.ts",
+        "default": "./dist/es/icons.js"
+      }
+    },
+    "./component": {
+      "require": {
+        "types": "./dist/cjs/components/Pepicon.vue.d.ts",
+        "default": "./dist/cjs/components/Pepicon.js"
+      },
+      "import": {
+        "types": "./dist/components/Pepicon.vue.d.ts",
+        "default": "./dist/es/components/Pepicon.js"
+      }
+    },
+    "./pencil/*": {
+      "require": {
+        "types": "./dist/cjs/icons/pencil/*.d.ts",
+        "default": "./dist/cjs/icons/pencil/*.js"
+      },
+      "import": {
+        "types": "./dist/icons/pencil/*.d.ts",
+        "default": "./dist/es/icons/pencil/*.js"
+      }
+    },
+    "./print/*": {
+      "require": {
+        "types": "./dist/cjs/icons/print/*.d.ts",
+        "default": "./dist/cjs/icons/print/*.js"
+      },
+      "import": {
+        "types": "./dist/icons/print/*.d.ts",
+        "default": "./dist/es/icons/print/*.js"
+      }
+    },
+    "./pop/*": {
+      "require": {
+        "types": "./dist/cjs/icons/pop/*.d.ts",
+        "default": "./dist/cjs/icons/pop/*.js"
+      },
+      "import": {
+        "types": "./dist/icons/pop/*.d.ts",
+        "default": "./dist/es/icons/pop/*.js"
+      }
     }
   },
   "scripts": {

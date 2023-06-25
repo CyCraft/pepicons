@@ -47,9 +47,7 @@ export const pepiconProps = {
    * @example 'pen-off'
    */
   name: {
-    type: String as PropType<
-      Pepicon | `${Pepicon}-circle` | `${Pepicon}-circle-filled` | `${Pepicon}-off`
-    >,
+    type: String as PropType<Pepicon>,
     required: true as const,
   },
 }

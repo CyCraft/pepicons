@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { Pepicon, PepiconName } from '@pepicons/vue'
+import { Pepicon } from '@pepicons/vue'
+import type { PepiconName } from 'pepicons'
 import CompanyLogo from './CompanyLogo.vue'
 
 const props = defineProps<{

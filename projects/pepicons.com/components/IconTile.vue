@@ -3,7 +3,6 @@ import { Pepicon } from '@pepicons/vue'
 import { PepiconName, synonyms } from 'pepicons'
 import { computed } from 'vue'
 import { cleanupForSearch } from '../helpers/search'
-
 const props = defineProps<{
   name: PepiconName
   type: 'pop' | 'print' | 'pencil'

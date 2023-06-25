@@ -1,4 +1,5 @@
 import cpy from 'cpy'
+import { resolve as pathResolve } from 'path'
 import { PATH_PEPICONS } from './helpers/filePathHelpers'
 import { globReplace } from './helpers/globReplace'
 import { wrapWithCircle, wrapWithOff, wrapWithRound } from './helpers/wrapHelpers'
@@ -11,8 +12,8 @@ async function copyFiles() {
     types
       .map((type) =>
         wraps.map((wrap) => {
-          const from = PATH_PEPICONS + `/svg/${type}/*.svg`
-          const to = PATH_PEPICONS + `/svg/${type}`
+          const from = pathResolve(PATH_PEPICONS, `./svg/${type}/*.svg`)
+          const to = pathResolve(PATH_PEPICONS, `./svg/${type}`)
           return cpy(from, to, { rename: (name) => name.replace('.svg', `-${wrap}.svg`) })
         }),
       )
@@ -24,7 +25,9 @@ async function mutate(
   type: 'print' | 'pop' | 'pencil',
   wrap: 'circle' | 'circle-filled' | 'off' | 'circle-off',
 ) {
-  const path = PATH_PEPICONS + `/svg/${type}/*-${wrap}.svg`
+  // Due to usage of perhaps an old version of fastglob
+  // we have to flip the slashes in this case for it to correctly grab the files
+  const path = pathResolve(PATH_PEPICONS, `./svg/${type}/*-${wrap}.svg`).replace(/\\/g, '/')
 
   if (wrap === 'circle' || wrap === 'circle-off') {
     await globReplace({
@@ -51,7 +54,7 @@ async function mutate(
   }
 }
 
-export async function generateCircleRoundOff() {
+export async function generateCircleFilledOff() {
   await copyFiles()
   // we need to execute 'off' first, in order to correctly handle 'circle-off'
   await Promise.all(types.map((type) => mutate(type, 'off')))

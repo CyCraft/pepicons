@@ -13,7 +13,6 @@ export function setUrlQuery(queryString: string): undefined {
 }
 
 export function getQueryFromUrl(): string {
-  console.log(`getQueryFromUrl`)
   return ''
   // const q = (Router.currentRoute as any).query?.q
   // return isString(q) ? q : ''

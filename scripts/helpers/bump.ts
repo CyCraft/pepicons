@@ -1,7 +1,7 @@
 // dependencies that need to be installed in dev dependencies
 // npm i -D @jsdevtools/version-bump-prompt exec-sh
 import ExecSh from 'exec-sh'
-import * as path from 'path'
+import path from 'path'
 import { globReplace } from './globReplace'
 
 const ROOT = path.resolve('./')
@@ -15,7 +15,10 @@ function execSh(command: string) {
 
 async function bumpDependencies(newVersion: string) {
   await globReplace({
-    files: [PACKAGES + '/pepicons.com/package.json', PACKAGES + '/vue/package.json'],
+    files: [
+      path.resolve(PACKAGES, './pepicons.com/package.json'),
+      path.resolve(PACKAGES, './vue/package.json'),
+    ],
     from: /"(pepicons|@pepicons\/vue)": "(.+)"/g,
     to: `"$1": "^${newVersion}"`,
   })
@@ -26,7 +29,7 @@ export async function bump(level: 'patch' | 'minor' | 'major') {
   await execSh(`bump ${level} package.json packages/*/package.json`)
 
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const { version } = require(`${ROOT}/package.json`)
+  const { version } = require(path.resolve(`ROOT`, `./package.json`))
 
   await bumpDependencies(version)
 
