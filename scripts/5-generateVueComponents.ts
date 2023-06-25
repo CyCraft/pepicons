@@ -73,7 +73,7 @@ export default defineComponent({
   props: {...baseProps},
   setup: createSetup(${camelCase(name)}, '${type}')
 })
-`).trim()
+`)
 }
 
 function prependWarning(str) {
