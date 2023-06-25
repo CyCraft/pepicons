@@ -15,6 +15,9 @@ jobs:
       - run: npm run build
         env:
           NODE_OPTIONS: --max-old-space-size=4096
+      - run: npm run build:pepicons.com
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
