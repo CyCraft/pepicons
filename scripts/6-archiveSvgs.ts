@@ -62,7 +62,7 @@ export async function archiveSvgs() {
   await archive.finalize()
 
   const from = `./media/${ZIP_NAME}`
-  const to = pathResolve(PATH_ROOT, './packages/pepicons.com/public')
+  const to = pathResolve(PATH_ROOT, './projects/pepicons.com/public')
   await cpy(from, to)
   console.log(`✔ done`)
 }
