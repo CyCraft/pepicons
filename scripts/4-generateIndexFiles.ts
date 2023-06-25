@@ -41,7 +41,7 @@ async function generateCategories(params: { iconNames: string[]; iconCategories:
   const { iconNames, iconCategories } = params
 
   const dicLines = iconNames.map((name, i) => `  '${name}': '${iconCategories[i]}',`)
-  const categoriesQuoted = [...new Set(iconCategories)].map(quote)
+  const categoriesQuoted = [...new Set(iconCategories)].sort().map(quote)
 
   const content = `
 import { PepiconName } from './types'
@@ -57,9 +57,9 @@ export const pepiconCategoryDic: { [name in PepiconName]: string } = {\n${dicLin
 async function generateSynonyms(params: { iconNames: string[]; iconSynonyms: string[][] }) {
   const { iconNames, iconSynonyms } = params
 
-  const dicLines = iconNames.map(
-    (name, i) => `  '${name}': [${iconSynonyms[i].map(quote).join(', ')}],`,
-  )
+  const dicLines = iconNames
+    .sort()
+    .map((name, i) => `  '${name}': [${iconSynonyms[i].map(quote).join(', ')}],`)
 
   const content = `
 import { PepiconName } from '../types'
