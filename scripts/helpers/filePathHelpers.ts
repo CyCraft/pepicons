@@ -1,4 +1,4 @@
-import { dirname, resolve } from 'path'
+import { dirname, resolve, sep } from 'path'
 import { fileURLToPath } from 'url'
 
 const thisFolder = dirname(fileURLToPath(import.meta.url))
@@ -11,7 +11,7 @@ export const PATH_VUE = resolve(PATH_ROOT, 'packages', 'vue')
  * filenameToIconName('[food]pop/bread|loaf|crum.svg') // 'bread'
  */
 export function filenameToIconName(filename = ''): string {
-  const [fileName] = filename.split('/').slice(-1)
+  const [fileName] = filename.split(sep).slice(-1)
   const iconName = fileName.split('_')[0].replace(/\.svg|\.js|\.ts/, '')
   return iconName
 }
@@ -21,7 +21,7 @@ export function filenameToIconName(filename = ''): string {
  * filenameToIconSynonyms('[food]pop/bread|loaf|crum') // ['loaf', 'crum']
  */
 export function filenameToIconSynonyms(filename = ''): string[] {
-  const [fileName] = filename.split('/').slice(-1)
+  const [fileName] = filename.split(sep).slice(-1)
   const synonyms = fileName
     .replace(/\.svg|\.js|\.ts/, '')
     .split('_')

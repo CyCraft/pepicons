@@ -2,8 +2,8 @@
 import archiver from 'archiver'
 import cpy from 'cpy'
 import * as fs from 'fs'
+import { resolve as pathResolve } from 'path'
 import { PATH_PEPICONS, PATH_ROOT } from './helpers/filePathHelpers'
-
 const PATH_TO_ARCHIVE = PATH_PEPICONS + '/svg'
 const ZIP_NAME = 'PepiconSvgs.zip'
 
@@ -62,7 +62,7 @@ export async function archiveSvgs() {
   await archive.finalize()
 
   const from = `./media/${ZIP_NAME}`
-  const to = PATH_ROOT + '/packages/pepicons.com/public'
+  const to = pathResolve(PATH_ROOT, './projects/pepicons.com/public')
   await cpy(from, to)
   console.log(`✔ done`)
 }

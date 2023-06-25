@@ -16,26 +16,29 @@ Every icon available in 2 variants: Pop! and Print ❏
 npm i @pepicons/vue
 ```
 
+### Import and use any icon dynamically (no tree-shaking)
+
 You must import the Pepicon component locally wherever you want to use them, as per the example below:
 
 ```js
-// import what you need
 import { Pepicon } from '@pepicons/vue'
-
-// add to local components where you use it:
-export default {
-  components: { Pepicon },
-}
 ```
 
 We do not support Vue's `install(Plugin)` out of principle: Anything that is "auto-magical" is not considered good practice; It's more difficult to trace down where a component is coming from.
 
-Using `Pepicon` component will use the `async` version of the icons, which means each icon is defined as an async Vue component, and loaded on demand when it's rendered.
+Using `Pepicon` component will use the `async` version of the icons, which means each icon is defined as an async Vue component, and loaded on demand when it's rendered. However, please note that for better tree-shaking you will need to import icons individually (see below).
 
-If you want a sync version of the icon components, you can also import them individually, as per the example below:
+### Import and use just the icons you need (tree-shaking)
+
+To properly tree-shake however, and prevent all Pepicons from ending up in your bundle, you must import the icons you need individually, as per the example below:
 
 ```js
-import { PopAirplane, PrintArrowDown } from '@pepicons/vue'
+import { FaceSmiling } from '@pepicons/vue/pop'
+import { FaceSmiling } from '@pepicons/vue/pencil'
+import { FaceSmiling } from '@pepicons/vue/print'
+
+// another alternative
+import { PopFaceSmiling, PencilFaceSmiling, PrintFaceSmiling } from '@pepicons/vue/icons'
 ```
 
 ## pepicons (TypeScript & SVGs)
