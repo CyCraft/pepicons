@@ -54,7 +54,7 @@ async function mutate(
   }
 }
 
-export async function generateCircleRoundOff() {
+export async function generateCircleFilledOff() {
   await copyFiles()
   // we need to execute 'off' first, in order to correctly handle 'circle-off'
   await Promise.all(types.map((type) => mutate(type, 'off')))
