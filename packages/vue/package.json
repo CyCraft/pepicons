@@ -44,6 +44,36 @@
         "default": "./dist/es/components/Pepicon.js"
       }
     },
+    "./pencil": {
+      "require": {
+        "types": "./dist/cjs/icons/pencil/index.d.ts",
+        "default": "./dist/cjs/icons/pencil/index.js"
+      },
+      "import": {
+        "types": "./dist/icons/pencil/index.d.ts",
+        "default": "./dist/es/icons/pencil/index.js"
+      }
+    },
+    "./print": {
+      "require": {
+        "types": "./dist/cjs/icons/print/index.d.ts",
+        "default": "./dist/cjs/icons/print/index.js"
+      },
+      "import": {
+        "types": "./dist/icons/print/index.d.ts",
+        "default": "./dist/es/icons/print/index.js"
+      }
+    },
+    "./pop": {
+      "require": {
+        "types": "./dist/cjs/icons/pop/index.d.ts",
+        "default": "./dist/cjs/icons/pop/index.js"
+      },
+      "import": {
+        "types": "./dist/icons/pop/index.d.ts",
+        "default": "./dist/es/icons/pop/index.js"
+      }
+    },
     "./pencil/*": {
       "require": {
         "types": "./dist/cjs/icons/pencil/*.d.ts",
