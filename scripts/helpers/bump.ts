@@ -29,7 +29,7 @@ export async function bump(level: 'patch' | 'minor' | 'major') {
   await execSh(`bump ${level} package.json packages/*/package.json`)
 
   // eslint-disable-next-line @typescript-eslint/no-var-requires
-  const { version } = require(path.resolve(`ROOT`, `./package.json`))
+  const { version } = require(path.resolve(ROOT, `./package.json`))
 
   await bumpDependencies(version)
 
