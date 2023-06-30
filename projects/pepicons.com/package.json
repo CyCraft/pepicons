@@ -17,7 +17,6 @@
     "@viteplay/plugin": "^0.2.8",
     "@viteplay/vue": "^0.2.8",
     "copy-text-to-clipboard": "^3.1.0",
-    "is-what": "^4.1.11",
     "map-anything": "^2.1.2",
     "pepicons": "*",
     "prismjs": "^1.29.0",

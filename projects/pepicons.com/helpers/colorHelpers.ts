@@ -1,5 +1,3 @@
-import { isNumber } from 'is-what'
-
 const rgbaRegex = /^rgb(a)?\((\d{1,3}),(\d{1,3}),(\d{1,3}),?([01]?\.?\d*?)?\)$/
 
 function normaliseHexLength(hex: string): string {
@@ -99,7 +97,7 @@ function rgbaToHex({ r, g, b, a }: { r: number; g: number; b: number; a: number 
   g = Math.round(g)
   b = Math.round(b)
 
-  if (r > 255 || g > 255 || b > 255 || (isNumber(a) && (a < 0 || a > 1))) {
+  if (r > 255 || g > 255 || b > 255 || a < 0 || a > 1) {
     throw new Error('Expected `rgb` numbers below 256 and `a` number between 0 and 1')
   }
 

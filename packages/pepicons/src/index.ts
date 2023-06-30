@@ -1,5 +1,4 @@
 import { camelCase } from 'case-anything'
-import { isNumber } from 'is-what'
 import * as dicPencil from './icons/pencil/index'
 import * as dicPop from './icons/pop/index'
 import * as dicPrint from './icons/print/index'
@@ -104,7 +103,7 @@ export function morphPepicon(payload: MorphPepiconPayload): string {
     svg = svg.replace(/style="/, `style="color:${color};`)
   }
 
-  if (isNumber(opacity) && opacity <= 1 && opacity >= 0) {
+  if (opacity && opacity <= 1 && opacity >= 0) {
     if (type === 'print') {
       svg = svg.replace(/opacity="0?\.2"/g, `opacity="${opacity}"`)
     } else {

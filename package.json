@@ -66,6 +66,7 @@
     "firebase-functions-test": "^3.1.0",
     "fs-extra": "^11.1.1",
     "inquirer": "^9.2.6",
+    "is-what": "^4.1.15",
     "mri": "^1.2.0",
     "npm-check-updates": "^16.10.12",
     "prettier": "^2.8.8",
