@@ -68,8 +68,6 @@
     "dist",
     "svg"
   ],
-  "dependencies": {
-    "case-anything": "^2.1.13"
-  },
+  "dependencies": {},
   "gitHead": "b9d99854c5f1a88b1bd6b50ed81b249feea5fcd9"
 }

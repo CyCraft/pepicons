@@ -1,4 +1,3 @@
-import { camelCase } from 'case-anything'
 import * as dicPencil from './icons/pencil/index'
 import * as dicPop from './icons/pop/index'
 import * as dicPrint from './icons/print/index'
@@ -73,7 +72,11 @@ export type MorphPepiconPayload = {
  */
 export function getPepicon(payload: GetPepiconPayload): string {
   const { type = 'pop', name } = payload || {}
-  const svgString = svgDic[type][camelCase(name)]
+  const camelCaseName = name
+    .split('-')
+    .map((part, i) => (i === 0 ? part : part[0].toUpperCase() + part.slice(1)))
+    .join('')
+  const svgString = svgDic[type][camelCaseName]
   if (!svgString) {
     console.warn(`Pepicon ${name} of type ${type} not found! (returned an empty string instead)`)
     return ''
