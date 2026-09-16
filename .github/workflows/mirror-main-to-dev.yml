@@ -1,0 +1,17 @@
+# `dev` used to be the default branch. External integrations still pull it, so keep it
+# identical to `main` until every consumer has switched over.
+name: Mirror main to dev
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - run: git push origin main:dev
