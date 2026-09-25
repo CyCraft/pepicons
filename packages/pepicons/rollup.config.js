@@ -3,7 +3,9 @@
 // npm i -D rollup typescript rollup-plugin-dts rollup-plugin-esbuild
 import dts from 'rollup-plugin-dts'
 import esbuild from 'rollup-plugin-esbuild'
-import pkg from './package.json' assert { type: 'json' }
+import { createRequire } from 'node:module'
+
+const pkg = createRequire(import.meta.url)('./package.json')
 
 // ------------------------------------------------------------------------------------------
 // Builds

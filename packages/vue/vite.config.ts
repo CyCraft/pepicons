@@ -5,7 +5,9 @@ import fs from 'fs'
 import path, { dirname } from 'path'
 import { fileURLToPath } from 'url'
 import { Plugin, defineConfig } from 'vite'
-import pkg from './package.json' assert { type: 'json' }
+import { createRequire } from 'node:module'
+
+const pkg = createRequire(import.meta.url)('./package.json')
 const { promise: ExecShPromise } = ExecSh
 
 const DIR = typeof __dirname === 'undefined' ? dirname(fileURLToPath(import.meta.url)) : __dirname
