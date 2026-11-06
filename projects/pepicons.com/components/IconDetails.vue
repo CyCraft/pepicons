@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { useNuxtApp } from '#app'
 import { Pepicon } from '@pepicons/vue'
 import copyToClipboard from 'copy-text-to-clipboard'
 import { PepiconName, pepiconSvgString } from 'pepicons'
@@ -10,6 +11,8 @@ import { Choices, RandomColorDic } from '../types'
 import HtmlButton from './HtmlButton.vue'
 import IconButton from './IconButton.vue'
 import Tabs from './Tabs.vue'
+
+const { $posthog } = useNuxtApp()
 
 const props = defineProps<{
   icon: PepiconName
@@ -70,6 +73,11 @@ const codeVue = computed(() => {
 function downloadSvg(): void {
   downloadFile(codeSvg.value, `${props.icon}.svg`)
   downloadSvgDone.value = true
+  $posthog?.capture('icons_downloaded', {
+    format: 'svg',
+    icon: iconNameWrapped.value,
+    style: props.choices.type,
+  })
 }
 
 function copySvg(): void {
@@ -81,6 +89,11 @@ async function downloadPng(): Promise<void> {
   const pngString = await svgToBase64Png(codeSvgLg.value)
   downloadBase64AsFile(pngString, `${props.icon}.png`)
   downloadPngDone.value = true
+  $posthog?.capture('icons_downloaded', {
+    format: 'png',
+    icon: iconNameWrapped.value,
+    style: props.choices.type,
+  })
 }
 
 async function copyPng(): Promise<void> {

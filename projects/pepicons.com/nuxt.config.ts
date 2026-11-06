@@ -4,6 +4,12 @@
 // import { pages as pagesVitePlay } from "@viteplay/vue/client"
 
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      posthogPublicKey: '',
+      posthogHost: '',
+    },
+  },
   // hooks: {
   //   'pages:extend'(pages) {
   //     pages.push(...viteplayPages)

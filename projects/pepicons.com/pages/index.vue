@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { useNuxtApp } from '#app'
 import { mapObject } from 'map-anything'
 import {
   categories,
@@ -18,6 +19,8 @@ import ProfileCard from '../components/ProfileCard.vue'
 import { cleanupForSearch } from '../helpers/search'
 import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
 import { Choices, RandomColorDic } from '../types'
+
+const { $posthog } = useNuxtApp()
 
 const props = defineProps<{
   choices: Choices
@@ -97,7 +100,12 @@ const scrollPageTo = (navEl: string) => {
               @click.stop.prevent="scrollPageTo('about-us')"
             />
           </div>
-          <a href="https://pepicons.com/PepiconSvgs.zip" class="download-button">Download</a>
+          <a
+            href="https://pepicons.com/PepiconSvgs.zip"
+            class="download-button"
+            @click="$posthog?.capture('icons_downloaded', { format: 'zip' })"
+            >Download</a
+          >
         </div>
       </div>
       <div class="mb-md text-center">

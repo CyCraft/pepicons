@@ -16,6 +16,8 @@ jobs:
       - run: npm run build:pepicons.com
         env:
           NODE_OPTIONS: --max-old-space-size=4096
+          NUXT_PUBLIC_POSTHOG_PUBLIC_KEY: '${{ vars.PEPICONS_POSTHOG_PUBLIC_KEY }}'
+          NUXT_PUBLIC_POSTHOG_HOST: '${{ vars.PEPICONS_POSTHOG_HOST }}'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
