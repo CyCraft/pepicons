@@ -1,4 +1,4 @@
-import { defineNuxtPlugin, useRuntimeConfig } from '#app'
+import { defineNuxtPlugin, onNuxtReady, useRuntimeConfig } from '#app'
 import posthog from 'posthog-js'
 
 export default defineNuxtPlugin(() => {
@@ -9,8 +9,12 @@ export default defineNuxtPlugin(() => {
     posthogPublicKey &&
     posthogHost
 
-  const client = enabled
-    ? posthog.init(posthogPublicKey, {
+  const client = enabled ? posthog : undefined
+
+  if (client) {
+    // Prerender hydration temporarily replaces the landing URL and its campaign parameters.
+    onNuxtReady(() => {
+      client.init(posthogPublicKey, {
         api_host: posthogHost,
         defaults: '2026-08-30',
         cookieless_mode: 'always',
@@ -30,7 +34,8 @@ export default defineNuxtPlugin(() => {
         disable_surveys: true,
         advanced_disable_feature_flags: true,
       })
-    : undefined
+    })
+  }
 
   return { provide: { posthog: client } }
 })
