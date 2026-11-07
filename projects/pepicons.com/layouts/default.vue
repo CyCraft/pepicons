@@ -25,6 +25,14 @@ const props = defineProps<{
         <PepLink href="https://cycraft.co" content="cycraft.co" class="retro-underline" />
       </div>
       <div>© Copyright CyCraft, {{ new Date().getFullYear() }}</div>
+      <div class="footer-links">
+        <PepLink href="/privacy" content="Privacy" class="retro-underline" />
+        <PepLink
+          href="https://creativecommons.org/licenses/by/4.0/"
+          content="License"
+          class="retro-underline"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -46,6 +54,10 @@ const props = defineProps<{
   +C(color, letters)
   opacity: 0.9
   +C(background-color, white)
+.footer-links
+  display: flex
+  gap: 24px
+  padding-top: 16px
 .dark-mode
   .footer
     +C(background-color, moonlight)

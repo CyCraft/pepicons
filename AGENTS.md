@@ -4,7 +4,7 @@
 
 - `main` is the default branch. It was renamed from `dev` on 2026-09-16.
 - `dev` still exists as a **mirror of `main`**, kept in sync by `.github/workflows/mirror-main-to-dev.yml` on every push to `main`. Never commit to `dev` directly and never delete it without reading the section below.
-- `production` is the deploy branch: pushes to it trigger the Firebase hosting deploy of pepicons.com (`.github/workflows/firebase-hosting-merge.yml`).
+- Pushes to `main` deploy the website to the existing Firebase `pep-icons` hosting site. Both Pepicons hostnames share this deployment.
 
 ## Why `dev` must keep existing
 

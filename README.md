@@ -46,7 +46,7 @@ Check Package.json for more scripts.
 
 ## License
 
-For commercial use please purchase a License at: https://github.com/sponsors/mesqueeb?frequency=one-time
+Pepicons is free to use, including commercially, under CC BY 4.0. If it helps you earn money, please consider [sponsoring its development](https://github.com/sponsors/mesqueeb).
 
 This icon set falls under CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE.
 

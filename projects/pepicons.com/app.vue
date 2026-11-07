@@ -1,8 +1,14 @@
 <script lang="ts" setup>
+import { useHead, useRoute } from '#app'
 import { pepiconArray, PepiconName, pepiconSvgString } from 'pepicons'
 import { computed, onBeforeMount, ref, watch } from 'vue'
 import { getRandomColor } from './helpers/colorHelpers'
 import { Choices, RandomColorDic } from './types'
+
+const route = useRoute()
+useHead(() => ({
+  link: [{ rel: 'canonical', href: `https://pepicons.com${route.path}` }],
+}))
 
 const choices = ref<Choices>({
   type: 'pop',
@@ -64,7 +70,10 @@ const retroUnderlineStroke = computed(() => (choices.value.type === 'pop' ? 'non
 
 <template>
   <NuxtLayout :choices="choices">
-    <NuxtPage v-model:choices="choices" :randomColorDic="pepiconRandomColorDic" />
+    <NuxtPage
+      v-bind="route.path === '/' ? { choices, randomColorDic: pepiconRandomColorDic } : {}"
+      @update:choices="choices = $event"
+    />
   </NuxtLayout>
 </template>
 

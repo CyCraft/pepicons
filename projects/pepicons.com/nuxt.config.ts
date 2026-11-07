@@ -4,6 +4,25 @@
 // import { pages as pagesVitePlay } from "@viteplay/vue/client"
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      title: 'Pepicons — Retro icons by Cycraft',
+      htmlAttrs: { lang: 'en' },
+      meta: [
+        {
+          name: 'description',
+          content:
+            'Browse and download retro icons in Pop, Print and Pencil styles. Free SVG and PNG icons by Cycraft, licensed under CC BY 4.0.',
+        },
+        { property: 'og:title', content: 'Pepicons — Retro icons by Cycraft' },
+        {
+          property: 'og:description',
+          content: 'Browse and download free retro icons in Pop, Print and Pencil styles.',
+        },
+      ],
+      link: [{ rel: 'icon', href: '/favicon.ico' }],
+    },
+  },
   runtimeConfig: {
     public: {
       posthogPublicKey: '',

@@ -13,7 +13,7 @@
   "scripts": {
     "dev:pepicons.com": "npm run _warn && npm run dev -w=pepicons.com",
     "dev:vue": "npm run _warn && npm run dev -w=@pepicons/vue",
-    "deploy:pepicons.com": "firebase deploy && git add -A && git commit -m \"chore: deploy\" && git push",
+    "deploy:pepicons.com": "npm run build:pepicons.com && firebase deploy --only hosting --project pep-icons",
     "build": "npm run _prepare-pepicons && npm run build -w=pepicons && npm run build -w=@pepicons/vue",
     "build:pepicons.com": "npm run build -w=pepicons.com",
     "release": "npm run build && bumpp package.json packages/*/package.json --no-push --all -x \"npm run _sync-internal-deps\" && npm publish -w pepicons -w @pepicons/vue --access public && git push --follow-tags && gh release create $(git describe --tags --abbrev=0) --generate-notes --notes \"$(git log --pretty='- %s  %h' $(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD~1)\"",

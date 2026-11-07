@@ -56,6 +56,7 @@ export async function archiveSvgs() {
 
   // append files from a sub-directory, putting its contents at the root of archive
   archive.directory(PATH_TO_ARCHIVE, false)
+  archive.file(pathResolve(PATH_ROOT, 'LICENSE'), { name: 'LICENSE' })
 
   // finalize the archive (ie we are done appending files but streams have to finish yet)
   // 'close', 'end' or 'finish' may be fired right after calling this method so register to them beforehand
