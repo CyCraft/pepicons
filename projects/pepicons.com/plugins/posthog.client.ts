@@ -5,7 +5,7 @@ export default defineNuxtPlugin(() => {
   const { posthogPublicKey, posthogHost } = useRuntimeConfig().public
   const enabled =
     !import.meta.dev &&
-    ['pepicons.com', 'www.pepicons.com'].includes(window.location.hostname) &&
+    ['pepicons.com', 'www.pepicons.com', 'pepicons.cycraft.co'].includes(window.location.hostname) &&
     posthogPublicKey &&
     posthogHost
 

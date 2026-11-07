@@ -101,7 +101,7 @@ const scrollPageTo = (navEl: string) => {
             />
           </div>
           <a
-            href="https://pepicons.com/PepiconSvgs.zip"
+            href="/PepiconSvgs.zip"
             class="download-button"
             @click="$posthog?.capture('icons_downloaded', { format: 'zip' })"
             >Download</a
