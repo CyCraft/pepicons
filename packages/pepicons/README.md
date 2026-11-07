@@ -10,7 +10,7 @@ Every icon available in 2 variants: Pop! and Print ❏
 
 ## Website & icons
 
-[pepicons.com](https://pepicons.com)
+[pepicons.cycraft.co](https://pepicons.cycraft.co)
 
 ## Installation & Usage
 

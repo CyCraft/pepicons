@@ -40,7 +40,7 @@ export const pepiconProps = {
    */
   type: { type: String as PropType<'pop' | 'print' | 'pencil'>, required: true as const },
   /**
-   * The icon name as per the reference at https://pepicons.com
+   * The icon name as per the reference at https://pepicons.cycraft.co
    * @example 'pen'
    * @example 'pen-circle'
    * @example 'pen-circle-filled'

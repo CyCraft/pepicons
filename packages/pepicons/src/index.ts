@@ -21,12 +21,12 @@ const svgDic: {
 
 export type GetPepiconPayload = {
   /**
-   * The icon name as per the reference at https://pepicons.com
+   * The icon name as per the reference at https://pepicons.cycraft.co
    */
   name: PepiconName
   /**
    * The icon type.
-   * @see https://pepicons.com to browse all icon types
+   * @see https://pepicons.cycraft.co to browse all icon types
    */
   type: 'pop' | 'print' | 'pencil'
 }
@@ -67,7 +67,7 @@ export type MorphPepiconPayload = {
 /**
  * Returns a Pepicon SVG as a string so you can inject it into your HTML.
  *
- * The icon name as per the reference at https://pepicons.com
+ * The icon name as per the reference at https://pepicons.cycraft.co
  * @returns The SVG content as string
  */
 export function getPepicon(payload: GetPepiconPayload): string {
@@ -87,7 +87,7 @@ export function getPepicon(payload: GetPepiconPayload): string {
 /**
  * Returns a Pepicon SVG as a string so you can inject it into your HTML.
  *
- * The icon name as per the reference at https://pepicons.com
+ * The icon name as per the reference at https://pepicons.cycraft.co
  * @returns The SVG content as string
  */
 export function morphPepicon(payload: MorphPepiconPayload): string {
@@ -137,7 +137,7 @@ export function morphPepicon(payload: MorphPepiconPayload): string {
 /**
  * Returns a Pepicon SVG as a string so you can inject it into your HTML.
  *
- * The icon name as per the reference at https://pepicons.com
+ * The icon name as per the reference at https://pepicons.cycraft.co
  * @returns The SVG content as string
  */
 export function pepiconSvgString(

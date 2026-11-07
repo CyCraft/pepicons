@@ -7,7 +7,7 @@ import { Choices, RandomColorDic } from './types'
 
 const route = useRoute()
 useHead(() => ({
-  link: [{ rel: 'canonical', href: `https://pepicons.com${route.path}` }],
+  link: [{ rel: 'canonical', href: `https://pepicons.cycraft.co${route.path}` }],
 }))
 
 const choices = ref<Choices>({

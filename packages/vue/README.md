@@ -47,7 +47,7 @@ See [packages/pepicons](/packages/pepicons)
 
 ## Website & icons
 
-[pepicons.com](https://pepicons.com)
+[pepicons.cycraft.co](https://pepicons.cycraft.co)
 
 ## Motivation
 
