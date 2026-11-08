@@ -47,10 +47,10 @@ useHead({ title: 'Privacy — Pepicons' })
       <h2>Contact</h2>
       <p>
         For questions about this website or its analytics, email
-        <a href="mailto:luca@cycraft.co">luca@cycraft.co</a>.
+        <a href="mailto:support@cycraft.co">support@cycraft.co</a>.
       </p>
     </section>
-    <p>Updated 8 November 2026.</p>
+    <p>Updated 9 November 2026.</p>
   </main>
 </template>
 
