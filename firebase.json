@@ -1,11 +1,22 @@
 {
-  "functions": { "source": "projects/pepicons.com/.output/server" },
+  "functions": {
+    "source": "projects/pepicons.com/.output/server"
+  },
   "hosting": [
     {
       "site": "pep-icons",
       "public": "projects/pepicons.com/.output/public",
       "cleanUrls": true,
-      "rewrites": [{ "source": "**", "function": "server" }]
+      "rewrites": [
+        {
+          "source": "/.well-known/security.txt",
+          "destination": "/security.txt"
+        },
+        {
+          "source": "**",
+          "function": "server"
+        }
+      ]
     }
   ]
 }
