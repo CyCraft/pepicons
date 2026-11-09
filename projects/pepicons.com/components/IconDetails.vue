@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { useNuxtApp } from '#app'
+import { analytics as $posthog } from '../analytics'
 import { Pepicon } from '@pepicons/vue'
 import copyToClipboard from 'copy-text-to-clipboard'
 import { PepiconName, pepiconSvgString } from 'pepicons'
@@ -10,9 +10,8 @@ import { downloadBase64AsFile, downloadFile } from '../helpers/download'
 import { Choices, RandomColorDic } from '../types'
 import HtmlButton from './HtmlButton.vue'
 import IconButton from './IconButton.vue'
+import CodeBlock from './CodeBlock.vue'
 import Tabs from './Tabs.vue'
-
-const { $posthog } = useNuxtApp()
 
 const props = defineProps<{
   icon: PepiconName

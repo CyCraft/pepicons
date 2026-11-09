@@ -29,17 +29,17 @@ Check out this blog post to understand our motivation for creating Pepicons:
 
 ## Contribution
 
-In order to do anything you'll need to build the repo once:
+Use Node.js 22.18 or newer and the pnpm version pinned in `package.json`. Build the repo once before starting development:
 
 ```
-npm i
-npm run build
+pnpm install
+pnpm run build
 ```
 
 Then you can run the dev server:
 
 ```
-npm run dev
+pnpm run dev:pepicons.com
 ```
 
 Check Package.json for more scripts.

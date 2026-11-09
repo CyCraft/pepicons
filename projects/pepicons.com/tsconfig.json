@@ -1,7 +1,15 @@
 {
-  // https://nuxt.com/docs/guide/concepts/typescript
-  "extends": "./.nuxt/tsconfig.json",
   "compilerOptions": {
-    "moduleResolution": "Bundler"
-  }
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": false,
+    "skipLibCheck": true,
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "types": ["vite/client"],
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
+  },
+  "include": ["**/*.ts", "**/*.vue"],
+  "exclude": ["node_modules", "dist", "**/*.example.vue"]
 }

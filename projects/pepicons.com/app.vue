@@ -1,5 +1,7 @@
 <script lang="ts" setup>
-import { useHead, useRoute } from '#app'
+import { useHead } from '@unhead/vue'
+import { useRoute } from 'vue-router'
+import DefaultLayout from './layouts/default.vue'
 import { pepiconArray, PepiconName, pepiconSvgString } from 'pepicons'
 import { computed, onBeforeMount, ref, watch } from 'vue'
 import { getRandomColor } from './helpers/colorHelpers'
@@ -69,12 +71,14 @@ const retroUnderlineStroke = computed(() => (choices.value.type === 'pop' ? 'non
 </script>
 
 <template>
-  <NuxtLayout :choices="choices">
-    <NuxtPage
-      v-bind="route.path === '/' ? { choices, randomColorDic: pepiconRandomColorDic } : {}"
+  <DefaultLayout v-if="route.path === '/'" :choices="choices">
+    <RouterView
+      :choices="choices"
+      :randomColorDic="pepiconRandomColorDic"
       @update:choices="choices = $event"
     />
-  </NuxtLayout>
+  </DefaultLayout>
+  <RouterView v-else />
 </template>
 
 <style lang="sass">

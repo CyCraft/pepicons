@@ -2,27 +2,32 @@
   "name": "pepicons.com",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "typecheck": "vue-tsc --noEmit"
+    "build": "vite-ssg build && node prepare-cloudflare.mjs",
+    "dev": "vite",
+    "preview": "vite preview",
+    "typecheck": "vue-tsc --noEmit",
+    "deploy": "cf deploy --prebuilt"
   },
   "devDependencies": {
-    "nuxt": "^3.5.1"
+    "@cloudflare/build-output-utils": "0.9.10",
+    "@cloudflare/config": "0.30.2",
+    "cf": "1.0.0-beta.28",
+    "vite-ssg": "^28.3.0"
   },
   "dependencies": {
-    "@pepicons/vue": "*",
+    "@pepicons/vue": "workspace:*",
+    "@unhead/vue": "^2.0.0",
     "@viteplay/plugin": "^0.2.8",
     "@viteplay/vue": "^0.2.8",
+    "@vueuse/core": "^13.0.0",
     "copy-text-to-clipboard": "^3.1.0",
     "map-anything": "^2.1.2",
-    "pepicons": "*",
+    "pepicons": "workspace:*",
     "posthog-js": "^1.447.1",
     "prismjs": "^1.29.0",
     "vue-color-kit": "^1.0.5",
     "vue-prism-editor": "^2.0.0-alpha.2",
     "vue-router": "^4.2.1"
-  }
+  },
+  "type": "module"
 }

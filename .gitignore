@@ -36,3 +36,5 @@ dist-ssr
 .output
 .env
 projects/pepicons.com/firebase.json
+
+.cloudflare

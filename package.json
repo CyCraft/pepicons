@@ -6,37 +6,31 @@
   "author": "Luca Ban - Mesqueeb",
   "funding": "https://github.com/sponsors/mesqueeb",
   "license": "CREATIVE COMMONS ATTRIBUTION 4.0 INTERNATIONAL LICENSE",
-  "workspaces": [
-    "packages/*",
-    "projects/*"
-  ],
   "scripts": {
-    "dev:pepicons.com": "npm run _warn && npm run dev -w=pepicons.com",
-    "dev:vue": "npm run _warn && npm run dev -w=@pepicons/vue",
-    "deploy:pepicons.com": "npm run build:pepicons.com && firebase deploy --only hosting --project pep-icons",
-    "build": "npm run _prepare-pepicons && npm run build -w=pepicons && npm run build -w=@pepicons/vue",
-    "build:pepicons.com": "npm run build -w=pepicons.com",
-    "release": "npm run build && bumpp package.json packages/*/package.json --no-push --all -x \"npm run _sync-internal-deps\" && npm publish -w pepicons -w @pepicons/vue --access public && git push --follow-tags && gh release create $(git describe --tags --abbrev=0) --generate-notes --notes \"$(git log --pretty='- %s  %h' $(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD~1)\"",
+    "dev:pepicons.com": "pnpm run _warn && pnpm --filter pepicons.com dev",
+    "dev:vue": "pnpm run _warn && pnpm --filter @pepicons/vue dev",
+    "deploy:pepicons.com": "pnpm run build:pepicons.com && pnpm --filter pepicons.com run deploy",
+    "build": "pnpm run _prepare-pepicons && pnpm --filter pepicons build && pnpm --filter @pepicons/vue build",
+    "build:pepicons.com": "pnpm --filter pepicons.com build",
+    "release": "pnpm run build && bumpp package.json packages/*/package.json --no-push --all && pnpm --filter pepicons --filter @pepicons/vue publish --access public && git push --follow-tags && gh release create $(git describe --tags --abbrev=0) --generate-notes --notes \"$(git log --pretty='- %s  %h' $(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || git rev-list --max-parents=0 HEAD)..HEAD~1)\"",
     "dep:update-all:soft": "ncu --workspaces --root --target minor -u",
-    "dep:update-all": "ncu --workspaces --root --target minor -u && npm i",
+    "dep:update-all": "pnpm run dep:update-all:soft && pnpm install",
     "dep:check-for-updates": "ncu --workspaces --root",
-    "dep:reinstall-all:soft": "npm exec --workspaces -- del-cli node_modules && del-cli node_modules && npm i",
-    "dep:reinstall-all:hard": "del-cli package-lock.json && npm run dep:reinstall-all:soft",
+    "dep:reinstall-all:soft": "pnpm exec del-cli node_modules packages/*/node_modules projects/*/node_modules && pnpm install",
+    "dep:reinstall-all:hard": "del-cli pnpm-lock.yaml && pnpm run dep:reinstall-all:soft",
     "prettier:fix-all": "prettier --write \"{packages,projects}/*/src/**/*.{vue,ts}\"",
     "_prepare-pepicons": "tsx ./scripts/preparePepicons.ts",
-    "_warn": "echo \"BE SURE TO RUN npm run build ONCE! otherwise the dev server might not launch\"",
-    "_sync-internal-deps": "node -e \"const f=require('fs'),p='packages/vue/package.json',v=require('./package.json').version,j=JSON.parse(f.readFileSync(p));j.dependencies.pepicons='^'+v;f.writeFileSync(p,JSON.stringify(j,null,2)+'\\n')\""
+    "_warn": "echo \"BE SURE TO RUN pnpm run build ONCE! otherwise the dev server might not launch\""
   },
   "engines": {
-    "node": ">= 16.0.0",
-    "npm": ">= 8.0.0"
+    "node": ">=22.18.0",
+    "pnpm": ">=12.4.1"
   },
   "bugs": {
     "url": "https://github.com/cycraft/pepicons/issues"
   },
   "homepage": "https://github.com/cycraft/pepicons#readme",
   "devDependencies": {
-    "@nuxt/eslint-config": "^0.1.1",
     "@types/archiver": "^5.3.4",
     "@types/fs-extra": "^11.0.4",
     "@types/node": "^18.19.130",
@@ -59,9 +53,6 @@
     "exec-sh": "^0.4.0",
     "fast-glob": "^3.3.3",
     "fast-sort": "^3.4.1",
-    "firebase-admin": "^11.11.1",
-    "firebase-functions": "^4.9.0",
-    "firebase-functions-test": "^3.5.0",
     "fs-extra": "^11.4.1",
     "inquirer": "^9.3.8",
     "is-what": "^4.1.16",
@@ -81,5 +72,6 @@
     "vue-intellisense": "^1.0.3",
     "vue-router": "^4.6.4",
     "vue-tsc": "^3.3.11"
-  }
+  },
+  "packageManager": "pnpm@12.4.1"
 }

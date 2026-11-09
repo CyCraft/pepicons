@@ -4,7 +4,7 @@
 
 - `main` is the default branch. It was renamed from `dev` on 2026-09-16.
 - `dev` still exists as a **mirror of `main`**, kept in sync by `.github/workflows/mirror-main-to-dev.yml` on every push to `main`. Never commit to `dev` directly and never delete it without reading the section below.
-- Pushes to `main` deploy the website to the existing Firebase `pep-icons` hosting site. Both Pepicons hostnames share this deployment.
+- Pushes to `main` deploy the prerendered website to Cloudflare Workers Static Assets in the `mesqueebzone` account. The `pepicons` Worker serves `pepicons.cycraft.co`, `pepicons.com`, and `www.pepicons.com`.
 
 ## Why `dev` must keep existing
 

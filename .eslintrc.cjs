@@ -22,7 +22,6 @@ module.exports = {
   },
   plugins: ['@typescript-eslint'],
   extends: [
-    '@nuxt/eslint-config',
     'eslint:recommended',
     'plugin:@typescript-eslint/eslint-recommended',
     'plugin:@typescript-eslint/recommended',

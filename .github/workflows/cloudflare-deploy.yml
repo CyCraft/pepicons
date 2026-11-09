@@ -1,0 +1,32 @@
+name: Deploy website
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cloudflare-pepicons-production
+  cancel-in-progress: false
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: pnpm/action-setup@v4
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '24'
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm run build
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+      - run: pnpm run build:pepicons.com
+        env:
+          NODE_OPTIONS: --max-old-space-size=4096
+          VITE_POSTHOG_PUBLIC_KEY: '${{ vars.PEPICONS_POSTHOG_PUBLIC_KEY }}'
+          VITE_POSTHOG_HOST: '${{ vars.PEPICONS_POSTHOG_HOST }}'
+      - run: pnpm --filter pepicons.com run deploy
+        env:
+          CLOUDFLARE_API_TOKEN: '${{ secrets.CLOUDFLARE_API_TOKEN }}'

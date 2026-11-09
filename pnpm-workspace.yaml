@@ -1,0 +1,12 @@
+packages:
+  - packages/*
+  - projects/*
+
+strictPeerDependencies: false
+
+allowBuilds:
+  '@parcel/watcher': true
+  core-js: false
+  esbuild: true
+  vue-demi: true
+  workerd: true

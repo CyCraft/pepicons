@@ -1,19 +1,7 @@
 <script lang="ts" setup>
-const props = defineProps<{
-  error: {
-    url: string
-    statusCode: string
-    statusMessage: string
-    message: string
-    description: string
-    data: any
-  }
-}>()
+import { useRouter } from 'vue-router'
 
-function goBack() {
-  // eslint-disable-next-line no-undef
-  clearError({ redirect: '/' })
-}
+const router = useRouter()
 </script>
 
 <template>
@@ -22,7 +10,7 @@ function goBack() {
 
     <div class="text-h2" style="opacity: 0.4">Oops. Nothing here...</div>
 
-    <button class="_button cursor-pointer" @click="() => goBack()">Go Home</button>
+    <button class="_button cursor-pointer" @click="router.push('/')">Go Home</button>
   </div>
 </template>
 

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import { useNuxtApp } from '#app'
 import { mapObject } from 'map-anything'
 import {
   categories,
@@ -10,7 +9,9 @@ import {
   synonymsJa,
 } from 'pepicons'
 import { computed, ref } from 'vue'
+import { analytics as $posthog } from '../analytics'
 import DialogWrapper from '../components/DialogWrapper.vue'
+import IconGrid from '../components/IconGrid.vue'
 import IconDetails from '../components/IconDetails.vue'
 import PepInput from '../components/PepInput.vue'
 import PepLink from '../components/PepLink.vue'
@@ -19,8 +20,6 @@ import ProfileCard from '../components/ProfileCard.vue'
 import { cleanupForSearch } from '../helpers/search'
 import { getQueryFromUrl, setUrlQuery } from '../helpers/urlHelpers'
 import { Choices, RandomColorDic } from '../types'
-
-const { $posthog } = useNuxtApp()
 
 const props = defineProps<{
   choices: Choices
@@ -138,15 +137,13 @@ const scrollPageTo = (navEl: string) => {
       <template v-for="category in categories">
         <div v-if="categoryIconNamesFiltered[category].length" :key="category" class="mb-xxl">
           <div class="text-section-title">{{ category }}</div>
-          <ClientOnly>
-            <IconGrid
-              :iconNames="categoryIconNamesFiltered[category]"
-              :choices="choices"
-              :randomColorDic="randomColorDic"
-              :searchInput="searchInput"
-              @clickTile="openIconModal"
-            />
-          </ClientOnly>
+          <IconGrid
+            :iconNames="categoryIconNamesFiltered[category]"
+            :choices="choices"
+            :randomColorDic="randomColorDic"
+            :searchInput="searchInput"
+            @clickTile="openIconModal"
+          />
         </div>
       </template>
       <div class="_section">

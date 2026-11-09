@@ -1,7 +1,6 @@
 <script lang="ts" setup>
-import { useHead } from '#app'
+import { useHead } from '@unhead/vue'
 
-definePageMeta({ layout: false })
 useHead({ title: 'Privacy — Pepicons' })
 </script>
 
@@ -34,12 +33,12 @@ useHead({ title: 'Privacy — Pepicons' })
     <section>
       <h2>Hosting and fonts</h2>
       <p>
-        Firebase Hosting serves this website, and Google Fonts supplies the Montserrat font. Your
-        browser makes requests to these providers to load the page and fonts.
+        Cloudflare serves this website, and Google Fonts supplies the Montserrat font. Your browser
+        makes requests to these providers to load the page and fonts.
       </p>
       <p>
         Read more about
-        <a href="https://firebase.google.com/support/privacy">Firebase privacy</a> and
+        <a href="https://www.cloudflare.com/privacypolicy/">Cloudflare privacy</a> and
         <a href="https://developers.google.com/fonts/faq/privacy">Google Fonts privacy</a>.
       </p>
     </section>
