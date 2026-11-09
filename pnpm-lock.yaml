@@ -202,6 +202,9 @@ importers:
       bumpp:
         specifier: ^12.3.0
         version: 12.3.0
+      case-anything:
+        specifier: ^2.1.13
+        version: 2.1.13
       cpy:
         specifier: ^10.1.0
         version: 10.1.0
